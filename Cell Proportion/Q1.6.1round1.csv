@@ -1,0 +1,2 @@
+slide_name,ground_truth,TLAgent,LLaVA-Med,Quilt-LLaVA,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision
+prostate,2.1470,2.151,N/A,12.0,N/A,1063.32,1.5,0.0

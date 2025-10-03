@@ -1,0 +1,2 @@
+slide_name,ground_truth,LLaVA-Med,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,TLAgent
+kidney,128,12,20,0,9,N/A,126
