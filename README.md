@@ -4,8 +4,10 @@
 
 This repository contains experimental data and video demonstrations for the TissueLab project, showcasing how to visualize outputs and experimental results across multiple medical image analysis tasks. The project covers cell counting, cell proportion analysis, depth of invasion measurement, fatty liver detection, hypertrophy detection, intracranial hemorrhage identification, kidney glomerulus counting, lymph node counting, metastasis classification, and X-ray image analysis.
 
-## Video Demonstrations
+## 🖥️ YouTube Demonstration Video
+- [TissueLab Demonstrations](https://www.youtube.com/watch?v=rssWT4Mehqw) - A demonstration video showcasing TissueLab experimental results and visualizations
 
+## Video Demonstrations
 **Recordings/** - Contains demonstration videos showing how to visualize outputs and reproduce experiments for better replication:
 
 - `depth_of_invasion.mov` - Depth of invasion measurement demonstration
