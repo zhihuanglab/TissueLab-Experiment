@@ -1,4 +1,4 @@
-slide_name,ground_truth,TLAgent,LLaVA-Med,M3D,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4,MAM
+slide_name,ground_truth,TLAgent,LLaVA-Med,M3D,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4-vision,MAM
 1,Negative,Negative,Negative,Positive,Negative,Negative,Positive,Positive,Negative,Positive
 3,Positive,Positive,Negative,Positive,Positive,Positive,Positive,Positive,Negative,Positive
 4,Positive,Positive,Negative,Positive,Positive,Negative,Positive,Positive,Negative,Positive

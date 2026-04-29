@@ -1,2 +1,2 @@
-slide_name,ground_truth,TLAgent,LLaVA-Med,Quilt-LLaVA,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4,MAM
+slide_name,ground_truth,TLAgent,LLaVA-Med,Quilt-LLaVA,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4-vision,MAM
 prostate,2.1470,2.151,N/A,0.00125,N/A,4.85,2.3,0.0,3.5,2.7

@@ -1,4 +1,4 @@
-slide_name,ground_truth,LLaVA-Med,GPT-4o-agent,GPT-4o-vision,TLAgent,GPT-5.4
+slide_name,ground_truth,LLaVA-Med,GPT-4o-agent,GPT-4o-vision,TLAgent,GPT-5.4-vision
 00000003_000,False,True,N/A,True,N/A,N/A
 00000003_001,False,True,N/A,False,N/A,N/A
 00000003_002,False,True,N/A,True,N/A,N/A
