@@ -1,2 +1,2 @@
-slide_name,ground_truth,TLAgent,LLaVA-Med,Quilt-LLaVA,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4
-prostate,2.1470,2.151,N/A,0.4,N/A,inf,3.0,3.4,3.5
+slide_name,ground_truth,TLAgent,LLaVA-Med,Quilt-LLaVA,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4,MAM
+prostate,2.1470,2.151,N/A,0.4,N/A,inf,3.0,3.4,3.5,2.7
