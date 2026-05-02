@@ -1,2 +1,2 @@
-slide_name,ground_truth,TLAgent,Quilt-LLaVA,LLaVA-Med,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4-vision,MAM
-colon_number,85014,90631.0,N/A,N/A,N/A,1,N/A,N/A,45,1234
+slide_name,ground_truth,TLAgent,Quilt-LLaVA,LLaVA-Med,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4-vision,MAM,NOVA
+colon_number,85014,90631.0,N/A,N/A,N/A,1,N/A,N/A,45,1234,34

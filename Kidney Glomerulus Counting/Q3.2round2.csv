@@ -1,2 +1,2 @@
-slide_name,ground_truth,LLaVA-Med,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,TLAgent,GPT-5.4-vision,MAM
-kidney,128,12,20,0,9,N/A,126,12,12
+slide_name,ground_truth,LLaVA-Med,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,TLAgent,GPT-5.4-vision,MAM,NOVA
+kidney,128,12,20,0,9,N/A,126,12,12,30
