@@ -7,6 +7,12 @@ This repository contains experimental data and video demonstrations for the Tiss
 ## 🖥️ YouTube Demonstration Video
 - [TissueLab Demonstrations](https://www.youtube.com/watch?v=rssWT4Mehqw) - A demonstration video showcasing TissueLab experimental results and visualizations
 
+## 🔬 Reproducibility Bundles
+
+Reproducibility bundles for the AD Biomarker Discovery and Tubule Score discovery experiments are hosted on Google Drive:
+
+- [TissueLab Reproducibility Bundles (Google Drive)](https://drive.google.com/drive/folders/19YExomssX5Pz3D7Jg1yJCUU9uhMQc7FM?usp=sharing)
+
 ## Video Demonstrations
 **Recordings/** - Contains demonstration videos showing how to visualize outputs and reproduce experiments for better replication:
 
