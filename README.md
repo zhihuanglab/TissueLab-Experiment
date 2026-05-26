@@ -9,7 +9,7 @@ This repository contains experimental data and video demonstrations for the Tiss
 
 ## 🔬 Reproducibility Bundles
 
-Reproducibility bundles for the AD Biomarker Discovery and Tubule Score discovery experiments are hosted on Google Drive:
+Reproducibility bundles for the AD Biomarker Discovery, Metastasis classification and Tubule Score discovery experiments are hosted on Google Drive:
 
 - [TissueLab Reproducibility Bundles (Google Drive)](https://drive.google.com/drive/folders/19YExomssX5Pz3D7Jg1yJCUU9uhMQc7FM?usp=sharing)
 
