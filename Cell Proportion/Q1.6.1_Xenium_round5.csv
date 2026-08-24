@@ -1,0 +1,2 @@
+slide_name,ground_truth,TLAgent,TLAgent-removing knowledge,LLaVA-Med,Quilt-LLaVA,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4-vision,MAM,NOVA
+prostate_Xenium_extval,47.15,42.09,0.0,,10.0,10.0,,,20.0,8.4,0.1,2.41

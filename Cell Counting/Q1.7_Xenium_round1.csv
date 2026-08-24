@@ -1,0 +1,2 @@
+slide_name,ground_truth,TLAgent,TLAgent-removing knowledge,Quilt-LLaVA,LLaVA-Med,MedGemma,GPT-4o-agent,GPT-4o-vision,GPT-5-vision,GPT-5.4-vision,MAM,NOVA
+colon_Preview_Cancer_Xenium,261905,253870,433,,,,,,,217638,10,109699
