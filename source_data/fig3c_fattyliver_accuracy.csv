@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",LLaVA-Med,accuracy,full_cohort,226,226,226,5,0.4283,0.0399,0.3876,0.469,0.3876,0.469
+2,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",MedGemma,accuracy,full_cohort,226,226,162,5,0.4354,0.1657,0.3947,0.477,0.3947,0.477
+3,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",MAM,accuracy,full_cohort,226,226,225,5,0.6504,0.0,0.5894,0.7124,0.5894,0.7124
+4,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",M3D,accuracy,full_cohort,226,226,226,5,0.6504,0.0,0.5885,0.7124,0.5885,0.7124
+5,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-4o-vision,accuracy,full_cohort,226,226,226,5,0.6504,0.0,0.5885,0.7124,0.5885,0.7124
+6,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-5-vision,accuracy,full_cohort,226,226,226,5,0.6584,0.0073,0.5991,0.7177,0.5991,0.7177
+7,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-5.4-vision,accuracy,full_cohort,226,226,226,5,0.4044,0.0229,0.3425,0.4629,0.3425,0.4629
+8,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-4o-agent,accuracy,full_cohort,226,226,226,5,0.5832,0.0418,0.5416,0.6248,0.5416,0.6248
+9,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",MedAgent-Pro,accuracy,full_cohort,226,226,226,5,0.6504,0.0,0.5885,0.7124,0.5885,0.7124
+10,Figure 3c,Fatty liver diagnosis,"UNIFESP, 226 cases",TLAgent,accuracy,full_cohort,226,226,223,5,0.8363,0.0,0.7876,0.885,0.7876,0.885

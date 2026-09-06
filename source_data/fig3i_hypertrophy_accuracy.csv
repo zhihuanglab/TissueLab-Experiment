@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",LLaVA-Med,accuracy,full_cohort,21,21,17,5,0.4667,0.1137,0.3524,0.581,0.3524,0.581
+2,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",MedGemma,accuracy,full_cohort,21,21,21,5,0.4286,0.0,0.2381,0.6667,0.2381,0.6667
+3,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",MAM,accuracy,full_cohort,21,21,21,5,0.5714,0.0,0.381,0.7619,0.381,0.7619
+4,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",M3D,accuracy,full_cohort,21,21,21,5,0.4286,0.0,0.2381,0.619,0.2381,0.619
+5,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-4o-vision,accuracy,full_cohort,21,21,21,5,0.5714,0.0,0.381,0.7619,0.381,0.7619
+6,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-5-vision,accuracy,full_cohort,21,21,0,5,no evaluable output,,,,,
+7,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-5.4-vision,accuracy,full_cohort,21,21,21,5,0.6381,0.0639,0.5429,0.7238,0.5429,0.7238
+8,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-4o-agent,accuracy,full_cohort,21,21,5,5,0.181,0.0398,0.1048,0.2571,0.1048,0.2571
+9,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",MedAgent-Pro,accuracy,full_cohort,21,21,21,5,0.381,0.0476,0.219,0.5619,0.219,0.5619
+10,Figure 3i,Myocardial hypertrophy,"Sunnybrook, 21 cases",TLAgent,accuracy,full_cohort,21,21,19,5,0.7619,0.0,0.5714,0.9048,0.5714,0.9048

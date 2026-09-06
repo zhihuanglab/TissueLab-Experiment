@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",LLaVA-Med,MCC,answered,21,21,17,5,0.0895,0.1747,-0.1175,0.2786,-0.1175,0.2786
+2,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",MedGemma,MCC,answered,21,21,21,5,-0.1376,0.0,-0.5534,0.3114,-0.5534,0.3114
+3,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",MAM,MCC,answered,21,21,21,5,0.0,0.0,0.0,0.0,0.0,0.0
+4,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",M3D,MCC,answered,21,21,21,5,0.0,0.0,0.0,0.0,0.0,0.0
+5,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-4o-vision,MCC,answered,21,21,21,5,0.0,0.0,0.0,0.0,0.0,0.0
+6,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-5-vision,MCC,answered,21,21,0,5,no evaluable output,,,,,
+7,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-5.4-vision,MCC,answered,21,21,21,5,0.2863,0.1427,0.0979,0.4544,0.0979,0.4544
+8,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-4o-agent,MCC,answered,21,21,5,5,0.0,0.0,0.0,0.0,0.0,0.0
+9,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",MedAgent-Pro,MCC,answered,21,21,21,5,-0.3797,0.1151,-0.5863,-0.1521,-0.5863,-0.1521
+10,Figure 3j,Myocardial hypertrophy,"Sunnybrook, 21 cases",TLAgent,MCC,answered,21,21,19,5,0.7008,0.0,0.4082,1.0,0.4082,1.0

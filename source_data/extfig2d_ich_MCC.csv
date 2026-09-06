@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",LLaVA-Med,MCC,answered,75,75,75,5,0.0,0.0,0.0,0.0,0.0,0.0
+2,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",MedGemma,MCC,answered,75,75,75,5,-0.1377,0.0,-0.3467,0.0894,-0.3467,0.0894
+3,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",MAM,MCC,answered,75,75,74,5,0.0829,0.0852,-0.0541,0.2167,-0.0541,0.2167
+4,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",M3D,MCC,answered,75,75,0,5,no evaluable output,,,,,
+5,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",GPT-4o-vision,MCC,answered,75,75,75,5,0.1867,0.0246,-0.0348,0.3741,-0.0348,0.3741
+6,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",GPT-5-vision,MCC,answered,75,75,0,5,no evaluable output,,,,,
+7,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",GPT-5.4-vision,MCC,answered,75,75,75,5,0.1081,0.0541,0.0,0.1859,0.0,0.1859
+8,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",GPT-4o-agent,MCC,answered,75,75,70,5,0.0643,0.0936,-0.0529,0.1752,-0.0529,0.1752
+9,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",MedAgent-Pro,MCC,answered,75,75,75,5,-0.0628,0.1136,-0.2267,0.1046,-0.2267,0.1046
+10,Extended Data 2d,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",TLAgent,MCC,answered,75,75,75,5,0.5827,0.0,0.3931,0.754,0.3931,0.754

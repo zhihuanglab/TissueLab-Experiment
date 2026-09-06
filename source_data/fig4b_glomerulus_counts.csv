@@ -1,0 +1,21 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",LLaVA-Med,accuracy of the answer,single specimen,1,1,5,5,0.0938,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+2,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",LLaVA-Med,answer (glomeruli),single specimen,1,1,5,5,12.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+3,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",MedGemma,accuracy of the answer,single specimen,1,1,5,5,0.1453,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+4,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",MedGemma,answer (glomeruli),single specimen,1,1,5,5,18.6,3.1305,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+5,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",Quilt-LLaVA,accuracy of the answer,single specimen,1,1,5,5,0.7812,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+6,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",Quilt-LLaVA,answer (glomeruli),single specimen,1,1,5,5,100.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+7,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",GPT-4o-vision,accuracy of the answer,single specimen,1,1,5,5,0.0703,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+8,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",GPT-4o-vision,answer (glomeruli),single specimen,1,1,5,5,9.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+9,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",GPT-5-vision,answer,single specimen,1,1,0,5,no evaluable output,,,,,
+10,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",GPT-5.4-vision,accuracy of the answer,single specimen,1,1,5,5,0.0828,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+11,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",GPT-5.4-vision,answer (glomeruli),single specimen,1,1,5,5,10.6,1.1402,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+12,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",GPT-4o-agent,accuracy of the answer,single specimen,1,1,5,5,0.0,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+13,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",GPT-4o-agent,answer (glomeruli),single specimen,1,1,5,5,0.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+14,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",MAM,accuracy of the answer,single specimen,1,1,5,5,0.0375,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+15,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",MAM,answer (glomeruli),single specimen,1,1,5,5,4.8,6.5727,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+16,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",NOVA,accuracy of the answer,single specimen,1,1,5,5,-1.8141,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+17,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",NOVA,answer (glomeruli),single specimen,1,1,5,5,488.2,467.9388,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+18,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",TLAgent,accuracy of the answer,single specimen,1,1,5,5,0.9844,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+19,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",TLAgent,answer (glomeruli),single specimen,1,1,5,5,126.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+20,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",reference,reference (glomeruli),single specimen,1,1,,,128.0,,,,,

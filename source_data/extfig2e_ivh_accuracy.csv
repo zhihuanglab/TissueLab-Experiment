@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",LLaVA-Med,accuracy,full_cohort,75,75,75,5,0.7867,0.0,0.6933,0.88,0.6933,0.88
+2,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",MedGemma,accuracy,full_cohort,75,75,75,5,0.7333,0.0,0.6267,0.8267,0.6267,0.8267
+3,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",MAM,accuracy,full_cohort,75,75,75,5,0.0667,0.0,0.0133,0.1333,0.0133,0.1333
+4,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",M3D,accuracy,full_cohort,75,75,0,5,no evaluable output,,,,,
+5,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",GPT-4o-vision,accuracy,full_cohort,75,75,75,5,0.896,0.0112,0.8267,0.9573,0.8267,0.9573
+6,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",GPT-5-vision,accuracy,full_cohort,75,75,0,5,no evaluable output,,,,,
+7,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",GPT-5.4-vision,accuracy,full_cohort,75,75,75,5,0.928,0.0152,0.8693,0.976,0.8693,0.976
+8,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",GPT-4o-agent,accuracy,full_cohort,75,75,62,5,0.368,0.1339,0.32,0.4187,0.32,0.4187
+9,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",MedAgent-Pro,accuracy,full_cohort,75,75,75,5,0.0747,0.0073,0.024,0.136,0.024,0.136
+10,Extended Data 2e,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",TLAgent,accuracy,full_cohort,75,75,75,5,0.9467,0.0,0.8933,0.9867,0.8933,0.9867

@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",LLaVA-Med,Cohen's kappa,answered,226,226,226,5,0.0068,0.0708,-0.0348,0.0485,-0.0348,0.0485
+2,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",MedGemma,Cohen's kappa,answered,226,226,162,5,-0.0165,0.0711,-0.0757,0.0435,-0.0757,0.0435
+3,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",MAM,Cohen's kappa,answered,226,226,225,5,0.0015,0.0034,-0.0053,0.0099,-0.0053,0.0099
+4,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",M3D,Cohen's kappa,answered,226,226,226,5,0.0,0.0,0.0,0.0,0.0,0.0
+5,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-4o-vision,Cohen's kappa,answered,226,226,226,5,0.0,0.0,0.0,0.0,0.0,0.0
+6,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-5-vision,Cohen's kappa,answered,226,226,226,5,0.0524,0.024,0.0061,0.1051,0.0061,0.1051
+7,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-5.4-vision,Cohen's kappa,answered,226,226,226,5,0.0573,0.0275,0.0331,0.0855,0.0331,0.0855
+8,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-4o-agent,Cohen's kappa,answered,226,226,226,5,0.0197,0.0991,-0.0421,0.0822,-0.0421,0.0822
+9,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",MedAgent-Pro,Cohen's kappa,answered,226,226,226,5,0.0,0.0,0.0,0.0,0.0,0.0
+10,Figure 3e,Fatty liver diagnosis,"UNIFESP, 226 cases",TLAgent,Cohen's kappa,answered,226,226,223,5,0.6905,0.0,0.5956,0.7838,0.5956,0.7838

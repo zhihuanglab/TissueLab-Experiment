@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",LLaVA-Med,accuracy,full_cohort,321,22,0,5,no evaluable output,,,,,
+2,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",MedGemma,accuracy,full_cohort,321,22,296,5,0.0093,0.0,0.0,0.0218,0.0,0.02
+3,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",Quilt-LLaVA,accuracy,full_cohort,321,22,310,5,0.0156,0.0031,0.0056,0.0274,0.0035,0.0325
+4,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",GPT-4o-vision,accuracy,full_cohort,321,22,320,5,0.1832,0.0195,0.1489,0.2187,0.1214,0.2583
+5,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",GPT-5-vision,accuracy,full_cohort,321,22,321,5,0.5626,0.0065,0.5209,0.6044,0.4965,0.6281
+6,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",GPT-5.4-vision,accuracy,full_cohort,321,22,321,5,0.4773,0.0223,0.433,0.5221,0.4098,0.5442
+7,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",GPT-4o-agent,accuracy,full_cohort,321,22,242,5,0.3084,0.0082,0.2829,0.3346,0.2726,0.3483
+8,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",MAM,accuracy,full_cohort,321,22,316,5,0.8044,0.0274,0.7664,0.8405,0.7225,0.877
+9,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",NOVA,accuracy,full_cohort,321,22,321,5,0.7558,0.0199,0.7221,0.7882,0.6915,0.8098
+10,Figure 2g,Positive lymph node counting,"LNCO2, 321 slides",TLAgent,accuracy,full_cohort,321,22,321,5,0.919,0.0,0.8879,0.947,0.8523,0.9666

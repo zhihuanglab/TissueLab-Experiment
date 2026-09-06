@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",LLaVA-Med,accuracy,full_cohort,75,75,75,5,0.52,0.0,0.4,0.6267,0.4,0.6267
+2,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",MedGemma,accuracy,full_cohort,75,75,75,5,0.4533,0.0,0.3467,0.56,0.3467,0.56
+3,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",MAM,accuracy,full_cohort,75,75,74,5,0.5413,0.0335,0.4507,0.6347,0.4507,0.6347
+4,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",M3D,accuracy,full_cohort,75,75,0,5,no evaluable output,,,,,
+5,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",GPT-4o-vision,accuracy,full_cohort,75,75,75,5,0.5733,0.0094,0.4613,0.6853,0.4613,0.6853
+6,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",GPT-5-vision,accuracy,full_cohort,75,75,0,5,no evaluable output,,,,,
+7,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",GPT-5.4-vision,accuracy,full_cohort,75,75,75,5,0.5307,0.006,0.4187,0.64,0.4187,0.64
+8,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",GPT-4o-agent,accuracy,full_cohort,75,75,70,5,0.48,0.0365,0.3893,0.5707,0.3893,0.5707
+9,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",MedAgent-Pro,accuracy,full_cohort,75,75,75,5,0.464,0.0382,0.3653,0.5627,0.3653,0.5627
+10,Extended Data 2c,Intracranial haemorrhage detection,"PhysioNet CT-ICH, 75 subjects",TLAgent,accuracy,full_cohort,75,75,75,5,0.7867,0.0,0.6933,0.88,0.6933,0.88

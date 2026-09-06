@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",LLaVA-Med,weighted F1,full_cohort,321,22,0,5,no evaluable output,,,,,
+2,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",MedGemma,weighted F1,full_cohort,321,22,296,5,0.0004,0.0,0.0,0.0021,0.0,0.0021
+3,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",Quilt-LLaVA,weighted F1,full_cohort,321,22,310,5,0.0058,0.0028,0.0018,0.0117,0.0009,0.0163
+4,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",GPT-4o-vision,weighted F1,full_cohort,321,22,320,5,0.2398,0.0235,0.1943,0.2867,0.1727,0.3169
+5,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",GPT-5-vision,weighted F1,full_cohort,321,22,321,5,0.6533,0.0048,0.6143,0.6934,0.5923,0.7108
+6,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",GPT-5.4-vision,weighted F1,full_cohort,321,22,321,5,0.5869,0.0193,0.5439,0.6308,0.5188,0.6576
+7,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",GPT-4o-agent,weighted F1,full_cohort,321,22,242,5,0.4355,0.0094,0.4023,0.4684,0.382,0.4897
+8,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",MAM,weighted F1,full_cohort,321,22,316,5,0.7871,0.0162,0.736,0.8344,0.6759,0.8829
+9,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",NOVA,weighted F1,full_cohort,321,22,321,5,0.7672,0.0135,0.7222,0.8098,0.6716,0.8497
+10,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",TLAgent,weighted F1,full_cohort,321,22,321,5,0.9262,0.0,0.8955,0.9541,0.8605,0.9715

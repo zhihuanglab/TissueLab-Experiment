@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",LLaVA-Med,MCC,answered,226,226,226,5,0.0096,0.0963,-0.0481,0.067,-0.0481,0.067
+2,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",MedGemma,MCC,answered,226,226,162,5,-0.0183,0.0768,-0.0845,0.0483,-0.0845,0.0483
+3,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",MAM,MCC,answered,226,226,225,5,0.0134,0.0133,-0.0359,0.0667,-0.0359,0.0667
+4,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",M3D,MCC,answered,226,226,226,5,0.0,0.0,0.0,0.0,0.0,0.0
+5,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-4o-vision,MCC,answered,226,226,226,5,0.0,0.0,0.0,0.0,0.0,0.0
+6,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-5-vision,MCC,answered,226,226,226,5,0.1059,0.044,0.0138,0.1923,0.0138,0.1923
+7,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-5.4-vision,MCC,answered,226,226,226,5,0.1576,0.0506,0.1083,0.2022,0.1083,0.2022
+8,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",GPT-4o-agent,MCC,answered,226,226,226,5,0.0202,0.102,-0.0435,0.0846,-0.0435,0.0846
+9,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",MedAgent-Pro,MCC,answered,226,226,226,5,0.0,0.0,0.0,0.0,0.0,0.0
+10,Figure 3d,Fatty liver diagnosis,"UNIFESP, 226 cases",TLAgent,MCC,answered,226,226,223,5,0.7141,0.0,0.6301,0.7974,0.6301,0.7974

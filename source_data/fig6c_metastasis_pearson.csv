@@ -1,0 +1,12 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",LLaVA-Med,pearson,answered,321,22,301,5,0.0003,0.0684,-0.048,0.0444,-0.0776,0.0541
+2,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",MedGemma,pearson,answered,321,22,321,5,0.1059,0.0,0.0157,0.1885,0.0404,0.1608
+3,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",Quilt-LLaVA,pearson,answered,321,22,279,5,-0.016,0.0652,-0.0648,0.0306,-0.051,0.0217
+4,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-4o-vision,pearson,answered,321,22,321,5,-0.0076,0.0138,-0.1481,0.0686,-0.1775,0.0767
+5,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-5-vision,pearson,answered,321,22,321,5,0.05,0.0478,-0.03,0.1269,-0.0441,0.1331
+6,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-5.4-vision,pearson,answered,321,22,321,5,0.3241,0.029,0.2059,0.43,0.1346,0.482
+7,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-4o-agent,pearson,answered,321,22,321,5,0.0362,0.0628,-0.0078,0.0789,-0.0171,0.0823
+8,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",MAM,pearson,answered,321,22,314,5,0.0489,0.0576,-0.0183,0.1229,-0.0173,0.1041
+9,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",NOVA,pearson,answered,321,22,320,5,0.2337,0.0681,0.1537,0.307,0.0958,0.3176
+10,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-5.2-vision,pearson,answered,321,22,321,5,0.3644,0.0682,0.204,0.5125,0.0643,0.5417
+11,Figure 6c,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent,pearson,answered,321,22,321,5,0.8272,0.0,0.7338,0.9047,0.6554,0.9177

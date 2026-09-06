@@ -1,0 +1,9 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 7i,"Tubule formation grading, internal","TCGA-BRCA held-out, 30 cases",Human Workflow A,MAE,answered,30,30,30,1,0.6,0.0,0.4,0.8333,0.4,0.8333
+2,Figure 7i,"Tubule formation grading, internal","TCGA-BRCA held-out, 30 cases",Human Workflow B,MAE,answered,30,30,30,1,0.6,0.0,0.4,0.8333,0.4,0.8333
+3,Figure 7i,"Tubule formation grading, internal","TCGA-BRCA held-out, 30 cases",Human Workflow C,MAE,answered,30,30,30,1,0.6333,0.0,0.4,0.8667,0.4,0.8667
+4,Figure 7i,"Tubule formation grading, internal","TCGA-BRCA held-out, 30 cases",TITAN Linear Probe,MAE,answered,30,30,30,1,0.7513,0.0,0.4904,1.0285,0.4904,1.0285
+5,Figure 7i,"Tubule formation grading, internal","TCGA-BRCA held-out, 30 cases",TITAN Fine-tune,MAE,answered,30,30,30,1,0.5449,0.0,0.4059,0.6963,0.4059,0.6963
+6,Figure 7i,"Tubule formation grading, internal","TCGA-BRCA held-out, 30 cases",MUSK ABMIL,MAE,answered,30,30,30,1,0.5512,0.0,0.4113,0.7014,0.4113,0.7014
+7,Figure 7i,"Tubule formation grading, internal","TCGA-BRCA held-out, 30 cases",UNI ABMIL,MAE,answered,30,30,30,1,0.6294,0.0,0.4178,0.853,0.4178,0.853
+8,Figure 7i,"Tubule formation grading, internal","TCGA-BRCA held-out, 30 cases",TissueLab (Co-Evolving),MAE,answered,30,30,30,5,0.4353,0.0371,0.2982,0.5945,0.2982,0.5945

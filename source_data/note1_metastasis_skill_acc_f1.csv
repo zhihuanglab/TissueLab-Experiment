@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent,accuracy,full_cohort,321,22,321,5,0.9346,0.0,0.9065,0.9595,0.8931,0.9668
+2,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent,weighted F1,full_cohort,321,22,321,5,0.9395,0.0,0.9139,0.9633,0.8989,0.9702
+3,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent-R1,accuracy,full_cohort,321,22,321,5,0.9377,0.0,0.9097,0.9626,0.8959,0.9703
+4,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent-R1,weighted F1,full_cohort,321,22,321,5,0.9415,0.0,0.9157,0.9651,0.9008,0.9726
+5,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent-R2,accuracy,full_cohort,321,22,321,5,0.9408,0.0,0.9128,0.9657,0.8954,0.9753
+6,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent-R2,weighted F1,full_cohort,321,22,321,5,0.9442,0.0,0.9185,0.967,0.9009,0.9768
+7,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent-R1+2,accuracy,full_cohort,321,22,321,5,0.947,0.0,0.9221,0.9688,0.9061,0.9781
+8,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent-R1+2,weighted F1,full_cohort,321,22,321,5,0.948,0.0,0.9227,0.9706,0.9067,0.9788
+9,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent-R1+2+Reflector,accuracy,full_cohort,321,22,321,5,0.9688,0.0,0.947,0.9875,0.9384,0.9918
+10,Supplementary Note 1,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent-R1+2+Reflector,weighted F1,full_cohort,321,22,321,5,0.9683,0.0,0.9465,0.9861,0.9348,0.9922

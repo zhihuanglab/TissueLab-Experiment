@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",LLaVA-Med,MCC,answered,75,75,75,5,-0.1108,0.0,-0.1719,-0.0488,-0.1719,-0.0488
+2,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",MedGemma,MCC,answered,75,75,75,5,-0.017,0.0,-0.1737,0.2325,-0.1737,0.2325
+3,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",MAM,MCC,answered,75,75,75,5,0.0,0.0,0.0,0.0,0.0,0.0
+4,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",M3D,MCC,answered,75,75,0,5,no evaluable output,,,,,
+5,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",GPT-4o-vision,MCC,answered,75,75,75,5,-0.0526,0.0081,-0.0899,-0.0121,-0.0899,-0.0121
+6,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",GPT-5-vision,MCC,answered,75,75,0,5,no evaluable output,,,,,
+7,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",GPT-5.4-vision,MCC,answered,75,75,75,5,0.1363,0.2185,-0.0407,0.4289,-0.0407,0.4289
+8,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",GPT-4o-agent,MCC,answered,75,75,62,5,-0.0973,0.1062,-0.1738,-0.0018,-0.1738,-0.0018
+9,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",MedAgent-Pro,MCC,answered,75,75,75,5,0.024,0.017,0.0,0.0409,0.0,0.0409
+10,Extended Data 2f,Intraventricular haemorrhage subtype,"PhysioNet CT-ICH, 75 subjects",TLAgent,MCC,answered,75,75,75,5,0.491,0.0,-0.0338,0.8881,-0.0338,0.8881

@@ -1,0 +1,19 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",LLaVA-Med,answer,single specimen,1,1,0,5,no evaluable output,,,,,
+2,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",MedGemma,answer,single specimen,1,1,0,5,no evaluable output,,,,,
+3,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",Quilt-LLaVA,answer,single specimen,1,1,0,5,no evaluable output,,,,,
+4,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",GPT-4o-vision,answer,single specimen,1,1,0,5,no evaluable output,,,,,
+5,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",GPT-5-vision,answer,single specimen,1,1,0,5,no evaluable output,,,,,
+6,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",GPT-5.4-vision,accuracy of the answer,single specimen,1,1,5,5,0.0038,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+7,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",GPT-5.4-vision,answer (cells),single specimen,1,1,5,5,319.0,584.8012,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+8,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",GPT-4o-agent,accuracy of the answer,single specimen,1,1,5,5,0.0001,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+9,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",GPT-4o-agent,answer (cells),single specimen,1,1,5,5,7.0,10.2713,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+10,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",MAM,accuracy of the answer,single specimen,1,1,5,5,0.0145,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+11,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",MAM,answer (cells),single specimen,1,1,5,5,1234.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+12,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",NOVA,accuracy of the answer,single specimen,1,1,5,5,0.0294,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+13,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",NOVA,answer (cells),single specimen,1,1,5,5,2502.2,3139.4677,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+14,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",TLAgent-removing knowledge,accuracy of the answer,single specimen,1,1,5,5,0.0003,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+15,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",TLAgent-removing knowledge,answer (cells),single specimen,1,1,5,5,24.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+16,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",TLAgent,accuracy of the answer,single specimen,1,1,5,5,0.9487,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+17,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",TLAgent,answer (cells),single specimen,1,1,5,5,89379.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+18,Figure 5f,Neoplastic cell quantification,"Visium HD colon, one section",reference,reference (cells),single specimen,1,1,,,85014.0,,,,,

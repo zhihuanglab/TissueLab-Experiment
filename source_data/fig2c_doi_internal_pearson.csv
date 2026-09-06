@@ -1,0 +1,12 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",LLaVA-Med,pearson,answered,105,43,0,5,no evaluable output,,,,,
+2,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",MedGemma,pearson,answered,105,43,10,5,-0.2518,0.0,-0.8293,0.6385,-0.5549,0.7941
+3,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",Quilt-LLaVA,pearson,answered,105,43,34,5,0.2093,0.2367,-0.0712,0.385,-0.0711,0.3601
+4,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",GPT-4o-vision,pearson,answered,105,43,105,5,0.3698,0.0453,0.2056,0.5598,0.1904,0.5629
+5,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",GPT-5-vision,pearson,answered,105,43,105,5,0.3724,0.1194,0.1419,0.5465,0.1121,0.5611
+6,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",GPT-5.4-vision,pearson,answered,105,43,105,5,0.273,0.0846,0.1075,0.3969,0.0893,0.4101
+7,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",GPT-4o-agent,pearson,answered,105,43,103,5,0.3762,0.0988,0.2279,0.494,0.2049,0.5012
+8,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",MAM,pearson,answered,105,43,93,5,-0.0495,0.1091,-0.1002,0.0544,-0.1029,0.0605
+9,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",NOVA,pearson,answered,105,43,105,5,0.0574,0.1251,-0.0017,0.3334,0.0007,0.32
+10,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TLAgent-removing knowledge,pearson,answered,105,43,105,5,0.5117,0.0,0.365,0.6598,0.3494,0.6676
+11,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TLAgent,pearson,answered,105,43,105,5,0.8425,0.0,0.7233,0.9124,0.7025,0.9193

@@ -1,0 +1,85 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Atelectasis",LLaVA-Med,accuracy (Atelectasis),full_cohort,25596,2797,25596,1,0.1327,n.a. one run,0.1284,0.1368,0.1239,0.1417
+2,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Atelectasis",GPT-4o-agent,accuracy (Atelectasis),full_cohort,25596,2797,2700,1,0.0897,n.a. one run,0.0861,0.0932,0.0694,0.1117
+3,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Atelectasis",GPT-4o-agent,"accuracy, answered subset (Atelectasis)",answered,25596,2797,2700,1,0.85,n.a. one run,,,,
+4,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Atelectasis",GPT-4o-vision,accuracy (Atelectasis),full_cohort,25596,2797,25596,1,0.8378,n.a. one run,0.8333,0.8423,0.8274,0.8478
+5,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Atelectasis",GPT-5.4-vision,accuracy (Atelectasis),full_cohort,25596,2797,25596,1,0.6704,n.a. one run,0.6644,0.6762,0.6512,0.6901
+6,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Atelectasis",TLAgent,accuracy (Atelectasis),full_cohort,25596,2797,25596,1,0.8758,n.a. one run,0.8717,0.8799,0.867,0.8844
+7,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Cardiomegaly",LLaVA-Med,accuracy (Cardiomegaly),full_cohort,25596,2797,25596,1,0.0471,n.a. one run,0.0445,0.0497,0.0403,0.0545
+8,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Cardiomegaly",GPT-4o-agent,accuracy (Cardiomegaly),full_cohort,25596,2797,2700,1,0.0877,n.a. one run,0.0842,0.0912,0.0675,0.1095
+9,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Cardiomegaly",GPT-4o-agent,"accuracy, answered subset (Cardiomegaly)",answered,25596,2797,2700,1,0.8311,n.a. one run,,,,
+10,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Cardiomegaly",GPT-4o-vision,accuracy (Cardiomegaly),full_cohort,25596,2797,25596,1,0.4149,n.a. one run,0.4089,0.421,0.3945,0.4357
+11,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Cardiomegaly",GPT-5.4-vision,accuracy (Cardiomegaly),full_cohort,25596,2797,25596,1,0.8602,n.a. one run,0.8559,0.8644,0.8429,0.8761
+12,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Cardiomegaly",TLAgent,accuracy (Cardiomegaly),full_cohort,25596,2797,25596,1,0.96,n.a. one run,0.9576,0.9624,0.9531,0.9664
+13,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Consolidation",LLaVA-Med,accuracy (Consolidation),full_cohort,25596,2797,25596,1,0.6736,n.a. one run,0.6678,0.6792,0.6605,0.6866
+14,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Consolidation",GPT-4o-agent,accuracy (Consolidation),full_cohort,25596,2797,2700,1,0.0909,n.a. one run,0.0874,0.0944,0.0708,0.1129
+15,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Consolidation",GPT-4o-agent,"accuracy, answered subset (Consolidation)",answered,25596,2797,2700,1,0.8619,n.a. one run,,,,
+16,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Consolidation",GPT-4o-vision,accuracy (Consolidation),full_cohort,25596,2797,25596,1,0.6987,n.a. one run,0.6931,0.7046,0.6817,0.7162
+17,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Consolidation",GPT-5.4-vision,accuracy (Consolidation),full_cohort,25596,2797,25596,1,0.9009,n.a. one run,0.8972,0.9046,0.8926,0.9094
+18,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Consolidation",TLAgent,accuracy (Consolidation),full_cohort,25596,2797,25596,1,0.9291,n.a. one run,0.9259,0.9322,0.9222,0.9359
+19,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Edema",LLaVA-Med,accuracy (Edema),full_cohort,25596,2797,25596,1,0.6851,n.a. one run,0.6795,0.6908,0.6711,0.6988
+20,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Edema",GPT-4o-agent,accuracy (Edema),full_cohort,25596,2797,2700,1,0.095,n.a. one run,0.0914,0.0987,0.0737,0.1181
+21,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Edema",GPT-4o-agent,"accuracy, answered subset (Edema)",answered,25596,2797,2700,1,0.9007,n.a. one run,,,,
+22,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Edema",GPT-4o-vision,accuracy (Edema),full_cohort,25596,2797,25596,1,0.7801,n.a. one run,0.775,0.7853,0.7581,0.802
+23,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Edema",GPT-5.4-vision,accuracy (Edema),full_cohort,25596,2797,25596,1,0.8871,n.a. one run,0.8833,0.891,0.8693,0.9041
+24,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Edema",TLAgent,accuracy (Edema),full_cohort,25596,2797,25596,1,0.9641,n.a. one run,0.9618,0.9664,0.9594,0.9685
+25,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Effusion",LLaVA-Med,accuracy (Effusion),full_cohort,25596,2797,25596,1,0.1858,n.a. one run,0.181,0.1905,0.1724,0.1995
+26,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Effusion",GPT-4o-agent,accuracy (Effusion),full_cohort,25596,2797,2700,1,0.0826,n.a. one run,0.0793,0.086,0.0639,0.1034
+27,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Effusion",GPT-4o-agent,"accuracy, answered subset (Effusion)",answered,25596,2797,2700,1,0.783,n.a. one run,,,,
+28,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Effusion",GPT-4o-vision,accuracy (Effusion),full_cohort,25596,2797,25596,1,0.4994,n.a. one run,0.4935,0.5056,0.4832,0.5168
+29,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Effusion",GPT-5.4-vision,accuracy (Effusion),full_cohort,25596,2797,25596,1,0.7486,n.a. one run,0.7435,0.7539,0.7337,0.7638
+30,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Effusion",TLAgent,accuracy (Effusion),full_cohort,25596,2797,25596,1,0.8398,n.a. one run,0.8353,0.8444,0.8282,0.8511
+31,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Emphysema",LLaVA-Med,accuracy (Emphysema),full_cohort,25596,2797,25596,1,0.6806,n.a. one run,0.6749,0.6862,0.6661,0.6946
+32,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Emphysema",GPT-4o-agent,accuracy (Emphysema),full_cohort,25596,2797,2700,1,0.0999,n.a. one run,0.0962,0.1036,0.0774,0.1245
+33,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Emphysema",GPT-4o-agent,"accuracy, answered subset (Emphysema)",answered,25596,2797,2700,1,0.947,n.a. one run,,,,
+34,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Emphysema",GPT-4o-vision,accuracy (Emphysema),full_cohort,25596,2797,25596,1,0.9541,n.a. one run,0.9515,0.9567,0.9465,0.9613
+35,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Emphysema",GPT-5.4-vision,accuracy (Emphysema),full_cohort,25596,2797,25596,1,0.9067,n.a. one run,0.9031,0.9103,0.8957,0.9168
+36,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Emphysema",TLAgent,accuracy (Emphysema),full_cohort,25596,2797,25596,1,0.959,n.a. one run,0.9565,0.9614,0.9521,0.9656
+37,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Fibrosis",LLaVA-Med,accuracy (Fibrosis),full_cohort,25596,2797,25596,1,0.6914,n.a. one run,0.6857,0.697,0.6764,0.7056
+38,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Fibrosis",GPT-4o-agent,accuracy (Fibrosis),full_cohort,25596,2797,2700,1,0.0945,n.a. one run,0.0909,0.0981,0.0731,0.1178
+39,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Fibrosis",GPT-4o-agent,"accuracy, answered subset (Fibrosis)",answered,25596,2797,2700,1,0.8959,n.a. one run,,,,
+40,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Fibrosis",GPT-4o-vision,accuracy (Fibrosis),full_cohort,25596,2797,25596,1,0.978,n.a. one run,0.9762,0.9798,0.9747,0.9811
+41,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Fibrosis",GPT-5.4-vision,accuracy (Fibrosis),full_cohort,25596,2797,25596,1,0.9786,n.a. one run,0.9768,0.9803,0.975,0.9818
+42,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Fibrosis",TLAgent,accuracy (Fibrosis),full_cohort,25596,2797,25596,1,0.983,n.a. one run,0.9814,0.9846,0.9801,0.9857
+43,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Hernia",LLaVA-Med,accuracy (Hernia),full_cohort,25596,2797,25596,1,0.6973,n.a. one run,0.6916,0.7028,0.6821,0.7118
+44,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Hernia",GPT-4o-agent,accuracy (Hernia),full_cohort,25596,2797,2700,1,0.0958,n.a. one run,0.0922,0.0995,0.0742,0.1196
+45,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Hernia",GPT-4o-agent,"accuracy, answered subset (Hernia)",answered,25596,2797,2700,1,0.9085,n.a. one run,,,,
+46,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Hernia",GPT-4o-vision,accuracy (Hernia),full_cohort,25596,2797,25596,1,0.9509,n.a. one run,0.9482,0.9535,0.9453,0.9563
+47,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Hernia",GPT-5.4-vision,accuracy (Hernia),full_cohort,25596,2797,25596,1,0.9965,n.a. one run,0.9958,0.9972,0.9951,0.9977
+48,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Hernia",TLAgent,accuracy (Hernia),full_cohort,25596,2797,25596,1,0.9966,n.a. one run,0.9959,0.9973,0.9949,0.9981
+49,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Infiltration",LLaVA-Med,accuracy (Infiltration),full_cohort,25596,2797,25596,1,0.2722,n.a. one run,0.2669,0.2777,0.2607,0.2835
+50,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Infiltration",GPT-4o-agent,accuracy (Infiltration),full_cohort,25596,2797,2700,1,0.074,n.a. one run,0.0708,0.0772,0.0577,0.0915
+51,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Infiltration",GPT-4o-agent,"accuracy, answered subset (Infiltration)",answered,25596,2797,2700,1,0.7011,n.a. one run,,,,
+52,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Infiltration",GPT-4o-vision,accuracy (Infiltration),full_cohort,25596,2797,25596,1,0.7291,n.a. one run,0.7237,0.7346,0.7182,0.7402
+53,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Infiltration",GPT-5.4-vision,accuracy (Infiltration),full_cohort,25596,2797,25596,1,0.66,n.a. one run,0.6543,0.666,0.6461,0.674
+54,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Infiltration",TLAgent,accuracy (Infiltration),full_cohort,25596,2797,25596,1,0.7639,n.a. one run,0.7587,0.769,0.7523,0.7759
+55,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pleural_Thickening",LLaVA-Med,accuracy (Pleural_Thickening),full_cohort,25596,2797,25596,1,0.6848,n.a. one run,0.679,0.6903,0.6706,0.6984
+56,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pleural_Thickening",GPT-4o-agent,accuracy (Pleural_Thickening),full_cohort,25596,2797,2700,1,0.0939,n.a. one run,0.0903,0.0974,0.0726,0.1172
+57,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pleural_Thickening",GPT-4o-agent,"accuracy, answered subset (Pleural_Thickening)",answered,25596,2797,2700,1,0.89,n.a. one run,,,,
+58,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pleural_Thickening",GPT-4o-vision,accuracy (Pleural_Thickening),full_cohort,25596,2797,25596,1,0.9515,n.a. one run,0.9488,0.9541,0.946,0.9567
+59,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pleural_Thickening",GPT-5.4-vision,accuracy (Pleural_Thickening),full_cohort,25596,2797,25596,1,0.9553,n.a. one run,0.9527,0.9578,0.9501,0.9603
+60,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pleural_Thickening",TLAgent,accuracy (Pleural_Thickening),full_cohort,25596,2797,25596,1,0.9553,n.a. one run,0.9527,0.9578,0.9501,0.9603
+61,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Nodule",LLaVA-Med,accuracy (Nodule),full_cohort,25596,2797,25596,1,0.6769,n.a. one run,0.6711,0.6826,0.6626,0.6905
+62,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Nodule",GPT-4o-agent,accuracy (Nodule),full_cohort,25596,2797,2700,1,0.0938,n.a. one run,0.0902,0.0974,0.0728,0.1166
+63,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Nodule",GPT-4o-agent,"accuracy, answered subset (Nodule)",answered,25596,2797,2700,1,0.8893,n.a. one run,,,,
+64,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Nodule",GPT-4o-vision,accuracy (Nodule),full_cohort,25596,2797,25596,1,0.9311,n.a. one run,0.928,0.9342,0.9236,0.9381
+65,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Nodule",GPT-5.4-vision,accuracy (Nodule),full_cohort,25596,2797,25596,1,0.9354,n.a. one run,0.9324,0.9383,0.928,0.9422
+66,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Nodule",TLAgent,accuracy (Nodule),full_cohort,25596,2797,25596,1,0.937,n.a. one run,0.934,0.9399,0.9294,0.9438
+67,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Mass",LLaVA-Med,accuracy (Mass),full_cohort,25596,2797,25596,1,0.6737,n.a. one run,0.6679,0.6793,0.6598,0.6873
+68,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Mass",GPT-4o-agent,accuracy (Mass),full_cohort,25596,2797,2700,1,0.091,n.a. one run,0.0874,0.0945,0.0703,0.1135
+69,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Mass",GPT-4o-agent,"accuracy, answered subset (Mass)",answered,25596,2797,2700,1,0.8622,n.a. one run,,,,
+70,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Mass",GPT-4o-vision,accuracy (Mass),full_cohort,25596,2797,25596,1,0.9316,n.a. one run,0.9285,0.9346,0.9227,0.9402
+71,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Mass",GPT-5.4-vision,accuracy (Mass),full_cohort,25596,2797,25596,1,0.9288,n.a. one run,0.9256,0.932,0.9197,0.9374
+72,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Mass",TLAgent,accuracy (Mass),full_cohort,25596,2797,25596,1,0.9342,n.a. one run,0.9312,0.9373,0.9256,0.9426
+73,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumonia",LLaVA-Med,accuracy (Pneumonia),full_cohort,25596,2797,25596,1,0.6898,n.a. one run,0.6841,0.6954,0.6749,0.7038
+74,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumonia",GPT-4o-agent,accuracy (Pneumonia),full_cohort,25596,2797,2700,1,0.0953,n.a. one run,0.0917,0.0989,0.074,0.1185
+75,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumonia",GPT-4o-agent,"accuracy, answered subset (Pneumonia)",answered,25596,2797,2700,1,0.9033,n.a. one run,,,,
+76,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumonia",GPT-4o-vision,accuracy (Pneumonia),full_cohort,25596,2797,25596,1,0.977,n.a. one run,0.9751,0.9788,0.9744,0.9795
+77,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumonia",GPT-5.4-vision,accuracy (Pneumonia),full_cohort,25596,2797,25596,1,0.8876,n.a. one run,0.8838,0.8915,0.8745,0.9004
+78,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumonia",TLAgent,accuracy (Pneumonia),full_cohort,25596,2797,25596,1,0.9783,n.a. one run,0.9765,0.9801,0.9759,0.9807
+79,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumothorax",LLaVA-Med,accuracy (Pneumothorax),full_cohort,25596,2797,25596,1,0.658,n.a. one run,0.6523,0.6639,0.644,0.672
+80,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumothorax",GPT-4o-agent,accuracy (Pneumothorax),full_cohort,25596,2797,2700,1,0.092,n.a. one run,0.0885,0.0956,0.0709,0.1152
+81,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumothorax",GPT-4o-agent,"accuracy, answered subset (Pneumothorax)",answered,25596,2797,2700,1,0.8722,n.a. one run,,,,
+82,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumothorax",GPT-4o-vision,accuracy (Pneumothorax),full_cohort,25596,2797,25596,1,0.8931,n.a. one run,0.8893,0.8969,0.8796,0.9059
+83,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumothorax",GPT-5.4-vision,accuracy (Pneumothorax),full_cohort,25596,2797,25596,1,0.8846,n.a. one run,0.8806,0.8885,0.8721,0.8964
+84,Extended Data 3b,Thoracic disease detection,"NIH ChestX-ray14, Pneumothorax",TLAgent,accuracy (Pneumothorax),full_cohort,25596,2797,25596,1,0.9121,n.a. one run,0.9085,0.9155,0.9016,0.9222

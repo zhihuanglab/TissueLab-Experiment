@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",LLaVA-Med,Cohen's kappa,answered,21,21,17,5,0.0866,0.1312,-0.1124,0.2645,-0.1124,0.2645
+2,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",MedGemma,Cohen's kappa,answered,21,21,21,5,-0.1351,0.0,-0.5273,0.2821,-0.5273,0.2821
+3,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",MAM,Cohen's kappa,answered,21,21,21,5,0.0,0.0,0.0,0.0,0.0,0.0
+4,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",M3D,Cohen's kappa,answered,21,21,21,5,0.0,0.0,0.0,0.0,0.0,0.0
+5,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-4o-vision,Cohen's kappa,answered,21,21,21,5,0.0,0.0,0.0,0.0,0.0,0.0
+6,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-5-vision,Cohen's kappa,answered,21,21,0,5,no evaluable output,,,,,
+7,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-5.4-vision,Cohen's kappa,answered,21,21,21,5,0.2811,0.1333,0.092,0.4474,0.092,0.4474
+8,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",GPT-4o-agent,Cohen's kappa,answered,21,21,5,5,0.0,0.0,0.0,0.0,0.0,0.0
+9,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",MedAgent-Pro,Cohen's kappa,answered,21,21,21,5,-0.3422,0.1033,-0.5366,-0.0984,-0.5366,-0.0984
+10,Figure 3k,Myocardial hypertrophy,"Sunnybrook, 21 cases",TLAgent,Cohen's kappa,answered,21,21,19,5,0.6587,0.0,0.2857,1.0,0.2857,1.0
