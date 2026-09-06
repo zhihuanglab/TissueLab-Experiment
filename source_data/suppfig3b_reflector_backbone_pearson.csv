@@ -1,0 +1,11 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-4o,"pearson, backbone alone (vision)",answered,321,22,321,5,-0.0076,0.0138,-0.1481,0.0686,-0.1775,0.0767
+2,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-4o,"pearson, backbone as TissueLab reflector",answered,321,22,321,5,0.7599,0.0179,0.6443,0.8557,0.6122,0.8573
+3,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-5,"pearson, backbone alone (vision)",answered,321,22,321,5,0.05,0.0478,-0.03,0.1269,-0.0441,0.1331
+4,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-5,"pearson, backbone as TissueLab reflector",answered,321,22,321,5,0.7507,0.0408,0.6401,0.8416,0.6682,0.8735
+5,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-5.2,"pearson, backbone alone (vision)",answered,321,22,321,5,0.3644,0.0682,0.204,0.5125,0.0643,0.5417
+6,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-5.2,"pearson, backbone as TissueLab reflector",answered,321,22,321,5,0.8822,0.0178,0.8064,0.9388,0.7849,0.9363
+7,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-5.4,"pearson, backbone alone (vision)",answered,321,22,321,5,0.3241,0.029,0.2059,0.43,0.1346,0.482
+8,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-5.4,"pearson, backbone as TissueLab reflector",answered,321,22,321,5,0.9111,0.0323,0.8457,0.9594,0.8212,0.9649
+9,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",Gemini 3 Pro (deployed reflector),"pearson, backbone as TissueLab reflector",answered,321,22,321,5,0.9333,0.0,0.8728,0.9768,0.8706,0.9807
+10,Supplementary Fig. 3b,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",No reflector,"pearson, no reflector",answered,321,22,321,5,0.8516,0.0,0.7606,0.9274,0.6872,0.9429

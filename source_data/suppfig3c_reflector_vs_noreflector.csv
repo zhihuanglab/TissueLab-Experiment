@@ -1,0 +1,5 @@
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
+1,Supplementary Fig. 3c,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-4o,"pearson difference, reflector minus no reflector",answered,321,22,321,5,-0.0917,0.0179,-0.2206,0.0309,-0.222,0.0967
+2,Supplementary Fig. 3c,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-5,"pearson difference, reflector minus no reflector",answered,321,22,321,5,-0.1009,0.0408,-0.2236,0.0189,-0.23,0.1388
+3,Supplementary Fig. 3c,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-5.2,"pearson difference, reflector minus no reflector",answered,321,22,321,5,0.0306,0.0178,-0.0583,0.1244,-0.0675,0.1651
+4,Supplementary Fig. 3c,"Lymph node metastasis classification, backbone sensitivity","LNCO2, 321 slides",GPT-5.4,"pearson difference, reflector minus no reflector",answered,321,22,321,5,0.0595,0.0323,-0.01,0.1342,-0.0195,0.1729
