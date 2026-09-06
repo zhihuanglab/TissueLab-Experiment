@@ -234,6 +234,12 @@ Reproducibility bundles for the AD Biomarker Discovery, Metastasis classificatio
     - `baselines/` - the four training-based baselines and the three human-designed
       workflows run on the same 75 cases; the human workflows also carry the
       continuous `tubule_ratio` each derives its score from.
+  - `Data Splits/` - two stand-alone scripts, `split_tcga_brca.py` and
+    `split_histai.py`, that regenerate every split above from the case pools
+    stored next to them (seed 42, Python standard library only) and check the
+    result against the per-case prediction files: the 30/30 TCGA-BRCA
+    train/test split and the 75-case HISTAI cohort, accrued as three stratified
+    draws of 30, 30 and 15. See the README in that folder.
   - Prompt files, agent source and the bulk intermediate outputs are in the
     reproducibility bundle on Google Drive linked above.
 
