@@ -1,0 +1,291 @@
+{
+  "hypothesis_family": "CA1 reactive-astro-exposed pyramidal lymphocyte enrichment within 25um",
+  "best_variation": "candidate_variant_a",
+  "feature_column": "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um",
+  "partial_r": 0.15933151706227072,
+  "p_value": 0.3605886428848102,
+  "selection_score": 0.15933151706227072,
+  "loo_predictive_r": 0.06571337114472862,
+  "is_loo_gap": 0.0936181459175421,
+  "penalty": 0.0936181459175421,
+  "adjusted_score": 0.06571337114472862,
+  "ranked_variations": [
+    {
+      "variation_name": "candidate_variant_a",
+      "description": "Fraction of CA1 reactive-astro-exposed pyramidal neurons with at least 1 lymphocyte within 25 um.",
+      "feature_column": "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um",
+      "n_total": 35,
+      "n_analyzable": 35,
+      "coverage_fraction": 1.0,
+      "partial_r": 0.15933151706227072,
+      "p_value": 0.3605886428848102,
+      "selection_score": 0.15933151706227072,
+      "loo_predictive_r": 0.06571337114472862,
+      "is_loo_gap": 0.0936181459175421,
+      "penalty": 0.0936181459175421,
+      "adjusted_score": 0.06571337114472862
+    },
+    {
+      "variation_name": "candidate_variant_b",
+      "description": "Fraction of CA1 reactive-astro-exposed pyramidal neurons with at least 2 lymphocytes within 25 um.",
+      "feature_column": "ca1_ra_exposed_pyramidal_lym_ge2_fraction_25um",
+      "n_total": 35,
+      "n_analyzable": 35,
+      "coverage_fraction": 1.0,
+      "partial_r": null,
+      "p_value": null,
+      "selection_score": null,
+      "loo_predictive_r": null,
+      "is_loo_gap": null,
+      "penalty": 0.0,
+      "adjusted_score": null
+    }
+  ],
+  "per_donor_loo": [
+    {
+      "donor_id": "H19.33.004",
+      "outcome": -0.0587685,
+      "predicted": -0.05306213766051163,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.005681818181818182,
+      "n_ra_exposed_pyramidal_ca1": 176
+    },
+    {
+      "donor_id": "H20.33.008",
+      "outcome": -0.1205063,
+      "predicted": -0.13504157677381526,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 81
+    },
+    {
+      "donor_id": "H20.33.013",
+      "outcome": -0.0317417,
+      "predicted": -0.09563304700910083,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.006993006993006993,
+      "n_ra_exposed_pyramidal_ca1": 143
+    },
+    {
+      "donor_id": "H20.33.018",
+      "outcome": -0.3042141,
+      "predicted": -0.10009341253392351,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 304
+    },
+    {
+      "donor_id": "H20.33.024",
+      "outcome": -0.0103346,
+      "predicted": -0.09225453308541005,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 350
+    },
+    {
+      "donor_id": "H20.33.025",
+      "outcome": -0.0723104,
+      "predicted": -0.11392451899011415,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 171
+    },
+    {
+      "donor_id": "H20.33.027",
+      "outcome": -0.1125932,
+      "predicted": -0.10264051426183851,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.00909090909090909,
+      "n_ra_exposed_pyramidal_ca1": 110
+    },
+    {
+      "donor_id": "H20.33.029",
+      "outcome": -0.0948095,
+      "predicted": -0.13607998272118002,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 361
+    },
+    {
+      "donor_id": "H20.33.030",
+      "outcome": -0.1680423,
+      "predicted": -0.09646460187604947,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.009852216748768473,
+      "n_ra_exposed_pyramidal_ca1": 203
+    },
+    {
+      "donor_id": "H20.33.034",
+      "outcome": -0.0522007,
+      "predicted": -0.07945718982659619,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 45
+    },
+    {
+      "donor_id": "H20.33.037",
+      "outcome": -0.2508045,
+      "predicted": -0.14564269271926056,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 178
+    },
+    {
+      "donor_id": "H20.33.038",
+      "outcome": -0.2372091,
+      "predicted": -0.14361832289789084,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 121
+    },
+    {
+      "donor_id": "H20.33.040",
+      "outcome": -0.1026342,
+      "predicted": -0.13655891807037138,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 349
+    },
+    {
+      "donor_id": "H20.33.041",
+      "outcome": -0.1079018,
+      "predicted": -0.1313701764760637,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 117
+    },
+    {
+      "donor_id": "H20.33.043",
+      "outcome": -0.0599597,
+      "predicted": -0.0738695862411381,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 443
+    },
+    {
+      "donor_id": "H20.33.044",
+      "outcome": -0.0544588,
+      "predicted": -0.049515810275641926,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 119
+    },
+    {
+      "donor_id": "H20.33.046",
+      "outcome": -0.2017114,
+      "predicted": -0.12486836900003744,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 159
+    },
+    {
+      "donor_id": "H21.33.001",
+      "outcome": -0.0815782,
+      "predicted": -0.025580608749344865,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 212
+    },
+    {
+      "donor_id": "H21.33.004",
+      "outcome": -0.1198253,
+      "predicted": -0.025008872281574827,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 208
+    },
+    {
+      "donor_id": "H21.33.006",
+      "outcome": -0.0539668,
+      "predicted": -0.08788544445619398,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 239
+    },
+    {
+      "donor_id": "H21.33.007",
+      "outcome": -0.0975144,
+      "predicted": -0.15622943037137804,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 263
+    },
+    {
+      "donor_id": "H21.33.012",
+      "outcome": -0.1009244,
+      "predicted": -0.10563200602383867,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 25
+    },
+    {
+      "donor_id": "H21.33.013",
+      "outcome": -0.161261,
+      "predicted": -0.12536214457761144,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 143
+    },
+    {
+      "donor_id": "H21.33.018",
+      "outcome": -0.144019,
+      "predicted": -0.1269811413871562,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 72
+    },
+    {
+      "donor_id": "H21.33.021",
+      "outcome": -0.0983582,
+      "predicted": -0.10272360517875115,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 183
+    },
+    {
+      "donor_id": "H21.33.023",
+      "outcome": -0.1546294,
+      "predicted": -0.03659331306835193,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 108
+    },
+    {
+      "donor_id": "H21.33.025",
+      "outcome": -0.0422854,
+      "predicted": -0.12928153325778183,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 179
+    },
+    {
+      "donor_id": "H21.33.033",
+      "outcome": -0.0466362,
+      "predicted": -0.1312211738326725,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 86
+    },
+    {
+      "donor_id": "H21.33.035",
+      "outcome": -0.0498238,
+      "predicted": -0.1544808421224379,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 140
+    },
+    {
+      "donor_id": "H21.33.037",
+      "outcome": -0.0881349,
+      "predicted": -0.07579839746578515,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 172
+    },
+    {
+      "donor_id": "H21.33.038",
+      "outcome": -0.0518276,
+      "predicted": -0.06974974060653497,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 224
+    },
+    {
+      "donor_id": "H21.33.040",
+      "outcome": -0.0327944,
+      "predicted": -0.14793078803868176,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 71
+    },
+    {
+      "donor_id": "H21.33.043",
+      "outcome": -0.072355,
+      "predicted": -0.07062991612167593,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.00749063670411985,
+      "n_ra_exposed_pyramidal_ca1": 267
+    },
+    {
+      "donor_id": "H21.33.044",
+      "outcome": -0.0991281,
+      "predicted": -0.1427977242052404,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.007058823529411765,
+      "n_ra_exposed_pyramidal_ca1": 425
+    },
+    {
+      "donor_id": "H21.33.046",
+      "outcome": -0.1616234,
+      "predicted": -0.10638426088831372,
+      "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um": 0.0,
+      "n_ra_exposed_pyramidal_ca1": 241
+    }
+  ]
+}

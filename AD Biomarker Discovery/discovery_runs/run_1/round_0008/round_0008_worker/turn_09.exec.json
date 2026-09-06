@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "--- /data/autoresearch_runs/run_20260410_201937_2df939/round_0006/round_0006_worker/candidate_bundle/artifacts/results.json\nbest_variation None\npartial_r 0.29397628619873717\nselection_score None\nloo_predictive_r 0.09756083569822228\nis_loo_gap 0.1964154505005149\nadjusted_score 0.07435311044796483\nfeature_column baseline_ca1_pyr_frac\nfeature_name baseline_ca1_pyr_frac\nranked vars head:\n--- /data/autoresearch_runs/run_20260410_201937_2df939/round_0006/round_0006_worker/results.json\nbest_variation None\npartial_r 0.29397628619873717\nselection_score None\nloo_predictive_r 0.09756083569822228\nis_loo_gap 0.1964154505005149\nadjusted_score 0.07435311044796483\nfeature_column baseline_ca1_pyr_frac\nfeature_name baseline_ca1_pyr_frac\nranked vars head:\n",
+  "stderr": ""
+}

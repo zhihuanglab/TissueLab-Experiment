@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "shared tree\n/shared\n/shared/cache\n/shared/cache/region_polygons\n/shared/lib\n/shared/lib/shared_analysis\n/shared/lib/shared_analysis/__pycache__\n/shared/templates\n/shared/templates/__pycache__\nscratch files\ntotal 772\ndrwx------ 1 root root 131072 Apr 20 20:41 .\ndrwxr-xr-x 1 root root   4096 Apr 20 20:41 ..\n-????????? ? ?    ?         ?            ? ._.tl_runtime\n-????????? ? ?    ?         ?            ? ._context_bundle.json\n-????????? ? ?    ?         ?            ? ._program.md\n-????????? ? ?    ?         ?            ? ._result.py\n-????????? ? ?    ?         ?            ? ._worker_brief.json\ndrwx------ 1 root root 131072 Apr 20 20:41 .tl_runtime\n-rwx------ 1 root root  18604 Apr 20 20:41 context_bundle.json\n-rwx------ 1 root root   5502 Apr 20 20:41 program.md\n-rwx------ 1 root root   1662 Apr 12 16:52 result.py\n-rwx------ 1 root root   4037 Apr 20 20:41 worker_brief.json\n",
+  "stderr": "ls: cannot access '/scratch/._worker_brief.json': Operation not permitted\nls: cannot access '/scratch/._program.md': Operation not permitted\nls: cannot access '/scratch/._context_bundle.json': Operation not permitted\nls: cannot access '/scratch/._result.py': Operation not permitted\nls: cannot access '/scratch/._.tl_runtime': Operation not permitted\n"
+}

@@ -1,0 +1,70 @@
+{
+  "worker_name": "round_0005_worker",
+  "round_id": 5,
+  "candidate_id": "ca1-reactive-dominant-cuff",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "astrocytic_reactivity_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "peripyramidal_reactivity_r35um",
+        "round_id": 2,
+        "panel_candidate_score": 0.4964,
+        "delta_panel_score": 0.0051,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_cuffed_fraction_r35um_ge1",
+        "round_id": 3,
+        "panel_candidate_score": 0.5544,
+        "delta_panel_score": 0.0579,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_pyramidal_cuffed_fraction_r35um_ge2",
+        "round_id": 4,
+        "panel_candidate_score": 0.5731,
+        "delta_panel_score": 0.0187,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5731
+  },
+  "scientific_question": "Does the fraction of CA1 pyramidal neurons embedded in predominantly reactive local astrocyte cuffs capture memory-decline signal beyond the current broad reactivity and reactive-count cuffing features?",
+  "approach": "Assign cells to CA1 using annotation polygons after dividing polygon coordinates by 16. Within CA1, identify Pyramidal Neuron, Astrocyte, and Reactive Astrocyte cells. For each CA1 pyramidal neuron, count nearby CA1 astrocytes and reactive astrocytes within a 35 um centroid-to-centroid radius; let total_astro = astrocyte + reactive_astrocyte and reactive_frac = reactive_astrocyte / total_astro when total_astro > 0. Define a neuron as having a reactive-dominant cuff if total_astro >= 2 and reactive_frac exceeds the tested threshold. The donor-level biomarker is the fraction of all CA1 pyramidal neurons meeting that criterion.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Reactive-dominant cuff = at least 2 nearby astrocytes within 35 um and more than 50% of them are Reactive Astrocytes; donor score is the fraction of CA1 pyramidal neurons meeting this majority-reactive criterion."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Reactive-dominant cuff = at least 2 nearby astrocytes within 35 um and at least 67% of them are Reactive Astrocytes; donor score is the fraction of CA1 pyramidal neurons meeting this supermajority-reactive criterion."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use slide_name from training_cohort.csv to locate /data/<slide_name>. Restrict both center neurons and neighboring astrocytes to CA1-assigned cells. Use slide-specific MPP from the paired SVS if convenient for the 35 um radius; otherwise the cohort MPP is tightly clustered near 0.5 um/pixel. A neuron with fewer than 2 nearby astrocytes counts as not meeting the cuff criterion rather than being dropped, to keep donor coverage stable. Handle donors with no CA1 pyramidal neurons by returning NaN. Ignore AppleDouble files.",
+  "rationale": "Recent rounds show a clear progression from global CA1 astrocytic reactivity to neuron-centered reactive cuffing, with stronger signal as cuff severity increases from any reactive neighbor to multiple reactive neighbors. The next focused test is whether the key biology is not just reactive-astrocyte count, but a phenotypic shift of the whole peripyramidal astrocyte neighborhood toward reactive dominance. This stays on the strongest lead while changing one thing: local niche composition around CA1 pyramidal neurons, which could add new signal or replace a weaker broad reactivity member with a cleaner neuron-centered biomarker."
+}

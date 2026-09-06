@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nwith open('/scratch/context_bundle.json') as f:\n    obj = json.load(f)\nprint(\"TOP-LEVEL KEYS:\", list(obj))\nfor k,v in obj.items():\n    if isinstance(v, (dict,list)):\n        s=json.dumps(v, indent=2)\n        print(\"\\n##\", k)\n        print(s[:20000])\n    else:\n        print(\"\\n##\", k, \"=\", v)\nPY\npython - <<'PY'\nfrom pathlib import Path\nimport pandas as pd\np=Path('/data/training_cohort.csv')\nprint(\"\\ntraining_cohort exists:\", p.exists())\nif p.exists():\n    df=pd.read_csv(p)\n    print(df.head().to_string())\n    print(df.columns.tolist())\n    print(df.shape)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"TOP-LEVEL KEYS: ['worker_brief', 'runtime_manifest', 'cohort_summary', 'slide_manifest_head', 'runtime_quickstart_excerpt', 'dataset_guide_excerpt']\\n\\n## worker_brief\\n{\\n  \\\"worker_name\\\": \\\"round_0001_worker\\\",\\n  \\\"round_id\\\": 1,\\n  \\\"candidate_id\\\": \\\"ca1-pyramidal-abundance\\\",\\n  \\\"candidate_type\\\": \\\"seed\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [],\\n    \\\"best_panel_score\\\": null\\n  },\\n  \\\"scientific_question\\\": \\\"Does reduced CA1 pyramidal neuron abundance provide a strong donor-level marker of faster memory declin\", \"stderr\": \"\"}"
+  }
+]

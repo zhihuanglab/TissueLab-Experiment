@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, os\nprint(sys.path[:10])\nPY\necho 'shared lib dirs:'\nfind /shared/lib -maxdepth 2 -type f | sed -n '1,80p'\necho 'template helper imports maybe package layout:'\npython - <<'PY'\nimport os\nfor root, dirs, files in os.walk('/shared/lib'):\n    if root.count(os.sep) > 4:\n        continue\n    for f in files:\n        if f.endswith('.py') and ('shared_analysis' in root or f=='__init__.py'):\n            print(os.path.join(root,f))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\\nshared lib dirs:\\n/shared/lib/shared_analysis/__init__.py\\n/shared/lib/shared_analysis/.___init__.py\\n/shared/lib/shared_analysis/context.py\\n/shared/lib/shared_analysis/._context.py\\n/shared/lib/shared_analysis/stats.py\\n/shared/lib/shared_analysis/._stats.py\\n/shared/lib/shared_analysis/pca.py\\n/shared/lib/shared_analysis/._pca.py\\n/sh\", \"stderr\": \"\"}"
+  }
+]

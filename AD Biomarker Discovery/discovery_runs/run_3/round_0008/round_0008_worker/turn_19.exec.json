@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "openslide version ok\n0.50490000000000002 0.5049\n",
+  "stderr": ""
+}

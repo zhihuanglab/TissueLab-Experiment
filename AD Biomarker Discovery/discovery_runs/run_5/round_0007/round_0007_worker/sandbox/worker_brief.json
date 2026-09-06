@@ -1,0 +1,92 @@
+{
+  "worker_name": "round_0007_worker",
+  "round_id": 7,
+  "candidate_id": "ca1-peripyramidal-reactive-astro-lymphocyte-contact",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_reactive_astro_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_pyramidal_near_reactive_astro_fraction_30um",
+        "round_id": 2,
+        "panel_candidate_score": 0.5513,
+        "delta_panel_score": 0.0599,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um",
+        "round_id": 3,
+        "panel_candidate_score": 0.5984,
+        "delta_panel_score": 0.0471,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+        "round_id": 4,
+        "panel_candidate_score": 0.6307,
+        "delta_panel_score": 0.0323,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_peripyramidal_astro_reactivity_index_30um",
+        "round_id": 5,
+        "panel_candidate_score": 0.6323,
+        "delta_panel_score": 0.0016,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker/result.py"
+      },
+      {
+        "slot": 6,
+        "feature_name": "ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um",
+        "round_id": 6,
+        "panel_candidate_score": 0.6347,
+        "delta_panel_score": 0.0024,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0006/round_0006_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0006/round_0006_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0006/round_0006_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.6347
+  },
+  "scientific_question": "Do donors with worse memory decline show a more lymphocyte-associated reactive astrocyte niche around CA1 pyramidal neurons beyond the current astrocyte-only CA1 panel?",
+  "approach": "Using ClassificationNode labels and SegmentationNode centroids, assign cells to CA1, then identify CA1 Reactive Astrocytes, CA1 Pyramidal Neurons, and CA1 Lymphocytes. Define a CA1 peripyramidal reactive astrocyte as any CA1 Reactive Astrocyte with at least one CA1 Pyramidal Neuron within 30 um. For each donor, compute the biomarker as the fraction of these peripyramidal reactive astrocytes that have at least one CA1 Lymphocyte within radius r. This is a donor-level inflammatory co-localization score within the already validated CA1 reactive-astrocyte niche.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Baseline: fraction of CA1 peripyramidal reactive astrocytes with at least one CA1 lymphocyte within 30 um."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "More local version: fraction of CA1 peripyramidal reactive astrocytes with at least one CA1 lymphocyte within 20 um."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Assign regions with CustomAnnotations polygons after dividing polygon coordinates by 16 to match cell coordinates. This candidate uses centroids only; no contour-area computation is needed. Convert um to pixels with slide MPP from the paired SVS if available; approximately 30 um is about 60 px and 20 um about 40 px in this cohort. Restrict all queried cells to CA1 before distance calculations. If a donor has zero CA1 peripyramidal reactive astrocytes, return NaN rather than forcing 0.",
+  "rationale": "The accepted panel has extracted several strong CA1 reactive-astrocyte signals, but the last two gains were small, suggesting astro-only summaries in this niche are becoming redundant. The right next test is to keep the same successful CA1 peripyramidal niche and change one biological axis: whether those reactive astrocytes are also immune-associated. A lymphocyte-contact fraction is simple, interpretable, and could add orthogonal inflammatory signal or replace a weaker niche-composition member if it is cleaner."
+}

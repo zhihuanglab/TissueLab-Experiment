@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport os, json, glob\npaths=glob.glob('/data/autoresearch_runs/**/*results.json', recursive=True)[:10]\nprint('found', len(paths))\nfor p in paths[:5]:\n    try:\n        obj=json.load(open(p))\n    except Exception:\n        continue\n    if 'adjusted_score' in obj or 'selection_score' in obj:\n        print(p)\n        print({k:obj.get(k) for k in ['feature_name','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','best_variation']})\n        break\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"found 10\\n\", \"stderr\": \"\"}"
+  }
+]

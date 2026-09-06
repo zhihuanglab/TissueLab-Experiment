@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, glob, os\ncount=0\nfor f in glob.glob('/data/autoresearch_runs/**/results.json', recursive=True):\n    try:\n        d=json.load(open(f))\n    except: \n        continue\n    rv=d.get('ranked_variations')\n    if not rv: continue\n    for row in rv:\n        keys=['partial_r','loo_predictive_r','gap','gap_penalty','adjusted_score']\n        if all(k in row and row[k] is not None for k in keys):\n            pr=abs(row['partial_r']); loo=abs(row['loo_predictive_r']); gap=row['gap']; pen=row['gap_penalty']; adj=row['adjusted_score']\n            if pen and pen>0:\n                print(f,row['name'],'pr',pr,'loo',loo,'gap',gap,'pen',pen,'adj',adj,'adj-vs-loo',adj-loo,'gap-0.15',gap-0.15,'gap*0.05',gap*0.05)\n                count+=1\n                if count>=8: raise SystemExit\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/data/autoresearch_runs/run_20260410_155640_434a75/round_0001/round_0001_worker/results.json ca1_reactive_to_pyramidal_logratio pr 0.47619189779085824 loo 0.31997812160803163 gap 0.1562137761828266 pen 0.0031068880914133096 adj 0.31687123351661833 adj-vs-loo -0.0031068880914132957 gap-0.15 0.006213776182826619 gap*0.05 0.007810688809141331\\n/data/autoresearch_runs/run_20260410_155640_434a75/round_0001/round_0001_worker/results.json ca1_reactive_to_pyramidal_area_logratio pr 0.4187133279945235 loo\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,118 @@
+{
+  "worker_name": "round_0009_worker",
+  "round_id": 9,
+  "candidate_id": "ca1-reactive-corpora-amylacea-niche",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_enrichment",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astrocyte_neighbor_fraction",
+        "round_id": 3,
+        "panel_candidate_score": 0.5189,
+        "delta_panel_score": 0.0118,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_reactive_astrocyte_hypertrophy",
+        "round_id": 4,
+        "panel_candidate_score": 0.5408,
+        "delta_panel_score": 0.0219,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_reactive_local_purity",
+        "round_id": 5,
+        "panel_candidate_score": 0.5485,
+        "delta_panel_score": 0.0077,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker/result.py"
+      },
+      {
+        "slot": 6,
+        "feature_name": "ca1_reactive_neuron_exclusion",
+        "round_id": 6,
+        "panel_candidate_score": 0.5527,
+        "delta_panel_score": 0.0042,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0006/round_0006_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0006/round_0006_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0006/round_0006_worker/result.py"
+      },
+      {
+        "slot": 7,
+        "feature_name": "ca1_reactive_pyramidal_niche_atrophy",
+        "round_id": 7,
+        "panel_candidate_score": 0.5817,
+        "delta_panel_score": 0.029,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0007/round_0007_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0007/round_0007_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0007/round_0007_worker/result.py"
+      },
+      {
+        "slot": 8,
+        "feature_name": "ca1_reactive_oligodendrocyte_gap_r80px",
+        "round_id": 8,
+        "panel_candidate_score": 0.587,
+        "delta_panel_score": 0.0053,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0008/round_0008_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0008/round_0008_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0008/round_0008_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.587
+  },
+  "scientific_question": "Do donors with more CA1 pyramidal neurons in reactive-astrocyte neighborhoods that also contain nearby corpora amylacea show faster memory decline beyond the current CA1 neuron-loss and reactive-niche panel?",
+  "approach": "Assign cells to CA1 by centroid-in-polygon using CustomAnnotations polygons after dividing polygon coordinates by 16. From CA1 cells, identify Pyramidal Neuron, Reactive Astrocyte, and Corpora Amylacea labels. Define a CA1 pyramidal neuron as being in the established reactive niche if it has at least one Reactive Astrocyte centroid within 80 px. Among those reactive-niche pyramidal neurons, compute the donor-level fraction that have at least one Corpora Amylacea centroid within radius r; that fraction is the biomarker.",
+  "variations": [
+    {
+      "name": "corpora_any_r64px",
+      "description": "Fraction of CA1 reactive-niche pyramidal neurons with at least one Corpora Amylacea within 64 px."
+    },
+    {
+      "name": "corpora_any_r80px",
+      "description": "Fraction of CA1 reactive-niche pyramidal neurons with at least one Corpora Amylacea within 80 px."
+    },
+    {
+      "name": "corpora_any_r96px",
+      "description": "Fraction of CA1 reactive-niche pyramidal neurons with at least one Corpora Amylacea within 96 px."
+    }
+  ],
+  "baseline_variation": "corpora_any_r80px",
+  "notes": "Use SegmentationNode centroids only; no contour-area calculation is needed. Restrict both the reactive-astrocyte gate and the Corpora Amylacea neighbor search to CA1-assigned cells to avoid cross-region leakage. Keep the reactive-niche definition fixed at 80 px and vary only the Corpora Amylacea radius. If a donor has no CA1 reactive-niche pyramidal neurons, return NaN rather than forcing 0.",
+  "rationale": "Rounds 3-8 consistently improved the panel by refining the CA1 reactive-pyramidal microenvironment, and round 8 suggests that the composition of that niche still carries additive signal. A natural next cell-population change is to test corpora amylacea as a marker of chronic local degenerative debris handling, which is biologically distinct from reactive astrocyte burden, neuronal atrophy, and oligodendrocyte absence and could either add new signal or replace a weaker local niche feature."
+}

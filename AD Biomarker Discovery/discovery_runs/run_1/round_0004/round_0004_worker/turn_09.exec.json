@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "PYTHONPATH env /shared/lib\n['/scratch', '/shared/lib', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\n/shared/lib/shared_analysis/__init__.py\n(zarr_path: 'str | Path', *, include_regions: 'bool' = True, include_geometry: 'bool' = False, scale: 'float' = 16.0) -> 'pd.DataFrame'\n",
+  "stderr": ""
+}

@@ -1,0 +1,45 @@
+Round 20: LOO-safe PC selection
+============================================================
+Best: global_T3G4_ac_md_a2, adj=0.8470, LOO_r=0.8470, gap=0.0675
+Config: alpha=2, ('global', [1, 7, 4], [9, 5, 1, 16], True, True)
+
+All configs (sorted by adjusted):
+  [GLOBAL] global_T3G4_ac_md_a2: adj=0.8470 LOO_r=0.8470 IS_r=0.9144 gap=0.0675 F1=0.6744 QWK=0.7368
+  [GLOBAL] global_T3G4_ac_md_a3: adj=0.8443 LOO_r=0.8443 IS_r=0.9115 gap=0.0672 F1=0.7078 QWK=0.7568
+  [GLOBAL] global_T3G4_ac_md_a5: adj=0.8411 LOO_r=0.8411 IS_r=0.9076 gap=0.0665 F1=0.7078 QWK=0.7568
+  [GLOBAL] global_T3G4_a5: adj=0.8338 LOO_r=0.8338 IS_r=0.8992 gap=0.0654 F1=0.7384 QWK=0.7895
+  [GLOBAL] global_T3G4_a3: adj=0.8338 LOO_r=0.8338 IS_r=0.9010 gap=0.0672 F1=0.7045 QWK=0.7692
+  [SAFE] safe_T4G4_ac_md_a3: adj=0.7462 LOO_r=0.7518 IS_r=0.9129 gap=0.1612 F1=0.5460 QWK=0.5882
+  [SAFE] safe_T4G4_ac_md_a5: adj=0.7388 LOO_r=0.7455 IS_r=0.9091 gap=0.1636 F1=0.5748 QWK=0.6061
+  [SAFE] safe_T4G4_ac_md_a7: adj=0.7320 LOO_r=0.7400 IS_r=0.9061 gap=0.1661 F1=0.5728 QWK=0.5806
+  [SAFE] safe_T3G4_a2: adj=0.7256 LOO_r=0.7343 IS_r=0.9017 gap=0.1674 F1=0.6125 QWK=0.6667
+  [SAFE] safe_T3G4_a3: adj=0.7254 LOO_r=0.7339 IS_r=0.9010 gap=0.1670 F1=0.6442 QWK=0.6857
+  [SAFE] safe_T3G4_a1: adj=0.7253 LOO_r=0.7342 IS_r=0.9022 gap=0.1680 F1=0.6125 QWK=0.6667
+  [SAFE] safe_T3G4_a5: adj=0.7237 LOO_r=0.7322 IS_r=0.8992 gap=0.1670 F1=0.6412 QWK=0.6667
+  [SAFE] safe_T3G4_a7: adj=0.7217 LOO_r=0.7304 IS_r=0.8976 gap=0.1673 F1=0.6071 QWK=0.6250
+  [SAFE] safe_T4G4_ac_md_a10: adj=0.7217 LOO_r=0.7318 IS_r=0.9022 gap=0.1703 F1=0.5191 QWK=0.5000
+  [SAFE] safe_T3G4_a10: adj=0.7180 LOO_r=0.7269 IS_r=0.8947 gap=0.1678 F1=0.4927 QWK=0.4828
+  [SAFE] safe_T3G4_ac_a3: adj=0.7100 LOO_r=0.7237 IS_r=0.9011 gap=0.1774 F1=0.5789 QWK=0.6286
+  [SAFE] safe_T3G4_ac_a5: adj=0.7083 LOO_r=0.7221 IS_r=0.8996 gap=0.1775 F1=0.6071 QWK=0.6250
+  [SAFE] safe_T3G4_ac_md_a2: adj=0.7053 LOO_r=0.7250 IS_r=0.9144 gap=0.1894 F1=0.5474 QWK=0.5882
+  [SAFE] safe_T3G4_ac_a7: adj=0.7048 LOO_r=0.7193 IS_r=0.8982 gap=0.1789 F1=0.5333 QWK=0.5333
+  [SAFE] safe_T3G4_ac_md_a1: adj=0.7044 LOO_r=0.7259 IS_r=0.9190 gap=0.1930 F1=0.5805 QWK=0.6286
+  [SAFE] safe_T3G4_ac_md_a3: adj=0.7042 LOO_r=0.7233 IS_r=0.9115 gap=0.1882 F1=0.5773 QWK=0.6061
+  [SAFE] safe_T3G4_ac_md_a5: adj=0.7005 LOO_r=0.7195 IS_r=0.9076 gap=0.1881 F1=0.6071 QWK=0.6250
+  [SAFE] safe_T3G4_md_a3: adj=0.6997 LOO_r=0.7185 IS_r=0.9062 gap=0.1877 F1=0.6071 QWK=0.6250
+  [SAFE] safe_T3G4_md_a5: adj=0.6988 LOO_r=0.7175 IS_r=0.9048 gap=0.1873 F1=0.5700 QWK=0.5806
+  [SAFE] safe_T3G4_md_a7: adj=0.6961 LOO_r=0.7152 IS_r=0.9032 gap=0.1881 F1=0.5333 QWK=0.5333
+  [SAFE] safe_T3G4_ac_md_a7: adj=0.6956 LOO_r=0.7152 IS_r=0.9046 gap=0.1893 F1=0.5333 QWK=0.5333
+  [SAFE] safe_T2G4_ac_md_a5: adj=0.6952 LOO_r=0.7034 IS_r=0.8700 gap=0.1666 F1=0.6071 QWK=0.6250
+  [SAFE] safe_T2G4_ac_md_a7: adj=0.6947 LOO_r=0.7027 IS_r=0.8687 gap=0.1660 F1=0.4927 QWK=0.4828
+  [SAFE] safe_T2G4_ac_md_a3: adj=0.6923 LOO_r=0.7019 IS_r=0.8712 gap=0.1693 F1=0.5805 QWK=0.6286
+  [SAFE] safe_T3G4_ac_md_a10: adj=0.6877 LOO_r=0.7089 IS_r=0.9013 gap=0.1924 F1=0.4304 QWK=0.3846
+  [SAFE] safe_T3G5_ac_md_a5: adj=0.6266 LOO_r=0.6703 IS_r=0.9078 gap=0.2375 F1=0.5026 QWK=0.5161
+  [SAFE] safe_T3G5_ac_md_a3: adj=0.6260 LOO_r=0.6712 IS_r=0.9118 gap=0.2405 F1=0.5417 QWK=0.5625
+  [SAFE] safe_T3G5_ac_md_a7: adj=0.6241 LOO_r=0.6677 IS_r=0.9048 gap=0.2371 F1=0.4524 QWK=0.4286
+  [SAFE] safe_T2G3_ac_md_a7: adj=0.5299 LOO_r=0.5640 IS_r=0.7821 gap=0.2181 F1=0.4175 QWK=0.3333
+  [SAFE] safe_T2G3_ac_md_a5: adj=0.5198 LOO_r=0.5575 IS_r=0.7828 gap=0.2253 F1=0.4522 QWK=0.3871
+  [SAFE] safe_T2G3_ac_md_a3: adj=0.5024 LOO_r=0.5461 IS_r=0.7835 gap=0.2374 F1=0.4522 QWK=0.3871
+  [SAFE] safe_T3G3_ac_md_a7: adj=0.4761 LOO_r=0.5471 IS_r=0.8391 gap=0.2920 F1=0.3107 QWK=0.1538
+  [SAFE] safe_T3G3_ac_md_a5: adj=0.4694 LOO_r=0.5437 IS_r=0.8425 gap=0.2988 F1=0.2916 QWK=0.1481
+  [SAFE] safe_T3G3_ac_md_a3: adj=-1.0000 LOO_r=0.5387 IS_r=0.8482 gap=0.3095 F1=0.3363 QWK=0.2143

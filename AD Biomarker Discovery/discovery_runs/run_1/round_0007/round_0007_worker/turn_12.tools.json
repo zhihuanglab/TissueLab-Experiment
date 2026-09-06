@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '150,230p' /shared/templates/worker_embedding_mechanistic_template.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\n    donor_table, results, _basis = build_mechanistic_embedding_round(\\n        data_root=data_root,\\n        feature_name=FEATURE_NAME,\\n        feature_column=FEATURE_COLUMN,\\n        region=REGION,\\n        population_cell_types=POPULATION_CELL_TYPES,\\n        summary_mode=SUMMARY_MODE,\\n        outcome_col=OUTCOME_COLUMN,\\n        confounds=CONFOUNDS,\\n        niche_positive_cell_types=NICHE_POSITIVE_CELL_TYPES,\\n        niche_background_cell_types=NICHE_BACKGROUND_CELL_TYPES,\\n        local_radius=LOC\", \"stderr\": \"\"}"
+  }
+]

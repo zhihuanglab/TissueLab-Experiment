@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\necho '--- /data top level ---'\nls -1 /data | sed -n '1,80p'\necho\necho '--- find prior worker result.py under /data/autoresearch_runs ---'\nfind /data/autoresearch_runs -name result.py | sed -n '1,40p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- /data top level ---\\nH19.33.004-A12-LFB.svs\\nH19.33.004-A12-LFB.svs.zarr\\nH20.33.008-A12-LFB.svs\\nH20.33.008-A12-LFB.svs.zarr\\nH20.33.013-A12-LFB.svs\\nH20.33.013-A12-LFB.svs.zarr\\nH20.33.018-A12-LFB.svs\\nH20.33.018-A12-LFB.svs.zarr\\nH20.33.024-A12-LFB.svs\\nH20.33.024-A12-LFB.svs.zarr\\nH20.33.025-A12-LFB.svs\\nH20.33.025-A12-LFB.svs.zarr\\nH20.33.027-A12-LFB.svs\\nH20.33.027-A12-LFB.svs.zarr\\nH20.33.029-A12-LFB.svs\\nH20.33.029-A12-LFB.svs.zarr\\nH20.33.030-A12-LFB.svs\\nH20.33.030-A12-LFB.svs.zarr\\nH20.33.034-A12-LF\", \"stderr\": \"\"}"
+  }
+]

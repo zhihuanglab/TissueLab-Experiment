@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nfrom pathlib import Path\npath=Path('/scratch/report.md')\ntext=path.read_text()\ntext=text.replace('bootstrap median partial r: **-0.3830**','bootstrap median partial r: **-0.3852**')\ntext=text.replace('bootstrap sign consistency: **0.9300**','bootstrap sign consistency: **0.9225**')\npath.write_text(text)\nPY\nsed -n '1,220p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"## Summary\\nTested the CA1 peripyramidal reactive-astrocyte hypertrophy family, and the winning local variation was the 30 \\u00b5m peripyramidal **median** reactive-astrocyte area with a local winner selection score of **0.3755**.\\n\\n## Metrics\\nWinning variation: `candidate_variant_a` (`ca1_peripyramidal_reactive_astro_area_median_30um_um2`).\\n\\n- IS partial r: **-0.3755**\\n- Selection score: **0.3755**\\n- LOO predictive r: **0.0995**\\n- IS-LOO gap: **0.4750** with penalty **0.4750**\\n- Adjusted score: **-0.0\", \"stderr\": \"\"}"
+  }
+]

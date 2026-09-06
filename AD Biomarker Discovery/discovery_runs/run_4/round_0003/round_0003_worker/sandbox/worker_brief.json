@@ -1,0 +1,48 @@
+{
+  "worker_name": "round_0003_worker",
+  "round_id": 3,
+  "candidate_id": "ca1-pyramidal-reactive-proximity",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_enrichment",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5071
+  },
+  "scientific_question": "Does the fraction of CA1 pyramidal neurons that sit in a local reactive-astrocyte neighborhood capture a neuron-glia injury niche that adds signal beyond separate CA1 pyramidal loss and reactive astrocyte enrichment?",
+  "approach": "For each donor, assign cells to CA1 using centroid-in-polygon against CA1 annotation polygons after dividing annotation coordinates by 16. Within CA1, identify cells labeled `Pyramidal Neuron` and `Reactive Astrocyte`. Build a nearest-neighbor search on CA1 reactive astrocyte centroids. For each CA1 pyramidal neuron, determine whether at least one CA1 reactive astrocyte lies within radius r in centroid coordinate units. The biomarker is the donor-level fraction of CA1 pyramidal neurons with at least one nearby reactive astrocyte. If there are zero CA1 reactive astrocytes, return 0.0; if there are zero CA1 pyramidal neurons, return NaN.",
+  "variations": [
+    {
+      "name": "r4_neighbor_fraction",
+      "description": "Baseline: fraction of CA1 pyramidal neurons with at least one CA1 reactive astrocyte within radius 4 centroid-coordinate units."
+    },
+    {
+      "name": "r6_neighbor_fraction",
+      "description": "Local sweep: same metric with radius increased to 6 centroid-coordinate units to test a slightly broader glial-neuronal niche."
+    }
+  ],
+  "baseline_variation": "r4_neighbor_fraction",
+  "notes": "Use `training_cohort.csv` to map donor_id to `slide_name`, then open `/data/<slide_name>`. Restrict both source and target cells to CA1 before neighbor queries. Annotation polygons are stored at 16x the cell-coordinate scale, so divide polygon coordinates by 16 before region assignment. Use centroids only; no contour processing is needed for this round.",
+  "rationale": "The current panel already says that worse memory decline tracks with fewer CA1 pyramidal neurons and more CA1 reactive astrocytes. The next biologically specific step is to test whether those two signals matter most when they are spatially coupled in the same local niche, rather than only as independent regional abundances. This candidate is a clean CA1-localized interaction readout that could either add new signal or replace one of the broader CA1 composition features if it proves to be a cleaner summary."
+}

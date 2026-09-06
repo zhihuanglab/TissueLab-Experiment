@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/var/folders/tx/b5cf158n5196wdlcxhvhckxr0000gn/T/tmpufrjfl9n/result_test.py", line 51, in <module>
+    main()
+  File "/var/folders/tx/b5cf158n5196wdlcxhvhckxr0000gn/T/tmpufrjfl9n/result_test.py", line 32, in main
+    with open("/scratch/results.json", "w") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/results.json'

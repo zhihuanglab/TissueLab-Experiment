@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pandas as pd, numpy as np\npayload=json.load(open('/scratch/results.json'))\nprint(payload.keys())\nprint('feature_column', payload['feature_column'])\ndf=pd.DataFrame(payload['per_donor'])\nprint(df[['donor_id','outcome','predicted','abs_error',payload['feature_column'],payload['numerator_column'] if 'numerator_column' in payload else df.columns[0]] if False else ['donor_id']].head())\nprint('top abs errors')\nprint(df[['donor_id','outcome','predicted','abs_error',payload['feature_column']]].sort_values('abs_error', ascending=False).head(10).to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"dict_keys(['hypothesis_family', 'best_variation', 'feature_column', 'partial_r', 'selection_score', 'loo_predictive_r', 'gap', 'gap_penalty', 'adjusted_score', 'n_total', 'n_analyzable', 'ranked_variations', 'best_variation_spec', 'per_donor'])\\nfeature_column ca1_reactive_astro_fraction\\n     donor_id\\n0  H19.33.004\\n1  H20.33.008\\n2  H20.33.013\\n3  H20.33.018\\n4  H20.33.024\\ntop abs errors\\n  donor_id   outcome  predicted  abs_error  ca1_reactive_astro_fraction\\nH20.33.018 -0.304214  -0.136365   0.16784\", \"stderr\": \"\"}"
+  }
+]

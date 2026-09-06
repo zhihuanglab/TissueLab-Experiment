@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import sea_ad_lfb\nprint('load_training_cohort sig', inspect.signature(sea_ad_lfb.load_training_cohort))\nprint('build_cell_table sig', inspect.signature(sea_ad_lfb.build_cell_table))\nsrc = inspect.getsource(sea_ad_lfb.build_cell_table)\nprint(src[:4000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"load_training_cohort sig (data_root: 'str | Path') -> 'pd.DataFrame'\\nbuild_cell_table sig (zarr_path: 'str | Path', *, include_regions: 'bool' = True, include_geometry: 'bool' = False, scale: 'float' = 16.0) -> 'pd.DataFrame'\\ndef build_cell_table(\\n    zarr_path: str | Path,\\n    *,\\n    include_regions: bool = True,\\n    include_geometry: bool = False,\\n    scale: float = 16.0,\\n) -> pd.DataFrame:\\n    centroids = load_centroids(zarr_path)\\n    class_ids = load_class_ids(zarr_path)\\n    class_lookup = l\", \"stderr\": \"\"}"
+  }
+]

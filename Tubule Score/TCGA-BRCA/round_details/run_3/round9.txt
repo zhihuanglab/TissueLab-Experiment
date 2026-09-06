@@ -1,0 +1,35 @@
+Round 9
+========================================================================
+
+The machine-readable candidate enumeration for this round was not retained:
+the round's script and its details file were lost during the run. What follows
+is taken verbatim from the run log, which recorded the configuration this round
+selected, its scores, and the alternatives the round discussed and rejected.
+Rejected alternatives are therefore partial here, covering those the agent wrote
+about rather than every configuration it evaluated.
+
+ROUND 9 - [dual musk_tumor PCA top4 + musk_gland PCA top4] + [Ridge α=5] (LOO)
+
+Features (8):
+  1. tumor_pca_top4 (musk_tumor class-filtered mean embeddings → PCA(20) → top 4 PCs by |correlation|)
+  2. gland_pca_top4 (musk_gland class-filtered mean embeddings → PCA(20) → top 4 PCs by |correlation|)
+Model: Ridge(alpha=5), StandardScaler inside LOO. PCA and PC selection done ONCE globally.
+
+SELECTED CONFIGURATION
+Model:Ridge(alpha=5), StandardScaler inside LOO. PCA and PC selection done ONCE globally.
+  LOO r      = 0.8265
+  IS r       = 0.9016
+  IS-LOO gap = 0.0751
+  adjusted   = 0.8265
+
+ALTERNATIVES RECORDED IN THIS ROUND'S FINDINGS
+  2. **Dual source (tumor+gland) is the key**: The top 6 configs are ALL dual_top4+top4 variants. Tumor-only (top 3 or 5 PCs) achieved LOO r≈0.64-0.66, gland-only achieved LOO r≈0.63-0.64, but combining 4+4=8 features from both sources yielded LOO r=0.83. The two embedding sources capture complementary aspects of tubule architecture.
+  3. **Adding tig marginally hurts**: dual_top4+top4+tig (9 features) gave LOO r=0.8217 vs 0.8265 without tig. The extra feature adds a tiny amount of noise relative to the signal already captured by the PCA components. The tig signal (r≈0.50) is likely already captured within the gland PCA components.
+
+FINDINGS:
+  1. **MASSIVE IMPROVEMENT**: LOO r jumped from 0.6571 (Round 8) to 0.8265 — a 0.17 increase. This is the best result by far. The IS-LOO gap dropped from 0.2895 to 0.0751, well within the healthy <0.15 range. The human expert's mandate to select top PCs by |correlation| and use fewer features was exactly right.
+  2. **Dual source (tumor+gland) is the key**: The top 6 configs are ALL dual_top4+top4 variants. Tumor-only (top 3 or 5 PCs) achieved LOO r≈0.64-0.66, gland-only achieved LOO r≈0.63-0.64, but combining 4+4=8 features from both sources yielded LOO r=0.83. The two embedding sources capture complementary aspects of tubule architecture.
+  3. **Adding tig marginally hurts**: dual_top4+top4+tig (9 features) gave LOO r=0.8217 vs 0.8265 without tig. The extra feature adds a tiny amount of noise relative to the signal already captured by the PCA components. The tig signal (r≈0.50) is likely already captured within the gland PCA components.
+  4. **ElasticNet fails badly on these features**: All EN configs with α=0.5 were disqualified (gap>0.30). The L1 penalty destabilizes coefficient estimation with only 8 features and n=33. Ridge regularization is clearly superior for this problem.
+  5. **Single-source models with 3 PCs are solid but not spectacular**: tumor_top3 at LOO r≈0.64-0.66, gland_top3 at LOO r≈0.63. These confirm both sources have real signal individually.
+  6. **Alpha sensitivity**: For the dual model, α=5 (0.8265) ≈ α=10 (0.8245) ≈ α=1 (0.8217). The model is robust to regularization strength, confirming 8 well-selected features don't overfit.

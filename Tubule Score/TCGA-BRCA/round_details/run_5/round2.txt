@@ -1,0 +1,69 @@
+Round 2 Details
+============================================================
+
+HYPOTHESIS: Spatial filtering of gland patches within tumor regions
+should better capture tubule formation criterion than raw gland fraction.
+
+FEATURE-GT CORRELATIONS:
+  tumor_gland_fraction: r=-0.5708
+  gland_in_tumor_ratio: r=-0.2987
+  gland_patch_fraction: r=-0.4148
+  gland_among_tumor_simple: r=-0.2657
+  tumor_patch_fraction: r=-0.0527
+  biomedparse_gland_fraction: r=-0.3066
+  tumor_cell_fraction: r=+0.0715
+  stardist_tumor_frac: r=+0.0715
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  tgf+bp_ridge: adjusted=0.5651 (LOO r=0.5651, IS r=0.6343, gap=0.0692) [F1=0.4267 QWK=0.4138 Acc=0.4333]
+  tgf+bp_ridge10: adjusted=0.5526 (LOO r=0.5526, IS r=0.6337, gap=0.0811) [F1=0.4554 QWK=0.4000 Acc=0.5000]
+  top3_ridge: adjusted=0.5390 (LOO r=0.5390, IS r=0.6357, gap=0.0967) [F1=0.3963 QWK=0.3226 Acc=0.4000]
+  top3_ridge10: adjusted=0.5303 (LOO r=0.5303, IS r=0.6246, gap=0.0944) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  single_tumor_gland_fraction: adjusted=0.5076 (LOO r=0.5076, IS r=0.5824, gap=0.0748) [F1=0.3373 QWK=0.2143 Acc=0.3667]
+  gland_spatial_ridge: adjusted=0.5017 (LOO r=0.5017, IS r=0.6416, gap=0.1400) [F1=0.3086 QWK=0.3226 Acc=0.3000]
+  gland_spatial_ridge10: adjusted=0.4980 (LOO r=0.4980, IS r=0.6261, gap=0.1281) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  top4_ridge10: adjusted=0.4980 (LOO r=0.4980, IS r=0.6261, gap=0.1281) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tumor_gland_frac_ridge10: adjusted=0.4895 (LOO r=0.4895, IS r=0.5748, gap=0.0853) [F1=0.2185 QWK=0.0909 Acc=0.3333]
+  tgf+gpf_ridge10: adjusted=0.4894 (LOO r=0.4894, IS r=0.5861, gap=0.0967) [F1=0.3363 QWK=0.2143 Acc=0.3667]
+  top2_ridge10: adjusted=0.4894 (LOO r=0.4894, IS r=0.5861, gap=0.0967) [F1=0.3363 QWK=0.2143 Acc=0.3667]
+  tgf+gpf_ridge: adjusted=0.4885 (LOO r=0.4885, IS r=0.5889, gap=0.1004) [F1=0.3132 QWK=0.2069 Acc=0.3333]
+  top2_ridge: adjusted=0.4885 (LOO r=0.4885, IS r=0.5889, gap=0.1004) [F1=0.3132 QWK=0.2069 Acc=0.3333]
+  tgf+gitr_ridge: adjusted=0.4621 (LOO r=0.4621, IS r=0.5806, gap=0.1186) [F1=0.3132 QWK=0.2069 Acc=0.3333]
+  tgf+gitr_ridge10: adjusted=0.4513 (LOO r=0.4513, IS r=0.5720, gap=0.1207) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  all_features_enet: adjusted=0.4166 (LOO r=0.4394, IS r=0.6352, gap=0.1958) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  all_features_ridge10: adjusted=0.3461 (LOO r=0.3917, IS r=0.6329, gap=0.2412) [F1=0.3817 QWK=0.3571 Acc=0.4000]
+  single_gland_patch_fraction: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  single_biomedparse_gland_fraction: adjusted=0.0989 (LOO r=0.1181, IS r=0.3066, gap=0.1885) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  single_gland_in_tumor_ratio: adjusted=0.0401 (LOO r=0.0763, IS r=0.2987, gap=0.2223) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  gland_in_tumor_ratio_ridge10: adjusted=-0.0149 (LOO r=0.0396, IS r=0.2987, gap=0.2590) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  single_gland_among_tumor_simple: adjusted=-0.0602 (LOO r=-0.0015, IS r=0.2657, gap=0.2673) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  single_tumor_patch_fraction: adjusted=-1.0000 (LOO r=-0.6066, IS r=0.0527, gap=0.6593) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  single_tumor_cell_fraction: adjusted=-1.0000 (LOO r=-0.5168, IS r=0.0715, gap=0.5882) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  single_stardist_tumor_frac: adjusted=-1.0000 (LOO r=-0.5168, IS r=0.0715, gap=0.5882) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+
+BEST MODEL: tgf+bp_ridge
+  Pearson r:      IS=0.6343  LOO=0.5651
+  IS-LOO Gap:     0.0692 (penalty=0.0000)
+  Adjusted Score: 0.5651
+  Macro F1:       0.4267
+  QWK:            0.4138
+  Accuracy:       0.4333
+
+ERRORS:
+  TCGA-A2-A0ET: GT=2 -> Pred=3 (continuous=2.636)
+  TCGA-A7-A0D9: GT=2 -> Pred=1 (continuous=1.440)
+  TCGA-A7-A3IY: GT=1 -> Pred=2 (continuous=1.544)
+  TCGA-AC-A23E: GT=1 -> Pred=2 (continuous=1.590)
+  TCGA-AC-A2FM: GT=2 -> Pred=3 (continuous=2.633)
+  TCGA-AC-A3TN: GT=1 -> Pred=2 (continuous=1.866)
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (continuous=2.312)
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (continuous=1.972)
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (continuous=2.226)
+  TCGA-BH-A0DX: GT=1 -> Pred=2 (continuous=2.011)
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (continuous=1.885)
+  TCGA-D8-A1XT: GT=3 -> Pred=2 (continuous=2.214)
+  TCGA-D8-A27N: GT=3 -> Pred=2 (continuous=1.695)
+  TCGA-D8-A27P: GT=1 -> Pred=2 (continuous=1.608)
+  TCGA-E2-A14W: GT=3 -> Pred=2 (continuous=2.176)
+  TCGA-EW-A1PH: GT=3 -> Pred=2 (continuous=2.334)
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (continuous=2.496)

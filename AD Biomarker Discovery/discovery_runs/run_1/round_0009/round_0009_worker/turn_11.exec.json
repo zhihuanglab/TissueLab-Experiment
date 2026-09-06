@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "['max_age_vis', 'braak_numeric', 'cerad_ordinal']\n",
+  "stderr": ""
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nfor p in list(Path('/data/autoresearch_runs').rglob('report.md'))[:20]:\n    txt=p.read_text(errors='ignore')\n    if 'Adjusted Score' in txt or 'adjusted score' in txt:\n        print('---',p)\n        for line in txt.splitlines():\n            if 'Adjusted' in line or 'adjusted' in line:\n                print(line)\n        break\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- /data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/sandbox/report.md\\nTested six direct count-based region-restricted glia-to-neuron log-ratio biomarkers for memory decline, and the best adjusted_score was 0.4330 for the CA1+SB reactive-astrocyte-to-pyramidal-neuron log-ratio.\\n- Adjusted Score: `0.4330`\\n   Pooling CA1 with subiculum (`SB`) improved the baseline CA1-only signal (`adjusted 0.4330` vs `0.3169`). That is biologically coherent because CA1 and subiculum\", \"stderr\": \"\"}"
+  }
+]

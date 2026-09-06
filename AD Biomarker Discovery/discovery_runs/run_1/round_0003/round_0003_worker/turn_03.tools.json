@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nfrom pathlib import Path\nimport inspect\nfrom shared_analysis.sea_ad_lfb import build_cell_table, load_region_polygons\nslide = Path('/data/H19.33.004-A12-LFB.svs.zarr')\ncells = build_cell_table(slide, include_regions=True, include_geometry=False)\nprint('cell columns:', list(cells.columns))\nprint('head:')\nprint(cells.head(3).to_string())\nprint('region counts top10:')\nprint(cells['region_name'].value_counts(dropna=False).head(10).to_string())\nprint('\\nload_region_polygons sample keys:')\npolys = load_region_polygons(slide)\nprint(type(polys), list(polys.keys())[:10])\nca1 = polys.get('CA1')\nif ca1 is not None:\n    print('CA1 polygons n=', len(ca1))\n    first = ca1[0]\n    print('first CA1 polygon shape=', getattr(first, 'shape', None), 'first points=', first[:3])\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho 'searching prior artifacts for \"Adjusted Score\" or \"penalty=\"'\ngrep -R \"Adjusted Score\\|penalty=\" -n /data/autoresearch_runs 2>/dev/null | head -40 || true\necho 'searching previous results.json examples'\nfind /data/autoresearch_runs -name results.json | head -5 | while read f; do echo \"--- $f\"; python - <<PY\nimport json; import sys\np=sys.argv[1]\nobj=json.load(open(p))\nfor k in ('best_variation','ranked_variations','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','feature_column','feature_name'):\n    if k in obj: print(k, obj[k])\nPY \"$f\"; done",
+    "output_preview": "{\"exit_code\": 2, \"stdout\": \" variant. Try at least three\\\\n  substantially different approaches before concluding it has no signal.\\\\n- Adjusted score = LOO r \\\\u2212 gap penalty, where gap penalty = max(0, gap \\\\u2212 0.15) \\\\u00d7 0.5\\\\n  and gap > 0.30 means adjusted = \\\\u22121 (disqualified).\\\\n\\\\n## Memory and performance rules\\\\n\\\\n- Large zarr embedding arrays (e.g. shape (M, 768) or (N, 1024)) must never be\\\\n  loaded in full. Use chunked loading with chunk_size=20000.\\\\n- Large npy files must be opened with np.load(path, mmap_\", \"stderr\": \"/bin/sh: 20: Syntax error: end of file unexpected (expecting \\\"done\\\")\\n\"}"
+  }
+]

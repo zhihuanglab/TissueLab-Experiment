@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "grep -n 'CANONICAL_VARIATION' /scratch/result.py | head",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"48:CANONICAL_VARIATION = \\\"pyramidal_near_reactiveastro_30um\\\"\\n70:FEATURE_NAME = VARIATION_LOOKUP[CANONICAL_VARIATION][\\\"feature_name\\\"]\\n71:FEATURE_COLUMN = VARIATION_LOOKUP[CANONICAL_VARIATION][\\\"feature_column\\\"]\\n214:        variation_name=CANONICAL_VARIATION,\\n318:    old = 'CANONICAL_VARIATION = \\\"pyramidal_near_reactiveastro_30um\\\"'\\n322:        r'CANONICAL_VARIATION = \\\".*?\\\"',\\n323:        f'CANONICAL_VARIATION = \\\"{best_variation}\\\"',\\n\", \"stderr\": \"\"}"
+  }
+]

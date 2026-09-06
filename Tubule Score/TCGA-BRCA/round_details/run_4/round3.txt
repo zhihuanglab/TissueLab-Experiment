@@ -1,0 +1,70 @@
+Round 3 Details
+================================================================================
+
+Best model: single_gland_frac_Ridge_a0.01
+Description: single gland_patch_fraction Ridge(a=0.01)
+LOO Pearson r: 0.3044
+IS Pearson r: 0.4157
+Gap: 0.1113
+Adjusted: 0.3044
+
+All configurations (sorted by adjusted):
+  single_gland_frac_Ridge_a0.01: adj=0.3044 LOO_r=0.3044 IS_r=0.4157 gap=0.1113 F1=0.1772 QWK=0.0833
+  single_gland_frac_Ridge_a0.1: adj=0.3042 LOO_r=0.3042 IS_r=0.4157 gap=0.1114 F1=0.1772 QWK=0.0833
+  single_gland_frac_Ridge_a1.0: adj=0.3028 LOO_r=0.3028 IS_r=0.4155 gap=0.1126 F1=0.1772 QWK=0.0833
+  gland_PCA3_Ridge_a10.0: adj=0.1899 LOO_r=0.2446 IS_r=0.5040 gap=0.2594 F1=0.2315 QWK=0.0952
+  gland_PCA3_Ridge_a50.0: adj=0.1881 LOO_r=0.2433 IS_r=0.5037 gap=0.2604 F1=0.2315 QWK=0.0952
+  gland_PCA3_Ridge_a100.0: adj=0.1860 LOO_r=0.2418 IS_r=0.5034 gap=0.2616 F1=0.2315 QWK=0.0952
+  handcrafted_Ridge_a0.1: adj=0.1298 LOO_r=0.2000 IS_r=0.4905 gap=0.2905 F1=0.2655 QWK=0.0690
+  handcrafted_Ridge_a1.0: adj=0.1229 LOO_r=0.1953 IS_r=0.4902 gap=0.2949 F1=0.2325 QWK=0.0769
+  gland_emb_PLS_nc2: adj=-1.0000 LOO_r=0.5459 IS_r=0.8971 gap=0.3512 F1=0.4444 QWK=0.4286
+  gland_emb_PLS_nc3: adj=-1.0000 LOO_r=0.5748 IS_r=0.9297 gap=0.3548 F1=0.4717 QWK=0.4242
+  gland_emb_PLS_nc4: adj=-1.0000 LOO_r=0.6057 IS_r=0.9646 gap=0.3589 F1=0.5643 QWK=0.5000
+  gland_emb_PLS_nc5: adj=-1.0000 LOO_r=0.6123 IS_r=0.9788 gap=0.3666 F1=0.4676 QWK=0.3529
+  gland_emb_PLS_nc6: adj=-1.0000 LOO_r=0.5992 IS_r=0.9870 gap=0.3878 F1=0.6639 QWK=0.5556
+  gland_emb_PLS_nc8: adj=-1.0000 LOO_r=0.5453 IS_r=0.9979 gap=0.4526 F1=0.6337 QWK=0.5405
+  gland_PCA5_Ridge_a10.0: adj=-1.0000 LOO_r=0.1383 IS_r=0.5308 gap=0.3924 F1=0.2913 QWK=0.0870
+  gland_PCA5_Ridge_a50.0: adj=-1.0000 LOO_r=0.1380 IS_r=0.5308 gap=0.3928 F1=0.2913 QWK=0.0870
+  gland_PCA5_Ridge_a100.0: adj=-1.0000 LOO_r=0.1377 IS_r=0.5308 gap=0.3931 F1=0.2360 QWK=0.0000
+  gland_PCA7_Ridge_a10.0: adj=-1.0000 LOO_r=0.3570 IS_r=0.7105 gap=0.3535 F1=0.3519 QWK=0.2609
+  gland_PCA7_Ridge_a50.0: adj=-1.0000 LOO_r=0.3559 IS_r=0.7101 gap=0.3542 F1=0.3519 QWK=0.2609
+  gland_PCA7_Ridge_a100.0: adj=-1.0000 LOO_r=0.3545 IS_r=0.7102 gap=0.3557 F1=0.3519 QWK=0.2609
+  gland_PCA10_Ridge_a10.0: adj=-1.0000 LOO_r=0.4746 IS_r=0.8317 gap=0.3572 F1=0.4149 QWK=0.3846
+  gland_PCA10_Ridge_a50.0: adj=-1.0000 LOO_r=0.4710 IS_r=0.8310 gap=0.3600 F1=0.4149 QWK=0.3846
+  gland_PCA10_Ridge_a100.0: adj=-1.0000 LOO_r=0.4668 IS_r=0.8298 gap=0.3630 F1=0.4149 QWK=0.3846
+  gland_PCA5_EN_a0.1_l0.5: adj=-1.0000 LOO_r=0.1338 IS_r=0.5311 gap=0.3973 F1=0.2913 QWK=0.0870
+  gland_PCA5_EN_a0.1_l0.9: adj=-1.0000 LOO_r=0.1296 IS_r=0.5313 gap=0.4017 F1=0.2913 QWK=0.0870
+  gland_PCA5_EN_a0.5_l0.5: adj=-1.0000 LOO_r=0.1107 IS_r=0.5310 gap=0.4202 F1=0.2360 QWK=0.0000
+  gland_PCA5_EN_a0.5_l0.9: adj=-1.0000 LOO_r=0.0825 IS_r=0.5280 gap=0.4455 F1=0.2360 QWK=0.0000
+  gland_PCA5_EN_a1.0_l0.5: adj=-1.0000 LOO_r=0.0742 IS_r=0.5268 gap=0.4526 F1=0.1709 QWK=-0.0952
+  gland_PCA5_EN_a1.0_l0.9: adj=-1.0000 LOO_r=0.0240 IS_r=0.5093 gap=0.4853 F1=0.1667 QWK=0.0000
+  gland_PCA10_EN_a0.1_l0.5: adj=-1.0000 LOO_r=0.4723 IS_r=0.8309 gap=0.3586 F1=0.4149 QWK=0.3846
+  gland_PCA10_EN_a0.1_l0.9: adj=-1.0000 LOO_r=0.4694 IS_r=0.8301 gap=0.3607 F1=0.4149 QWK=0.3846
+  gland_PCA10_EN_a0.5_l0.5: adj=-1.0000 LOO_r=0.4533 IS_r=0.8244 gap=0.3710 F1=0.3996 QWK=0.3333
+  gland_PCA10_EN_a0.5_l0.9: adj=-1.0000 LOO_r=0.4224 IS_r=0.8173 gap=0.3949 F1=0.2967 QWK=0.1818
+  gland_PCA10_EN_a1.0_l0.5: adj=-1.0000 LOO_r=0.4126 IS_r=0.8159 gap=0.4033 F1=0.2967 QWK=0.1818
+  gland_PCA10_EN_a1.0_l0.9: adj=-1.0000 LOO_r=0.3353 IS_r=0.7974 gap=0.4621 F1=0.2315 QWK=0.0952
+  PLS2_plus_hand_Ridge_a1.0: adj=-1.0000 LOO_r=0.4456 IS_r=0.9023 gap=0.4567 F1=0.4070 QWK=0.3704
+  PLS2_plus_hand_Ridge_a10.0: adj=-1.0000 LOO_r=0.4050 IS_r=0.8527 gap=0.4477 F1=0.3295 QWK=0.1600
+  PLS3_plus_hand_Ridge_a1.0: adj=-1.0000 LOO_r=0.5121 IS_r=0.9374 gap=0.4253 F1=0.3963 QWK=0.3226
+  PLS3_plus_hand_Ridge_a10.0: adj=-1.0000 LOO_r=0.4739 IS_r=0.8989 gap=0.4251 F1=0.3594 QWK=0.2222
+  PLS4_plus_hand_Ridge_a1.0: adj=-1.0000 LOO_r=0.5942 IS_r=0.9619 gap=0.3677 F1=0.5643 QWK=0.5000
+  PLS4_plus_hand_Ridge_a10.0: adj=-1.0000 LOO_r=0.5524 IS_r=0.9407 gap=0.3883 F1=0.4048 QWK=0.2857
+  gland_emb_Ridge_a100.0: adj=-1.0000 LOO_r=0.5797 IS_r=0.9871 gap=0.4074 F1=0.4873 QWK=0.4000
+  gland_emb_Ridge_a500.0: adj=-1.0000 LOO_r=0.5727 IS_r=0.9409 gap=0.3681 F1=0.3704 QWK=0.2308
+  gland_emb_Ridge_a1000.0: adj=-1.0000 LOO_r=0.5347 IS_r=0.9067 gap=0.3720 F1=0.3519 QWK=0.2609
+  gland_emb_Ridge_a5000.0: adj=-1.0000 LOO_r=0.3782 IS_r=0.8146 gap=0.4364 F1=0.2315 QWK=0.0952
+  gland_emb_Ridge_a10000.0: adj=-1.0000 LOO_r=0.2537 IS_r=0.7841 gap=0.5304 F1=0.1667 QWK=0.0000
+  handcrafted_Ridge_a10.0: adj=-1.0000 LOO_r=0.1319 IS_r=0.4846 gap=0.3527 F1=0.2134 QWK=0.0000
+  gland_emb_EN_a0.01_l0.5: adj=-1.0000 LOO_r=0.5027 IS_r=0.9996 gap=0.4969 F1=0.5313 QWK=0.4118
+  gland_emb_EN_a0.01_l0.9: adj=-1.0000 LOO_r=0.4651 IS_r=0.9990 gap=0.5339 F1=0.5020 QWK=0.4000
+  gland_emb_EN_a0.01_l0.95: adj=-1.0000 LOO_r=0.4536 IS_r=0.9989 gap=0.5453 F1=0.4640 QWK=0.3529
+  gland_emb_EN_a0.05_l0.5: adj=-1.0000 LOO_r=0.4843 IS_r=0.9924 gap=0.5081 F1=0.4964 QWK=0.3636
+  gland_emb_EN_a0.05_l0.9: adj=-1.0000 LOO_r=0.4133 IS_r=0.9799 gap=0.5666 F1=0.4053 QWK=0.3636
+  gland_emb_EN_a0.05_l0.95: adj=-1.0000 LOO_r=0.4128 IS_r=0.9775 gap=0.5648 F1=0.3648 QWK=0.3125
+  gland_emb_EN_a0.1_l0.5: adj=-1.0000 LOO_r=0.4650 IS_r=0.9774 gap=0.5124 F1=0.4331 QWK=0.3750
+  gland_emb_EN_a0.1_l0.9: adj=-1.0000 LOO_r=0.4508 IS_r=0.9572 gap=0.5063 F1=0.3685 QWK=0.2759
+  gland_emb_EN_a0.1_l0.95: adj=-1.0000 LOO_r=0.4456 IS_r=0.9553 gap=0.5096 F1=0.3685 QWK=0.2759
+  gland_emb_EN_a0.5_l0.5: adj=-1.0000 LOO_r=0.2172 IS_r=0.8593 gap=0.6421 F1=0.2315 QWK=0.0952
+  gland_emb_EN_a0.5_l0.9: adj=-1.0000 LOO_r=-0.3226 IS_r=0.7471 gap=1.0697 F1=0.1667 QWK=0.0000
+  gland_emb_EN_a0.5_l0.95: adj=-1.0000 LOO_r=-0.4963 IS_r=0.7052 gap=1.2015 F1=0.1667 QWK=0.0000

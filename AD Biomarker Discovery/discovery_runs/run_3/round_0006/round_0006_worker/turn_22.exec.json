@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "rows 35\nmissing slide_mpp 0\ncount    35.000000\nmean      0.502731\nstd       0.001589\nmin       0.501600\n25%       0.501600\n50%       0.501600\n75%       0.504900\nmax       0.504900\nName: slide_mpp, dtype: float64\n",
+  "stderr": ""
+}

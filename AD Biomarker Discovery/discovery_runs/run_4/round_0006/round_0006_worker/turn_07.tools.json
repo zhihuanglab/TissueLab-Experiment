@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- __init__.py ---'\nsed -n '1,200p' /shared/lib/shared_analysis/__init__.py\necho '--- ls -lb ---'\nls -lb /shared/lib/shared_analysis | sed -n '1,80p'\npython - <<'PY'\nimport os, sys\nprint(os.path.exists('/shared/lib/shared_analysis/__init__.py'))\nprint(os.listdir('/shared/lib/shared_analysis')[:20])\nimport importlib.machinery\nspec = importlib.machinery.PathFinder.find_spec('shared_analysis', ['/shared/lib'])\nprint(spec)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- __init__.py ---\\n\\\"\\\"\\\"Reusable helper library copied into /shared/lib for worker scripts.\\\"\\\"\\\"\\n\\nfrom .artifacts import (\\n    build_results_payload,\\n    coerce_results_payload,\\n    normalize_covariate_names,\\n    resolve_covariate_names,\\n    validate_donor_feature_table_columns,\\n    validate_feature_spec,\\n    validate_results_payload,\\n    write_donor_feature_table,\\n    write_feature_spec,\\n    write_results_payload,\\n)\\nfrom .context import (\\n    load_runtime_manifest,\\n    load_worker_context,\\n    ren\", \"stderr\": \"\"}"
+  }
+]

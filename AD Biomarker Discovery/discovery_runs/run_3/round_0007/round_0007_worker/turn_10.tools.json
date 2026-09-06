@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"Adjusted Score\" -n /data/autoresearch_runs/run_20260421_001115_585b70/round_*/*/result.py | sed -n '1,20p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/data/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/result.py:531:    print(f\\\"  Adjusted Score:    {best['adjusted_score']:.4f}\\\")\\n/data/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/result.py:477:    print(f\\\"  Adjusted Score:    {best['adjusted_score']:.4f}\\\")\\n/data/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/result.py:281:- Adjusted Score: {best['adjusted_score']:.4f}\\n/data/autoresearch_runs/run_20260421_001115\", \"stderr\": \"\"}"
+  }
+]

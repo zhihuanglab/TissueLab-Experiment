@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport pandas as pd\nfeat = pd.read_csv('/scratch/donor_feature_table.csv')\nprint(feat.columns.tolist())\nprint(feat[['donor_id','slope_zmem0','sex','braak_numeric','cerad_ordinal','ca1_pyramidal_fraction','ca1_classified','ca2_classified']].sort_values('ca1_pyramidal_fraction', ascending=False).head(8).to_string(index=False))\nprint('\\nLowest')\nprint(feat[['donor_id','slope_zmem0','sex','braak_numeric','cerad_ordinal','ca1_pyramidal_fraction','ca1_classified','ca2_classified']].sort_values('ca1_pyramidal_fraction', ascending=True).head(8).to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex', 'slide_id', 'sex_binary', 'ca1_classified', 'ca1_pyramidal', 'ca1_all_cells', 'ca2_classified', 'ca2_pyramidal', 'ca2_all_cells', 'ca1_pyramidal_fraction', 'ca1_ca2_pyramidal_fraction']\\n  donor_id  slope_zmem0    sex  braak_numeric  cerad_ordinal  ca1_pyramidal_fraction  ca1_classified  ca2_classified\\nH21.33.046    -0.161623   Male              5              2                0.314827 \", \"stderr\": \"\"}"
+  }
+]

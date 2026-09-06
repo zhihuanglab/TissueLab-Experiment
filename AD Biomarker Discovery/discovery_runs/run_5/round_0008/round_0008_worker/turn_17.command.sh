@@ -1,0 +1,42 @@
+cat > /scratch/report.md <<'MD'
+## Summary
+One sentence: the CA1 pyramidal neuron reactive-astrocyte-plus-lymphocyte triad family was tested, candidate_variant_c won, and the local winner selection score was 0.1604.
+
+## Metrics
+Winning variation: candidate_variant_c using a 25 um lymphocyte radius and feature column `ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um`.
+- IS partial r: 0.1604
+- Selection score: 0.1604
+- LOO predictive r: 0.0567
+- IS-LOO gap: 0.1037
+- Penalty: 0.1037
+- Adjusted score: 0.0567
+
+Ranking of nearby variations:
+- candidate_variant_c, 25 um: partial r 0.1604, selection 0.1604, LOO r 0.0567
+- candidate_variant_a, 20 um: partial r 0.1327, selection 0.1327, LOO r 0.0586
+- candidate_variant_b, 15 um: partial r 0.0062, selection 0.0062, LOO r -0.1798
+
+## Findings
+1. What worked and why (tie to the biological meaning of the target)
+   - The best local signal came from the broadest tested neuron-centered triad: the fraction of CA1 pyramidal neurons that had both a reactive astrocyte within 30 um and a lymphocyte within 25 um. Because more negative `slope_zmem0` means worse decline, the positive partial r indicates this niche tracks less severe memory decline, not worse decline.
+2. What failed and why (specific to the chosen hypothesis and what went wrong)
+   - The 15 um lymphocyte radius was too strict for a very sparse CA1 lymphocyte population and almost collapsed the feature to zero across donors. The 20 um version recovered some signal but remained weaker than 25 um, suggesting the neuron-centered immune niche is only detectable when lymphocyte proximity is defined a bit more loosely.
+3. Error pattern: which donors are consistently wrong and what they share
+   - The largest LOO errors were H20.33.018, H21.33.023, H21.33.040, H21.33.035, and H20.33.037. Most had severe decline but zero measured triad fraction, often with very low CA1 lymphocyte counts, so the feature under-calls decline in lymphocyte-poor donors even when reactive astrocytes are present.
+
+## Rationale
+The best variation is biologically coherent because it sharpens prior CA1 astrocyte-centered features into a neuron-anchored microenvironment burden. It beat the nearby alternatives because 15 um was too brittle for such rare lymphocytes, while 25 um still preserves locality but captures more true triads than 20 um. This is close to the current panel's CA1 astrocyte and lymphocyte-contact biology, so it may be partly redundant, but it is more directly interpretable as the share of CA1 neurons embedded in a local reactive-glial/immune niche.
+
+## Interpretation
+The signal seems to mean biologically that donors with less severe memory decline have more CA1 pyramidal neurons sitting inside a small reactive-astrocyte plus lymphocyte neighborhood. One plausible reading is that this triad reflects a more organized local immune-gliosis response, or simply preserved CA1 architecture that still permits these contacts to be observed, rather than a direct marker of injury burden.
+
+Population: CA1 pyramidal neurons with CA1 reactive astrocytes and CA1 lymphocytes defining the niche.  
+Niche: peripyramidal triad requiring reactive astrocyte proximity within 30 um plus lymphocyte proximity within 25 um.  
+Feature summary: donor-level fraction of CA1 pyramidal neurons satisfying both neighborhood conditions.  
+Observable pattern: rare but detectable CA1 neurons accompanied by both a nearby reactive astrocyte and a nearby lymphocyte.
+
+## Next
+One specific suggestion for the next local sweep based on the error pattern and which nearby variations won or lost.
+- Keep the same CA1 triad concept, but among donors with at least one nearby lymphocyte test whether requiring more reactive astrocyte crowding around the neuron can rescue the severe-decline donors that currently stay at zero.
+MD
+sed -n '1,220p' /scratch/report.md

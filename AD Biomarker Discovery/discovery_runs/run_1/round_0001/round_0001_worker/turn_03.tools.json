@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport inspect\nfrom shared_analysis import build_cell_table, load_training_cohort\nprint('load_training_cohort:\\n', inspect.getsource(load_training_cohort))\nprint('\\n--- build_cell_table signature ---')\nprint(inspect.signature(build_cell_table))\nprint('\\n--- build_cell_table source head ---')\nsrc = inspect.getsource(build_cell_table)\nprint(src[:6000])\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 2, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

@@ -1,0 +1,1 @@
+python /scratch/result.py

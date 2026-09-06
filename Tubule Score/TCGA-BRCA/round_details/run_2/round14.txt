@@ -1,0 +1,68 @@
+Round 14 Details
+================================================================================
+
+KEY CHANGE: ElasticNet sweep vs Ridge baseline on same feature set as Round 9
+Features: interp5 + LOO-safe gPC4 + tPC4 from PCA(20)
+Goal: Test if L1 regularization improves generalization over Ridge
+
+Interpretable Feature-GT Correlations:
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+  gland_in_tumor_frac: r=-0.5442
+  tumor_cell_density: r=-0.0306
+  bp_component_area_cv: r=-0.2266
+
+All Configurations (sorted by adjusted):
+  BASELINE_Ridge_a1.0_gPC4_tPC4: adj=0.8311 LOO_r=0.8311 IS_r=0.9444 gap=0.1134 F1=0.7407 QWK=0.7778
+  Ridge_a0.5_gPC4_tPC4: adj=0.8302 LOO_r=0.8302 IS_r=0.9467 gap=0.1165 F1=0.7097 QWK=0.7568
+  Ridge_a2.0_gPC4_tPC4: adj=0.8297 LOO_r=0.8297 IS_r=0.9409 gap=0.1112 F1=0.7738 QWK=0.8108
+  EN_l1r0.1_a0.05_gPC4_tPC4: adj=0.8282 LOO_r=0.8282 IS_r=0.9406 gap=0.1124 F1=0.7738 QWK=0.8108
+  EN_l1r0.1_a0.01_gPC4_tPC4: adj=0.8281 LOO_r=0.8281 IS_r=0.9474 gap=0.1192 F1=0.7097 QWK=0.7568
+  Ridge_a3.0_gPC4_tPC4: adj=0.8277 LOO_r=0.8277 IS_r=0.9383 gap=0.1107 F1=0.7738 QWK=0.8108
+  EN_l1r0.2_a0.05_gPC4_tPC4: adj=0.8275 LOO_r=0.8275 IS_r=0.9383 gap=0.1108 F1=0.7407 QWK=0.7778
+  EN_l1r0.2_a0.01_gPC4_tPC4: adj=0.8272 LOO_r=0.8272 IS_r=0.9470 gap=0.1198 F1=0.7097 QWK=0.7568
+  EN_l1r0.3_a0.01_gPC4_tPC4: adj=0.8264 LOO_r=0.8264 IS_r=0.9466 gap=0.1202 F1=0.7097 QWK=0.7568
+  EN_l1r0.3_a0.05_gPC4_tPC4: adj=0.8253 LOO_r=0.8253 IS_r=0.9368 gap=0.1116 F1=0.7407 QWK=0.7778
+  EN_l1r0.5_a0.01_gPC4_tPC4: adj=0.8247 LOO_r=0.8247 IS_r=0.9458 gap=0.1211 F1=0.7418 QWK=0.7895
+  EN_l1r0.1_a0.1_gPC4_tPC4: adj=0.8243 LOO_r=0.8243 IS_r=0.9356 gap=0.1114 F1=0.7407 QWK=0.7778
+  EN_l1r0.3_a0.05_gPC5_tPC5: adj=0.8229 LOO_r=0.8229 IS_r=0.9368 gap=0.1138 F1=0.7738 QWK=0.8108
+  Ridge_a5.0_gPC4_tPC4: adj=0.8228 LOO_r=0.8228 IS_r=0.9348 gap=0.1120 F1=0.7101 QWK=0.7429
+  EN_l1r0.2_a0.1_gPC5_tPC5: adj=0.8191 LOO_r=0.8191 IS_r=0.9341 gap=0.1150 F1=0.7089 QWK=0.7429
+  EN_l1r0.2_a0.1_gPC4_tPC4: adj=0.8188 LOO_r=0.8188 IS_r=0.9337 gap=0.1149 F1=0.7101 QWK=0.7429
+  EN_l1r0.2_a0.05_gPC5_tPC5: adj=0.8187 LOO_r=0.8187 IS_r=0.9384 gap=0.1197 F1=0.8054 QWK=0.8421
+  EN_l1r0.1_a0.1_gPC5_tPC5: adj=0.8178 LOO_r=0.8178 IS_r=0.9358 gap=0.1180 F1=0.8054 QWK=0.8421
+  EN_l1r0.5_a0.05_gPC4_tPC4: adj=0.8165 LOO_r=0.8165 IS_r=0.9338 gap=0.1173 F1=0.7101 QWK=0.7429
+  EN_l1r0.3_a0.1_gPC5_tPC5: adj=0.8162 LOO_r=0.8162 IS_r=0.9326 gap=0.1164 F1=0.6774 QWK=0.7059
+  EN_l1r0.1_a0.05_gPC5_tPC5: adj=0.8135 LOO_r=0.8135 IS_r=0.9405 gap=0.1271 F1=0.8054 QWK=0.8421
+  EN_l1r0.3_a0.1_gPC4_tPC4: adj=0.8121 LOO_r=0.8121 IS_r=0.9318 gap=0.1197 F1=0.6757 QWK=0.7059
+  EN_l1r0.5_a0.1_gPC4_tPC4: adj=0.7925 LOO_r=0.7925 IS_r=0.9287 gap=0.1362 F1=0.6071 QWK=0.6250
+  EN_l1r0.1_a0.5_gPC5_tPC5: adj=0.7724 LOO_r=0.7724 IS_r=0.9190 gap=0.1466 F1=0.3062 QWK=0.2400
+  EN_l1r0.1_a0.5_gPC4_tPC4: adj=0.7666 LOO_r=0.7668 IS_r=0.9170 gap=0.1503 F1=0.4402 QWK=0.4286
+  EN_l1r0.2_a0.5_gPC5_tPC5: adj=0.7035 LOO_r=0.7231 IS_r=0.9124 gap=0.1893 F1=0.3205 QWK=0.2500
+  interp5_Ridge_a1.0: adj=0.6942 LOO_r=0.6942 IS_r=0.7836 gap=0.0894 F1=0.5081 QWK=0.5161
+  EN_l1r0.2_a0.5_gPC4_tPC4: adj=0.6869 LOO_r=0.7113 IS_r=0.9103 gap=0.1989 F1=0.3205 QWK=0.2500
+  interp5_EN_l1r0.1_a0.1: adj=0.6860 LOO_r=0.6860 IS_r=0.7797 gap=0.0937 F1=0.5081 QWK=0.5161
+  EN_l1r0.1_a1.0_gPC4_tPC4: adj=0.6717 LOO_r=0.6972 IS_r=0.8983 gap=0.2011 F1=0.2865 QWK=0.1818
+  EN_l1r0.1_a0.5_gPC3_tPC3: adj=0.6056 LOO_r=0.6408 IS_r=0.8612 gap=0.2204 F1=0.3205 QWK=0.2500
+  EN_l1r0.1_a0.1_gPC3_tPC3: adj=0.6000 LOO_r=0.6449 IS_r=0.8847 gap=0.2398 F1=0.4029 QWK=0.3636
+  EN_l1r0.2_a0.1_gPC3_tPC3: adj=0.5852 LOO_r=0.6344 IS_r=0.8828 gap=0.2484 F1=0.3907 QWK=0.3226
+  EN_l1r0.1_a0.05_gPC3_tPC3: adj=0.5816 LOO_r=0.6333 IS_r=0.8868 gap=0.2535 F1=0.4029 QWK=0.3636
+  EN_l1r0.2_a0.05_gPC3_tPC3: adj=0.5804 LOO_r=0.6323 IS_r=0.8860 gap=0.2538 F1=0.4029 QWK=0.3636
+  EN_l1r0.3_a0.1_gPC3_tPC3: adj=0.5769 LOO_r=0.6281 IS_r=0.8804 gap=0.2523 F1=0.3556 QWK=0.2667
+  EN_l1r0.3_a0.05_gPC3_tPC3: adj=0.5745 LOO_r=0.6280 IS_r=0.8852 gap=0.2571 F1=0.3596 QWK=0.3125
+  EN_l1r0.3_a0.5_gPC5_tPC5: adj=0.5585 LOO_r=0.6199 IS_r=0.8927 gap=0.2728 F1=0.1667 QWK=0.0000
+  EN_l1r0.3_a0.5_gPC4_tPC4: adj=0.5383 LOO_r=0.6062 IS_r=0.8919 gap=0.2857 F1=0.1667 QWK=0.0000
+  EN_l1r0.2_a0.5_gPC3_tPC3: adj=0.5254 LOO_r=0.5850 IS_r=0.8540 gap=0.2691 F1=0.2733 QWK=0.1739
+  EN_l1r0.2_a1.0_gPC4_tPC4: adj=-1.0000 LOO_r=0.4326 IS_r=0.8444 gap=0.4118 F1=0.1667 QWK=0.0000
+  EN_l1r0.3_a1.0_gPC4_tPC4: adj=-1.0000 LOO_r=0.0261 IS_r=0.6823 gap=0.6563 F1=0.1667 QWK=0.0000
+  EN_l1r0.5_a0.5_gPC4_tPC4: adj=-1.0000 LOO_r=0.1723 IS_r=0.7751 gap=0.6028 F1=0.1667 QWK=0.0000
+  EN_l1r0.5_a1.0_gPC4_tPC4: adj=-1.0000 LOO_r=-1.0000 IS_r=0.0000 gap=1.0000 F1=0.1667 QWK=0.0000
+  EN_l1r0.3_a0.5_gPC3_tPC3: adj=-1.0000 LOO_r=0.4548 IS_r=0.8350 gap=0.3802 F1=0.1667 QWK=0.0000
+
+Best: BASELINE_Ridge_a1.0_gPC4_tPC4
+  Adjusted: 0.8311
+  LOO r: 0.8311
+  IS r: 0.9444
+  Gap: 0.1134
+  Selected gland PCs: [1, 5, 9, 16]
+  Selected tumor PCs: [1, 3, 4, 7]

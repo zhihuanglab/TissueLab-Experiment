@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,220p' /data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/sandbox/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"## Summary\\nTested six direct count-based region-restricted glia-to-neuron log-ratio biomarkers for memory decline, and the best adjusted_score was 0.4330 for the CA1+SB reactive-astrocyte-to-pyramidal-neuron log-ratio.\\n\\n## Metrics\\n- Best variation: `ca1sb_reactive_to_pyramidal_logratio`\\n- IS partial r: `-0.5038`\\n- LOO predictive r: `0.4330`\\n- IS-LOO Gap: `0.0709` `(penalty=0.0000)`\\n- Adjusted Score: `0.4330`\\n\\n## Findings\\n1. What worked and why (tie to the biological meaning of the target)  \\n   P\", \"stderr\": \"\"}"
+  }
+]

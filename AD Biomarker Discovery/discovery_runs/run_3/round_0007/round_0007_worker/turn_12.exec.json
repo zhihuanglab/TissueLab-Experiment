@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "def adjusted_metrics(partial_r_value: float | None, loo_r_value: float | None) -> tuple[float, float, float]:\n    is_r = abs(float(partial_r_value)) if partial_r_value is not None and math.isfinite(float(partial_r_value)) else 0.0\n    loo_r = abs(float(loo_r_value)) if loo_r_value is not None and math.isfinite(float(loo_r_value)) else 0.0\n    gap = float(is_r - loo_r)\n    penalty = float(max(0.0, gap - 0.15))\n    adjusted = float(loo_r - penalty)\n    return gap, penalty, adjusted\n\n\ndef raw_loo_prediction_table(\n    df: pd.DataFrame,\n    *,\n    feature_col: str,\n    outcome_col: str,\n    confounds: list[str],\n) -> pd.DataFrame:\n    frame = df.dropna(subset=[feature_col, outcome_col, *confounds]).reset_index(drop=True)\n    rows: list[dict[str, object]] = []\n    for idx in range(len(frame)):\n        train = frame.drop(index=idx).reset_index(drop=True)\n",
+  "stderr": ""
+}

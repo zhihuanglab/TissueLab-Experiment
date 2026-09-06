@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, glob, math\nshown=0\nfor p in glob.glob('/data/autoresearch_runs/**/results.json', recursive=True):\n    try: obj=json.load(open(p))\n    except: continue\n    if 'selection_score' in obj and 'adjusted_score' in obj and 'is_loo_gap' in obj:\n        vals={k:obj.get(k) for k in ['feature_name','selection_score','partial_r','loo_predictive_r','is_loo_gap','adjusted_score']}\n        if all(isinstance(v,(int,float)) for k,v in vals.items() if k!='feature_name'):\n            print(p)\n            print(vals)\n            shown+=1\n            if shown>=5: break\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/data/autoresearch_runs/run_20260412_150614_9b299b/shared/worker_chains/ca1_reactive_astrocyte_niche/sandbox/results.json\\n{'feature_name': 'ca1_pyramidal_near_reactive_astro_fraction_30um', 'selection_score': 0.5190730358441814, 'partial_r': -0.5190730358441814, 'loo_predictive_r': 0.3727101581915792, 'is_loo_gap': 0.1463628776526022, 'adjusted_score': 0.3727101581915792}\\n/data/autoresearch_runs/run_20260412_150614_9b299b/shared/worker_chains/ca1_pyramidal_reactive_astro_niche/sandbox/results.js\", \"stderr\": \"\"}"
+  }
+]

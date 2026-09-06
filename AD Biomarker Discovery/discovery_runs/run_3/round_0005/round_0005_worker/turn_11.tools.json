@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nimport json, glob, os\nfor p in sorted(glob.glob('/data/autoresearch_runs/*/round_0004/round_0004_worker/results.json'))[:3]:\n    print(\"FILE\", p)\n    obj=json.load(open(p))\n    print(json.dumps({k: obj.get(k) for k in ['best_variation','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','feature_column']}, indent=2))\n    print(\"rank head\", obj.get('ranked_variations',[])[:3])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"FILE /data/autoresearch_runs/run_20260410_201937_2df939/round_0004/round_0004_worker/results.json\\n{\\n  \\\"best_variation\\\": null,\\n  \\\"partial_r\\\": 0.29397628619873717,\\n  \\\"selection_score\\\": null,\\n  \\\"loo_predictive_r\\\": 0.1999402438757643,\\n  \\\"is_loo_gap\\\": 0.09403604232297286,\\n  \\\"adjusted_score\\\": 0.1999402438757643,\\n  \\\"feature_column\\\": \\\"ca1_pyramidal_neuron_frac\\\"\\n}\\nrank head []\\nFILE /data/autoresearch_runs/run_20260410_234232_33d000/round_0004/round_0004_worker/results.json\\n{\\n  \\\"best_variation\\\": \\\"reactive\", \"stderr\": \"\"}"
+  }
+]

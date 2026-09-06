@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "--- /shared/templates/worker_analysis_template.py ---\n--- /shared/templates/worker_embedding_mechanistic_template.py ---\ncontains Adjusted Score\ncontains selection_score\ncontains is_loo_gap\n73 def _adjusted_metrics(partial_r: float | None, loo_predictive_r: float | None) -> tuple[float, float, float]:\n75     loo_r = abs(float(loo_predictive_r)) if loo_predictive_r is not None and np.isfinite(loo_predictive_r) else 0.0\n83 def _selection_score(partial_r: float | None, n_analyzable: int | None, n_total: int | None) -> float:\n184     gap, penalty, adjusted = _adjusted_metrics(results.get(\"partial_r\"), results.get(\"loo_predictive_r\"))\n185     selection = _selection_score(results.get(\"partial_r\"), results.get(\"n_analyzable\"), results.get(\"n_total\"))\n187     results[\"selection_score\"] = selection\n190     results[\"adjusted_score\"] = adjusted\n202     print(f\"  LOO predictive r:  {results.get('loo_predictive_r', float('nan')): .4f}  (diagnostic)\")\n",
+  "stderr": ""
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nwith open('/scratch/context_bundle.json') as f:\n    obj=json.load(f)\nprint('keys:', list(obj.keys()))\nfor k in ['worker_brief','round','candidate','accepted_panel','current_panel','hypothesis','plan','seed_candidate','prior_rounds_summary']:\n    if k in obj:\n        print(f'\\n--- {k} ---')\n        import pprint; pprint.pp(obj[k])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"keys: ['worker_brief', 'runtime_manifest', 'cohort_summary', 'slide_manifest_head', 'runtime_quickstart_excerpt', 'dataset_guide_excerpt']\\n\\n--- worker_brief ---\\n{'worker_name': 'round_0005_worker',\\n 'round_id': 5,\\n 'candidate_id': 'ca1-peripyramidal-astro-reactivity-index',\\n 'candidate_type': 'candidate',\\n 'accepted_panel': {'members': [{'slot': 1,\\n                                 'feature_name': 'ca1_reactive_astro_fraction',\\n                                 'round_id': 1,\\n                     \", \"stderr\": \"\"}"
+  }
+]

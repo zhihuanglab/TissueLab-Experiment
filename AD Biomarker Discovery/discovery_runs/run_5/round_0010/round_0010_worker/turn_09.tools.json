@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, glob, pathlib\nfor p in sorted(glob.glob('/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_000*/round_*_worker/results.json'))[-3:]:\n    data=json.load(open(p))\n    print('\\n---', p, '---')\n    print('keys', list(data.keys())[:30])\n    for k in ['best_variation','feature_name','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score']:\n        if k in data:\n            print(k, data[k])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\", \"stderr\": \"\"}"
+  }
+]

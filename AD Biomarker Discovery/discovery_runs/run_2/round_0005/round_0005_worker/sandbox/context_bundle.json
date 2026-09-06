@@ -1,0 +1,277 @@
+{
+  "worker_brief": {
+    "worker_name": "round_0005_worker",
+    "round_id": 5,
+    "candidate_id": "ca1-reactive-astrocyte-microclustering",
+    "candidate_type": "candidate",
+    "accepted_panel": {
+      "members": [
+        {
+          "slot": 1,
+          "feature_name": "ca1_pyramidal_burden__ca1_pyramidal_fraction",
+          "round_id": 1,
+          "panel_candidate_score": 0.294,
+          "delta_panel_score": null,
+          "status": "active",
+          "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker",
+          "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/results.json",
+          "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/result.py"
+        },
+        {
+          "slot": 2,
+          "feature_name": "ca1_reactive_astrocyte_enrichment__reactive_over_astroglial",
+          "round_id": 2,
+          "panel_candidate_score": 0.5071,
+          "delta_panel_score": 0.2131,
+          "status": "active",
+          "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker",
+          "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/results.json",
+          "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/result.py"
+        },
+        {
+          "slot": 3,
+          "feature_name": "ca1_pyramidal_reactive_niche__reactive_over_astroglial_neighbored_pyramidal_fraction_r70px",
+          "round_id": 3,
+          "panel_candidate_score": 0.5076,
+          "delta_panel_score": 0.0005,
+          "status": "active",
+          "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker",
+          "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/results.json",
+          "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/result.py"
+        },
+        {
+          "slot": 4,
+          "feature_name": "ca1_reactive_astrocyte_hypertrophy__reactive_minus_astrocyte_median_log1p_area_ca1",
+          "round_id": 4,
+          "panel_candidate_score": 0.5425,
+          "delta_panel_score": 0.0349,
+          "status": "active",
+          "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker",
+          "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker/results.json",
+          "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker/result.py"
+        }
+      ],
+      "best_panel_score": 0.5425
+    },
+    "scientific_question": "Does focal self-clustering of CA1 reactive astrocytes, relative to baseline CA1 astrocyte clustering, capture a patchy gliosis severity signal for memory decline beyond existing CA1 burden, enrichment, neuron-adjacent niche, and hypertrophy markers?",
+    "approach": "Assign cells to CA1 using the CA1 annotation polygon from CustomAnnotations after dividing polygon coordinates by 16. From ClassificationNode labels, identify CA1 Reactive Astrocyte cells and CA1 Astrocyte cells. Using CA1 centroids only, build same-region neighbor search and, for each cell, count same-type neighbors within radius r pixels excluding the cell itself. Mark a cell as microclustered if it has at least 3 same-type neighbors within r. Compute the donor biomarker as: fraction of CA1 Reactive Astrocytes that are microclustered minus fraction of CA1 Astrocytes that are microclustered. This isolates excess focal clustering of reactive astrocytes beyond background astroglial packing.",
+    "variations": [
+      {
+        "name": "reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+        "description": "Baseline variant: in CA1, microclustered means at least 3 same-type neighbors within 70 px; score is reactive microclustered fraction minus astrocyte microclustered fraction."
+      },
+      {
+        "name": "reactive_minus_astrocyte_microcluster_fraction_r90px_k3",
+        "description": "Local radius sweep: same computation but using a 90 px neighborhood to test a slightly broader focal-gliosis scale."
+      }
+    ],
+    "baseline_variation": "reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+    "notes": "Use slide_name from training_cohort.csv to open the paired .svs.zarr under /data. Region assignment must use annotation polygons in 16x coordinates scaled down by 16 before testing cell centroids. Use only CA1 cells for both the target and reference fractions. Exclude self from neighbor counts. A KD-tree or ball query on centroids is sufficient; no contour processing is needed for this round. Handle low-count edge cases conservatively, e.g. return NaN if either CA1 Reactive Astrocyte or CA1 Astrocyte count is very small.",
+    "rationale": "The accepted panel already shows that CA1 reactive astrocyte biology is strongly informative, with bulk enrichment and hypertrophy both adding signal, while the pyramidal-neighbor niche added only a minimal gain. That pattern suggests the remaining useful variation may be in how reactive astrocytes organize within CA1 tissue rather than simply how many there are or whether they sit near neurons. A microclustering readout is a biologically interpretable next step that could either add new spatial signal or replace the weaker neuron-adjacent niche member with a cleaner focal-gliosis marker."
+  },
+  "runtime_manifest": {
+    "runtime_version": 1,
+    "generated_at_utc": "2026-04-21T01:57:50.385811+00:00",
+    "shared_root": "/shared",
+    "python_import_root": "/shared/lib",
+    "template_path": "/shared/templates/worker_analysis_template.py",
+    "template_paths": {
+      "generic": "/shared/templates/worker_analysis_template.py",
+      "mechanistic_embedding": "/shared/templates/worker_embedding_mechanistic_template.py"
+    },
+    "cache_paths": {
+      "slide_manifest": "/shared/cache/slide_manifest.json",
+      "cohort_summary": "/shared/cache/cohort_summary.json",
+      "region_polygon_dir": "/shared/cache/region_polygons"
+    },
+    "modules": [
+      {
+        "module": "shared_analysis.sea_ad_lfb",
+        "functions": [
+          "load_training_cohort",
+          "build_slide_manifest",
+          "build_cell_table",
+          "load_region_polygons",
+          "compute_contour_geometry"
+        ]
+      },
+      {
+        "module": "shared_analysis.stats",
+        "functions": [
+          "partial_correlation",
+          "bootstrap_partial_correlation",
+          "leave_one_out_summary",
+          "residualized_loo_predictive_correlation"
+        ]
+      },
+      {
+        "module": "shared_analysis.pca",
+        "functions": [
+          "fit_pca_basis",
+          "save_pca_basis",
+          "load_pca_basis",
+          "apply_pca_basis"
+        ]
+      },
+      {
+        "module": "shared_analysis.artifacts",
+        "functions": [
+          "coerce_results_payload",
+          "build_results_payload",
+          "write_donor_feature_table",
+          "write_results_payload",
+          "validate_results_payload"
+        ]
+      },
+      {
+        "module": "shared_analysis.context",
+        "functions": [
+          "load_worker_context",
+          "load_runtime_manifest",
+          "render_report"
+        ]
+      },
+      {
+        "module": "shared_analysis.embedding_mechanistic",
+        "functions": [
+          "build_population_primitive",
+          "build_population_primitives_for_cohort",
+          "build_mechanistic_embedding_round",
+          "donor_scalar_from_basis",
+          "summarize_embedding_scores"
+        ]
+      }
+    ],
+    "prompt_context": {
+      "slides_indexed": 35,
+      "region_cache_files": 35,
+      "recommended_flow": [
+        "Read /scratch/worker_brief.json and /shared/cache/runtime_quickstart.md first.",
+        "Start from /shared/templates/worker_analysis_template.py unless your brief truly needs a custom layout.",
+        "For niche-conditioned embedding hypotheses, start from /shared/templates/worker_embedding_mechanistic_template.py.",
+        "Import shared_analysis helpers instead of rewriting cohort loading, annotation parsing, stats, PCA, or registry logic.",
+        "You may inspect /shared/cache/region_polygons/*.json for quick orientation, but final result.py must replay from raw /data or sidecar files saved next to result.py."
+      ]
+    }
+  },
+  "cohort_summary": {
+    "cohort_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/training_cohort.csv",
+    "cohort_rows": 35,
+    "slide_count": 35,
+    "dataset_guide_present": true,
+    "dataset_guide_excerpt": "# Dataset Guide: SEA-AD LFB Hippocampus Training Set\n\n## Overview of the dataset\n\nThis dataset contains **35 paired whole-slide images (WSIs)** and per-slide **Zarr stores** for LFB-stained hippocampal tissue from the SEA-AD training cohort.\n\nPrimary analysis target for biomarker discovery:\n\n- **Outcome:** `slope_zmem0` in `training_cohort.csv`\n\nKey linked data modalities:\n\n1. **Cohort table** (`training_cohort.csv`)\n   - donor-level clinical / neuropathology metadata\n   - one row per donor / slide\n2. **WSI files** (`*.svs`)\n   - Aperio pyramidal whole-slide images\n3. **Per-slide Zarr stores** (`*.svs.zarr`)\n   - cell segmentation geometry\n   - 768-d MUSK embeddings\n   - cell type classification outputs\n   - hippocampal / cortical region annotation polygons\n\nScale of the cell-level data:\n\n- **35 slides**\n- **12,523,007 segmented cells total**\n- Per-slide cell counts range from about **163,779** to **528,698** cells\n- Core annotated regions present on every slide:\n  - `CA1`, `CA2`, `CA3`, `CA4`, `DG`, `EC`, `SB`, `TEC`\n\n---\n\n## File inventory\n\nTop-level `/data` contents:\n\n- `training_cohort.csv` \u2014 main donor-level cohort table\n- `program.md` \u2014 research-program description\n- `*.svs`"
+  },
+  "slide_manifest_head": {
+    "data_root": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training",
+    "cohort_rows": 35,
+    "slide_count": 35,
+    "slides": [
+      {
+        "slide_name": "H19.33.004-A12-LFB.svs.zarr",
+        "slide_id": "H19.33.004-A12-LFB",
+        "zarr_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H19.33.004-A12-LFB.svs.zarr",
+        "svs_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H19.33.004-A12-LFB.svs",
+        "n_cells": 263786,
+        "embedding_dim": 768,
+        "class_labels": [
+          "Negative control",
+          "Tumor",
+          "Lymphocyte",
+          "Pyramidal Neuron",
+          "Granule Neuron",
+          "Reactive Astrocyte",
+          "Astrocyte",
+          "Oligodendrocyte",
+          "Corpora Amylacea"
+        ],
+        "cohort_match_count": 1,
+        "donor_id": "H19.33.004"
+      },
+      {
+        "slide_name": "H20.33.008-A12-LFB.svs.zarr",
+        "slide_id": "H20.33.008-A12-LFB",
+        "zarr_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.008-A12-LFB.svs.zarr",
+        "svs_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.008-A12-LFB.svs",
+        "n_cells": 321840,
+        "embedding_dim": 768,
+        "class_labels": [
+          "Negative control",
+          "Tumor",
+          "Lymphocyte",
+          "Pyramidal Neuron",
+          "Granule Neuron",
+          "Reactive Astrocyte",
+          "Astrocyte",
+          "Oligodendrocyte",
+          "Corpora Amylacea"
+        ],
+        "cohort_match_count": 1,
+        "donor_id": "H20.33.008"
+      },
+      {
+        "slide_name": "H20.33.013-A12-LFB.svs.zarr",
+        "slide_id": "H20.33.013-A12-LFB",
+        "zarr_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.013-A12-LFB.svs.zarr",
+        "svs_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.013-A12-LFB.svs",
+        "n_cells": 284906,
+        "embedding_dim": 768,
+        "class_labels": [
+          "Negative control",
+          "Tumor",
+          "Lymphocyte",
+          "Pyramidal Neuron",
+          "Granule Neuron",
+          "Reactive Astrocyte",
+          "Astrocyte",
+          "Oligodendrocyte",
+          "Corpora Amylacea"
+        ],
+        "cohort_match_count": 1,
+        "donor_id": "H20.33.013"
+      },
+      {
+        "slide_name": "H20.33.018-A12-LFB.svs.zarr",
+        "slide_id": "H20.33.018-A12-LFB",
+        "zarr_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.018-A12-LFB.svs.zarr",
+        "svs_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.018-A12-LFB.svs",
+        "n_cells": 727142,
+        "embedding_dim": 768,
+        "class_labels": [
+          "Negative control",
+          "Pyramidal Neuron",
+          "Granule Neuron",
+          "Reactive Astrocyte",
+          "Astrocyte",
+          "Oligodendrocyte",
+          "Corpora Amylacea",
+          "Lymphocyte"
+        ],
+        "cohort_match_count": 1,
+        "donor_id": "H20.33.018"
+      },
+      {
+        "slide_name": "H20.33.024-A12-LFB.svs.zarr",
+        "slide_id": "H20.33.024-A12-LFB",
+        "zarr_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.024-A12-LFB.svs.zarr",
+        "svs_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.024-A12-LFB.svs",
+        "n_cells": 487366,
+        "embedding_dim": 768,
+        "class_labels": [
+          "Negative control",
+          "Tumor",
+          "Lymphocyte",
+          "Pyramidal Neuron",
+          "Granule Neuron",
+          "Reactive Astrocyte",
+          "Astrocyte",
+          "Oligodendrocyte",
+          "Corpora Amylacea"
+        ],
+        "cohort_match_count": 1,
+        "donor_id": "H20.33.024"
+      }
+    ]
+  },
+  "runtime_quickstart_excerpt": "# Shared Runtime Quickstart\n\n- Import helpers from `/shared/lib`. `PYTHONPATH` already includes it.\n- Generic starter template: `/shared/templates/worker_analysis_template.py`\n- Mechanistic embedding starter: `/shared/templates/worker_embedding_mechanistic_template.py`\n\n## Useful Imports\n- `shared_analysis.sea_ad_lfb`: load_training_cohort, build_slide_manifest, build_cell_table, load_region_polygons, compute_contour_geometry\n- `shared_analysis.stats`: partial_correlation, bootstrap_partial_correlation, leave_one_out_summary, residualized_loo_predictive_correlation\n- `shared_analysis.pca`: fit_pca_basis, save_pca_basis, load_pca_basis, apply_pca_basis\n- `shared_analysis.artifacts`: coerce_results_payload, build_results_payload, write_donor_feature_table, write_results_payload, validate_results_payload\n- `shared_analysis.context`: load_worker_context, load_runtime_manifest, render_report\n- `shared_analysis.embedding_mechanistic`: build_population_primitive, build_population_primitives_for_cohort, build_mechanistic_embedding_round, donor_scalar_from_basis, summarize_embedding_scores\n\n## Shared Caches\n- `slide_manifest`: `/shared/cache/slide_manifest.json`\n- `cohort_summary`: `/shared/cache/cohort_summary.json`\n- `region_polygon_dir`: `/shared/cache/region_polygons`\n\n## Recommended Flow\n- Read /scratch/worker_brief.json and /shared/cache/runtime_quickstart.md first.\n- Start from /shared/templates/worker_analysis_template.py unless your brief truly needs a custom layout.\n- For niche-conditioned embedding hypotheses, start from /shared/templates/worker_embedding_mechanistic_template.py.\n- Import shared_analysis helpers instead of rewriting cohort loading, annotation parsing, stats, PCA, or registry logic.\n- You may inspect /shared/cache/region_polygons/*.json for quick orientation, but final result.py must replay from raw /data or sidecar files saved next to result.py.\n",
+  "dataset_guide_excerpt": "# Dataset Guide: SEA-AD LFB Hippocampus Training Set\n\n## Overview of the dataset\n\nThis dataset contains **35 paired whole-slide images (WSIs)** and per-slide **Zarr stores** for LFB-stained hippocampal tissue from the SEA-AD training cohort.\n\nPrimary analysis target for biomarker discovery:\n\n- **Outcome:** `slope_zmem0` in `training_cohort.csv`\n\nKey linked data modalities:\n\n1. **Cohort table** (`training_cohort.csv`)\n   - donor-level clinical / neuropathology metadata\n   - one row per donor / slide\n2. **WSI files** (`*.svs`)\n   - Aperio pyramidal whole-slide images\n3. **Per-slide Zarr stores** (`*.svs.zarr`)\n   - cell segmentation geometry\n   - 768-d MUSK embeddings\n   - cell type classification outputs\n   - hippocampal / cortical region annotation polygons\n\nScale of the cell-level data:\n\n- **35 slides**\n- **12,523,007 segmented cells total**\n- Per-slide cell counts range from about **163,779** to **528,698** cells\n- Core annotated regions present on every slide:\n  - `CA1`, `CA2`, `CA3`, `CA4`, `DG`, `EC`, `SB`, `TEC`\n\n---\n\n## File inventory\n\nTop-level `/data` contents:\n\n- `training_cohort.csv` \u2014 main donor-level cohort table\n- `program.md` \u2014 research-program description\n- `*.svs` \u2014 35 whole-slide images\n- `*.svs.zarr/` \u2014 35 paired Zarr stores, one per slide\n- `autoresearch_runs/` \u2014 prior run artifacts / logs; not primary raw data\n- many `._*` files \u2014 macOS AppleDouble sidecar files; **ignore these**\n\nNaming convention:\n\n- donor ID example: `H20.33.001`\n- slide / zarr basename example: `H20.33.001-A12-LFB.svs`\n- paired zarr example: `H20.33.001-A12-LFB.svs.zarr`\n\nIn the cohort table, `slide_name` matches the local zarr directory name exactly.\n\n---\n\n## Cohort table schema (`training_cohort.csv`)\n\nShape:\n\n- **35 rows \u00d7 21 columns**\n\nColumns:\n\n| Column | Type | Notes |\n|---|---:|---|\n| `donor_id` | string | donor identifier, e.g. `H20.33.001` |\n| `slide_name` | string | local zarr basename, e.g. `H20.33.001-A12-LFB.svs.zarr` |\n| `slide_path` | string | external/original path, **not** the mounted local `/data` path |\n| `slope_zmem0` | float | **primary outcome** |\n| `slope_zcasi_irt0` | float | cognitive decline summary |\n| `slope_zexf0` | float | executive function decline |\n| `slope_zlan0` | float | language decline |\n| `slope_zvsp0` | float | visuospatial decline |\n| `max_age_vis` | float | confound |\n| `MEM_E_last` | float | last-visit memory score |\n| `EXF_E_last` | float | last-visit executive score |\n| `LAN_E_last` | float | last-visit language score |\n| `VSP_E_last` | float | last-visit visuospatial score |\n| `braak_label` | string | categorical Braak stage label |\n| `cerad_label` | string | categorical CERAD label |\n| `overall_ad_neuropath_change` | string | ordered pathology summary |\n| `age_at_death` | int | age at death |\n| `sex` | string | `Female` / `Male` |\n| `cognitive_status` | string | `No dementia` / `Dementia` |\n| `braak_numeric` | int | numeric Braak stage |\n| `cerad_ordinal` | int | ordinal CERAD |\n\nObserved cohort distributions:\n\n- `sex`: 21 Female, 14 Male\n- `cognitive_status`: 19 No dementia, 16 Dementia\n- `overall_ad_neuropath_change`: `Not AD`, `Low`, `Intermediate`, `High`\n- `braak_numeric` and `cerad_ordinal` already provide analysis-friendly confounds\n\n`sex_binary` is **not present as a column**; if needed for the program's confound set, derive it from `sex`.\n\n### Important cohort notes\n\n- `slide_path` points to the original acquisition location (`/Volumes/...`), not `/data/...`\n- For local computation, use:\n  - `Path(\"/data\") / slide_name`\n- `slide_name` strips to donor ID by removing `-A12-LFB.svs.zarr`\n\n---\n\n## WSI files (`*.svs`)\n\nThere are **35 Aperio SVS** slides.\n\nExample properties from one slide:\n\n- dimensions: `(67728, 39040)`\n- pyramid levels: `4`\n- objective magnification: `20x`\n- `aperio.MPP`: `0.5016` or `0.5049` \u00b5m/pixel across this cohort\n\nObserved across slides:\n\n- all 35 slides have unique pixel dimensions\n- level counts are either **3 or 4**\n- MPP values observed: **0.5016** and **0"
+}

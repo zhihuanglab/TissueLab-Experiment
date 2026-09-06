@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pathlib, textwrap\nobj=json.loads(pathlib.Path('/scratch/context_bundle.json').read_text())\nprint(\"keys:\", list(obj))\nfor k in ['worker_brief','accepted_panel','current_round','round','candidate','hypothesis','plan']:\n    if k in obj:\n        print(f\"\\n--- {k} ---\")\n        print(json.dumps(obj[k], indent=2)[:12000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"keys: ['worker_brief', 'runtime_manifest', 'cohort_summary', 'slide_manifest_head', 'runtime_quickstart_excerpt', 'dataset_guide_excerpt']\\n\\n--- worker_brief ---\\n{\\n  \\\"worker_name\\\": \\\"round_0001_worker\\\",\\n  \\\"round_id\\\": 1,\\n  \\\"candidate_id\\\": \\\"ca1-reactive-astro-fraction\\\",\\n  \\\"candidate_type\\\": \\\"seed\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [],\\n    \\\"best_panel_score\\\": null\\n  },\\n  \\\"scientific_question\\\": \\\"Does a higher reactive-astrocyte fraction within CA1 predict worse donor memory decline independent of s\", \"stderr\": \"\"}"
+  }
+]

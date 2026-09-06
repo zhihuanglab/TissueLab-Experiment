@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython /scratch/result.py | tee /scratch/run_stdout.txt\necho '--- results.json ---'\ncat /scratch/results.json\necho '--- report.md ---'\ncat /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: ca1_pyramidal_reactive_astro_neighborhood_fraction\\nBEST VARIATION: pyramidal_near_reactiveastro_30um\\n  IS partial r:      -0.5191\\n  Selection score:   0.5191\\n  LOO predictive r:  0.3727  (diagnostic)\\n  IS-LOO Gap:        0.1464  (penalty=0.0000)\\n  Adjusted Score:    0.3727\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  pyramidal_near_reactiveastro_30um  -0.5191  0.5191  0.3727\\n  pyramidal_near_reactiveastro_50um  -0.4987  0.4987  0.3534\\n\\nP\", \"stderr\": \"\"}"
+  }
+]

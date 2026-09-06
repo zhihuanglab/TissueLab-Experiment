@@ -1,0 +1,81 @@
+{
+  "worker_name": "round_0006_worker",
+  "round_id": 6,
+  "candidate_id": "ca1-peripyramidal-reactive-hypertrophy",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "astrocytic_reactivity_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "peripyramidal_reactivity_r35um",
+        "round_id": 2,
+        "panel_candidate_score": 0.4964,
+        "delta_panel_score": 0.0051,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_cuffed_fraction_r35um_ge1",
+        "round_id": 3,
+        "panel_candidate_score": 0.5544,
+        "delta_panel_score": 0.0579,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_pyramidal_cuffed_fraction_r35um_ge2",
+        "round_id": 4,
+        "panel_candidate_score": 0.5731,
+        "delta_panel_score": 0.0187,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_pyramidal_supermajority_reactive_cuff_fraction_r35um_ge2",
+        "round_id": 5,
+        "panel_candidate_score": 0.5766,
+        "delta_panel_score": 0.0035,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0005/round_0005_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5766
+  },
+  "scientific_question": "Does hypertrophy of reactive astrocytes in the immediate CA1 pyramidal niche capture memory-decline signal beyond the current count-based reactive cuffing features?",
+  "approach": "From each slide zarr, assign cells to CA1 using CustomAnnotations polygons after dividing annotation coordinates by 16. Identify CA1 Pyramidal Neurons and CA1 Reactive Astrocytes from ClassificationNode labels. Using centroids, find reactive astrocytes whose centroid lies within 35 microns of at least one CA1 pyramidal neuron. For each qualifying reactive astrocyte, compute contour area from SegmentationNode/contours after centering vertices before polygon-area calculation; convert to square microns if slide MPP is available, otherwise use pixel-area consistently across donors. Aggregate these qualifying reactive-astrocyte areas to one donor-level score. If a donor has no qualifying cells, return 0.0.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Median contour area of CA1 reactive astrocytes within 35 microns of any CA1 pyramidal neuron."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "75th percentile contour area of CA1 reactive astrocytes within 35 microns of any CA1 pyramidal neuron, emphasizing the hypertrophic tail."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use /data/training_cohort.csv to map donor_id to slide_name, then open /data/<slide_name>. Region assignment should use cell centroids and CA1 polygon union; annotation polygons are stored at 16x cell coordinates and must be divided by 16. For neighbor search, a KD-tree on CA1 pyramidal centroids is sufficient. Center contours before area calculation to avoid float32 cancellation. Keep both the reactive astrocyte and the pyramidal neuron CA1-restricted for this round.",
+  "rationale": "Rounds 3-5 showed that the strongest signal lives in the CA1 reactive-astrocyte cuff around pyramidal neurons, but the last gain from further count/gating refinement was small. That suggests the niche is real while simple presence/count thresholds may be nearing saturation. The next one-change test is to keep the same niche and switch the feature summary from abundance to morphology, asking whether larger peripyramidal reactive astrocytes mark a more severe glial activation state and can add new signal or replace a weaker broad reactivity member."
+}

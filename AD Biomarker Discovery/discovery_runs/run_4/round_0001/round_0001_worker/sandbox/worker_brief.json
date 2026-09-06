@@ -1,0 +1,25 @@
+{
+  "worker_name": "round_0001_worker",
+  "round_id": 1,
+  "candidate_id": "ca1-pyramidal-abundance",
+  "candidate_type": "seed",
+  "accepted_panel": {
+    "members": [],
+    "best_panel_score": null
+  },
+  "scientific_question": "Does reduced CA1 pyramidal neuron abundance provide a strong donor-level marker of faster memory decline after adjusting for age, Braak stage, CERAD, and sex?",
+  "approach": "For each donor, load the slide named in training_cohort.csv, assign cell centroids to CA1 polygon(s), and identify cells classified as Pyramidal Neuron. Compute a donor-level CA1 pyramidal abundance score using the tested normalization variant: either pyramidal count divided by all CA1 cells, or pyramidal count divided by annotated CA1 area. If CA1 is missing, has zero area, or has too few assigned cells for a stable estimate, return NaN rather than forcing a value.",
+  "variations": [
+    {
+      "name": "ca1_pyramidal_fraction",
+      "description": "Baseline: number of CA1 Pyramidal Neuron cells divided by total classified cells assigned to CA1."
+    },
+    {
+      "name": "ca1_pyramidal_density",
+      "description": "Nearby normalization change: number of CA1 Pyramidal Neuron cells divided by total annotated CA1 area after polygon scaling."
+    }
+  ],
+  "baseline_variation": "ca1_pyramidal_fraction",
+  "notes": "Use slide_name to open the paired /data/*.svs.zarr store. Region polygons in CustomAnnotations are stored at 16x cell coordinates, so divide polygon coordinates by 16 before centroid-in-polygon tests. If there are multiple CA1 polygons, combine them logically as one region. For the density variant, compute polygon area after scaling to cell-coordinate space; absolute unit conversion is optional because slide MPP varies only slightly, but keep the implementation deterministic. This candidate only needs centroids, classification labels, and region polygons; contour area is not required.",
+  "rationale": "With an empty panel, the best seed is a canonical, region-specific hippocampal signal that is common enough to be stable across all donors and simple enough to audit from raw annotations. CA1 pyramidal neuron loss is a biologically direct memory-circuit readout, should have high coverage, and gives a clean starting point before later rounds test gliosis or spatial niche refinements around the same vulnerable subfield."
+}

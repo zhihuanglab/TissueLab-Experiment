@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "/shared/lib:\nshared_analysis\n\n/shared/lib/shared_analysis:\n__init__.py\n__pycache__\nartifacts.py\ncontext.py\nembedding_mechanistic.py\npca.py\nsea_ad_lfb.py\nstats.py\n\n/shared/lib/shared_analysis/__pycache__:\n__init__.cpython-311.pyc\nartifacts.cpython-311.pyc\ncontext.cpython-311.pyc\nembedding_mechanistic.cpython-311.pyc\npca.cpython-311.pyc\nregistry.cpython-311.pyc\nsea_ad_lfb.cpython-311.pyc\nstats.cpython-311.pyc\n",
+  "stderr": ""
+}

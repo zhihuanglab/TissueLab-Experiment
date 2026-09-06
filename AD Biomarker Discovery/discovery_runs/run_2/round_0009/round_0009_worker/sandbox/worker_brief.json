@@ -1,0 +1,114 @@
+{
+  "worker_name": "round_0009_worker",
+  "round_id": 9,
+  "candidate_id": "ca1-reactive-hotspot-corpora-amylacea-enrichment",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_burden__ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_enrichment__reactive_over_astroglial",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_niche__reactive_over_astroglial_neighbored_pyramidal_fraction_r70px",
+        "round_id": 3,
+        "panel_candidate_score": 0.5076,
+        "delta_panel_score": 0.0005,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_reactive_astrocyte_hypertrophy__reactive_minus_astrocyte_median_log1p_area_ca1",
+        "round_id": 4,
+        "panel_candidate_score": 0.5425,
+        "delta_panel_score": 0.0349,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "feature__reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+        "round_id": 5,
+        "panel_candidate_score": 0.6581,
+        "delta_panel_score": 0.1156,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0005/round_0005_worker/result.py"
+      },
+      {
+        "slot": 6,
+        "feature_name": "feature__candidate_variant_a",
+        "round_id": 6,
+        "panel_candidate_score": 0.6673,
+        "delta_panel_score": 0.0092,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0006/round_0006_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0006/round_0006_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0006/round_0006_worker/result.py"
+      },
+      {
+        "slot": 7,
+        "feature_name": "ca1_reactive_hotspot_pyramidal_depletion",
+        "round_id": 7,
+        "panel_candidate_score": 0.7017,
+        "delta_panel_score": 0.0345,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0007/round_0007_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0007/round_0007_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0007/round_0007_worker/result.py"
+      },
+      {
+        "slot": 8,
+        "feature_name": "ca1_reactive_hotspot_oligodendrocyte_depletion",
+        "round_id": 8,
+        "panel_candidate_score": 0.7096,
+        "delta_panel_score": 0.0078,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0008/round_0008_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0008/round_0008_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0008/round_0008_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.7096
+  },
+  "scientific_question": "Do CA1 reactive astrocyte hotspots sit in corpora-amylacea-rich niches, relative to matched homeostatic astrocyte hotspots, and does that focal chronic waste-accumulation signal add information beyond the current CA1 gliosis panel?",
+  "approach": "Assign cells to CA1 using CustomAnnotations polygons after dividing polygon coordinates by 16. From ClassificationNode labels, identify Reactive Astrocyte, Astrocyte, and Corpora Amylacea. Within CA1, define reactive and astrocyte hotspot centers separately as cells with at least 3 same-class neighbors within radius r pixels, excluding self. For each hotspot center, compute the smoothed local Corpora Amylacea fraction among all CA1 cells within the same radius r: (n_corpora_amylacea + 1) / (n_all_ca1_cells + 2). The donor biomarker is the mean local Corpora Amylacea fraction around reactive-astrocyte hotspots minus the mean local fraction around astrocyte hotspots.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Use r=70 px for both hotspot definition and local neighborhood fraction, with k=3 same-class neighbors defining a hotspot."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Use r=90 px for both hotspot definition and local neighborhood fraction, keeping k=3 fixed to test a slightly broader chronic-niche scale."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use centroids only; contour areas are not needed. Keep computation deterministic with CA1-restricted radius-neighbor queries. If one hotspot class has no qualifying centers, set that class-specific mean local fraction to 0.0 so donor coverage stays high; if CA1 assignment is unavailable, return NaN. Annotation polygon vertices are stored at 16x cell coordinates and must be divided by 16 before point-in-polygon region assignment.",
+  "rationale": "Rounds 5-8 suggest the strongest remaining signal is not bulk CA1 composition but the local neighborhood content of reactive astrocyte hotspots. After seeing gains from hotspot-local pyramidal and oligodendrocyte depletion, the next coherent one-change test is to keep the same hotspot framework and swap the neighboring population to Corpora Amylacea, which could capture a more chronic astrocytic dysfunction or clearance-failure niche that is complementary to the existing cell-loss features and may be a cleaner replacement for a weaker hotspot-derived member."
+}

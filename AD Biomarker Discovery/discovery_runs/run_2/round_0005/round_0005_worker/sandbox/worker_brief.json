@@ -1,0 +1,70 @@
+{
+  "worker_name": "round_0005_worker",
+  "round_id": 5,
+  "candidate_id": "ca1-reactive-astrocyte-microclustering",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_burden__ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_enrichment__reactive_over_astroglial",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_niche__reactive_over_astroglial_neighbored_pyramidal_fraction_r70px",
+        "round_id": 3,
+        "panel_candidate_score": 0.5076,
+        "delta_panel_score": 0.0005,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_reactive_astrocyte_hypertrophy__reactive_minus_astrocyte_median_log1p_area_ca1",
+        "round_id": 4,
+        "panel_candidate_score": 0.5425,
+        "delta_panel_score": 0.0349,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5425
+  },
+  "scientific_question": "Does focal self-clustering of CA1 reactive astrocytes, relative to baseline CA1 astrocyte clustering, capture a patchy gliosis severity signal for memory decline beyond existing CA1 burden, enrichment, neuron-adjacent niche, and hypertrophy markers?",
+  "approach": "Assign cells to CA1 using the CA1 annotation polygon from CustomAnnotations after dividing polygon coordinates by 16. From ClassificationNode labels, identify CA1 Reactive Astrocyte cells and CA1 Astrocyte cells. Using CA1 centroids only, build same-region neighbor search and, for each cell, count same-type neighbors within radius r pixels excluding the cell itself. Mark a cell as microclustered if it has at least 3 same-type neighbors within r. Compute the donor biomarker as: fraction of CA1 Reactive Astrocytes that are microclustered minus fraction of CA1 Astrocytes that are microclustered. This isolates excess focal clustering of reactive astrocytes beyond background astroglial packing.",
+  "variations": [
+    {
+      "name": "reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+      "description": "Baseline variant: in CA1, microclustered means at least 3 same-type neighbors within 70 px; score is reactive microclustered fraction minus astrocyte microclustered fraction."
+    },
+    {
+      "name": "reactive_minus_astrocyte_microcluster_fraction_r90px_k3",
+      "description": "Local radius sweep: same computation but using a 90 px neighborhood to test a slightly broader focal-gliosis scale."
+    }
+  ],
+  "baseline_variation": "reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+  "notes": "Use slide_name from training_cohort.csv to open the paired .svs.zarr under /data. Region assignment must use annotation polygons in 16x coordinates scaled down by 16 before testing cell centroids. Use only CA1 cells for both the target and reference fractions. Exclude self from neighbor counts. A KD-tree or ball query on centroids is sufficient; no contour processing is needed for this round. Handle low-count edge cases conservatively, e.g. return NaN if either CA1 Reactive Astrocyte or CA1 Astrocyte count is very small.",
+  "rationale": "The accepted panel already shows that CA1 reactive astrocyte biology is strongly informative, with bulk enrichment and hypertrophy both adding signal, while the pyramidal-neighbor niche added only a minimal gain. That pattern suggests the remaining useful variation may be in how reactive astrocytes organize within CA1 tissue rather than simply how many there are or whether they sit near neurons. A microclustering readout is a biologically interpretable next step that could either add new spatial signal or replace the weaker neuron-adjacent niche member with a cleaner focal-gliosis marker."
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nimport sys\nsys.path.insert(0, '/shared/lib')\nfrom pathlib import Path\nfrom shared_analysis.sea_ad_lfb import build_cell_table\nslide = Path('/data/H19.33.004-A12-LFB.svs.zarr')\ncells = build_cell_table(slide, include_regions=True, include_geometry=False)\nprint(cells.head(3).to_string())\nprint('\\nUnique regions:', sorted([r for r in cells[\"region\"].dropna().unique()])[:20])\nca1 = cells[cells['region']=='CA1']\nprint('\\nCA1 n=', len(ca1))\nprint(ca1['cell_type'].value_counts().head(10).to_string())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"   cell_index        x      y  class_id         cell_type region\\n0           0  22901.0   43.0         0  Negative control    NaN\\n1           1  23020.0   98.0         0  Negative control    NaN\\n2           2  22719.0  306.0         0  Negative control    NaN\\n\\nUnique regions: ['CA1', 'CA2', 'CA3', 'CA4', 'DG', 'EC', 'SB', 'TEC']\\n\\nCA1 n= 9413\\ncell_type\\nNegative control      3106\\nOligodendrocyte       2353\\nPyramidal Neuron      1732\\nReactive Astrocyte    1107\\nAstrocyte             1077\\nGranule Neu\", \"stderr\": \"\"}"
+  }
+]

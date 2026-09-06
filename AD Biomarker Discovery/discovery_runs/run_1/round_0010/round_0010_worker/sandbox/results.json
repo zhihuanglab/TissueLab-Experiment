@@ -1,0 +1,263 @@
+{
+  "status": "ok",
+  "hypothesis_family": "EC reactive-astrocyte-proximal pyramidal lower-tail log-area",
+  "best_variation": "candidate_variant_a",
+  "feature_name": "ec_reactive_astro_proximal_pyramidal_lower_tail_area_80px",
+  "feature_column": "ec_reactive_astro_proximal_pyramidal_log1p_area_q10_r80",
+  "outcome": "slope_zmem0",
+  "covariates": [
+    "max_age_vis",
+    "braak_numeric",
+    "cerad_ordinal",
+    "sex_binary"
+  ],
+  "n_total": 35,
+  "n_analyzable": 34,
+  "partial_r": 0.22694243284798912,
+  "selection_score": 0.22045836333804658,
+  "loo_predictive_r": 0.03264424312120429,
+  "is_loo_gap": 0.19429818972678484,
+  "gap_penalty": 0.02214909486339242,
+  "adjusted_score": 0.010495148257811872,
+  "donor_feature_table": "/scratch/donor_feature_table.csv",
+  "ranked_variations": [
+    {
+      "name": "candidate_variant_a",
+      "feature_name": "ec_reactive_astro_proximal_pyramidal_lower_tail_area_80px",
+      "feature_column": "ec_reactive_astro_proximal_pyramidal_log1p_area_q10_r80",
+      "radius_px": 80.0,
+      "description": "EC reactive-astrocyte-proximal pyramidal lower-tail area with 80 px radius.",
+      "n_total": 35,
+      "n_analyzable": 34,
+      "coverage_ratio": 0.9714285714285714,
+      "partial_r": 0.22694243284798912,
+      "selection_score": 0.22045836333804658,
+      "loo_predictive_r": 0.03264424312120429,
+      "is_loo_gap": 0.19429818972678484,
+      "gap_penalty": 0.02214909486339242,
+      "adjusted_score": 0.010495148257811872
+    },
+    {
+      "name": "candidate_variant_b",
+      "feature_name": "ec_reactive_astro_proximal_pyramidal_lower_tail_area_60px",
+      "feature_column": "ec_reactive_astro_proximal_pyramidal_log1p_area_q10_r60",
+      "radius_px": 60.0,
+      "description": "EC reactive-astrocyte-proximal pyramidal lower-tail area with 60 px radius.",
+      "n_total": 35,
+      "n_analyzable": 34,
+      "coverage_ratio": 0.9714285714285714,
+      "partial_r": 0.15711555098142677,
+      "selection_score": 0.15262653523910027,
+      "loo_predictive_r": -0.11389188833503126,
+      "is_loo_gap": 0.27100743931645804,
+      "gap_penalty": 0.060503719658229024,
+      "adjusted_score": -0.1743956079932603
+    }
+  ],
+  "per_donor_loo": [
+    {
+      "donor_id": "H19.33.004",
+      "outcome": -0.0587685,
+      "predicted": -0.07256568161868593,
+      "feature_value": 3.65323892226092
+    },
+    {
+      "donor_id": "H20.33.008",
+      "outcome": -0.1205063,
+      "predicted": -0.12992025587095377,
+      "feature_value": 3.5553480614894135
+    },
+    {
+      "donor_id": "H20.33.013",
+      "outcome": -0.0317417,
+      "predicted": -0.09740451254200709,
+      "feature_value": 3.784189633918261
+    },
+    {
+      "donor_id": "H20.33.018",
+      "outcome": -0.3042141,
+      "predicted": -0.10222142081225705,
+      "feature_value": 3.2771447329921766
+    },
+    {
+      "donor_id": "H20.33.024",
+      "outcome": -0.0103346,
+      "predicted": -0.08883609561821738,
+      "feature_value": 3.6635616461296463
+    },
+    {
+      "donor_id": "H20.33.025",
+      "outcome": -0.0723104,
+      "predicted": -0.11523729327573852,
+      "feature_value": 3.5423981977825245
+    },
+    {
+      "donor_id": "H20.33.027",
+      "outcome": -0.1125932,
+      "predicted": -0.12959032752026006,
+      "feature_value": 3.6635616461296463
+    },
+    {
+      "donor_id": "H20.33.029",
+      "outcome": -0.0948095,
+      "predicted": -0.14129555769663527,
+      "feature_value": 3.417726683613366
+    },
+    {
+      "donor_id": "H20.33.030",
+      "outcome": -0.1680423,
+      "predicted": -0.1319912871613583,
+      "feature_value": 3.597312260588446
+    },
+    {
+      "donor_id": "H20.33.037",
+      "outcome": -0.2508045,
+      "predicted": -0.1565181884460012,
+      "feature_value": 3.157000421150113
+    },
+    {
+      "donor_id": "H20.33.038",
+      "outcome": -0.2372091,
+      "predicted": -0.1298409738525678,
+      "feature_value": 3.58351893845611
+    },
+    {
+      "donor_id": "H20.33.040",
+      "outcome": -0.1026342,
+      "predicted": -0.12046529586978229,
+      "feature_value": 3.7268910463413247
+    },
+    {
+      "donor_id": "H20.33.041",
+      "outcome": -0.1079018,
+      "predicted": -0.13027622015662693,
+      "feature_value": 3.481240089335692
+    },
+    {
+      "donor_id": "H20.33.043",
+      "outcome": -0.0599597,
+      "predicted": -0.11488354033392299,
+      "feature_value": 3.1986731175506815
+    },
+    {
+      "donor_id": "H20.33.044",
+      "outcome": -0.0544588,
+      "predicted": -0.03052398644259035,
+      "feature_value": 3.827548489435876
+    },
+    {
+      "donor_id": "H20.33.046",
+      "outcome": -0.2017114,
+      "predicted": -0.12353601831394415,
+      "feature_value": 3.4657359027997265
+    },
+    {
+      "donor_id": "H21.33.001",
+      "outcome": -0.0815782,
+      "predicted": -0.023754910056454283,
+      "feature_value": 3.7123450574451264
+    },
+    {
+      "donor_id": "H21.33.004",
+      "outcome": -0.1198253,
+      "predicted": -0.032223993106097325,
+      "feature_value": 3.6888794541139363
+    },
+    {
+      "donor_id": "H21.33.006",
+      "outcome": -0.0539668,
+      "predicted": -0.08750416233930562,
+      "feature_value": 3.6838479412311926
+    },
+    {
+      "donor_id": "H21.33.007",
+      "outcome": -0.0975144,
+      "predicted": -0.14461095670322618,
+      "feature_value": 3.5263605246161616
+    },
+    {
+      "donor_id": "H21.33.012",
+      "outcome": -0.1009244,
+      "predicted": -0.14608699288126503,
+      "feature_value": 3.180115759068219
+    },
+    {
+      "donor_id": "H21.33.013",
+      "outcome": -0.161261,
+      "predicted": -0.13319287036414337,
+      "feature_value": 3.3445942141447844
+    },
+    {
+      "donor_id": "H21.33.018",
+      "outcome": -0.144019,
+      "predicted": -0.06532132062262205,
+      "feature_value": 3.932801250218862
+    },
+    {
+      "donor_id": "H21.33.021",
+      "outcome": -0.0983582,
+      "predicted": -0.09911647104111337,
+      "feature_value": 3.6800743065691344
+    },
+    {
+      "donor_id": "H21.33.023",
+      "outcome": -0.1546294,
+      "predicted": -0.009297878477748227,
+      "feature_value": 3.9982007016691985
+    },
+    {
+      "donor_id": "H21.33.025",
+      "outcome": -0.0422854,
+      "predicted": -0.11036033080795002,
+      "feature_value": 3.7612001156935624
+    },
+    {
+      "donor_id": "H21.33.033",
+      "outcome": -0.0466362,
+      "predicted": -0.11961761203397715,
+      "feature_value": 3.597312260588446
+    },
+    {
+      "donor_id": "H21.33.035",
+      "outcome": -0.0498238,
+      "predicted": -0.12396767312692177,
+      "feature_value": 4.060443010546419
+    },
+    {
+      "donor_id": "H21.33.037",
+      "outcome": -0.0881349,
+      "predicted": -0.054755625247360246,
+      "feature_value": 3.8815637979434374
+    },
+    {
+      "donor_id": "H21.33.038",
+      "outcome": -0.0518276,
+      "predicted": -0.07196422001396294,
+      "feature_value": 3.624340932976365
+    },
+    {
+      "donor_id": "H21.33.040",
+      "outcome": -0.0327944,
+      "predicted": -0.15298570575248108,
+      "feature_value": 3.3741336033301943
+    },
+    {
+      "donor_id": "H21.33.043",
+      "outcome": -0.072355,
+      "predicted": -0.1077465212787851,
+      "feature_value": 3.6054381178066017
+    },
+    {
+      "donor_id": "H21.33.044",
+      "outcome": -0.0991281,
+      "predicted": -0.16176837499173743,
+      "feature_value": 3.367295829986474
+    },
+    {
+      "donor_id": "H21.33.046",
+      "outcome": -0.1616234,
+      "predicted": -0.10776915741797644,
+      "feature_value": 3.5553480614894135
+    }
+  ]
+}

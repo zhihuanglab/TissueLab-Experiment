@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "(263786, 2) int32\n(263786, 32, 2) float32\n(263786,) int32\n",
+  "stderr": ""
+}

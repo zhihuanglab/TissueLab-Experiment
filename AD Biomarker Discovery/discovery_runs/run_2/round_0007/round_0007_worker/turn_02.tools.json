@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pathlib, pprint\nctx=json.loads(pathlib.Path('/scratch/context_bundle.json').read_text())\nprint('TOP-LEVEL KEYS:', list(ctx.keys()))\nfor k in ['worker_brief','candidate','round','accepted_panel','current_panel','prior_rounds','notes']:\n    if k in ctx:\n        print(f'\\n--- {k} ---')\n        pprint.pp(ctx[k])\nprint('\\n--- worker_brief.json ---')\nwb=json.loads(pathlib.Path('/scratch/worker_brief.json').read_text())\npprint.pp(wb)\nprint('\\n--- result.py template ---')\nprint(pathlib.Path('/scratch/result.py').read_text())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"': '/Volumes/SSK SSD/TissueLab '\\n                                                 'Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/results.json',\\n                                 'result_path': '/Volumes/SSK SSD/TissueLab '\\n                                                'Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/result.py'},\\n                                {'slot': 3,\\n\", \"stderr\": \"\"}"
+  }
+]

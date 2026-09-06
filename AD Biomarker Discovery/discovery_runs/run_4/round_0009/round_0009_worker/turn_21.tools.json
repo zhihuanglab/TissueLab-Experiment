@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nnl -ba /scratch/result.py | sed -n '520,590p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"   520\\t    )\\n   521\\t\\n   522\\t    lines = [\\n   523\\t        \\\"## Summary\\\",\\n   524\\t        f\\\"Tested the {FEATURE_FAMILY} family in CA1 reactive-astrocyte-conditioned pyramidal niches; {best['name']} won with selection_score={_format_num(best['selection_score'])}.\\\",\\n   525\\t        \\\"\\\",\\n   526\\t        \\\"## Metrics\\\",\\n   527\\t        f\\\"Best variation: {best['name']} ({best['radius_px']} px).\\\",\\n   528\\t        f\\\"- IS partial r: {_format_num(best['partial_r'])}\\\",\\n   529\\t        f\\\"- Selection score: {_format_nu\", \"stderr\": \"\"}"
+  }
+]

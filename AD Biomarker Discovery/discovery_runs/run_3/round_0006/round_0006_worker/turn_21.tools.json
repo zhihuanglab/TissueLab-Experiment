@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- results.json ---'\nsed -n '1,240p' /scratch/results.json\necho\necho '--- report.md ---'\nsed -n '1,260p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- results.json ---\\n{\\n  \\\"status\\\": \\\"ok\\\",\\n  \\\"feature_name\\\": \\\"ca1_peripyramidal_reactive_area_median_r35um\\\",\\n  \\\"outcome\\\": \\\"slope_zmem0\\\",\\n  \\\"n_total\\\": 35,\\n  \\\"n_analyzable\\\": 35,\\n  \\\"partial_r\\\": -0.3165415805298734,\\n  \\\"ci_lo\\\": -0.6467161069333994,\\n  \\\"ci_hi\\\": 0.3305570220772095,\\n  \\\"p_value\\\": 0.06393462313686092,\\n  \\\"loo_predictive_r\\\": -0.028940904722832294,\\n  \\\"loo_unstable_count\\\": 1,\\n  \\\"loo_max_shift\\\": 0.3457433165920064,\\n  \\\"donor_ids_used\\\": [\\n    \\\"H19.33.004\\\",\\n    \\\"H20.33.008\\\",\\n    \\\"H20.33.013\\\",\\n    \\\"H\", \"stderr\": \"\"}"
+  }
+]

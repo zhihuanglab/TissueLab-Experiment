@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "FILE /data/autoresearch_runs/run_20260410_201937_2df939/round_0004/round_0004_worker/results.json\n{\n  \"best_variation\": null,\n  \"partial_r\": 0.29397628619873717,\n  \"selection_score\": null,\n  \"loo_predictive_r\": 0.1999402438757643,\n  \"is_loo_gap\": 0.09403604232297286,\n  \"adjusted_score\": 0.1999402438757643,\n  \"feature_column\": \"ca1_pyramidal_neuron_frac\"\n}\nrank head []\nFILE /data/autoresearch_runs/run_20260410_234232_33d000/round_0004/round_0004_worker/results.json\n{\n  \"best_variation\": \"reactive_all_numerator_pyr090_denominator\",\n  \"partial_r\": -0.5726877726782088,\n  \"selection_score\": null,\n  \"loo_predictive_r\": 0.4885822698443056,\n  \"is_loo_gap\": 0.08410550283390322,\n  \"adjusted_score\": 0.4885822698443056,\n  \"feature_column\": \"feature__reactive_all_numerator_pyr090_denominator\"\n}\nrank head []\nFILE /data/autoresearch_runs/run_20260411_095807_373b21/round_0004/round_0004_worker/results.json\n{\n  \"best_variation\": null,\n  \"partial_r\": null,\n  \"selection_score\": null,\n  \"loo_predictive_r\": -0.26677210874199037,\n  \"is_loo_gap\": 0.09776089317556977,\n  \"adjusted_score\": -0.26677210874199037,\n  \"feature_column\": \"intr_area\"\n}\nrank head []\n",
+  "stderr": ""
+}

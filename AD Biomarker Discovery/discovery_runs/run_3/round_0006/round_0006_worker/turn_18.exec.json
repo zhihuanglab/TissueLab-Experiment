@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "SegmentationNode/centroids shape= (263786, 2) dtype= int32 chunks= (10000, 2)\nSegmentationNode/contours shape= (263786, 32, 2) dtype= float32 chunks= (10000, 32, 2)\nClassificationNode/nuclei_class_id shape= (263786,) dtype= int32 chunks= (65947,)\n",
+  "stderr": ""
+}

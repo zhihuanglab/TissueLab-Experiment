@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nfrom pathlib import Path\nimport pandas as pd, zarr, json\ncohort = pd.read_csv('/data/training_cohort.csv')\nslide = Path('/data') / cohort.iloc[0]['slide_name']\nroot = zarr.open_group(str(slide), mode='r')\ns = root['CustomAnnotations']['CA1_01']['annotation_json'][()]\nprint(type(s), len(str(s)))\nprint(str(s)[:1500])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"<class 'str'> 8302\\n{\\\"id\\\":\\\"CA1_01\\\",\\\"type\\\":\\\"Annotation\\\",\\\"created\\\":\\\"2026-02-20T23:14:55.709Z\\\",\\\"creator\\\":{\\\"id\\\":\\\"default\\\",\\\"type\\\":\\\"Person\\\"},\\\"isBackend\\\":false,\\\"bodies\\\":[{\\\"id\\\":\\\"1775407797781\\\",\\\"annotation\\\":\\\"CA1_01\\\",\\\"type\\\":\\\"TextualBody\\\",\\\"purpose\\\":\\\"style\\\",\\\"value\\\":\\\"#0400ff\\\",\\\"created\\\":\\\"2026-04-05T16:49:57.781Z\\\",\\\"creator\\\":{\\\"id\\\":\\\"default\\\",\\\"type\\\":\\\"Person\\\"}},{\\\"id\\\":\\\"1775407797781\\\",\\\"annotation\\\":\\\"CA1_01\\\",\\\"type\\\":\\\"TextualBody\\\",\\\"purpose\\\":\\\"comment\\\",\\\"value\\\":\\\"CA1\\\",\\\"created\\\":\\\"2026-04-05T16:49:57.781Z\\\",\\\"creator\\\":{\\\"id\\\":\\\"def\", \"stderr\": \"\"}"
+  }
+]

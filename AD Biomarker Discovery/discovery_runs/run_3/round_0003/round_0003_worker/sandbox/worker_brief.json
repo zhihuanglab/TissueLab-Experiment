@@ -1,0 +1,52 @@
+{
+  "worker_name": "round_0003_worker",
+  "round_id": 3,
+  "candidate_id": "ca1-reactive-cuffing",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "astrocytic_reactivity_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "peripyramidal_reactivity_r35um",
+        "round_id": 2,
+        "panel_candidate_score": 0.4964,
+        "delta_panel_score": 0.0051,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.4964
+  },
+  "scientific_question": "Does the proportion of CA1 pyramidal neurons that are locally cuffed by reactive astrocytes capture memory-decline signal beyond the existing astrocyte-centric reactivity fractions?",
+  "approach": "Assign cells to CA1 using the CA1 annotation polygon after dividing annotation coordinates by 16 to match cell coordinates. From hard cell labels, keep CA1 Pyramidal Neurons and CA1 Reactive Astrocytes. Using centroids and a spatial index, count for each CA1 pyramidal neuron how many CA1 reactive astrocyte centroids fall within 35 microns of that neuron. Convert microns to pixels with slide-specific MPP when available. The donor-level biomarker is the fraction of CA1 pyramidal neurons whose reactive-astrocyte neighbor count meets the chosen threshold.",
+  "variations": [
+    {
+      "name": "r35_ge1",
+      "description": "Fraction of CA1 pyramidal neurons with at least 1 reactive astrocyte within 35 microns."
+    },
+    {
+      "name": "r35_ge2",
+      "description": "Fraction of CA1 pyramidal neurons with at least 2 reactive astrocytes within 35 microns."
+    },
+    {
+      "name": "r35_ge3",
+      "description": "Fraction of CA1 pyramidal neurons with at least 3 reactive astrocytes within 35 microns."
+    }
+  ],
+  "baseline_variation": "r35_ge2",
+  "notes": "Keep both target neurons and reactive astrocytes restricted to CA1 before neighbor counting. Use centroid-to-centroid Euclidean distance. Prefer actual slide MPP from the paired SVS for the 35 micron radius; cohort MPP is tightly clustered if fallback is needed. If CA1 pyramidal neurons are absent, return NaN; if pyramidal neurons are present but no CA1 reactive astrocytes are found, return 0. This is intended as a simple, auditable neuron-exposure metric that may replace or complement the current peripyramidal reactivity fraction.",
+  "rationale": "Rounds 1 and 2 both kept CA1 reactive astrocyte features, and the second result suggests the signal strengthens when restricted to the pyramidal niche. The next clean test is to switch from an astrocyte-centric summary to a neuron-centric exposure summary: not just whether nearby astrocytes are reactive, but how widely reactive astrocytes physically surround CA1 pyramidal neurons across the donor. That could add new niche-occupancy signal or act as a cleaner replacement for the current peripyramidal reactivity feature."
+}

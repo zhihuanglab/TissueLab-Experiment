@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/scratch/.tl_runtime/runtime_server.py\", line 32, in _execute\n    runpy.run_path(path, run_name=\"__main__\")\n  File \"<frozen runpy>\", line 291, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/scratch/result.py\", line 594, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/scratch/result.py\", line 559, in main\n    _write_report(\n  File \"/scratch/result.py\", line 350, in _write_report\n    f\"feature={getattr(row, str(best['feature_column'])):.3f}, astro={astro_n}, reactive={react_n})\"\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Pandas' object has no attribute 'ca1_reactive_astrocyte_hypertrophy_median_log_area_shift'\n"
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- context_bundle.json ---'\ncat /scratch/context_bundle.json\necho\necho '--- program.md ---'\ncat /scratch/program.md\necho\necho '--- scratch listing ---'\nls -l /scratch",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"s_template.py\\\",\\n    \\\"template_paths\\\": {\\n      \\\"generic\\\": \\\"/shared/templates/worker_analysis_template.py\\\",\\n      \\\"mechanistic_embedding\\\": \\\"/shared/templates/worker_embedding_mechanistic_template.py\\\"\\n    },\\n    \\\"cache_paths\\\": {\\n      \\\"slide_manifest\\\": \\\"/shared/cache/slide_manifest.json\\\",\\n      \\\"cohort_summary\\\": \\\"/shared/cache/cohort_summary.json\\\",\\n      \\\"region_polygon_dir\\\": \\\"/shared/cache/region_polygons\\\"\\n    },\\n    \\\"modules\\\": [\\n      {\\n        \\\"module\\\": \\\"shared_analysis.sea_ad_lfb\\\",\\n        \\\"fun\", \"stderr\": \"\"}"
+  }
+]

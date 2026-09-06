@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\necho '--- worker_brief.json ---'\ncat /scratch/worker_brief.json\necho\necho '--- context keys and round brief extracts ---'\npython - <<'PY'\nimport json\np='/scratch/context_bundle.json'\nwith open(p) as f:\n    obj=json.load(f)\nprint('top keys:', list(obj)[:20])\nfor k in ['worker_brief','candidate','round_plan','accepted_panel','current_panel','hypothesis','family']:\n    if k in obj:\n        print(f'\\n== {k} ==')\n        print(json.dumps(obj[k], indent=2)[:8000])\nPY\necho\necho '--- shared embedding template head ---'\nsed -n '1,260p' /shared/templates/worker_embedding_mechanistic_template.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"ults_path\\\": \\\"/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0008/round_0008_worker/results.json\\\",\\n        \\\"result_path\\\": \\\"/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0008/round_0008_worker/result.py\\\"\\n      },\\n      {\\n        \\\"slot\\\": 9,\\n        \\\"feature_name\\\": \\\"ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k\", \"stderr\": \"\"}"
+  }
+]

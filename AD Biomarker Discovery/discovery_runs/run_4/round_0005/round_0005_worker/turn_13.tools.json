@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nfrom pathlib import Path\npath = Path('/scratch/result.py')\ntext = path.read_text()\nold = \"\"\"        print(\n            f\"  {row['donor_id']}  {row['outcome']:.4f}  \"\n            f\"{row['predicted']:.4f if math.isfinite(float(row['predicted'])) else 'nan'}  \"\n            f\"{row[best_eval.feature_column]:.6f}\"\n        )\n\"\"\"\nnew = \"\"\"        pred = row['predicted']\n        pred_text = f\"{float(pred):.4f}\" if pred is not None and math.isfinite(float(pred)) else \"nan\"\n        print(\n            f\"  {row['donor_id']}  {row['outcome']:.4f}  \"\n            f\"{pred_text}  \"\n            f\"{row[best_eval.feature_column]:.6f}\"\n        )\n\"\"\"\nif old not in text:\n    raise SystemExit('target block not found')\npath.write_text(text.replace(old,new))\nPY\npython -m py_compile /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\", \"stderr\": \"\"}"
+  }
+]

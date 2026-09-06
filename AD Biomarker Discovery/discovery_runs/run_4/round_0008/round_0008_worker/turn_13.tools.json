@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys\nsys.path.insert(0, '/shared/lib')\nimport shared_analysis.artifacts as art\nprint(art._COVARIATE_ALIASES)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"{'sex': 'sex_binary', 'gender': 'sex_binary', 'braak': 'braak_numeric', 'braak_label': 'braak_numeric', 'cerad': 'cerad_ordinal', 'cerad_label': 'cerad_ordinal'}\\n\", \"stderr\": \"\"}"
+  }
+]

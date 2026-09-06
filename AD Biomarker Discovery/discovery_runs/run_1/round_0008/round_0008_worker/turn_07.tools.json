@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"def build_cell_table\\|center\\|area =\" -n /shared/lib/shared_analysis/sea_ad_lfb.py | sed -n '1,220p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"192:    centered = contour_array - contour_array.mean(axis=1, keepdims=True)\\n193:    x = centered[:, :, 0]\\n194:    y = centered[:, :, 1]\\n197:    area = 0.5 * np.abs(np.sum(x * y_next - y * x_next, axis=1))\\n200:    cov = np.einsum(\\\"nij,nik->njk\\\", centered, centered) / np.maximum(centered.shape[1], 1)\\n215:def build_cell_table(\\n\", \"stderr\": \"\"}"
+  }
+]

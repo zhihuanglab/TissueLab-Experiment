@@ -1,0 +1,40 @@
+Round 15
+========================================================================
+
+The machine-readable candidate enumeration for this round was not retained:
+the round's script and its details file were lost during the run. What follows
+is taken verbatim from the run log, which recorded the configuration this round
+selected, its scores, and the alternatives the round discussed and rejected.
+Rejected alternatives are therefore partial here, covering those the agent wrote
+about rather than every configuration it evaluated.
+
+ROUND 15 - [T3+G4+disp+frac+tig] + [Ridge(α=2)] (in-sample/LOO)
+
+Features (10):
+  1. tumor_pca_top3 (musk_tumor/, tissue_class_id==1, mean-pooled 1024D → PCA(20) → top 3 PCs by |corr|)
+  2. gland_pca_top4 (musk_gland/, tissue_class_id==1, mean-pooled 1024D → PCA(20) → top 4 PCs by |corr|)
+  3. gland_spatial_dispersion (musk_gland/, convex hull area of gland patches / convex hull area of all patches)
+  4. gland_neighbor_fraction (musk_gland/, fraction of tumor patches with gland patch neighbor within radius)
+  5. tig - tumor_in_gland_fraction (musk_gland/ + musk_tumor/ spatial overlap)
+Model: Ridge(alpha=2), StandardScaler inside LOO, global PCA + global PC selection
+
+SELECTED CONFIGURATION
+Model:Ridge(alpha=2), StandardScaler inside LOO, global PCA + global PC selection
+  LOO r      = 0.8374
+  IS r       = 0.9234
+  IS-LOO gap = 0.0861
+  adjusted   = 0.8374
+
+ALTERNATIVES RECORDED IN THIS ROUND'S FINDINGS
+  1. **Marginal improvement over baseline**: Best config T3+G4+disp+frac+tig at LOO r=0.8374 vs baseline T3+G4 at LOO r=0.8340 — a gain of only +0.0034. The spatial features provide a tiny incremental signal on top of the already strong PCA embedding features. The improvement is within noise range for n=30.
+
+FINDINGS:
+  1. **Marginal improvement over baseline**: Best config T3+G4+disp+frac+tig at LOO r=0.8374 vs baseline T3+G4 at LOO r=0.8340 — a gain of only +0.0034. The spatial features provide a tiny incremental signal on top of the already strong PCA embedding features. The improvement is within noise range for n=30.
+
+  2. **Spatial dispersion is a weak feature**: The gland_spatial_dispersion (convex hull ratio) does not cleanly separate classes. GT=3 cases like TCGA-D8-A27N have dispersion=0.9333 (high, suggesting widespread glands) yet are poorly differentiated. GT=1 cases like TCGA-BH-A0DX have dispersion=0.7456 (lower than many GT=3 cases). Convex hull area is too coarse — it captures the extent of the outermost gland patches but says nothing about the density or regularity of gland distribution within that hull.
+
+  3. **Gap increased from 0.0662 to 0.0861**: Adding 3 spatial features (disp, frac, tig) on top of 7 PCA features increased the feature count to 10 and the IS-LOO gap widened. Still well within the safe zone (<0.15) but the model is absorbing more noise. The baseline T3+G4 has a healthier gap profile.
+
+  4. **Accuracy improved for class=1 (80%) but declined for class=3 (60% vs 70% baseline)**: The spatial features helped correctly classify some GT=1 cases but hurt GT=3 classification. Cases like TCGA-D8-A27N (GT=3, pred=2.475) and TCGA-AR-A0U4 (GT=3, pred=2.148) have moderate spatial feature values that pull predictions toward class 2.
+
+  5. **Multiple configs tested; spatial features help marginally only when combined**: T3+G4+disp+frac+tig > T3+G4+disp+tig > T3+G4+disp > T3+G4 baseline, but differences are <0.004 in LOO r.

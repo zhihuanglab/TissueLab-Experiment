@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "CANONICAL_VARIATION = \"candidate_variant_a\"\nFEATURE_NAME = \"ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um\"\nFEATURE_COLUMN = \"ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um\"\n",
+  "stderr": ""
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport json, math\nfiles = list(Path('/data/autoresearch_runs').rglob('results.json'))[:200]\nseen=0\nfor p in files:\n    try:\n        d=json.loads(p.read_text())\n    except Exception:\n        continue\n    if all(k in d for k in ['partial_r','loo_predictive_r','adjusted_score','is_loo_gap']):\n        pr=d['partial_r']; loo=d['loo_predictive_r']; adj=d['adjusted_score']; gap=d['is_loo_gap']; pen=d.get('gap_penalty')\n        if pr is not None and loo is not None and adj is not None and gap is not None:\n            print(p)\n            print('partial',pr,'loo',loo,'adj',adj,'gap',gap,'pen',pen)\n            seen+=1\n            if seen>=8: break\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/data/autoresearch_runs/run_20260410_165752_404655/round_0001/round_0001_worker/results.json\\npartial -0.503750736670613 loo 0.4328185263636196 adj 0.4328185263636196 gap 0.07093221030699337 pen 0.0\\n/data/autoresearch_runs/run_20260410_165752_404655/round_0001/round_0001_worker/sandbox/results.json\\npartial -0.503750736670613 loo 0.4328185263636196 adj 0.4328185263636196 gap 0.07093221030699337 pen 0.0\\n/data/autoresearch_runs/run_20260410_165752_404655/round_0001/round_0001_worker/candidate_bundle\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "['donor_id', 'slide_name', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex_binary', 'ca1_reactive_astro_fraction', 'ca1_reactive_astro_n', 'ca1_astro_lineage_n', 'ca1_region_cells_n']\n  donor_id                  slide_name  slope_zmem0  max_age_vis  braak_numeric  cerad_ordinal  sex_binary  ca1_reactive_astro_fraction  ca1_reactive_astro_n  ca1_astro_lineage_n  ca1_region_cells_n\nH19.33.004 H19.33.004-A12-LFB.svs.zarr    -0.058769         80.0            4.0            0.0         0.0                     0.506868                1107.0               2184.0              9413.0\nH20.33.008 H20.33.008-A12-LFB.svs.zarr    -0.120506         90.0            5.0            2.0         0.0                     0.450909                 620.0               1375.0              5951.0\n",
+  "stderr": ""
+}

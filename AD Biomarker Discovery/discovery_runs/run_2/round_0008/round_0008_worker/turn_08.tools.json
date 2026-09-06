@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- report.md ---'\nsed -n '1,240p' /scratch/report.md\necho\necho '--- results.json ---'\ncat /scratch/results.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- report.md ---\\n## Summary\\nOne sentence: tested the ca1_reactive_hotspot_oligodendrocyte_depletion family, candidate_variant_b won, and its local winner selection score was 0.3976.\\n\\n## Metrics\\nWinning variation: candidate_variant_b (`ca1_reactive_hotspot_oligodendrocyte_depletion__candidate_variant_b`).\\n- IS partial r: 0.3976\\n- Selection score: 0.3976\\n- LOO predictive r: 0.2580\\n- IS-LOO Gap: 0.1396\\n- Penalty: 0.0000\\n- Adjusted Score: 0.2580\\n- Coverage: 1.0000 (35/35)\\n\\nOther ranked variations: \", \"stderr\": \"\"}"
+  }
+]

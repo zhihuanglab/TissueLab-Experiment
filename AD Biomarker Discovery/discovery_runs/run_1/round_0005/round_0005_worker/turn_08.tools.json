@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0, '/shared/lib')\nimport shared_analysis.stats as stats\nimport shared_analysis.artifacts as art\nprint('residualized_loo_predictive_correlation sig:', inspect.signature(stats.residualized_loo_predictive_correlation))\nprint(inspect.getsource(stats.residualized_loo_predictive_correlation)[:5000])\nprint('\\nartifacts funcs:')\nfor name in ['write_donor_feature_table','build_results_payload','write_results_payload','validate_results_payload','coerce_results_payload']:\n    fn=getattr(art,name)\n    print('\\n',name, inspect.signature(fn))\n    try:\n        print(inspect.getsource(fn)[:3500])\n    except Exception as e:\n        print('src err', e)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"residualized_loo_predictive_correlation sig: (df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]') -> 'float'\\ndef residualized_loo_predictive_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n) -> float:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds]).reset_index(drop=True)\\n    preds: list[float] = []\\n    actuals: list[float] = []\\n    for idx in range(len(frame)):\\n        train = \", \"stderr\": \"\"}"
+  }
+]

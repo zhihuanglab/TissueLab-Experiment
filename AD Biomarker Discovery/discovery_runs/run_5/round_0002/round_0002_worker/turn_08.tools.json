@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,160p' /data/autoresearch_runs/run_20260412_150614_9b299b/shared/worker_chains/ca1_pyramidal_reactive_astro_niche/sandbox/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"from __future__ import annotations\\n\\nimport sys\\nimport warnings\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom matplotlib.path import Path as MplPath\\nfrom scipy.spatial import cKDTree\\n\\nSHARED_LIB = Path(\\\"/shared/lib\\\")\\nif str(SHARED_LIB) not in sys.path:\\n    sys.path.insert(0, str(SHARED_LIB))\\n\\nfrom shared_analysis.artifacts import (  # noqa: E402\\n    build_results_payload,\\n    write_donor_feature_table,\\n    write_results_payload,\\n)\\nfrom shared_analysi\", \"stderr\": \"\"}"
+  }
+]

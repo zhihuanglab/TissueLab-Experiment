@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"RESULTS_REQUIRED_FIELDS\" -n /shared/lib/shared_analysis/artifacts.py\nsed -n '1,120p' /shared/lib/shared_analysis/artifacts.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"10:RESULTS_REQUIRED_FIELDS = {\\n290:    missing = sorted(RESULTS_REQUIRED_FIELDS - set(results))\\nfrom __future__ import annotations\\n\\nimport json\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nimport pandas as pd\\n\\n\\nRESULTS_REQUIRED_FIELDS = {\\n    \\\"status\\\",\\n    \\\"feature_name\\\",\\n    \\\"outcome\\\",\\n    \\\"n_total\\\",\\n    \\\"n_analyzable\\\",\\n    \\\"partial_r\\\",\\n    \\\"ci_lo\\\",\\n    \\\"ci_hi\\\",\\n    \\\"p_value\\\",\\n    \\\"loo_predictive_r\\\",\\n    \\\"loo_unstable_count\\\",\\n    \\\"loo_max_shift\\\",\\n    \\\"donor_ids_used\\\",\\n    \\\"covariates\\\",\\n    \", \"stderr\": \"\"}"
+  }
+]

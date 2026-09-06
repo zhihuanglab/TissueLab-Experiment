@@ -1,0 +1,25 @@
+{
+  "worker_name": "round_0001_worker",
+  "round_id": 1,
+  "candidate_id": "ca1-reactive-astro-fraction",
+  "candidate_type": "seed",
+  "accepted_panel": {
+    "members": [],
+    "best_panel_score": null
+  },
+  "scientific_question": "Does enrichment of reactive astrocytes within the CA1 pyramidal field capture memory decline signal beyond age, Braak, CERAD, and sex?",
+  "approach": "From each donor's .svs.zarr, load per-cell centroids and per-cell classification labels. Assign each cell to annotated regions using CustomAnnotations polygons after dividing polygon coordinates by 16 to match cell coordinates. Identify cells labeled Astrocyte or Reactive Astrocyte. For the chosen region gate, compute the donor biomarker as the astrocytic reactivity fraction: Reactive Astrocyte count divided by (Astrocyte count + Reactive Astrocyte count). If the denominator is zero, return NaN; otherwise use the raw fraction for the reported score.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "CA1-only astrocytic reactivity fraction: Reactive Astrocyte / (Astrocyte + Reactive Astrocyte) among cells assigned to CA1."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Pyramidal-field astrocytic reactivity fraction: Reactive Astrocyte / (Astrocyte + Reactive Astrocyte) among cells assigned to CA1, CA2, and CA3 pooled."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use slide_name from training_cohort.csv to find the local zarr under /data. Region polygons are stored at 16x cell coordinates, so divide polygon vertices by 16 before point-in-polygon assignment. All core regions should exist, but handle missing labels or zero astrocytic counts gracefully. This candidate only needs cell labels and region assignment; no embeddings or contour morphology are required.",
+  "rationale": "For a seed round, a count-based region-specific cell-state ratio is a strong, auditable starting point. Reactive astrocytes are explicitly available in the labels, gliosis is biologically linked to hippocampal injury, and CA1 is a memory-critical region that is selectively vulnerable in AD-related degeneration. Using a within-lineage fraction should be more robust than absolute density to slide-to-slide variation in tissue area and segmentation yield, while a small CA1-versus-broader-pyramidal-field sweep tests whether the signal is truly CA1-focused or reflects a wider hippocampal astrocytic response."
+}

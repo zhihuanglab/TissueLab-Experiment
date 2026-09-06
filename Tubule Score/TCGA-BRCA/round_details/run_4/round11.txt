@@ -1,0 +1,98 @@
+Round 11 Details
+================================================================================
+
+Best model: blend_g0.6_gland_PCA20_a0.1_t0.4_tumor_PCA12_a0.1
+Description: Blend 0.6*gland_PCA20_a0.1 + 0.4*tumor_PCA12_a0.1
+LOO Pearson r: 0.6750
+IS Pearson r: 0.9430
+Gap: 0.2680
+Adjusted: 0.6160
+
+Best per category:
+  Gland Embedding: gland_PCA20_a0.1 adj=0.5877 LOO_r=0.6573 gap=0.2893
+  Tumor Embedding: tumor_PCA12_a0.1 adj=0.5203 LOO_r=0.5813 gap=0.2722
+  Combined Embedding: combined_PCA12_a5 adj=0.5635 LOO_r=0.6094 gap=0.2419
+  Blend (2-way): blend_g0.6_gland_PCA20_a0.1_t0.4_tumor_PCA12_a0.1 adj=0.6160 LOO_r=0.6750 gap=0.2680
+  Blend (3-way): blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a5 adj=0.6150 LOO_r=0.6728 gap=0.2655
+
+Top 80 configurations (sorted by adjusted):
+  blend_g0.6_gland_PCA20_a0.1_t0.4_tumor_PCA12_a0.1: adj=0.6160 LOO_r=0.6750 IS_r=0.9430 gap=0.2680 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a0.1_t0.4_tumor_PCA12_a1: adj=0.6159 LOO_r=0.6749 IS_r=0.9430 gap=0.2680 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a0.1_t0.4_tumor_PCA12_a5: adj=0.6158 LOO_r=0.6749 IS_r=0.9430 gap=0.2681 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a1_t0.4_tumor_PCA12_a0.1: adj=0.6158 LOO_r=0.6748 IS_r=0.9429 gap=0.2681 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a0.1_t0.4_tumor_PCA12_a10: adj=0.6157 LOO_r=0.6748 IS_r=0.9430 gap=0.2682 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a1_t0.4_tumor_PCA12_a1: adj=0.6156 LOO_r=0.6747 IS_r=0.9429 gap=0.2682 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a1_t0.4_tumor_PCA12_a5: adj=0.6155 LOO_r=0.6746 IS_r=0.9429 gap=0.2683 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a1_t0.4_tumor_PCA12_a10: adj=0.6154 LOO_r=0.6746 IS_r=0.9429 gap=0.2684 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a0.1_t0.4_tumor_PCA12_a20: adj=0.6154 LOO_r=0.6746 IS_r=0.9430 gap=0.2684 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a1_t0.4_tumor_PCA12_a20: adj=0.6151 LOO_r=0.6744 IS_r=0.9430 gap=0.2686 F1=0.5705 QWK=0.5806
+  blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a5: adj=0.6150 LOO_r=0.6728 IS_r=0.9383 gap=0.2655 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a1: adj=0.6150 LOO_r=0.6728 IS_r=0.9383 gap=0.2655 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a0.1: adj=0.6150 LOO_r=0.6728 IS_r=0.9383 gap=0.2655 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a1_c0.2_combined_PCA12_a5: adj=0.6149 LOO_r=0.6727 IS_r=0.9383 gap=0.2656 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a1_c0.2_combined_PCA12_a1: adj=0.6149 LOO_r=0.6727 IS_r=0.9383 gap=0.2656 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a1_c0.2_combined_PCA12_a0.1: adj=0.6149 LOO_r=0.6727 IS_r=0.9383 gap=0.2656 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a5_c0.2_combined_PCA12_a5: adj=0.6148 LOO_r=0.6726 IS_r=0.9383 gap=0.2657 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a5_c0.2_combined_PCA12_a1: adj=0.6148 LOO_r=0.6726 IS_r=0.9383 gap=0.2657 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a5: adj=0.6148 LOO_r=0.6726 IS_r=0.9382 gap=0.2656 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a1: adj=0.6148 LOO_r=0.6726 IS_r=0.9382 gap=0.2656 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.3_tumor_PCA12_a5_c0.2_combined_PCA12_a0.1: adj=0.6148 LOO_r=0.6726 IS_r=0.9383 gap=0.2657 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a0.1: adj=0.6148 LOO_r=0.6726 IS_r=0.9382 gap=0.2656 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.3_tumor_PCA12_a1_c0.2_combined_PCA12_a5: adj=0.6147 LOO_r=0.6725 IS_r=0.9382 gap=0.2657 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.3_tumor_PCA12_a1_c0.2_combined_PCA12_a1: adj=0.6147 LOO_r=0.6725 IS_r=0.9382 gap=0.2657 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.3_tumor_PCA12_a1_c0.2_combined_PCA12_a0.1: adj=0.6147 LOO_r=0.6725 IS_r=0.9382 gap=0.2657 F1=0.5208 QWK=0.5000
+  blend_g0.6_gland_PCA20_a5_t0.4_tumor_PCA12_a0.1: adj=0.6146 LOO_r=0.6739 IS_r=0.9425 gap=0.2686 F1=0.5705 QWK=0.5806
+  blend3_g0.5_gland_PCA20_a1_t0.3_tumor_PCA12_a5_c0.2_combined_PCA12_a5: adj=0.6145 LOO_r=0.6724 IS_r=0.9382 gap=0.2658 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.3_tumor_PCA12_a5_c0.2_combined_PCA12_a1: adj=0.6145 LOO_r=0.6724 IS_r=0.9382 gap=0.2658 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.3_tumor_PCA12_a5_c0.2_combined_PCA12_a0.1: adj=0.6145 LOO_r=0.6724 IS_r=0.9382 gap=0.2658 F1=0.5208 QWK=0.5000
+  blend_g0.6_gland_PCA20_a5_t0.4_tumor_PCA12_a1: adj=0.6144 LOO_r=0.6738 IS_r=0.9425 gap=0.2687 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a5_t0.4_tumor_PCA12_a5: adj=0.6143 LOO_r=0.6737 IS_r=0.9426 gap=0.2688 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a5_t0.4_tumor_PCA12_a10: adj=0.6142 LOO_r=0.6737 IS_r=0.9426 gap=0.2689 F1=0.5705 QWK=0.5806
+  blend_g0.6_gland_PCA20_a5_t0.4_tumor_PCA12_a20: adj=0.6139 LOO_r=0.6735 IS_r=0.9426 gap=0.2691 F1=0.5349 QWK=0.5333
+  blend_g0.7_gland_PCA20_a0.1_t0.3_tumor_PCA12_a0.1: adj=0.6138 LOO_r=0.6749 IS_r=0.9472 gap=0.2722 F1=0.5349 QWK=0.5333
+  blend_g0.7_gland_PCA20_a0.1_t0.3_tumor_PCA12_a1: adj=0.6137 LOO_r=0.6749 IS_r=0.9472 gap=0.2723 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a5_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a5: adj=0.6137 LOO_r=0.6717 IS_r=0.9378 gap=0.2661 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a5_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a1: adj=0.6137 LOO_r=0.6717 IS_r=0.9379 gap=0.2661 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a5_t0.3_tumor_PCA12_a0.1_c0.2_combined_PCA12_a0.1: adj=0.6136 LOO_r=0.6717 IS_r=0.9379 gap=0.2661 F1=0.5208 QWK=0.5000
+  blend_g0.5_gland_PCA20_a0.1_t0.5_tumor_PCA12_a0.1: adj=0.6136 LOO_r=0.6711 IS_r=0.9361 gap=0.2650 F1=0.5349 QWK=0.5333
+  blend_g0.7_gland_PCA20_a0.1_t0.3_tumor_PCA12_a5: adj=0.6136 LOO_r=0.6748 IS_r=0.9472 gap=0.2724 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a5_t0.3_tumor_PCA12_a1_c0.2_combined_PCA12_a5: adj=0.6136 LOO_r=0.6717 IS_r=0.9378 gap=0.2662 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a5_t0.3_tumor_PCA12_a1_c0.2_combined_PCA12_a1: adj=0.6136 LOO_r=0.6717 IS_r=0.9379 gap=0.2662 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a5_t0.3_tumor_PCA12_a1_c0.2_combined_PCA12_a0.1: adj=0.6135 LOO_r=0.6717 IS_r=0.9379 gap=0.2662 F1=0.5208 QWK=0.5000
+  blend_g0.7_gland_PCA20_a1_t0.3_tumor_PCA12_a0.1: adj=0.6135 LOO_r=0.6747 IS_r=0.9471 gap=0.2724 F1=0.5349 QWK=0.5333
+  blend_g0.7_gland_PCA20_a0.1_t0.3_tumor_PCA12_a10: adj=0.6135 LOO_r=0.6747 IS_r=0.9472 gap=0.2724 F1=0.5349 QWK=0.5333
+  blend_g0.5_gland_PCA20_a0.1_t0.5_tumor_PCA12_a1: adj=0.6135 LOO_r=0.6710 IS_r=0.9361 gap=0.2651 F1=0.5349 QWK=0.5333
+  blend_g0.7_gland_PCA20_a1_t0.3_tumor_PCA12_a1: adj=0.6135 LOO_r=0.6747 IS_r=0.9471 gap=0.2724 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a5_t0.3_tumor_PCA12_a5_c0.2_combined_PCA12_a5: adj=0.6134 LOO_r=0.6716 IS_r=0.9378 gap=0.2663 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a5_t0.3_tumor_PCA12_a5_c0.2_combined_PCA12_a1: adj=0.6134 LOO_r=0.6716 IS_r=0.9379 gap=0.2663 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a5_t0.3_tumor_PCA12_a5_c0.2_combined_PCA12_a0.1: adj=0.6134 LOO_r=0.6716 IS_r=0.9379 gap=0.2663 F1=0.5208 QWK=0.5000
+  blend_g0.5_gland_PCA20_a1_t0.5_tumor_PCA12_a0.1: adj=0.6134 LOO_r=0.6709 IS_r=0.9360 gap=0.2651 F1=0.5349 QWK=0.5333
+  blend_g0.7_gland_PCA20_a1_t0.3_tumor_PCA12_a5: adj=0.6133 LOO_r=0.6746 IS_r=0.9471 gap=0.2725 F1=0.5349 QWK=0.5333
+  blend_g0.5_gland_PCA20_a0.1_t0.5_tumor_PCA12_a5: adj=0.6133 LOO_r=0.6709 IS_r=0.9361 gap=0.2652 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a0.1_t0.2_tumor_PCA12_a0.1_c0.3_combined_PCA12_a5: adj=0.6133 LOO_r=0.6715 IS_r=0.9379 gap=0.2664 F1=0.5208 QWK=0.5000
+  blend_g0.7_gland_PCA20_a0.1_t0.3_tumor_PCA12_a20: adj=0.6133 LOO_r=0.6746 IS_r=0.9472 gap=0.2726 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a0.1_t0.2_tumor_PCA12_a0.1_c0.3_combined_PCA12_a1: adj=0.6133 LOO_r=0.6715 IS_r=0.9379 gap=0.2664 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.2_tumor_PCA12_a0.1_c0.3_combined_PCA12_a0.1: adj=0.6132 LOO_r=0.6715 IS_r=0.9379 gap=0.2665 F1=0.5208 QWK=0.5000
+  blend_g0.7_gland_PCA20_a1_t0.3_tumor_PCA12_a10: adj=0.6132 LOO_r=0.6745 IS_r=0.9471 gap=0.2726 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a0.1_t0.2_tumor_PCA12_a1_c0.3_combined_PCA12_a5: adj=0.6132 LOO_r=0.6715 IS_r=0.9379 gap=0.2665 F1=0.5208 QWK=0.5000
+  blend_g0.5_gland_PCA20_a1_t0.5_tumor_PCA12_a1: adj=0.6132 LOO_r=0.6708 IS_r=0.9360 gap=0.2652 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a0.1_t0.2_tumor_PCA12_a1_c0.3_combined_PCA12_a1: adj=0.6132 LOO_r=0.6714 IS_r=0.9379 gap=0.2665 F1=0.5208 QWK=0.5000
+  blend_g0.5_gland_PCA20_a0.1_t0.5_tumor_PCA12_a10: adj=0.6132 LOO_r=0.6708 IS_r=0.9361 gap=0.2653 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a0.1_t0.2_tumor_PCA12_a1_c0.3_combined_PCA12_a0.1: adj=0.6132 LOO_r=0.6714 IS_r=0.9379 gap=0.2665 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.2_tumor_PCA12_a5_c0.3_combined_PCA12_a5: adj=0.6131 LOO_r=0.6714 IS_r=0.9379 gap=0.2665 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a0.1_t0.2_tumor_PCA12_a5_c0.3_combined_PCA12_a1: adj=0.6131 LOO_r=0.6714 IS_r=0.9379 gap=0.2665 F1=0.5208 QWK=0.5000
+  blend_g0.6_gland_PCA20_a10_t0.4_tumor_PCA12_a0.1: adj=0.6131 LOO_r=0.6728 IS_r=0.9421 gap=0.2693 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a0.1_t0.2_tumor_PCA12_a5_c0.3_combined_PCA12_a0.1: adj=0.6131 LOO_r=0.6714 IS_r=0.9379 gap=0.2666 F1=0.5208 QWK=0.5000
+  blend_g0.5_gland_PCA20_a1_t0.5_tumor_PCA12_a5: adj=0.6131 LOO_r=0.6707 IS_r=0.9360 gap=0.2653 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a1_t0.2_tumor_PCA12_a0.1_c0.3_combined_PCA12_a5: adj=0.6130 LOO_r=0.6713 IS_r=0.9378 gap=0.2665 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.2_tumor_PCA12_a0.1_c0.3_combined_PCA12_a1: adj=0.6130 LOO_r=0.6713 IS_r=0.9378 gap=0.2665 F1=0.5208 QWK=0.5000
+  blend_g0.7_gland_PCA20_a1_t0.3_tumor_PCA12_a20: adj=0.6130 LOO_r=0.6744 IS_r=0.9471 gap=0.2727 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a1_t0.2_tumor_PCA12_a0.1_c0.3_combined_PCA12_a0.1: adj=0.6130 LOO_r=0.6713 IS_r=0.9379 gap=0.2666 F1=0.5208 QWK=0.5000
+  blend_g0.6_gland_PCA20_a10_t0.4_tumor_PCA12_a1: adj=0.6130 LOO_r=0.6727 IS_r=0.9421 gap=0.2694 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a1_t0.2_tumor_PCA12_a1_c0.3_combined_PCA12_a5: adj=0.6130 LOO_r=0.6713 IS_r=0.9378 gap=0.2666 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.2_tumor_PCA12_a1_c0.3_combined_PCA12_a1: adj=0.6130 LOO_r=0.6713 IS_r=0.9378 gap=0.2666 F1=0.5208 QWK=0.5000
+  blend_g0.5_gland_PCA20_a1_t0.5_tumor_PCA12_a10: adj=0.6129 LOO_r=0.6706 IS_r=0.9361 gap=0.2654 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a1_t0.2_tumor_PCA12_a1_c0.3_combined_PCA12_a0.1: adj=0.6129 LOO_r=0.6712 IS_r=0.9379 gap=0.2666 F1=0.5208 QWK=0.5000
+  blend_g0.5_gland_PCA20_a0.1_t0.5_tumor_PCA12_a20: adj=0.6129 LOO_r=0.6706 IS_r=0.9362 gap=0.2655 F1=0.5349 QWK=0.5333
+  blend3_g0.5_gland_PCA20_a1_t0.2_tumor_PCA12_a5_c0.3_combined_PCA12_a5: adj=0.6129 LOO_r=0.6712 IS_r=0.9378 gap=0.2666 F1=0.5208 QWK=0.5000
+  blend3_g0.5_gland_PCA20_a1_t0.2_tumor_PCA12_a5_c0.3_combined_PCA12_a1: adj=0.6129 LOO_r=0.6712 IS_r=0.9378 gap=0.2666 F1=0.5208 QWK=0.5000

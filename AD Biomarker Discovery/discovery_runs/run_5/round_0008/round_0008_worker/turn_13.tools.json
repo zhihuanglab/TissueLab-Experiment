@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: CA1 pyramidal neuron reactive-astrocyte plus lymphocyte triad fraction\\nBEST VARIATION: candidate_variant_c\\n  IS partial r:      0.1604\\n  Selection score:   0.1604\\n  LOO predictive r:  0.0567  (diagnostic)\\n  IS-LOO Gap:        0.1037  (penalty=0.1037)\\n  Adjusted Score:    0.0567\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  candidate_variant_c  0.1604  0.1604  0.0567\\n  candidate_variant_a  0.1327  0.1327  0.0586\\n  candidate_variant_b  0.00\", \"stderr\": \"\"}"
+  }
+]

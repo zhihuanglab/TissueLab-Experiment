@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import build_cell_table\nimport shared_analysis.sea_ad_lfb as m\nprint(inspect.getsource(m.build_cell_table))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"def build_cell_table(\\n    zarr_path: str | Path,\\n    *,\\n    include_regions: bool = True,\\n    include_geometry: bool = False,\\n    scale: float = 16.0,\\n) -> pd.DataFrame:\\n    centroids = load_centroids(zarr_path)\\n    class_ids = load_class_ids(zarr_path)\\n    class_lookup = load_class_lookup(zarr_path)\\n    frame = pd.DataFrame(\\n        {\\n            \\\"cell_index\\\": np.arange(len(centroids)),\\n            \\\"x\\\": centroids[:, 0],\\n            \\\"y\\\": centroids[:, 1],\\n            \\\"class_id\\\": class_ids,\\n      \", \"stderr\": \"\"}"
+  }
+]

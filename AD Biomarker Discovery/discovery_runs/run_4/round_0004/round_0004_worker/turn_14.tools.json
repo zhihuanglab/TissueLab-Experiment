@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- results.json ---'\npython - <<'PY'\nimport json, pathlib\np=pathlib.Path('/scratch/results.json')\nobj=json.loads(p.read_text())\nfor k in ['best_variation','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score']:\n    print(k, obj.get(k))\nprint('ranked variations n=', len(obj.get('ranked_variations', [])))\nPY\necho '--- report.md ---'\nsed -n '1,220p' /scratch/report.md\necho '--- result_state.json ---'\ncat /scratch/result_state.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- results.json ---\\nbest_variation median_log_area_shift\\nfeature_column ca1_reactive_astrocyte_hypertrophy_median_log_area_shift\\npartial_r -0.35878829326188655\\nselection_score 0.35878829326188655\\nloo_predictive_r 0.22199290506804284\\nis_loo_gap 0.1367953881938437\\nadjusted_score 0.22199290506804284\\nranked variations n= 2\\n--- report.md ---\\n## Summary\\nTested the ca1_reactive_astrocyte_hypertrophy family in CA1; median_log_area_shift won with selection score 0.3588.\\n\\n## Metrics\\nWinner `median_log_ar\", \"stderr\": \"\"}"
+  }
+]

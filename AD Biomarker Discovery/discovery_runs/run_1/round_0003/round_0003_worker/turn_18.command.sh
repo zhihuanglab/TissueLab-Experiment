@@ -1,0 +1,2 @@
+set -e
+grep -n 'CANONICAL_VARIATION\|CANONICAL_RADIUS_PX\|FEATURE_NAME =\|FEATURE_COLUMN =' /scratch/result.py

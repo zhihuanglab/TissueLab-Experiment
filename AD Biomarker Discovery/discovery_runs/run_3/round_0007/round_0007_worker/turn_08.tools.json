@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0, '/shared/lib')\nfrom shared_analysis.sea_ad_lfb import assign_centroids_to_regions\nprint(inspect.getsource(assign_centroids_to_regions))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"def assign_centroids_to_regions(\\n    centroids: np.ndarray,\\n    region_polygons: dict[str, list[np.ndarray]],\\n) -> np.ndarray:\\n    centroids = np.asarray(centroids, dtype=np.float32)\\n    labels = np.full(len(centroids), \\\"\\\", dtype=object)\\n    for region, polygons in region_polygons.items():\\n        region_mask = np.zeros(len(centroids), dtype=bool)\\n        for polygon in polygons:\\n            if len(polygon) < 3:\\n                continue\\n            region_mask |= MplPath(polygon, closed=True).co\", \"stderr\": \"\"}"
+  }
+]

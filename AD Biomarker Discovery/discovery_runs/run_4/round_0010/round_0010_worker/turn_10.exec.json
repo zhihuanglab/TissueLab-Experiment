@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "wrote /scratch/report.md\n",
+  "stderr": ""
+}

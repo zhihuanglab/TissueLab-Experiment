@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\ngrep -R \"is_loo_gap\" -n /shared/lib /shared/templates 2>/dev/null || true\ngrep -R \"Adjusted Score\" -n /shared/lib /shared/templates 2>/dev/null || true",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/shared/lib/shared_analysis/artifacts.py:222:        \\\"is_loo_gap\\\": _coalesce_result_values(\\n/shared/lib/shared_analysis/artifacts.py:223:            raw.get(\\\"is_loo_gap\\\"),\\n/shared/lib/shared_analysis/artifacts.py:224:            metrics.get(\\\"is_loo_gap\\\"),\\n/shared/lib/shared_analysis/artifacts.py:266:            \\\"is_loo_gap\\\": coerced[\\\"is_loo_gap\\\"],\\n/shared/templates/worker_embedding_mechanistic_template.py:188:    results[\\\"is_loo_gap\\\"] = gap\\n/shared/templates/worker_embedding_mechanistic_template\", \"stderr\": \"\"}"
+  }
+]

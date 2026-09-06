@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.append('/shared/lib')\nfrom shared_analysis import build_cell_table, load_region_polygons, load_training_cohort\nprint('build_cell_table signature:', inspect.signature(build_cell_table))\nprint(inspect.getsource(build_cell_table)[:5000])\nprint('\\nload_region_polygons signature:', inspect.signature(load_region_polygons))\nprint(inspect.getsource(load_region_polygons)[:3000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"build_cell_table signature: (zarr_path: 'str | Path', *, include_regions: 'bool' = True, include_geometry: 'bool' = False, scale: 'float' = 16.0) -> 'pd.DataFrame'\\ndef build_cell_table(\\n    zarr_path: str | Path,\\n    *,\\n    include_regions: bool = True,\\n    include_geometry: bool = False,\\n    scale: float = 16.0,\\n) -> pd.DataFrame:\\n    centroids = load_centroids(zarr_path)\\n    class_ids = load_class_ids(zarr_path)\\n    class_lookup = load_class_lookup(zarr_path)\\n    frame = pd.DataFrame(\\n        \", \"stderr\": \"\"}"
+  }
+]

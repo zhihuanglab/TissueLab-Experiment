@@ -1,0 +1,59 @@
+{
+  "worker_name": "round_0004_worker",
+  "round_id": 4,
+  "candidate_id": "ca1-reactive-astrocyte-hypertrophy",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_burden__ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_enrichment__reactive_over_astroglial",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_niche__reactive_over_astroglial_neighbored_pyramidal_fraction_r70px",
+        "round_id": 3,
+        "panel_candidate_score": 0.5076,
+        "delta_panel_score": 0.0005,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5076
+  },
+  "scientific_question": "Does hypertrophy of CA1 reactive astrocytes, relative to homeostatic CA1 astrocytes, capture a reactive-state severity signal for memory decline beyond existing CA1 cell-composition markers?",
+  "approach": "For each donor, load centroids, contours, and cell-type labels from the slide Zarr; assign cells to CA1 using CustomAnnotations polygons after dividing polygon coordinates by 16; select CA1 cells labeled 'Reactive Astrocyte' and 'Astrocyte'; compute per-cell contour area with a centered-contour shoelace formula; transform areas with log1p; then compute a donor-level hypertrophy contrast as the reactive-astrocyte summary minus the astrocyte summary within CA1.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Baseline CA1 reactive astrocyte hypertrophy contrast: median(log1p(area_px2)) of CA1 Reactive Astrocytes minus median(log1p(area_px2)) of CA1 Astrocytes."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Upper-tail CA1 reactive astrocyte hypertrophy contrast: 75th percentile of log1p(area_px2) in CA1 Reactive Astrocytes minus 75th percentile of log1p(area_px2) in CA1 Astrocytes."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use /data/training_cohort.csv to map donor_id to slide_name, then open Path('/data') / slide_name. Region polygons are stored at 16x cell coordinates, so divide annotation vertices by 16 before point-in-polygon region assignment. Center each contour before area calculation to avoid float32 cancellation. Handle multiple CA1 polygons if present. If either CA1 astrocyte class has very low count, return NaN rather than forcing an unstable estimate; a minimum of about 20 cells per class is reasonable.",
+  "rationale": "The accepted panel already shows that CA1 pyramidal loss and CA1 reactive astrocyte enrichment are strong signals, while the added pyramidal-adjacent reactive niche gave only a minimal gain, suggesting the reactive astrocyte axis is real but count-based localization may now be near saturation. The next efficient test is a simple morphology readout within the same biology: whether CA1 reactive astrocytes are not just more frequent, but more hypertrophic than baseline astrocytes. This is mechanistically interpretable, easy to audit from contours, and could either add new state information or replace the weaker round-3 niche feature with a cleaner activation marker."
+}

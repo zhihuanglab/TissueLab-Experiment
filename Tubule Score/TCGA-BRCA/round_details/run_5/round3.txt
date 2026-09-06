@@ -1,0 +1,67 @@
+Round 3 Details
+============================================================
+
+HYPOTHESIS: Mean-pooled gland embeddings capture morphological
+differences between true tubules and pseudo-glandular patterns.
+Also test minimal 2-feature handcrafted model.
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  A_single_gland_patch_fraction_ridge1: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  A_both_ridge10: adjusted=0.2020 (LOO r=0.2220, IS r=0.4118, gap=0.1899) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  A_both_enet: adjusted=0.1875 (LOO r=0.2135, IS r=0.4156, gap=0.2020) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  A_both_ridge1: adjusted=0.1849 (LOO r=0.2120, IS r=0.4161, gap=0.2041) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  A_single_gland_in_tumor_count_ratio_ridge1: adjusted=0.0401 (LOO r=0.0763, IS r=0.2987, gap=0.2223) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  B_gland_emb_ridge100: adjusted=-1.0000 (LOO r=0.5797, IS r=0.9871, gap=0.4074) [F1=0.4873 QWK=0.4000 Acc=0.5000] DISQUALIFIED
+  B_gland_emb_ridge500: adjusted=-1.0000 (LOO r=0.5727, IS r=0.9409, gap=0.3681) [F1=0.3704 QWK=0.2308 Acc=0.4333] DISQUALIFIED
+  B_gland_emb_ridge1000: adjusted=-1.0000 (LOO r=0.5347, IS r=0.9067, gap=0.3720) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  B_gland_emb_pls1: adjusted=-1.0000 (LOO r=0.4363, IS r=0.7785, gap=0.3422) [F1=0.4909 QWK=0.3704 Acc=0.5333] DISQUALIFIED
+  B_gland_emb_pls2: adjusted=-1.0000 (LOO r=0.5459, IS r=0.8971, gap=0.3512) [F1=0.4444 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  B_gland_emb_pls3: adjusted=-1.0000 (LOO r=0.5748, IS r=0.9297, gap=0.3548) [F1=0.4717 QWK=0.4242 Acc=0.4667] DISQUALIFIED
+  C_tg_emb_ridge100: adjusted=-1.0000 (LOO r=0.5522, IS r=0.9872, gap=0.4350) [F1=0.5356 QWK=0.4848 Acc=0.5333] DISQUALIFIED
+  C_tg_emb_ridge500: adjusted=-1.0000 (LOO r=0.5679, IS r=0.9427, gap=0.3748) [F1=0.4747 QWK=0.3571 Acc=0.5000] DISQUALIFIED
+  C_tg_emb_ridge1000: adjusted=-1.0000 (LOO r=0.5507, IS r=0.9144, gap=0.3638) [F1=0.3939 QWK=0.2400 Acc=0.4667] DISQUALIFIED
+  C_tg_emb_pls1: adjusted=-1.0000 (LOO r=0.5181, IS r=0.8235, gap=0.3054) [F1=0.5141 QWK=0.4138 Acc=0.5333] DISQUALIFIED
+  C_tg_emb_pls2: adjusted=-1.0000 (LOO r=0.5672, IS r=0.9026, gap=0.3354) [F1=0.5513 QWK=0.3871 Acc=0.5667] DISQUALIFIED
+  C_tg_emb_pls3: adjusted=-1.0000 (LOO r=0.5649, IS r=0.9458, gap=0.3809) [F1=0.5324 QWK=0.4118 Acc=0.5333] DISQUALIFIED
+  D_hc+gland_emb_pls1: adjusted=-1.0000 (LOO r=0.4366, IS r=0.7776, gap=0.3410) [F1=0.4909 QWK=0.3704 Acc=0.5333] DISQUALIFIED
+  D_hc+gland_emb_pls2: adjusted=-1.0000 (LOO r=0.5446, IS r=0.8966, gap=0.3520) [F1=0.4444 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  D_hc+gland_emb_pls3: adjusted=-1.0000 (LOO r=0.5741, IS r=0.9296, gap=0.3554) [F1=0.4717 QWK=0.4242 Acc=0.4667] DISQUALIFIED
+  D_hc+gland_emb_ridge500: adjusted=-1.0000 (LOO r=0.5727, IS r=0.9409, gap=0.3682) [F1=0.3704 QWK=0.2308 Acc=0.4333] DISQUALIFIED
+  D_hc+gland_emb_ridge1000: adjusted=-1.0000 (LOO r=0.5348, IS r=0.9068, gap=0.3720) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  D_hc+tg_emb_pls1: adjusted=-1.0000 (LOO r=0.5194, IS r=0.8241, gap=0.3047) [F1=0.5141 QWK=0.4138 Acc=0.5333] DISQUALIFIED
+  D_hc+tg_emb_pls2: adjusted=-1.0000 (LOO r=0.5680, IS r=0.9031, gap=0.3351) [F1=0.5513 QWK=0.3871 Acc=0.5667] DISQUALIFIED
+  D_hc+tg_emb_pls3: adjusted=-1.0000 (LOO r=0.5649, IS r=0.9460, gap=0.3810) [F1=0.5324 QWK=0.4118 Acc=0.5333] DISQUALIFIED
+  D_hc+tg_emb_ridge500: adjusted=-1.0000 (LOO r=0.5685, IS r=0.9429, gap=0.3745) [F1=0.4747 QWK=0.3571 Acc=0.5000] DISQUALIFIED
+  D_hc+tg_emb_ridge1000: adjusted=-1.0000 (LOO r=0.5514, IS r=0.9146, gap=0.3633) [F1=0.3939 QWK=0.2400 Acc=0.4667] DISQUALIFIED
+
+BEST MODEL: A_single_gland_patch_fraction_ridge1
+  Pearson r:      IS=0.4155  LOO=0.3028
+  IS-LOO Gap:     0.1126 (penalty=0.0000)
+  Adjusted Score: 0.3028
+  Macro F1:       0.1772
+  QWK:            0.0833
+  Accuracy:       0.2667
+
+ERRORS:
+  TCGA-A2-A0CS: GT=2 -> Pred=1 (continuous=1.428)
+  TCGA-A7-A0D9: GT=2 -> Pred=1 (continuous=1.452)
+  TCGA-A7-A3IY: GT=1 -> Pred=2 (continuous=1.556)
+  TCGA-AC-A23E: GT=1 -> Pred=2 (continuous=1.677)
+  TCGA-AC-A3TN: GT=1 -> Pred=2 (continuous=2.054)
+  TCGA-AR-A0U4: GT=3 -> Pred=2 (continuous=2.282)
+  TCGA-AR-A1AR: GT=3 -> Pred=2 (continuous=2.320)
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (continuous=2.172)
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (continuous=2.196)
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (continuous=2.089)
+  TCGA-BH-A0DX: GT=1 -> Pred=2 (continuous=2.358)
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (continuous=1.986)
+  TCGA-D8-A1XT: GT=3 -> Pred=2 (continuous=2.100)
+  TCGA-D8-A27N: GT=3 -> Pred=2 (continuous=1.856)
+  TCGA-D8-A27P: GT=1 -> Pred=2 (continuous=2.106)
+  TCGA-D8-A4Z1: GT=3 -> Pred=2 (continuous=2.231)
+  TCGA-D8-A73X: GT=1 -> Pred=2 (continuous=1.820)
+  TCGA-E2-A14W: GT=3 -> Pred=2 (continuous=2.267)
+  TCGA-E2-A1B1: GT=1 -> Pred=2 (continuous=2.186)
+  TCGA-E2-A1IG: GT=2 -> Pred=1 (continuous=1.499)
+  TCGA-EW-A1PH: GT=3 -> Pred=2 (continuous=1.963)
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (continuous=2.329)

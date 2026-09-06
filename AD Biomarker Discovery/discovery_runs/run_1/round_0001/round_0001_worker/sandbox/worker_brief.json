@@ -1,0 +1,25 @@
+{
+  "worker_name": "round_0001_worker",
+  "round_id": 1,
+  "candidate_id": "ca1-pyramidal-fraction",
+  "candidate_type": "seed",
+  "accepted_panel": {
+    "members": [],
+    "best_panel_score": null
+  },
+  "scientific_question": "Does lower representation of CA1 pyramidal neurons mark donor-level memory decline beyond age, sex, Braak stage, and CERAD burden?",
+  "approach": "Assign each segmented cell centroid to annotated regions, then compute a donor-level score as the proportion of classified cells in the target region labeled `Pyramidal Neuron`: n(Pyramidal Neuron in region) / n(all classified cells in region). Keep the operator fixed and test a small localization sweep by using CA1 alone versus the union of CA1 and CA2. If the denominator is too small for a stable proportion, return NaN.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "CA1 pyramidal neuron fraction: count of `Pyramidal Neuron` cells divided by all classified cells assigned to CA1."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "CA1_CA2 pyramidal neuron fraction: count of `Pyramidal Neuron` cells divided by all classified cells assigned to the union of CA1 and CA2."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use `training_cohort.csv` to map donor_id to `slide_name`, then open the paired `.svs.zarr`. Assign regions from `SegmentationNode/centroids` using `CustomAnnotations` polygons after dividing annotation coordinates by 16. If a region has multiple polygons, use their union. Read cell-type labels from `ClassificationNode`; exclude unlabeled or unknown cells from both numerator and denominator. Handle low-count regions gracefully, e.g. return NaN if fewer than about 100 classified cells fall in the target region.",
+  "rationale": "With an empty panel, the strongest seed is a simple, high-coverage hippocampal feature tied directly to memory circuitry and known selective vulnerability. CA1 is present on every slide, pyramidal neurons are a core interpretable cell class, and a CA1-focused neuronal proportion should capture local neuronal depletion or replacement by non-neuronal cells without relying on fragile image-derived modeling."
+}

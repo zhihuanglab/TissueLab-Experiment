@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- context_bundle.json ---'\npython - <<'PY'\nimport json\nwith open('/scratch/context_bundle.json') as f:\n    obj=json.load(f)\nprint(json.dumps(obj, indent=2)[:20000])\nPY\necho\necho '--- program.md ---'\nsed -n '1,220p' /scratch/program.md\necho\necho '--- existing result.py template ---'\nsed -n '1,260p' /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"uron. This stays on the strongest lead, changes only the feature summary, and could either add new signal or replace one of the more redundant cuff-threshold members with a cleaner severity readout.\\\"\\n  },\\n  \\\"runtime_manifest\\\": {\\n    \\\"runtime_version\\\": 1,\\n    \\\"generated_at_utc\\\": \\\"2026-04-21T04:11:19.595781+00:00\\\",\\n    \\\"shared_root\\\": \\\"/shared\\\",\\n    \\\"python_import_root\\\": \\\"/shared/lib\\\",\\n    \\\"template_path\\\": \\\"/shared/templates/worker_analysis_template.py\\\",\\n    \\\"template_paths\\\": {\\n      \\\"generic\\\": \\\"/s\", \"stderr\": \"\"}"
+  }
+]

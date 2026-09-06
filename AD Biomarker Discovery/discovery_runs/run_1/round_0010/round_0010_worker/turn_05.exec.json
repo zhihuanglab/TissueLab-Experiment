@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "/shared\n/shared/cache\n/shared/cache/region_polygons\n/shared/lib\n/shared/lib/shared_analysis\n/shared/lib/shared_analysis/__pycache__\n/shared/templates\n/shared/templates/__pycache__\n",
+  "stderr": ""
+}

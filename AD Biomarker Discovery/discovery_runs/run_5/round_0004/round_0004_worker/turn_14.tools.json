@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport pandas as pd, json\ncohort=pd.read_csv('/data/training_cohort.csv')\nprint(cohort.columns.tolist())\nres=json.load(open('/scratch/results.json'))\nbest=res['ranked_variations'][0]\ndf=pd.DataFrame(best['per_donor_loo'])\navail=[c for c in ['donor_id','sex','braak_numeric','cerad_ordinal','braak_label','cerad_label','overall_ad_neuropath_change','cogdx','ADNC'] if c in cohort.columns]\nmerged=df.merge(cohort[avail], on='donor_id', how='left')\nprint('\\nTop abs errors:')\nprint(merged.sort_values('abs_error', ascending=False).head(10).to_string(index=False))\nprint('\\nUnstable donors', best['unstable_donors'])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex']\\n\\nTop abs errors:\\n  donor_id   outcome  predicted  predicted_residual  actual_residual  ca1_peripyramidal_reactive_astro_area_median_30um_um2  abs_error    sex  braak_numeric  cerad_ordinal\\nH20.33.018 -0.304214  -0.106578           -0.009846        -0.207483                                              25.474759   0.197636 Female              6              3\\nH20.33.038 -0.237209  -0.11\", \"stderr\": \"\"}"
+  }
+]

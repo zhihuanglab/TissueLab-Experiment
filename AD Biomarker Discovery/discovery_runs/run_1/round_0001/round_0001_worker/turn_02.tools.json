@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nwith open('/scratch/context_bundle.json') as f:\n    data=json.load(f)\nprint('keys:', sorted(data.keys()))\nfor k in ['worker_brief','current_panel','round_plan','candidate','hypothesis','accepted_panel','prior_rounds','brief']:\n    if k in data:\n        print(f'\\n--- {k} ---')\n        import pprint; pprint.pp(data[k])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"keys: ['cohort_summary', 'dataset_guide_excerpt', 'runtime_manifest', 'runtime_quickstart_excerpt', 'slide_manifest_head', 'worker_brief']\\n\\n--- worker_brief ---\\n{'worker_name': 'round_0001_worker',\\n 'round_id': 1,\\n 'candidate_id': 'ca1-pyramidal-fraction',\\n 'candidate_type': 'seed',\\n 'accepted_panel': {'members': [], 'best_panel_score': None},\\n 'scientific_question': 'Does lower representation of CA1 pyramidal neurons '\\n                        'mark donor-level memory decline beyond age, sex, '\\n\", \"stderr\": \"\"}"
+  }
+]

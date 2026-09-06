@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- rewritten canonical constants ---'\ngrep -n \"AUTO_\" /scratch/result.py\necho\necho '--- report.md ---'\nsed -n '1,240p' /scratch/report.md\necho\necho '--- results.json head ---'\nsed -n '1,220p' /scratch/results.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- rewritten canonical constants ---\\n66:CANONICAL_VARIATION = \\\"mean_total_reactive_area_r35um\\\"  # AUTO_CANONICAL_VARIATION\\n67:FEATURE_NAME = \\\"ca1_pyramidal_mean_total_reactive_area_r35um\\\"  # AUTO_FEATURE_NAME\\n68:FEATURE_COLUMN = \\\"ca1_pyramidal_mean_total_reactive_area_r35um\\\"  # AUTO_FEATURE_COLUMN\\n395:        r'CANONICAL_VARIATION = \\\"[^\\\"]+\\\"  # AUTO_CANONICAL_VARIATION',\\n396:        f'CANONICAL_VARIATION = \\\"mean_total_reactive_area_r35um\\\"  # AUTO_CANONICAL_VARIATION',\\n400:        r'FEATURE_NAME \", \"stderr\": \"\"}"
+  }
+]

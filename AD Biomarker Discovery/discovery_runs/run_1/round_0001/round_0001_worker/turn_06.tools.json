@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho 'shared_analysis package files:'\nfind /shared/lib/shared_analysis -maxdepth 2 -type f | sed -n '1,80p'\necho '--- __init__.py ---'\nsed -n '1,200p' /shared/lib/shared_analysis/__init__.py\necho '--- maybe cell table implementation file names ---'\ngrep -R \"def build_cell_table\" -n /shared/lib/shared_analysis",
+    "output_preview": "{\"exit_code\": 2, \"stdout\": \"shared_analysis package files:\\n/shared/lib/shared_analysis/__init__.py\\n/shared/lib/shared_analysis/.___init__.py\\n/shared/lib/shared_analysis/context.py\\n/shared/lib/shared_analysis/._context.py\\n/shared/lib/shared_analysis/stats.py\\n/shared/lib/shared_analysis/._stats.py\\n/shared/lib/shared_analysis/pca.py\\n/shared/lib/shared_analysis/._pca.py\\n/shared/lib/shared_analysis/artifacts.py\\n/shared/lib/shared_analysis/._artifacts.py\\n/shared/lib/shared_analysis/embedding_mechanistic.py\\n/shared/lib/shared_ana\", \"stderr\": \"grep: /shared/lib/shared_analysis/.___init__.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._context.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._stats.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._pca.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._artifacts.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._embedding_mechanistic.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._sea_ad_lfb.py: Operat\"}"
+  }
+]

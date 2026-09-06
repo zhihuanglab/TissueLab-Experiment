@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfind /data/autoresearch_runs -maxdepth 4 \\( -name 'results.json' -o -name 'report.md' \\) | sed -n '1,20p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/results.json\\n/data/autoresearch_runs/run_20260410_155640_434a75/round_0001/round_0001_worker/results.json\\n/data/autoresearch_runs/run_20260410_155640_434a75/round_0001/round_0001_worker/report.md\\n/data/autoresearch_runs/run_20260410_161908_46fb23/round_0001/round_0001_worker/results.json\\n/data/autoresearch_runs/run_20260410_161908_46fb23/round_0001/round_0001_worker/report.md\\n/data/autoresearch_runs/run_20260410_1619\", \"stderr\": \"\"}"
+  }
+]

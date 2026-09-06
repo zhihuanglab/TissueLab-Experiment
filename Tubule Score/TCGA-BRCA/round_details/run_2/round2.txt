@@ -1,0 +1,24 @@
+Round 2 Details
+================================================================================
+
+All Configurations (sorted by adjusted):
+  top2__Ridge_a10: adj=0.3340 LOO_r=0.3340 IS_r=0.4769 gap=0.1428 F1=0.2865 QWK=0.1818
+  bp1_musk__Ridge_a10: adj=0.3340 LOO_r=0.3340 IS_r=0.4769 gap=0.1428 F1=0.2865 QWK=0.1818
+  bp1_musk__Ridge_a1: adj=0.3327 LOO_r=0.3327 IS_r=0.4774 gap=0.1448 F1=0.2692 QWK=0.0833
+  top2__Ridge_a1: adj=0.3327 LOO_r=0.3327 IS_r=0.4774 gap=0.1448 F1=0.2692 QWK=0.0833
+  top3__Ridge_a10: adj=0.3146 LOO_r=0.3232 IS_r=0.4905 gap=0.1673 F1=0.2963 QWK=0.0000
+  single_gland_patch_fraction__Ridge_a1: adj=0.3028 LOO_r=0.3028 IS_r=0.4155 gap=0.1126 F1=0.1772 QWK=0.0833
+  top3__Ridge_a1: adj=0.2925 LOO_r=0.3099 IS_r=0.4948 gap=0.1849 F1=0.2963 QWK=0.0000
+  top3__Ridge_a50: adj=0.2711 LOO_r=0.2929 IS_r=0.4865 gap=0.1937 F1=0.2315 QWK=0.0952
+  bp1_musk__Ridge_a50: adj=0.2617 LOO_r=0.2834 IS_r=0.4768 gap=0.1934 F1=0.1667 QWK=0.0000
+  top2__Ridge_a50: adj=0.2617 LOO_r=0.2834 IS_r=0.4768 gap=0.1934 F1=0.1667 QWK=0.0000
+  single_bp_median_gland_prob__Ridge_a1: adj=0.2562 LOO_r=0.2562 IS_r=0.3950 gap=0.1388 F1=0.2692 QWK=0.0833
+  bp_top2__Ridge_a1: adj=0.2115 LOO_r=0.2272 IS_r=0.4087 gap=0.1814 F1=0.3143 QWK=0.1600
+  bp_top2__Ridge_a10: adj=0.2006 LOO_r=0.2196 IS_r=0.4077 gap=0.1881 F1=0.2913 QWK=0.0870
+  bp_top3__Ridge_a10: adj=0.1389 LOO_r=0.1786 IS_r=0.4080 gap=0.2294 F1=0.2692 QWK=0.0833
+  bp_top3__Ridge_a1: adj=0.1254 LOO_r=0.1703 IS_r=0.4101 gap=0.2398 F1=0.2740 QWK=0.0000
+  bp_top2__Ridge_a50: adj=0.0993 LOO_r=0.1513 IS_r=0.4053 gap=0.2540 F1=0.1667 QWK=0.0000
+  bp_top3__Ridge_a50: adj=0.0847 LOO_r=0.1405 IS_r=0.4020 gap=0.2615 F1=0.1667 QWK=0.0000
+  single_bp_large_component_frac__Ridge_a1: adj=0.0761 LOO_r=0.1026 IS_r=0.3057 gap=0.2031 F1=0.1667 QWK=0.0000
+  single_bp_gland_pixel_frac__Ridge_a1: adj=-0.0028 LOO_r=0.0362 IS_r=0.2642 gap=0.2280 F1=0.2135 QWK=0.0909
+  single_bp_log_gland_area__Ridge_a1: adj=-0.0734 LOO_r=-0.0182 IS_r=0.2422 gap=0.2603 F1=0.1667 QWK=0.0000

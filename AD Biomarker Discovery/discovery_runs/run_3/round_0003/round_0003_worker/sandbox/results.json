@@ -1,0 +1,57 @@
+{
+  "family_name": "CA1 pyramidal reactive-astrocyte cuffing fraction",
+  "best_variation": "r35_ge1",
+  "feature_column": "ca1_pyramidal_cuffed_fraction_r35um_ge1",
+  "ranked_variations": [
+    {
+      "variation_name": "r35_ge1",
+      "feature_column": "ca1_pyramidal_cuffed_fraction_r35um_ge1",
+      "min_neighbors": 1,
+      "n_analyzable": 35,
+      "n_total": 35,
+      "coverage": 1.0,
+      "partial_r": -0.5224246288415226,
+      "selection_score": 0.5224246288415226,
+      "loo_predictive_r": 0.37679048433955953,
+      "is_loo_gap": 0.1456341445019631,
+      "penalty": 0.1456341445019631,
+      "adjusted_score": 0.37679048433955953
+    },
+    {
+      "variation_name": "r35_ge2",
+      "feature_column": "ca1_pyramidal_cuffed_fraction_r35um_ge2",
+      "min_neighbors": 2,
+      "n_analyzable": 35,
+      "n_total": 35,
+      "coverage": 1.0,
+      "partial_r": -0.5044313938122955,
+      "selection_score": 0.5044313938122955,
+      "loo_predictive_r": 0.34117385450398097,
+      "is_loo_gap": 0.16325753930831455,
+      "penalty": 0.16325753930831455,
+      "adjusted_score": 0.34117385450398097
+    },
+    {
+      "variation_name": "r35_ge3",
+      "feature_column": "ca1_pyramidal_cuffed_fraction_r35um_ge3",
+      "min_neighbors": 3,
+      "n_analyzable": 35,
+      "n_total": 35,
+      "coverage": 1.0,
+      "partial_r": -0.4997154475548235,
+      "selection_score": 0.4997154475548235,
+      "loo_predictive_r": 0.3539554124361996,
+      "is_loo_gap": 0.1457600351186239,
+      "penalty": 0.1457600351186239,
+      "adjusted_score": 0.3539554124361996
+    }
+  ],
+  "partial_r": -0.5224246288415226,
+  "selection_score": 0.5224246288415226,
+  "loo_predictive_r": 0.37679048433955953,
+  "is_loo_gap": 0.1456341445019631,
+  "penalty": 0.1456341445019631,
+  "adjusted_score": 0.37679048433955953,
+  "n_analyzable": 35,
+  "n_total": 35
+}

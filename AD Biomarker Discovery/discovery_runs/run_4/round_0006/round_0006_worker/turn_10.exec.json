@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "def load_centroids(zarr_path: str | Path) -> np.ndarray:\n    root = open_slide_zarr(zarr_path)\n    return np.asarray(root[\"SegmentationNode\"][\"centroids\"][:], dtype=np.float32)\n\ndef load_region_polygons(zarr_path: str | Path, *, scale: float = 16.0) -> dict[str, list[np.ndarray]]:\n    grouped: dict[str, list[np.ndarray]] = {}\n    for row in load_region_annotations(zarr_path, scale=scale):\n        grouped.setdefault(row[\"canonical_region\"], []).append(row[\"points\"])\n    return grouped\n\n",
+  "stderr": ""
+}

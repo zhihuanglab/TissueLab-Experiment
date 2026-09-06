@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, numpy as np, zarr\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import load_training_cohort\ncohort=load_training_cohort('/data')\nslide='/data/'+cohort.iloc[0]['slide_name']\nroot=zarr.open(slide, mode='r')\nfor arr_name in ['SegmentationNode/centroids','SegmentationNode/contours','ClassificationNode/nuclei_class_id']:\n    arr=root[arr_name]\n    print(arr_name, 'shape=', arr.shape, 'dtype=', arr.dtype, 'chunks=', arr.chunks)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"SegmentationNode/centroids shape= (263786, 2) dtype= int32 chunks= (10000, 2)\\nSegmentationNode/contours shape= (263786, 32, 2) dtype= float32 chunks= (10000, 32, 2)\\nClassificationNode/nuclei_class_id shape= (263786,) dtype= int32 chunks= (65947,)\\n\", \"stderr\": \"\"}"
+  }
+]

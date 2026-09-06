@@ -1,0 +1,37 @@
+Round 18: Add gland_frac_in_tumor to best Round 17 features
+================================================================================
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  baseline_T3G4_ac_md_a2: adjusted=0.7043 (LOO r=0.7249, IS r=0.9163, gap=0.1914) [F1=0.5773 QWK=0.6061]
+  baseline_T3G4_ac_md_a3: adjusted=0.7029 (LOO r=0.7230, IS r=0.9132, gap=0.1901) [F1=0.5773 QWK=0.6061]
+  baseline_T3G4_ac_md_a4: adjusted=0.7011 (LOO r=0.7210, IS r=0.9108, gap=0.1898) [F1=0.6071 QWK=0.6250]
+  baseline_T3G4_ac_md_a5: adjusted=0.6990 (LOO r=0.7189, IS r=0.9089, gap=0.1900) [F1=0.6071 QWK=0.6250]
+  baseline_T3G4_ac_md_a7: adjusted=0.6939 (LOO r=0.7145, IS r=0.9057, gap=0.1912) [F1=0.5333 QWK=0.5333]
+  pca_gfrac_T3G4_gf_a3: adjusted=0.6901 (LOO r=0.7109, IS r=0.9027, gap=0.1918) [F1=0.5805 QWK=0.6286]
+  pca_gfrac_T3G4_gf_a4: adjusted=0.6900 (LOO r=0.7106, IS r=0.9017, gap=0.1911) [F1=0.6109 QWK=0.6471]
+  pca_gfrac_T3G4_gf_a5: adjusted=0.6895 (LOO r=0.7099, IS r=0.9006, gap=0.1908) [F1=0.6412 QWK=0.6667]
+  pca_gfrac_T3G4_gf_a2: adjusted=0.6894 (LOO r=0.7108, IS r=0.9036, gap=0.1928) [F1=0.5805 QWK=0.6286]
+  pca_gfrac_T3G4_gf_a7: adjusted=0.6871 (LOO r=0.7075, IS r=0.8983, gap=0.1908) [F1=0.5700 QWK=0.5806]
+  baseline_T3G4_ac_md_a10: adjusted=0.6863 (LOO r=0.7083, IS r=0.9022, gap=0.1939) [F1=0.4304 QWK=0.3846]
+  pca_gfrac_T3G4_gf_a10: adjusted=0.6833 (LOO r=0.7039, IS r=0.8952, gap=0.1913) [F1=0.4927 QWK=0.4828]
+  T4G5_gfrac_a5: adjusted=0.6770 (LOO r=0.7016, IS r=0.9006, gap=0.1991) [F1=0.4762 QWK=0.5000]
+  T4G5_gfrac_a3: adjusted=0.6752 (LOO r=0.7010, IS r=0.9027, gap=0.2017) [F1=0.5474 QWK=0.5882]
+  plus_gfrac_T3G4_ac_md_gf_a4: adjusted=0.6619 (LOO r=0.6950, IS r=0.9112, gap=0.2162) [F1=0.5700 QWK=0.5806]
+  plus_gfrac_T3G4_ac_md_gf_a3: adjusted=0.6613 (LOO r=0.6954, IS r=0.9135, gap=0.2181) [F1=0.5417 QWK=0.5625]
+  plus_gfrac_T3G4_ac_md_gf_a5: adjusted=0.6612 (LOO r=0.6939, IS r=0.9094, gap=0.2154) [F1=0.5700 QWK=0.5806]
+  plus_gfrac_T3G4_ac_md_gf_a2: adjusted=0.6587 (LOO r=0.6947, IS r=0.9165, gap=0.2219) [F1=0.5417 QWK=0.5625]
+  plus_gfrac_T3G4_ac_md_gf_a7: adjusted=0.6578 (LOO r=0.6906, IS r=0.9063, gap=0.2157) [F1=0.4927 QWK=0.4828]
+  plus_gfrac_T3G4_ac_md_gf_a10: adjusted=0.6497 (LOO r=0.6841, IS r=0.9028, gap=0.2188) [F1=0.4524 QWK=0.4286]
+  T2G3_gfrac_a5: adjusted=0.5304 (LOO r=0.5673, IS r=0.7912, gap=0.2239) [F1=0.4961 QWK=0.4375]
+  T2G3_gfrac_a3: adjusted=0.5211 (LOO r=0.5615, IS r=0.7923, gap=0.2308) [F1=0.4692 QWK=0.4242]
+  T3G3_gfrac_a5: adjusted=0.4828 (LOO r=0.5498, IS r=0.8339, gap=0.2841) [F1=0.4451 QWK=0.3448]
+  T3G3_gfrac_a3: adjusted=0.4722 (LOO r=0.5432, IS r=0.8351, gap=0.2919) [F1=0.4813 QWK=0.4000]
+  gfrac_only_a2: adjusted=-1.0000 (LOO r=-0.3864, IS r=0.1272, gap=0.5135) [F1=0.1667 QWK=0.0000]
+  gfrac_only_a3: adjusted=-1.0000 (LOO r=-0.3930, IS r=0.1272, gap=0.5202) [F1=0.1667 QWK=0.0000]
+  gfrac_only_a5: adjusted=-1.0000 (LOO r=-0.4060, IS r=0.1272, gap=0.5332) [F1=0.1667 QWK=0.0000]
+  gfrac_only_a10: adjusted=-1.0000 (LOO r=-0.4376, IS r=0.1272, gap=0.5647) [F1=0.1667 QWK=0.0000]
+
+BEST: baseline_T3G4_ac_md_a2
+  LOO r=0.7249, IS r=0.9163, gap=0.1914, adjusted=0.7043
+  Features: ['T_PC1', 'T_PC7', 'T_PC4', 'G_PC9', 'G_PC5', 'G_PC1', 'G_PC16', 'area_conc', 'max_dom']
+  Alpha: 2

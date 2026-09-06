@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nfrom pathlib import Path\np = Path('/scratch/result.py')\ntext = p.read_text()\nold = '''    analyzable = df[[\"donor_id\", feature_col, OUTCOME_COLUMN, *CONFOUND_COLUMNS]].dropna().copy()\n'''\nnew = '''    analyzable = df.dropna(subset=[\"donor_id\", feature_col, OUTCOME_COLUMN, *CONFOUND_COLUMNS]).copy()\n'''\nif old not in text:\n    raise SystemExit('target snippet not found')\np.write_text(text.replace(old, new))\nPY\npython /scratch/result.py > /scratch/run.log 2>&1\nstatus=$?\necho \"script exit status: $status\"\nsed -n '1,260p' /scratch/run.log\nexit $status",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"script exit status: 0\\nHYPOTHESIS FAMILY: ca1_peripyramidal_reactive_astro_lymphocyte_contact\\nBEST VARIATION: candidate_variant_b\\n  IS partial r:      0.1762\\n  Selection score:   0.1762\\n  LOO predictive r:  0.0171  (diagnostic)\\n  IS-LOO Gap:        0.1591  (penalty=0.0046)\\n  Adjusted Score:    0.1717\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  candidate_variant_b  0.1762  0.1762  0.0171\\n  candidate_variant_a  0.1012  0.1012  -0.0461\\n\\nPER-DONOR (LOO):\\n  don\", \"stderr\": \"\"}"
+  }
+]

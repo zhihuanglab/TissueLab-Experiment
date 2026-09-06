@@ -1,0 +1,5 @@
+{
+  "hypothesis_family": "ca1-reactive-lymphocyte-niche",
+  "best_variation": "candidate_variant_b",
+  "feature_column": "ca1_reactive_lymphocyte_neighbor_fraction_r128px"
+}

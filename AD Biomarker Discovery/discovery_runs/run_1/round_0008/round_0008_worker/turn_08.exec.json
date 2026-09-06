@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 141,
+  "stdout": "/data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/sandbox/results.json\n/data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/results.json\n/data/autoresearch_runs/run_20260410_155640_434a75/round_0001/round_0001_worker/sandbox/results.json\n",
+  "stderr": ""
+}

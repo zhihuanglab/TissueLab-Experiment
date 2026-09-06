@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- inspect shared helper signatures ---'\npython - <<'PY'\nimport inspect\nfrom shared_analysis import build_cell_table, load_region_polygons\nimport shared_analysis.sea_ad_lfb as m\nprint('build_cell_table signature:', inspect.signature(build_cell_table))\nprint(inspect.getsource(build_cell_table)[:4000])\nprint('--- load_region_polygons signature:', inspect.signature(load_region_polygons))\nprint(inspect.getsource(load_region_polygons)[:3000])\nPY\necho '--- inspect one zarr tree shallow ---'\npython - <<'PY'\nfrom pathlib import Path\nimport zarr, json\nslide=Path('/data/H19.33.004-A12-LFB.svs.zarr')\nroot=zarr.open_group(str(slide), mode='r')\ndef walk(g,prefix='',depth=0,maxdepth=2):\n    if depth>maxdepth: return\n    for k,v in g.groups():\n        print(prefix+k+'/')\n        walk(v,prefix+'  ',depth+1,maxdepth)\n    for k,v in g.arrays():\n        print(prefix+k, v.shape, v.dtype)\nwalk(root)\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"--- inspect shared helper signatures ---\\n\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 2, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

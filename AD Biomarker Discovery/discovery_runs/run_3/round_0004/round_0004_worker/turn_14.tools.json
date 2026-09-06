@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,240p' /scratch/report.md\necho\necho '--- results.json head ---'\npython - <<'PY'\nimport json\nfrom pathlib import Path\nd=json.loads(Path('/scratch/results.json').read_text())\nprint(json.dumps({k:d[k] for k in ['best_variation','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','gap_penalty','adjusted_score']}, indent=2))\nprint('ranked names:', [x['variation_name'] for x in d['ranked_variations']])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"## Summary\\nTested the CA1 reactive-astrocyte cuff severity around CA1 pyramidal neurons within 35 \\u00b5m family, and candidate_variant_a won with selection score 0.5044.\\n\\n## Metrics\\n- Best variation: `candidate_variant_a` (`ca1_pyramidal_cuffed_fraction_r35um_ge2`)\\n- IS partial r: `-0.5044`\\n- Selection score: `0.5044`\\n- LOO predictive r: `0.3412`\\n- IS-LOO Gap: `0.1633` `(penalty=0.0133)`\\n- Adjusted Score: `0.3279`\\n- Other tested variations: candidate_variant_b selection=0.4997, partial_r=-0.4997, lo\", \"stderr\": \"\"}"
+  }
+]

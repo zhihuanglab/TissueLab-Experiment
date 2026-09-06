@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,260p' /shared/lib/shared_analysis/stats.py\necho '---'\nsed -n '1,260p' /shared/lib/shared_analysis/artifacts.py\necho '---'\nsed -n '1,260p' /shared/lib/shared_analysis/sea_ad_lfb.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"f loo.empty:\\n        return {\\\"max_shift\\\": float(\\\"nan\\\"), \\\"unstable_donors\\\": []}\\n    shifts = loo[\\\"delta_from_full\\\"].abs()\\n    unstable = loo.loc[shifts > unstable_delta]\\n    return {\\n        \\\"max_shift\\\": float(shifts.max()),\\n        \\\"unstable_count\\\": int((shifts > unstable_delta).sum()),\\n        \\\"unstable_donors\\\": unstable.to_dict(orient=\\\"records\\\"),\\n    }\\n\\n\\ndef residualized_loo_predictive_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str\", \"stderr\": \"\"}"
+  }
+]

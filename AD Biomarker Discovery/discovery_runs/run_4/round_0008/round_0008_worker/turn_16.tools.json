@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, warnings\nsys.path.insert(0, '/shared/lib')\nfrom pathlib import Path\nimport numpy as np\nfrom matplotlib.path import Path as MplPath\nfrom shared_analysis import load_training_cohort\nimport shared_analysis.sea_ad_lfb as sea\nwarnings.filterwarnings('ignore')\ncohort=load_training_cohort('/data')\nslide_name=cohort.iloc[0]['slide_name']\nz=Path('/data')/slide_name\ncent=sea.load_centroids(z)\nclass_ids=sea.load_class_ids(z)\nlookup=sea.load_class_lookup(z)\npolys=sea.load_region_polygons(z)\nca1=polys.get('CA1', [])\nmask=np.zeros(len(cent), dtype=bool)\nfor poly in ca1:\n    mask |= MplPath(poly, closed=True).contains_points(cent)\nunique, counts=np.unique(class_ids[mask], return_counts=True)\nprint('slide', slide_name, 'n_ca1', int(mask.sum()), 'n_polys', len(ca1))\nprint({lookup[int(u)]: int(c) for u,c in zip(unique,counts)})\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"slide H19.33.004-A12-LFB.svs.zarr n_ca1 9413 n_polys 1\\n{'Negative control': 3106, 'Lymphocyte': 7, 'Pyramidal Neuron': 1732, 'Granule Neuron': 23, 'Reactive Astrocyte': 1107, 'Astrocyte': 1077, 'Oligodendrocyte': 2353, 'Corpora Amylacea': 8}\\n\", \"stderr\": \"\"}"
+  }
+]

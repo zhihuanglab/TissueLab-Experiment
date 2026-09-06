@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nimport json\nfrom pathlib import Path\np=Path('/scratch/context_bundle.json')\ndata=json.loads(p.read_text())\nfor k in data.keys():\n    print('KEY',k, type(data[k]).__name__)\nprint('\\n--- maybe brief-like keys ---')\nfor key in ['worker_brief','brief','candidate','round_plan','hypothesis','accepted_panel','current_panel','panel','task']:\n    if key in data:\n        print(f'\\n## {key}')\n        print(json.dumps(data[key], indent=2)[:20000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"KEY worker_brief dict\\nKEY runtime_manifest dict\\nKEY cohort_summary dict\\nKEY slide_manifest_head dict\\nKEY runtime_quickstart_excerpt str\\nKEY dataset_guide_excerpt str\\n\\n--- maybe brief-like keys ---\\n\\n## worker_brief\\n{\\n  \\\"worker_name\\\": \\\"round_0002_worker\\\",\\n  \\\"round_id\\\": 2,\\n  \\\"candidate_id\\\": \\\"ca1-reactive-astrocyte-enrichment\\\",\\n  \\\"candidate_type\\\": \\\"candidate\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [\\n      {\\n        \\\"slot\\\": 1,\\n        \\\"feature_name\\\": \\\"ca1_pyramidal_fraction\\\",\\n        \\\"round_id\\\": 1,\\n  \", \"stderr\": \"\"}"
+  }
+]

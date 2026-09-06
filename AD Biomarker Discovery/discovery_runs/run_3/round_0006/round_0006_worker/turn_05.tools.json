@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nls -R /shared | sed -n '1,200p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/shared:\\ncache\\ndataset_guide.md\\nlib\\ntemplates\\n\\n/shared/cache:\\ncohort_summary.json\\nregion_polygons\\nruntime_manifest.json\\nruntime_quickstart.md\\nslide_manifest.json\\n\\n/shared/cache/region_polygons:\\nH19.33.004-A12-LFB.svs.zarr.json\\nH20.33.008-A12-LFB.svs.zarr.json\\nH20.33.013-A12-LFB.svs.zarr.json\\nH20.33.018-A12-LFB.svs.zarr.json\\nH20.33.024-A12-LFB.svs.zarr.json\\nH20.33.025-A12-LFB.svs.zarr.json\\nH20.33.027-A12-LFB.svs.zarr.json\\nH20.33.029-A12-LFB.svs.zarr.json\\nH20.33.030-A12-LFB.svs.zarr.json\\nH20.33.03\", \"stderr\": \"\"}"
+  }
+]

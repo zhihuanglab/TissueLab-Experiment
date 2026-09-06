@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nimport pandas as pd, json\nfrom pathlib import Path\ncohort = pd.read_csv('/data/training_cohort.csv')\nprint('columns:', list(cohort.columns))\nprint('results exists:', Path('/scratch/results.json').exists())\nprint('report exists:', Path('/scratch/report.md').exists())\nprint('run_stdout exists:', Path('/scratch/run_stdout.txt').exists())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"columns: ['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex']\\nresults exists: True\\nreport exists: False\\nrun_stdout exists: True\\n\", \"stderr\": \"\"}"
+  }
+]

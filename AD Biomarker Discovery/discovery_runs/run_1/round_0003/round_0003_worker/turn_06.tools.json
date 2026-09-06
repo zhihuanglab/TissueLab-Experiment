@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\nPYTHONPATH=/shared/lib python - <<'PY'\nimport sys, os\nprint(os.environ.get('PYTHONPATH'))\nprint(sys.path[:10])\nimport importlib.util\nprint(importlib.util.find_spec('shared_analysis'))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"None\\n['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\\nNone\\n\", \"stderr\": \"\"}"
+  }
+]

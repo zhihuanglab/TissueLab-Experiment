@@ -1,0 +1,339 @@
+{
+  "status": "ok",
+  "feature_name": "ca1_pyramidal_cuffed_fraction_r35um_ge2",
+  "outcome": "slope_zmem0",
+  "n_total": 35,
+  "n_analyzable": 35,
+  "partial_r": -0.5044313938122954,
+  "ci_lo": -0.7761743993948871,
+  "ci_hi": 0.1279221243221929,
+  "p_value": 0.0020018535622668135,
+  "loo_predictive_r": 0.34117385450398074,
+  "coverage_ratio": 1.0,
+  "selection_score": 0.5044,
+  "incumbent_score": 0.5044,
+  "coverage_gate_passed": true,
+  "bootstrap_stability_passed": true,
+  "bootstrap_median_partial_r": -0.5199003979402246,
+  "bootstrap_sign_consistency": 0.995,
+  "adjusted_score": 0.3345,
+  "is_loo_gap": 0.1633,
+  "gap_penalty": 0.0066,
+  "loo_unstable_count": 1,
+  "loo_max_shift": 0.28348294555500575,
+  "donor_ids_used": [
+    "H19.33.004",
+    "H20.33.008",
+    "H20.33.013",
+    "H20.33.018",
+    "H20.33.024",
+    "H20.33.025",
+    "H20.33.027",
+    "H20.33.029",
+    "H20.33.030",
+    "H20.33.034",
+    "H20.33.037",
+    "H20.33.038",
+    "H20.33.040",
+    "H20.33.041",
+    "H20.33.043",
+    "H20.33.044",
+    "H20.33.046",
+    "H21.33.001",
+    "H21.33.004",
+    "H21.33.006",
+    "H21.33.007",
+    "H21.33.012",
+    "H21.33.013",
+    "H21.33.018",
+    "H21.33.021",
+    "H21.33.023",
+    "H21.33.025",
+    "H21.33.033",
+    "H21.33.035",
+    "H21.33.037",
+    "H21.33.038",
+    "H21.33.040",
+    "H21.33.043",
+    "H21.33.044",
+    "H21.33.046"
+  ],
+  "covariates": [
+    "max_age_vis",
+    "braak_numeric",
+    "cerad_ordinal",
+    "sex_binary"
+  ],
+  "recomputed_from_raw": true,
+  "registry_written": false,
+  "artifacts": {
+    "donor_feature_table": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker/sandbox/donor_feature_table.csv",
+    "report": "/scratch/report.md"
+  },
+  "feature_column": "ca1_pyramidal_cuffed_fraction_r35um_ge2",
+  "best_variation": "candidate_variant_a",
+  "ranked_variations": [
+    {
+      "variation_name": "candidate_variant_a",
+      "description": "Fraction of CA1 pyramidal neurons with at least 2 CA1 reactive astrocytes within 35 \u00b5m",
+      "feature_column": "ca1_pyramidal_cuffed_fraction_r35um_ge2",
+      "min_reactive_neighbors": 2,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "partial_r": -0.5044313938122955,
+      "selection_score": 0.5044313938122955,
+      "loo_predictive_r": 0.34117385450398097,
+      "is_loo_gap": 0.16325753930831455,
+      "gap_penalty": 0.013257539308314553,
+      "adjusted_score": 0.32791631519566644,
+      "p_value": 0.002001853562266815,
+      "loo_unstable_count": 1,
+      "loo_max_shift": 0.28348294555500586
+    },
+    {
+      "variation_name": "candidate_variant_b",
+      "description": "Fraction of CA1 pyramidal neurons with at least 3 CA1 reactive astrocytes within 35 \u00b5m",
+      "feature_column": "ca1_pyramidal_cuffed_fraction_r35um_ge3",
+      "min_reactive_neighbors": 3,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "partial_r": -0.49971544755482344,
+      "selection_score": 0.49971544755482344,
+      "loo_predictive_r": 0.3539554124361996,
+      "is_loo_gap": 0.14576003511862384,
+      "gap_penalty": 0.0,
+      "adjusted_score": 0.3539554124361996,
+      "p_value": 0.0022397554610014076,
+      "loo_unstable_count": 1,
+      "loo_max_shift": 0.3052643155604299
+    }
+  ],
+  "per_donor_loo": [
+    {
+      "donor_id": "H19.33.004",
+      "outcome": -0.0587685,
+      "predicted": -0.07619202093936228,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.037528868360277134
+    },
+    {
+      "donor_id": "H20.33.008",
+      "outcome": -0.1205063,
+      "predicted": -0.098313725121305,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.011494252873563218
+    },
+    {
+      "donor_id": "H20.33.013",
+      "outcome": -0.0317417,
+      "predicted": -0.10143295741348358,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.022653721682847898
+    },
+    {
+      "donor_id": "H20.33.018",
+      "outcome": -0.3042141,
+      "predicted": -0.1630132436884923,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.17647058823529413
+    },
+    {
+      "donor_id": "H20.33.024",
+      "outcome": -0.0103346,
+      "predicted": -0.08442259765168945,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.015311195068602108
+    },
+    {
+      "donor_id": "H20.33.025",
+      "outcome": -0.0723104,
+      "predicted": -0.1040155661847749,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.020603737422137038
+    },
+    {
+      "donor_id": "H20.33.027",
+      "outcome": -0.1125932,
+      "predicted": -0.14185517715051035,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.047619047619047616
+    },
+    {
+      "donor_id": "H20.33.029",
+      "outcome": -0.0948095,
+      "predicted": -0.1288399909118938,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.04175665946724262
+    },
+    {
+      "donor_id": "H20.33.030",
+      "outcome": -0.1680423,
+      "predicted": -0.112948306290874,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.028110359187922956
+    },
+    {
+      "donor_id": "H20.33.034",
+      "outcome": -0.0522007,
+      "predicted": -0.05068674312214722,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.007202881152460984
+    },
+    {
+      "donor_id": "H20.33.037",
+      "outcome": -0.2508045,
+      "predicted": -0.1706324365487676,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.07966457023060797
+    },
+    {
+      "donor_id": "H20.33.038",
+      "outcome": -0.2372091,
+      "predicted": -0.17873214673116317,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.09867172675521822
+    },
+    {
+      "donor_id": "H20.33.040",
+      "outcome": -0.1026342,
+      "predicted": -0.15598792468495748,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.05666089965397924
+    },
+    {
+      "donor_id": "H20.33.041",
+      "outcome": -0.1079018,
+      "predicted": -0.10319456121825075,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.022084195997239476
+    },
+    {
+      "donor_id": "H20.33.043",
+      "outcome": -0.0599597,
+      "predicted": -0.07886540527846762,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.033421750663129975
+    },
+    {
+      "donor_id": "H20.33.044",
+      "outcome": -0.0544588,
+      "predicted": -0.04533536685841364,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.016701461377870562
+    },
+    {
+      "donor_id": "H20.33.046",
+      "outcome": -0.2017114,
+      "predicted": -0.10214416595264117,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.019436345966958212
+    },
+    {
+      "donor_id": "H21.33.001",
+      "outcome": -0.0815782,
+      "predicted": -0.0439704341769235,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.0393885949441505
+    },
+    {
+      "donor_id": "H21.33.004",
+      "outcome": -0.1198253,
+      "predicted": -0.032748815211392675,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.02335456475583864
+    },
+    {
+      "donor_id": "H21.33.006",
+      "outcome": -0.0539668,
+      "predicted": -0.14173238084848802,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.0660377358490566
+    },
+    {
+      "donor_id": "H21.33.007",
+      "outcome": -0.0975144,
+      "predicted": -0.17624565561477917,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.08178438661710037
+    },
+    {
+      "donor_id": "H21.33.012",
+      "outcome": -0.1009244,
+      "predicted": -0.07536731801032921,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.009456264775413711
+    },
+    {
+      "donor_id": "H21.33.013",
+      "outcome": -0.161261,
+      "predicted": -0.09912762121648219,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.025745257452574527
+    },
+    {
+      "donor_id": "H21.33.018",
+      "outcome": -0.144019,
+      "predicted": -0.014757291478408985,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.003925967470555244
+    },
+    {
+      "donor_id": "H21.33.021",
+      "outcome": -0.0983582,
+      "predicted": -0.08640482615628066,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.016198704103671708
+    },
+    {
+      "donor_id": "H21.33.023",
+      "outcome": -0.1546294,
+      "predicted": -0.039507447539191574,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.007974481658692184
+    },
+    {
+      "donor_id": "H21.33.025",
+      "outcome": -0.0422854,
+      "predicted": -0.10774563566838595,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.0321410057024365
+    },
+    {
+      "donor_id": "H21.33.033",
+      "outcome": -0.0466362,
+      "predicted": -0.08713595698624606,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.009417304296645085
+    },
+    {
+      "donor_id": "H21.33.035",
+      "outcome": -0.0498238,
+      "predicted": -0.11926891494858755,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.011235955056179775
+    },
+    {
+      "donor_id": "H21.33.037",
+      "outcome": -0.0881349,
+      "predicted": -0.07267195224080872,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.02967525195968645
+    },
+    {
+      "donor_id": "H21.33.038",
+      "outcome": -0.0518276,
+      "predicted": -0.05645957505234597,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.026220614828209764
+    },
+    {
+      "donor_id": "H21.33.040",
+      "outcome": -0.0327944,
+      "predicted": -0.09810018329678731,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.005177514792899409
+    },
+    {
+      "donor_id": "H21.33.043",
+      "outcome": -0.072355,
+      "predicted": -0.17296947276428787,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.09123649459783914
+    },
+    {
+      "donor_id": "H21.33.044",
+      "outcome": -0.0991281,
+      "predicted": -0.1485708861557272,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.04738933030646992
+    },
+    {
+      "donor_id": "H21.33.046",
+      "outcome": -0.1616234,
+      "predicted": -0.09881780267683557,
+      "ca1_pyramidal_cuffed_fraction_r35um_ge2": 0.020869565217391306
+    }
+  ],
+  "bootstrap_q25_partial_r": -0.5711236781873908,
+  "bootstrap_q75_partial_r": -0.4421974760888027,
+  "bootstrap_positive_fraction": 0.005,
+  "bootstrap_negative_fraction": 0.995,
+  "bootstrap_valid_samples": 400,
+  "bootstrap_sample_size": 28,
+  "incumbent_eligible": true,
+  "raw_r": -0.560251751493177,
+  "raw_p_value": null,
+  "panel_member_count": 3,
+  "panel_baseline_score": 0.5544,
+  "panel_candidate_score": 0.5731,
+  "delta_panel_score": 0.0187,
+  "panel_baseline_loo_score": 0.3311,
+  "panel_candidate_loo_score": 0.1614,
+  "candidate_redundancy": 0.9395
+}

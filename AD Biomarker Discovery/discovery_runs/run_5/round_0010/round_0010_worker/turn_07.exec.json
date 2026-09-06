@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "H19.33.004-A12-LFB.svs\nAperio Image Library v12.0.16 \n69088x39140 [0,100 67728x39040] (240x240) JPEG/RGB Q=70|AppMag = 20|StripeWidth = 2032|ScanScope ID = HRT-KNE-713-SCO|Filename = 6992-A12-LFB|Date = 05/04/22|Time = 11:39:56|Time Zone = GMT-07:00|User = a0b31d87-c515-4437-98b8-8654b08571d3|MPP = 0.5049|Left = 21.005411|Top = 21.633224|LineCameraSkew = 0.002132|LineAreaXOffset = 0.020983|LineAreaYOffset = 0.014251|Focus Offset = 0.000000|ImageID = 1004103|Exposure Time = 32|Exposure Scale = 0.000001|DisplayColor = \n",
+  "stderr": ""
+}

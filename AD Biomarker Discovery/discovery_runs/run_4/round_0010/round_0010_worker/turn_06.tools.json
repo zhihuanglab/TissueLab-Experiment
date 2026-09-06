@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import stats, artifacts\nfor mod, names in [(stats,['partial_correlation','leave_one_out_summary','residualized_loo_predictive_correlation']),\n                   (artifacts,['build_results_payload','write_donor_feature_table','write_results_payload','coerce_results_payload','validate_results_payload'])]:\n    print(f'\\nMODULE {mod.__name__}')\n    for name in names:\n        fn=getattr(mod,name)\n        print(f'\\n{name}{inspect.signature(fn)}')\n        src=inspect.getsource(fn)\n        print('\\n'.join(src.splitlines()[:60]))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\nMODULE shared_analysis.stats\\n\\npartial_correlation(df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]') -> 'dict[str, float]'\\ndef partial_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n) -> dict[str, float]:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds])\\n    feature_resid = residualize(frame[feature_col], frame[confounds])\\n    outcome_resid = residualize(frame[outcome_col], fr\", \"stderr\": \"\"}"
+  }
+]

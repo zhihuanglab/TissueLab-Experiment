@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nexport PYTHONPATH=/shared/lib:${PYTHONPATH:-}\npython - <<'PY'\nimport inspect\nfrom shared_analysis import sea_ad_lfb, stats\nfor name in ['load_training_cohort','build_cell_table','compute_contour_geometry','load_region_polygons']:\n    fn=getattr(sea_ad_lfb,name)\n    print(f'\\n## {name}{inspect.signature(fn)}')\n    src=inspect.getsource(fn)\n    print(src[:3000])\nfor name in ['partial_correlation','leave_one_out_summary','residualized_loo_predictive_correlation']:\n    fn=getattr(stats,name)\n    print(f'\\n## {name}{inspect.signature(fn)}')\n    src=inspect.getsource(fn)\n    print(src[:2500])\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 2, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

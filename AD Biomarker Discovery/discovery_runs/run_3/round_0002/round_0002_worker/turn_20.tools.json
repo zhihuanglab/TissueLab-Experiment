@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nimport sys\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import load_training_cohort\ncohort=load_training_cohort('/data')\nprint(cohort.columns.tolist())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex', 'slide_id']\\n\", \"stderr\": \"\"}"
+  }
+]

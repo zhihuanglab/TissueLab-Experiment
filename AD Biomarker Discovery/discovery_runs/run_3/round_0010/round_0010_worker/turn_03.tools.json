@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pathlib\nobj=json.loads(pathlib.Path('/scratch/context_bundle.json').read_text())\nprint(sorted(obj))\nfor k,v in obj.items():\n    if isinstance(v, dict):\n        print(k, 'dict keys=', sorted(v)[:20], '... total', len(v))\n    elif isinstance(v, list):\n        print(k, 'list len', len(v))\n    else:\n        print(k, type(v).__name__, (str(v)[:120]+'...') if len(str(v))>120 else str(v))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['cohort_summary', 'dataset_guide_excerpt', 'runtime_manifest', 'runtime_quickstart_excerpt', 'slide_manifest_head', 'worker_brief']\\nworker_brief dict keys= ['accepted_panel', 'approach', 'baseline_variation', 'candidate_id', 'candidate_type', 'notes', 'rationale', 'round_id', 'scientific_question', 'variations', 'worker_name'] ... total 11\\nruntime_manifest dict keys= ['cache_paths', 'generated_at_utc', 'modules', 'prompt_context', 'python_import_root', 'runtime_version', 'shared_root', 'templat\", \"stderr\": \"\"}"
+  }
+]

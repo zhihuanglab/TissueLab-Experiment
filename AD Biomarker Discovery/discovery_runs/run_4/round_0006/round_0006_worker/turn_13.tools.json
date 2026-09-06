@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import leave_one_out_summary, write_donor_feature_table\nprint(inspect.signature(leave_one_out_summary))\nprint(inspect.getsource(leave_one_out_summary)[:5000])\nprint(inspect.signature(write_donor_feature_table))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"(df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]', id_col: 'str | None' = None, unstable_delta: 'float' = 0.1) -> 'dict[str, object]'\\ndef leave_one_out_summary(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n    id_col: str | None = None,\\n    unstable_delta: float = 0.10,\\n) -> dict[str, object]:\\n    loo = leave_one_out_partial_correlation(\\n        df,\\n        feature_col=feature_col,\\n        outcome_col=outc\", \"stderr\": \"\"}"
+  }
+]

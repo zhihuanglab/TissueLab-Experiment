@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "\n## residualize(values: 'pd.Series | np.ndarray', confounds: 'pd.DataFrame') -> 'np.ndarray'\ndef residualize(values: pd.Series | np.ndarray, confounds: pd.DataFrame) -> np.ndarray:\n    y = np.asarray(values, dtype=float)\n    x = _design_matrix(confounds)\n    beta, *_ = np.linalg.lstsq(x, y, rcond=None)\n    return y - x @ beta\n\n\n## _design_matrix(confounds: 'pd.DataFrame') -> 'np.ndarray'\ndef _design_matrix(confounds: pd.DataFrame) -> np.ndarray:\n    matrix = confounds.astype(float).to_numpy()\n    intercept = np.ones((len(confounds), 1), dtype=float)\n    return np.hstack([intercept, matrix])\n\n\n## _clean_frame(df: 'pd.DataFrame', columns: 'Iterable[str]') -> 'pd.DataFrame'\ndef _clean_frame(df: pd.DataFrame, columns: Iterable[str]) -> pd.DataFrame:\n    cleaned = df.loc[:, list(columns)].replace([np.inf, -np.inf], np.nan).dropna()\n    if cleaned.empty:\n        raise ValueError(\"No rows left after dropping missing values\")\n    return cleaned\n\n",
+  "stderr": ""
+}

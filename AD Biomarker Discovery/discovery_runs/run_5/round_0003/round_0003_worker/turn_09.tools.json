@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- round 1 result summary ---'\npython - <<'PY'\nimport json, pathlib\nfor p in [\n'/data/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json',\n'/data/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/results.json',\n]:\n    pp=pathlib.Path(p)\n    if pp.exists():\n        data=json.loads(pp.read_text())\n        print(pp)\n        for k in ['feature_name','feature_column','best_variation','partial_r','selection_score','loo_predictive_r','panel_candidate_score','delta_panel_score']:\n            if k in data: print(' ',k,':',data[k])\n        if 'ranked_variations' in data:\n            print(' ranked head:', data['ranked_variations'][:3])\n        print()\n    else:\n        print('missing', pp)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- round 1 result summary ---\\n/data/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json\\n  feature_name : ca1_reactive_astro_fraction\\n  feature_column : ca1_reactive_astro_fraction\\n  best_variation : candidate_variant_a\\n  partial_r : -0.4913864246681738\\n  selection_score : 0.4914\\n  loo_predictive_r : 0.35977024341714064\\n  panel_candidate_score : 0.4914\\n  delta_panel_score : None\\n ranked head: [{'variation_name': 'candidate_variant_a', 'description': 'Reactive A\", \"stderr\": \"\"}"
+  }
+]

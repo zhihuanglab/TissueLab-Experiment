@@ -1,0 +1,25 @@
+{
+  "worker_name": "round_0001_worker",
+  "round_id": 1,
+  "candidate_id": "ca1-reactive-astro-fraction",
+  "candidate_type": "seed",
+  "accepted_panel": {
+    "members": [],
+    "best_panel_score": null
+  },
+  "scientific_question": "Does a higher reactive-astrocyte fraction within CA1 predict worse donor memory decline independent of standard neuropathology confounds?",
+  "approach": "For each donor, load cell centroids and cell-type labels from the slide zarr, assign cells to annotation polygons by centroid-in-polygon after dividing CustomAnnotations polygon coordinates by 16, and restrict to the target region gate. Count cells labeled Astrocyte and Reactive Astrocyte, then compute the donor biomarker as n_reactive_astrocyte / (n_astrocyte + n_reactive_astrocyte). If the target region is absent or the denominator is zero, return NaN.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "CA1-only reactive astrocyte fraction among astrocyte-lineage cells: Reactive Astrocyte / (Astrocyte + Reactive Astrocyte) within CA1."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Broader adjacent pyramidal-field gate: Reactive Astrocyte / (Astrocyte + Reactive Astrocyte) within CA1 plus CA2."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use all polygons for a named region and merge them implicitly through centroid assignment. Region assignment should use centroids, not contour overlap. Confirm the exact cell-label storage in ClassificationNode and map numeric codes to the Astrocyte and Reactive Astrocyte labels if needed. No embeddings or WSI pixels are required for this round.",
+  "rationale": "With an empty panel, the strongest next test is a simple high-coverage, region-anchored cell-composition marker rather than a diffuse global summary. CA1 is a core memory-vulnerable hippocampal field, and reactive astrocyte enrichment is a biologically interpretable readout of local gliosis/injury that may retain signal beyond Braak and CERAD while being more robust than raw counts."
+}

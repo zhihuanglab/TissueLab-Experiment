@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfind /data/autoresearch_runs -name results.json | head -n 5 | while read f; do\n  echo \"--- $f\"\n  python - <<PY\nimport json\nf='$f'\ntry:\n    d=json.load(open(f))\n    print({k:d.get(k) for k in ['feature_name','best_variation','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','penalty','partial_r'] if k in d})\n    if 'ranked_variations' in d:\n        print('ranked first', d['ranked_variations'][:2])\nexcept Exception as e:\n    print('ERR',e)\nPY\ndone",
+    "output_preview": "{\"exit_code\": 141, \"stdout\": \"--- /data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/sandbox/results.json\\n{'feature_name': 'ca1sb_reactive_to_pyramidal_logratio', 'best_variation': 'ca1sb_reactive_to_pyramidal_logratio'}\\n--- /data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/results.json\\n{'feature_name': 'ca1sb_reactive_to_pyramidal_logratio', 'best_variation': 'ca1sb_reactive_to_pyramidal_logratio'}\\n--- /data/autoresearch_runs/run_20260410_155640_434a75/round_0001/ro\", \"stderr\": \"\"}"
+  }
+]

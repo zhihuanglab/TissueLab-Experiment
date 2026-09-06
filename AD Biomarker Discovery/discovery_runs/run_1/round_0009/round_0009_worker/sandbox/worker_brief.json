@@ -1,0 +1,81 @@
+{
+  "worker_name": "round_0009_worker",
+  "round_id": 9,
+  "candidate_id": "ca1-ra-proximal-pyramidal-lower-tail-area",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_lineage_fraction",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astro_niche_fraction_80px",
+        "round_id": 3,
+        "panel_candidate_score": 0.5505,
+        "delta_panel_score": 0.0434,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_pyramidal_reactive_astro_coverage_60px",
+        "round_id": 4,
+        "panel_candidate_score": 0.5536,
+        "delta_panel_score": 0.0031,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_pyramidal_reactive_astro_proximal_median_log_area_80px",
+        "round_id": 6,
+        "panel_candidate_score": 0.594,
+        "delta_panel_score": 0.0405,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0006/round_0006_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0006/round_0006_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0006/round_0006_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.6031
+  },
+  "scientific_question": "Does a stronger left-shift in the size distribution of CA1 pyramidal neurons specifically near reactive astrocytes mark worse memory decline beyond the current CA1 reactive-astrocyte niche panel?",
+  "approach": "For each donor, load the matched `.svs.zarr`, assign cells to CA1 using annotation polygons from `CustomAnnotations` after dividing polygon coordinates by 16, then restrict to CA1 `Pyramidal Neuron` and CA1 `Reactive Astrocyte` cells from `ClassificationNode`. Compute centered contour polygon area for each pyramidal neuron, transform as `log1p(area_px2)`, and identify CA1 pyramidal neurons whose centroid lies within a fixed radius of at least one CA1 reactive astrocyte centroid. The donor biomarker is the chosen lower quantile of `log1p(area_px2)` among those reactive-astrocyte-proximal CA1 pyramidal neurons. Return `NaN` only if no qualifying cells are present.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Baseline: 25th percentile of `log1p(area_px2)` for CA1 pyramidal neurons within 80 px of any CA1 reactive astrocyte centroid."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Nearby sweep: 20th percentile of `log1p(area_px2)` for CA1 pyramidal neurons within 80 px of any CA1 reactive astrocyte centroid."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use slide lookup from `training_cohort.csv` by `donor_id` and open `Path(data_root) / slide_name`. Distances should be computed in native cell-coordinate pixels, matching prior 80 px niche features. For contour area, center each contour before polygon-area calculation to avoid float32 cancellation. Use a fast nearest-neighbor query such as `cKDTree` on CA1 reactive astrocyte centroids. Keep implementation simple and auditable; no outcome-aware thresholds.",
+  "rationale": "Recent keeps show that CA1 reactive-astrocyte-adjacent pyramidal morphology carries real signal: median proximal pyramidal log area improved the panel, and a thresholded proximal small-pyramidal fraction added a smaller gain, while enrichment against background was discarded. That pattern suggests the useful biology is the within-niche lower-tail size shift itself rather than another normalized niche-composition ratio. A lower-tail area summary is a cleaner, threshold-free test that could add signal or replace a weaker niche-summary member."
+}

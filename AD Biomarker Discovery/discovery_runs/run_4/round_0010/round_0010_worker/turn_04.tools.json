@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, os\nprint(sys.version)\nprint('PYTHONPATH', os.environ.get('PYTHONPATH'))\nprint('sys.path head', sys.path[:10])\nPY\necho 'shared lib listing'\nfind /shared -maxdepth 3 -type f | sed -n '1,80p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"3.11.15 (main, Mar 16 2026, 23:12:45) [GCC 14.2.0]\\nPYTHONPATH None\\nsys.path head ['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\\nshared lib listing\\n/shared/dataset_guide.md\\n/shared/._dataset_guide.md\\n/shared/cache/region_polygons/H19.33.004-A12-LFB.svs.zarr.json\\n/shared/cache/region_polygons/._H19.33.004-A12-LFB.svs.zarr.json\\n/shared/cache/region_polygons/H20.33.008-A12-LFB.s\", \"stderr\": \"\"}"
+  }
+]

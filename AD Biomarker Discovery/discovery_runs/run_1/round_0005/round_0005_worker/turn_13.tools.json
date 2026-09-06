@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0, '/shared/lib')\nimport shared_analysis.stats as stats\nfor name in ['leave_one_out_partial_correlation','residualize','_design_matrix','bootstrap_partial_correlation']:\n    fn=getattr(stats,name)\n    print('\\n###',name, inspect.signature(fn))\n    print(inspect.getsource(fn)[:4000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\n### leave_one_out_partial_correlation (df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]', id_col: 'str | None' = None) -> 'pd.DataFrame'\\ndef leave_one_out_partial_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n    id_col: str | None = None,\\n) -> pd.DataFrame:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds, *( [id_col] if id_col else [] )]).reset_index(drop=True)\\n    base = pa\", \"stderr\": \"\"}"
+  }
+]

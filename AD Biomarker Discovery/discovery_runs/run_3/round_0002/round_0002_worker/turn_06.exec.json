@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "PYTHONPATH env None\n<module 'shared_analysis' from '/shared/lib/shared_analysis/__init__.py'>\n",
+  "stderr": ""
+}

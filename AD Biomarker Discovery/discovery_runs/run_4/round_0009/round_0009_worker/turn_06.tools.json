@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- worker_analysis_template.py ---'\nsed -n '1,260p' /shared/templates/worker_analysis_template.py\necho '--- shared_analysis __init__.py ---'\nsed -n '1,220p' /shared/lib/shared_analysis/__init__.py\necho '--- shared_analysis stats.py ---'\nsed -n '1,260p' /shared/lib/shared_analysis/stats.py\necho '--- round8 result.py ---'\nsed -n '1,260p' /data/autoresearch_runs/run_20260421_014751_94b13b/round_0008/round_0008_worker/result.py\necho '--- round8 results.json excerpt ---'\nsed -n '1,240p' /data/autoresearch_runs/run_20260421_014751_94b13b/round_0008/round_0008_worker/results.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"me.iloc[indices]\\n        result = partial_correlation(\\n            sampled,\\n            feature_col=feature_col,\\n            outcome_col=outcome_col,\\n            confounds=confounds,\\n        )\\n        value = result[\\\"partial_r\\\"]\\n        if np.isfinite(value):\\n            samples.append(value)\\n    if not samples:\\n        return {**base, \\\"ci_lo\\\": float(\\\"nan\\\"), \\\"ci_hi\\\": float(\\\"nan\\\"), \\\"bootstraps_used\\\": 0.0}\\n    ci_lo, ci_hi = np.percentile(np.asarray(samples, dtype=float), [2.5, 97.5])\\n    return {\", \"stderr\": \"\"}"
+  }
+]

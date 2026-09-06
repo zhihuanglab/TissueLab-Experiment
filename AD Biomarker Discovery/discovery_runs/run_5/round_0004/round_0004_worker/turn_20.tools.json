@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nls -l /scratch/result.py /scratch/report.md /scratch/results.json /scratch/donor_feature_table.csv /scratch/best_variation.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"-rwx------ 1 root root   311 Apr 21 09:55 /scratch/best_variation.json\\n-rwx------ 1 root root  7216 Apr 21 09:55 /scratch/donor_feature_table.csv\\n-rwx------ 1 root root  5358 Apr 21 09:55 /scratch/report.md\\n-rwx------ 1 root root 20486 Apr 21 09:54 /scratch/result.py\\n-rwx------ 1 root root 32359 Apr 21 09:55 /scratch/results.json\\n\", \"stderr\": \"\"}"
+  }
+]

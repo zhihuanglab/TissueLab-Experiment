@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pathlib, pprint\nobj=json.loads(pathlib.Path('/scratch/context_bundle.json').read_text())\nprint('KEYS:', sorted(obj.keys()))\nfor k in obj:\n    if k not in ('dataset_guide_excerpt','runtime_quickstart_excerpt'):\n        print(f'\\n--- {k} ---')\n        pprint.pp(obj[k], width=120)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"h_runs/run_20260421_001115_585b70/round_0003/round_0003_worker',\\n                                 'results_path': '/Volumes/SSK SSD/TissueLab '\\n                                                 'Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/results.json',\\n                                 'result_path': '/Volumes/SSK SSD/TissueLab '\\n                                                'Revision/LFB/Seed48_Split/Training/autoresearch_runs/ru\", \"stderr\": \"\"}"
+  }
+]

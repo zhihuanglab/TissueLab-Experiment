@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "0.369772960392524\n",
+  "stderr": ""
+}

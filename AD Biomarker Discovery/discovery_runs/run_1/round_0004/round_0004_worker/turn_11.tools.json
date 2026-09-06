@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,280p' /shared/lib/shared_analysis/stats.py\necho '---'\nsed -n '280,430p' /shared/lib/shared_analysis/artifacts.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"from __future__ import annotations\\n\\nfrom typing import Iterable\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom scipy.stats import pearsonr\\n\\n\\ndef _clean_frame(df: pd.DataFrame, columns: Iterable[str]) -> pd.DataFrame:\\n    cleaned = df.loc[:, list(columns)].replace([np.inf, -np.inf], np.nan).dropna()\\n    if cleaned.empty:\\n        raise ValueError(\\\"No rows left after dropping missing values\\\")\\n    return cleaned\\n\\n\\ndef _design_matrix(confounds: pd.DataFrame) -> np.ndarray:\\n    matrix = confounds.astype\", \"stderr\": \"\"}"
+  }
+]

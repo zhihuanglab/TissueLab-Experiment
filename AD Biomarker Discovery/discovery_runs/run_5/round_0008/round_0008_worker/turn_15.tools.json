@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport pandas as pd\ndf=pd.read_csv('/scratch/donor_feature_table.csv')\ncol='ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um'\nprint(df[['donor_id','slope_zmem0',col,'n_ca1_pyramidal_neurons','n_ca1_reactive_astrocytes','n_ca1_lymphocytes']].sort_values(col, ascending=False).head(12).to_string(index=False))\nprint('\\nWorst outcomes:')\nprint(df[['donor_id','slope_zmem0',col,'n_ca1_lymphocytes']].sort_values('slope_zmem0').head(12).to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"  donor_id  slope_zmem0  ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um  n_ca1_pyramidal_neurons  n_ca1_reactive_astrocytes  n_ca1_lymphocytes\\nH20.33.030    -0.168042                                                     0.001562                     1921                       1023                 14\\nH21.33.043    -0.072355                                                     0.001200                     1666                        660                  9\\nH20.33.027    -0.112593         \", \"stderr\": \"\"}"
+  }
+]

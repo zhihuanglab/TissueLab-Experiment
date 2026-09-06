@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, textwrap\nfrom pathlib import Path\np=Path('/scratch/context_bundle.json')\ndata=json.loads(p.read_text())\nfor key in ['worker_brief','round','candidate','accepted_panel','current_panel','prompt','brief']:\n    if key in data:\n        print(f'--- {key} ---')\n        print(json.dumps(data[key], indent=2)[:12000])\n        print()\nprint('TOP KEYS:', list(data)[:50])\nPY\necho '--- worker_brief.json if present ---'\nif [ -f /scratch/worker_brief.json ]; then cat /scratch/worker_brief.json; else echo 'missing'; fi",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- worker_brief ---\\n{\\n  \\\"worker_name\\\": \\\"round_0003_worker\\\",\\n  \\\"round_id\\\": 3,\\n  \\\"candidate_id\\\": \\\"ca1-peripyramidal-reactive-astro-crowding\\\",\\n  \\\"candidate_type\\\": \\\"candidate\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [\\n      {\\n        \\\"slot\\\": 1,\\n        \\\"feature_name\\\": \\\"ca1_reactive_astro_fraction\\\",\\n        \\\"round_id\\\": 1,\\n        \\\"panel_candidate_score\\\": 0.4914,\\n        \\\"delta_panel_score\\\": null,\\n        \\\"status\\\": \\\"active\\\",\\n        \\\"worker_dir\\\": \\\"/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Tr\", \"stderr\": \"\"}"
+  }
+]

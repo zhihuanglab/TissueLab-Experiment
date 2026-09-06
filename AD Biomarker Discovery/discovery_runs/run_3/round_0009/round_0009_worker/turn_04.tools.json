@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, os\nprint(sys.path[:10])\nprint('shared exists', os.path.exists('/shared/lib'))\nimport os\nfor root, dirs, files in os.walk('/shared/lib'):\n    if root.count(os.sep) < 4:\n        print(root, files[:5])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\\nshared exists True\\n/shared/lib ['._shared_analysis']\\n/shared/lib/shared_analysis ['__init__.py', '.___init__.py', 'context.py', '._context.py', 'stats.py']\\n\", \"stderr\": \"\"}"
+  }
+]

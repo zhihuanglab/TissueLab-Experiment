@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "def load_training_cohort(data_root: str | Path) -> pd.DataFrame:\n    cohort_path = find_training_cohort(data_root)\n    cohort = pd.read_csv(cohort_path)\n    if \"slide_id\" not in cohort.columns and \"slide_name\" in cohort.columns:\n        cohort[\"slide_id\"] = cohort[\"slide_name\"].map(slide_id_from_name)\n    if \"slide_id\" not in cohort.columns and \"slide_path\" in cohort.columns:\n        cohort[\"slide_id\"] = cohort[\"slide_path\"].map(slide_id_from_name)\n    return cohort\n",
+  "stderr": ""
+}

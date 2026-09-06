@@ -1,0 +1,59 @@
+{
+  "worker_name": "round_0004_worker",
+  "round_id": 4,
+  "candidate_id": "ca1-peripyramidal-reactive-astro-area",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_reactive_astro_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_pyramidal_near_reactive_astro_fraction_30um",
+        "round_id": 2,
+        "panel_candidate_score": 0.5513,
+        "delta_panel_score": 0.0599,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um",
+        "round_id": 3,
+        "panel_candidate_score": 0.5984,
+        "delta_panel_score": 0.0471,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5984
+  },
+  "scientific_question": "Do donors with worse memory decline show larger hypertrophic reactive astrocytes specifically in the CA1 pyramidal-neuron niche, beyond the burden, exposure, and crowding signals already in the panel?",
+  "approach": "For each donor, assign cells to CA1 using annotation polygons, identify CA1 Reactive Astrocytes and CA1 Pyramidal Neurons from cell labels, and compute contour area for each reactive astrocyte from its centered contour. Mark a reactive astrocyte as peripyramidal if its centroid lies within 30 microns of any CA1 pyramidal-neuron centroid. The donor biomarker is then a robust summary of the areas of these qualifying peripyramidal reactive astrocytes, expressed in square microns when slide MPP is available.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Median area of CA1 reactive astrocytes whose centroids are within 30 microns of any CA1 pyramidal neuron."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "75th percentile area of CA1 reactive astrocytes whose centroids are within 30 microns of any CA1 pyramidal neuron."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use CustomAnnotations polygons with coordinates divided by 16 before region assignment. Distances should be computed on centroid coordinates in the cell coordinate system. For contour area, subtract each contour's centroid before applying the shoelace formula to avoid float32 cancellation. Prefer slide-specific MPP from the paired SVS to convert 30 microns to pixels and pixel area to square microns; if unavailable, a cohort-stable approximation near 0.503 microns per pixel is acceptable. Return NaN only if there are zero qualifying peripyramidal reactive astrocytes.",
+  "rationale": "The accepted panel has improved by moving from overall CA1 reactive astrocyte burden to pyramidal-neighbor exposure and then to local reactive-astro crowding, so the next focused test should keep the same CA1 peripyramidal niche but change the feature summary to activation severity. Reactive astrocyte size is a simple morphology-based readout of hypertrophy that is biologically interpretable and plausibly additive to counts alone; it could also replace the global CA1 reactive astro fraction if perineuronal hypertrophy is a cleaner marker."
+}

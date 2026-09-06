@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"adjusted_score\" -n /shared/lib /shared/templates | sed -n '1,200p'",
+    "output_preview": "{\"exit_code\": 2, \"stdout\": \"/shared/lib/shared_analysis/artifacts.py:217:        \\\"adjusted_score\\\": _coalesce_result_values(\\n/shared/lib/shared_analysis/artifacts.py:218:            raw.get(\\\"adjusted_score\\\"),\\n/shared/lib/shared_analysis/artifacts.py:219:            metrics.get(\\\"adjusted_score\\\"),\\n/shared/lib/shared_analysis/artifacts.py:220:            best_variation.get(\\\"adjusted_score\\\"),\\n/shared/lib/shared_analysis/artifacts.py:265:            \\\"adjusted_score\\\": coerced[\\\"adjusted_score\\\"],\\n/shared/templates/worker_embedding_\", \"stderr\": \"grep: /shared/lib/shared_analysis/.___init__.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._context.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._stats.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._pca.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._artifacts.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._embedding_mechanistic.py: Operation not permitted\\ngrep: /shared/lib/shared_analysis/._sea_ad_lfb.py: Operat\"}"
+  }
+]

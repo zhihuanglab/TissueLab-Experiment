@@ -1,0 +1,82 @@
+Round 1 Details
+================================================================================
+
+Best model: combined_Ridge_a01
+Features: ['gland_patch_fraction', 'gland_to_tumor_ratio', 'gland_in_tumor_fraction', 'biomedparse_gland_area_frac']
+LOO Pearson r: 0.4367
+IS Pearson r: 0.6498
+Gap: 0.2132
+Adjusted: 0.4051
+
+All configurations:
+  combined_Ridge_a01: adj=0.4051 LOO_r=0.4367 IS_r=0.6498 gap=0.2132 F1=0.4637 QWK=0.3871
+  combined_Ridge_a1: adj=0.3903 LOO_r=0.4216 IS_r=0.6342 gap=0.2126 F1=0.3823 QWK=0.2759
+  combined_ElasticNet: adj=0.3872 LOO_r=0.4072 IS_r=0.5972 gap=0.1900 F1=0.3828 QWK=0.2308
+  combined_PLS2: adj=0.3859 LOO_r=0.3978 IS_r=0.5715 gap=0.1737 F1=0.3558 QWK=0.2222
+  top3_corr_PLS2: adj=0.3763 LOO_r=0.3783 IS_r=0.5323 gap=0.1540 F1=0.3778 QWK=0.2000
+  combined_Ridge_a10: adj=0.3725 LOO_r=0.3930 IS_r=0.5840 gap=0.1910 F1=0.3273 QWK=0.1600
+  top3_corr_Ridge_a10: adj=0.3617 LOO_r=0.3685 IS_r=0.5319 gap=0.1635 F1=0.2786 QWK=0.0833
+  top5_corr_PLS2: adj=0.3523 LOO_r=0.3663 IS_r=0.5445 gap=0.1782 F1=0.3081 QWK=0.0741
+  top3_corr_Ridge_a1: adj=0.3514 LOO_r=0.3620 IS_r=0.5331 gap=0.1711 F1=0.3347 QWK=0.1379
+  top3_corr_Ridge_a01: adj=0.3477 LOO_r=0.3595 IS_r=0.5331 gap=0.1736 F1=0.3111 QWK=0.1333
+  top5_corr_Ridge_a10: adj=0.3398 LOO_r=0.3586 IS_r=0.5462 gap=0.1876 F1=0.2692 QWK=0.0833
+  all_feats_ElasticNet: adj=0.3333 LOO_r=0.3769 IS_r=0.6142 gap=0.2373 F1=0.3077 QWK=0.1538
+  ratio_feats_PLS2: adj=0.3286 LOO_r=0.3428 IS_r=0.5211 gap=0.1783 F1=0.3111 QWK=0.1333
+  single_gland_in_tumor_fraction_Ridge_a0.1: adj=0.3085 LOO_r=0.3085 IS_r=0.4313 gap=0.1228 F1=0.2827 QWK=0.0870
+  top5_corr_ElasticNet: adj=0.3084 LOO_r=0.3387 IS_r=0.5494 gap=0.2107 F1=0.2692 QWK=0.0833
+  single_gland_in_tumor_fraction_Ridge_a1.0: adj=0.3071 LOO_r=0.3071 IS_r=0.4310 gap=0.1240 F1=0.2827 QWK=0.0870
+  single_gland_patch_fraction_Ridge_a0.1: adj=0.3042 LOO_r=0.3042 IS_r=0.4157 gap=0.1114 F1=0.1772 QWK=0.0833
+  single_gland_patch_fraction_Ridge_a1.0: adj=0.3028 LOO_r=0.3028 IS_r=0.4155 gap=0.1126 F1=0.1772 QWK=0.0833
+  top5_corr_Ridge_a1: adj=0.3015 LOO_r=0.3354 IS_r=0.5531 gap=0.2177 F1=0.2747 QWK=0.1481
+  ratio_feats_Ridge_a10: adj=0.2994 LOO_r=0.3257 IS_r=0.5282 gap=0.2025 F1=0.2619 QWK=0.0833
+  top3_corr_ElasticNet: adj=0.2992 LOO_r=0.3271 IS_r=0.5328 gap=0.2057 F1=0.2179 QWK=-0.0833
+  ratio_feats_ElasticNet: adj=0.2977 LOO_r=0.3249 IS_r=0.5292 gap=0.2043 F1=0.2521 QWK=0.0000
+  single_gland_in_tumor_fraction_Ridge_a10.0: adj=0.2902 LOO_r=0.2902 IS_r=0.4291 gap=0.1389 F1=0.2310 QWK=0.0000
+  ratio_feats_Ridge_a1: adj=0.2854 LOO_r=0.3258 IS_r=0.5564 gap=0.2307 F1=0.3111 QWK=0.1333
+  all_feats_PLS2: adj=0.2838 LOO_r=0.3330 IS_r=0.5814 gap=0.2484 F1=0.2655 QWK=0.0690
+  single_gland_patch_fraction_Ridge_a10.0: adj=0.2829 LOO_r=0.2829 IS_r=0.4148 gap=0.1319 F1=0.2315 QWK=0.0952
+  gland_only_ElasticNet: adj=0.2719 LOO_r=0.2719 IS_r=0.4148 gap=0.1429 F1=0.2315 QWK=0.0952
+  top5_corr_Ridge_a01: adj=0.2687 LOO_r=0.3144 IS_r=0.5559 gap=0.2415 F1=0.1849 QWK=-0.0769
+  gland_only_PLS2: adj=0.2387 LOO_r=0.2489 IS_r=0.4193 gap=0.1704 F1=0.1772 QWK=0.0833
+  gland_only_Ridge_a01: adj=0.2385 LOO_r=0.2488 IS_r=0.4192 gap=0.1705 F1=0.1772 QWK=0.0833
+  gland_only_Ridge_a1: adj=0.2370 LOO_r=0.2476 IS_r=0.4188 gap=0.1712 F1=0.1954 QWK=0.0870
+  ratio_feats_Ridge_a01: adj=0.2364 LOO_r=0.2951 IS_r=0.5626 gap=0.2674 F1=0.3518 QWK=0.1935
+  biomedparse_PLS2: adj=0.2198 LOO_r=0.2424 IS_r=0.4376 gap=0.1952 F1=0.2315 QWK=0.0952
+  biomedparse_Ridge_a01: adj=0.2193 LOO_r=0.2420 IS_r=0.4375 gap=0.1955 F1=0.2315 QWK=0.0952
+  biomedparse_Ridge_a1: adj=0.2149 LOO_r=0.2386 IS_r=0.4360 gap=0.1973 F1=0.2315 QWK=0.0952
+  gland_only_Ridge_a10: adj=0.2111 LOO_r=0.2295 IS_r=0.4164 gap=0.1869 F1=0.2315 QWK=0.0952
+  biomedparse_Ridge_a10: adj=0.1790 LOO_r=0.2090 IS_r=0.4189 gap=0.2099 F1=0.2315 QWK=0.0952
+  biomedparse_ElasticNet: adj=0.1468 LOO_r=0.1877 IS_r=0.4194 gap=0.2318 F1=0.2315 QWK=0.0952
+  single_total_patches_tumor_Ridge_a0.1: adj=0.1304 LOO_r=0.1392 IS_r=0.3067 gap=0.1676 F1=0.2315 QWK=0.0952
+  single_total_patches_tumor_Ridge_a1.0: adj=0.1251 LOO_r=0.1356 IS_r=0.3067 gap=0.1711 F1=0.2315 QWK=0.0952
+  single_total_patches_gland_Ridge_a0.1: adj=0.1225 LOO_r=0.1332 IS_r=0.3047 gap=0.1714 F1=0.2315 QWK=0.0952
+  single_total_patches_gland_Ridge_a1.0: adj=0.1172 LOO_r=0.1297 IS_r=0.3047 gap=0.1750 F1=0.2315 QWK=0.0952
+  single_tumor_patch_count_Ridge_a0.1: adj=0.0729 LOO_r=0.1027 IS_r=0.3123 gap=0.2096 F1=0.1709 QWK=-0.0952
+  single_total_patches_tumor_Ridge_a10.0: adj=0.0716 LOO_r=0.1000 IS_r=0.3067 gap=0.2068 F1=0.2315 QWK=0.0952
+  single_tumor_patch_count_Ridge_a1.0: adj=0.0681 LOO_r=0.0995 IS_r=0.3123 gap=0.2128 F1=0.1709 QWK=-0.0952
+  single_total_patches_gland_Ridge_a10.0: adj=0.0632 LOO_r=0.0937 IS_r=0.3047 gap=0.2110 F1=0.1667 QWK=0.0000
+  single_tumor_patch_count_Ridge_a10.0: adj=0.0197 LOO_r=0.0672 IS_r=0.3123 gap=0.2451 F1=0.1709 QWK=-0.0952
+  single_biomedparse_gland_area_frac_Ridge_a0.1: adj=0.0029 LOO_r=0.0400 IS_r=0.2642 gap=0.2242 F1=0.2135 QWK=0.0909
+  single_biomedparse_gland_area_frac_Ridge_a1.0: adj=-0.0032 LOO_r=0.0360 IS_r=0.2642 gap=0.2282 F1=0.2135 QWK=0.0909
+  single_gland_to_tumor_ratio_Ridge_a0.1: adj=-0.0471 LOO_r=0.0072 IS_r=0.2657 gap=0.2585 F1=0.1709 QWK=-0.0952
+  single_gland_to_tumor_ratio_Ridge_a1.0: adj=-0.0602 LOO_r=-0.0015 IS_r=0.2657 gap=0.2673 F1=0.1709 QWK=-0.0952
+  single_biomedparse_gland_area_frac_Ridge_a10.0: adj=-0.0636 LOO_r=-0.0043 IS_r=0.2642 gap=0.2685 F1=0.1667 QWK=0.0000
+  all_feats_Ridge_a1: adj=-1.0000 LOO_r=0.2742 IS_r=0.6527 gap=0.3785 F1=0.2811 QWK=0.0625
+  all_feats_Ridge_a10: adj=-1.0000 LOO_r=0.2992 IS_r=0.6031 gap=0.3038 F1=0.2201 QWK=0.0741
+  all_feats_Ridge_a01: adj=-1.0000 LOO_r=0.2061 IS_r=0.6711 gap=0.4650 F1=0.2297 QWK=0.0588
+  single_gland_to_tumor_ratio_Ridge_a10.0: adj=-1.0000 LOO_r=-0.0739 IS_r=0.2657 gap=0.3396 F1=0.1709 QWK=-0.0952
+
+Feature correlations:
+  gland_in_tumor_fraction: r=-0.4291
+  gland_patch_fraction: r=-0.4148
+  tumor_patch_count: r=+0.3123
+  total_patches_tumor: r=+0.3067
+  total_patches_gland: r=+0.3047
+  gland_to_tumor_ratio: r=-0.2657
+  biomedparse_gland_area_frac: r=-0.2642
+  biomedparse_gland_area_log: r=+0.2419
+  tumor_cell_fraction: r=+0.0715
+  tumor_patch_fraction: r=-0.0527
+  gland_patch_count: r=-0.0350
+  mean_gland_prob: r=+0.0000
+  mean_roi_tumor_density: r=+0.0000

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "patched merge columns\n",
+  "stderr": ""
+}

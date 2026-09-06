@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfor r in 3 4 5; do\n  base=\"/data/autoresearch_runs/run_20260421_001115_585b70/round_000${r}/round_000${r}_worker\"\n  echo \"--- round ${r} results.json ---\"\n  sed -n '1,220p' \"$base/results.json\"\n  echo\ndone",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- round 3 results.json ---\\n{\\n  \\\"status\\\": \\\"unknown\\\",\\n  \\\"feature_name\\\": \\\"ca1_pyramidal_cuffed_fraction_r35um_ge1\\\",\\n  \\\"outcome\\\": \\\"slope_zmem0\\\",\\n  \\\"n_total\\\": 35,\\n  \\\"n_analyzable\\\": 35,\\n  \\\"partial_r\\\": -0.5224246288415227,\\n  \\\"ci_lo\\\": -0.7832006035871949,\\n  \\\"ci_hi\\\": 0.008243077968159445,\\n  \\\"p_value\\\": 0.0012848637981406142,\\n  \\\"loo_predictive_r\\\": 0.3767904843395594,\\n  \\\"coverage_ratio\\\": 1.0,\\n  \\\"selection_score\\\": 0.5224,\\n  \\\"incumbent_score\\\": 0.5224,\\n  \\\"coverage_gate_passed\\\": true,\\n  \\\"bootstrap_stability_p\", \"stderr\": \"\"}"
+  }
+]

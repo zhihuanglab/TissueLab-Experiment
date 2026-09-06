@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"def build_cell_table\" -n /shared/lib/shared_analysis/sea_ad_lfb.py\nsed -n '280,430p' /shared/lib/shared_analysis/sea_ad_lfb.py\necho '--- assign helpers ---'\ngrep -n \"def assign_centroids_to_regions\" -n /shared/lib/shared_analysis/sea_ad_lfb.py\nsed -n '220,300p' /shared/lib/shared_analysis/sea_ad_lfb.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"215:def build_cell_table(\\n--- assign helpers ---\\n170:def assign_centroids_to_regions(\\n    scale: float = 16.0,\\n) -> pd.DataFrame:\\n    centroids = load_centroids(zarr_path)\\n    class_ids = load_class_ids(zarr_path)\\n    class_lookup = load_class_lookup(zarr_path)\\n    frame = pd.DataFrame(\\n        {\\n            \\\"cell_index\\\": np.arange(len(centroids)),\\n            \\\"x\\\": centroids[:, 0],\\n            \\\"y\\\": centroids[:, 1],\\n            \\\"class_id\\\": class_ids,\\n            \\\"cell_type\\\": [class_lookup.get(int\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\np=Path('/data/autoresearch_runs/run_20260421_001115_585b70/round_0009/round_0009_worker/result.py')\nprint(p.exists(), p)\ntxt=p.read_text()\nprint(txt[:5000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"True /data/autoresearch_runs/run_20260421_001115_585b70/round_0009/round_0009_worker/result.py\\nfrom __future__ import annotations\\n\\nimport json\\nimport math\\nimport sys\\nimport warnings\\nfrom pathlib import Path\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom scipy.spatial import cKDTree\\n\\nsys.path.append(\\\"/shared/lib\\\")\\nfrom shared_analysis import (  # noqa: E402\\n    build_cell_table,\\n    load_training_cohort,\\n    partial_correlation,\\n    write_donor_feature_table,\\n)\\n\\ntry:  # noqa: E402\\n    import opensl\", \"stderr\": \"\"}"
+  }
+]

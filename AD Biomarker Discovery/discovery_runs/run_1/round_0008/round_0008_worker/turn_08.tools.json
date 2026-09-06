@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfind /data/autoresearch_runs -name results.json | head -n 3\npython - <<'PY'\nimport json, glob\npaths=glob.glob('/data/autoresearch_runs/**/results.json', recursive=True)\nprint('n', len(paths))\nfor p in paths[:3]:\n    print('---', p)\n    with open(p) as f:\n        obj=json.load(f)\n    for k in ['best_variation','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','feature_column']:\n        if k in obj: print(k, obj[k])\n    if 'ranked_variations' in obj:\n        print('first var', obj['ranked_variations'][0])\nPY",
+    "output_preview": "{\"exit_code\": 141, \"stdout\": \"/data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/sandbox/results.json\\n/data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/results.json\\n/data/autoresearch_runs/run_20260410_155640_434a75/round_0001/round_0001_worker/sandbox/results.json\\n\", \"stderr\": \"\"}"
+  }
+]

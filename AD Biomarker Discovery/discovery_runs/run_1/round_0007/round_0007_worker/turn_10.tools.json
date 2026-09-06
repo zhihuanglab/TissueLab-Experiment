@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '150,320p' /shared/lib/shared_analysis/artifacts.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"                best_variation.get(\\\"feature_column\\\"),\\n                best_variation.get(\\\"name\\\"),\\n            )\\n            or \\\"unknown_feature\\\"\\n        ),\\n        \\\"outcome\\\": _coalesce_result_values(\\n            raw.get(\\\"outcome\\\"),\\n            raw.get(\\\"outcome_column\\\"),\\n            metrics.get(\\\"outcome\\\"),\\n            metrics.get(\\\"outcome_column\\\"),\\n        )\\n        or \\\"\\\",\\n        \\\"n_total\\\": raw.get(\\\"n_total\\\"),\\n        \\\"n_analyzable\\\": (\\n            raw.get(\\\"n_analyzable\\\", raw.get(\\\"analyzable_dono\", \"stderr\": \"\"}"
+  }
+]

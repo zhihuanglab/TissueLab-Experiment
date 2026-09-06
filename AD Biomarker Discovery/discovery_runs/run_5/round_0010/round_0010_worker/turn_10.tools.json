@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport scipy, tifffile, numpy\nprint('ok', scipy.__version__, tifffile.__version__)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"ok 1.17.1 2026.3.3\\n\", \"stderr\": \"\"}"
+  }
+]

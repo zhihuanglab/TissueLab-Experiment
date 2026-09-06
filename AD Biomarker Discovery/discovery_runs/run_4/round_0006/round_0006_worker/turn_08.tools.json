@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nPYTHONPATH=/shared/lib python - <<'PY'\nimport inspect, zarr\nfrom pathlib import Path\nfrom shared_analysis.sea_ad_lfb import build_cell_table\n\nprint('--- build_cell_table source snippet ---')\nsrc = inspect.getsource(build_cell_table)\nprint(src[:3500])\n\nslide = Path('/data/H19.33.004-A12-LFB.svs.zarr')\nprint('\\n--- sample cell table ---')\ndf = build_cell_table(slide, include_regions=True, include_geometry=False)\nprint('columns:', df.columns.tolist())\ncols=[c for c in ['cell_id','centroid_x','centroid_y','cell_type','region_label'] if c in df.columns]\nprint(df[cols].head().to_string(index=False))\nprint('n=', len(df))\nprint('CA1 cells=', int((df['region_label']=='CA1').sum()))\nprint('Reactive Astrocyte in CA1=', int(((df['region_label']=='CA1') & (df['cell_type']=='Reactive Astrocyte')).sum()))\nprint('Pyramidal in CA1=', int(((df['region_label']=='CA1') & (df['cell_type']=='Pyramidal Neuron')).sum()))\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

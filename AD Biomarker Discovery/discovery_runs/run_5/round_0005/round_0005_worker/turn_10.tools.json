@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- round4 results.json ---'\npython - <<'PY'\nimport json\npath='/data/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/results.json'\nwith open(path) as f: obj=json.load(f)\nfor k,v in obj.items():\n    if k not in ('ranked_variations','per_donor_loo'):\n        print(k,':',v)\nprint('ranked top:', obj.get('ranked_variations',[])[:3])\nprint('per_donor_loo sample:', obj.get('per_donor_loo',[])[:3])\nPY\necho '--- round4 report ---'\nsed -n '1,220p' /data/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/report.md\necho '--- round4 result.py ---'\nsed -n '1,260p' /data/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"2743748, 'ca1_peripyramidal_reactive_astro_area_p75_30um_um2': 30.066505920000004, 'abs_error': 0.00649623259971862}, {'donor_id': 'H20.33.046', 'outcome': -0.2017114, 'predicted': -0.09635790607735834, 'predicted_residual': 0.026835956614380208, 'actual_residual': -0.07851753730826147, 'ca1_peripyramidal_reactive_astro_area_p75_30um_um2': 21.26041632, 'abs_error': 0.10535349392264168}, {'donor_id': 'H21.33.001', 'outcome': -0.0815782, 'predicted': -0.03129468490323179, 'predicted_residual': -0.\", \"stderr\": \"\"}"
+  }
+]

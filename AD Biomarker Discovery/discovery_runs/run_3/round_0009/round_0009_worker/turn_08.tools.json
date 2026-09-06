@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nobj=json.load(open('/scratch/context_bundle.json'))\nslides=obj['slide_manifest_head']['slides']\nprint(slides[0].keys())\nfor s in slides[:2]:\n    print(s)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"dict_keys(['slide_name', 'slide_id', 'zarr_path', 'svs_path', 'n_cells', 'embedding_dim', 'class_labels', 'cohort_match_count', 'donor_id'])\\n{'slide_name': 'H19.33.004-A12-LFB.svs.zarr', 'slide_id': 'H19.33.004-A12-LFB', 'zarr_path': '/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H19.33.004-A12-LFB.svs.zarr', 'svs_path': '/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H19.33.004-A12-LFB.svs', 'n_cells': 263786, 'embedding_dim': 768, 'class_labels': ['Negative contr\", \"stderr\": \"\"}"
+  }
+]

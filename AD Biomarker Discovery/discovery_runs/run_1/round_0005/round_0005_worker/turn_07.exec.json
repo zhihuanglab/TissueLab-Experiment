@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "slide H19.33.004-A12-LFB.svs.zarr shape (263786, 6)\nclass counts top:\ncell_type\nOligodendrocyte       96697\nNegative control      63265\nPyramidal Neuron      47144\nAstrocyte             27662\nReactive Astrocyte    23329\nGranule Neuron         5182\nCorpora Amylacea        280\nLymphocyte              227\n\nregion counts:\nregion\nNaN    203780\nTEC     23864\nSB      13342\nCA1      9413\nEC       4632\nCA2      3175\nDG       2496\nCA4      2019\nCA3      1065\n\nhead:\n      x     y        cell_type region\n22901.0  43.0 Negative control    NaN\n23020.0  98.0 Negative control    NaN\n22719.0 306.0 Negative control    NaN\n22918.0 411.0 Pyramidal Neuron    NaN\n22902.0 418.0 Negative control    NaN\n",
+  "stderr": ""
+}

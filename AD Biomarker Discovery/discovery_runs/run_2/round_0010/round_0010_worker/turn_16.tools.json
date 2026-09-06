@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nfrom pathlib import Path\np=Path('/scratch/result.py')\ntext=p.read_text()\ntext=text.replace('            \"cognitive_status\": str(getattr(row, \"cognitive_status\")),\\n','')\np.write_text(text)\nPY\npython /scratch/result.py\necho\necho '--- results.json ---'\npython - <<'PY'\nimport json\nobj=json.load(open('/scratch/results.json'))\nprint(json.dumps({k: obj[k] for k in ['best_variation','feature_column','selection_score','partial_r','loo_predictive_r','n_analyzable','n_total']}, indent=2))\nprint('ranked_variations:', [x['name'] for x in obj['ranked_variations']])\nPY\necho\necho '--- report.md head ---'\nsed -n '1,220p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: ca1_reactive_hotspot_lymphocyte_enrichment\\nBEST VARIATION: reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3\\n  IS partial r:      0.1145\\n  Selection score:   0.0916\\n  LOO predictive r:  0.0486  (diagnostic)\\n  IS-LOO Gap:        0.0659  (penalty=0.0000)\\n  Adjusted Score:    0.0486\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3  0.1145  0.0916  0.0486\\n  reactive_mi\", \"stderr\": \"\"}"
+  }
+]

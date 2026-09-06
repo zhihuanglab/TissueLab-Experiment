@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- report.md ---'\nsed -n '1,240p' /scratch/report.md\necho '--- results.json head ---'\npython - <<'PY'\nimport json\nobj=json.load(open('/scratch/results.json'))\nfor k in ['best_variation','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score']:\n    print(k, obj.get(k))\nprint('ranked len', len(obj.get('ranked_variations',[])))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- report.md ---\\n## Summary\\nTested the ca1_conditional_immune_cuff_fraction family in CA1 pyramidal neurons, and the winner was ca1_conditional_immune_cuff_fraction_r50um_ra2_ly1 with local selection score 0.2779.\\n\\n## Metrics\\nWinning variation: ca1_conditional_immune_cuff_fraction_r50um_ra2_ly1.\\n- IS partial r: -0.2779\\n- Selection score: 0.2779\\n- LOO predictive r: 0.0755\\n- IS-LOO gap: 0.2024 (penalty=0.2024)\\n- Adjusted score: 0.0755\\n- n analyzable / total: 35 / 35\\n\\nRanking summary:\\n1. ca1_condi\", \"stderr\": \"\"}"
+  }
+]

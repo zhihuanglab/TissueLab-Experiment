@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis.stats import leave_one_out_partial_correlation\nprint(inspect.signature(leave_one_out_partial_correlation))\nprint(inspect.getsource(leave_one_out_partial_correlation)[:4000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"(df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]', id_col: 'str | None' = None) -> 'pd.DataFrame'\\ndef leave_one_out_partial_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n    id_col: str | None = None,\\n) -> pd.DataFrame:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds, *( [id_col] if id_col else [] )]).reset_index(drop=True)\\n    base = partial_correlation(\\n        frame,\\n     \", \"stderr\": \"\"}"
+  }
+]

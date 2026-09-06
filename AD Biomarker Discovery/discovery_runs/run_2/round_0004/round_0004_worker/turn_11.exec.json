@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "          reactive        astro\ncount    35.000000    35.000000\nmean    762.714286   925.314286\nstd     327.808729   605.244373\nmin     251.000000   236.000000\n25%     514.500000   561.500000\n50%     747.000000   755.000000\n75%     945.500000  1063.000000\nmax    1473.000000  2575.000000\ndonors with either class <20: Empty DataFrame\nColumns: [donor_id, reactive, astro]\nIndex: []\n",
+  "stderr": ""
+}

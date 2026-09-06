@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pandas as pd\nres=json.load(open('/scratch/results.json'))\nfor r in res['ranked_variations']:\n    print('\\n',r['name'])\n    for k in ['partial_r','p_value','ci_lo','ci_hi','selection_score','loo_predictive_r','gap','adjusted_score','bootstrap_median_partial_r','bootstrap_sign_consistency','loo_unstable_count','loo_max_shift']:\n        print(k, r[k])\ntable=pd.read_csv('/scratch/donor_feature_table.csv')\nprint('\\nFeature summary:')\nfor c in [col for col in table.columns if 'area_' in col and 'um2' in col and 'iqr' not in col and 'mean' not in col]:\n    print(c, table[c].describe())\nprint('\\ncounts summary', table['ca1_peripyramidal_reactive_astro_count_30um'].describe())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\n candidate_variant_a\\npartial_r -0.37545094595780576\\np_value 0.026246324999386884\\nci_lo -0.7132557119907088\\nci_hi 0.3828099168238322\\nselection_score 0.37545094595780576\\nloo_predictive_r 0.0995407657155956\\ngap 0.4749917116734014\\nadjusted_score -0.09954076571559561\\nbootstrap_median_partial_r -0.382975902821183\\nbootstrap_sign_consistency 0.93\\nloo_unstable_count 1\\nloo_max_shift 0.339987019199962\\n\\n candidate_variant_b\\npartial_r -0.23062708203036314\\np_value 0.18256216808565096\\nci_lo -0.565090723140778\", \"stderr\": \"\"}"
+  }
+]

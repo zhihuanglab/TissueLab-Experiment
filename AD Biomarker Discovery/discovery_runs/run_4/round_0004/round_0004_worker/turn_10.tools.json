@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nfor p in [Path('/shared/templates/worker_analysis_template.py'), Path('/shared/templates/worker_embedding_mechanistic_template.py')]:\n    print('---', p, '---')\n    txt=p.read_text()\n    for needle in ['Adjusted Score','selection_score','is_loo_gap']:\n        if needle in txt:\n            print('contains', needle)\n    lines=txt.splitlines()\n    for i,l in enumerate(lines):\n        if 'selection_score' in l or 'adjusted_score' in l or 'loo_predictive' in l:\n            print(i+1, l)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- /shared/templates/worker_analysis_template.py ---\\n--- /shared/templates/worker_embedding_mechanistic_template.py ---\\ncontains Adjusted Score\\ncontains selection_score\\ncontains is_loo_gap\\n73 def _adjusted_metrics(partial_r: float | None, loo_predictive_r: float | None) -> tuple[float, float, float]:\\n75     loo_r = abs(float(loo_predictive_r)) if loo_predictive_r is not None and np.isfinite(loo_predictive_r) else 0.0\\n83 def _selection_score(partial_r: float | None, n_analyzable: int | None, n_t\", \"stderr\": \"\"}"
+  }
+]

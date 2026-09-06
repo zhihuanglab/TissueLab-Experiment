@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pandas as pd, numpy as np\nfrom pathlib import Path\n\nresults = json.loads(Path('/scratch/results.json').read_text())\ndf = pd.read_csv('/scratch/donor_feature_table.csv')\nbest_col = results['feature_column']\nloo = pd.DataFrame(results['per_donor_loo'])\nloo['abs_error'] = (loo['outcome'] - loo['predicted']).abs()\nprint('best_col', best_col)\nprint('nonzero count', int((df[best_col] > 0).sum()), 'of', len(df))\nprint('feature summary')\nprint(df[best_col].describe().to_string())\nprint('\\nTop nonzero donors:')\nprint(df.loc[df[best_col] > 0, ['donor_id', best_col, 'n_ra_exposed_pyramidal_ca1', 'n_lymphocyte_ca1']].sort_values(best_col, ascending=False).to_string(index=False))\nprint('\\nLargest absolute LOO errors:')\nprint(loo.sort_values('abs_error', ascending=False).head(10).to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"best_col ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um\\nnonzero count 6 of 35\\nfeature summary\\ncount    35.000000\\nmean      0.001319\\nstd       0.003000\\nmin       0.000000\\n25%       0.000000\\n50%       0.000000\\n75%       0.000000\\nmax       0.009852\\n\\nTop nonzero donors:\\n  donor_id  ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um  n_ra_exposed_pyramidal_ca1  n_lymphocyte_ca1\\nH20.33.030                                        0.009852                         203                14\\nH20.33.027             \", \"stderr\": \"\"}"
+  }
+]

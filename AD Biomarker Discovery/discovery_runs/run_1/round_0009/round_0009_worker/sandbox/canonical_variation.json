@@ -1,0 +1,8 @@
+{
+  "name": "candidate_variant_b",
+  "label": "q20 within 80 px",
+  "description": "20th percentile of log1p(area) for CA1 pyramidal neurons within 80 px of any CA1 reactive astrocyte.",
+  "quantile": 0.2,
+  "radius_px": 80.0,
+  "feature_column": "ca1_pyramidal_reactive_astro_proximal_q20_log_area_80px"
+}

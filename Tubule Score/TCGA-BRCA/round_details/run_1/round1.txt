@@ -1,0 +1,49 @@
+Round 1 Details
+================================================================================
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_ratio: r=-0.415
+  gland_patch_count: r=+0.052
+  total_patch_count: r=+0.305
+  tumor_patch_count: r=+0.328
+  tumor_patch_ratio: r=-0.053
+  gland_mask_fraction: r=-0.264
+  gland_prob_mean: r=-0.234
+  tumor_cell_fraction: r=+0.071
+  gland_to_tumor_ratio: r=-0.266
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  minimal_ratio__PLS_2: adjusted=0.3044 (LOO r=0.304, gap=0.111) [F1=0.177 QWK=0.083]
+  minimal_ratio__Ridge_a1: adjusted=0.3028 (LOO r=0.303, gap=0.113) [F1=0.177 QWK=0.083]
+  minimal_ratio__ElasticNet: adjusted=0.2838 (LOO r=0.284, gap=0.131) [F1=0.232 QWK=0.095]
+  minimal_ratio__Ridge_a10: adjusted=0.2829 (LOO r=0.283, gap=0.132) [F1=0.232 QWK=0.095]
+  ratio_focused__PLS_2: adjusted=0.2658 (LOO r=0.300, gap=0.218) [F1=0.382 QWK=0.231]
+  ratio_focused__Ridge_a1: adjusted=0.2471 (LOO r=0.289, gap=0.233) [F1=0.382 QWK=0.231]
+  top2__Ridge_a1: adjusted=0.2456 (LOO r=0.254, gap=0.166) [F1=0.195 QWK=0.087]
+  top2__PLS_2: adjusted=0.2442 (LOO r=0.253, gap=0.167) [F1=0.177 QWK=0.083]
+  top2__Ridge_a10: adjusted=0.2439 (LOO r=0.251, gap=0.164) [F1=0.213 QWK=0.091]
+  all_features__PLS_2: adjusted=0.2389 (LOO r=0.295, gap=0.262) [F1=0.330 QWK=0.214]
+  gland_plus_tumor__PLS_2: adjusted=0.2277 (LOO r=0.275, gap=0.244) [F1=0.311 QWK=0.154]
+  top2__ElasticNet: adjusted=0.2262 (LOO r=0.240, gap=0.177) [F1=0.213 QWK=0.091]
+  ratio_focused__Ridge_a10: adjusted=0.2134 (LOO r=0.264, gap=0.251) [F1=0.213 QWK=0.000]
+  gland_only__Ridge_a1: adjusted=0.1991 (LOO r=0.238, gap=0.228) [F1=0.213 QWK=0.091]
+  gland_plus_tumor__Ridge_a1: adjusted=0.1859 (LOO r=0.248, gap=0.274) [F1=0.356 QWK=0.222]
+  gland_only__Ridge_a10: adjusted=0.1795 (LOO r=0.219, gap=0.228) [F1=0.232 QWK=0.095]
+  gland_only__ElasticNet: adjusted=0.1778 (LOO r=0.216, gap=0.226) [F1=0.213 QWK=0.091]
+  gland_plus_tumor__Ridge_a10: adjusted=0.1720 (LOO r=0.237, gap=0.280) [F1=0.199 QWK=0.000]
+  gland_only__PLS_2: adjusted=0.1651 (LOO r=0.214, gap=0.247) [F1=0.213 QWK=0.091]
+  ratio_focused__ElasticNet: adjusted=0.1395 (LOO r=0.214, gap=0.300) [F1=0.213 QWK=0.000]
+  minimal_mask__PLS_2: adjusted=0.0035 (LOO r=0.040, gap=0.224) [F1=0.213 QWK=0.091]
+  minimal_mask__Ridge_a1: adjusted=-0.0032 (LOO r=0.036, gap=0.228) [F1=0.213 QWK=0.091]
+  minimal_mask__Ridge_a10: adjusted=-0.0636 (LOO r=-0.004, gap=0.269) [F1=0.167 QWK=0.000]
+  minimal_prob__PLS_2: adjusted=-0.0961 (LOO r=-0.036, gap=0.270) [F1=0.167 QWK=0.000]
+  minimal_prob__Ridge_a1: adjusted=-0.1037 (LOO r=-0.041, gap=0.275) [F1=0.167 QWK=0.000]
+  minimal_mask__ElasticNet: adjusted=-1.0000 (LOO r=-0.048, gap=0.313) [F1=0.167 QWK=0.000]
+  minimal_prob__Ridge_a10: adjusted=-1.0000 (LOO r=-0.087, gap=0.321) [F1=0.167 QWK=0.000]
+  minimal_prob__ElasticNet: adjusted=-1.0000 (LOO r=-0.154, gap=0.388) [F1=0.167 QWK=0.000]
+  all_features__Ridge_a1: adjusted=-1.0000 (LOO r=0.193, gap=0.379) [F1=0.240 QWK=0.077]
+  all_features__Ridge_a10: adjusted=-1.0000 (LOO r=0.246, gap=0.319) [F1=0.240 QWK=0.077]
+  all_features__ElasticNet: adjusted=-1.0000 (LOO r=0.211, gap=0.354) [F1=0.278 QWK=0.083]
+  gland_plus_tumor__ElasticNet: adjusted=-1.0000 (LOO r=0.193, gap=0.322) [F1=0.213 QWK=0.000]
+
+BEST: minimal_ratio__PLS_2 adjusted=0.3044

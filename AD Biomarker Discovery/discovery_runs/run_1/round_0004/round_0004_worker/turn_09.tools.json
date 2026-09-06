@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ncat > /scratch/_inspect.py <<'PY'\nimport sys, os, inspect\nprint('PYTHONPATH env', os.environ.get('PYTHONPATH'))\nprint(sys.path[:8])\nimport shared_analysis\nfrom shared_analysis import sea_ad_lfb\nprint(shared_analysis.__file__)\nprint(inspect.signature(sea_ad_lfb.build_cell_table))\nPY\nPYTHONPATH=/shared/lib /usr/local/bin/python3 /scratch/_inspect.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"PYTHONPATH env /shared/lib\\n['/scratch', '/shared/lib', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\\n/shared/lib/shared_analysis/__init__.py\\n(zarr_path: 'str | Path', *, include_regions: 'bool' = True, include_geometry: 'bool' = False, scale: 'float' = 16.0) -> 'pd.DataFrame'\\n\", \"stderr\": \"\"}"
+  }
+]

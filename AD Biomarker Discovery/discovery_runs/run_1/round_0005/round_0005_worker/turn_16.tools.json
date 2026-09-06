@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\necho '--- results.json ---'\npython - <<'PY'\nimport json\nwith open('/scratch/results.json') as f:\n    obj=json.load(f)\nfor k in ['best_variation','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','gap_penalty','adjusted_score']:\n    print(k, ':', obj.get(k))\nprint('ranked n', len(obj.get('ranked_variations', [])))\nprint('first ranked keys', obj['ranked_variations'][0].keys())\nPY\necho '--- report.md ---'\nsed -n '1,260p' /scratch/report.md\necho '--- donor_feature_table columns ---'\npython - <<'PY'\nimport pandas as pd\ndf=pd.read_csv('/scratch/donor_feature_table.csv')\nprint(df.columns.tolist())\nprint(df.head(2).to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- results.json ---\\nbest_variation : encirclement_k3_60px\\nfeature_column : feature_value\\npartial_r : -0.5255177160618639\\nselection_score : 0.5255177160618639\\nloo_predictive_r : 0.4064169563168586\\nis_loo_gap : 0.11910075974500534\\ngap_penalty : 0.0\\nadjusted_score : 0.4064169563168586\\nranked n 3\\nfirst ranked keys dict_keys(['name', 'description', 'k', 'radius_px', 'feature_column', 'n_total', 'n_analyzable', 'partial_r', 'p_value', 'ci_lo', 'ci_hi', 'selection_score', 'loo_predictive_r', 'is_loo_g\", \"stderr\": \"\"}"
+  }
+]

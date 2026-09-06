@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"def write_donor_feature_table\" -n /shared/lib/shared_analysis/artifacts.py\nsed -n '300,380p' /shared/lib/shared_analysis/artifacts.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"332:def write_donor_feature_table(\\n    if not isinstance(artifacts, dict):\\n        raise ValueError(\\\"Results payload requires artifacts as an object\\\")\\n    if not isinstance(results.get(\\\"recomputed_from_raw\\\"), bool):\\n        raise ValueError(\\\"Results payload requires boolean recomputed_from_raw\\\")\\n    if not isinstance(results.get(\\\"registry_written\\\"), bool):\\n        raise ValueError(\\\"Results payload requires boolean registry_written\\\")\\n\\n\\ndef validate_donor_feature_table_columns(\\n    columns: Any,\\n \", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\npayload=json.load(open('/scratch/results.json'))\nfor r in payload['ranked_variations']:\n    print(r)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"{'variation_name': 'candidate_variant_a', 'description': 'Reactive Astrocyte / (Astrocyte + Reactive Astrocyte) within CA1', 'regions': ['CA1'], 'feature_column': 'ca1_reactive_astro_fraction', 'partial_r': -0.49138642466817395, 'selection_score': 0.49138642466817395, 'loo_predictive_r': 0.3597702434171406, 'gap': 0.13161618125103336, 'gap_penalty': 0.0, 'adjusted_score': 0.49138642466817395, 'n_analyzable': 35, 'n_total': 35, 'p_value': 0.0027206212123134102}\\n{'variation_name': 'candidate_varia\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,271 @@
+{
+  "hypothesis_family": "CA1 peripyramidal reactive-astrocyte total area burden around CA1 pyramidal neurons",
+  "best_variation": "mean_total_reactive_area_r35um",
+  "feature_name": "ca1_pyramidal_mean_total_reactive_area_r35um",
+  "feature_column": "ca1_pyramidal_mean_total_reactive_area_r35um",
+  "partial_r": -0.5438190234145125,
+  "selection_score": 0.5438190234145125,
+  "loo_predictive_r": 0.41461190024785666,
+  "is_loo_gap": 0.12920712316665584,
+  "gap_penalty": 0.0,
+  "adjusted_score": 0.41461190024785666,
+  "ranked_variations": [
+    {
+      "variation_name": "mean_total_reactive_area_r35um",
+      "feature_name": "ca1_pyramidal_mean_total_reactive_area_r35um",
+      "feature_column": "ca1_pyramidal_mean_total_reactive_area_r35um",
+      "description": "Mean per-CA1-pyramidal-neuron summed reactive-astrocyte contour area within 35 \u00b5m",
+      "radius_um": 35.0,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "partial_r": -0.5438190234145125,
+      "p_value": 0.0007339793134904789,
+      "bootstrap_sign_consistency": null,
+      "bootstrap_median_partial_r": null,
+      "ci_lo": -0.8010279583399059,
+      "ci_hi": 0.0493225910285255,
+      "selection_score": 0.5438190234145125,
+      "loo_predictive_r": 0.41461190024785666,
+      "is_loo_gap": 0.12920712316665584,
+      "gap_penalty": 0.0,
+      "adjusted_score": 0.41461190024785666,
+      "loo_unstable_count": 1,
+      "loo_max_shift": 0.25710091073035946
+    },
+    {
+      "variation_name": "mean_total_reactive_area_r45um",
+      "feature_name": "ca1_pyramidal_mean_total_reactive_area_r45um",
+      "feature_column": "ca1_pyramidal_mean_total_reactive_area_r45um",
+      "description": "Mean per-CA1-pyramidal-neuron summed reactive-astrocyte contour area within 45 \u00b5m",
+      "radius_um": 45.0,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "partial_r": -0.5434897430656591,
+      "p_value": 0.0007405416045289902,
+      "bootstrap_sign_consistency": null,
+      "bootstrap_median_partial_r": null,
+      "ci_lo": -0.8015705166410265,
+      "ci_hi": 0.046148460926481005,
+      "selection_score": 0.5434897430656591,
+      "loo_predictive_r": 0.4124322640011388,
+      "is_loo_gap": 0.1310574790645203,
+      "gap_penalty": 0.0,
+      "adjusted_score": 0.4124322640011388,
+      "loo_unstable_count": 1,
+      "loo_max_shift": 0.2538137997465896
+    }
+  ],
+  "winner_loo_table": [
+    {
+      "donor_id": "H19.33.004",
+      "outcome": -0.0587685,
+      "predicted": -0.06951762301182396,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 5.207249740063511
+    },
+    {
+      "donor_id": "H20.33.008",
+      "outcome": -0.1205063,
+      "predicted": -0.1037302166839695,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 3.6871568678912467
+    },
+    {
+      "donor_id": "H20.33.013",
+      "outcome": -0.0317417,
+      "predicted": -0.08716374851533912,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 3.441969133077671
+    },
+    {
+      "donor_id": "H20.33.018",
+      "outcome": -0.3042141,
+      "predicted": -0.1819168116028583,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 19.698507094588237
+    },
+    {
+      "donor_id": "H20.33.024",
+      "outcome": -0.0103346,
+      "predicted": -0.08068485360338716,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 3.799103598361504
+    },
+    {
+      "donor_id": "H20.33.025",
+      "outcome": -0.0723104,
+      "predicted": -0.11130045931362191,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 5.3646418759894585
+    },
+    {
+      "donor_id": "H20.33.027",
+      "outcome": -0.1125932,
+      "predicted": -0.1491247938923282,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 7.560080919094077
+    },
+    {
+      "donor_id": "H20.33.029",
+      "outcome": -0.0948095,
+      "predicted": -0.12733782792940618,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 5.982262956025919
+    },
+    {
+      "donor_id": "H20.33.030",
+      "outcome": -0.1680423,
+      "predicted": -0.1382878625432077,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 6.939764415866737
+    },
+    {
+      "donor_id": "H20.33.034",
+      "outcome": -0.0522007,
+      "predicted": -0.035022774689639394,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 1.504782657767107
+    },
+    {
+      "donor_id": "H20.33.037",
+      "outcome": -0.2508045,
+      "predicted": -0.17813860401251247,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 10.596318297358492
+    },
+    {
+      "donor_id": "H20.33.038",
+      "outcome": -0.2372091,
+      "predicted": -0.16902846528930915,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 10.42718351362429
+    },
+    {
+      "donor_id": "H20.33.040",
+      "outcome": -0.1026342,
+      "predicted": -0.153373270767953,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 7.991156308235293
+    },
+    {
+      "donor_id": "H20.33.041",
+      "outcome": -0.1079018,
+      "predicted": -0.11502367350298598,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 5.331940628757764
+    },
+    {
+      "donor_id": "H20.33.043",
+      "outcome": -0.0599597,
+      "predicted": -0.06287466419627613,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 4.362201095299735
+    },
+    {
+      "donor_id": "H20.33.044",
+      "outcome": -0.0544588,
+      "predicted": -0.04041789563958299,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 3.827177841169103
+    },
+    {
+      "donor_id": "H20.33.046",
+      "outcome": -0.2017114,
+      "predicted": -0.09190141982851663,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 3.571093672303207
+    },
+    {
+      "donor_id": "H21.33.001",
+      "outcome": -0.0815782,
+      "predicted": -0.050087403591618895,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 7.051232003386244
+    },
+    {
+      "donor_id": "H21.33.004",
+      "outcome": -0.1198253,
+      "predicted": -0.05164814886397589,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 6.968282471847135
+    },
+    {
+      "donor_id": "H21.33.006",
+      "outcome": -0.0539668,
+      "predicted": -0.16839180651653937,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 11.157697126502178
+    },
+    {
+      "donor_id": "H21.33.007",
+      "outcome": -0.0975144,
+      "predicted": -0.17776604326376644,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 10.001248526275095
+    },
+    {
+      "donor_id": "H21.33.012",
+      "outcome": -0.1009244,
+      "predicted": -0.05881984491111932,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 1.63541664
+    },
+    {
+      "donor_id": "H21.33.013",
+      "outcome": -0.161261,
+      "predicted": -0.1012614617037934,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 4.653880279024391
+    },
+    {
+      "donor_id": "H21.33.018",
+      "outcome": -0.144019,
+      "predicted": -0.007831105376219935,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 1.9976434479641054
+    },
+    {
+      "donor_id": "H21.33.021",
+      "outcome": -0.0983582,
+      "predicted": -0.09032160576177861,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 4.735956286652269
+    },
+    {
+      "donor_id": "H21.33.023",
+      "outcome": -0.1546294,
+      "predicted": -0.03980110491872008,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 3.8638582400000008
+    },
+    {
+      "donor_id": "H21.33.025",
+      "outcome": -0.0422854,
+      "predicted": -0.11398672424630138,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 5.817064598328151
+    },
+    {
+      "donor_id": "H21.33.033",
+      "outcome": -0.0466362,
+      "predicted": -0.08726790731874826,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 2.8300466242583875
+    },
+    {
+      "donor_id": "H21.33.035",
+      "outcome": -0.0498238,
+      "predicted": -0.10898231007922392,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 2.2351764155056184
+    },
+    {
+      "donor_id": "H21.33.037",
+      "outcome": -0.0881349,
+      "predicted": -0.08326181418507844,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 6.126789998297873
+    },
+    {
+      "donor_id": "H21.33.038",
+      "outcome": -0.0518276,
+      "predicted": -0.06708493044765657,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 5.705076673562388
+    },
+    {
+      "donor_id": "H21.33.040",
+      "outcome": -0.0327944,
+      "predicted": -0.09108212664773505,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 2.2106927183764795
+    },
+    {
+      "donor_id": "H21.33.043",
+      "outcome": -0.072355,
+      "predicted": -0.13882505594890487,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 9.265477860459184
+    },
+    {
+      "donor_id": "H21.33.044",
+      "outcome": -0.0991281,
+      "predicted": -0.138025799120972,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 5.388143075141885
+    },
+    {
+      "donor_id": "H21.33.046",
+      "outcome": -0.1616234,
+      "predicted": -0.10070001446804924,
+      "ca1_pyramidal_mean_total_reactive_area_r35um": 4.910275560960001
+    }
+  ],
+  "donor_feature_table": "/scratch/donor_feature_table.csv"
+}

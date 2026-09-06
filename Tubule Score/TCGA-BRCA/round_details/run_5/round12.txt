@@ -1,0 +1,273 @@
+Round 12 Details
+============================================================
+
+HYPOTHESIS: Mean 5-NN distance among tumor cells captures glandular organization.
+Well-differentiated tumors have closely packed cells in tubular structures.
+Combined with gpf, logntc, and LOO-safe PLS on tumor embeddings.
+
+FEATURE-GT CORRELATIONS:
+  gpf: r=-0.4148
+  logntc: r=+0.3692
+  bp_area_frac: r=-0.2645
+  mean_knn_dist_um: r=+0.2104
+  density_cv: r=-0.0237
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  gpf_logntc_tpls2_r20.0: adjusted=0.4852 (LOO r=0.5598, IS r=0.8589, gap=0.2992) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  logntc_tpls1_r5.0: adjusted=0.4803 (LOO r=0.5349, IS r=0.7941, gap=0.2592) [F1=0.4304 QWK=0.3846 Acc=0.4667]
+  logntc_tpls1_r10.0: adjusted=0.4756 (LOO r=0.5285, IS r=0.7843, gap=0.2558) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  logntc_tpls1_r20.0: adjusted=0.4622 (LOO r=0.5150, IS r=0.7705, gap=0.2555) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  gpf_logntc_tpls1_r20.0: adjusted=0.4510 (LOO r=0.5043, IS r=0.7607, gap=0.2565) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_tpls1_r10.0: adjusted=0.4494 (LOO r=0.5104, IS r=0.7824, gap=0.2720) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_tpls1_r30.0: adjusted=0.4453 (LOO r=0.4945, IS r=0.7429, gap=0.2484) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  logntc_tpls1_r30.0: adjusted=0.4452 (LOO r=0.5011, IS r=0.7630, gap=0.2619) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  gpf_logntc_bp_tpls1_r10.0: adjusted=0.4426 (LOO r=0.5082, IS r=0.7894, gap=0.2812) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  gpf_logntc_bp_tpls1_r20.0: adjusted=0.4416 (LOO r=0.5004, IS r=0.7681, gap=0.2677) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_bp_dcv_r0.5: adjusted=0.4360 (LOO r=0.4422, IS r=0.6045, gap=0.1623) [F1=0.3155 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_bp_dcv_r1.0: adjusted=0.4360 (LOO r=0.4420, IS r=0.6040, gap=0.1620) [F1=0.3155 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_bp_tpls1_r30.0: adjusted=0.4352 (LOO r=0.4902, IS r=0.7502, gap=0.2600) [F1=0.2783 QWK=0.1739 Acc=0.3667]
+  gpf_logntc_tpls1_r5.0: adjusted=0.4339 (LOO r=0.5054, IS r=0.7982, gap=0.2929) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  gpf_logntc_bp_dcv_r5.0: adjusted=0.4293 (LOO r=0.4358, IS r=0.5987, gap=0.1629) [F1=0.3553 QWK=0.3077 Acc=0.4000]
+  gpf_logntc_tpls1_r50.0: adjusted=0.4218 (LOO r=0.4741, IS r=0.7287, gap=0.2546) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_bp_tpls1_r50.0: adjusted=0.4200 (LOO r=0.4716, IS r=0.7249, gap=0.2532) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_bp_dcv_r10.0: adjusted=0.4152 (LOO r=0.4241, IS r=0.5918, gap=0.1677) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_bp_r5.0: adjusted=0.4124 (LOO r=0.4124, IS r=0.5451, gap=0.1327) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_knn_tpls1_r20.0: adjusted=0.4113 (LOO r=0.4773, IS r=0.7595, gap=0.2821) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_bp_r1.0: adjusted=0.4107 (LOO r=0.4107, IS r=0.5464, gap=0.1357) [F1=0.2677 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_bp_r0.5: adjusted=0.4100 (LOO r=0.4100, IS r=0.5466, gap=0.1365) [F1=0.2677 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_knn_bp_tpls1_r20.0: adjusted=0.4083 (LOO r=0.4781, IS r=0.7678, gap=0.2897) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_knn_tpls1_r30.0: adjusted=0.4079 (LOO r=0.4689, IS r=0.7410, gap=0.2721) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  gpf_logntc_bp_r10.0: adjusted=0.4075 (LOO r=0.4075, IS r=0.5443, gap=0.1368) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  logntc_tpls1_r50.0: adjusted=0.4031 (LOO r=0.4726, IS r=0.7615, gap=0.2889) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_knn_bp_tpls1_r30.0: adjusted=0.4015 (LOO r=0.4676, IS r=0.7497, gap=0.2821) [F1=0.2783 QWK=0.1739 Acc=0.3667]
+  gpf_logntc_r0.5: adjusted=0.3997 (LOO r=0.3997, IS r=0.5161, gap=0.1165) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_r1.0: adjusted=0.3991 (LOO r=0.3991, IS r=0.5161, gap=0.1170) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_r5.0: adjusted=0.3946 (LOO r=0.3946, IS r=0.5161, gap=0.1216) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_bp_r20.0: adjusted=0.3942 (LOO r=0.3942, IS r=0.5430, gap=0.1488) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gpf_logntc_knn_bp_tpls1_r50.0: adjusted=0.3928 (LOO r=0.4522, IS r=0.7210, gap=0.2688) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  gpf_logntc_knn_tpls1_r50.0: adjusted=0.3890 (LOO r=0.4505, IS r=0.7235, gap=0.2730) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  gpf_logntc_r10.0: adjusted=0.3881 (LOO r=0.3881, IS r=0.5161, gap=0.1281) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_bp_dcv_r20.0: adjusted=0.3817 (LOO r=0.3994, IS r=0.5848, gap=0.1854) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  all5_r1.0: adjusted=0.3788 (LOO r=0.4047, IS r=0.6064, gap=0.2017) [F1=0.3155 QWK=0.2857 Acc=0.3333]
+  all5_r0.5: adjusted=0.3779 (LOO r=0.4042, IS r=0.6070, gap=0.2027) [F1=0.3155 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_dcv_r0.5: adjusted=0.3751 (LOO r=0.3817, IS r=0.5448, gap=0.1631) [F1=0.3254 QWK=0.3333 Acc=0.3333]
+  gpf_logntc_dcv_r1.0: adjusted=0.3748 (LOO r=0.3814, IS r=0.5447, gap=0.1633) [F1=0.3470 QWK=0.3448 Acc=0.3667]
+  gpf_logntc_r20.0: adjusted=0.3734 (LOO r=0.3734, IS r=0.5161, gap=0.1427) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  all5_r5.0: adjusted=0.3734 (LOO r=0.3991, IS r=0.6007, gap=0.2015) [F1=0.2911 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_knn_bp_r5.0: adjusted=0.3687 (LOO r=0.3783, IS r=0.5473, gap=0.1691) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_knn_bp_r10.0: adjusted=0.3670 (LOO r=0.3766, IS r=0.5457, gap=0.1691) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_dcv_r5.0: adjusted=0.3664 (LOO r=0.3752, IS r=0.5428, gap=0.1677) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_knn_bp_r1.0: adjusted=0.3659 (LOO r=0.3767, IS r=0.5485, gap=0.1718) [F1=0.2677 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_knn_bp_r0.5: adjusted=0.3651 (LOO r=0.3762, IS r=0.5485, gap=0.1723) [F1=0.2470 QWK=0.2143 Acc=0.2667]
+  logntc_knn_bp_r0.5: adjusted=0.3617 (LOO r=0.3640, IS r=0.5187, gap=0.1547) [F1=0.2470 QWK=0.2143 Acc=0.2667]
+  all5_r10.0: adjusted=0.3616 (LOO r=0.3882, IS r=0.5915, gap=0.2033) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  logntc_knn_bp_r1.0: adjusted=0.3587 (LOO r=0.3621, IS r=0.5187, gap=0.1567) [F1=0.2714 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_bp_tpls1_r100.0: adjusted=0.3548 (LOO r=0.4239, IS r=0.7120, gap=0.2881) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_knn_bp_r20.0: adjusted=0.3528 (LOO r=0.3665, IS r=0.5438, gap=0.1773) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  gpf_logntc_dcv_r10.0: adjusted=0.3508 (LOO r=0.3639, IS r=0.5401, gap=0.1762) [F1=0.3553 QWK=0.3077 Acc=0.4000]
+  gpf_logntc_knn_r0.5: adjusted=0.3498 (LOO r=0.3555, IS r=0.5169, gap=0.1614) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_knn_r1.0: adjusted=0.3495 (LOO r=0.3553, IS r=0.5169, gap=0.1616) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_tpls1_r100.0: adjusted=0.3484 (LOO r=0.4219, IS r=0.7189, gap=0.2970) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_dcv_r0.5: adjusted=0.3482 (LOO r=0.3501, IS r=0.5041, gap=0.1540) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_knn_r5.0: adjusted=0.3453 (LOO r=0.3524, IS r=0.5164, gap=0.1641) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_dcv_r1.0: adjusted=0.3448 (LOO r=0.3479, IS r=0.5039, gap=0.1561) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_knn_r10.0: adjusted=0.3381 (LOO r=0.3473, IS r=0.5156, gap=0.1683) [F1=0.3553 QWK=0.3077 Acc=0.4000]
+  logntc_knn_bp_r5.0: adjusted=0.3365 (LOO r=0.3471, IS r=0.5181, gap=0.1710) [F1=0.2911 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_knn_bp_tpls1_r100.0: adjusted=0.3354 (LOO r=0.4097, IS r=0.7083, gap=0.2986) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  all5_r20.0: adjusted=0.3330 (LOO r=0.3660, IS r=0.5820, gap=0.2160) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  gpf_logntc_bp_r50.0: adjusted=0.3271 (LOO r=0.3483, IS r=0.5405, gap=0.1923) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_knn_r20.0: adjusted=0.3200 (LOO r=0.3347, IS r=0.5139, gap=0.1793) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_logntc_dcv_r20.0: adjusted=0.3175 (LOO r=0.3403, IS r=0.5359, gap=0.1956) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_dcv_r5.0: adjusted=0.3171 (LOO r=0.3283, IS r=0.5008, gap=0.1725) [F1=0.2185 QWK=0.0909 Acc=0.3333]
+  logntc_knn_bp_r10.0: adjusted=0.3112 (LOO r=0.3298, IS r=0.5168, gap=0.1870) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  gpf_only_r0.5: adjusted=0.3036 (LOO r=0.3036, IS r=0.4156, gap=0.1120) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  gpf_only_r1.0: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  gpf_logntc_knn_dcv_r0.5: adjusted=0.3028 (LOO r=0.3335, IS r=0.5449, gap=0.2114) [F1=0.2885 QWK=0.2759 Acc=0.3000]
+  gpf_logntc_knn_dcv_r1.0: adjusted=0.3028 (LOO r=0.3334, IS r=0.5448, gap=0.2114) [F1=0.3096 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_r50.0: adjusted=0.3013 (LOO r=0.3229, IS r=0.5161, gap=0.1932) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_knn_dcv_r5.0: adjusted=0.2962 (LOO r=0.3282, IS r=0.5422, gap=0.2140) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_only_r5.0: adjusted=0.2957 (LOO r=0.2957, IS r=0.4148, gap=0.1191) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_knn_bp_dcv_r0.5: adjusted=0.2953 (LOO r=0.3389, IS r=0.5761, gap=0.2372) [F1=0.2593 QWK=0.1667 Acc=0.3333]
+  gpf_logntc_knn_bp_r50.0: adjusted=0.2951 (LOO r=0.3271, IS r=0.5409, gap=0.2139) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_knn_bp_dcv_r1.0: adjusted=0.2936 (LOO r=0.3377, IS r=0.5758, gap=0.2382) [F1=0.2593 QWK=0.1667 Acc=0.3333]
+  gpf_logntc_bp_dcv_r50.0: adjusted=0.2850 (LOO r=0.3307, IS r=0.5721, gap=0.2414) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_only_r10.0: adjusted=0.2829 (LOO r=0.2829, IS r=0.4148, gap=0.1319) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_knn_dcv_r10.0: adjusted=0.2829 (LOO r=0.3180, IS r=0.5381, gap=0.2202) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_knn_r0.5: adjusted=0.2772 (LOO r=0.2845, IS r=0.4490, gap=0.1645) [F1=0.2434 QWK=0.1667 Acc=0.3333]
+  gpf_knn_r1.0: adjusted=0.2767 (LOO r=0.2841, IS r=0.4489, gap=0.1648) [F1=0.2434 QWK=0.1667 Acc=0.3333]
+  gpf_knn_bp_dcv_r5.0: adjusted=0.2763 (LOO r=0.3238, IS r=0.5688, gap=0.2450) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  gpf_dcv_r10.0: adjusted=0.2759 (LOO r=0.2997, IS r=0.4972, gap=0.1975) [F1=0.2185 QWK=0.0909 Acc=0.3333]
+  gpf_knn_r5.0: adjusted=0.2722 (LOO r=0.2805, IS r=0.4470, gap=0.1665) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gpf_knn_dcv_r0.5: adjusted=0.2720 (LOO r=0.3026, IS r=0.5138, gap=0.2113) [F1=0.2911 QWK=0.2308 Acc=0.3333]
+  gpf_knn_dcv_r1.0: adjusted=0.2698 (LOO r=0.3011, IS r=0.5136, gap=0.2126) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  logntc_knn_bp_r20.0: adjusted=0.2648 (LOO r=0.2979, IS r=0.5141, gap=0.2162) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_knn_r10.0: adjusted=0.2616 (LOO r=0.2732, IS r=0.4466, gap=0.1733) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gpf_logntc_knn_dcv_r20.0: adjusted=0.2544 (LOO r=0.2967, IS r=0.5314, gap=0.2346) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_logntc_knn_r50.0: adjusted=0.2541 (LOO r=0.2895, IS r=0.5103, gap=0.2209) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_knn_bp_dcv_r10.0: adjusted=0.2537 (LOO r=0.3039, IS r=0.5543, gap=0.2504) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  gpf_only_r20.0: adjusted=0.2528 (LOO r=0.2568, IS r=0.4148, gap=0.1580) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_knn_dcv_r5.0: adjusted=0.2512 (LOO r=0.2870, IS r=0.5086, gap=0.2216) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  all5_r50.0: adjusted=0.2488 (LOO r=0.3050, IS r=0.5673, gap=0.2623) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  logntc_only_r0.5: adjusted=0.2364 (LOO r=0.2364, IS r=0.3692, gap=0.1328) [F1=0.2733 QWK=0.1739 Acc=0.3667]
+  logntc_only_r1.0: adjusted=0.2348 (LOO r=0.2348, IS r=0.3692, gap=0.1344) [F1=0.2733 QWK=0.1739 Acc=0.3667]
+  gpf_knn_bp_r10.0: adjusted=0.2314 (LOO r=0.2576, IS r=0.4601, gap=0.2025) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_knn_bp_r5.0: adjusted=0.2295 (LOO r=0.2576, IS r=0.4639, gap=0.2063) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  gpf_knn_r20.0: adjusted=0.2288 (LOO r=0.2513, IS r=0.4465, gap=0.1951) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_knn_bp_r20.0: adjusted=0.2240 (LOO r=0.2510, IS r=0.4549, gap=0.2039) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  logntc_only_r5.0: adjusted=0.2223 (LOO r=0.2223, IS r=0.3692, gap=0.1470) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_knn_bp_r1.0: adjusted=0.2222 (LOO r=0.2534, IS r=0.4658, gap=0.2124) [F1=0.2434 QWK=0.1667 Acc=0.3333]
+  gpf_knn_dcv_r10.0: adjusted=0.2222 (LOO r=0.2661, IS r=0.5039, gap=0.2379) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_knn_bp_r0.5: adjusted=0.2206 (LOO r=0.2524, IS r=0.4660, gap=0.2136) [F1=0.2434 QWK=0.1667 Acc=0.3333]
+  gpf_logntc_dcv_r50.0: adjusted=0.2190 (LOO r=0.2727, IS r=0.5300, gap=0.2573) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_knn_bp_dcv_r20.0: adjusted=0.2141 (LOO r=0.2695, IS r=0.5301, gap=0.2606) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_dcv_r20.0: adjusted=0.2014 (LOO r=0.2472, IS r=0.4890, gap=0.2418) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  logntc_only_r10.0: adjusted=0.2000 (LOO r=0.2064, IS r=0.3692, gap=0.1628) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_knn_dcv_r50.0: adjusted=0.1712 (LOO r=0.2378, IS r=0.5208, gap=0.2831) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_knn_dcv_r20.0: adjusted=0.1633 (LOO r=0.2240, IS r=0.4955, gap=0.2714) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  logntc_only_r20.0: adjusted=0.1517 (LOO r=0.1742, IS r=0.3692, gap=0.1950) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_knn_bp_r50.0: adjusted=0.1493 (LOO r=0.2006, IS r=0.4532, gap=0.2526) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  logntc_knn_bp_r50.0: adjusted=0.1365 (LOO r=0.2103, IS r=0.5079, gap=0.2976) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_only_r50.0: adjusted=0.1304 (LOO r=0.1752, IS r=0.4148, gap=0.2396) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  knn_bp_r0.5: adjusted=0.1254 (LOO r=0.1563, IS r=0.3681, gap=0.2118) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  knn_bp_r1.0: adjusted=0.1244 (LOO r=0.1556, IS r=0.3681, gap=0.2124) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_knn_r50.0: adjusted=0.1233 (LOO r=0.1809, IS r=0.4463, gap=0.2653) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  logntc_knn_r0.5: adjusted=0.1097 (LOO r=0.1470, IS r=0.3716, gap=0.2246) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  logntc_knn_r1.0: adjusted=0.1087 (LOO r=0.1464, IS r=0.3716, gap=0.2252) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  logntc_knn_r5.0: adjusted=0.1003 (LOO r=0.1405, IS r=0.3710, gap=0.2305) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  knn_bp_r5.0: adjusted=0.0933 (LOO r=0.1349, IS r=0.3681, gap=0.2332) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  logntc_knn_r10.0: adjusted=0.0880 (LOO r=0.1320, IS r=0.3699, gap=0.2379) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  logntc_knn_r20.0: adjusted=0.0594 (LOO r=0.1122, IS r=0.3679, gap=0.2557) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  knn_bp_r10.0: adjusted=0.0553 (LOO r=0.1096, IS r=0.3681, gap=0.2585) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  logntc_only_r50.0: adjusted=0.0023 (LOO r=0.0746, IS r=0.3692, gap=0.2946) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  bp_only_r0.5: adjusted=0.0010 (LOO r=0.0388, IS r=0.2645, gap=0.2256) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  bp_only_r1.0: adjusted=-0.0023 (LOO r=0.0366, IS r=0.2645, gap=0.2278) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  bp_only_r5.0: adjusted=-0.0291 (LOO r=0.0187, IS r=0.2645, gap=0.2457) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  bp_only_r10.0: adjusted=-0.0627 (LOO r=-0.0037, IS r=0.2645, gap=0.2681) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  knn_only_r0.5: adjusted=-1.0000 (LOO r=-0.0986, IS r=0.2104, gap=0.3090) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_only_r1.0: adjusted=-1.0000 (LOO r=-0.1014, IS r=0.2104, gap=0.3118) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_only_r5.0: adjusted=-1.0000 (LOO r=-0.1238, IS r=0.2104, gap=0.3342) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_only_r10.0: adjusted=-1.0000 (LOO r=-0.1516, IS r=0.2104, gap=0.3620) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_only_r20.0: adjusted=-1.0000 (LOO r=-0.2059, IS r=0.2104, gap=0.4164) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_only_r50.0: adjusted=-1.0000 (LOO r=-0.3567, IS r=0.2104, gap=0.5672) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_only_r0.5: adjusted=-1.0000 (LOO r=-0.7269, IS r=0.0237, gap=0.7506) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_only_r1.0: adjusted=-1.0000 (LOO r=-0.7294, IS r=0.0237, gap=0.7531) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_only_r5.0: adjusted=-1.0000 (LOO r=-0.7484, IS r=0.0237, gap=0.7721) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_only_r10.0: adjusted=-1.0000 (LOO r=-0.7697, IS r=0.0237, gap=0.7934) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_only_r20.0: adjusted=-1.0000 (LOO r=-0.8058, IS r=0.0237, gap=0.8295) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_only_r50.0: adjusted=-1.0000 (LOO r=-0.8770, IS r=0.0237, gap=0.9007) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  bp_only_r20.0: adjusted=-1.0000 (LOO r=-0.0484, IS r=0.2645, gap=0.3128) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  bp_only_r50.0: adjusted=-1.0000 (LOO r=-0.1798, IS r=0.2645, gap=0.4442) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  logntc_knn_r50.0: adjusted=-1.0000 (LOO r=0.0442, IS r=0.3645, gap=0.3203) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_bp_r20.0: adjusted=-1.0000 (LOO r=0.0617, IS r=0.3680, gap=0.3064) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_bp_r50.0: adjusted=-1.0000 (LOO r=-0.0715, IS r=0.3680, gap=0.4395) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_dcv_r0.5: adjusted=-1.0000 (LOO r=-0.2847, IS r=0.2107, gap=0.4954) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_dcv_r1.0: adjusted=-1.0000 (LOO r=-0.2871, IS r=0.2107, gap=0.4978) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_dcv_r5.0: adjusted=-1.0000 (LOO r=-0.3056, IS r=0.2106, gap=0.5163) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_dcv_r10.0: adjusted=-1.0000 (LOO r=-0.3282, IS r=0.2105, gap=0.5388) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_dcv_r20.0: adjusted=-1.0000 (LOO r=-0.3715, IS r=0.2102, gap=0.5817) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_dcv_r50.0: adjusted=-1.0000 (LOO r=-0.4869, IS r=0.2096, gap=0.6965) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_dcv_r50.0: adjusted=-1.0000 (LOO r=0.1188, IS r=0.4706, gap=0.3518) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_knn_dcv_r50.0: adjusted=-1.0000 (LOO r=0.1215, IS r=0.4808, gap=0.3593) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  logntc_knn_dcv_r0.5: adjusted=-1.0000 (LOO r=0.0362, IS r=0.3792, gap=0.3430) [F1=0.1404 QWK=0.0000 Acc=0.2667] DISQUALIFIED
+  logntc_knn_dcv_r1.0: adjusted=-1.0000 (LOO r=0.0351, IS r=0.3792, gap=0.3441) [F1=0.1404 QWK=0.0000 Acc=0.2667] DISQUALIFIED
+  logntc_knn_dcv_r5.0: adjusted=-1.0000 (LOO r=0.0276, IS r=0.3783, gap=0.3507) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  logntc_knn_dcv_r10.0: adjusted=-1.0000 (LOO r=0.0189, IS r=0.3766, gap=0.3578) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  logntc_knn_dcv_r20.0: adjusted=-1.0000 (LOO r=0.0003, IS r=0.3734, gap=0.3731) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  logntc_knn_dcv_r50.0: adjusted=-1.0000 (LOO r=-0.0638, IS r=0.3672, gap=0.4310) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_knn_bp_dcv_r50.0: adjusted=-1.0000 (LOO r=0.1826, IS r=0.5077, gap=0.3251) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  logntc_tpls1_r100.0: adjusted=-1.0000 (LOO r=0.3963, IS r=0.7596, gap=0.3634) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_knn_tpls1_r5.0: adjusted=-1.0000 (LOO r=0.4751, IS r=0.7982, gap=0.3231) [F1=0.3851 QWK=0.3200 Acc=0.4333] DISQUALIFIED
+  gpf_logntc_knn_tpls1_r10.0: adjusted=-1.0000 (LOO r=0.4817, IS r=0.7826, gap=0.3008) [F1=0.3333 QWK=0.2500 Acc=0.4000] DISQUALIFIED
+  gpf_logntc_knn_tpls1_r100.0: adjusted=-1.0000 (LOO r=0.4021, IS r=0.7121, gap=0.3099) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_bp_tpls1_r5.0: adjusted=-1.0000 (LOO r=0.5028, IS r=0.8047, gap=0.3019) [F1=0.3851 QWK=0.3200 Acc=0.4333] DISQUALIFIED
+  gpf_logntc_knn_bp_tpls1_r5.0: adjusted=-1.0000 (LOO r=0.4749, IS r=0.8052, gap=0.3303) [F1=0.3333 QWK=0.2500 Acc=0.4000] DISQUALIFIED
+  gpf_logntc_knn_bp_tpls1_r10.0: adjusted=-1.0000 (LOO r=0.4828, IS r=0.7902, gap=0.3074) [F1=0.3333 QWK=0.2500 Acc=0.4000] DISQUALIFIED
+  gpf_knn_tpls1_r5.0: adjusted=-1.0000 (LOO r=0.4107, IS r=0.8001, gap=0.3895) [F1=0.3333 QWK=0.2500 Acc=0.4000] DISQUALIFIED
+  gpf_knn_tpls1_r10.0: adjusted=-1.0000 (LOO r=0.4227, IS r=0.7875, gap=0.3648) [F1=0.3333 QWK=0.2500 Acc=0.4000] DISQUALIFIED
+  gpf_knn_tpls1_r20.0: adjusted=-1.0000 (LOO r=0.4194, IS r=0.7609, gap=0.3415) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  gpf_knn_tpls1_r30.0: adjusted=-1.0000 (LOO r=0.4110, IS r=0.7376, gap=0.3265) [F1=0.2967 QWK=0.1818 Acc=0.4000] DISQUALIFIED
+  gpf_knn_tpls1_r50.0: adjusted=-1.0000 (LOO r=0.3908, IS r=0.7031, gap=0.3122) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  gpf_knn_tpls1_r100.0: adjusted=-1.0000 (LOO r=0.3339, IS r=0.6919, gap=0.3581) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_only_base_tpls1_r5.0: adjusted=-1.0000 (LOO r=0.4541, IS r=0.7972, gap=0.3431) [F1=0.3333 QWK=0.2500 Acc=0.4000] DISQUALIFIED
+  knn_only_base_tpls1_r10.0: adjusted=-1.0000 (LOO r=0.4447, IS r=0.7896, gap=0.3449) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  knn_only_base_tpls1_r20.0: adjusted=-1.0000 (LOO r=0.4284, IS r=0.7711, gap=0.3427) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  knn_only_base_tpls1_r30.0: adjusted=-1.0000 (LOO r=0.4110, IS r=0.7498, gap=0.3387) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  knn_only_base_tpls1_r50.0: adjusted=-1.0000 (LOO r=0.3747, IS r=0.7413, gap=0.3666) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  knn_only_base_tpls1_r100.0: adjusted=-1.0000 (LOO r=0.2763, IS r=0.7389, gap=0.4627) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  empty_tpls1_r5.0: adjusted=-1.0000 (LOO r=0.4740, IS r=0.7954, gap=0.3214) [F1=0.3808 QWK=0.3200 Acc=0.4333] DISQUALIFIED
+  empty_tpls1_r10.0: adjusted=-1.0000 (LOO r=0.4633, IS r=0.7869, gap=0.3237) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  empty_tpls1_r20.0: adjusted=-1.0000 (LOO r=0.4453, IS r=0.7687, gap=0.3234) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  empty_tpls1_r30.0: adjusted=-1.0000 (LOO r=0.4268, IS r=0.7468, gap=0.3200) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  empty_tpls1_r50.0: adjusted=-1.0000 (LOO r=0.3880, IS r=0.7442, gap=0.3561) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  empty_tpls1_r100.0: adjusted=-1.0000 (LOO r=0.2819, IS r=0.7442, gap=0.4622) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  logntc_tpls2_r10.0: adjusted=-1.0000 (LOO r=0.5728, IS r=0.8869, gap=0.3142) [F1=0.4524 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  logntc_tpls2_r20.0: adjusted=-1.0000 (LOO r=0.5639, IS r=0.8692, gap=0.3052) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  logntc_tpls2_r50.0: adjusted=-1.0000 (LOO r=0.5379, IS r=0.8552, gap=0.3173) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  logntc_tpls2_r100.0: adjusted=-1.0000 (LOO r=0.4935, IS r=0.8455, gap=0.3520) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_tpls2_r10.0: adjusted=-1.0000 (LOO r=0.5656, IS r=0.8847, gap=0.3192) [F1=0.4070 QWK=0.3704 Acc=0.4333] DISQUALIFIED
+  gpf_logntc_tpls2_r50.0: adjusted=-1.0000 (LOO r=0.5310, IS r=0.8377, gap=0.3067) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  gpf_logntc_tpls2_r100.0: adjusted=-1.0000 (LOO r=0.4960, IS r=0.8258, gap=0.3297) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  gpf_logntc_knn_tpls2_r10.0: adjusted=-1.0000 (LOO r=0.5544, IS r=0.8859, gap=0.3316) [F1=0.4524 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  gpf_logntc_knn_tpls2_r20.0: adjusted=-1.0000 (LOO r=0.5456, IS r=0.8587, gap=0.3131) [F1=0.3851 QWK=0.3200 Acc=0.4333] DISQUALIFIED
+  gpf_logntc_knn_tpls2_r50.0: adjusted=-1.0000 (LOO r=0.5141, IS r=0.8312, gap=0.3171) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  gpf_logntc_knn_tpls2_r100.0: adjusted=-1.0000 (LOO r=0.4781, IS r=0.8140, gap=0.3359) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+
+BEST MODEL: gpf_logntc_tpls2_r20.0
+  Pearson r:      IS=0.8589  LOO=0.5598
+  IS-LOO Gap:     0.2992 (penalty=0.0746)
+  Adjusted Score: 0.4852
+  Macro F1:       0.3851
+  QWK:            0.3200
+  Accuracy:       0.4333
+
+ERRORS:
+  TCGA-A2-A0CS: GT=2 -> Pred=1 (continuous=1.397, knn=36.82um)
+  TCGA-AC-A23E: GT=1 -> Pred=2 (continuous=1.524, knn=45.09um)
+  TCGA-AC-A3TN: GT=1 -> Pred=2 (continuous=1.863, knn=47.15um)
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (continuous=2.393, knn=24.33um)
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (continuous=1.921, knn=25.12um)
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (continuous=2.019, knn=36.91um)
+  TCGA-BH-A0DX: GT=1 -> Pred=2 (continuous=1.663, knn=28.04um)
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (continuous=1.862, knn=37.04um)
+  TCGA-D8-A1XT: GT=3 -> Pred=2 (continuous=2.241, knn=48.69um)
+  TCGA-D8-A27N: GT=3 -> Pred=2 (continuous=2.087, knn=39.58um)
+  TCGA-D8-A27P: GT=1 -> Pred=2 (continuous=1.988, knn=29.34um)
+  TCGA-D8-A4Z1: GT=3 -> Pred=2 (continuous=1.912, knn=24.54um)
+  TCGA-D8-A73X: GT=1 -> Pred=2 (continuous=1.972, knn=23.88um)
+  TCGA-E2-A14W: GT=3 -> Pred=2 (continuous=2.356, knn=28.28um)
+  TCGA-E2-A1B1: GT=1 -> Pred=2 (continuous=1.682, knn=25.73um)
+  TCGA-EW-A1PH: GT=3 -> Pred=2 (continuous=2.219, knn=57.70um)
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (continuous=2.361, knn=33.52um)
+
+SCALAR FEATURE MATRIX:
+  case_id              GT    gpf    logntc      bp   knn_um    dcv
+  TCGA-A2-A0CS         2  0.5107  11.3020  0.0752   36.82  0.860
+  TCGA-A2-A0ET         2  0.1123  13.4948  0.0431   39.01  1.183
+  TCGA-A7-A0D9         2  0.5008  10.6649  0.0163   14.09  0.996
+  TCGA-A7-A3IY         1  0.5089  10.6906  0.0303   12.87  1.226
+  TCGA-AC-A23E         1  0.4375  9.2588  0.0582   45.09  0.999
+  TCGA-AC-A2FM         2  0.0800  11.4125  0.0672   28.52  0.743
+  TCGA-AC-A3TN         1  0.2236  9.6642  0.0345   47.15  2.251
+  TCGA-AC-A7VB         2  0.1067  10.8168  0.0382   16.61  2.057
+  TCGA-AR-A0U4         3  0.0547  13.5483  0.0353   53.77  0.960
+  TCGA-AR-A1AR         3  0.0324  11.7967  0.0256   26.93  1.982
+  TCGA-AR-A2LO         3  0.1193  10.8343  0.0174   24.33  1.825
+  TCGA-BH-A0B8         3  0.1050  12.2566  0.0265   25.12  1.864
+  TCGA-BH-A0C3         3  0.1669  11.9292  0.0275   36.91  1.724
+  TCGA-BH-A0DX         1  0.0811  10.9323  0.0082   28.04  2.999
+  TCGA-BH-A0W4         1  0.2601  12.3850  0.0307   37.04  1.904
+  TCGA-BH-A42V         2  0.2355  11.9626  0.0550   33.42  1.328
+  TCGA-D8-A1XD         2  0.1871  12.7119  0.0968   39.05  0.905
+  TCGA-D8-A1XT         3  0.1605  12.1650  0.0290   48.69  1.284
+  TCGA-D8-A27N         3  0.2900  12.2396  0.0276   39.58  0.873
+  TCGA-D8-A27P         1  0.1970  11.9254  0.0488   29.34  1.510
+  TCGA-D8-A4Z1         3  0.0848  11.1997  0.0102   24.54  1.377
+  TCGA-D8-A73X         1  0.3534  11.6281  0.0433   23.88  1.326
+  TCGA-E2-A10E         2  0.1745  12.9515  0.0313   47.95  1.425
+  TCGA-E2-A14W         3  0.0633  11.8245  0.0185   28.28  2.424
+  TCGA-E2-A1B1         1  0.1578  10.6816  0.0050   25.73  1.860
+  TCGA-E2-A1IG         2  0.4808  12.8785  0.0548   51.60  0.999
+  TCGA-EW-A1IY         2  0.1943  12.9644  0.0332   44.56  1.326
+  TCGA-EW-A1PH         3  0.2353  13.3796  0.0551   57.70  1.645
+  TCGA-LL-A5YO         1  0.0932  12.2409  0.0535   33.52  1.516
+  TCGA-OL-A5RX         1  0.8137  12.3197  0.1267   23.31  0.674

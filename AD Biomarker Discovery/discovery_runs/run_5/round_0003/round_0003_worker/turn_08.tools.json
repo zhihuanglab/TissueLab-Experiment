@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.append('/shared/lib')\nfrom shared_analysis import stats\nfor name in ['partial_correlation','residualized_loo_predictive_correlation','leave_one_out_summary']:\n    fn=getattr(stats,name)\n    print('---', name, inspect.signature(fn), '---')\n    src=inspect.getsource(fn).splitlines()\n    for line in src[:220]:\n        print(line)\n    print()\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- partial_correlation (df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]') -> 'dict[str, float]' ---\\ndef partial_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n) -> dict[str, float]:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds])\\n    feature_resid = residualize(frame[feature_col], frame[confounds])\\n    outcome_resid = residualize(frame[outcome_col], frame[confounds])\\n    if\", \"stderr\": \"\"}"
+  }
+]

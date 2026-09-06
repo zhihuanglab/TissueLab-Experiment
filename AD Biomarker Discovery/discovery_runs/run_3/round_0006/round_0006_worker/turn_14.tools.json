@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect, textwrap\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis.artifacts import resolve_covariate_names, normalize_covariate_names\nprint(textwrap.dedent(inspect.getsource(resolve_covariate_names)))\nprint(textwrap.dedent(inspect.getsource(normalize_covariate_names)))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"def resolve_covariate_names(columns: Any, covariates: list[str] | tuple[str, ...] | None) -> list[str]:\\n    available = {str(col) for col in columns}\\n    resolved: list[str] = []\\n    for covariate in normalize_covariate_names(covariates):\\n        if covariate in available:\\n            candidate = covariate\\n        else:\\n            aliases = [alias for alias, mapped in _COVARIATE_ALIASES.items() if mapped == covariate]\\n            candidate = next((alias for alias in aliases if alias in availabl\", \"stderr\": \"\"}"
+  }
+]

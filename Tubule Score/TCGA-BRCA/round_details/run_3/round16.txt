@@ -1,0 +1,35 @@
+Round 16
+========================================================================
+
+The machine-readable candidate enumeration for this round was not retained:
+the round's script and its details file were lost during the run. What follows
+is taken verbatim from the run log, which recorded the configuration this round
+selected, its scores, and the alternatives the round discussed and rejected.
+Rejected alternatives are therefore partial here, covering those the agent wrote
+about rather than every configuration it evaluated.
+
+ROUND 16 - [T3+G4+area_conc+max_dom] + [Ridge α=5] (LOO)
+
+Features (9):
+  1. tumor_pca_top3 (musk_tumor/, tissue_class_id==1 mean-pooled → PCA(20) → top 3 PCs by |corr|)
+  2. gland_pca_top4 (musk_gland/, tissue_class_id==1 mean-pooled → PCA(20) → top 4 PCs by |corr|)
+  3. area_conc — biomedparse area concentration feature (NEW)
+  4. max_dom — biomedparse max dominant component feature (NEW)
+
+Model: Ridge(alpha=5)
+
+SELECTED CONFIGURATION
+Model:Ridge(alpha=5)
+  LOO r      = 0.8483
+  IS r       = 0.9133
+  IS-LOO gap = 0.0649
+  adjusted   = 0.8483
+
+ALTERNATIVES RECORDED IN THIS ROUND'S FINDINGS
+  1. **NEW BEST: LOO r=0.8483, up +0.0144 from Round 15 (0.8340 baseline) and +0.0109 from Round 15's best (0.8374).** This is the first meaningful improvement after 7 rounds of plateau. The biomedparse-derived morphometric features (area_conc, max_dom) successfully capture gland structure quality beyond what PCA embeddings alone provide. Gap remains healthy at 0.0649 (<0.15), no penalty.
+
+FINDINGS:
+  1. **NEW BEST: LOO r=0.8483, up +0.0144 from Round 15 (0.8340 baseline) and +0.0109 from Round 15's best (0.8374).** This is the first meaningful improvement after 7 rounds of plateau. The biomedparse-derived morphometric features (area_conc, max_dom) successfully capture gland structure quality beyond what PCA embeddings alone provide. Gap remains healthy at 0.0649 (<0.15), no penalty.
+  2. The top 4 configs all include biomedparse features (area_conc+max_dom or log_mean+max_dom), confirming these are complementary to PCA embeddings. max_dom alone (Rank 5-13) gives LOO r≈0.839, showing it's a useful standalone addition.
+  3. Accuracy is balanced across classes at 70% each (7/10 per class), which is encouraging vs. previous rounds that had class imbalance in accuracy.
+  4. The improvement comes from biomedparse connected component analysis providing a direct morphometric measure of gland structure quality — large cohesive gland regions (GT=1) vs. small scattered fragments (GT=3) — exactly what the Nottingham criteria assess.

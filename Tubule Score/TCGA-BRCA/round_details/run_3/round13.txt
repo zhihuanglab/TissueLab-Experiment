@@ -1,0 +1,40 @@
+Round 13
+========================================================================
+
+The machine-readable candidate enumeration for this round was not retained:
+the round's script and its details file were lost during the run. What follows
+is taken verbatim from the run log, which recorded the configuration this round
+selected, its scores, and the alternatives the round discussed and rejected.
+Rejected alternatives are therefore partial here, covering those the agent wrote
+about rather than every configuration it evaluated.
+
+ROUND 13 - [T3+G4 uniform PCA (corr-selected)] + [Ridge(α=4)] (LOO)
+
+Features (7):
+  1. tumor_pc_top3 (musk_tumor, tissue_class_id==1, mean-pooled → PCA(20) → top 3 by |corr|)
+  2. gland_pc_top4 (musk_gland, tissue_class_id==1, mean-pooled → PCA(20) → top 4 by |corr|)
+Model: Ridge(alpha=4), StandardScaler, global PCA + PC selection
+
+SELECTED CONFIGURATION
+Model:Ridge(alpha=4), StandardScaler, global PCA + PC selection
+  LOO r      = 0.8340
+  IS r       = 0.9002
+  IS-LOO gap = 0.0662
+  adjusted   = 0.8340
+
+ALTERNATIVES RECORDED IN THIS ROUND'S FINDINGS
+  1. **T3+G4 corr Ridge(α=4) reproduces Round 12 best exactly**: LOO r=0.8340, adj=0.8340, confirming the plateau is stable and reproducible. Ridge α=3 through α=7 all give LOO r in [0.8333, 0.8340], an extremely flat landscape.
+  2. **ElasticNet does NOT improve over Ridge**: Best ElasticNet was EN(α=0.01, l1_ratio=0.1) with LOO r=0.8306 vs Ridge LOO r=0.8340. All ElasticNet configs were strictly worse than Ridge. The L1 penalty apparently drops or shrinks useful PCs before it removes harmful ones — with only 7 features, there isn't redundancy for sparsity to exploit.
+  3. **Variance-weighted PC selection catastrophically fails**: T3+G4 with PCs selected by |corr| × sqrt(variance_explained) gave LOO r=0.6565 vs 0.8340 for pure correlation selection — a massive 0.18 drop. This means the most discriminative PCs for tubule scoring are NOT the highest-variance PCs. The variance-weighted criterion swaps out high-correlation/low-variance PCs for low-correlation/high-variance PCs, destroying predictive power. The "spurious correlation" concern was unfounded — these PCs capture genuine morphological signal despite explaining little total variance.
+  5. **Adding tig still hurts marginally**: T3+G4+tig best at LOO r=0.8300 (α=7) vs 0.8340 without. Consistent across all rounds.
+
+FINDINGS:
+  1. **T3+G4 corr Ridge(α=4) reproduces Round 12 best exactly**: LOO r=0.8340, adj=0.8340, confirming the plateau is stable and reproducible. Ridge α=3 through α=7 all give LOO r in [0.8333, 0.8340], an extremely flat landscape.
+
+  2. **ElasticNet does NOT improve over Ridge**: Best ElasticNet was EN(α=0.01, l1_ratio=0.1) with LOO r=0.8306 vs Ridge LOO r=0.8340. All ElasticNet configs were strictly worse than Ridge. The L1 penalty apparently drops or shrinks useful PCs before it removes harmful ones — with only 7 features, there isn't redundancy for sparsity to exploit.
+
+  3. **Variance-weighted PC selection catastrophically fails**: T3+G4 with PCs selected by |corr| × sqrt(variance_explained) gave LOO r=0.6565 vs 0.8340 for pure correlation selection — a massive 0.18 drop. This means the most discriminative PCs for tubule scoring are NOT the highest-variance PCs. The variance-weighted criterion swaps out high-correlation/low-variance PCs for low-correlation/high-variance PCs, destroying predictive power. The "spurious correlation" concern was unfounded — these PCs capture genuine morphological signal despite explaining little total variance.
+
+  4. **Alternative PC counts confirm T3+G4 optimal**: T2+G4 (0.7957), T2+G5 (0.7862), T4+G3 (not in top 15 but reported earlier as ~0.8265) — all worse. The 3 tumor + 4 gland allocation remains optimal.
+
+  5. **Adding tig still hurts marginally**: T3+G4+tig best at LOO r=0.8300 (α=7) vs 0.8340 without. Consistent across all rounds.

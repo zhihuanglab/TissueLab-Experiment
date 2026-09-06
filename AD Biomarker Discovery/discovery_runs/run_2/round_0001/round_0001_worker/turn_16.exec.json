@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex']\n",
+  "stderr": ""
+}

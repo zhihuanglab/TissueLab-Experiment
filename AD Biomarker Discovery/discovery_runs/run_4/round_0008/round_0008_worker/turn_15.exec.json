@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "load_centroids (zarr_path: 'str | Path') -> 'np.ndarray'\nload_class_ids (zarr_path: 'str | Path') -> 'np.ndarray'\nload_class_lookup (zarr_path: 'str | Path') -> 'dict[int, str]'\n",
+  "stderr": ""
+}

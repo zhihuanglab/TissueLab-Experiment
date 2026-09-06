@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect, textwrap\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis.sea_ad_lfb import load_class_lookup\nprint(textwrap.dedent(inspect.getsource(load_class_lookup)))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"def load_class_lookup(zarr_path: str | Path) -> dict[int, str]:\\n    return {idx: name for idx, name in enumerate(load_class_names(zarr_path))}\\n\\n\", \"stderr\": \"\"}"
+  }
+]

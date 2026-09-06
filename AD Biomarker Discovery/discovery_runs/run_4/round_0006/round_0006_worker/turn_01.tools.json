@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- context_bundle.json ---'\npython - <<'PY'\nimport json, textwrap\nwith open('/scratch/context_bundle.json') as f:\n    obj=json.load(f)\nprint(json.dumps(obj, indent=2)[:20000])\nPY\necho\necho '--- program.md ---'\nsed -n '1,240p' /scratch/program.md\necho\necho '--- result.py template head ---'\nsed -n '1,240p' /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \" },\\n    \\\"modules\\\": [\\n      {\\n        \\\"module\\\": \\\"shared_analysis.sea_ad_lfb\\\",\\n        \\\"functions\\\": [\\n          \\\"load_training_cohort\\\",\\n          \\\"build_slide_manifest\\\",\\n          \\\"build_cell_table\\\",\\n          \\\"load_region_polygons\\\",\\n          \\\"compute_contour_geometry\\\"\\n        ]\\n      },\\n      {\\n        \\\"module\\\": \\\"shared_analysis.stats\\\",\\n        \\\"functions\\\": [\\n          \\\"partial_correlation\\\",\\n          \\\"bootstrap_partial_correlation\\\",\\n          \\\"leave_one_out_summary\\\",\\n          \\\"residualized_loo\", \"stderr\": \"\"}"
+  }
+]

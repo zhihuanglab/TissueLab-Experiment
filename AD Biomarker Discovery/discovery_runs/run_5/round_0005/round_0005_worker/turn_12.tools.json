@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '521,700p' /data/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"    print(\\\"PER-DONOR (LOO):\\\")\\n    feature_col = best[\\\"feature_column\\\"]\\n    print(f\\\"  donor_id  outcome  predicted  {feature_col}\\\")\\n    for row in best[\\\"per_donor_loo\\\"]:\\n        print(\\n            \\\"  \\\"\\n            f\\\"{row['donor_id']}  \\\"\\n            f\\\"{_format_num(row['outcome'])}  \\\"\\n            f\\\"{_format_num(row['predicted'])}  \\\"\\n            f\\\"{_format_num(row[feature_col])}\\\"\\n        )\\n\\n\\ndef main() -> int:\\n    data_root = Path(\\\"/data\\\")\\n    feature_table = _build_feature_table(data_root)\\n    rank\", \"stderr\": \"\"}"
+  }
+]

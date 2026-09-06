@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, textwrap\nwith open('/scratch/context_bundle.json') as f:\n    obj=json.load(f)\nprint(\"TOP-LEVEL KEYS:\", sorted(obj.keys()))\nfor k in ['worker_brief','round','candidate','accepted_panel','panel','current_panel','hypothesis','brief']:\n    if k in obj:\n        print(f\"\\n--- {k} ---\")\n        print(json.dumps(obj[k], indent=2)[:12000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"TOP-LEVEL KEYS: ['cohort_summary', 'dataset_guide_excerpt', 'runtime_manifest', 'runtime_quickstart_excerpt', 'slide_manifest_head', 'worker_brief']\\n\\n--- worker_brief ---\\n{\\n  \\\"worker_name\\\": \\\"round_0007_worker\\\",\\n  \\\"round_id\\\": 7,\\n  \\\"candidate_id\\\": \\\"ca1-reactive-pyramidal-atrophy\\\",\\n  \\\"candidate_type\\\": \\\"candidate\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [\\n      {\\n        \\\"slot\\\": 1,\\n        \\\"feature_name\\\": \\\"ca1_pyramidal_fraction\\\",\\n        \\\"round_id\\\": 1,\\n        \\\"panel_candidate_score\\\": 0.294,\\n        \", \"stderr\": \"\"}"
+  }
+]

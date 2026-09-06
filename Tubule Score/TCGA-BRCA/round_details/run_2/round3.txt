@@ -1,0 +1,62 @@
+Round 3 Details
+================================================================================
+
+Feature-GT Correlations:
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+  tumor_cell_count: r=+0.2959
+  tumor_cell_nn_cv: r=-0.2644
+  bp_gland_pixel_frac: r=-0.2642
+  tumor_cell_nn_mean: r=-0.2043
+  tumor_density_skew: r=-0.1516
+  tumor_cell_frac: r=+0.0715
+  tumor_cell_density_cv: r=-0.0528
+  tumor_density_iqr: r=+0.0380
+
+All Configurations (sorted by adjusted):
+  best_spatial_both_gland__Ridge_a1: adj=0.5680 LOO_r=0.5680 IS_r=0.6617 gap=0.0937 F1=0.4236 QWK=0.4138
+  best_spatial_both_gland__Ridge_a10: adj=0.5513 LOO_r=0.5513 IS_r=0.6504 gap=0.0991 F1=0.4070 QWK=0.3704
+  best_spatial_both_gland__ElasticNet_01: adj=0.5460 LOO_r=0.5460 IS_r=0.6544 gap=0.1083 F1=0.4470 QWK=0.4286
+  best_spatial_bp__Ridge_a1: adj=0.5297 LOO_r=0.5297 IS_r=0.6218 gap=0.0921 F1=0.4236 QWK=0.4138
+  best_spatial_bp__Ridge_a10: adj=0.4938 LOO_r=0.4938 IS_r=0.6210 gap=0.1272 F1=0.3205 QWK=0.2500
+  best_spatial_gland__Ridge_a1: adj=0.4928 LOO_r=0.4928 IS_r=0.5905 gap=0.0977 F1=0.4107 QWK=0.3704
+  top2_overall__Ridge_a1: adj=0.4928 LOO_r=0.4928 IS_r=0.5905 gap=0.0977 F1=0.4107 QWK=0.3704
+  top2_overall__Ridge_a10: adj=0.4736 LOO_r=0.4736 IS_r=0.5840 gap=0.1105 F1=0.2733 QWK=0.1739
+  best_spatial_gland__Ridge_a10: adj=0.4736 LOO_r=0.4736 IS_r=0.5840 gap=0.1105 F1=0.2733 QWK=0.1739
+  best_spatial_both_gland__Ridge_a50: adj=0.4538 LOO_r=0.4650 IS_r=0.6374 gap=0.1724 F1=0.1667 QWK=0.0000
+  top3_overall__Ridge_a1: adj=0.4497 LOO_r=0.4497 IS_r=0.5898 gap=0.1401 F1=0.3839 QWK=0.3571
+  top2_spatial_gland__Ridge_a1: adj=0.4497 LOO_r=0.4497 IS_r=0.5898 gap=0.1401 F1=0.3839 QWK=0.3571
+  top3_overall__ElasticNet_01: adj=0.4468 LOO_r=0.4468 IS_r=0.5863 gap=0.1395 F1=0.3148 QWK=0.2400
+  top2_spatial_gland__ElasticNet_01: adj=0.4468 LOO_r=0.4468 IS_r=0.5863 gap=0.1395 F1=0.3148 QWK=0.2400
+  top4_overall__ElasticNet_01: adj=0.4454 LOO_r=0.4454 IS_r=0.5863 gap=0.1409 F1=0.3148 QWK=0.2400
+  top2_spatial_gland__Ridge_a10: adj=0.4392 LOO_r=0.4392 IS_r=0.5790 gap=0.1398 F1=0.3333 QWK=0.2500
+  top3_overall__Ridge_a10: adj=0.4392 LOO_r=0.4392 IS_r=0.5790 gap=0.1398 F1=0.3333 QWK=0.2500
+  top4_overall__Ridge_a1: adj=0.4289 LOO_r=0.4323 IS_r=0.5889 gap=0.1566 F1=0.3392 QWK=0.2963
+  top4_overall__Ridge_a10: adj=0.4174 LOO_r=0.4209 IS_r=0.5781 gap=0.1571 F1=0.3333 QWK=0.2500
+  top3_overall__Ridge_a50: adj=0.3489 LOO_r=0.3709 IS_r=0.5648 gap=0.1940 F1=0.1667 QWK=0.0000
+  top2_spatial_gland__Ridge_a50: adj=0.3489 LOO_r=0.3709 IS_r=0.5648 gap=0.1940 F1=0.1667 QWK=0.0000
+  top4_overall__Ridge_a50: adj=0.3360 LOO_r=0.3590 IS_r=0.5551 gap=0.1961 F1=0.2315 QWK=0.0952
+  single_gland_patch_fraction__Ridge_a1: adj=0.3028 LOO_r=0.3028 IS_r=0.4155 gap=0.1126 F1=0.1772 QWK=0.0833
+  gland_combined__Ridge_a1: adj=0.2460 LOO_r=0.2540 IS_r=0.4199 gap=0.1660 F1=0.1954 QWK=0.0870
+  gland_combined__Ridge_a10: adj=0.2442 LOO_r=0.2511 IS_r=0.4150 gap=0.1639 F1=0.2135 QWK=0.0909
+  single_tumor_cell_nn_std__Ridge_a1: adj=0.1905 LOO_r=0.1984 IS_r=0.3642 gap=0.1658 F1=0.2913 QWK=0.0870
+  spatial_top2__Ridge_a1: adj=0.1419 LOO_r=0.1725 IS_r=0.3838 gap=0.2113 F1=0.2228 QWK=0.0000
+  spatial_top2__Ridge_a10: adj=0.1418 LOO_r=0.1723 IS_r=0.3833 gap=0.2110 F1=0.1538 QWK=0.0000
+  single_tumor_cell_count__Ridge_a1: adj=0.0996 LOO_r=0.1151 IS_r=0.2959 gap=0.1809 F1=0.2135 QWK=0.0909
+  spatial_top3__Ridge_a10: adj=0.0512 LOO_r=0.1107 IS_r=0.3797 gap=0.2690 F1=0.1538 QWK=0.0000
+  spatial_top3__ElasticNet_01: adj=0.0372 LOO_r=0.1027 IS_r=0.3837 gap=0.2810 F1=0.1579 QWK=-0.0909
+  spatial_top3__Ridge_a50: adj=0.0280 LOO_r=0.0933 IS_r=0.3738 gap=0.2805 F1=0.1667 QWK=0.0000
+  single_bp_gland_pixel_frac__Ridge_a1: adj=-0.0028 LOO_r=0.0362 IS_r=0.2642 gap=0.2280 F1=0.2135 QWK=0.0909
+  single_tumor_cell_nn_cv__Ridge_a1: adj=-0.0038 LOO_r=0.0356 IS_r=0.2644 gap=0.2288 F1=0.2315 QWK=0.0952
+  single_tumor_cell_nn_mean__Ridge_a1: adj=-1.0000 LOO_r=-0.1890 IS_r=0.2043 gap=0.3933 F1=0.1709 QWK=-0.0952
+  single_tumor_density_skew__Ridge_a1: adj=-1.0000 LOO_r=-0.3689 IS_r=0.1516 gap=0.5205 F1=0.1667 QWK=0.0000
+  single_tumor_cell_frac__Ridge_a1: adj=-1.0000 LOO_r=-0.5168 IS_r=0.0715 gap=0.5882 F1=0.1709 QWK=-0.0952
+  single_tumor_cell_density_cv__Ridge_a1: adj=-1.0000 LOO_r=-0.6954 IS_r=0.0528 gap=0.7481 F1=0.1667 QWK=0.0000
+  single_tumor_density_iqr__Ridge_a1: adj=-1.0000 LOO_r=-0.6601 IS_r=0.0380 gap=0.6980 F1=0.1667 QWK=0.0000
+  spatial_top3__Ridge_a1: adj=-1.0000 LOO_r=0.0560 IS_r=0.3845 gap=0.3285 F1=0.1579 QWK=-0.0909
+
+Best: best_spatial_both_gland__Ridge_a1
+  Features: ['tumor_cell_nn_std', 'gland_patch_fraction', 'bp_gland_pixel_frac']
+  Adjusted: 0.5680
+  LOO r: 0.5680
+  Gap: 0.0937

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "548         ranked_variations.append(\n573     ranked_variations.sort(\n580     best = ranked_variations[0]\n",
+  "stderr": ""
+}

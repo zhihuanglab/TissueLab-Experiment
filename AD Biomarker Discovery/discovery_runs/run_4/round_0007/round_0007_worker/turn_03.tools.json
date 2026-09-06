@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport pandas as pd\nfrom shared_analysis import load_training_cohort, build_cell_table\ndata_root=Path('/data')\ncohort=load_training_cohort(data_root)\nrow=cohort.iloc[0]\nslide_path=data_root/row['slide_name']\nprint('slide:', slide_path)\ncells=build_cell_table(slide_path, include_regions=True, include_geometry=True)\nprint('columns:', list(cells.columns))\nprint('n_cells:', len(cells))\nprint('cell_type value counts head:')\nprint(cells['cell_type'].value_counts().head(15))\nprint('regions:', cells['region_label'].dropna().value_counts().head(10))\nprint('sample rows:')\nprint(cells[['cell_type','x_centroid','y_centroid','region_label']].head().to_string())\ngeom_cols=[c for c in cells.columns if 'contour' in c.lower() or 'area' in c.lower()]\nprint('geom-like cols:', geom_cols)\nif 'contour' in cells.columns:\n    print('contour sample type:', type(cells['contour'].iloc[0]), cells['contour'].iloc[0][:3])\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

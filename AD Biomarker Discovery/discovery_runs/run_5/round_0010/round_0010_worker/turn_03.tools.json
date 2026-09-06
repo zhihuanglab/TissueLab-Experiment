@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- shared_analysis.sea_ad_lfb helper signatures ---'\npython - <<'PY'\nimport inspect\nfrom shared_analysis import sea_ad_lfb\nfor name in ['build_cell_table','load_training_cohort','load_region_polygons','compute_contour_geometry']:\n    fn=getattr(sea_ad_lfb,name)\n    print(f'\\n{name}{inspect.signature(fn)}')\n    src=inspect.getsource(fn)\n    print('\\n'.join(src.splitlines()[:80]))\nPY\necho\necho '--- previous round 4/7/9 scripts head and relevant compute functions ---'\nfor f in \\\n/Volumes/SSK\\ SSD/TissueLab\\ Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/result.py \\\n/Volumes/SSK\\ SSD/TissueLab\\ Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0007/round_0007_worker/result.py \\\n/Volumes/SSK\\ SSD/TissueLab\\ Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0009/round_0009_worker/result.py\ndo\n  echo \"--- $f ---\"\n  sed -n '1,240p' \"$f\" | head -n 220\ndone",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"--- shared_analysis.sea_ad_lfb helper signatures ---\\n\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 2, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

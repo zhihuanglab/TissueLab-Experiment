@@ -1,0 +1,44 @@
+Round 12
+========================================================================
+
+The machine-readable candidate enumeration for this round was not retained:
+the round's script and its details file were lost during the run. What follows
+is taken verbatim from the run log, which recorded the configuration this round
+selected, its scores, and the alternatives the round discussed and rejected.
+Rejected alternatives are therefore partial here, covering those the agent wrote
+about rather than every configuration it evaluated.
+
+ROUND 12 - [probability-weighted vs uniform musk PCA] + [Ridge α sweep] (LOO)
+
+Features (7, best config):
+  1. uniform_tumor_pc_top1 (musk_tumor, tissue_class_id==1 uniform mean pool → PCA)
+  2. uniform_tumor_pc_top2 (musk_tumor, same)
+  3. uniform_tumor_pc_top3 (musk_tumor, same)
+  4. uniform_gland_pc_top1 (musk_gland, tissue_class_id==1 uniform mean pool → PCA)
+  5. uniform_gland_pc_top2 (musk_gland, same)
+  6. uniform_gland_pc_top3 (musk_gland, same)
+  7. uniform_gland_pc_top4 (musk_gland, same)
+Model: Ridge(alpha=4), StandardScaler inside LOO, PCA(20)+PC selection global
+
+SELECTED CONFIGURATION
+Model:Ridge(alpha=4), StandardScaler inside LOO, PCA(20)+PC selection global
+  LOO r      = 0.8340
+  IS r       = 0.9002
+  IS-LOO gap = 0.0662
+  adjusted   = 0.8340
+
+ALTERNATIVES RECORDED IN THIS ROUND'S FINDINGS
+  1. **Probability-weighted pooling HURT performance significantly.** Weighted musk_tumor+gland embeddings gave LOO r=0.7181 for T3+G4 (best weighted config) versus 0.8340 for uniform pooling — a drop of ~0.12. This was consistent across all feature set sizes and alpha values. The mixed pooling (weighted tumor + uniform gland, since gland lacked per-patch probabilities) performed identically to fully weighted, confirming the degradation comes from the tumor embedding weighting.
+  3. **Uniform T3+G4 remains the best at LOO r=0.8340 (α=4), marginally beating α=5 (0.8338).** The difference is negligible (0.0002), confirming the model is at a stable plateau. Alpha values from 3-7 all give LOO r in [0.8333, 0.8340], showing extreme robustness to regularization strength in this narrow range.
+  4. **Adding tig to uniform T3+G4 still hurts**: LOO r=0.8300 (α=7, best with tig) vs 0.8340 without. Consistent with Round 11 findings.
+
+FINDINGS:
+  1. **Probability-weighted pooling HURT performance significantly.** Weighted musk_tumor+gland embeddings gave LOO r=0.7181 for T3+G4 (best weighted config) versus 0.8340 for uniform pooling — a drop of ~0.12. This was consistent across all feature set sizes and alpha values. The mixed pooling (weighted tumor + uniform gland, since gland lacked per-patch probabilities) performed identically to fully weighted, confirming the degradation comes from the tumor embedding weighting.
+
+  2. **Why weighting failed**: The classification probability for tumor patches likely does not correlate with morphological informativeness for tubule scoring. High-confidence tumor patches may be from solid tumor sheets (common in GT=3), while lower-confidence borderline detections near glandular structures may actually carry the most discriminative signal for tubule formation. By downweighting these borderline patches, the weighted mean loses the very signal that differentiates GT=1/2 from GT=3.
+
+  3. **Uniform T3+G4 remains the best at LOO r=0.8340 (α=4), marginally beating α=5 (0.8338).** The difference is negligible (0.0002), confirming the model is at a stable plateau. Alpha values from 3-7 all give LOO r in [0.8333, 0.8340], showing extreme robustness to regularization strength in this narrow range.
+
+  4. **Adding tig to uniform T3+G4 still hurts**: LOO r=0.8300 (α=7, best with tig) vs 0.8340 without. Consistent with Round 11 findings.
+
+  5. **Alternative PC counts with uniform pooling**: T4+G4 (0.8265), T3+G5 (0.8241), T3+G3 (0.7387) — all worse than T3+G4. The 3+4 allocation is optimal.

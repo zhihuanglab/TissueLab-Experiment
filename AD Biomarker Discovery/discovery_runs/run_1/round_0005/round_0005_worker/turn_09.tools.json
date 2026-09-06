@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\necho 'search for Adjusted Score / penalty'\ngrep -R \"Adjusted Score\" -n /shared/lib /shared/templates /data/autoresearch_runs 2>/dev/null | sed -n '1,40p' || true\ngrep -R \"is_loo_gap\" -n /shared/lib /shared/templates /data/autoresearch_runs 2>/dev/null | sed -n '1,80p' || true",
+    "output_preview": "{\"exit_code\": -1, \"stdout\": \"\", \"stderr\": \"Command timed out after 300s\"}"
+  }
+]

@@ -1,0 +1,189 @@
+Round 12 Details
+================================================================================
+
+APPROACH: Add biomedparse gland circularity feature, fine-tune K_g/K_t/alpha
+CHANGE FROM R11: Added gland_mean_circularity from biomedparse connected component analysis.
+  Dropped tumor_median_nnd and biomedparse prob features (noisy in R11).
+  Testing gland_ratio only vs gland_ratio+circularity vs circularity only.
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_ratio: r=-0.415
+  gland_mean_circularity: r=-0.195
+
+Gland PCA explained variance: 0.9589
+Tumor PCA explained variance: 0.9666
+
+Embedding availability: gland=30/30, tumor=30/30
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  A_gr_g4t1_R7: adjusted=0.7261 (LOO r=0.726, IS r=0.843, gap=0.117) [F1=0.672 QWK=0.688]
+  A_gr_g4t1_R5: adjusted=0.7259 (LOO r=0.726, IS r=0.844, gap=0.118) [F1=0.641 QWK=0.667]
+  D_noHC_g4t1_R5: adjusted=0.7255 (LOO r=0.725, IS r=0.841, gap=0.115) [F1=0.676 QWK=0.706]
+  A_gr_g4t1_R10: adjusted=0.7251 (LOO r=0.725, IS r=0.843, gap=0.118) [F1=0.599 QWK=0.600]
+  A_gr_g4t1_R3: adjusted=0.7250 (LOO r=0.725, IS r=0.844, gap=0.119) [F1=0.610 QWK=0.647]
+  D_noHC_g4t1_R10: adjusted=0.7226 (LOO r=0.723, IS r=0.840, gap=0.118) [F1=0.628 QWK=0.621]
+  A_gr_g4t1_R15: adjusted=0.7214 (LOO r=0.721, IS r=0.841, gap=0.120) [F1=0.546 QWK=0.519]
+  D_noHC_g4t2_R5: adjusted=0.7177 (LOO r=0.718, IS r=0.868, gap=0.150) [F1=0.641 QWK=0.667]
+  D_noHC_g4t1_R15: adjusted=0.7175 (LOO r=0.718, IS r=0.838, gap=0.121) [F1=0.628 QWK=0.621]
+  A_gr_g4t2_R5: adjusted=0.7148 (LOO r=0.716, IS r=0.868, gap=0.152) [F1=0.541 QWK=0.562]
+  A_gr_g4t2_R7: adjusted=0.7146 (LOO r=0.715, IS r=0.866, gap=0.151) [F1=0.533 QWK=0.533]
+  D_noHC_g4t2_R10: adjusted=0.7138 (LOO r=0.715, IS r=0.866, gap=0.152) [F1=0.521 QWK=0.500]
+  A_gr_g4t2_R3: adjusted=0.7135 (LOO r=0.715, IS r=0.869, gap=0.154) [F1=0.547 QWK=0.588]
+  A_gr_g4t2_R10: adjusted=0.7117 (LOO r=0.713, IS r=0.864, gap=0.152) [F1=0.493 QWK=0.483]
+  D_noHC_g4t2_R15: adjusted=0.7074 (LOO r=0.710, IS r=0.864, gap=0.154) [F1=0.521 QWK=0.500]
+  B_gr+circ_g4t1_R10: adjusted=0.7069 (LOO r=0.707, IS r=0.843, gap=0.136) [F1=0.556 QWK=0.552]
+  B_gr+circ_g4t1_R7: adjusted=0.7069 (LOO r=0.707, IS r=0.843, gap=0.136) [F1=0.589 QWK=0.600]
+  C_circ_g4t1_R5: adjusted=0.7061 (LOO r=0.706, IS r=0.840, gap=0.134) [F1=0.637 QWK=0.588]
+  B_gr+circ_g4t1_R5: adjusted=0.7056 (LOO r=0.706, IS r=0.844, gap=0.138) [F1=0.573 QWK=0.606]
+  A_gr_g4t2_R15: adjusted=0.7055 (LOO r=0.707, IS r=0.861, gap=0.154) [F1=0.475 QWK=0.444]
+  C_circ_g4t1_R10: adjusted=0.7044 (LOO r=0.704, IS r=0.839, gap=0.135) [F1=0.599 QWK=0.600]
+  B_gr+circ_g4t1_R15: adjusted=0.7039 (LOO r=0.704, IS r=0.840, gap=0.136) [F1=0.479 QWK=0.444]
+  A_gr_g4t0_R3: adjusted=0.7030 (LOO r=0.703, IS r=0.825, gap=0.122) [F1=0.570 QWK=0.581]
+  B_gr+circ_g4t1_R3: adjusted=0.7029 (LOO r=0.703, IS r=0.845, gap=0.142) [F1=0.568 QWK=0.529]
+  A_gr_g4t0_R5: adjusted=0.7009 (LOO r=0.701, IS r=0.823, gap=0.122) [F1=0.570 QWK=0.581]
+  C_circ_g4t1_R15: adjusted=0.6996 (LOO r=0.700, IS r=0.837, gap=0.137) [F1=0.628 QWK=0.621]
+  B_gr+circ_g4t2_R7: adjusted=0.6986 (LOO r=0.705, IS r=0.868, gap=0.163) [F1=0.541 QWK=0.562]
+  B_gr+circ_g4t2_R10: adjusted=0.6984 (LOO r=0.704, IS r=0.867, gap=0.162) [F1=0.505 QWK=0.516]
+  A_gr_g4t0_R7: adjusted=0.6982 (LOO r=0.698, IS r=0.820, gap=0.122) [F1=0.599 QWK=0.600]
+  B_gr+circ_g4t2_R5: adjusted=0.6972 (LOO r=0.705, IS r=0.869, gap=0.165) [F1=0.541 QWK=0.562]
+  B_gr+circ_g4t2_R15: adjusted=0.6947 (LOO r=0.701, IS r=0.863, gap=0.162) [F1=0.493 QWK=0.483]
+  A_gr_g4t0_R10: adjusted=0.6942 (LOO r=0.694, IS r=0.817, gap=0.123) [F1=0.562 QWK=0.552]
+  B_gr+circ_g4t2_R3: adjusted=0.6934 (LOO r=0.703, IS r=0.871, gap=0.168) [F1=0.541 QWK=0.562]
+  A_gr_g4t0_R15: adjusted=0.6876 (LOO r=0.688, IS r=0.814, gap=0.126) [F1=0.519 QWK=0.500]
+  B_gr+circ_g4t0_R5: adjusted=0.6821 (LOO r=0.682, IS r=0.824, gap=0.142) [F1=0.564 QWK=0.500]
+  B_gr+circ_g4t0_R3: adjusted=0.6818 (LOO r=0.682, IS r=0.825, gap=0.144) [F1=0.573 QWK=0.529]
+  B_gr+circ_g4t0_R7: adjusted=0.6817 (LOO r=0.682, IS r=0.822, gap=0.141) [F1=0.570 QWK=0.581]
+  B_gr+circ_g4t0_R10: adjusted=0.6800 (LOO r=0.680, IS r=0.820, gap=0.140) [F1=0.556 QWK=0.552]
+  B_gr+circ_g4t0_R15: adjusted=0.6750 (LOO r=0.675, IS r=0.817, gap=0.142) [F1=0.479 QWK=0.444]
+  C_circ_g4t0_R5: adjusted=0.6712 (LOO r=0.671, IS r=0.812, gap=0.140) [F1=0.556 QWK=0.467]
+  D_noHC_g4t0_R5: adjusted=0.6678 (LOO r=0.668, IS r=0.797, gap=0.129) [F1=0.599 QWK=0.600]
+  C_circ_g4t0_R10: adjusted=0.6654 (LOO r=0.665, IS r=0.811, gap=0.146) [F1=0.556 QWK=0.467]
+  D_noHC_g5t2_R5: adjusted=0.6609 (LOO r=0.680, IS r=0.869, gap=0.189) [F1=0.607 QWK=0.625]
+  D_noHC_g4t0_R10: adjusted=0.6608 (LOO r=0.661, IS r=0.796, gap=0.136) [F1=0.475 QWK=0.444]
+  D_noHC_g5t2_R10: adjusted=0.6600 (LOO r=0.679, IS r=0.866, gap=0.188) [F1=0.521 QWK=0.500]
+  C_circ_g4t0_R15: adjusted=0.6579 (LOO r=0.659, IS r=0.811, gap=0.152) [F1=0.433 QWK=0.385]
+  D_noHC_g4t0_R15: adjusted=0.6562 (LOO r=0.656, IS r=0.796, gap=0.140) [F1=0.455 QWK=0.400]
+  D_noHC_g5t1_R5: adjusted=0.6541 (LOO r=0.667, IS r=0.843, gap=0.176) [F1=0.565 QWK=0.500]
+  D_noHC_g5t2_R15: adjusted=0.6533 (LOO r=0.673, IS r=0.864, gap=0.190) [F1=0.475 QWK=0.444]
+  D_noHC_g5t1_R10: adjusted=0.6507 (LOO r=0.664, IS r=0.842, gap=0.177) [F1=0.493 QWK=0.483]
+  A_gr_g3t1_R15: adjusted=0.6503 (LOO r=0.650, IS r=0.774, gap=0.124) [F1=0.450 QWK=0.308]
+  A_gr_g5t2_R10: adjusted=0.6503 (LOO r=0.672, IS r=0.864, gap=0.193) [F1=0.475 QWK=0.444]
+  A_gr_g3t1_R10: adjusted=0.6502 (LOO r=0.650, IS r=0.776, gap=0.125) [F1=0.405 QWK=0.286]
+  A_gr_g5t2_R15: adjusted=0.6495 (LOO r=0.670, IS r=0.861, gap=0.191) [F1=0.475 QWK=0.444]
+  A_gr_g3t1_R7: adjusted=0.6482 (LOO r=0.648, IS r=0.776, gap=0.128) [F1=0.536 QWK=0.485]
+  A_gr_g5t1_R10: adjusted=0.6478 (LOO r=0.663, IS r=0.842, gap=0.180) [F1=0.479 QWK=0.444]
+  A_gr_g5t2_R7: adjusted=0.6478 (LOO r=0.671, IS r=0.867, gap=0.196) [F1=0.541 QWK=0.562]
+  A_gr_g5t1_R15: adjusted=0.6477 (LOO r=0.662, IS r=0.840, gap=0.178) [F1=0.400 QWK=0.333]
+  A_gr_g3t1_R5: adjusted=0.6459 (LOO r=0.646, IS r=0.776, gap=0.130) [F1=0.536 QWK=0.485]
+  D_noHC_g3t1_R5: adjusted=0.6454 (LOO r=0.645, IS r=0.767, gap=0.121) [F1=0.500 QWK=0.438]
+  D_noHC_g3t1_R10: adjusted=0.6448 (LOO r=0.645, IS r=0.766, gap=0.121) [F1=0.551 QWK=0.467]
+  A_gr_g5t1_R7: adjusted=0.6440 (LOO r=0.660, IS r=0.843, gap=0.183) [F1=0.641 QWK=0.667]
+  D_noHC_g5t1_R15: adjusted=0.6430 (LOO r=0.659, IS r=0.839, gap=0.181) [F1=0.407 QWK=0.333]
+  A_gr_g3t1_R3: adjusted=0.6424 (LOO r=0.642, IS r=0.776, gap=0.133) [F1=0.536 QWK=0.485]
+  A_gr_g5t2_R5: adjusted=0.6424 (LOO r=0.668, IS r=0.869, gap=0.201) [F1=0.541 QWK=0.562]
+  D_noHC_g3t1_R15: adjusted=0.6415 (LOO r=0.642, IS r=0.764, gap=0.122) [F1=0.348 QWK=0.167]
+  A_gr_g5t1_R5: adjusted=0.6381 (LOO r=0.657, IS r=0.844, gap=0.187) [F1=0.605 QWK=0.571]
+  B_gr+circ_g5t2_R15: adjusted=0.6376 (LOO r=0.663, IS r=0.863, gap=0.200) [F1=0.447 QWK=0.429]
+  B_gr+circ_g5t2_R10: adjusted=0.6369 (LOO r=0.663, IS r=0.866, gap=0.203) [F1=0.505 QWK=0.516]
+  A_gr_g5t2_R3: adjusted=0.6335 (LOO r=0.662, IS r=0.870, gap=0.208) [F1=0.577 QWK=0.606]
+  B_gr+circ_g5t2_R7: adjusted=0.6318 (LOO r=0.661, IS r=0.868, gap=0.208) [F1=0.505 QWK=0.516]
+  B_gr+circ_g3t1_R15: adjusted=0.6283 (LOO r=0.628, IS r=0.773, gap=0.145) [F1=0.450 QWK=0.308]
+  A_gr_g5t1_R3: adjusted=0.6272 (LOO r=0.650, IS r=0.844, gap=0.195) [F1=0.636 QWK=0.611]
+  C_circ_g5t1_R5: adjusted=0.6267 (LOO r=0.649, IS r=0.843, gap=0.194) [F1=0.565 QWK=0.500]
+  C_circ_g5t1_R10: adjusted=0.6263 (LOO r=0.648, IS r=0.842, gap=0.194) [F1=0.493 QWK=0.483]
+  B_gr+circ_g3t1_R10: adjusted=0.6256 (LOO r=0.626, IS r=0.775, gap=0.150) [F1=0.379 QWK=0.276]
+  B_gr+circ_g5t2_R5: adjusted=0.6244 (LOO r=0.656, IS r=0.870, gap=0.214) [F1=0.505 QWK=0.516]
+  B_gr+circ_g5t1_R15: adjusted=0.6224 (LOO r=0.645, IS r=0.840, gap=0.195) [F1=0.375 QWK=0.320]
+  B_gr+circ_g5t1_R10: adjusted=0.6210 (LOO r=0.645, IS r=0.843, gap=0.198) [F1=0.430 QWK=0.385]
+  C_circ_g5t1_R15: adjusted=0.6199 (LOO r=0.643, IS r=0.839, gap=0.196) [F1=0.385 QWK=0.320]
+  C_circ_g3t1_R10: adjusted=0.6185 (LOO r=0.618, IS r=0.765, gap=0.146) [F1=0.489 QWK=0.400]
+  C_circ_g3t1_R15: adjusted=0.6184 (LOO r=0.618, IS r=0.762, gap=0.144) [F1=0.434 QWK=0.308]
+  B_gr+circ_g3t1_R7: adjusted=0.6184 (LOO r=0.621, IS r=0.776, gap=0.155) [F1=0.500 QWK=0.438]
+  B_gr+circ_g5t1_R7: adjusted=0.6153 (LOO r=0.641, IS r=0.844, gap=0.202) [F1=0.493 QWK=0.483]
+  B_gr+circ_g5t2_R3: adjusted=0.6140 (LOO r=0.650, IS r=0.871, gap=0.221) [F1=0.505 QWK=0.516]
+  C_circ_g3t1_R5: adjusted=0.6110 (LOO r=0.613, IS r=0.766, gap=0.153) [F1=0.500 QWK=0.438]
+  B_gr+circ_g3t1_R5: adjusted=0.6104 (LOO r=0.615, IS r=0.776, gap=0.160) [F1=0.507 QWK=0.471]
+  A_gr_g3t0_R7: adjusted=0.6075 (LOO r=0.609, IS r=0.761, gap=0.153) [F1=0.441 QWK=0.345]
+  B_gr+circ_g5t1_R5: adjusted=0.6073 (LOO r=0.636, IS r=0.845, gap=0.208) [F1=0.568 QWK=0.529]
+  A_gr_g3t0_R5: adjusted=0.6072 (LOO r=0.609, IS r=0.763, gap=0.154) [F1=0.441 QWK=0.345]
+  A_gr_g3t0_R10: adjusted=0.6070 (LOO r=0.607, IS r=0.758, gap=0.151) [F1=0.427 QWK=0.296]
+  A_gr_g3t0_R3: adjusted=0.6059 (LOO r=0.609, IS r=0.765, gap=0.156) [F1=0.441 QWK=0.345]
+  A_gr_g3t0_R15: adjusted=0.6027 (LOO r=0.603, IS r=0.753, gap=0.150) [F1=0.352 QWK=0.261]
+  B_gr+circ_g3t1_R3: adjusted=0.5981 (LOO r=0.607, IS r=0.776, gap=0.168) [F1=0.507 QWK=0.471]
+  B_gr+circ_g5t1_R3: adjusted=0.5927 (LOO r=0.627, IS r=0.845, gap=0.218) [F1=0.605 QWK=0.571]
+  A_gr_g5t0_R7: adjusted=0.5886 (LOO r=0.620, IS r=0.834, gap=0.213) [F1=0.448 QWK=0.345]
+  A_gr_g5t0_R5: adjusted=0.5878 (LOO r=0.620, IS r=0.836, gap=0.215) [F1=0.489 QWK=0.400]
+  A_gr_g5t0_R10: adjusted=0.5871 (LOO r=0.619, IS r=0.831, gap=0.213) [F1=0.433 QWK=0.385]
+  A_gr_g5t0_R3: adjusted=0.5851 (LOO r=0.619, IS r=0.838, gap=0.218) [F1=0.500 QWK=0.438]
+  A_gr_g3t2_R15: adjusted=0.5823 (LOO r=0.599, IS r=0.783, gap=0.184) [F1=0.362 QWK=0.308]
+  A_gr_g5t0_R15: adjusted=0.5813 (LOO r=0.613, IS r=0.827, gap=0.214) [F1=0.385 QWK=0.320]
+  B_gr+circ_g3t0_R15: adjusted=0.5799 (LOO r=0.589, IS r=0.756, gap=0.167) [F1=0.348 QWK=0.167]
+  D_noHC_g3t2_R15: adjusted=0.5791 (LOO r=0.596, IS r=0.779, gap=0.183) [F1=0.384 QWK=0.357]
+  D_noHC_g3t2_R10: adjusted=0.5761 (LOO r=0.595, IS r=0.781, gap=0.187) [F1=0.379 QWK=0.276]
+  B_gr+circ_g3t0_R10: adjusted=0.5752 (LOO r=0.586, IS r=0.759, gap=0.173) [F1=0.403 QWK=0.286]
+  A_gr_g3t2_R10: adjusted=0.5747 (LOO r=0.595, IS r=0.786, gap=0.191) [F1=0.452 QWK=0.429]
+  B_gr+circ_g3t0_R7: adjusted=0.5706 (LOO r=0.584, IS r=0.760, gap=0.176) [F1=0.417 QWK=0.333]
+  B_gr+circ_g3t2_R15: adjusted=0.5673 (LOO r=0.590, IS r=0.784, gap=0.195) [F1=0.407 QWK=0.370]
+  D_noHC_g3t2_R5: adjusted=0.5666 (LOO r=0.589, IS r=0.783, gap=0.194) [F1=0.496 QWK=0.438]
+  B_gr+circ_g3t0_R5: adjusted=0.5657 (LOO r=0.581, IS r=0.762, gap=0.181) [F1=0.417 QWK=0.333]
+  A_gr_g3t2_R7: adjusted=0.5653 (LOO r=0.589, IS r=0.788, gap=0.198) [F1=0.461 QWK=0.387]
+  B_gr+circ_g5t0_R10: adjusted=0.5631 (LOO r=0.602, IS r=0.831, gap=0.229) [F1=0.479 QWK=0.444]
+  B_gr+circ_g5t0_R7: adjusted=0.5626 (LOO r=0.603, IS r=0.833, gap=0.231) [F1=0.422 QWK=0.333]
+  B_gr+circ_g5t0_R5: adjusted=0.5601 (LOO r=0.602, IS r=0.836, gap=0.234) [F1=0.461 QWK=0.387]
+  B_gr+circ_g5t0_R15: adjusted=0.5592 (LOO r=0.598, IS r=0.826, gap=0.228) [F1=0.385 QWK=0.320]
+  B_gr+circ_g3t0_R3: adjusted=0.5584 (LOO r=0.577, IS r=0.763, gap=0.186) [F1=0.390 QWK=0.323]
+  B_gr+circ_g3t2_R10: adjusted=0.5562 (LOO r=0.583, IS r=0.786, gap=0.203) [F1=0.487 QWK=0.400]
+  A_gr_g3t2_R5: adjusted=0.5559 (LOO r=0.583, IS r=0.789, gap=0.205) [F1=0.461 QWK=0.387]
+  B_gr+circ_g5t0_R3: adjusted=0.5550 (LOO r=0.599, IS r=0.837, gap=0.238) [F1=0.500 QWK=0.438]
+  C_circ_g5t0_R5: adjusted=0.5448 (LOO r=0.592, IS r=0.836, gap=0.244) [F1=0.565 QWK=0.500]
+  B_gr+circ_g3t2_R7: adjusted=0.5438 (LOO r=0.575, IS r=0.787, gap=0.212) [F1=0.487 QWK=0.400]
+  A_gr_g3t2_R3: adjusted=0.5426 (LOO r=0.575, IS r=0.789, gap=0.215) [F1=0.461 QWK=0.387]
+  C_circ_g5t0_R10: adjusted=0.5329 (LOO r=0.583, IS r=0.832, gap=0.250) [F1=0.441 QWK=0.345]
+  B_gr+circ_g3t2_R5: adjusted=0.5312 (LOO r=0.567, IS r=0.788, gap=0.222) [F1=0.487 QWK=0.400]
+  D_noHC_g5t0_R5: adjusted=0.5306 (LOO r=0.583, IS r=0.836, gap=0.254) [F1=0.487 QWK=0.400]
+  D_noHC_g5t0_R10: adjusted=0.5202 (LOO r=0.575, IS r=0.834, gap=0.259) [F1=0.441 QWK=0.345]
+  C_circ_g5t0_R15: adjusted=0.5200 (LOO r=0.574, IS r=0.831, gap=0.257) [F1=0.330 QWK=0.250]
+  B_gr+circ_g3t2_R3: adjusted=0.5127 (LOO r=0.555, IS r=0.789, gap=0.234) [F1=0.461 QWK=0.387]
+  D_noHC_g5t0_R15: adjusted=0.5092 (LOO r=0.567, IS r=0.833, gap=0.266) [F1=0.385 QWK=0.320]
+  C_circ_g3t0_R5: adjusted=0.4787 (LOO r=0.516, IS r=0.742, gap=0.226) [F1=0.422 QWK=0.333]
+  C_circ_g3t0_R10: adjusted=0.4703 (LOO r=0.511, IS r=0.742, gap=0.231) [F1=0.491 QWK=0.370]
+  C_circ_g3t0_R15: adjusted=0.4611 (LOO r=0.505, IS r=0.742, gap=0.237) [F1=0.404 QWK=0.240]
+  D_noHC_g3t0_R5: adjusted=0.4371 (LOO r=0.484, IS r=0.726, gap=0.243) [F1=0.468 QWK=0.357]
+  D_noHC_g3t0_R10: adjusted=0.4301 (LOO r=0.478, IS r=0.725, gap=0.247) [F1=0.404 QWK=0.240]
+  D_noHC_g3t0_R15: adjusted=0.4198 (LOO r=0.472, IS r=0.725, gap=0.253) [F1=0.352 QWK=0.167]
+
+BEST: A_gr_g4t1_R7 adjusted=0.7261
+Selected gland PCs (IS): [1, 5, 9, 16]
+Selected tumor PCs (IS): [1]
+
+PER-CASE LOO PREDICTIONS:
+  TCGA-A2-A0CS         GT=2 pred=1.738 cls=2 ok
+  TCGA-A2-A0ET         GT=2 pred=2.570 cls=3 MISS
+  TCGA-A7-A0D9         GT=2 pred=1.882 cls=2 ok
+  TCGA-A7-A3IY         GT=1 pred=1.436 cls=1 ok
+  TCGA-AC-A23E         GT=1 pred=1.888 cls=2 MISS
+  TCGA-AC-A2FM         GT=2 pred=2.481 cls=2 ok
+  TCGA-AC-A3TN         GT=1 pred=1.608 cls=2 MISS
+  TCGA-AC-A7VB         GT=2 pred=2.140 cls=2 ok
+  TCGA-AR-A0U4         GT=3 pred=2.080 cls=2 MISS
+  TCGA-AR-A1AR         GT=3 pred=2.514 cls=3 ok
+  TCGA-AR-A2LO         GT=3 pred=2.704 cls=3 ok
+  TCGA-BH-A0B8         GT=3 pred=1.593 cls=2 MISS
+  TCGA-BH-A0C3         GT=3 pred=2.074 cls=2 MISS
+  TCGA-BH-A0DX         GT=1 pred=1.603 cls=2 MISS
+  TCGA-BH-A0W4         GT=1 pred=1.357 cls=1 ok
+  TCGA-BH-A42V         GT=2 pred=2.409 cls=2 ok
+  TCGA-D8-A1XD         GT=2 pred=1.516 cls=2 ok
+  TCGA-D8-A1XT         GT=3 pred=2.921 cls=3 ok
+  TCGA-D8-A27N         GT=3 pred=2.591 cls=3 ok
+  TCGA-D8-A27P         GT=1 pred=1.606 cls=2 MISS
+  TCGA-D8-A4Z1         GT=3 pred=2.730 cls=3 ok
+  TCGA-D8-A73X         GT=1 pred=1.253 cls=1 ok
+  TCGA-E2-A10E         GT=2 pred=2.432 cls=2 ok
+  TCGA-E2-A14W         GT=3 pred=2.380 cls=2 MISS
+  TCGA-E2-A1B1         GT=1 pred=1.481 cls=1 ok
+  TCGA-E2-A1IG         GT=2 pred=1.940 cls=2 ok
+  TCGA-EW-A1IY         GT=2 pred=1.688 cls=2 ok
+  TCGA-EW-A1PH         GT=3 pred=2.616 cls=3 ok
+  TCGA-LL-A5YO         GT=1 pred=2.034 cls=2 MISS
+  TCGA-OL-A5RX         GT=1 pred=1.000 cls=1 ok

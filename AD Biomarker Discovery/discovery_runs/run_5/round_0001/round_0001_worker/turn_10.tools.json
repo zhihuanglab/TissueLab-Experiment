@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '520,680p' /data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"        **stability,\\n        \\\"per_donor\\\": per_donor.to_dict(orient=\\\"records\\\"),\\n        \\\"feature_values\\\": analyzable[\\n            [\\\"donor_id\\\", feature_col, numer_col, denom_col, region_cells_col, OUTCOME_COL]\\n        ].to_dict(orient=\\\"records\\\"),\\n    }\\n\\n\\ndef _sort_key(result: dict[str, Any]) -> tuple[float, float]:\\n    adj = result[\\\"adjusted_score\\\"]\\n    loo = result[\\\"loo_predictive_r\\\"]\\n    if not np.isfinite(adj):\\n        return (-np.inf, -np.inf)\\n    if not np.isfinite(loo):\\n        loo = -np.inf\", \"stderr\": \"\"}"
+  }
+]

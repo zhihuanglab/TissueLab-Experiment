@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\necho '--- context_bundle.json ---'\npython - <<'PY'\nimport json\np='/scratch/context_bundle.json'\nwith open(p) as f:\n    obj=json.load(f)\nimport pprint\npprint.pp(obj)\nPY\n\necho '--- program.md ---'\ncat /scratch/program.md\n\necho '--- preseed result.py head ---'\nsed -n '1,220p' /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"               'cohort_match_count': 1,\\n                                     'donor_id': 'H20.33.024'}]},\\n 'runtime_quickstart_excerpt': '# Shared Runtime Quickstart\\\\n'\\n                               '\\\\n'\\n                               '- Import helpers from `/shared/lib`. '\\n                               '`PYTHONPATH` already includes it.\\\\n'\\n                               '- Generic starter template: '\\n                               '`/shared/templates/worker_analysis_template.py`\\\\n'\\n          \", \"stderr\": \"\"}"
+  }
+]

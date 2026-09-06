@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ntime python /scratch/result.py > /scratch/result_stdout.txt\ntail -n 80 /scratch/result_stdout.txt",
+    "output_preview": "{\"exit_code\": 127, \"stdout\": \"\", \"stderr\": \"/bin/sh: 11: time: not found\\n\"}"
+  }
+]

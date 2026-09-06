@@ -1,0 +1,37 @@
+{
+  "worker_name": "round_0002_worker",
+  "round_id": 2,
+  "candidate_id": "ca1-peripyramidal-reactive-astro",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_reactive_astro_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.4914
+  },
+  "scientific_question": "Does the fraction of CA1 pyramidal neurons that sit near a reactive astrocyte predict donor memory decline better than, or add to, overall CA1 reactive astrocyte burden?",
+  "approach": "For each donor, map cell centroids into CA1 using the region polygons from CustomAnnotations after dividing polygon coordinates by 16. Within CA1, identify cells labeled 'Pyramidal Neuron' and 'Reactive Astrocyte' from ClassificationNode. Build a nearest-neighbor search from reactive astrocyte centroids and compute the donor score as the fraction of CA1 pyramidal neurons having at least one reactive astrocyte within a fixed radius. If CA1 has pyramidal neurons but no reactive astrocytes, return 0. If CA1 is missing or has no pyramidal neurons, return NaN.",
+  "variations": [
+    {
+      "name": "pyramidal_near_reactiveastro_30um",
+      "description": "Baseline variant: fraction of CA1 pyramidal neurons with at least one reactive astrocyte within 30 microns."
+    },
+    {
+      "name": "pyramidal_near_reactiveastro_50um",
+      "description": "Local radius sweep: same metric but using a 50 micron neighborhood to test a slightly broader perineuronal niche."
+    }
+  ],
+  "baseline_variation": "pyramidal_near_reactiveastro_30um",
+  "notes": "Use centroids in slide pixel coordinates. Convert the 30 and 50 micron radii to pixels using slide MPP from the paired SVS if convenient; otherwise a cohort-wide approximation near 0.503 microns per pixel is acceptable. Region assignment must use annotation polygons scaled down by 16. This candidate only needs centroids, labels, and CA1 polygons; no contour morphology is required.",
+  "rationale": "Round 1 established CA1 reactive astrocyte abundance as a strong seed signal, so the right next test is to keep that biology fixed and ask whether the informative part is specifically a neuron-adjacent reactive astrocyte niche rather than diffuse gliosis. This is a small, interpretable step from a global composition feature to a spatially localized CA1 injury marker, and it could either add orthogonal signal to the accepted panel or replace the current member with a cleaner mechanistic readout."
+}

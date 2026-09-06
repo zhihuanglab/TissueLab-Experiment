@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,260p' /data/autoresearch_runs/run_20260412_150614_9b299b/shared/worker_chains/ca1_reactive_astrocyte_niche/sandbox/result.py\necho '--- results ---'\ncat /data/autoresearch_runs/run_20260412_150614_9b299b/shared/worker_chains/ca1_reactive_astrocyte_niche/sandbox/results.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"from __future__ import annotations\\n\\nimport json\\nimport math\\nimport sys\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nimport numpy as np\\nimport pandas as pd\\nimport warnings\\nfrom matplotlib.path import Path as MplPath\\nfrom scipy.spatial import cKDTree\\n\\nSHARED_LIB = Path(\\\"/shared/lib\\\")\\nif str(SHARED_LIB) not in sys.path:\\n    sys.path.insert(0, str(SHARED_LIB))\\n\\nfrom shared_analysis.artifacts import (  # noqa: E402\\n    build_results_payload,\\n    write_donor_feature_table,\\n    write_results_payloa\", \"stderr\": \"\"}"
+  }
+]

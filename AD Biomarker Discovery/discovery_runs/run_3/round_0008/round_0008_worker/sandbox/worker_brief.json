@@ -1,0 +1,92 @@
+{
+  "worker_name": "round_0008_worker",
+  "round_id": 8,
+  "candidate_id": "ca1-immune-admixed-reactive-cuff",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "astrocytic_reactivity_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "peripyramidal_reactivity_r35um",
+        "round_id": 2,
+        "panel_candidate_score": 0.4964,
+        "delta_panel_score": 0.0051,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_cuffed_fraction_r35um_ge1",
+        "round_id": 3,
+        "panel_candidate_score": 0.5544,
+        "delta_panel_score": 0.0579,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_pyramidal_cuffed_fraction_r35um_ge2",
+        "round_id": 4,
+        "panel_candidate_score": 0.5731,
+        "delta_panel_score": 0.0187,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_pyramidal_supermajority_reactive_cuff_fraction_r35um_ge2",
+        "round_id": 5,
+        "panel_candidate_score": 0.5766,
+        "delta_panel_score": 0.0035,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0005/round_0005_worker/result.py"
+      },
+      {
+        "slot": 6,
+        "feature_name": "ca1_peripyramidal_reactive_area_median_r35um",
+        "round_id": 6,
+        "panel_candidate_score": 0.5944,
+        "delta_panel_score": 0.0178,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0006/round_0006_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0006/round_0006_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0006/round_0006_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5944
+  },
+  "scientific_question": "Does the fraction of CA1 pyramidal neurons surrounded by a severe reactive-astrocyte cuff that also contains nearby lymphocytes capture an inflammatory perineuronal niche with memory-decline signal beyond the current astrocyte-only panel?",
+  "approach": "Assign cells to CA1 using the annotation polygons after dividing polygon coordinates by 16. Identify CA1 Pyramidal Neuron cells, Reactive Astrocyte cells, and Lymphocyte cells from ClassificationNode labels. For each CA1 pyramidal neuron, count nearby Reactive Astrocytes and Lymphocytes within radius r using centroid-to-centroid distance in microns. Define an immune-admixed severe reactive cuff as a pyramidal neuron with at least 2 Reactive Astrocytes and at least 1 Lymphocyte within radius r. The donor-level biomarker is the fraction of all CA1 pyramidal neurons meeting that criterion.",
+  "variations": [
+    {
+      "name": "ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r35um_ra2_ly1",
+      "description": "Baseline: fraction of CA1 pyramidal neurons with >=2 Reactive Astrocytes and >=1 Lymphocyte within 35 um."
+    },
+    {
+      "name": "ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r50um_ra2_ly1",
+      "description": "Local radius expansion: same definition but within 50 um to allow a slightly broader inflammatory cuff."
+    }
+  ],
+  "baseline_variation": "ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r35um_ra2_ly1",
+  "notes": "Use centroids from SegmentationNode for neighbor search; convert pixel distances to microns using slide MPP if available from the paired SVS, otherwise use the cohort-typical ~0.503 um/pixel consistently. Keep the denominator as all CA1 pyramidal neurons so donors with zero lymphocytes score 0 rather than becoming missing. Return NaN only if CA1 pyramidal neurons are absent. Avoid contour-area calculations here; this is a pure spatial composition feature.",
+  "rationale": "Rounds 3-6 show that CA1 peripyramidal reactive astrocyte cuffing and reactive-cell hypertrophy are the strongest lead, while round 7 suggests additional astrocyte-only burden summaries are becoming redundant. The next logical test is to keep the same CA1 pyramidal niche but add one biologically distinct component: lymphocyte admixture. This asks whether a smaller inflammatory subset of the established reactive cuffs is more informative than broader cuff-count or area summaries and could either add orthogonal signal or replace a weaker cuff feature."
+}

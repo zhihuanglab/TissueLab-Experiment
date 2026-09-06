@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\ntry:\n    import openslide\n    print('openslide version ok')\n    s=openslide.OpenSlide('/data/H19.33.004-A12-LFB.svs')\n    print(s.properties.get('openslide.mpp-x'), s.properties.get('aperio.MPP'))\nexcept Exception as e:\n    print('openslide failed', repr(e))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"openslide version ok\\n0.50490000000000002 0.5049\\n\", \"stderr\": \"\"}"
+  }
+]

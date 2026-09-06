@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,80p' /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"from __future__ import annotations\\n\\nimport json\\nimport math\\nimport re\\nimport sys\\nimport warnings\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nsys.path.insert(0, \\\"/shared/lib\\\")\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom matplotlib.path import Path as MplPath\\nfrom scipy.spatial import cKDTree\\n\\nfrom shared_analysis import load_training_cohort\\nfrom shared_analysis.artifacts import (\\n    build_results_payload,\\n    write_donor_feature_table,\\n    write_results_payload,\\n)\\nfrom shared_analysis.stat\", \"stderr\": \"\"}"
+  }
+]

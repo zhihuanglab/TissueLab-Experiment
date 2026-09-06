@@ -1,0 +1,107 @@
+{
+  "worker_name": "round_0008_worker",
+  "round_id": 8,
+  "candidate_id": "ca1-pyramidal-reactive-astro-lymphocyte-triad",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_reactive_astro_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_pyramidal_near_reactive_astro_fraction_30um",
+        "round_id": 2,
+        "panel_candidate_score": 0.5513,
+        "delta_panel_score": 0.0599,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um",
+        "round_id": 3,
+        "panel_candidate_score": 0.5984,
+        "delta_panel_score": 0.0471,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+        "round_id": 4,
+        "panel_candidate_score": 0.6307,
+        "delta_panel_score": 0.0323,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_peripyramidal_astro_reactivity_index_30um",
+        "round_id": 5,
+        "panel_candidate_score": 0.6323,
+        "delta_panel_score": 0.0016,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker/result.py"
+      },
+      {
+        "slot": 6,
+        "feature_name": "ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um",
+        "round_id": 6,
+        "panel_candidate_score": 0.6347,
+        "delta_panel_score": 0.0024,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0006/round_0006_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0006/round_0006_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0006/round_0006_worker/result.py"
+      },
+      {
+        "slot": 7,
+        "feature_name": "ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um",
+        "round_id": 7,
+        "panel_candidate_score": 0.6491,
+        "delta_panel_score": 0.0144,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0007/round_0007_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0007/round_0007_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0007/round_0007_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.6491
+  },
+  "scientific_question": "Do donors with worse memory decline have a higher fraction of CA1 pyramidal neurons that lie in a local tri-cell niche containing both a nearby reactive astrocyte and a nearby lymphocyte?",
+  "approach": "Assign cells to CA1 using CustomAnnotations polygons after dividing polygon coordinates by 16. From ClassificationNode labels, select CA1 Pyramidal Neuron, Reactive Astrocyte, and Lymphocyte centroids. For each CA1 pyramidal neuron, test whether at least one CA1 reactive astrocyte lies within 30 um and at least one CA1 lymphocyte lies within a candidate lymphocyte radius of the same neuron. The donor-level biomarker is the fraction of CA1 pyramidal neurons satisfying both conditions, using all CA1 pyramidal neurons as the denominator.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Baseline triad fraction: CA1 pyramidal neurons with at least 1 reactive astrocyte within 30 um and at least 1 lymphocyte within 20 um."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Stricter immune adjacency: same as baseline, but lymphocyte radius reduced to 15 um."
+    },
+    {
+      "name": "candidate_variant_c",
+      "description": "Broader immune niche: same as baseline, but lymphocyte radius increased to 25 um."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use centroid-to-centroid distances and convert um thresholds to pixels with slide-specific MPP if available; otherwise a cohort-constant ~0.503 um/px is acceptable because MPP variation is minimal. Keep the reactive-astrocyte radius fixed at 30 um to isolate one local sweep on lymphocyte radius. Restrict all three cell types to CA1 for interpretability. If a donor has CA1 pyramidal neurons but zero qualifying reactive astrocytes or lymphocytes, return 0.0 rather than missing; only return NaN if CA1 pyramidal neurons are absent. KD-tree or ball-query indexing will make the neighbor search tractable.",
+  "rationale": "The accepted panel has extracted most of the easy gain from astrocyte-only CA1 peripyramidal summaries, with rounds 5-6 adding little, while round 7 showed a larger improvement when lymphocyte association was introduced. The right next test is therefore a small, auditable shift from an astrocyte-centered immune-contact feature to a neuron-centered reactive-astrocyte-plus-lymphocyte niche, which could add cleaner signal about the fraction of vulnerable CA1 pyramidal neurons embedded in inflammatory gliosis and may replace a weaker exposure or crowding member if it is less redundant."
+}

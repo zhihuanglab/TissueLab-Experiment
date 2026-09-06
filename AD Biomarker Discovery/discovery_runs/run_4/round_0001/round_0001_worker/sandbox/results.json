@@ -1,0 +1,42 @@
+{
+  "hypothesis_family": "CA1 pyramidal neuron abundance",
+  "best_variation": "ca1_pyramidal_fraction",
+  "feature_column": "ca1_pyramidal_fraction",
+  "partial_r": 0.2939762861987372,
+  "selection_score": 0.2939762861987372,
+  "loo_predictive_r": 0.19994024387578002,
+  "is_loo_gap": 0.0940360423229572,
+  "penalty": 0.0940360423229572,
+  "adjusted_score": 0.19994024387578002,
+  "n_total": 35,
+  "n_analyzable": 35,
+  "coverage": 1.0,
+  "ranked_variations": [
+    {
+      "variation_name": "ca1_pyramidal_fraction",
+      "feature_column": "ca1_pyramidal_fraction",
+      "partial_r": 0.2939762861987372,
+      "selection_score": 0.2939762861987372,
+      "loo_predictive_r": 0.19994024387578002,
+      "is_loo_gap": 0.0940360423229572,
+      "penalty": 0.0940360423229572,
+      "adjusted_score": 0.19994024387578002,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "coverage": 1.0
+    },
+    {
+      "variation_name": "ca1_pyramidal_density",
+      "feature_column": "ca1_pyramidal_density",
+      "partial_r": 0.2218995085349804,
+      "selection_score": 0.2218995085349804,
+      "loo_predictive_r": 0.18556542108384533,
+      "is_loo_gap": 0.03633408745113506,
+      "penalty": 0.03633408745113506,
+      "adjusted_score": 0.18556542108384533,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "coverage": 1.0
+    }
+  ]
+}

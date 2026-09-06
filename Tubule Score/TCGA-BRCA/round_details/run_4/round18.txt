@@ -1,0 +1,223 @@
+Round 18 Details
+================================================================================
+
+Approach: Round 17 base + git/gf ratio + tumor_patch_fraction
+  musk_tumor PCA→29, musk_gland PCA→20
+  LOO-safe PC selection, ONE Ridge model
+  New features: git_over_gf ratio, tumor_patch_fraction
+
+Best model: tPC8_gPC3_gf_git_bgit_a1.5
+Description: Ridge(a=1.5) tPC(8)+gPC(3)+gf_git_bgit [f=14]
+LOO Pearson r: 0.9226
+IS Pearson r: 0.9840
+Gap: 0.0614
+Adjusted: 0.9226
+
+Feature correlations:
+  gf: r=-0.4148
+  tf: r=-0.0527
+  git: r=-0.5571
+  bgit: r=-0.1272
+  git/gf: r=-0.2214
+
+All configurations (sorted by adjusted):
+  tPC8_gPC3_gf_git_bgit_a1.5: adj=0.9226 LOO_r=0.9226 IS_r=0.9840 gap=0.0614 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_bgit_a1.0: adj=0.9226 LOO_r=0.9226 IS_r=0.9849 gap=0.0623 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_bgit_a0.7: adj=0.9222 LOO_r=0.9222 IS_r=0.9854 gap=0.0632 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_bgit_a2.0: adj=0.9221 LOO_r=0.9221 IS_r=0.9831 gap=0.0610 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_bgit_a0.5: adj=0.9216 LOO_r=0.9216 IS_r=0.9857 gap=0.0641 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_bgit_a3.0: adj=0.9213 LOO_r=0.9213 IS_r=0.9815 gap=0.0602 F1=0.8997 QWK=0.9231
+  tPC8_gPC4_gf_git_bgit_a2.0: adj=0.9211 LOO_r=0.9211 IS_r=0.9829 gap=0.0618 F1=0.8997 QWK=0.9231
+  tPC8_gPC4_gf_git_bgit_a1.5: adj=0.9209 LOO_r=0.9209 IS_r=0.9838 gap=0.0629 F1=0.8997 QWK=0.9231
+  tPC10_gPC3_gf_git_bgit_a1.5: adj=0.9208 LOO_r=0.9208 IS_r=0.9898 gap=0.0690 F1=0.8027 QWK=0.8235
+  tPC8_gPC3_gf_git_bgit_a0.3: adj=0.9206 LOO_r=0.9206 IS_r=0.9860 gap=0.0654 F1=0.8997 QWK=0.9231
+  tPC10_gPC3_gf_git_bgit_a1.0: adj=0.9205 LOO_r=0.9205 IS_r=0.9905 gap=0.0699 F1=0.8375 QWK=0.8571
+  tPC8_gPC4_gf_git_bgit_a3.0: adj=0.9205 LOO_r=0.9205 IS_r=0.9812 gap=0.0607 F1=0.8653 QWK=0.8947
+  tPC8_gPC4_gf_git_bgit_a1.0: adj=0.9202 LOO_r=0.9202 IS_r=0.9847 gap=0.0645 F1=0.8997 QWK=0.9231
+  tPC10_gPC3_gf_git_bgit_a2.0: adj=0.9201 LOO_r=0.9201 IS_r=0.9891 gap=0.0690 F1=0.8027 QWK=0.8235
+  tPC9_gPC3_gf_git_bgit_a1.0: adj=0.9199 LOO_r=0.9199 IS_r=0.9860 gap=0.0660 F1=0.8056 QWK=0.8333
+  tPC9_gPC3_gf_git_bgit_a1.5: adj=0.9197 LOO_r=0.9197 IS_r=0.9850 gap=0.0653 F1=0.8056 QWK=0.8333
+  tPC10_gPC3_gf_git_bgit_a0.7: adj=0.9196 LOO_r=0.9196 IS_r=0.9908 gap=0.0712 F1=0.8375 QWK=0.8571
+  tPC10_gPC3_gf_git_a1.0: adj=0.9196 LOO_r=0.9196 IS_r=0.9900 gap=0.0704 F1=0.7654 QWK=0.7879
+  tPC9_gPC3_gf_git_bgit_a0.7: adj=0.9196 LOO_r=0.9196 IS_r=0.9866 gap=0.0670 F1=0.8056 QWK=0.8333
+  tPC10_gPC3_gf_git_bgit_ratio_a2.0: adj=0.9194 LOO_r=0.9194 IS_r=0.9888 gap=0.0694 F1=0.8027 QWK=0.8235
+  tPC10_gPC3_gf_git_bgit_ratio_a3.0: adj=0.9194 LOO_r=0.9194 IS_r=0.9873 gap=0.0680 F1=0.7654 QWK=0.7879
+  tPC10_gPC3_gf_git_a0.7: adj=0.9193 LOO_r=0.9193 IS_r=0.9903 gap=0.0710 F1=0.8027 QWK=0.8235
+  tPC10_gPC3_gf_git_a1.5: adj=0.9192 LOO_r=0.9192 IS_r=0.9893 gap=0.0701 F1=0.7654 QWK=0.7879
+  tPC8_gPC4_gf_git_bgit_a0.7: adj=0.9192 LOO_r=0.9192 IS_r=0.9852 gap=0.0660 F1=0.8997 QWK=0.9231
+  tPC9_gPC3_gf_git_bgit_a0.5: adj=0.9191 LOO_r=0.9191 IS_r=0.9870 gap=0.0678 F1=0.8056 QWK=0.8333
+  tPC8_gPC4_gf_git_a2.0: adj=0.9191 LOO_r=0.9191 IS_r=0.9801 gap=0.0610 F1=0.7980 QWK=0.8421
+  tPC8_gPC3_gf_git_bgit_ratio_a1.5: adj=0.9191 LOO_r=0.9191 IS_r=0.9835 gap=0.0644 F1=0.8997 QWK=0.9231
+  tPC8_gPC4_gf_git_bgit_tf_a3.0: adj=0.9190 LOO_r=0.9190 IS_r=0.9822 gap=0.0632 F1=0.8329 QWK=0.8718
+  tPC9_gPC3_gf_git_bgit_a2.0: adj=0.9190 LOO_r=0.9190 IS_r=0.9841 gap=0.0651 F1=0.8359 QWK=0.8649
+  tPC8_gPC3_gf_git_bgit_ratio_a2.0: adj=0.9188 LOO_r=0.9188 IS_r=0.9825 gap=0.0637 F1=0.8997 QWK=0.9231
+  tPC10_gPC3_gf_git_bgit_ratio_a1.5: adj=0.9188 LOO_r=0.9188 IS_r=0.9895 gap=0.0708 F1=0.8027 QWK=0.8235
+  tPC8_gPC3_gf_git_bgit_ratio_a1.0: adj=0.9188 LOO_r=0.9188 IS_r=0.9845 gap=0.0657 F1=0.8997 QWK=0.9231
+  tPC10_gPC3_gf_git_a0.5: adj=0.9188 LOO_r=0.9188 IS_r=0.9905 gap=0.0718 F1=0.7716 QWK=0.8000
+  tPC8_gPC4_gf_git_a1.5: adj=0.9187 LOO_r=0.9187 IS_r=0.9808 gap=0.0621 F1=0.7980 QWK=0.8421
+  tPC8_gPC4_gf_git_a3.0: adj=0.9187 LOO_r=0.9187 IS_r=0.9787 gap=0.0600 F1=0.8653 QWK=0.8947
+  tPC10_gPC3_gf_git_bgit_a3.0: adj=0.9186 LOO_r=0.9186 IS_r=0.9876 gap=0.0690 F1=0.7654 QWK=0.7879
+  tPC10_gPC3_gf_git_bgit_ratio_a5.0: adj=0.9186 LOO_r=0.9186 IS_r=0.9843 gap=0.0658 F1=0.7249 QWK=0.7500
+  tPC8_gPC4_gf_git_bgit_tf_a2.0: adj=0.9185 LOO_r=0.9185 IS_r=0.9838 gap=0.0653 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_bgit_a5.0: adj=0.9185 LOO_r=0.9185 IS_r=0.9782 gap=0.0597 F1=0.8653 QWK=0.8947
+  tPC8_gPC3_gf_git_bgit_ratio_a3.0: adj=0.9185 LOO_r=0.9185 IS_r=0.9808 gap=0.0624 F1=0.8997 QWK=0.9231
+  tPC10_gPC3_gf_git_bgit_a0.5: adj=0.9185 LOO_r=0.9185 IS_r=0.9911 gap=0.0726 F1=0.8375 QWK=0.8571
+  tPC10_gPC3_gf_git_a2.0: adj=0.9183 LOO_r=0.9183 IS_r=0.9886 gap=0.0704 F1=0.7654 QWK=0.7879
+  tPC9_gPC3_gf_git_bgit_a0.3: adj=0.9181 LOO_r=0.9181 IS_r=0.9873 gap=0.0692 F1=0.8056 QWK=0.8333
+  tPC8_gPC4_gf_git_bgit_a0.5: adj=0.9181 LOO_r=0.9181 IS_r=0.9855 gap=0.0674 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_bgit_ratio_a0.7: adj=0.9181 LOO_r=0.9181 IS_r=0.9850 gap=0.0669 F1=0.8997 QWK=0.9231
+  tPC8_gPC4_gf_git_bgit_tf_a1.5: adj=0.9177 LOO_r=0.9177 IS_r=0.9846 gap=0.0669 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_bgit_ratio_a5.0: adj=0.9176 LOO_r=0.9176 IS_r=0.9780 gap=0.0604 F1=0.8359 QWK=0.8649
+  tPC10_gPC3_gf_git_a0.3: adj=0.9175 LOO_r=0.9175 IS_r=0.9907 gap=0.0732 F1=0.7716 QWK=0.8000
+  tPC8_gPC4_gf_git_bgit_a5.0: adj=0.9175 LOO_r=0.9175 IS_r=0.9780 gap=0.0605 F1=0.8653 QWK=0.8947
+  tPC8_gPC4_gf_git_bgit_tf_a5.0: adj=0.9175 LOO_r=0.9175 IS_r=0.9795 gap=0.0620 F1=0.8329 QWK=0.8718
+  tPC8_gPC4_gf_git_a1.0: adj=0.9175 LOO_r=0.9175 IS_r=0.9813 gap=0.0638 F1=0.7980 QWK=0.8421
+  tPC9_gPC0_gf_git_bgit_ratio_a1.5: adj=0.9174 LOO_r=0.9174 IS_r=0.9807 gap=0.0633 F1=0.8704 QWK=0.8889
+  tPC10_gPC3_gf_git_bgit_ratio_a1.0: adj=0.9173 LOO_r=0.9173 IS_r=0.9903 gap=0.0730 F1=0.8375 QWK=0.8571
+  tPC8_gPC3_gf_git_bgit_ratio_a0.5: adj=0.9173 LOO_r=0.9173 IS_r=0.9854 gap=0.0681 F1=0.8997 QWK=0.9231
+  tPC10_gPC4_gf_git_a1.5: adj=0.9173 LOO_r=0.9173 IS_r=0.9901 gap=0.0728 F1=0.8027 QWK=0.8235
+  tPC9_gPC0_gf_git_bgit_ratio_a1.0: adj=0.9172 LOO_r=0.9172 IS_r=0.9818 gap=0.0646 F1=0.8379 QWK=0.8649
+  tPC9_gPC3_gf_git_bgit_ratio_a2.0: adj=0.9172 LOO_r=0.9172 IS_r=0.9838 gap=0.0666 F1=0.8359 QWK=0.8649
+  tPC10_gPC4_gf_git_a2.0: adj=0.9168 LOO_r=0.9168 IS_r=0.9894 gap=0.0726 F1=0.7654 QWK=0.7879
+  tPC9_gPC3_gf_git_bgit_ratio_a1.5: adj=0.9168 LOO_r=0.9168 IS_r=0.9848 gap=0.0680 F1=0.8038 QWK=0.8421
+  tPC9_gPC3_gf_git_bgit_ratio_a3.0: adj=0.9167 LOO_r=0.9167 IS_r=0.9820 gap=0.0653 F1=0.8011 QWK=0.8333
+  tPC10_gPC3_gf_git_bgit_a0.3: adj=0.9167 LOO_r=0.9167 IS_r=0.9913 gap=0.0746 F1=0.8375 QWK=0.8571
+  tPC10_gPC4_gf_git_bgit_tf_a3.0: adj=0.9167 LOO_r=0.9167 IS_r=0.9887 gap=0.0720 F1=0.7400 QWK=0.7647
+  tPC10_gPC4_gf_git_a1.0: adj=0.9166 LOO_r=0.9166 IS_r=0.9907 gap=0.0741 F1=0.8027 QWK=0.8235
+  tPC8_gPC4_gf_git_bgit_a0.3: adj=0.9165 LOO_r=0.9165 IS_r=0.9859 gap=0.0693 F1=0.8997 QWK=0.9231
+  tPC9_gPC0_gf_git_bgit_ratio_a2.0: adj=0.9165 LOO_r=0.9165 IS_r=0.9795 gap=0.0630 F1=0.8704 QWK=0.8889
+  tPC9_gPC3_gf_git_bgit_a3.0: adj=0.9164 LOO_r=0.9164 IS_r=0.9823 gap=0.0660 F1=0.8011 QWK=0.8333
+  tPC9_gPC0_gf_git_bgit_ratio_a0.7: adj=0.9163 LOO_r=0.9163 IS_r=0.9824 gap=0.0662 F1=0.8692 QWK=0.8947
+  tPC8_gPC3_gf_git_a2.0: adj=0.9163 LOO_r=0.9163 IS_r=0.9798 gap=0.0635 F1=0.7699 QWK=0.8108
+  tPC8_gPC4_gf_git_bgit_ratio_a3.0: adj=0.9162 LOO_r=0.9162 IS_r=0.9805 gap=0.0644 F1=0.8653 QWK=0.8947
+  tPC8_gPC4_gf_git_bgit_tf_a1.0: adj=0.9162 LOO_r=0.9162 IS_r=0.9855 gap=0.0694 F1=0.8997 QWK=0.9231
+  tPC8_gPC4_gf_git_a0.7: adj=0.9161 LOO_r=0.9161 IS_r=0.9815 gap=0.0654 F1=0.7980 QWK=0.8421
+  tPC8_gPC3_gf_git_bgit_ratio_a0.3: adj=0.9161 LOO_r=0.9161 IS_r=0.9859 gap=0.0698 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_a3.0: adj=0.9161 LOO_r=0.9161 IS_r=0.9783 gap=0.0622 F1=0.8038 QWK=0.8421
+  tPC8_gPC4_gf_git_a5.0: adj=0.9160 LOO_r=0.9160 IS_r=0.9756 gap=0.0596 F1=0.8653 QWK=0.8947
+  tPC10_gPC3_gf_git_a3.0: adj=0.9159 LOO_r=0.9159 IS_r=0.9871 gap=0.0712 F1=0.6949 QWK=0.7097
+  tPC8_gPC3_gf_git_a1.5: adj=0.9158 LOO_r=0.9158 IS_r=0.9805 gap=0.0646 F1=0.7699 QWK=0.8108
+  tPC9_gPC3_gf_git_bgit_ratio_a1.0: adj=0.9158 LOO_r=0.9158 IS_r=0.9857 gap=0.0699 F1=0.8038 QWK=0.8421
+  tPC9_gPC4_gf_git_bgit_tf_a3.0: adj=0.9158 LOO_r=0.9158 IS_r=0.9831 gap=0.0673 F1=0.8056 QWK=0.8333
+  tPC10_gPC3_gf_git_bgit_ratio_a0.7: adj=0.9157 LOO_r=0.9157 IS_r=0.9908 gap=0.0751 F1=0.8056 QWK=0.8333
+  tPC8_gPC4_gf_git_bgit_ratio_a2.0: adj=0.9156 LOO_r=0.9156 IS_r=0.9822 gap=0.0666 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_a2.0: adj=0.9155 LOO_r=0.9155 IS_r=0.9775 gap=0.0621 F1=0.8329 QWK=0.8718
+  tPC8_gPC3_gf_a1.5: adj=0.9154 LOO_r=0.9154 IS_r=0.9780 gap=0.0626 F1=0.8329 QWK=0.8718
+  tPC8_gPC4_gf_git_bgit_ratio_a5.0: adj=0.9154 LOO_r=0.9154 IS_r=0.9776 gap=0.0622 F1=0.8329 QWK=0.8718
+  tPC9_gPC0_gf_git_bgit_ratio_a0.5: adj=0.9153 LOO_r=0.9153 IS_r=0.9829 gap=0.0675 F1=0.8692 QWK=0.8947
+  tPC8_gPC3_gf_a3.0: adj=0.9153 LOO_r=0.9153 IS_r=0.9766 gap=0.0613 F1=0.8329 QWK=0.8718
+  tPC10_gPC4_gf_git_a0.7: adj=0.9151 LOO_r=0.9151 IS_r=0.9910 gap=0.0759 F1=0.8027 QWK=0.8235
+  tPC9_gPC4_gf_git_bgit_tf_a2.0: adj=0.9151 LOO_r=0.9151 IS_r=0.9846 gap=0.0695 F1=0.8056 QWK=0.8333
+  tPC8_gPC4_gf_git_bgit_ratio_a1.5: adj=0.9150 LOO_r=0.9150 IS_r=0.9832 gap=0.0681 F1=0.8997 QWK=0.9231
+  tPC9_gPC4_gf_git_bgit_a2.0: adj=0.9150 LOO_r=0.9150 IS_r=0.9845 gap=0.0695 F1=0.8359 QWK=0.8649
+  tPC8_gPC3_gf_a1.0: adj=0.9150 LOO_r=0.9150 IS_r=0.9785 gap=0.0635 F1=0.8329 QWK=0.8718
+  tPC8_gPC4_gf_git_a0.5: adj=0.9149 LOO_r=0.9149 IS_r=0.9817 gap=0.0667 F1=0.7980 QWK=0.8421
+  tPC8_gPC3_gf_git_a1.0: adj=0.9149 LOO_r=0.9149 IS_r=0.9810 gap=0.0661 F1=0.7699 QWK=0.8108
+  tPC9_gPC3_gf_git_bgit_ratio_a0.7: adj=0.9149 LOO_r=0.9149 IS_r=0.9863 gap=0.0714 F1=0.8359 QWK=0.8649
+  tPC9_gPC0_gf_git_bgit_a0.3: adj=0.9148 LOO_r=0.9148 IS_r=0.9831 gap=0.0683 F1=0.9019 QWK=0.9189
+  tPC9_gPC4_gf_git_bgit_ratio_a3.0: adj=0.9148 LOO_r=0.9148 IS_r=0.9824 gap=0.0676 F1=0.8011 QWK=0.8333
+  tPC9_gPC0_gf_git_bgit_a0.5: adj=0.9147 LOO_r=0.9147 IS_r=0.9827 gap=0.0680 F1=0.9019 QWK=0.9189
+  tPC9_gPC4_gf_git_bgit_a1.5: adj=0.9147 LOO_r=0.9147 IS_r=0.9854 gap=0.0707 F1=0.8359 QWK=0.8649
+  tPC10_gPC4_gf_git_bgit_tf_a2.0: adj=0.9146 LOO_r=0.9146 IS_r=0.9899 gap=0.0753 F1=0.7738 QWK=0.8000
+  tPC8_gPC4_gf_git_bgit_tf_a0.7: adj=0.9145 LOO_r=0.9145 IS_r=0.9861 gap=0.0716 F1=0.8997 QWK=0.9231
+  tPC10_gPC0_gf_git_bgit_ratio_a1.5: adj=0.9144 LOO_r=0.9144 IS_r=0.9860 gap=0.0716 F1=0.8375 QWK=0.8571
+  tPC9_gPC0_gf_git_bgit_a0.7: adj=0.9144 LOO_r=0.9144 IS_r=0.9823 gap=0.0678 F1=0.8704 QWK=0.8889
+  tPC8_gPC4_gf_a3.0: adj=0.9144 LOO_r=0.9144 IS_r=0.9769 gap=0.0625 F1=0.8329 QWK=0.8718
+  tPC10_gPC4_gf_git_bgit_tf_a5.0: adj=0.9144 LOO_r=0.9144 IS_r=0.9862 gap=0.0718 F1=0.7714 QWK=0.7879
+  tPC8_gPC3_gf_a0.7: adj=0.9143 LOO_r=0.9143 IS_r=0.9788 gap=0.0645 F1=0.7980 QWK=0.8421
+  tPC9_gPC3_gf_git_bgit_ratio_a5.0: adj=0.9143 LOO_r=0.9143 IS_r=0.9788 gap=0.0644 F1=0.8011 QWK=0.8333
+  tPC8_gPC4_gf_git_bgit_ratio_tf_a3.0: adj=0.9143 LOO_r=0.9143 IS_r=0.9818 gap=0.0675 F1=0.8329 QWK=0.8718
+  tPC8_gPC4_gf_a2.0: adj=0.9143 LOO_r=0.9143 IS_r=0.9779 gap=0.0637 F1=0.8329 QWK=0.8718
+  tPC9_gPC4_gf_git_bgit_a3.0: adj=0.9142 LOO_r=0.9142 IS_r=0.9828 gap=0.0686 F1=0.8011 QWK=0.8333
+  tPC10_gPC3_gf_git_bgit_ratio_a0.5: adj=0.9141 LOO_r=0.9141 IS_r=0.9910 gap=0.0769 F1=0.8056 QWK=0.8333
+  tPC10_gPC4_gf_git_a3.0: adj=0.9141 LOO_r=0.9141 IS_r=0.9880 gap=0.0739 F1=0.7249 QWK=0.7500
+  tPC10_gPC0_gf_git_bgit_ratio_a1.0: adj=0.9141 LOO_r=0.9141 IS_r=0.9868 gap=0.0727 F1=0.8375 QWK=0.8571
+  tPC9_gPC0_gf_git_bgit_ratio_a0.3: adj=0.9139 LOO_r=0.9139 IS_r=0.9833 gap=0.0693 F1=0.8692 QWK=0.8947
+  tPC8_gPC3_gf_git_a0.7: adj=0.9139 LOO_r=0.9139 IS_r=0.9813 gap=0.0674 F1=0.7699 QWK=0.8108
+  tPC9_gPC0_gf_git_bgit_a1.0: adj=0.9139 LOO_r=0.9139 IS_r=0.9815 gap=0.0676 F1=0.8704 QWK=0.8889
+  tPC9_gPC3_gf_git_bgit_ratio_a0.5: adj=0.9138 LOO_r=0.9138 IS_r=0.9867 gap=0.0729 F1=0.8056 QWK=0.8333
+  tPC9_gPC4_gf_git_bgit_ratio_tf_a3.0: adj=0.9138 LOO_r=0.9138 IS_r=0.9829 gap=0.0691 F1=0.8011 QWK=0.8333
+  tPC8_gPC4_gf_git_bgit_ratio_a1.0: adj=0.9137 LOO_r=0.9137 IS_r=0.9842 gap=0.0705 F1=0.8997 QWK=0.9231
+  tPC8_gPC3_gf_git_a5.0: adj=0.9137 LOO_r=0.9137 IS_r=0.9750 gap=0.0614 F1=0.8359 QWK=0.8649
+  tPC8_gPC4_gf_a1.5: adj=0.9136 LOO_r=0.9136 IS_r=0.9784 gap=0.0648 F1=0.8329 QWK=0.8718
+  tPC8_gPC3_gf_a0.5: adj=0.9136 LOO_r=0.9136 IS_r=0.9789 gap=0.0653 F1=0.7980 QWK=0.8421
+  tPC9_gPC0_gf_git_bgit_ratio_a3.0: adj=0.9136 LOO_r=0.9136 IS_r=0.9770 gap=0.0634 F1=0.8704 QWK=0.8889
+  tPC10_gPC4_gf_git_bgit_ratio_a3.0: adj=0.9135 LOO_r=0.9135 IS_r=0.9875 gap=0.0740 F1=0.8027 QWK=0.8235
+  tPC9_gPC4_gf_git_bgit_ratio_a5.0: adj=0.9135 LOO_r=0.9135 IS_r=0.9793 gap=0.0658 F1=0.7699 QWK=0.8108
+  tPC10_gPC4_gf_git_a0.5: adj=0.9135 LOO_r=0.9135 IS_r=0.9912 gap=0.0777 F1=0.8027 QWK=0.8235
+  tPC10_gPC3_gf_git_bgit_a5.0: adj=0.9134 LOO_r=0.9134 IS_r=0.9843 gap=0.0709 F1=0.6949 QWK=0.7097
+  tPC8_gPC4_gf_git_bgit_ratio_tf_a2.0: adj=0.9134 LOO_r=0.9134 IS_r=0.9833 gap=0.0699 F1=0.8667 QWK=0.9000
+  tPC8_gPC4_gf_git_a0.3: adj=0.9133 LOO_r=0.9133 IS_r=0.9818 gap=0.0684 F1=0.7980 QWK=0.8421
+  tPC10_gPC0_gf_git_bgit_ratio_a2.0: adj=0.9133 LOO_r=0.9133 IS_r=0.9853 gap=0.0720 F1=0.8375 QWK=0.8571
+  tPC8_gPC3_gf_a5.0: adj=0.9132 LOO_r=0.9132 IS_r=0.9742 gap=0.0610 F1=0.8653 QWK=0.8947
+  tPC8_gPC4_gf_git_bgit_ratio_tf_a5.0: adj=0.9132 LOO_r=0.9132 IS_r=0.9791 gap=0.0659 F1=0.8329 QWK=0.8718
+  tPC8_gPC3_gf_git_a0.5: adj=0.9129 LOO_r=0.9129 IS_r=0.9814 gap=0.0685 F1=0.7699 QWK=0.8108
+  tPC9_gPC4_gf_git_bgit_tf_a1.5: adj=0.9129 LOO_r=0.9129 IS_r=0.9855 gap=0.0725 F1=0.8056 QWK=0.8333
+  tPC9_gPC4_gf_git_bgit_a1.0: adj=0.9129 LOO_r=0.9129 IS_r=0.9863 gap=0.0734 F1=0.8681 QWK=0.8889
+  tPC8_gPC4_gf_git_bgit_tf_a0.5: adj=0.9129 LOO_r=0.9129 IS_r=0.9864 gap=0.0735 F1=0.8997 QWK=0.9231
+  tPC9_gPC4_gf_git_bgit_ratio_a2.0: adj=0.9128 LOO_r=0.9128 IS_r=0.9841 gap=0.0713 F1=0.8011 QWK=0.8333
+  tPC10_gPC0_gf_git_bgit_ratio_a0.7: adj=0.9128 LOO_r=0.9128 IS_r=0.9873 gap=0.0745 F1=0.8375 QWK=0.8571
+  tPC8_gPC4_gf_a5.0: adj=0.9128 LOO_r=0.9128 IS_r=0.9748 gap=0.0620 F1=0.8653 QWK=0.8947
+  tPC10_gPC4_gf_git_bgit_ratio_a5.0: adj=0.9127 LOO_r=0.9127 IS_r=0.9848 gap=0.0721 F1=0.8027 QWK=0.8235
+  tPC8_gPC3_gf_a0.3: adj=0.9125 LOO_r=0.9125 IS_r=0.9790 gap=0.0665 F1=0.7980 QWK=0.8421
+  tPC9_gPC4_gf_git_bgit_ratio_tf_a5.0: adj=0.9125 LOO_r=0.9125 IS_r=0.9801 gap=0.0676 F1=0.7716 QWK=0.8000
+  tPC9_gPC3_gf_git_bgit_ratio_a0.3: adj=0.9124 LOO_r=0.9124 IS_r=0.9872 gap=0.0747 F1=0.8056 QWK=0.8333
+  tPC9_gPC4_gf_git_bgit_tf_a5.0: adj=0.9124 LOO_r=0.9124 IS_r=0.9804 gap=0.0680 F1=0.8056 QWK=0.8333
+  tPC8_gPC4_gf_git_bgit_ratio_tf_a1.5: adj=0.9123 LOO_r=0.9123 IS_r=0.9842 gap=0.0719 F1=0.8997 QWK=0.9231
+  tPC8_gPC4_gf_a1.0: adj=0.9122 LOO_r=0.9122 IS_r=0.9788 gap=0.0666 F1=0.8329 QWK=0.8718
+  tPC8_gPC4_gf_git_bgit_ratio_a0.7: adj=0.9122 LOO_r=0.9122 IS_r=0.9848 gap=0.0727 F1=0.8997 QWK=0.9231
+  tPC10_gPC0_gf_git_bgit_a0.7: adj=0.9122 LOO_r=0.9122 IS_r=0.9866 gap=0.0745 F1=0.8704 QWK=0.8889
+  tPC9_gPC0_gf_git_bgit_a1.5: adj=0.9120 LOO_r=0.9120 IS_r=0.9803 gap=0.0682 F1=0.8704 QWK=0.8889
+  tPC10_gPC0_gf_git_bgit_a1.0: adj=0.9120 LOO_r=0.9120 IS_r=0.9863 gap=0.0743 F1=0.8704 QWK=0.8889
+  tPC10_gPC3_gf_git_bgit_ratio_a0.3: adj=0.9118 LOO_r=0.9118 IS_r=0.9913 gap=0.0794 F1=0.8056 QWK=0.8333
+  tPC9_gPC4_gf_git_a2.0: adj=0.9118 LOO_r=0.9118 IS_r=0.9841 gap=0.0723 F1=0.7641 QWK=0.8000
+  tPC10_gPC0_gf_git_bgit_a0.5: adj=0.9117 LOO_r=0.9117 IS_r=0.9869 gap=0.0752 F1=0.9019 QWK=0.9189
+  tPC10_gPC3_gf_git_a5.0: adj=0.9117 LOO_r=0.9117 IS_r=0.9841 gap=0.0725 F1=0.5844 QWK=0.5714
+  tPC8_gPC3_gf_git_a0.3: adj=0.9116 LOO_r=0.9116 IS_r=0.9816 gap=0.0699 F1=0.8038 QWK=0.8421
+  tPC10_gPC4_gf_git_bgit_a2.0: adj=0.9116 LOO_r=0.9116 IS_r=0.9893 gap=0.0777 F1=0.7714 QWK=0.7879
+  tPC10_gPC4_gf_git_bgit_ratio_a2.0: adj=0.9114 LOO_r=0.9114 IS_r=0.9889 gap=0.0775 F1=0.8027 QWK=0.8235
+  tPC9_gPC4_gf_git_bgit_ratio_tf_a2.0: adj=0.9114 LOO_r=0.9114 IS_r=0.9844 gap=0.0730 F1=0.8359 QWK=0.8649
+  tPC9_gPC4_gf_git_a3.0: adj=0.9113 LOO_r=0.9113 IS_r=0.9824 gap=0.0711 F1=0.7641 QWK=0.8000
+  tPC10_gPC4_gf_git_bgit_tf_a1.5: adj=0.9112 LOO_r=0.9112 IS_r=0.9904 gap=0.0792 F1=0.7400 QWK=0.7647
+  tPC10_gPC0_gf_git_bgit_ratio_a0.5: adj=0.9112 LOO_r=0.9112 IS_r=0.9875 gap=0.0763 F1=0.8375 QWK=0.8571
+  tPC8_gPC4_gf_a0.7: adj=0.9108 LOO_r=0.9108 IS_r=0.9790 gap=0.0681 F1=0.7980 QWK=0.8421
+  tPC10_gPC4_gf_git_bgit_a3.0: adj=0.9108 LOO_r=0.9108 IS_r=0.9878 gap=0.0770 F1=0.7714 QWK=0.7879
+  tPC10_gPC4_gf_git_a0.3: adj=0.9108 LOO_r=0.9108 IS_r=0.9914 gap=0.0806 F1=0.8027 QWK=0.8235
+  tPC9_gPC4_gf_git_bgit_ratio_a1.5: adj=0.9108 LOO_r=0.9108 IS_r=0.9850 gap=0.0743 F1=0.8681 QWK=0.8889
+  tPC10_gPC4_gf_git_bgit_a1.5: adj=0.9108 LOO_r=0.9108 IS_r=0.9900 gap=0.0792 F1=0.7400 QWK=0.7647
+  tPC10_gPC0_gf_git_bgit_a0.3: adj=0.9108 LOO_r=0.9108 IS_r=0.9872 gap=0.0764 F1=0.8692 QWK=0.8947
+  tPC9_gPC4_gf_git_a1.5: adj=0.9107 LOO_r=0.9107 IS_r=0.9849 gap=0.0742 F1=0.8011 QWK=0.8333
+  tPC9_gPC3_gf_git_bgit_a5.0: adj=0.9107 LOO_r=0.9107 IS_r=0.9790 gap=0.0683 F1=0.8011 QWK=0.8333
+  tPC9_gPC4_gf_git_bgit_a0.7: adj=0.9107 LOO_r=0.9107 IS_r=0.9868 gap=0.0761 F1=0.8681 QWK=0.8889
+  tPC8_gPC4_gf_git_bgit_ratio_a0.5: adj=0.9106 LOO_r=0.9106 IS_r=0.9852 gap=0.0746 F1=0.8997 QWK=0.9231
+  tPC8_gPC4_gf_git_bgit_tf_a0.3: adj=0.9106 LOO_r=0.9106 IS_r=0.9867 gap=0.0761 F1=0.9327 QWK=0.9474
+  tPC8_gPC4_gf_git_bgit_ratio_tf_a1.0: adj=0.9102 LOO_r=0.9102 IS_r=0.9852 gap=0.0749 F1=0.8997 QWK=0.9231
+  tPC10_gPC0_gf_git_bgit_ratio_a3.0: adj=0.9102 LOO_r=0.9102 IS_r=0.9836 gap=0.0734 F1=0.8375 QWK=0.8571
+  tPC10_gPC0_gf_git_bgit_a1.5: adj=0.9100 LOO_r=0.9100 IS_r=0.9855 gap=0.0755 F1=0.8375 QWK=0.8571
+  tPC9_gPC0_gf_git_bgit_a2.0: adj=0.9099 LOO_r=0.9099 IS_r=0.9789 gap=0.0689 F1=0.8375 QWK=0.8571
+  tPC10_gPC3_gf_git_bgit_ratio_tf_a5.0: adj=0.9099 LOO_r=0.9099 IS_r=0.9855 gap=0.0756 F1=0.7348 QWK=0.7500
+  tPC9_gPC0_gf_a0.3: adj=0.9098 LOO_r=0.9098 IS_r=0.9773 gap=0.0675 F1=0.8653 QWK=0.8947
+  tPC8_gPC4_gf_a0.5: adj=0.9096 LOO_r=0.9096 IS_r=0.9791 gap=0.0695 F1=0.7980 QWK=0.8421
+  tPC9_gPC0_gf_a0.5: adj=0.9095 LOO_r=0.9095 IS_r=0.9770 gap=0.0675 F1=0.8653 QWK=0.8947
+  tPC9_gPC0_gf_git_bgit_ratio_tf_a1.5: adj=0.9094 LOO_r=0.9094 IS_r=0.9812 gap=0.0717 F1=0.8054 QWK=0.8235
+  tPC9_gPC0_gf_git_bgit_ratio_tf_a1.0: adj=0.9091 LOO_r=0.9091 IS_r=0.9824 gap=0.0734 F1=0.7400 QWK=0.7647
+  tPC9_gPC4_gf_git_bgit_a5.0: adj=0.9090 LOO_r=0.9090 IS_r=0.9796 gap=0.0706 F1=0.7716 QWK=0.8000
+  tPC9_gPC0_gf_a0.7: adj=0.9089 LOO_r=0.9089 IS_r=0.9766 gap=0.0677 F1=0.8011 QWK=0.8333
+  tPC10_gPC0_gf_git_bgit_ratio_a0.3: adj=0.9089 LOO_r=0.9089 IS_r=0.9877 gap=0.0788 F1=0.8375 QWK=0.8571
+  tPC9_gPC0_gf_git_bgit_ratio_tf_a2.0: adj=0.9089 LOO_r=0.9089 IS_r=0.9799 gap=0.0711 F1=0.8054 QWK=0.8235
+  tPC10_gPC4_gf_git_bgit_ratio_a1.5: adj=0.9087 LOO_r=0.9087 IS_r=0.9897 gap=0.0810 F1=0.7707 QWK=0.8000
+  tPC9_gPC4_gf_git_bgit_tf_a1.0: adj=0.9086 LOO_r=0.9086 IS_r=0.9863 gap=0.0777 F1=0.7738 QWK=0.8108
+  tPC9_gPC4_gf_git_bgit_a0.5: adj=0.9086 LOO_r=0.9086 IS_r=0.9872 gap=0.0786 F1=0.8359 QWK=0.8649
+  tPC8_gPC4_gf_git_bgit_ratio_a0.3: adj=0.9084 LOO_r=0.9084 IS_r=0.9857 gap=0.0772 F1=0.8997 QWK=0.9231
+  tPC9_gPC3_gf_git_a2.0: adj=0.9084 LOO_r=0.9084 IS_r=0.9829 gap=0.0745 F1=0.7716 QWK=0.8000
+  tPC9_gPC3_gf_git_a3.0: adj=0.9083 LOO_r=0.9083 IS_r=0.9811 gap=0.0728 F1=0.7354 QWK=0.7647
+  tPC10_gPC3_gf_git_bgit_ratio_tf_a3.0: adj=0.9082 LOO_r=0.9082 IS_r=0.9882 gap=0.0800 F1=0.7714 QWK=0.7879
+  tPC9_gPC4_gf_git_a1.0: adj=0.9082 LOO_r=0.9082 IS_r=0.9856 gap=0.0774 F1=0.8011 QWK=0.8333
+  tPC10_gPC4_gf_git_bgit_a1.0: adj=0.9082 LOO_r=0.9082 IS_r=0.9907 gap=0.0825 F1=0.7738 QWK=0.8000
+  tPC9_gPC4_gf_git_bgit_ratio_tf_a1.5: adj=0.9082 LOO_r=0.9082 IS_r=0.9852 gap=0.0770 F1=0.8038 QWK=0.8421
+  tPC8_gPC4_gf_a0.3: adj=0.9081 LOO_r=0.9081 IS_r=0.9792 gap=0.0711 F1=0.7980 QWK=0.8421
+  tPC10_gPC4_gf_git_a5.0: adj=0.9081 LOO_r=0.9081 IS_r=0.9854 gap=0.0773 F1=0.6189 QWK=0.6207
+  tPC8_gPC4_gf_git_bgit_ratio_tf_a0.7: adj=0.9080 LOO_r=0.9080 IS_r=0.9858 gap=0.0778 F1=0.8997 QWK=0.9231
+  tPC9_gPC0_gf_git_bgit_ratio_tf_a0.7: adj=0.9080 LOO_r=0.9080 IS_r=0.9831 gap=0.0752 F1=0.7738 QWK=0.8000
+  tPC9_gPC0_gf_a1.0: adj=0.9077 LOO_r=0.9077 IS_r=0.9760 gap=0.0682 F1=0.8011 QWK=0.8333
+  tPC9_gPC3_gf_git_a1.5: adj=0.9076 LOO_r=0.9076 IS_r=0.9838 gap=0.0762 F1=0.7407 QWK=0.7778

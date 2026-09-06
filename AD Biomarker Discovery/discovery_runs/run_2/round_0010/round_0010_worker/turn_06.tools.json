@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\necho '--- round 9 result.py ---'\nsed -n '1,260p' /data/autoresearch_runs/run_20260420_215745_90b105/round_0009/round_0009_worker/result.py\necho\necho '--- round 7 result.py excerpt ---'\nsed -n '1,220p' /data/autoresearch_runs/run_20260420_215745_90b105/round_0007/round_0007_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- round 9 result.py ---\\nfrom __future__ import annotations\\n\\nimport json\\nimport math\\nimport sys\\nimport warnings\\nfrom functools import lru_cache\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom scipy.spatial import cKDTree\\n\\nsys.path.insert(0, \\\"/shared/lib\\\")\\n\\nfrom shared_analysis import (  # type: ignore\\n    bootstrap_partial_correlation,\\n    build_cell_table,\\n    build_results_payload,\\n    leave_one_out_summary,\\n    load_training_cohort,\\n    write_dono\", \"stderr\": \"\"}"
+  }
+]

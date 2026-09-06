@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nfrom pathlib import Path\npath = Path('/scratch/result.py')\ntext = path.read_text()\nold = \"\"\"    winner_table = best_metric[\\\"loo_table\\\"].merge(\\n        donor_table[[\\\"donor_id\\\", \\\"ca1_pyramidal_fraction\\\", \\\"ca1_pyramidal_density\\\"]],\\n        on=\\\"donor_id\\\",\\n        how=\\\"left\\\",\\n    )\\n\"\"\"\nnew = \"\"\"    winner_base = best_metric[\\\"loo_table\\\"].drop(\\n        columns=[col for col in [\\\"ca1_pyramidal_fraction\\\", \\\"ca1_pyramidal_density\\\"] if col in best_metric[\\\"loo_table\\\"].columns],\\n        errors=\\\"ignore\\\",\\n    )\\n    winner_table = winner_base.merge(\\n        donor_table[[\\\"donor_id\\\", \\\"ca1_pyramidal_fraction\\\", \\\"ca1_pyramidal_density\\\"]],\\n        on=\\\"donor_id\\\",\\n        how=\\\"left\\\",\\n    )\\n\"\"\"\ntext = text.replace(old, new)\npath.write_text(text)\nPY\npython -m py_compile /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\", \"stderr\": \"\"}"
+  }
+]

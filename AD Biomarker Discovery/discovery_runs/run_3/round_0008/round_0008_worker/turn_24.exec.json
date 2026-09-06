@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "FEATURE_NAME ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r50um_ra2_ly1\nFEATURE_COLUMN ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r50um_ra2_ly1\nscore H20.33.018 0.00784313725490196\n",
+  "stderr": ""
+}

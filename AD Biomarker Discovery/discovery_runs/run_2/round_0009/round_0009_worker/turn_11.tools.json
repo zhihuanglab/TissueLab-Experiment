@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"bootstrap_partial_correlation_stability\" -n /shared/lib/shared_analysis/__init__.py /shared/lib/shared_analysis/stats.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/shared/lib/shared_analysis/stats.py:89:def bootstrap_partial_correlation_stability(\\n\", \"stderr\": \"\"}"
+  }
+]

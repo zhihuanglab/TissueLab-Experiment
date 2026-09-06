@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,260p' /data/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"from __future__ import annotations\\n\\nimport sys\\nimport warnings\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom matplotlib.path import Path as MplPath\\nfrom scipy.spatial import cKDTree\\n\\nSHARED_LIB = Path(\\\"/shared/lib\\\")\\nif str(SHARED_LIB) not in sys.path:\\n    sys.path.insert(0, str(SHARED_LIB))\\n\\nfrom shared_analysis.artifacts import build_results_payload, write_donor_feature_table, write_results_payload  # noqa: E402\\nfrom shared_analysis.sea_ad_lfb impo\", \"stderr\": \"\"}"
+  }
+]

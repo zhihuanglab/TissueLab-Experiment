@@ -1,0 +1,126 @@
+Round 4 Details
+============================================================
+
+HYPOTHESIS: Biomedparse gland mask morphology features
+(connected components, circularity, size distribution)
+directly capture the Nottingham tubule formation criteria.
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_fraction: r=-0.4148
+  log_bp_n_components: r=+0.3222
+  bp_cv_comp_size: r=+0.3140
+  bp_gland_frac: r=-0.3066
+  bp_n_components: r=+0.2750
+  log_bp_gland_area: r=+0.2667
+  bp_gland_area_um2: r=+0.2123
+  log_bp_n_comp_density: r=+0.1789
+  bp_large_comp_fraction: r=+0.1761
+  log_bp_mean_comp_size: r=+0.1693
+  bp_mean_comp_size_um2: r=-0.1463
+  bp_median_comp_size_um2: r=-0.0989
+  bp_mean_circularity: r=-0.0953
+  bp_std_circularity: r=+0.0854
+  log_bp_median_comp_size: r=+0.0286
+  bp_n_comp_density: r=+0.0079
+
+INDIVIDUAL FEATURE RESULTS:
+  single_gland_patch_fraction: adj=0.3028 LOO_r=0.3028 gap=0.1126
+  single_log_bp_n_components: adj=0.1502 LOO_r=0.1576 gap=0.1646
+  single_log_bp_gland_area: adj=0.1215 LOO_r=0.1215 gap=0.1477
+  single_bp_gland_frac: adj=0.0989 LOO_r=0.1181 gap=0.1885
+  single_bp_cv_comp_size: adj=0.0701 LOO_r=0.1014 gap=0.2126
+  single_bp_n_components: adj=0.0329 LOO_r=0.0636 gap=0.2113
+  single_bp_gland_area_um2: adj=-0.1369 LOO_r=-0.0705 gap=0.2828
+  single_bp_n_comp_density: adj=-1.0000 LOO_r=-0.5705 gap=0.5784
+  single_bp_median_comp_size_um2: adj=-1.0000 LOO_r=-0.2938 gap=0.3927
+  single_bp_mean_circularity: adj=-1.0000 LOO_r=-0.4098 gap=0.5051
+  single_bp_std_circularity: adj=-1.0000 LOO_r=-0.4258 gap=0.5112
+  single_bp_large_comp_fraction: adj=-1.0000 LOO_r=-0.2124 gap=0.3885
+  single_bp_mean_comp_size_um2: adj=-1.0000 LOO_r=-0.4978 gap=0.6441
+  single_log_bp_n_comp_density: adj=-1.0000 LOO_r=-0.4810 gap=0.6599
+  single_log_bp_median_comp_size: adj=-1.0000 LOO_r=-0.4237 gap=0.4522
+  single_log_bp_mean_comp_size: adj=-1.0000 LOO_r=-0.4170 gap=0.5863
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  top2_ridge1: adjusted=0.3321 (LOO r=0.3321, IS r=0.4718, gap=0.1397) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  top2_ridge10: adjusted=0.3255 (LOO r=0.3255, IS r=0.4659, gap=0.1404) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  single_gland_patch_fraction: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  top2_enet: adjusted=0.3009 (LOO r=0.3062, IS r=0.4669, gap=0.1606) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gpf_circ_ridge1: adjusted=0.2875 (LOO r=0.2911, IS r=0.4483, gap=0.1572) [F1=0.2913 QWK=0.0870 Acc=0.4000]
+  gpf_log_morph_ridge1: adjusted=0.2444 (LOO r=0.2631, IS r=0.4504, gap=0.1874) [F1=0.2692 QWK=0.0833 Acc=0.3667]
+  gpf_circ_ridge10: adjusted=0.2430 (LOO r=0.2582, IS r=0.4387, gap=0.1805) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  top2_ridge50: adjusted=0.2325 (LOO r=0.2598, IS r=0.4645, gap=0.2046) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  top3_ridge10: adjusted=0.2260 (LOO r=0.2552, IS r=0.4635, gap=0.2083) [F1=0.2692 QWK=0.0833 Acc=0.3667]
+  top3_enet: adjusted=0.2176 (LOO r=0.2507, IS r=0.4669, gap=0.2162) [F1=0.2692 QWK=0.0833 Acc=0.3667]
+  gpf_ncd_ridge1: adjusted=0.2078 (LOO r=0.2273, IS r=0.4163, gap=0.1890) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  top4_ridge50: adjusted=0.2078 (LOO r=0.2419, IS r=0.4599, gap=0.2180) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  top3_ridge50: adjusted=0.1965 (LOO r=0.2317, IS r=0.4520, gap=0.2204) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  top3_ridge1: adjusted=0.1811 (LOO r=0.2280, IS r=0.4718, gap=0.2438) [F1=0.2692 QWK=0.0833 Acc=0.3667]
+  top4_ridge10: adjusted=0.1810 (LOO r=0.2295, IS r=0.4765, gap=0.2470) [F1=0.2692 QWK=0.0833 Acc=0.3667]
+  gpf_log_morph_ridge10: adjusted=0.1758 (LOO r=0.2122, IS r=0.4350, gap=0.2228) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_lcf_ridge1: adjusted=0.1668 (LOO r=0.1997, IS r=0.4155, gap=0.2158) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  gpf_lcf_ridge10: adjusted=0.1613 (LOO r=0.1951, IS r=0.4125, gap=0.2174) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_ncd_ridge10: adjusted=0.1610 (LOO r=0.1960, IS r=0.4161, gap=0.2200) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  single_log_bp_n_components: adjusted=0.1502 (LOO r=0.1576, IS r=0.3222, gap=0.1646) [F1=0.2185 QWK=0.0909 Acc=0.3333]
+  single_log_bp_gland_area: adjusted=0.1215 (LOO r=0.1215, IS r=0.2692, gap=0.1477) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  top4_ridge1: adjusted=0.1140 (LOO r=0.1868, IS r=0.4823, gap=0.2955) [F1=0.2692 QWK=0.0833 Acc=0.3667]
+  single_bp_gland_frac: adjusted=0.0989 (LOO r=0.1181, IS r=0.3066, gap=0.1885) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  morph_gpf_ridge1: adjusted=0.0971 (LOO r=0.1665, IS r=0.4551, gap=0.2886) [F1=0.2476 QWK=0.0800 Acc=0.3333]
+  single_bp_cv_comp_size: adjusted=0.0701 (LOO r=0.1014, IS r=0.3140, gap=0.2126) [F1=0.2360 QWK=0.0000 Acc=0.3667]
+  gfrac_circ_cv_ridge10: adjusted=0.0545 (LOO r=0.1164, IS r=0.3902, gap=0.2738) [F1=0.2177 QWK=0.0000 Acc=0.3333]
+  single_bp_n_components: adjusted=0.0329 (LOO r=0.0636, IS r=0.2750, gap=0.2113) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  single_bp_gland_area_um2: adjusted=-0.1369 (LOO r=-0.0705, IS r=0.2123, gap=0.2828) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  single_bp_n_comp_density: adjusted=-1.0000 (LOO r=-0.5705, IS r=0.0079, gap=0.5784) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  single_bp_median_comp_size_um2: adjusted=-1.0000 (LOO r=-0.2938, IS r=0.0989, gap=0.3927) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_bp_mean_circularity: adjusted=-1.0000 (LOO r=-0.4098, IS r=0.0953, gap=0.5051) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_bp_std_circularity: adjusted=-1.0000 (LOO r=-0.4258, IS r=0.0854, gap=0.5112) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_bp_large_comp_fraction: adjusted=-1.0000 (LOO r=-0.2124, IS r=0.1761, gap=0.3885) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_bp_mean_comp_size_um2: adjusted=-1.0000 (LOO r=-0.4978, IS r=0.1463, gap=0.6441) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_log_bp_n_comp_density: adjusted=-1.0000 (LOO r=-0.4810, IS r=0.1789, gap=0.6599) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_log_bp_median_comp_size: adjusted=-1.0000 (LOO r=-0.4237, IS r=0.0286, gap=0.4522) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  single_log_bp_mean_comp_size: adjusted=-1.0000 (LOO r=-0.4170, IS r=0.1693, gap=0.5863) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  morph3_ridge1: adjusted=-1.0000 (LOO r=-0.5005, IS r=0.1121, gap=0.6126) [F1=0.1754 QWK=-0.1818 Acc=0.3333] DISQUALIFIED
+  morph3_ridge10: adjusted=-1.0000 (LOO r=-0.5168, IS r=0.1118, gap=0.6286) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  morph3_ridge50: adjusted=-1.0000 (LOO r=-0.5996, IS r=0.1106, gap=0.7102) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  morph4_ridge1: adjusted=-1.0000 (LOO r=-0.4328, IS r=0.2163, gap=0.6492) [F1=0.1667 QWK=-0.2500 Acc=0.3000] DISQUALIFIED
+  morph4_ridge10: adjusted=-1.0000 (LOO r=-0.4735, IS r=0.1980, gap=0.6716) [F1=0.1579 QWK=-0.0909 Acc=0.3000] DISQUALIFIED
+  morph4_ridge50: adjusted=-1.0000 (LOO r=-0.5263, IS r=0.1746, gap=0.7009) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  morph_gpf_ridge10: adjusted=-1.0000 (LOO r=0.1113, IS r=0.4442, gap=0.3329) [F1=0.2135 QWK=0.0909 Acc=0.3333] DISQUALIFIED
+  morph_gpf_ridge50: adjusted=-1.0000 (LOO r=-0.0303, IS r=0.4089, gap=0.4392) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gfrac_circ_cv_ridge1: adjusted=-1.0000 (LOO r=0.0907, IS r=0.3999, gap=0.3092) [F1=0.2177 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  log_morph3_ridge1: adjusted=-1.0000 (LOO r=-0.4009, IS r=0.2372, gap=0.6380) [F1=0.1754 QWK=-0.1818 Acc=0.3333] DISQUALIFIED
+  log_morph3_ridge10: adjusted=-1.0000 (LOO r=-0.4370, IS r=0.2228, gap=0.6598) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  gpf_log_morph_ridge50: adjusted=-1.0000 (LOO r=0.0559, IS r=0.3991, gap=0.3431) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  bp_all_ridge10: adjusted=-1.0000 (LOO r=0.0047, IS r=0.5130, gap=0.5083) [F1=0.2778 QWK=0.0833 Acc=0.3667] DISQUALIFIED
+  bp_all_ridge50: adjusted=-1.0000 (LOO r=-0.0410, IS r=0.4631, gap=0.5041) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  bp_all_ridge100: adjusted=-1.0000 (LOO r=-0.1079, IS r=0.4436, gap=0.5515) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  bp_all_enet: adjusted=-1.0000 (LOO r=-0.7705, IS r=0.3509, gap=1.1214) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+
+BEST MODEL: top2_ridge1
+  Pearson r:      IS=0.4718  LOO=0.3321
+  IS-LOO Gap:     0.1397 (penalty=0.0000)
+  Adjusted Score: 0.3321
+  Macro F1:       0.2647
+  QWK:            0.1739
+  Accuracy:       0.3667
+
+ERRORS:
+  TCGA-A7-A0D9: GT=2 -> Pred=1 (continuous=1.232)
+  TCGA-AC-A23E: GT=1 -> Pred=2 (continuous=1.643)
+  TCGA-AC-A3TN: GT=1 -> Pred=2 (continuous=1.945)
+  TCGA-AR-A0U4: GT=3 -> Pred=2 (continuous=2.439)
+  TCGA-AR-A1AR: GT=3 -> Pred=2 (continuous=2.114)
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (continuous=2.069)
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (continuous=2.109)
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (continuous=2.090)
+  TCGA-BH-A0DX: GT=1 -> Pred=2 (continuous=2.280)
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (continuous=2.114)
+  TCGA-D8-A1XT: GT=3 -> Pred=2 (continuous=2.270)
+  TCGA-D8-A27N: GT=3 -> Pred=2 (continuous=1.969)
+  TCGA-D8-A27P: GT=1 -> Pred=2 (continuous=2.019)
+  TCGA-D8-A4Z1: GT=3 -> Pred=2 (continuous=2.070)
+  TCGA-D8-A73X: GT=1 -> Pred=2 (continuous=1.932)
+  TCGA-E2-A14W: GT=3 -> Pred=2 (continuous=2.091)
+  TCGA-E2-A1B1: GT=1 -> Pred=2 (continuous=2.078)
+  TCGA-EW-A1PH: GT=3 -> Pred=2 (continuous=2.170)
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (continuous=2.444)

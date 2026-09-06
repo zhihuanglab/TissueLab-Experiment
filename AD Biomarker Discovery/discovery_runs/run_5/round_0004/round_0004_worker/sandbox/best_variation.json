@@ -1,0 +1,7 @@
+{
+  "best_variation": "candidate_variant_a",
+  "feature_name": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+  "feature_column": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+  "hypothesis_family": "CA1 peripyramidal reactive astrocyte hypertrophy area",
+  "distance_threshold_um": 30.0
+}

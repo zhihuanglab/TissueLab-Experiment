@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 2,
+  "stdout": "/data/autoresearch_runs True\n/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs False\n--- /Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0007/round_0007_worker/result.py ---\n",
+  "stderr": "sed: can't read /Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0007/round_0007_worker/result.py: No such file or directory\n"
+}

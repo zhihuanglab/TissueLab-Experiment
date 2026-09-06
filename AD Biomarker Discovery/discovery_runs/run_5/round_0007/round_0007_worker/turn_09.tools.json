@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0,'/shared/lib')\nimport shared_analysis.stats as st\nprint('members:', [m for m in dir(st) if not m.startswith('_')])\nfor name in ['residualized_loo_predictive_correlation','leave_one_out_partial_correlation']:\n    print(f'\\n{name} sig:', inspect.signature(getattr(st,name)))\n    src=inspect.getsource(getattr(st,name))\n    print(src[:5000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"members: ['Iterable', 'annotations', 'bootstrap_partial_correlation', 'bootstrap_partial_correlation_stability', 'leave_one_out_partial_correlation', 'leave_one_out_summary', 'multifeature_loo_predictive_correlation', 'multifeature_residualized_correlation', 'np', 'partial_correlation', 'pd', 'pearsonr', 'residualize', 'residualized_loo_predictive_correlation']\\n\\nresidualized_loo_predictive_correlation sig: (df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]') ->\", \"stderr\": \"\"}"
+  }
+]

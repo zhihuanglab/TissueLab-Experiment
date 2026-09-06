@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport pandas as pd\ndf=pd.read_csv('/scratch/donor_feature_table.csv')\nfor col in [c for c in df.columns if 'lymphocyte_contact' in c]:\n    nz=(df[col]>0).sum()\n    print(col, 'nonzero', nz, 'max', df[col].max(), 'mean', df[col].mean())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um nonzero 5 max 0.0121951219512195 mean 0.0008599189103541943\\n\", \"stderr\": \"\"}"
+  }
+]

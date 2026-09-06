@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- context_bundle.json ---'\npython - <<'PY'\nimport json, pprint\nwith open('/scratch/context_bundle.json') as f:\n    obj=json.load(f)\npprint.pp(obj)\nPY\necho '--- program.md ---'\nsed -n '1,220p' /scratch/program.md\necho '--- scratch listing ---'\nls -lah /scratch\necho '--- seeded result.py head ---'\nsed -n '1,220p' /scratch/result.py",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"t/Training/H20.33.024-A12-LFB.svs.zarr',\\n                                     'svs_path': '/Volumes/SSK SSD/TissueLab '\\n                                                 'Revision/LFB/Seed48_Split/Training/H20.33.024-A12-LFB.svs',\\n                                     'n_cells': 487366,\\n                                     'embedding_dim': 768,\\n                                     'class_labels': ['Negative control',\\n                                                      'Tumor',\\n                  \", \"stderr\": \"ls: cannot access '/scratch/._worker_brief.json': Operation not permitted\\nls: cannot access '/scratch/._program.md': Operation not permitted\\nls: cannot access '/scratch/._context_bundle.json': Operation not permitted\\nls: cannot access '/scratch/._result.py': Operation not permitted\\nls: cannot access '/scratch/._.tl_runtime': Operation not permitted\\n\"}"
+  }
+]

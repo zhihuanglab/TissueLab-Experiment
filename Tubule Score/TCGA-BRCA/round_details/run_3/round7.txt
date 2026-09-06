@@ -1,0 +1,74 @@
+Round 7 Details
+================================================================================
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_fraction: r=-0.4148 (p=0.0226)
+  tumor_in_gland_fraction: r=-0.5653 (p=0.0011)
+  mean_nn_distance_tumor: r=-0.1941 (p=0.3041)
+  mean_gland_prob_in_tumor: r=-0.1315 (p=0.4884)
+  high_gland_prob_tumor_fraction: r=-0.1858 (p=0.3256)
+  median_gland_prob_in_tumor: r=-0.0040 (p=0.9831)
+  gland_prob_std_in_tumor: r=-0.1219 (p=0.5210)
+  roi_tumor_density_cv: constant
+  roi_tumor_density_mean: r=+0.0715 (p=0.7074)
+  roi_count: constant
+  roi_max_tumor_density: constant
+
+================================================================================
+ALL CONFIGURATIONS (sorted by adjusted score):
+  tig+nn_dist__R1: adjusted=0.5033 (LOO r=0.5033, IS r=0.6014, gap=0.0982) [F1=0.4581 QWK=0.3871 Acc=0.4667]
+  tig+nn_dist+roi_cv__R1: adjusted=0.5033 (LOO r=0.5033, IS r=0.6014, gap=0.0982) [F1=0.4581 QWK=0.3871 Acc=0.4667]
+  tig_only__R1: adjusted=0.5008 (LOO r=0.5008, IS r=0.5653, gap=0.0645) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tig+roi_cv__R1: adjusted=0.5008 (LOO r=0.5008, IS r=0.5653, gap=0.0645) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tig+nn_dist__R5: adjusted=0.4966 (LOO r=0.4966, IS r=0.6014, gap=0.1049) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+nn_dist+roi_cv__R5: adjusted=0.4966 (LOO r=0.4966, IS r=0.6014, gap=0.1049) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+roi_cv__R5: adjusted=0.4945 (LOO r=0.4945, IS r=0.5653, gap=0.0709) [F1=0.4524 QWK=0.4286 Acc=0.4667]
+  tig+mean_gland_prob+nn_dist__R1: adjusted=0.4899 (LOO r=0.4899, IS r=0.6150, gap=0.1251) [F1=0.4667 QWK=0.4667 Acc=0.4667]
+  tig+high_gland_prob__R1: adjusted=0.4866 (LOO r=0.4866, IS r=0.5833, gap=0.0967) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  tig+high_gland_prob+roi_cv__R1: adjusted=0.4866 (LOO r=0.4866, IS r=0.5833, gap=0.0967) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  tig+mean_gland_prob+nn_dist__R5: adjusted=0.4825 (LOO r=0.4825, IS r=0.6150, gap=0.1325) [F1=0.4070 QWK=0.3704 Acc=0.4333]
+  tig+high_gland_prob__R5: adjusted=0.4815 (LOO r=0.4815, IS r=0.5820, gap=0.1005) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+high_gland_prob+roi_cv__R5: adjusted=0.4815 (LOO r=0.4815, IS r=0.5820, gap=0.1005) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+median_gland_prob__R1: adjusted=0.4741 (LOO r=0.4741, IS r=0.5740, gap=0.0999) [F1=0.3952 QWK=0.4000 Acc=0.4000]
+  tig+mean_gland_prob__R1: adjusted=0.4738 (LOO r=0.4738, IS r=0.5770, gap=0.1032) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  tig+mean_gland_prob+roi_cv__R1: adjusted=0.4738 (LOO r=0.4738, IS r=0.5770, gap=0.1032) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  tig+high_gland_prob__EN01: adjusted=0.4702 (LOO r=0.4702, IS r=0.5776, gap=0.1074) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+mean_gland_prob__R5: adjusted=0.4685 (LOO r=0.4685, IS r=0.5757, gap=0.1071) [F1=0.3576 QWK=0.3448 Acc=0.3667]
+  tig+mean_gland_prob+roi_cv__R5: adjusted=0.4685 (LOO r=0.4685, IS r=0.5757, gap=0.1071) [F1=0.3576 QWK=0.3448 Acc=0.3667]
+  tig+gland_prob_std__R1: adjusted=0.4640 (LOO r=0.4640, IS r=0.5808, gap=0.1168) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  tig+gland_prob_std+roi_cv__R1: adjusted=0.4640 (LOO r=0.4640, IS r=0.5808, gap=0.1168) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  tig+gland_prob_std__R5: adjusted=0.4585 (LOO r=0.4585, IS r=0.5797, gap=0.1212) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  tig+gland_prob_std+roi_cv__R5: adjusted=0.4585 (LOO r=0.4585, IS r=0.5797, gap=0.1212) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  tig+mean_gland_prob__EN01: adjusted=0.4583 (LOO r=0.4583, IS r=0.5730, gap=0.1147) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+mean_gland_prob+roi_cv__EN01: adjusted=0.4583 (LOO r=0.4583, IS r=0.5730, gap=0.1147) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+median_gland_prob__R5: adjusted=0.4580 (LOO r=0.4580, IS r=0.5739, gap=0.1159) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tig+gland_frac__R5: adjusted=0.4576 (LOO r=0.4576, IS r=0.5658, gap=0.1082) [F1=0.3155 QWK=0.2857 Acc=0.3333]
+  tig+gland_frac+roi_cv__R5: adjusted=0.4576 (LOO r=0.4576, IS r=0.5658, gap=0.1082) [F1=0.3155 QWK=0.2857 Acc=0.3333]
+  tig+roi_mean__R1: adjusted=0.4546 (LOO r=0.4546, IS r=0.5744, gap=0.1198) [F1=0.3952 QWK=0.4000 Acc=0.4000]
+  tig+gland_frac__R1: adjusted=0.4540 (LOO r=0.4540, IS r=0.5678, gap=0.1138) [F1=0.3670 QWK=0.3871 Acc=0.3667]
+  tig+gland_frac+roi_cv__R1: adjusted=0.4540 (LOO r=0.4540, IS r=0.5678, gap=0.1138) [F1=0.3670 QWK=0.3871 Acc=0.3667]
+  tig+roi_mean__R5: adjusted=0.4480 (LOO r=0.4480, IS r=0.5744, gap=0.1265) [F1=0.3356 QWK=0.2963 Acc=0.3667]
+  tig+mgp+gpstd+roi_cv__R5: adjusted=0.4453 (LOO r=0.4453, IS r=0.5792, gap=0.1339) [F1=0.4000 QWK=0.4000 Acc=0.4000]
+  tig+mgp+gpstd+roi_cv__R10: adjusted=0.4390 (LOO r=0.4390, IS r=0.5783, gap=0.1393) [F1=0.2733 QWK=0.1739 Acc=0.3667]
+  tig+mgp+gf+roi_cv__R10: adjusted=0.4213 (LOO r=0.4213, IS r=0.5706, gap=0.1493) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  tig+mean_gland_prob+gland_frac__R5: adjusted=0.4141 (LOO r=0.4179, IS r=0.5754, gap=0.1575) [F1=0.3155 QWK=0.2857 Acc=0.3333]
+  tig+mgp+gf+roi_cv__R5: adjusted=0.4141 (LOO r=0.4179, IS r=0.5754, gap=0.1575) [F1=0.3155 QWK=0.2857 Acc=0.3333]
+  tig+mean_gland_prob+gland_frac__R1: adjusted=0.3929 (LOO r=0.4046, IS r=0.5779, gap=0.1733) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  gland_frac_only__R1: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  mean_gland_prob+gland_frac__R1: adjusted=0.2274 (LOO r=0.2403, IS r=0.4161, gap=0.1758) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  mean_gland_prob+gland_frac__R5: adjusted=0.2222 (LOO r=0.2363, IS r=0.4147, gap=0.1783) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  median_gland_prob_only__R1: adjusted=-0.1689 (LOO r=-0.1613, IS r=0.0040, gap=0.1653) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  nn_dist_only__R1: adjusted=-1.0000 (LOO r=-0.2346, IS r=0.1941, gap=0.4287) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  mean_gland_prob_only__R1: adjusted=-1.0000 (LOO r=-0.3699, IS r=0.1315, gap=0.5014) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  high_gland_prob_only__R1: adjusted=-1.0000 (LOO r=-0.1942, IS r=0.1858, gap=0.3800) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gland_prob_std_only__R1: adjusted=-1.0000 (LOO r=-0.3768, IS r=0.1219, gap=0.4988) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  roi_density_cv_only__R1: adjusted=-1.0000 (LOO r=-1.0000, IS r=0.0000, gap=1.0000) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  roi_density_mean_only__R1: adjusted=-1.0000 (LOO r=-0.5168, IS r=0.0715, gap=0.5882) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  roi_count_only__R1: adjusted=-1.0000 (LOO r=-1.0000, IS r=0.0000, gap=1.0000) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  roi_max_density_only__R1: adjusted=-1.0000 (LOO r=-1.0000, IS r=0.0000, gap=1.0000) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  mean_gland_prob+nn_dist__R1: adjusted=-1.0000 (LOO r=-0.2067, IS r=0.2467, gap=0.4534) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  mean_gland_prob+nn_dist__R5: adjusted=-1.0000 (LOO r=-0.2348, IS r=0.2467, gap=0.4815) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  mean_gland_prob+roi_cv__R1: adjusted=-1.0000 (LOO r=-0.3699, IS r=0.1315, gap=0.5014) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  mean_gland_prob+roi_cv__R5: adjusted=-1.0000 (LOO r=-0.3979, IS r=0.1315, gap=0.5295) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+
+BEST: tig+nn_dist__R1 adjusted=0.5033

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, glob, os, math\nfor f in glob.glob('/data/autoresearch_runs/**/results.json', recursive=True)[:200]:\n    try:\n        d=json.load(open(f))\n    except: \n        continue\n    rv=d.get('ranked_variations')\n    if not rv: continue\n    for row in rv[:3]:\n        if all(k in row for k in ['partial_r','loo_predictive_r','gap','gap_penalty','adjusted_score']):\n            pr=abs(row['partial_r']); loo=abs(row['loo_predictive_r']); gap=row['gap']; pen=row['gap_penalty']; adj=row['adjusted_score']\n            print(os.path.basename(os.path.dirname(f)), row['name'], 'pr',pr,'loo',loo,'gap',gap,'pen',pen,'adj',adj, 'adj-loo', adj-loo)\n            break\n    break\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"round_0001_worker ca1ec_reactive_to_pyramidal_logratio pr 0.44649923477818637 loo 0.3444885426318935 gap 0.10201069214629288 pen 0.0 adj 0.3444885426318935 adj-loo 0.0\\n\", \"stderr\": \"\"}"
+  }
+]

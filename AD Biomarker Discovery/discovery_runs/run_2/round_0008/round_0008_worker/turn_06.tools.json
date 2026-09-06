@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- round 7 result.py ---'\nsed -n '1,280p' /data/autoresearch_runs/run_20260420_215745_90b105/round_0007/round_0007_worker/sandbox/result.py\necho\necho '--- round 7 results.json excerpt ---'\npython - <<'PY'\nimport json\npath='/data/autoresearch_runs/run_20260420_215745_90b105/round_0007/round_0007_worker/sandbox/results.json'\nobj=json.load(open(path))\nfor k in ['best_variation','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score']:\n    print(k, obj.get(k))\nprint('ranked variations:')\nfor row in obj.get('ranked_variations',[]):\n    print(row)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- round 7 result.py ---\\nfrom __future__ import annotations\\n\\nimport json\\nimport math\\nimport re\\nimport sys\\nimport warnings\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom scipy.spatial import cKDTree\\n\\nsys.path.insert(0, \\\"/shared/lib\\\")\\n\\nfrom shared_analysis.sea_ad_lfb import build_cell_table, load_training_cohort\\n\\nwarnings.filterwarnings(\\\"ignore\\\", category=UserWarning, module=\\\"zarr\\\")\\nwarnings.filterwarnings(\\\"ignore\\\", message=\\\"Object at .* is not recogn\", \"stderr\": \"\"}"
+  }
+]

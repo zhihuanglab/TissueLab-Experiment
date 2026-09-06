@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"def _adjusted_metrics\\|def _selection_score\" -n /shared/templates/worker_embedding_mechanistic_template.py\nsed -n '80,150p' /shared/templates/worker_embedding_mechanistic_template.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"73:def _adjusted_metrics(partial_r: float | None, loo_predictive_r: float | None) -> tuple[float, float, float]:\\n83:def _selection_score(partial_r: float | None, n_analyzable: int | None, n_total: int | None) -> float:\\n    return float(gap), float(penalty), float(loo_r - penalty)\\n\\n\\ndef _selection_score(partial_r: float | None, n_analyzable: int | None, n_total: int | None) -> float:\\n    if partial_r is None or not np.isfinite(partial_r):\\n        return float(\\\"nan\\\")\\n    if n_analyzable is None or\", \"stderr\": \"\"}"
+  }
+]

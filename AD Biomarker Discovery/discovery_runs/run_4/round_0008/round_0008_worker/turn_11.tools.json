@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"Adjusted Score\" -n /data/autoresearch_runs | head -n 20",
+    "output_preview": "{\"exit_code\": 141, \"stdout\": \"uses the outcome variable\\\\n  must be fitted inside each LOO fold, never on the full dataset before the loop.\\\\n- Never use LOO predictions from an inner model as a fixed feature in the outer\\\\n  LOO loop. This leaks information about each held-out sample through the training\\\\n  set. Symptom: LOO r jumps above 0.90 on a cohort smaller than 100.\\\\n- Keep effective feature count below n/3 unless paired with Ridge or ElasticNet\\\\n  regularisation. Let the IS-LOO gap guide you: gap below 0.15 is healthy,\", \"stderr\": \"33f87/shared/lib/shared_analysis/__pycache__/._stats.cpython-311.pyc: Operation not permitted\\ngrep: /data/autoresearch_runs/run_20260410_153753_833f87/shared/lib/shared_analysis/__pycache__/._context.cpython-311.pyc: Operation not permitted\\ngrep: /data/autoresearch_runs/run_20260410_153753_833f87/shared/lib/shared_analysis/__pycache__/._sea_ad_lfb.cpython-311.pyc: Operation not permitted\\ngrep: /data/autoresearch_runs/run_20260410_153753_833f87/shared/lib/shared_analysis/__pycache__/._artifacts.c\"}"
+  }
+]

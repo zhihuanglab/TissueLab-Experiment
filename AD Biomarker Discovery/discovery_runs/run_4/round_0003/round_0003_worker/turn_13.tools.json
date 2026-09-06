@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nimport pandas as pd\ndf=pd.read_csv('/scratch/donor_feature_table.csv')\nfor c in [col for col in df.columns if 'neighbor_fraction' in col]:\n    nz=(df[c]>0).sum()\n    print(c, 'nonzero', nz, 'max', df[c].max(), 'median', df[c].median())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"ca1_pyramidal_reactive_neighbor_fraction_r6_neighbor_fraction nonzero 4 max 0.0006472491909385 median 0.0\\nca1_pyramidal_reactive_neighbor_fraction_r4_neighbor_fraction nonzero 3 max 0.0005885815185403 median 0.0\\n\", \"stderr\": \"\"}"
+  }
+]

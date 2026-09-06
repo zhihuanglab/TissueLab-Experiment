@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "result.py syntax OK\n",
+  "stderr": ""
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pandas as pd\nwith open('/scratch/results.json') as f:\n    obj=json.load(f)\nfeat=obj['feature_column']\ndf=pd.DataFrame(obj['winner_loo_table'])\ndf['error']=df['outcome']-df['predicted']\ndf['abs_error']=df['error'].abs()\nprint(df.sort_values('abs_error', ascending=False).head(10).to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"  donor_id   outcome  predicted  ca1_pyramidal_mean_total_reactive_area_r35um     error  abs_error\\nH21.33.018 -0.144019  -0.007831                                      1.997643 -0.136188   0.136188\\nH20.33.018 -0.304214  -0.181917                                     19.698507 -0.122297   0.122297\\nH21.33.023 -0.154629  -0.039801                                      3.863858 -0.114828   0.114828\\nH21.33.006 -0.053967  -0.168392                                     11.157697  0.114425   0.114425\\nH20.3\", \"stderr\": \"\"}"
+  }
+]

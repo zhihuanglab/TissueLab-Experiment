@@ -1,0 +1,821 @@
+{
+  "round_id": 10,
+  "candidate_id": "ca1-peripyramidal-ra-lymphocyte-area-burden",
+  "status": "completed",
+  "decision": "keep",
+  "reason": "panel_improved",
+  "review_action": "add",
+  "review_slot": null,
+  "accepted_panel_score": 0.7052,
+  "accepted_panel_delta": 0.04580000000000006,
+  "panel_review": {
+    "actions": [
+      {
+        "action": "add",
+        "slot": null,
+        "replaced_feature_name": null,
+        "candidate_panel_score": 0.7052,
+        "baseline_panel_score": 0.6594,
+        "delta_panel_score": 0.0458
+      },
+      {
+        "action": "replace",
+        "slot": 1,
+        "replaced_feature_name": "ca1_reactive_astro_fraction",
+        "candidate_panel_score": 0.697,
+        "baseline_panel_score": 0.6375,
+        "delta_panel_score": 0.0596
+      },
+      {
+        "action": "replace",
+        "slot": 2,
+        "replaced_feature_name": "ca1_pyramidal_near_reactive_astro_fraction_30um",
+        "candidate_panel_score": 0.7043,
+        "baseline_panel_score": 0.6593,
+        "delta_panel_score": 0.045
+      },
+      {
+        "action": "replace",
+        "slot": 3,
+        "replaced_feature_name": "ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um",
+        "candidate_panel_score": 0.6798,
+        "baseline_panel_score": 0.6305,
+        "delta_panel_score": 0.0494
+      },
+      {
+        "action": "replace",
+        "slot": 4,
+        "replaced_feature_name": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+        "candidate_panel_score": 0.6931,
+        "baseline_panel_score": 0.6407,
+        "delta_panel_score": 0.0525
+      },
+      {
+        "action": "replace",
+        "slot": 5,
+        "replaced_feature_name": "ca1_peripyramidal_astro_reactivity_index_30um",
+        "candidate_panel_score": 0.7047,
+        "baseline_panel_score": 0.658,
+        "delta_panel_score": 0.0468
+      },
+      {
+        "action": "replace",
+        "slot": 6,
+        "replaced_feature_name": "ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um",
+        "candidate_panel_score": 0.7044,
+        "baseline_panel_score": 0.6594,
+        "delta_panel_score": 0.045
+      },
+      {
+        "action": "replace",
+        "slot": 7,
+        "replaced_feature_name": "ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um",
+        "candidate_panel_score": 0.6666,
+        "baseline_panel_score": 0.6593,
+        "delta_panel_score": 0.0073
+      },
+      {
+        "action": "replace",
+        "slot": 8,
+        "replaced_feature_name": "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um",
+        "candidate_panel_score": 0.685,
+        "baseline_panel_score": 0.6591,
+        "delta_panel_score": 0.0259
+      },
+      {
+        "action": "replace",
+        "slot": 9,
+        "replaced_feature_name": "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um",
+        "candidate_panel_score": 0.7003,
+        "baseline_panel_score": 0.659,
+        "delta_panel_score": 0.0412
+      }
+    ]
+  },
+  "summary": "ca1-peripyramidal-ra-lymphocyte-area-burden: decision=keep (panel_improved), action=add, partial_r=0.2106638897720902, accepted=0.7052, base=0.6594, full=0.7052, gain=0.04580000000000006",
+  "results": {
+    "status": "unknown",
+    "feature_name": "ca1_peripyramidal_ra_lymphocyte_area_burden_20um",
+    "outcome": "slope_zmem0",
+    "n_total": 35,
+    "n_analyzable": 35,
+    "partial_r": 0.2106638897720902,
+    "ci_lo": -0.15816746608436175,
+    "ci_hi": 0.4471970191503075,
+    "p_value": 0.2244687664105176,
+    "loo_predictive_r": 0.14854812910244175,
+    "coverage_ratio": 1.0,
+    "selection_score": 0.2107,
+    "incumbent_score": 0.2107,
+    "coverage_gate_passed": true,
+    "bootstrap_stability_passed": true,
+    "bootstrap_median_partial_r": 0.23047595610474017,
+    "bootstrap_sign_consistency": 0.965,
+    "adjusted_score": 0.1485,
+    "is_loo_gap": 0.0621,
+    "gap_penalty": 0.0,
+    "loo_unstable_count": 1,
+    "loo_max_shift": 0.18721771039420995,
+    "donor_ids_used": [
+      "H19.33.004",
+      "H20.33.008",
+      "H20.33.013",
+      "H20.33.018",
+      "H20.33.024",
+      "H20.33.025",
+      "H20.33.027",
+      "H20.33.029",
+      "H20.33.030",
+      "H20.33.034",
+      "H20.33.037",
+      "H20.33.038",
+      "H20.33.040",
+      "H20.33.041",
+      "H20.33.043",
+      "H20.33.044",
+      "H20.33.046",
+      "H21.33.001",
+      "H21.33.004",
+      "H21.33.006",
+      "H21.33.007",
+      "H21.33.012",
+      "H21.33.013",
+      "H21.33.018",
+      "H21.33.021",
+      "H21.33.023",
+      "H21.33.025",
+      "H21.33.033",
+      "H21.33.035",
+      "H21.33.037",
+      "H21.33.038",
+      "H21.33.040",
+      "H21.33.043",
+      "H21.33.044",
+      "H21.33.046"
+    ],
+    "covariates": [
+      "max_age_vis",
+      "braak_numeric",
+      "cerad_ordinal",
+      "sex_binary"
+    ],
+    "recomputed_from_raw": true,
+    "registry_written": false,
+    "artifacts": {
+      "donor_feature_table": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0010/round_0010_worker/sandbox/donor_feature_table.csv"
+    },
+    "hypothesis_family": "CA1 peripyramidal reactive astrocyte lymphocyte-contact area burden",
+    "best_variation": "candidate_variant_a",
+    "feature_column": "ca1_peripyramidal_ra_lymphocyte_area_burden_20um",
+    "penalty": 0.062115760669647885,
+    "ranked_variations": [
+      {
+        "variation_name": "candidate_variant_a",
+        "feature_name": "ca1_peripyramidal_ra_lymphocyte_area_burden_20um",
+        "feature_column": "ca1_peripyramidal_ra_lymphocyte_area_burden_20um",
+        "description": "Peripyramidal reactive astrocytes within 30 um of CA1 pyramidal neurons; score is summed area of lymphocyte-contacting cells / peripyramidal reactive astrocyte count, with lymphocyte contact defined within 20 um.",
+        "partial_r": 0.2106638897720901,
+        "selection_score": 0.2106638897720901,
+        "loo_predictive_r": 0.14854812910244222,
+        "is_loo_gap": 0.062115760669647885,
+        "penalty": 0.062115760669647885,
+        "adjusted_score": 0.14854812910244222,
+        "n_analyzable": 35,
+        "n_total": 35,
+        "per_donor_loo": [
+          {
+            "donor_id": "H19.33.004",
+            "outcome": -0.0587685,
+            "predicted": -0.049282874821020554,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.1291318129257642,
+            "residualized_actual": 0.01180547282323105,
+            "residualized_predicted": 0.02129109800221048
+          },
+          {
+            "donor_id": "H20.33.008",
+            "outcome": -0.1205063,
+            "predicted": -0.1299132446544543,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.007766817995496958,
+            "residualized_predicted": -0.0016401266589576016
+          },
+          {
+            "donor_id": "H20.33.013",
+            "outcome": -0.0317417,
+            "predicted": -0.08443570845582135,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.4904178363109757,
+            "residualized_actual": 0.07612730503146634,
+            "residualized_predicted": 0.023433296575644802
+          },
+          {
+            "donor_id": "H20.33.018",
+            "outcome": -0.3042141,
+            "predicted": -0.09797406934864726,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.2074826077380012,
+            "residualized_predicted": -0.001242577086648458
+          },
+          {
+            "donor_id": "H20.33.024",
+            "outcome": -0.0103346,
+            "predicted": -0.09618625494623517,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.08188736129150426,
+            "residualized_predicted": -0.003964293654731222
+          },
+          {
+            "donor_id": "H20.33.025",
+            "outcome": -0.0723104,
+            "predicted": -0.11716052650167635,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.039782031500422296,
+            "residualized_predicted": -0.005068095001254254
+          },
+          {
+            "donor_id": "H20.33.027",
+            "outcome": -0.1125932,
+            "predicted": -0.13232079510136693,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.016116230631212952,
+            "residualized_predicted": -0.003611364470154258
+          },
+          {
+            "donor_id": "H20.33.029",
+            "outcome": -0.0948095,
+            "predicted": -0.13082755578355795,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.03437869804451872,
+            "residualized_predicted": -0.0016393577390393865
+          },
+          {
+            "donor_id": "H20.33.030",
+            "outcome": -0.1680423,
+            "predicted": -0.12889481004845543,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.09517550022471913,
+            "residualized_actual": -0.02600851310682209,
+            "residualized_predicted": 0.013138976844722117
+          },
+          {
+            "donor_id": "H20.33.034",
+            "outcome": -0.0522007,
+            "predicted": -0.07545723506887105,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.02218476620363656,
+            "residualized_predicted": -0.0010717688652348179
+          },
+          {
+            "donor_id": "H20.33.037",
+            "outcome": -0.2508045,
+            "predicted": -0.14212401794773055,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.11145312261216767,
+            "residualized_predicted": -0.002772640559898475
+          },
+          {
+            "donor_id": "H20.33.038",
+            "outcome": -0.2372091,
+            "predicted": -0.14072765924677144,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.09913930322951336,
+            "residualized_predicted": -0.002657862476284843
+          },
+          {
+            "donor_id": "H20.33.040",
+            "outcome": -0.1026342,
+            "predicted": -0.13992371128654296,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.028378243176460552,
+            "residualized_predicted": -0.008911268110082651
+          },
+          {
+            "donor_id": "H20.33.041",
+            "outcome": -0.1079018,
+            "predicted": -0.12692321179904273,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.01741333533198576,
+            "residualized_predicted": -0.0016080764670571514
+          },
+          {
+            "donor_id": "H20.33.043",
+            "outcome": -0.0599597,
+            "predicted": -0.0789563711063796,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.01342157649215845,
+            "residualized_predicted": -0.00557509461422144
+          },
+          {
+            "donor_id": "H20.33.044",
+            "outcome": -0.0544588,
+            "predicted": -0.055796248601819726,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.0016560768952743748,
+            "residualized_predicted": -0.0029935254970943
+          },
+          {
+            "donor_id": "H20.33.046",
+            "outcome": -0.2017114,
+            "predicted": -0.12769351836719817,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.07851753730826147,
+            "residualized_predicted": -0.004499655675459747
+          },
+          {
+            "donor_id": "H21.33.001",
+            "outcome": -0.0815782,
+            "predicted": -0.03241789768308607,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.05581310646478714,
+            "residualized_predicted": -0.0066528041478735225
+          },
+          {
+            "donor_id": "H21.33.004",
+            "outcome": -0.1198253,
+            "predicted": -0.02939138845790024,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.09807813747273145,
+            "residualized_predicted": -0.007644225930631985
+          },
+          {
+            "donor_id": "H21.33.006",
+            "outcome": -0.0539668,
+            "predicted": -0.09095422673136963,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.031326468618237575,
+            "residualized_predicted": -0.005660958113132277
+          },
+          {
+            "donor_id": "H21.33.007",
+            "outcome": -0.0975144,
+            "predicted": -0.15156217040951822,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.05115956970257085,
+            "residualized_predicted": -0.0028882007069475505
+          },
+          {
+            "donor_id": "H21.33.012",
+            "outcome": -0.1009244,
+            "predicted": -0.10091028126979026,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.002191285092991019,
+            "residualized_predicted": -0.002177166362781518
+          },
+          {
+            "donor_id": "H21.33.013",
+            "outcome": -0.161261,
+            "predicted": -0.12180959254429205,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.04103068001748461,
+            "residualized_predicted": -0.001579272561776854
+          },
+          {
+            "donor_id": "H21.33.018",
+            "outcome": -0.144019,
+            "predicted": -0.12298197942109594,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.032860420488721426,
+            "residualized_predicted": -0.011823399909817735
+          },
+          {
+            "donor_id": "H21.33.021",
+            "outcome": -0.0983582,
+            "predicted": -0.10632204129241973,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.0011360464846756624,
+            "residualized_predicted": -0.009099887777095644
+          },
+          {
+            "donor_id": "H21.33.023",
+            "outcome": -0.1546294,
+            "predicted": -0.038776975356591956,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.12054835144610969,
+            "residualized_predicted": -0.004695926802702003
+          },
+          {
+            "donor_id": "H21.33.025",
+            "outcome": -0.0422854,
+            "predicted": -0.1244577709476026,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.07876296845433277,
+            "residualized_predicted": -0.0034094024932700383
+          },
+          {
+            "donor_id": "H21.33.033",
+            "outcome": -0.0466362,
+            "predicted": -0.12728382938620908,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.07897854933515965,
+            "residualized_predicted": -0.001669080051049586
+          },
+          {
+            "donor_id": "H21.33.035",
+            "outcome": -0.0498238,
+            "predicted": -0.14644106129101758,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.09481095625619215,
+            "residualized_predicted": -0.001806305034825538
+          },
+          {
+            "donor_id": "H21.33.037",
+            "outcome": -0.0881349,
+            "predicted": -0.07173058201857013,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.017472648637775798,
+            "residualized_predicted": -0.0010683306563460803
+          },
+          {
+            "donor_id": "H21.33.038",
+            "outcome": -0.0518276,
+            "predicted": -0.06664361980978528,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.011838111413266114,
+            "residualized_predicted": -0.0029779083965193703
+          },
+          {
+            "donor_id": "H21.33.040",
+            "outcome": -0.0327944,
+            "predicted": -0.15528501856972377,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": 0.11429572961832557,
+            "residualized_predicted": -0.00819488895139837
+          },
+          {
+            "donor_id": "H21.33.043",
+            "outcome": -0.072355,
+            "predicted": -0.08211028063583992,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.08050231894736844,
+            "residualized_actual": 0.01788626289164319,
+            "residualized_predicted": 0.008130982255803115
+          },
+          {
+            "donor_id": "H21.33.044",
+            "outcome": -0.0991281,
+            "predicted": -0.1550613295571009,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.023603433772455093,
+            "residualized_actual": 0.05855174617233305,
+            "residualized_predicted": 0.00261851661523187
+          },
+          {
+            "donor_id": "H21.33.046",
+            "outcome": -0.1616234,
+            "predicted": -0.10889652602006918,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+            "residualized_actual": -0.057497743175959196,
+            "residualized_predicted": -0.004770869196028637
+          }
+        ]
+      },
+      {
+        "variation_name": "candidate_variant_b",
+        "feature_name": "ca1_peripyramidal_ra_lymphocyte_area_burden_25um",
+        "feature_column": "ca1_peripyramidal_ra_lymphocyte_area_burden_25um",
+        "description": "Same as variant A but lymphocyte contact radius expanded to 25 um.",
+        "partial_r": 0.20637924079621148,
+        "selection_score": 0.20637924079621148,
+        "loo_predictive_r": 0.14045781716367106,
+        "is_loo_gap": 0.06592142363254042,
+        "penalty": 0.06592142363254042,
+        "adjusted_score": 0.14045781716367106,
+        "n_analyzable": 35,
+        "n_total": 35,
+        "per_donor_loo": [
+          {
+            "donor_id": "H19.33.004",
+            "outcome": -0.0587685,
+            "predicted": -0.05324602477138597,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.1291318129257642,
+            "residualized_actual": 0.01180547282323105,
+            "residualized_predicted": 0.017327948051844802
+          },
+          {
+            "donor_id": "H20.33.008",
+            "outcome": -0.1205063,
+            "predicted": -0.13343964048803997,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.007766817995496958,
+            "residualized_predicted": -0.005166522492543345
+          },
+          {
+            "donor_id": "H20.33.013",
+            "outcome": -0.0317417,
+            "predicted": -0.08069138448422114,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.4904178363109757,
+            "residualized_actual": 0.07612730503146634,
+            "residualized_predicted": 0.02717762054724506
+          },
+          {
+            "donor_id": "H20.33.018",
+            "outcome": -0.3042141,
+            "predicted": -0.09429546314253076,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.2074826077380012,
+            "residualized_predicted": 0.002436029119467798
+          },
+          {
+            "donor_id": "H20.33.024",
+            "outcome": -0.0103346,
+            "predicted": -0.09445379159129727,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.08188736129150426,
+            "residualized_predicted": -0.0022318302997933704
+          },
+          {
+            "donor_id": "H20.33.025",
+            "outcome": -0.0723104,
+            "predicted": -0.11710161304153058,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.039782031500422296,
+            "residualized_predicted": -0.00500918154110867
+          },
+          {
+            "donor_id": "H20.33.027",
+            "outcome": -0.1125932,
+            "predicted": -0.08427428293692449,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.3434167395859873,
+            "residualized_actual": 0.016116230631212952,
+            "residualized_predicted": 0.044435147694288295
+          },
+          {
+            "donor_id": "H20.33.029",
+            "outcome": -0.0948095,
+            "predicted": -0.13403727463721882,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.03437869804451872,
+            "residualized_predicted": -0.004849076592700445
+          },
+          {
+            "donor_id": "H20.33.030",
+            "outcome": -0.1680423,
+            "predicted": -0.12924990795384003,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.11967612404494385,
+            "residualized_actual": -0.02600851310682209,
+            "residualized_predicted": 0.012783878939337473
+          },
+          {
+            "donor_id": "H20.33.034",
+            "outcome": -0.0522007,
+            "predicted": -0.07675883281634464,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.02218476620363656,
+            "residualized_predicted": -0.0023733666127084517
+          },
+          {
+            "donor_id": "H20.33.037",
+            "outcome": -0.2508045,
+            "predicted": -0.14622994207048018,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.11145312261216767,
+            "residualized_predicted": -0.006878564682648217
+          },
+          {
+            "donor_id": "H20.33.038",
+            "outcome": -0.2372091,
+            "predicted": -0.14236502095349526,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.09913930322951336,
+            "residualized_predicted": -0.004295224183008833
+          },
+          {
+            "donor_id": "H20.33.040",
+            "outcome": -0.1026342,
+            "predicted": -0.13940464257760468,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.016480517030567687,
+            "residualized_actual": 0.028378243176460552,
+            "residualized_predicted": -0.008392199401144624
+          },
+          {
+            "donor_id": "H20.33.041",
+            "outcome": -0.1079018,
+            "predicted": -0.1288674506635487,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.01741333533198576,
+            "residualized_predicted": -0.0035523153315630876
+          },
+          {
+            "donor_id": "H20.33.043",
+            "outcome": -0.0599597,
+            "predicted": -0.07560623157418356,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.01342157649215845,
+            "residualized_predicted": -0.002224955082025528
+          },
+          {
+            "donor_id": "H20.33.044",
+            "outcome": -0.0544588,
+            "predicted": -0.0493092594355227,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.0016560768952743748,
+            "residualized_predicted": 0.00349346366920254
+          },
+          {
+            "donor_id": "H20.33.046",
+            "outcome": -0.2017114,
+            "predicted": -0.12727326494186866,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.07851753730826147,
+            "residualized_predicted": -0.004079402250130449
+          },
+          {
+            "donor_id": "H21.33.001",
+            "outcome": -0.0815782,
+            "predicted": -0.02706687110051703,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.05581310646478714,
+            "residualized_predicted": -0.0013017775653045404
+          },
+          {
+            "donor_id": "H21.33.004",
+            "outcome": -0.1198253,
+            "predicted": -0.029492454254642156,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.09807813747273145,
+            "residualized_predicted": -0.007745291727373859
+          },
+          {
+            "donor_id": "H21.33.006",
+            "outcome": -0.0539668,
+            "predicted": -0.09258117747247364,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.031326468618237575,
+            "residualized_predicted": -0.007287908854236504
+          },
+          {
+            "donor_id": "H21.33.007",
+            "outcome": -0.0975144,
+            "predicted": -0.152782208269406,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.05115956970257085,
+            "residualized_predicted": -0.004108238566835432
+          },
+          {
+            "donor_id": "H21.33.012",
+            "outcome": -0.1009244,
+            "predicted": -0.10478557443767532,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.002191285092991019,
+            "residualized_predicted": -0.00605245953066679
+          },
+          {
+            "donor_id": "H21.33.013",
+            "outcome": -0.161261,
+            "predicted": -0.12292759647630774,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.04103068001748461,
+            "residualized_predicted": -0.002697276493792737
+          },
+          {
+            "donor_id": "H21.33.018",
+            "outcome": -0.144019,
+            "predicted": -0.12711117596364166,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.032860420488721426,
+            "residualized_predicted": -0.015952596452363348
+          },
+          {
+            "donor_id": "H21.33.021",
+            "outcome": -0.0983582,
+            "predicted": -0.10871754953515186,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.0011360464846756624,
+            "residualized_predicted": -0.011495396019827802
+          },
+          {
+            "donor_id": "H21.33.023",
+            "outcome": -0.1546294,
+            "predicted": -0.04192531055820489,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.12054835144610969,
+            "residualized_predicted": -0.00784426200431507
+          },
+          {
+            "donor_id": "H21.33.025",
+            "outcome": -0.0422854,
+            "predicted": -0.12653789711899296,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.07876296845433277,
+            "residualized_predicted": -0.005489528664660496
+          },
+          {
+            "donor_id": "H21.33.033",
+            "outcome": -0.0466362,
+            "predicted": -0.1269164635957809,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.07897854933515965,
+            "residualized_predicted": -0.0013017142606215196
+          },
+          {
+            "donor_id": "H21.33.035",
+            "outcome": -0.0498238,
+            "predicted": -0.15316749317696093,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.09481095625619215,
+            "residualized_predicted": -0.00853273692076924
+          },
+          {
+            "donor_id": "H21.33.037",
+            "outcome": -0.0881349,
+            "predicted": -0.0738099537648112,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.017472648637775798,
+            "residualized_predicted": -0.003147702402587405
+          },
+          {
+            "donor_id": "H21.33.038",
+            "outcome": -0.0518276,
+            "predicted": -0.06703559461681469,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.011838111413266114,
+            "residualized_predicted": -0.0033698832035489383
+          },
+          {
+            "donor_id": "H21.33.040",
+            "outcome": -0.0327944,
+            "predicted": -0.14811928276590222,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": 0.11429572961832557,
+            "residualized_predicted": -0.0010291531475769586
+          },
+          {
+            "donor_id": "H21.33.043",
+            "outcome": -0.072355,
+            "predicted": -0.08431967183762769,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.12126951892712554,
+            "residualized_actual": 0.01788626289164319,
+            "residualized_predicted": 0.00592159105401531
+          },
+          {
+            "donor_id": "H21.33.044",
+            "outcome": -0.0991281,
+            "predicted": -0.1561096227090988,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.023603433772455093,
+            "residualized_actual": 0.05855174617233305,
+            "residualized_predicted": 0.0015702234632339162
+          },
+          {
+            "donor_id": "H21.33.046",
+            "outcome": -0.1616234,
+            "predicted": -0.10990908738613855,
+            "ca1_peripyramidal_ra_lymphocyte_area_burden_25um": 0.0,
+            "residualized_actual": -0.057497743175959196,
+            "residualized_predicted": -0.005783430562098223
+          }
+        ]
+      }
+    ],
+    "error_summary": {
+      "worst_donors": [
+        {
+          "donor_id": "H20.33.018",
+          "outcome": -0.3042141,
+          "predicted": -0.09797406934864726,
+          "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+          "abs_error": 0.2062400306513527
+        },
+        {
+          "donor_id": "H21.33.040",
+          "outcome": -0.0327944,
+          "predicted": -0.15528501856972377,
+          "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+          "abs_error": 0.12249061856972376
+        },
+        {
+          "donor_id": "H21.33.023",
+          "outcome": -0.1546294,
+          "predicted": -0.038776975356591956,
+          "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+          "abs_error": 0.11585242464340804
+        },
+        {
+          "donor_id": "H20.33.037",
+          "outcome": -0.2508045,
+          "predicted": -0.14212401794773055,
+          "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+          "abs_error": 0.10868048205226943
+        },
+        {
+          "donor_id": "H21.33.035",
+          "outcome": -0.0498238,
+          "predicted": -0.14644106129101758,
+          "ca1_peripyramidal_ra_lymphocyte_area_burden_20um": 0.0,
+          "abs_error": 0.09661726129101758
+        }
+      ]
+    },
+    "bootstrap_q25_partial_r": 0.20190406998655702,
+    "bootstrap_q75_partial_r": 0.2591783612025811,
+    "bootstrap_positive_fraction": 0.965,
+    "bootstrap_negative_fraction": 0.035,
+    "bootstrap_valid_samples": 400,
+    "bootstrap_sample_size": 28,
+    "incumbent_eligible": true,
+    "raw_r": 0.20017738012271113,
+    "raw_p_value": null,
+    "panel_member_count": 9,
+    "panel_baseline_score": 0.6594,
+    "panel_candidate_score": 0.7052,
+    "delta_panel_score": 0.0458,
+    "panel_baseline_loo_score": 0.0138,
+    "panel_candidate_loo_score": 0.1643,
+    "candidate_redundancy": 0.9298
+  }
+}

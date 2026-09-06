@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport pandas as pd, json\nfeat = pd.read_csv('/scratch/donor_feature_table.csv')\nwith open('/scratch/results.json') as f: res = json.load(f)\nbest = [r for r in res['ranked_variations'] if r['variation_name']==res['best_variation']][0]\nper = pd.DataFrame(best['per_donor_loo'])\nmeta = feat[['donor_id','sex','braak_numeric','cerad_ordinal','max_age_vis','ca1_pyramidal_fraction','ca1_ca2_pyramidal_fraction','ca1_classified','ca2_classified']].merge(per[['donor_id','outcome','predicted','error','abs_error']], on='donor_id')\nprint(meta.sort_values('abs_error', ascending=False).head(10).to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"  donor_id    sex  braak_numeric  cerad_ordinal  max_age_vis  ca1_pyramidal_fraction  ca1_ca2_pyramidal_fraction  ca1_classified  ca2_classified   outcome  predicted     error  abs_error\\nH20.33.018 Female              6              3         74.0                0.137894                    0.138647            7397             746 -0.304214  -0.113270  0.190945   0.190945\\nH21.33.040   Male              5              3         79.0                0.193060                    0.183453            70\", \"stderr\": \"\"}"
+  }
+]

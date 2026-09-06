@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport json\nfrom shared_analysis import build_cell_table, load_training_cohort, load_region_polygons\ncohort = load_training_cohort('/data')\nslide = cohort.iloc[0]['slide_name']\nslide_path = Path('/data')/slide\nprint('slide:', slide)\ncells = build_cell_table(slide_path, include_regions=False, include_geometry=True)\nprint('cell columns:', list(cells.columns)[:40])\nprint('n_cells:', len(cells))\nprint(cells.head(2).to_string())\npolys = load_region_polygons(slide_path)\nprint('polygon keys sample:', list(polys.keys())[:10])\nfor k,v in polys.items():\n    print('first polygon key', k, 'type', type(v), 'len', len(v) if hasattr(v,'__len__') else 'na')\n    print('sample first item type', type(v[0]) if len(v) else None)\n    break\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

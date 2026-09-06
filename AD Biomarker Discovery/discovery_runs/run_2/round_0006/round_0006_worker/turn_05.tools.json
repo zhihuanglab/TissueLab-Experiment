@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho 'shared tree'\nfind /shared -maxdepth 3 -type d | sed -n '1,120p'\necho 'python path candidates'\nfind /shared -maxdepth 4 -type f \\( -name '__init__.py' -o -name 'sea_ad_lfb.py' -o -name 'stats.py' \\) | sed -n '1,120p'\necho 'data autoresearch runs'\nfind /data/autoresearch_runs -maxdepth 4 -type f \\( -name 'result.py' -o -name 'results.json' -o -name 'report.md' \\) | sed -n '1,80p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"shared tree\\n/shared\\n/shared/cache\\n/shared/cache/region_polygons\\n/shared/lib\\n/shared/lib/shared_analysis\\n/shared/lib/shared_analysis/__pycache__\\n/shared/templates\\n/shared/templates/__pycache__\\npython path candidates\\n/shared/lib/shared_analysis/__init__.py\\n/shared/lib/shared_analysis/stats.py\\n/shared/lib/shared_analysis/sea_ad_lfb.py\\ndata autoresearch runs\\n/data/autoresearch_runs/run_20260406_102839_f31166/round_0001/Worker 1/result.py\\n/data/autoresearch_runs/run_20260406_102839_f31166/round_0001/\", \"stderr\": \"\"}"
+  }
+]

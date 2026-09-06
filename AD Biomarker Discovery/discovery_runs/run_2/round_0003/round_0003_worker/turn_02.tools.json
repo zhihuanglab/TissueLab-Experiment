@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, textwrap\nwith open('/scratch/context_bundle.json') as f:\n    c=json.load(f)\nprint('TOP-LEVEL KEYS:', sorted(c.keys()))\nfor k in ['worker_brief','round','accepted_panel','current_panel','candidate','hypothesis','plan']:\n    if k in c:\n        print(f'\\n--- {k} ---')\n        print(json.dumps(c[k], indent=2)[:12000])\nprint('\\n--- worker_brief.json ---')\nwith open('/scratch/worker_brief.json') as f:\n    print(f.read())\nprint('\\n--- result.py template ---')\nwith open('/scratch/result.py') as f:\n    print(f.read())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"TOP-LEVEL KEYS: ['cohort_summary', 'dataset_guide_excerpt', 'runtime_manifest', 'runtime_quickstart_excerpt', 'slide_manifest_head', 'worker_brief']\\n\\n--- worker_brief ---\\n{\\n  \\\"worker_name\\\": \\\"round_0003_worker\\\",\\n  \\\"round_id\\\": 3,\\n  \\\"candidate_id\\\": \\\"ca1-pyramidal-reactive-niche\\\",\\n  \\\"candidate_type\\\": \\\"candidate\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [\\n      {\\n        \\\"slot\\\": 1,\\n        \\\"feature_name\\\": \\\"ca1_pyramidal_burden__ca1_pyramidal_fraction\\\",\\n        \\\"round_id\\\": 1,\\n        \\\"panel_candidate_sco\", \"stderr\": \"\"}"
+  }
+]

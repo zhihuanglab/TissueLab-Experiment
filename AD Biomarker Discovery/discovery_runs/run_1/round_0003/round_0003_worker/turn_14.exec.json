@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "columns: ['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex']\nresults exists: True\nreport exists: False\nrun_stdout exists: True\n",
+  "stderr": ""
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython /scratch/result.py | tee /scratch/run_stdout.txt\nls -l /scratch/results.json /scratch/report.md /scratch/donor_feature_table.csv",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: ca1_reactive_astrocyte_microclustering\\nBEST VARIATION: reactive_minus_astrocyte_microcluster_fraction_r70px_k3\\n  IS partial r:      -0.5125\\n  Selection score:   0.5125\\n  LOO predictive r:  0.4642  (diagnostic)\\n  IS-LOO Gap:        0.0484  (penalty=0.0484)\\n  Adjusted Score:    0.4642\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  reactive_minus_astrocyte_microcluster_fraction_r70px_k3  -0.5125  0.5125  0.4642\\n  reactive_minus_astrocyte_micr\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- worker_brief.json ---'\npython - <<'PY'\nimport json\nwith open('/scratch/worker_brief.json') as f:\n    obj=json.load(f)\nprint(json.dumps(obj, indent=2))\nPY\necho\necho '--- list scratch ---'\nls -la /scratch | sed -n '1,120p'",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"--- worker_brief.json ---\\n{\\n  \\\"worker_name\\\": \\\"round_0010_worker\\\",\\n  \\\"round_id\\\": 10,\\n  \\\"candidate_id\\\": \\\"ec-ra-proximal-pyramidal-lower-tail-area\\\",\\n  \\\"candidate_type\\\": \\\"candidate\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [\\n      {\\n        \\\"slot\\\": 1,\\n        \\\"feature_name\\\": \\\"ca1_pyramidal_fraction\\\",\\n        \\\"round_id\\\": 1,\\n        \\\"panel_candidate_score\\\": 0.294,\\n        \\\"delta_panel_score\\\": null,\\n        \\\"status\\\": \\\"active\\\",\\n        \\\"worker_dir\\\": \\\"/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Tra\", \"stderr\": \"ls: cannot access '/scratch/._worker_brief.json': Operation not permitted\\nls: cannot access '/scratch/._program.md': Operation not permitted\\nls: cannot access '/scratch/._context_bundle.json': Operation not permitted\\nls: cannot access '/scratch/._result.py': Operation not permitted\\nls: cannot access '/scratch/._.tl_runtime': Operation not permitted\\n\"}"
+  }
+]

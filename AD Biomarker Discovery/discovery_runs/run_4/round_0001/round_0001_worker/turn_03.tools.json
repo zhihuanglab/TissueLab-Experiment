@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport pandas as pd\nfrom shared_analysis import build_cell_table, load_region_polygons, load_training_cohort\ndata_root=Path('/data')\ncohort=load_training_cohort(data_root)\nslide_path=data_root/str(cohort.iloc[0]['slide_name'])\ncells=build_cell_table(slide_path, include_regions=True, include_geometry=False)\nprint(\"CELL TABLE COLUMNS:\", cells.columns.tolist())\nprint(cells.head().to_string())\nprint(\"region counts top:\", cells['region_label'].value_counts(dropna=False).head(15).to_string())\nprint(\"class counts top:\", cells['class_label'].value_counts(dropna=False).head(15).to_string())\npolys=load_region_polygons(slide_path)\nprint(\"\\nPOLYGON KEYS:\", list(polys)[:20], \"n=\", len(polys))\nfor k,v in polys.items():\n    print(\"example region\", k, \"type\", type(v).__name__, \"len\", len(v) if hasattr(v,'__len__') else 'na')\n    if hasattr(v,'__len__') and len(v):\n        print(\"first entry type:\", type(v[0]).__name__)\n        print(\"first 3 points:\", v[0][:3] if hasattr(v[0],'__getitem__') else v[0])\n    break\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

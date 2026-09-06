@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pandas as pd\nres=json.loads(open('/scratch/results.json').read())\nprint(pd.DataFrame(res['ranked_variations'])[['variation_name','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','feature_column']].to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"     variation_name  partial_r  selection_score  loo_predictive_r  is_loo_gap  adjusted_score                                 feature_column\\ncandidate_variant_a  -0.357553         0.357553          0.220084    0.137468        0.220084 reactive_minus_astrocyte_median_log1p_area_ca1\\ncandidate_variant_b  -0.313477         0.313477          0.160303    0.153174        0.158717    reactive_minus_astrocyte_p75_log1p_area_ca1\\n\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport importlib.util, json\nspec=importlib.util.spec_from_file_location('result','/scratch/result.py')\nmod=importlib.util.module_from_spec(spec)\nspec.loader.exec_module(mod)\nprint('FEATURE_NAME', mod.FEATURE_NAME)\nprint('FEATURE_COLUMN', mod.FEATURE_COLUMN)\nprint('score H20.33.018', mod.compute_donor_score(donor_id='H20.33.018', data_root='/data'))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"FEATURE_NAME ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r50um_ra2_ly1\\nFEATURE_COLUMN ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r50um_ra2_ly1\\nscore H20.33.018 0.00784313725490196\\n\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.append('/shared/lib')\nfrom shared_analysis.artifacts import build_results_payload, write_results_payload, coerce_results_payload, validate_results_payload\nprint(inspect.getsource(build_results_payload))\nprint(inspect.getsource(validate_results_payload))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"def build_results_payload(\\n    *,\\n    status: str,\\n    feature_name: str,\\n    outcome: str,\\n    n_total: int | float | None,\\n    n_analyzable: int | float | None,\\n    partial_r: float | None,\\n    ci_lo: float | None,\\n    ci_hi: float | None,\\n    p_value: float | None,\\n    loo_predictive_r: float | None = None,\\n    loo_unstable_count: int = 0,\\n    loo_max_shift: float | None = None,\\n    donor_ids_used: list[str] | None = None,\\n    covariates: list[str] | None = None,\\n    recomputed_from_raw: bool\", \"stderr\": \"\"}"
+  }
+]

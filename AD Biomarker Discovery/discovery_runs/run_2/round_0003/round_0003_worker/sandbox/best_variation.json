@@ -1,0 +1,7 @@
+{
+  "best_variation": "ca1_pyr_reactive_niche_r70px",
+  "feature_column": "ca1_pyr_reactive_niche_r70px__reactive_over_astroglial_neighbored_pyramidal_fraction",
+  "feature_name": "ca1_pyramidal_reactive_niche__reactive_over_astroglial_neighbored_pyramidal_fraction_r70px",
+  "radius_px": 70.0,
+  "family_name": "ca1_pyramidal_reactive_niche"
+}

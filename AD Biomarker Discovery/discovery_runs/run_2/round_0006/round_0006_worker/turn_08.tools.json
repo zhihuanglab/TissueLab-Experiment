@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- results.json ---'\nsed -n '1,220p' /scratch/results.json\necho '--- report.md ---'\nsed -n '1,240p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- results.json ---\\n{\\n  \\\"hypothesis_family\\\": \\\"ca1_pyramidal_hotspot_exposure\\\",\\n  \\\"best_variation\\\": \\\"candidate_variant_a\\\",\\n  \\\"feature_column\\\": \\\"feature__candidate_variant_a\\\",\\n  \\\"partial_r\\\": -0.5927359235636277,\\n  \\\"selection_score\\\": 0.5927359235636277,\\n  \\\"loo_predictive_r\\\": 0.5431269928237348,\\n  \\\"is_loo_gap\\\": 0.04960893073989292,\\n  \\\"penalty\\\": 0.04960893073989292,\\n  \\\"adjusted_score\\\": 0.5431269928237348,\\n  \\\"ranked_variations\\\": [\\n    {\\n      \\\"variation_name\\\": \\\"candidate_variant_a\\\",\\n      \\\"descriptio\", \"stderr\": \"\"}"
+  }
+]

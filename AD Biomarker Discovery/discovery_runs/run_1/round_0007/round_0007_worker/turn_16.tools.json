@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"def write_results_payload\\|def build_results_payload\" -n /shared/lib/shared_analysis/artifacts.py\nsed -n '320,420p' /shared/lib/shared_analysis/artifacts.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"363:def write_results_payload(path: str | Path, results: dict[str, Any]) -> Path:\\n371:def build_results_payload(\\n    elif feature_column not in available:\\n        issues.append(f\\\"feature column missing from donor_feature_table: {feature_column}\\\")\\n    if not outcome_column:\\n        issues.append(\\\"missing outcome column\\\")\\n    elif outcome_column not in available:\\n        issues.append(f\\\"outcome column missing from donor_feature_table: {outcome_column}\\\")\\n    missing_confounds = [col for col in reso\", \"stderr\": \"\"}"
+  }
+]

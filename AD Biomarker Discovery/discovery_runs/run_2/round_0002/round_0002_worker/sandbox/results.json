@@ -1,0 +1,47 @@
+{
+  "hypothesis_family": "ca1_reactive_astrocyte_enrichment",
+  "best_variation": "candidate_variant_a",
+  "feature_name": "ca1_reactive_astrocyte_enrichment__reactive_over_astroglial",
+  "feature_column": "ca1_reactive_astrocyte_enrichment__reactive_over_astroglial",
+  "partial_r": -0.49138642466817395,
+  "selection_score": 0.49138642466817395,
+  "loo_predictive_r": 0.3597702434171406,
+  "is_loo_gap": 0.13161618125103336,
+  "gap_penalty": 0.0,
+  "adjusted_score": 0.49138642466817395,
+  "n_analyzable": 35,
+  "n_total": 35,
+  "coverage": 1.0,
+  "ranked_variations": [
+    {
+      "name": "candidate_variant_a",
+      "label": "reactive_over_astroglial",
+      "description": "CA1 Reactive Astrocyte / (Reactive Astrocyte + Astrocyte)",
+      "feature_column": "ca1_reactive_astrocyte_enrichment__reactive_over_astroglial",
+      "partial_r": -0.49138642466817395,
+      "selection_score": 0.49138642466817395,
+      "loo_predictive_r": 0.3597702434171406,
+      "is_loo_gap": 0.13161618125103336,
+      "gap_penalty": 0.0,
+      "adjusted_score": 0.49138642466817395,
+      "n_analyzable": 35,
+      "n_total": 35,
+      "coverage": 1.0
+    },
+    {
+      "name": "candidate_variant_b",
+      "label": "reactive_over_all_classified",
+      "description": "CA1 Reactive Astrocyte / all classified CA1 cells",
+      "feature_column": "ca1_reactive_astrocyte_enrichment__reactive_over_all_classified",
+      "partial_r": -0.421669416850154,
+      "selection_score": 0.421669416850154,
+      "loo_predictive_r": 0.28962565743831853,
+      "is_loo_gap": 0.1320437594118355,
+      "gap_penalty": 0.0,
+      "adjusted_score": 0.421669416850154,
+      "n_analyzable": 35,
+      "n_total": 35,
+      "coverage": 1.0
+    }
+  ]
+}

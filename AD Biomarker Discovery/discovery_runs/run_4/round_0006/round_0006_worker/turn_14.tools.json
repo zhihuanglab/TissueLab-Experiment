@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- round5 results.json ---'\npython - <<'PY'\nimport json\npath='/data/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker/results.json'\nwith open(path) as f:\n    obj=json.load(f)\nprint(json.dumps(obj, indent=2)[:4000])\nPY\necho\necho '--- round5 result.py head ---'\nsed -n '1,260p' /data/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- round5 results.json ---\\n{\\n  \\\"status\\\": \\\"ok\\\",\\n  \\\"feature_name\\\": \\\"ca1_reactive_local_purity\\\",\\n  \\\"outcome\\\": \\\"slope_zmem0\\\",\\n  \\\"n_total\\\": 35,\\n  \\\"n_analyzable\\\": 35,\\n  \\\"partial_r\\\": -0.4781409264172288,\\n  \\\"ci_lo\\\": -0.7607065703311814,\\n  \\\"ci_hi\\\": -0.07959802591076398,\\n  \\\"p_value\\\": 0.003670747048618035,\\n  \\\"loo_predictive_r\\\": 0.3322912032087426,\\n  \\\"coverage_ratio\\\": 1.0,\\n  \\\"selection_score\\\": 0.4781,\\n  \\\"incumbent_score\\\": 0.4781,\\n  \\\"coverage_gate_passed\\\": true,\\n  \\\"bootstrap_stability_passed\\\": true,\\n  \\\"boot\", \"stderr\": \"\"}"
+  }
+]

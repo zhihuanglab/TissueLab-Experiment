@@ -1,0 +1,25 @@
+{
+  "worker_name": "round_0001_worker",
+  "round_id": 1,
+  "candidate_id": "ca1-pyramidal-burden",
+  "candidate_type": "seed",
+  "accepted_panel": {
+    "members": [],
+    "best_panel_score": null
+  },
+  "scientific_question": "Does reduced CA1 pyramidal neuron burden capture donor-level memory decline beyond age, sex, Braak stage, and CERAD score?",
+  "approach": "For each donor, use training_cohort.csv to find the slide zarr, load per-cell centroids and the cell-type classification labels, assign cells to CA1 using the CA1 annotation polygon(s) from CustomAnnotations after dividing annotation coordinates by 16, identify cells labeled Pyramidal Neuron, and compute a donor-level CA1 pyramidal burden score using one of the local normalization variants below.",
+  "variations": [
+    {
+      "name": "ca1_pyramidal_fraction",
+      "description": "Baseline: CA1 Pyramidal Neuron count divided by all classified cells assigned to CA1."
+    },
+    {
+      "name": "ca1_pyramidal_density",
+      "description": "Nearby change: CA1 Pyramidal Neuron count divided by annotated CA1 area in mm^2, using slide MPP for area conversion."
+    }
+  ],
+  "baseline_variation": "ca1_pyramidal_fraction",
+  "notes": "Use centroid-based region assignment. Annotation polygons are stored at 16x cell coordinates, so divide polygon vertices by 16 before point-in-polygon tests. If CA1 has multiple polygons, union them for assignment and sum their areas. Read the per-cell top class labels from ClassificationNode and map class IDs to names if needed. For the density variant, compute polygon area from the annotation geometry and convert pixels^2 to mm^2 using the slide's Aperio MPP. Return NaN only if CA1 is absent or the denominator is zero; otherwise avoid extra donor filtering.",
+  "rationale": "There are no prior rounds, so the seed should be the most direct and biologically grounded hippocampal signal. CA1 pyramidal neurons sit at the core of memory circuitry, and selective depletion of this population is a canonical hippocampal injury pattern that is plausibly linked to worse slope_zmem0 while remaining simple to compute, region-anchored, and interpretable."
+}

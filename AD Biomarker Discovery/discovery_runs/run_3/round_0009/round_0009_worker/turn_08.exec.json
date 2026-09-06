@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "dict_keys(['slide_name', 'slide_id', 'zarr_path', 'svs_path', 'n_cells', 'embedding_dim', 'class_labels', 'cohort_match_count', 'donor_id'])\n{'slide_name': 'H19.33.004-A12-LFB.svs.zarr', 'slide_id': 'H19.33.004-A12-LFB', 'zarr_path': '/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H19.33.004-A12-LFB.svs.zarr', 'svs_path': '/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H19.33.004-A12-LFB.svs', 'n_cells': 263786, 'embedding_dim': 768, 'class_labels': ['Negative control', 'Tumor', 'Lymphocyte', 'Pyramidal Neuron', 'Granule Neuron', 'Reactive Astrocyte', 'Astrocyte', 'Oligodendrocyte', 'Corpora Amylacea'], 'cohort_match_count': 1, 'donor_id': 'H19.33.004'}\n{'slide_name': 'H20.33.008-A12-LFB.svs.zarr', 'slide_id': 'H20.33.008-A12-LFB', 'zarr_path': '/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.008-A12-LFB.svs.zarr', 'svs_path': '/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.008-A12-LFB.svs', 'n_cells': 321840, 'embedding_dim': 768, 'class_labels': ['Negative control', 'Tumor', 'Lymphocyte', 'Pyramidal Neuron', 'Granule Neuron', 'Reactive Astrocyte', 'Astrocyte', 'Oligodendrocyte', 'Corpora Amylacea'], 'cohort_match_count': 1, 'donor_id': 'H20.33.008'}\n",
+  "stderr": ""
+}

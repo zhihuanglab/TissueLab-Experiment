@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho 'shared dirs:'\nfind /shared -maxdepth 3 -type d | sed -n '1,80p'\necho 'shared files matching *analysis*'\nfind /shared -maxdepth 4 \\( -type f -o -type d \\) | grep -E 'shared_analysis|template|runtime_quickstart' | sed -n '1,120p'\npython - <<'PY'\nimport sys, os\nprint('sys.path head:', sys.path[:10])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"shared dirs:\\n/shared\\n/shared/cache\\n/shared/cache/region_polygons\\n/shared/lib\\n/shared/lib/shared_analysis\\n/shared/lib/shared_analysis/__pycache__\\n/shared/templates\\n/shared/templates/__pycache__\\nshared files matching *analysis*\\n/shared/cache/runtime_quickstart.md\\n/shared/cache/._runtime_quickstart.md\\n/shared/lib/shared_analysis\\n/shared/lib/shared_analysis/__init__.py\\n/shared/lib/shared_analysis/.___init__.py\\n/shared/lib/shared_analysis/context.py\\n/shared/lib/shared_analysis/._context.py\\n/shared/li\", \"stderr\": \"\"}"
+  }
+]

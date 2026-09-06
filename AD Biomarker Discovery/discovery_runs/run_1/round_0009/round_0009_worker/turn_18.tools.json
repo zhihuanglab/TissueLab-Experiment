@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nfrom pathlib import Path\np = Path('/scratch/result.py')\ntext = p.read_text()\nstart = text.index('def _rewrite_canonical_source(best_spec: dict[str, object]) -> None:\\n')\nend = text.index('\\n\\ndef _write_report', start)\nnew_func = '''def _rewrite_canonical_source(best_spec: dict[str, object]) -> None:\n    source_path = Path(__file__)\n    try:\n        text = source_path.read_text(encoding=\"utf-8\")\n        one_line = json.dumps(best_spec, sort_keys=False)\n        text = re.sub(\n            r'CANONICAL_VARIATION = .*?# CANONICAL_VARIATION_AUTOFILL',\n            f\"CANONICAL_VARIATION = {one_line}  # CANONICAL_VARIATION_AUTOFILL\",\n            text,\n        )\n        feature_name = str(best_spec[\"feature_column\"])\n        text = re.sub(\n            r'FEATURE_NAME = \".*?\"  # FEATURE_NAME_AUTOFILL',\n            f'FEATURE_NAME = \"{feature_name}\"  # FEATURE_NAME_AUTOFILL',\n            text,\n        )\n        text = re.sub(\n            r'FEATURE_COLUMN = \".*?\"  # FEATURE_COLUMN_AUTOFILL',\n            f'FEATURE_COLUMN = \"{feature_name}\"  # FEATURE_COLUMN_AUTOFILL',\n            text,\n        )\n        source_path.write_text(text, encoding=\"utf-8\")\n    except Exception:\n        pass\n'''\ntext = text[:start] + new_func + text[end:]\np.write_text(text)\nPY\npython -m py_compile /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\", \"stderr\": \"\"}"
+  }
+]

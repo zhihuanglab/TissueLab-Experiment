@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "{'sex': 'sex_binary', 'gender': 'sex_binary', 'braak': 'braak_numeric', 'braak_label': 'braak_numeric', 'cerad': 'cerad_ordinal', 'cerad_label': 'cerad_ordinal'}\n",
+  "stderr": ""
+}

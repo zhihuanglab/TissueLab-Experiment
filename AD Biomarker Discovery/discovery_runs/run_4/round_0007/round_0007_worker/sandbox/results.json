@@ -1,0 +1,133 @@
+{
+  "status": "ok",
+  "hypothesis_family": "ca1_reactive_pyramidal_niche_atrophy",
+  "feature_name": "ca1_reactive_pyramidal_niche_atrophy",
+  "best_variation": "candidate_variant_a",
+  "feature_column": "ca1_reactive_pyramidal_log_area_shift_r60px",
+  "outcome": "slope_zmem0",
+  "confound_columns": [
+    "max_age_vis",
+    "braak_numeric",
+    "cerad_ordinal",
+    "sex_binary"
+  ],
+  "n_total": 35,
+  "n_analyzable": 35,
+  "partial_r": -0.11777635722907652,
+  "selection_score": 0.11777635722907652,
+  "loo_predictive_r": -0.058633510453080906,
+  "is_loo_gap": 0.059142846775995614,
+  "gap_penalty": 0.059142846775995614,
+  "adjusted_score": 0.058633510453080906,
+  "ranked_variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Reactive-adjacent radius = 60 px (about 30 \u00b5m), the baseline CA1 glial-neuron neighborhood scale.",
+      "radius_px": 60.0,
+      "feature_column": "ca1_reactive_pyramidal_log_area_shift_r60px",
+      "partial_r": -0.11777635722907652,
+      "selection_score": 0.11777635722907652,
+      "loo_predictive_r": -0.058633510453080906,
+      "gap": 0.059142846775995614,
+      "penalty": 0.059142846775995614,
+      "adjusted_score": 0.058633510453080906,
+      "n_analyzable": 35,
+      "coverage_ratio": 1.0,
+      "median_feature": -0.15415067982725894,
+      "mean_adjacent_count": 272.2
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Reactive-adjacent radius = 40 px (about 20 \u00b5m), a tighter perisomatic reactive niche definition.",
+      "radius_px": 40.0,
+      "feature_column": "ca1_reactive_pyramidal_log_area_shift_r40px",
+      "partial_r": -0.04779783372934447,
+      "selection_score": 0.04643218133707749,
+      "loo_predictive_r": -0.5185067270583176,
+      "gap": -0.4707088933289731,
+      "penalty": 0.0,
+      "adjusted_score": 0.04643218133707749,
+      "n_analyzable": 34,
+      "coverage_ratio": 0.9714285714285714,
+      "median_feature": -0.43844647074049936,
+      "mean_adjacent_count": 127.58823529411765
+    }
+  ],
+  "artifacts": {
+    "donor_feature_table": "/scratch/donor_feature_table.csv",
+    "report": "/scratch/report.md"
+  },
+  "accepted_panel_context": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_enrichment",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astrocyte_neighbor_fraction",
+        "round_id": 3,
+        "panel_candidate_score": 0.5189,
+        "delta_panel_score": 0.0118,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_reactive_astrocyte_hypertrophy",
+        "round_id": 4,
+        "panel_candidate_score": 0.5408,
+        "delta_panel_score": 0.0219,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_reactive_local_purity",
+        "round_id": 5,
+        "panel_candidate_score": 0.5485,
+        "delta_panel_score": 0.0077,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker/result.py"
+      },
+      {
+        "slot": 6,
+        "feature_name": "ca1_reactive_neuron_exclusion",
+        "round_id": 6,
+        "panel_candidate_score": 0.5527,
+        "delta_panel_score": 0.0042,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0006/round_0006_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0006/round_0006_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0006/round_0006_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5527
+  },
+  "scientific_question": "Do donors with smaller CA1 pyramidal neuron somata specifically inside reactive-astrocyte neighborhoods show faster memory decline beyond the current CA1 neuron-loss and reactive-niche panel?",
+  "notes": "Use only centroids, contours, class labels, and the CA1 polygon; no embedding is needed. Annotation polygons are at 16x cell coordinates, so divide by 16 before region assignment. Center contours before polygon-area calculation to avoid float32 cancellation. Restrict neighbor search to CA1 reactive astrocytes only. If CA1 has too few pyramidal neurons overall or too few reactive-adjacent pyramidal neurons for a stable median (for example fewer than 20), return NaN gracefully."
+}

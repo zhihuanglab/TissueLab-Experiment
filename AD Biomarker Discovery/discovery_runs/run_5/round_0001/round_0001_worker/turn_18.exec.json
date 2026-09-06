@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "{'variation_name': 'candidate_variant_a', 'description': 'Reactive Astrocyte / (Astrocyte + Reactive Astrocyte) within CA1', 'regions': ['CA1'], 'feature_column': 'ca1_reactive_astro_fraction', 'partial_r': -0.49138642466817395, 'selection_score': 0.49138642466817395, 'loo_predictive_r': 0.3597702434171406, 'gap': 0.13161618125103336, 'gap_penalty': 0.0, 'adjusted_score': 0.49138642466817395, 'n_analyzable': 35, 'n_total': 35, 'p_value': 0.0027206212123134102}\n{'variation_name': 'candidate_variant_b', 'description': 'Reactive Astrocyte / (Astrocyte + Reactive Astrocyte) within CA1+CA2', 'regions': ['CA1', 'CA2'], 'feature_column': 'ca1_ca2_reactive_astro_fraction', 'partial_r': -0.4801094915620393, 'selection_score': 0.4801094915620393, 'loo_predictive_r': 0.3506728022052759, 'gap': 0.1294366893567634, 'gap_penalty': 0.0, 'adjusted_score': 0.4801094915620393, 'n_analyzable': 35, 'n_total': 35, 'p_value': 0.003513521874053216}\n",
+  "stderr": ""
+}

@@ -14,7 +14,7 @@ Reproducibility bundles for the AD Biomarker Discovery, Metastasis classificatio
 - [TissueLab Reproducibility Bundles (Google Drive)](https://drive.google.com/drive/folders/19YExomssX5Pz3D7Jg1yJCUU9uhMQc7FM?usp=sharing)
 
 ## Video Demonstrations
-**Recordings/** - Contains demonstration videos showing how to visualize outputs and reproduce experiments for better replication:
+**Tutorials/** - Contains demonstration videos showing how to visualize outputs and reproduce experiments for better replication:
 
 - `depth_of_invasion.mov` - Depth of invasion measurement demonstration
 - `fatty_liver.mp4` - Fatty liver detection demonstration  
@@ -26,6 +26,27 @@ Reproducibility bundles for the AD Biomarker Discovery, Metastasis classificatio
 ## Experimental Data Structure
 
 ### Dataset Folders
+
+- **AD Biomarker Discovery/** - Candidate biomarker discovery on SEA-AD hippocampal
+  LFB-H&E slides (35 discovery donors, 34 held-out donors), five independent
+  ten-round searches.
+  - `five_run_round_biomarkers_accepted_and_rejected.csv` - one row per run and
+    round: the candidate proposed, its plain-language definition, the discovery-set
+    partial r, whether it was kept, and the accumulated-panel R on the discovery and
+    held-out donors after that round.
+  - `aggregate_panel_train_test_5run_raw_values.csv` and `..._summary.csv` - the
+    accumulated-panel trajectory per run and its mean, s.d. and s.e.m. across runs
+    (Extended Data Figure 6b).
+  - `autoresearch_5run_biomarker_novelty_summary.md` - narrative summary of what the
+    five searches converged on.
+  - `discovery_runs/run_1/` to `run_5/` - the complete ledger of each search, one
+    directory per run: `results.tsv` and `accepted_panel.json` (every candidate with
+    its decision and panel scores), `round_0001/` to `round_0010/` (the plan, the
+    round summary and the full worker transcript of that round: prompts, generated
+    code, commands and outputs), `shared/` (the dataset guide and helper library the
+    agent was given), and `test_evaluation/` (the separate replay of the frozen
+    measurements on the 34 held-out donors, which the search never saw). Only the
+    35 discovery donors appear inside the run directories.
 
 - **Cell Counting/** - Neoplastic cell quantification. A pathologist taught the
   system to recognise neoplastic cells on Visium HD colon tissue; the resulting
@@ -159,38 +180,62 @@ Reproducibility bundles for the AD Biomarker Discovery, Metastasis classificatio
     (`in_Q1.3_Metastasis` column).
 
 - **Tubule Score/** - Nottingham tubule formation grading on TCGA-BRCA, an ordinal
-  1 to 3 scale over 30 test cases. Five independent agents each searched for an
-  analytical workflow over 20 rounds.
-  - Q1.5round1.csv to Q1.5round5.csv - the five searches at their final round,
-    alongside four training-based baselines and three human-designed workflows.
-  - `data/agent_1/` to `data/agent_5/` - one directory per search.
-    `agent_N_summary.csv` gives the metrics at each of the 20 rounds, and
-    `eval/test/round{r}_predictions.csv` the per-case predictions that produced them.
-  - `data/candidate_configs/` - every configuration the search generated at each
-    round, selected or not, with its leave-one-out correlation, its in-sample
-    correlation, the gap between them and the penalised score that ranked it. The
-    `round{r}_is_predictions.csv` files hold the leave-one-out predictions behind
-    those scores. This is what makes the selection behaviour replayable rather than
-    something to be taken on trust.
-  - `data/ablation/` - the same search restricted to a fixed simple classifier
-    (`suboptimal/`) against the unrestricted search (`optimal/`), five agents each.
-  - `data/baselines/` - the four training-based baselines.
-  - `data/human_workflows/` - the three human-designed workflows.
+  1 to 3 scale. Five independent agents each searched for an analytical workflow
+  over 20 rounds on a 30-case training split, and the workflow each round selected
+  was then scored once on a held-out 30-case internal test split and once on an
+  external cohort of 75 HISTAI cases. Predictions are continuous; converting them
+  to per-class scores with a Gaussian softmax over the class centres, as the
+  Methods describe, reproduces the reported macro-AUC. Every per-case file below
+  has the same four columns: `case_id`, `gt`, `pred_continuous`, `pred_class`.
+  - `TCGA-BRCA/Q1.5round1.csv` to `Q1.5round5.csv` - the five searches at their
+    final round on the 30 held-out internal cases, alongside four training-based
+    baselines (TITAN linear probe, TITAN fine-tuning, MUSK ABMIL, UNI ABMIL) and
+    three human-designed workflows. Columns are the reference grade and one
+    continuous prediction per method, at full precision.
+  - `TCGA-BRCA/round_details/run_{1..5}/round{r}.txt` - for each of the 20 rounds
+    of each run: the approach the agent took that round, the correlation of each
+    feature with the reference, and every configuration it generated, selected or
+    not, with the leave-one-out correlation each reached, the in-sample to
+    leave-one-out gap, and the penalised score that ranked it.
+    `TCGA-BRCA/round_details/candidate_configurations.csv` is the same content as
+    one table, 13,359 configurations across the 100 rounds (`run`, `round`,
+    `config_name`, `loo_r`, `is_r`, `gap`, `adjusted`, `f1_loo`, `qwk_loo`).
+  - `TCGA-BRCA/training_search/run_{1..5}_selection.csv` - one row per round with
+    the training-split quantities the search actually ran on: the leave-one-out
+    correlation of the configuration adopted that round (`loo_r`), its in-sample
+    correlation (`is_r`), the gap between them and the penalised score
+    (`adjusted`). A round whose gap exceeds 0.30 is penalised to -1 and cannot
+    become the best checkpoint, and a round that does not improve re-anchors to
+    the existing best.
+  - `Training LOO TCGA-BRCA/agent_{1..5}/round{r}.csv` - the leave-one-out
+    prediction on the 30 training cases for the configuration adopted each round;
+    the quantity the search optimised. For run 3 rounds 9 to 17 only the summary
+    row in `training_search` was retained.
+  - `Internal Validation TCGA-BRCA/agent_{1..5}/round{r}.csv` and `summary.csv` -
+    the per-case prediction on the 30 held-out internal cases for every round of
+    every run, and per-round Pearson r, macro-AUC, accuracy, macro-F1 and MAE.
+    These were not available to the agent at any point: the agent script contains
+    no path to the test split, and they were produced only after all five runs
+    had finished, by a separate script that replays each round, refits the
+    configuration that round selected on the training split, and predicts the
+    held-out cases once. Averaging the per-round macro-AUC over the five runs gives
+    the internal trajectory from 0.609 at round 1 to 0.835 at round 20.
+    `baselines/` holds the same per-case format for the four training-based
+    baselines and the three human-designed workflows.
   - `External Validation histAI/` - the workflows discovered on TCGA-BRCA applied
     without further rounds to 75 cases from HISTAI, an independent collection
-    prepared and scanned elsewhere. No HISTAI label entered the search, and the
-    external cohort was scored only after each round had already been selected on
-    internal data.
-    - `histai_external_predictions.csv` - the reference grade and each of the five
-      agents' continuous prediction for all 75 HISTAI cases. Converting these to
-      per-class scores with a Gaussian softmax over the class centres, as the
-      Methods describe, gives the reported external macro-AUC.
-    - `tcga_test_predictions.csv` - the same for the 30 internal test cases.
-    - `histai_external_round_curve.csv` - the external correlation at each of the
-      20 co-evolution rounds, per agent and pooled.
-    - `three_split_summary.csv` reports each agent in sample on its training set, on
-      leave-one-out, on the TCGA test set and on HISTAI; the other files compare the
-      agents against the baselines on both cohorts.
+    prepared and scanned elsewhere, differing in country, institution, scanner and
+    staining protocol. No HISTAI label entered the search, and the external cohort
+    was scored only after each round had already been selected on internal data.
+    - `agent_{1..5}/round{r}.csv` - the per-case prediction on all 75 external
+      cases for every round of every run, so the external trajectory can be
+      recomputed round by round rather than only at its endpoint (macro-AUC 0.536
+      at round 1 to 0.680 at round 20, averaged over the five runs).
+    - `baselines/` - the four training-based baselines and the three human-designed
+      workflows run on the same 75 cases; the human workflows also carry the
+      continuous `tubule_ratio` each derives its score from.
+  - Prompt files, agent source and the bulk intermediate outputs are in the
+    reproducibility bundle on Google Drive linked above.
 
 - **X-Ray/** - X-ray image analysis task data
   - Contains detection data for multiple pathological types:

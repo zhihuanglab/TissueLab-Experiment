@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nimport json, pprint, pathlib\npath = pathlib.Path('/scratch/context_bundle.json')\ndata = json.loads(path.read_text())\nprint('TOP KEYS:', sorted(data.keys()))\nfor k in ['worker_brief','round_plan','accepted_panel','current_panel','candidate','hypothesis','brief']:\n    if k in data:\n        print(f'\\n== {k} ==')\n        pprint.pp(data[k], sort_dicts=False)\nprint('\\nSearch for likely plan-bearing keys:')\nfor k,v in data.items():\n    if isinstance(v, dict):\n        if any(tok in k.lower() for tok in ['brief','plan','candidate','round','task','worker']):\n            print(k, 'keys=', list(v.keys())[:20])\nPY\nif [ -f /scratch/worker_brief.json ]; then echo '--- worker_brief.json ---'; cat /scratch/worker_brief.json; fi",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"TOP KEYS: ['cohort_summary', 'dataset_guide_excerpt', 'runtime_manifest', 'runtime_quickstart_excerpt', 'slide_manifest_head', 'worker_brief']\\n\\n== worker_brief ==\\n{'worker_name': 'round_0003_worker',\\n 'round_id': 3,\\n 'candidate_id': 'ca1-perineuronal-reactive-astro',\\n 'candidate_type': 'candidate',\\n 'accepted_panel': {'members': [{'slot': 1,\\n                                 'feature_name': 'ca1_pyramidal_fraction',\\n                                 'round_id': 1,\\n                                 \", \"stderr\": \"\"}"
+  }
+]

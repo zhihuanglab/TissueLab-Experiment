@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, glob, os\nfor p in glob.glob('/data/autoresearch_runs/**/results.json', recursive=True):\n    try:\n        obj=json.load(open(p))\n    except Exception:\n        continue\n    keys=set(obj)\n    if 'selection_score' in keys:\n        print('path', p)\n        print({k:obj.get(k) for k in ['feature_name','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','partial_r','n_analyzable','n_total']})\n        break\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"path /data/autoresearch_runs/run_20260412_150614_9b299b/shared/worker_chains/ca1_reactive_astrocyte_niche/sandbox/results.json\\n{'feature_name': 'ca1_pyramidal_near_reactive_astro_fraction_30um', 'selection_score': 0.5190730358441814, 'loo_predictive_r': 0.3727101581915792, 'is_loo_gap': 0.1463628776526022, 'adjusted_score': 0.3727101581915792, 'partial_r': -0.5190730358441814, 'n_analyzable': 35, 'n_total': 35}\\n\", \"stderr\": \"\"}"
+  }
+]

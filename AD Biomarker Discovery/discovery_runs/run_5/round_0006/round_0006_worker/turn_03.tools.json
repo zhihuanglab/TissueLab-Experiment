@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport pandas as pd\nfrom shared_analysis import load_training_cohort, build_cell_table\ncohort = load_training_cohort('/data')\nrow = cohort.iloc[0]\nslide = Path('/data') / row['slide_name']\nprint('slide', slide)\ncells = build_cell_table(slide, include_regions=True, include_geometry=True)\nprint('columns:', list(cells.columns))\nprint('n=', len(cells))\nfor col in ['cell_type','predicted_label','label','region','x_centroid','y_centroid','centroid_x','centroid_y','area','contour_area_um2']:\n    if col in cells.columns:\n        print(col, 'nonnull', cells[col].notna().sum(), 'unique sample', cells[col].dropna().astype(str).unique()[:10])\nprint('region counts top:')\nfor col in ['region','anatomical_region','region_label']:\n    if col in cells.columns:\n        print(col, cells[col].value_counts(dropna=False).head(10))\nprint('cell type counts top:')\nfor col in ['cell_type','predicted_label','label']:\n    if col in cells.columns:\n        print(col, cells[col].value_counts(dropna=False).head(10))\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

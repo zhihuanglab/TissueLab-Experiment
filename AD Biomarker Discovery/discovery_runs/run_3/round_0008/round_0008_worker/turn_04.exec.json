@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\nshared exists True\n/shared/lib ['._shared_analysis']\n/shared/lib/shared_analysis ['__init__.py', '.___init__.py', 'context.py', '._context.py', 'stats.py']\n/shared/lib/shared_analysis/__pycache__ ['embedding_mechanistic.cpython-311.pyc', '._embedding_mechanistic.cpython-311.pyc', 'registry.cpython-311.pyc', '._registry.cpython-311.pyc', 'pca.cpython-311.pyc']\n",
+  "stderr": ""
+}

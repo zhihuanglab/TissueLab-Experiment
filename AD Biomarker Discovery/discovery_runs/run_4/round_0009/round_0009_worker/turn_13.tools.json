@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: ca1_reactive_corpora_amylacea_niche\\nBEST VARIATION: corpora_any_r96px\\n  IS partial r:      -0.1206\\n  Selection score:   0.1206\\n  LOO predictive r:  -0.0592  (diagnostic)\\n  IS-LOO Gap:        0.0613  (penalty=0.0000)\\n  Adjusted Score:    -0.0592\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  corpora_any_r96px  -0.1206  0.1206  -0.0592\\n  corpora_any_r80px  -0.0734  0.0734  -0.0642\\n  corpora_any_r64px  -0.0055  0.0055  -0.0620\\n\\nPER-DONOR (LOO\", \"stderr\": \"\"}"
+  }
+]

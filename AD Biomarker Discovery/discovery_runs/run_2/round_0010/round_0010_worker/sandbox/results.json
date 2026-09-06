@@ -1,0 +1,507 @@
+{
+  "status": "ok",
+  "feature_name": "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3",
+  "family_name": "ca1_reactive_hotspot_lymphocyte_enrichment",
+  "outcome": "slope_zmem0",
+  "covariates": [
+    "max_age_vis",
+    "braak_numeric",
+    "cerad_ordinal",
+    "sex_binary"
+  ],
+  "best_variation": "reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3",
+  "feature_column": "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3",
+  "n_total": 35,
+  "n_analyzable": 28,
+  "coverage_ratio": 0.8,
+  "partial_r": 0.11446054788678535,
+  "p_value": 0.5619375214365594,
+  "ci_lo": -0.2119893392002096,
+  "ci_hi": 0.5302619285338194,
+  "selection_score": 0.09156843830942829,
+  "loo_predictive_r": 0.048575368792364786,
+  "is_loo_gap": 0.06588517909442057,
+  "gap_penalty": 0.0,
+  "adjusted_score": 0.048575368792364786,
+  "bootstrap_median_partial_r": 0.11043145549605066,
+  "bootstrap_sign_consistency": 0.93,
+  "loo_unstable_count": 2,
+  "loo_max_shift": 0.17059652244858042,
+  "ranked_variations": [
+    {
+      "name": "reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3",
+      "feature_name": "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3",
+      "feature_column": "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3",
+      "description": "Mean local lymphocyte fraction within 70 px around CA1 reactive-astrocyte hotspots minus the same fraction around matched CA1 astrocyte hotspots; hotspot rule uses >=3 same-class neighbors within 70 px.",
+      "radius_px": 70.0,
+      "k_same_class": 3,
+      "n_total": 35,
+      "n_analyzable": 28,
+      "coverage_ratio": 0.8,
+      "partial_r": 0.11446054788678535,
+      "p_value": 0.5619375214365594,
+      "ci_lo": -0.2119893392002096,
+      "ci_hi": 0.5302619285338194,
+      "selection_score": 0.09156843830942829,
+      "loo_predictive_r": 0.048575368792364786,
+      "is_loo_gap": 0.06588517909442057,
+      "gap_penalty": 0.0,
+      "adjusted_score": 0.048575368792364786,
+      "bootstrap_median_partial_r": 0.11043145549605066,
+      "bootstrap_sign_consistency": 0.93,
+      "bootstrap_q25_partial_r": 0.07080818845726834,
+      "bootstrap_q75_partial_r": 0.230182418046824,
+      "loo_unstable_count": 2,
+      "loo_max_shift": 0.17059652244858042,
+      "loo_unstable_donors": [
+        {
+          "index": 3,
+          "partial_r": 0.28505707033536576,
+          "delta_from_full": 0.17059652244858042,
+          "donor_id": "H20.33.018"
+        },
+        {
+          "index": 8,
+          "partial_r": 0.22573924408962107,
+          "delta_from_full": 0.11127869620283572,
+          "donor_id": "H20.33.030"
+        }
+      ],
+      "per_donor_loo": [
+        {
+          "donor_id": "H19.33.004",
+          "outcome": -0.0587685,
+          "predicted": -0.08073791190348148,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.02196941190348148
+        },
+        {
+          "donor_id": "H20.33.008",
+          "outcome": -0.1205063,
+          "predicted": -0.13741299629881498,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.016906696298814985
+        },
+        {
+          "donor_id": "H20.33.013",
+          "outcome": -0.0317417,
+          "predicted": -0.10516282291071694,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.011111111111111112,
+          "abs_error": 0.07342112291071694
+        },
+        {
+          "donor_id": "H20.33.018",
+          "outcome": -0.3042141,
+          "predicted": -0.06755534039573625,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.23665875960426375
+        },
+        {
+          "donor_id": "H20.33.024",
+          "outcome": -0.0103346,
+          "predicted": -0.1052124284451139,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.0948778284451139
+        },
+        {
+          "donor_id": "H20.33.025",
+          "outcome": -0.0723104,
+          "predicted": -0.11873003292672947,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.04641963292672947
+        },
+        {
+          "donor_id": "H20.33.027",
+          "outcome": -0.1125932,
+          "predicted": -0.14074708071489198,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.02815388071489197
+        },
+        {
+          "donor_id": "H20.33.029",
+          "outcome": -0.0948095,
+          "predicted": -0.1384888893502064,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": -0.0005286809410520751,
+          "abs_error": 0.04367938935020639
+        },
+        {
+          "donor_id": "H20.33.030",
+          "outcome": -0.1680423,
+          "predicted": -0.5975526549091897,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": -0.07142857142857142,
+          "abs_error": 0.42951035490918976
+        },
+        {
+          "donor_id": "H20.33.034",
+          "outcome": -0.0522007,
+          "predicted": -0.08752103664848801,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.03532033664848801
+        },
+        {
+          "donor_id": "H20.33.037",
+          "outcome": -0.2508045,
+          "predicted": -0.13852993277015327,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.11227456722984672
+        },
+        {
+          "donor_id": "H20.33.040",
+          "outcome": -0.1026342,
+          "predicted": -0.12873825685498463,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.02610405685498464
+        },
+        {
+          "donor_id": "H20.33.043",
+          "outcome": -0.0599597,
+          "predicted": -0.07421286330673196,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": -0.0006366860090264346,
+          "abs_error": 0.014253163306731965
+        },
+        {
+          "donor_id": "H20.33.046",
+          "outcome": -0.2017114,
+          "predicted": -0.12611455207298283,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.07559684792701718
+        },
+        {
+          "donor_id": "H21.33.001",
+          "outcome": -0.0815782,
+          "predicted": -0.01788685008987752,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.06369134991012249
+        },
+        {
+          "donor_id": "H21.33.004",
+          "outcome": -0.1198253,
+          "predicted": -0.02229285980406062,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.09753244019593937
+        },
+        {
+          "donor_id": "H21.33.007",
+          "outcome": -0.0975144,
+          "predicted": -0.14712892611107276,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.049614526111072754
+        },
+        {
+          "donor_id": "H21.33.013",
+          "outcome": -0.161261,
+          "predicted": -0.12256523935354235,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.03869576064645763
+        },
+        {
+          "donor_id": "H21.33.018",
+          "outcome": -0.144019,
+          "predicted": -0.08059003436878993,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.06342896563121007
+        },
+        {
+          "donor_id": "H21.33.021",
+          "outcome": -0.0983582,
+          "predicted": -0.09657643141883097,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.0017817685811690326
+        },
+        {
+          "donor_id": "H21.33.023",
+          "outcome": -0.1546294,
+          "predicted": -0.05124883721752101,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.103380562782479
+        },
+        {
+          "donor_id": "H21.33.025",
+          "outcome": -0.0422854,
+          "predicted": -0.12196361069749619,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.07967821069749619
+        },
+        {
+          "donor_id": "H21.33.037",
+          "outcome": -0.0881349,
+          "predicted": -0.08430610460251839,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.003828795397481613
+        },
+        {
+          "donor_id": "H21.33.038",
+          "outcome": -0.0518276,
+          "predicted": -0.06905304611060264,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": -0.0014619883040935672,
+          "abs_error": 0.017225446110602644
+        },
+        {
+          "donor_id": "H21.33.040",
+          "outcome": -0.0327944,
+          "predicted": -0.1383254331728175,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.1055310331728175
+        },
+        {
+          "donor_id": "H21.33.043",
+          "outcome": -0.072355,
+          "predicted": -0.09367354209739481,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.02131854209739481
+        },
+        {
+          "donor_id": "H21.33.044",
+          "outcome": -0.0991281,
+          "predicted": -0.16149870063461125,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.06237060063461125
+        },
+        {
+          "donor_id": "H21.33.046",
+          "outcome": -0.1616234,
+          "predicted": -0.11184372200289211,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r70px_k3": 0.0,
+          "abs_error": 0.04977967799710789
+        }
+      ]
+    },
+    {
+      "name": "reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3",
+      "feature_name": "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3",
+      "feature_column": "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3",
+      "description": "Mean local lymphocyte fraction within 90 px around CA1 reactive-astrocyte hotspots minus the same fraction around matched CA1 astrocyte hotspots; hotspot rule uses >=3 same-class neighbors within 70 px.",
+      "radius_px": 90.0,
+      "k_same_class": 3,
+      "n_total": 35,
+      "n_analyzable": 28,
+      "coverage_ratio": 0.8,
+      "partial_r": 0.08735816595059828,
+      "p_value": 0.6584693442089515,
+      "ci_lo": -0.46907757636169434,
+      "ci_hi": 0.5462537217855984,
+      "selection_score": 0.06988653276047863,
+      "loo_predictive_r": 0.05316875736679123,
+      "is_loo_gap": 0.03418940858380705,
+      "gap_penalty": 0.0,
+      "adjusted_score": 0.05316875736679123,
+      "bootstrap_median_partial_r": 0.08580819994673025,
+      "bootstrap_sign_consistency": 0.905,
+      "bootstrap_q25_partial_r": 0.04832024571774349,
+      "bootstrap_q75_partial_r": 0.16045865192264253,
+      "loo_unstable_count": 1,
+      "loo_max_shift": 0.16483568423423353,
+      "loo_unstable_donors": [
+        {
+          "index": 3,
+          "partial_r": 0.2521938501848318,
+          "delta_from_full": 0.16483568423423353,
+          "donor_id": "H20.33.018"
+        }
+      ],
+      "per_donor_loo": [
+        {
+          "donor_id": "H19.33.004",
+          "outcome": -0.0587685,
+          "predicted": -0.08116099362011084,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.022392493620110837
+        },
+        {
+          "donor_id": "H20.33.008",
+          "outcome": -0.1205063,
+          "predicted": -0.1379768187327612,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.01747051873276119
+        },
+        {
+          "donor_id": "H20.33.013",
+          "outcome": -0.0317417,
+          "predicted": -0.10783144399829797,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.007319572536963841,
+          "abs_error": 0.07608974399829797
+        },
+        {
+          "donor_id": "H20.33.018",
+          "outcome": -0.3042141,
+          "predicted": -0.06885162503770918,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.000693000693000693,
+          "abs_error": 0.2353624749622908
+        },
+        {
+          "donor_id": "H20.33.024",
+          "outcome": -0.0103346,
+          "predicted": -0.10478088880718313,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.09444628880718313
+        },
+        {
+          "donor_id": "H20.33.025",
+          "outcome": -0.0723104,
+          "predicted": -0.11842428463378617,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.04611388463378617
+        },
+        {
+          "donor_id": "H20.33.027",
+          "outcome": -0.1125932,
+          "predicted": -0.14105794894028734,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.028464748940287332
+        },
+        {
+          "donor_id": "H20.33.029",
+          "outcome": -0.0948095,
+          "predicted": -0.1389483401807578,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": -0.0007796532129461177,
+          "abs_error": 0.044138840180757796
+        },
+        {
+          "donor_id": "H20.33.030",
+          "outcome": -0.1680423,
+          "predicted": -1.0791626138457762,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": -0.15789473684210525,
+          "abs_error": 0.9111203138457762
+        },
+        {
+          "donor_id": "H20.33.034",
+          "outcome": -0.0522007,
+          "predicted": -0.0878349722685506,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.03563427226855059
+        },
+        {
+          "donor_id": "H20.33.037",
+          "outcome": -0.2508045,
+          "predicted": -0.13914500363456192,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.11165949636543807
+        },
+        {
+          "donor_id": "H20.33.040",
+          "outcome": -0.1026342,
+          "predicted": -0.1284407440083659,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.025806544008365892
+        },
+        {
+          "donor_id": "H20.33.043",
+          "outcome": -0.0599597,
+          "predicted": -0.07370162631582701,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": -0.0008457381861637182,
+          "abs_error": 0.013741926315827012
+        },
+        {
+          "donor_id": "H20.33.046",
+          "outcome": -0.2017114,
+          "predicted": -0.12601511597305684,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.07569628402694317
+        },
+        {
+          "donor_id": "H21.33.001",
+          "outcome": -0.0815782,
+          "predicted": -0.01738739726132482,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.06419080273867518
+        },
+        {
+          "donor_id": "H21.33.004",
+          "outcome": -0.1198253,
+          "predicted": -0.021429768649400008,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.09839553135059999
+        },
+        {
+          "donor_id": "H21.33.007",
+          "outcome": -0.0975144,
+          "predicted": -0.14812534325114293,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.05061094325114293
+        },
+        {
+          "donor_id": "H21.33.013",
+          "outcome": -0.161261,
+          "predicted": -0.12330804083906002,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.037952959160939964
+        },
+        {
+          "donor_id": "H21.33.018",
+          "outcome": -0.144019,
+          "predicted": -0.08159841348261167,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.06242058651738834
+        },
+        {
+          "donor_id": "H21.33.021",
+          "outcome": -0.0983582,
+          "predicted": -0.09596239238201672,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.0023958076179832893
+        },
+        {
+          "donor_id": "H21.33.023",
+          "outcome": -0.1546294,
+          "predicted": -0.050073383788374955,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.10455601621162505
+        },
+        {
+          "donor_id": "H21.33.025",
+          "outcome": -0.0422854,
+          "predicted": -0.12260851943009166,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.08032311943009166
+        },
+        {
+          "donor_id": "H21.33.037",
+          "outcome": -0.0881349,
+          "predicted": -0.08455841417145327,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.0035764858285467355
+        },
+        {
+          "donor_id": "H21.33.038",
+          "outcome": -0.0518276,
+          "predicted": -0.06900340824017955,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": -0.0022926634768740033,
+          "abs_error": 0.017175808240179544
+        },
+        {
+          "donor_id": "H21.33.040",
+          "outcome": -0.0327944,
+          "predicted": -0.138913294955724,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.10611889495572399
+        },
+        {
+          "donor_id": "H21.33.043",
+          "outcome": -0.072355,
+          "predicted": -0.09378243505566279,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.02142743505566279
+        },
+        {
+          "donor_id": "H21.33.044",
+          "outcome": -0.0991281,
+          "predicted": -0.16263021923414128,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.06350211923414129
+        },
+        {
+          "donor_id": "H21.33.046",
+          "outcome": -0.1616234,
+          "predicted": -0.11143682188067787,
+          "ca1_reactive_hotspot_lymphocyte_enrichment__reactive_minus_astro_hotspot_local_lymphocyte_fraction_r90px_k3": 0.0,
+          "abs_error": 0.05018657811932213
+        }
+      ]
+    }
+  ],
+  "artifacts": {
+    "donor_feature_table": "/scratch/donor_feature_table.csv",
+    "report": "/scratch/report.md",
+    "result_py": "/scratch/result.py"
+  }
+}

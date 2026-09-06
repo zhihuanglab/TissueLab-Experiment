@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "[PosixPath('/data/autoresearch_runs/run_20260410_201937_2df939/round_0003/round_0003_worker/results.json'), PosixPath('/data/autoresearch_runs/run_20260410_234232_33d000/round_0003/round_0003_worker/results.json'), PosixPath('/data/autoresearch_runs/run_20260411_095807_373b21/round_0003/round_0003_worker/results.json')]\nusing /data/autoresearch_runs/run_20260410_201937_2df939/round_0003/round_0003_worker/results.json\n{\n  \"status\": \"unknown\",\n  \"feature_name\": \"feature_value\",\n  \"outcome\": \"\",\n  \"n_total\": null,\n  \"n_analyzable\": 35,\n  \"partial_r\": -0.24258665606984797,\n  \"ci_lo\": null,\n  \"ci_hi\": null,\n  \"p_value\": 0.16028434369354702,\n  \"loo_predictive_r\": 0.1468168990537317,\n  \"adjusted_score\": 0.1468168990537317,\n  \"is_loo_gap\": 0.09576975701611629,\n  \"gap_penalty\": null,\n  \"loo_unstable_count\": 0,\n  \"loo_max_shift\": null,\n  \"donor_ids_used\": [],\n  \"covariates\": [\n    \"max_age_vis\",\n    \"braak_numeric\",\n    \"cerad_ordinal\",\n    \"sex_binary\"\n  ],\n  \"recomputed_from_raw\": false,\n  \"registry_written\": false,\n  \"artifacts\": {},\n  \"feature_column\": \"feature_value\",\n  \"variation_name\": \"baseline_whole_slide_reactive_astro\"\n}\n\n",
+  "stderr": ""
+}

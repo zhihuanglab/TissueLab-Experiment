@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import DEFAULT_CONFOUNDS\nprint(DEFAULT_CONFOUNDS)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['max_age_vis', 'braak_numeric', 'cerad_ordinal']\\n\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "ca1_pyramidal_reactive_neighbor_fraction_r6_neighbor_fraction nonzero 4 max 0.0006472491909385 median 0.0\nca1_pyramidal_reactive_neighbor_fraction_r4_neighbor_fraction nonzero 3 max 0.0005885815185403 median 0.0\n",
+  "stderr": ""
+}

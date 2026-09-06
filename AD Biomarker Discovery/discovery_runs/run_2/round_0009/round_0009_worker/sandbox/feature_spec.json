@@ -1,0 +1,22 @@
+{
+  "feature_family": "ca1_reactive_hotspot_corpora_amylacea_enrichment",
+  "best_variation": "candidate_variant_a",
+  "canonical_variation": "candidate_variant_a",
+  "population": "Reactive Astrocyte and Astrocyte hotspots in CA1",
+  "neighbor_population": "Corpora Amylacea",
+  "feature_column": "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3",
+  "variations": {
+    "candidate_variant_a": {
+      "radius_px": 70.0,
+      "k_same_class": 3,
+      "feature_column": "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3",
+      "description": "Reactive-astrocyte hotspot local Corpora Amylacea fraction minus astrocyte hotspot local Corpora Amylacea fraction in CA1, r=70 px, k=3."
+    },
+    "candidate_variant_b": {
+      "radius_px": 90.0,
+      "k_same_class": 3,
+      "feature_column": "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3",
+      "description": "Reactive-astrocyte hotspot local Corpora Amylacea fraction minus astrocyte hotspot local Corpora Amylacea fraction in CA1, r=90 px, k=3."
+    }
+  }
+}

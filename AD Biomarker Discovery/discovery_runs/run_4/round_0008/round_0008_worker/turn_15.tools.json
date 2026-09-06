@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0, '/shared/lib')\nimport shared_analysis.sea_ad_lfb as sea\nfor name in ['load_centroids','load_class_ids','load_class_lookup']:\n    print(name, inspect.signature(getattr(sea,name)))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"load_centroids (zarr_path: 'str | Path') -> 'np.ndarray'\\nload_class_ids (zarr_path: 'str | Path') -> 'np.ndarray'\\nload_class_lookup (zarr_path: 'str | Path') -> 'dict[int, str]'\\n\", \"stderr\": \"\"}"
+  }
+]

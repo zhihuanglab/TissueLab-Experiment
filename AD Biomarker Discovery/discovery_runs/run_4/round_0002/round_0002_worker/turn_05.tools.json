@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\nfind /shared -maxdepth 2 -type f ! -name '._*' | sed -n '1,80p'\npython - <<'PY'\nimport sys, os\nprint('sys.path first entries:', sys.path[:5])\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import sea_ad_lfb\nimport inspect\nprint('loaded shared_analysis from', sea_ad_lfb.__file__)\nfor name in ['build_cell_table','load_region_polygons']:\n    fn = getattr(sea_ad_lfb, name)\n    print(f'\\n{name}{inspect.signature(fn)}')\n    src = inspect.getsource(fn)\n    print(src[:2200])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/shared/dataset_guide.md\\n/shared/cache/slide_manifest.json\\n/shared/cache/cohort_summary.json\\n/shared/cache/runtime_manifest.json\\n/shared/cache/runtime_quickstart.md\\n/shared/templates/worker_embedding_mechanistic_template.py\\n/shared/templates/worker_analysis_template.py\\nsys.path first entries: ['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\\nloaded shared_analysis from /shared/\", \"stderr\": \"\"}"
+  }
+]

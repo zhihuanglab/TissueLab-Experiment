@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython /scratch/result.py > /scratch/result_stdout.txt\nsed -n '1,220p' /scratch/result_stdout.txt\npython - <<'PY'\nimport json\nd=json.load(open('/scratch/results.json'))\nprint('\\nRESULTS KEYS', sorted(d.keys()))\nprint('BEST', d['best_variation'], d['feature_column'])\nprint('RANKED', d['ranked_variations'])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: ca1_reactive_local_purity\\nBEST VARIATION: reactive_purity_r60um\\n  IS partial r:      -0.4781\\n  Selection score:   0.4781\\n  LOO predictive r:  0.3323  (diagnostic)\\n  IS-LOO Gap:        0.1458  (penalty=0.0000)\\n  Adjusted Score:    0.3323\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  reactive_purity_r60um  -0.4781  0.4781  0.3323\\n  reactive_purity_r40um  -0.4613  0.4613  0.3199\\n\\nPER-DONOR (LOO):\\n  donor_id  outcome  predicted  ca1_reactive_\", \"stderr\": \"\"}"
+  }
+]

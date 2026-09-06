@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nfrom pathlib import Path\nfor p in ['/scratch/result.py','/scratch/report.md','/scratch/results.json','/scratch/donor_feature_table.csv']:\n    print(p, Path(p).exists(), Path(p).stat().st_size if Path(p).exists() else None)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/scratch/result.py True 14273\\n/scratch/report.md True 3464\\n/scratch/results.json True 18610\\n/scratch/donor_feature_table.csv True 4522\\n\", \"stderr\": \"\"}"
+  }
+]

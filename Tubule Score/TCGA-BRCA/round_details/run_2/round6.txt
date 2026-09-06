@@ -1,0 +1,74 @@
+Round 6 Details
+================================================================================
+
+Feature-GT Correlations:
+  bp_component_area_cv: r=-0.2266
+  bp_gland_pixel_frac: r=-0.2642
+  bp_large_component_frac: r=-0.2271
+  bp_mean_circularity: r=-0.3989
+  bp_median_component_area: r=-0.2848
+  bp_n_components: r=-0.0624
+  bp_n_components_per_tissue: r=-0.3527
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+
+All Configurations (sorted by adjusted):
+  gpf_nnstd_cacv__Ridge_a1: adj=0.6030 LOO_r=0.6030 IS_r=0.7055 gap=0.1025 F1=0.3839 QWK=0.3571
+  gpf_nnstd_cacv__Ridge_a5: adj=0.5846 LOO_r=0.5846 IS_r=0.6922 gap=0.1077 F1=0.4225 QWK=0.3846
+  R3_baseline__Ridge_a1: adj=0.5680 LOO_r=0.5680 IS_r=0.6617 gap=0.0937 F1=0.4236 QWK=0.4138
+  gpf_nnstd_cacv__Ridge_a10: adj=0.5641 LOO_r=0.5641 IS_r=0.6785 gap=0.1144 F1=0.3996 QWK=0.3333
+  R3_baseline__Ridge_a5: adj=0.5632 LOO_r=0.5632 IS_r=0.6555 gap=0.0923 F1=0.4470 QWK=0.4286
+  R3_plus_circ__Ridge_a1: adj=0.5592 LOO_r=0.5592 IS_r=0.6769 gap=0.1177 F1=0.4470 QWK=0.4286
+  morph_4b__Ridge_a1: adj=0.5564 LOO_r=0.5564 IS_r=0.6812 gap=0.1249 F1=0.4470 QWK=0.4286
+  R3_circ_lcf__Ridge_a5: adj=0.5557 LOO_r=0.5557 IS_r=0.6903 gap=0.1346 F1=0.4470 QWK=0.4286
+  morph_4b__Ridge_a5: adj=0.5533 LOO_r=0.5533 IS_r=0.6760 gap=0.1227 F1=0.4470 QWK=0.4286
+  R3_baseline__Ridge_a10: adj=0.5513 LOO_r=0.5513 IS_r=0.6504 gap=0.0991 F1=0.4070 QWK=0.3704
+  R3_circ_lcf__Ridge_a10: adj=0.5511 LOO_r=0.5511 IS_r=0.6840 gap=0.1329 F1=0.3949 QWK=0.3704
+  gpf_nnstd_ncpt__Ridge_a1: adj=0.5502 LOO_r=0.5502 IS_r=0.6366 gap=0.0864 F1=0.4749 QWK=0.4444
+  R3_circ_lcf__Ridge_a1: adj=0.5500 LOO_r=0.5500 IS_r=0.6955 gap=0.1455 F1=0.4470 QWK=0.4286
+  R3_plus_circ__Ridge_a5: adj=0.5499 LOO_r=0.5499 IS_r=0.6718 gap=0.1219 F1=0.4470 QWK=0.4286
+  morph_4b__Ridge_a10: adj=0.5468 LOO_r=0.5468 IS_r=0.6709 gap=0.1242 F1=0.4149 QWK=0.3846
+  gpf_nnstd_ncpt__Ridge_a5: adj=0.5467 LOO_r=0.5467 IS_r=0.6333 gap=0.0866 F1=0.4749 QWK=0.4444
+  R3_plus_circ__Ridge_a10: adj=0.5398 LOO_r=0.5398 IS_r=0.6656 gap=0.1258 F1=0.4470 QWK=0.4286
+  gpf_nnstd_ncpt__Ridge_a10: adj=0.5386 LOO_r=0.5386 IS_r=0.6291 gap=0.0905 F1=0.3808 QWK=0.3200
+  gpf_nnstd_lcf__Ridge_a1: adj=0.5310 LOO_r=0.5310 IS_r=0.6493 gap=0.1183 F1=0.4416 QWK=0.4000
+  morph_4b__ElasticNet_01: adj=0.5232 LOO_r=0.5232 IS_r=0.6722 gap=0.1490 F1=0.3949 QWK=0.3704
+  R3_plus_circ__ElasticNet_01: adj=0.5216 LOO_r=0.5216 IS_r=0.6713 gap=0.1497 F1=0.4470 QWK=0.4286
+  gpf_nnstd_lcf__Ridge_a5: adj=0.5201 LOO_r=0.5201 IS_r=0.6427 gap=0.1226 F1=0.3757 QWK=0.3333
+  morph_all5__Ridge_a10: adj=0.5138 LOO_r=0.5138 IS_r=0.6364 gap=0.1226 F1=0.3949 QWK=0.3704
+  morph_all5__Ridge_a5: adj=0.5126 LOO_r=0.5126 IS_r=0.6400 gap=0.1274 F1=0.3949 QWK=0.3704
+  R3_circ_lcf__ElasticNet_01: adj=0.5073 LOO_r=0.5171 IS_r=0.6867 gap=0.1696 F1=0.3949 QWK=0.3704
+  gpf_nnstd_mca__Ridge_a1: adj=0.5072 LOO_r=0.5072 IS_r=0.6018 gap=0.0946 F1=0.4524 QWK=0.4286
+  gpf_nnstd_lcf__Ridge_a10: adj=0.5064 LOO_r=0.5064 IS_r=0.6359 gap=0.1295 F1=0.3757 QWK=0.3333
+  gpf_nnstd_mca__Ridge_a5: adj=0.5034 LOO_r=0.5034 IS_r=0.5988 gap=0.0954 F1=0.3620 QWK=0.3077
+  morph_all5__Ridge_a1: adj=0.4978 LOO_r=0.4978 IS_r=0.6454 gap=0.1476 F1=0.4470 QWK=0.4286
+  gpf_nnstd_mca__Ridge_a10: adj=0.4947 LOO_r=0.4947 IS_r=0.5939 gap=0.0992 F1=0.3340 QWK=0.2609
+  morph_all5__ElasticNet_01: adj=0.4888 LOO_r=0.4891 IS_r=0.6398 gap=0.1507 F1=0.3949 QWK=0.3704
+  gpf_nnstd_circ__Ridge_a1: adj=0.4878 LOO_r=0.4878 IS_r=0.6136 gap=0.1258 F1=0.3839 QWK=0.3571
+  gpf_nnstd_circ__Ridge_a5: adj=0.4862 LOO_r=0.4862 IS_r=0.6131 gap=0.1269 F1=0.3839 QWK=0.3571
+  gpf_nnstd_circ__Ridge_a10: adj=0.4819 LOO_r=0.4819 IS_r=0.6124 gap=0.1305 F1=0.3105 QWK=0.2400
+  morph_4a__Ridge_a1: adj=0.4631 LOO_r=0.4633 IS_r=0.6136 gap=0.1503 F1=0.3839 QWK=0.3571
+  morph_4a__Ridge_a5: adj=0.4591 LOO_r=0.4604 IS_r=0.6131 gap=0.1527 F1=0.3839 QWK=0.3571
+  gpf_nnstd_ncomp__Ridge_a1: adj=0.4501 LOO_r=0.4501 IS_r=0.5940 gap=0.1439 F1=0.3839 QWK=0.3571
+  morph_4a__Ridge_a10: adj=0.4441 LOO_r=0.4502 IS_r=0.6124 gap=0.1622 F1=0.3105 QWK=0.2400
+  gpf_nnstd_ncomp__Ridge_a5: adj=0.4360 LOO_r=0.4380 IS_r=0.5919 gap=0.1539 F1=0.3392 QWK=0.2963
+  morph_4a__ElasticNet_01: adj=0.4319 LOO_r=0.4424 IS_r=0.6134 gap=0.1711 F1=0.2911 QWK=0.2308
+  gpf_nnstd_ncomp__Ridge_a10: adj=0.4086 LOO_r=0.4189 IS_r=0.5894 gap=0.1706 F1=0.2507 QWK=0.1667
+  circ_lcf__Ridge_a1: adj=0.3438 LOO_r=0.3444 IS_r=0.4956 gap=0.1512 F1=0.4329 QWK=0.3846
+  circ_lcf__Ridge_a5: adj=0.3291 LOO_r=0.3342 IS_r=0.4946 gap=0.1604 F1=0.3298 QWK=0.2500
+  gpf_circ__Ridge_a5: adj=0.2895 LOO_r=0.2991 IS_r=0.4684 gap=0.1693 F1=0.2600 QWK=0.1667
+  gpf_circ__Ridge_a1: adj=0.2824 LOO_r=0.2947 IS_r=0.4692 gap=0.1746 F1=0.2600 QWK=0.1667
+  single_circ__Ridge_a1: adj=0.2621 LOO_r=0.2621 IS_r=0.3989 gap=0.1367 F1=0.3205 QWK=0.2500
+  single_ncpt__Ridge_a1: adj=0.2346 LOO_r=0.2346 IS_r=0.3717 gap=0.1371 F1=0.2315 QWK=0.0952
+  circ_ncomp__Ridge_a1: adj=0.2265 LOO_r=0.2405 IS_r=0.4184 gap=0.1780 F1=0.3620 QWK=0.3077
+  circ_ncomp__Ridge_a5: adj=0.1958 LOO_r=0.2196 IS_r=0.4173 gap=0.1977 F1=0.2185 QWK=0.0909
+  single_mca__Ridge_a1: adj=0.1441 LOO_r=0.1441 IS_r=0.2926 gap=0.1486 F1=0.2315 QWK=0.0952
+  single_lcf__Ridge_a1: adj=-0.1431 LOO_r=-0.0697 IS_r=0.2271 gap=0.2968 F1=0.1667 QWK=0.0000
+  single_ncomp__Ridge_a1: adj=-1.0000 LOO_r=-0.3145 IS_r=0.0624 gap=0.3769 F1=0.1538 QWK=0.0000
+  single_cacv__Ridge_a1: adj=-1.0000 LOO_r=-0.0926 IS_r=0.2266 gap=0.3192 F1=0.1667 QWK=0.0000
+
+Best: gpf_nnstd_cacv__Ridge_a1
+  Features: ['gland_patch_fraction', 'tumor_cell_nn_std', 'bp_component_area_cv']
+  Adjusted: 0.6030
+  LOO r: 0.6030
+  Gap: 0.1025

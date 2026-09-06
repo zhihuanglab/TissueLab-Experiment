@@ -1,0 +1,6 @@
+{
+  "best_variation": "median_log_area_shift",
+  "feature_name": "ca1_reactive_astrocyte_hypertrophy",
+  "feature_column": "ca1_reactive_astrocyte_hypertrophy_median_log_area_shift",
+  "min_cells_per_group": 20
+}

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "    print(\"PER-DONOR (LOO):\")\n    feature_col = best[\"feature_column\"]\n    print(f\"  donor_id  outcome  predicted  {feature_col}\")\n    for row in best[\"per_donor_loo\"]:\n        print(\n            \"  \"\n            f\"{row['donor_id']}  \"\n            f\"{_format_num(row['outcome'])}  \"\n            f\"{_format_num(row['predicted'])}  \"\n            f\"{_format_num(row[feature_col])}\"\n        )\n\n\ndef main() -> int:\n    data_root = Path(\"/data\")\n    feature_table = _build_feature_table(data_root)\n    ranked = _rank_variations(feature_table)\n    best = ranked[0]\n    _write_best_sidecar(best)\n    _write_results_json(feature_table, ranked)\n    _print_stdout(best, ranked)\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+  "stderr": ""
+}

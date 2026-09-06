@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "canonical variation: candidate_variant_a\nsample score: -0.22508341613203608\nresults keys: ['adjusted_score', 'approach', 'artifacts', 'best_variation', 'canonical_replay_variation', 'feature_column', 'feature_name', 'hypothesis_family', 'is_loo_gap', 'loo_max_shift', 'loo_predictive_r', 'loo_unstable_count', 'n_analyzable', 'n_total', 'p_value', 'partial_r', 'penalty', 'ranked_variations', 'scientific_question', 'selection_score']\nreport exists: True\ndonor table exists: True\n",
+  "stderr": ""
+}

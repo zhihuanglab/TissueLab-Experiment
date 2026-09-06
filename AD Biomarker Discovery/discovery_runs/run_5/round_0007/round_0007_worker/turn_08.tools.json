@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis.stats import residualized_loo_predictive_correlation, resolve_covariate_names, leave_one_out_partial_correlation\nprint('residualized_loo_predictive_correlation sig:', inspect.signature(residualized_loo_predictive_correlation))\nprint(inspect.getsource(residualized_loo_predictive_correlation))\nprint('\\nleave_one_out_partial_correlation sig:', inspect.signature(leave_one_out_partial_correlation))\nprint(inspect.getsource(leave_one_out_partial_correlation)[:4000])\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nImportError: cannot import name 'resolve_covariate_names' from 'shared_analysis.stats' (/shared/lib/shared_analysis/stats.py)\\n\"}"
+  }
+]

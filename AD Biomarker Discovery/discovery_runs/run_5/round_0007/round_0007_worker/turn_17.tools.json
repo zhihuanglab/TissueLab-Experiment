@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nimport json\nres=json.load(open('/scratch/results.json'))\nprint(json.dumps(res['ranked_variations'], indent=2))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"[\\n  {\\n    \\\"variation_name\\\": \\\"candidate_variant_b\\\",\\n    \\\"description\\\": \\\"More local version: fraction of CA1 peripyramidal reactive astrocytes with at least one CA1 lymphocyte within 20 um.\\\",\\n    \\\"feature_name\\\": \\\"ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um\\\",\\n    \\\"feature_column\\\": \\\"ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um\\\",\\n    \\\"lymphocyte_radius_um\\\": 20.0,\\n    \\\"n_analyzable\\\": 35,\\n    \\\"n_total\\\": 35,\\n    \\\"coverage\\\": 1.0,\\n    \\\"partial_r\\\": 0.1762479232959\", \"stderr\": \"\"}"
+  }
+]

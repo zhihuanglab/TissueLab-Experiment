@@ -1,0 +1,225 @@
+Round 9 Details
+============================================================
+
+HYPOTHESIS: Spatial statistics of tumor cell distribution capture tumor architecture
+- tumor_in_gland_frac: fraction of tumor cells within gland mask regions
+- density_cv: coefficient of variation of tumor cell density across 500um grid
+- mean_5nn_dist_um: mean 5-nearest-neighbor distance in microns
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_fraction: r=-0.4148
+  log_n_tumor_cells: r=+0.3692
+  bp_area_frac: r=-0.2645
+  tumor_in_gland_frac: r=-0.2476
+  mean_5nn_dist_um: r=+0.2104
+  density_cv: r=-0.0144
+
+INDIVIDUAL FEATURE RESULTS:
+  single_gland_patch_fraction_r0.5: adj=0.3036 LOO_r=0.3036 gap=0.1120
+  single_gland_patch_fraction_r1.0: adj=0.3028 LOO_r=0.3028 gap=0.1126
+  single_gland_patch_fraction_r5.0: adj=0.2957 LOO_r=0.2957 gap=0.1191
+  single_gland_patch_fraction_r10.0: adj=0.2829 LOO_r=0.2829 gap=0.1319
+  single_gland_patch_fraction_r20.0: adj=0.2528 LOO_r=0.2568 gap=0.1580
+  single_log_n_tumor_cells_r0.5: adj=0.2364 LOO_r=0.2364 gap=0.1328
+  single_log_n_tumor_cells_r1.0: adj=0.2348 LOO_r=0.2348 gap=0.1344
+  single_log_n_tumor_cells_r5.0: adj=0.2223 LOO_r=0.2223 gap=0.1470
+  single_log_n_tumor_cells_r10.0: adj=0.2000 LOO_r=0.2064 gap=0.1628
+  single_log_n_tumor_cells_r20.0: adj=0.1517 LOO_r=0.1742 gap=0.1950
+  single_tumor_in_gland_frac_r0.5: adj=0.0033 LOO_r=0.0347 gap=0.2129
+  single_bp_area_frac_r0.5: adj=0.0010 LOO_r=0.0388 gap=0.2256
+  single_tumor_in_gland_frac_r1.0: adj=0.0003 LOO_r=0.0327 gap=0.2149
+  single_bp_area_frac_r1.0: adj=-0.0023 LOO_r=0.0366 gap=0.2278
+  single_tumor_in_gland_frac_r5.0: adj=-0.0241 LOO_r=0.0165 gap=0.2311
+  single_bp_area_frac_r5.0: adj=-0.0291 LOO_r=0.0187 gap=0.2457
+  single_tumor_in_gland_frac_r10.0: adj=-0.0546 LOO_r=-0.0039 gap=0.2515
+  single_bp_area_frac_r10.0: adj=-0.0627 LOO_r=-0.0037 gap=0.2681
+  single_tumor_in_gland_frac_r20.0: adj=-0.1155 LOO_r=-0.0445 gap=0.2921
+  single_density_cv_r0.5: adj=-1.0000 LOO_r=-0.7149 gap=0.7293
+  single_density_cv_r1.0: adj=-1.0000 LOO_r=-0.7174 gap=0.7319
+  single_density_cv_r5.0: adj=-1.0000 LOO_r=-0.7366 gap=0.7511
+  single_density_cv_r10.0: adj=-1.0000 LOO_r=-0.7583 gap=0.7728
+  single_density_cv_r20.0: adj=-1.0000 LOO_r=-0.7952 gap=0.8097
+  single_mean_5nn_dist_um_r0.5: adj=-1.0000 LOO_r=-0.0986 gap=0.3090
+  single_mean_5nn_dist_um_r1.0: adj=-1.0000 LOO_r=-0.1014 gap=0.3118
+  single_mean_5nn_dist_um_r5.0: adj=-1.0000 LOO_r=-0.1238 gap=0.3342
+  single_mean_5nn_dist_um_r10.0: adj=-1.0000 LOO_r=-0.1516 gap=0.3620
+  single_mean_5nn_dist_um_r20.0: adj=-1.0000 LOO_r=-0.2059 gap=0.4164
+  single_bp_area_frac_r20.0: adj=-1.0000 LOO_r=-0.0484 gap=0.3128
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  gpf_logntc_dcv_bp_r5.0: adjusted=0.4242 (LOO r=0.4316, IS r=0.5966, gap=0.1650) [F1=0.3553 QWK=0.3077 Acc=0.4000]
+  gpf_logntc_bp_r5.0: adjusted=0.4124 (LOO r=0.4124, IS r=0.5451, gap=0.1327) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_bp_r1.0: adjusted=0.4107 (LOO r=0.4107, IS r=0.5464, gap=0.1357) [F1=0.2677 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_dcv_bp_r10.0: adjusted=0.4104 (LOO r=0.4203, IS r=0.5901, gap=0.1698) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_tig_r1.0: adjusted=0.4103 (LOO r=0.4103, IS r=0.5430, gap=0.1327) [F1=0.3056 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_tig_r5.0: adjusted=0.4092 (LOO r=0.4092, IS r=0.5429, gap=0.1338) [F1=0.3056 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_bp_r10.0: adjusted=0.4075 (LOO r=0.4075, IS r=0.5443, gap=0.1368) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_tig_r10.0: adjusted=0.4047 (LOO r=0.4047, IS r=0.5428, gap=0.1382) [F1=0.2657 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_bp_enet0.05: adjusted=0.4001 (LOO r=0.4001, IS r=0.5452, gap=0.1451) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_r0.5: adjusted=0.3997 (LOO r=0.3997, IS r=0.5161, gap=0.1165) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_tig_bp_r10.0: adjusted=0.3995 (LOO r=0.3995, IS r=0.5492, gap=0.1497) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_r1.0: adjusted=0.3991 (LOO r=0.3991, IS r=0.5161, gap=0.1170) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_tig_bp_r5.0: adjusted=0.3990 (LOO r=0.3994, IS r=0.5501, gap=0.1508) [F1=0.2657 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_tig_enet0.05: adjusted=0.3984 (LOO r=0.3984, IS r=0.5428, gap=0.1444) [F1=0.3056 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_r5.0: adjusted=0.3946 (LOO r=0.3946, IS r=0.5161, gap=0.1216) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_bp_r20.0: adjusted=0.3942 (LOO r=0.3942, IS r=0.5430, gap=0.1488) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gpf_logntc_tig_r20.0: adjusted=0.3928 (LOO r=0.3928, IS r=0.5426, gap=0.1499) [F1=0.2733 QWK=0.1739 Acc=0.3667]
+  gpf_logntc_dcv_bp_enet0.05: adjusted=0.3889 (LOO r=0.4084, IS r=0.5974, gap=0.1890) [F1=0.3553 QWK=0.3077 Acc=0.4000]
+  gpf_logntc_r10.0: adjusted=0.3881 (LOO r=0.3881, IS r=0.5161, gap=0.1281) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_enet0.05: adjusted=0.3877 (LOO r=0.3877, IS r=0.5161, gap=0.1284) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_tig_bp_r20.0: adjusted=0.3854 (LOO r=0.3895, IS r=0.5476, gap=0.1581) [F1=0.2733 QWK=0.1739 Acc=0.3667]
+  gpf_logntc_tig_dcv_bp_r10.0: adjusted=0.3823 (LOO r=0.4009, IS r=0.5881, gap=0.1872) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_dcv_bp_r20.0: adjusted=0.3772 (LOO r=0.3957, IS r=0.5828, gap=0.1871) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  gpf_logntc_tig_enet0.1: adjusted=0.3761 (LOO r=0.3815, IS r=0.5422, gap=0.1607) [F1=0.2657 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_bp_enet0.1: adjusted=0.3744 (LOO r=0.3810, IS r=0.5442, gap=0.1632) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_r20.0: adjusted=0.3734 (LOO r=0.3734, IS r=0.5161, gap=0.1427) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_logntc_enet0.1: adjusted=0.3726 (LOO r=0.3726, IS r=0.5161, gap=0.1436) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_tig_dcv_r5.0: adjusted=0.3709 (LOO r=0.3868, IS r=0.5684, gap=0.1817) [F1=0.3056 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_dcv_r1.0: adjusted=0.3698 (LOO r=0.3776, IS r=0.5434, gap=0.1657) [F1=0.3096 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_m5nn_bp_r5.0: adjusted=0.3687 (LOO r=0.3783, IS r=0.5473, gap=0.1691) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_tig_bp_enet0.05: adjusted=0.3677 (LOO r=0.3785, IS r=0.5500, gap=0.1716) [F1=0.2657 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_m5nn_bp_r10.0: adjusted=0.3670 (LOO r=0.3766, IS r=0.5457, gap=0.1691) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_tig_dcv_r10.0: adjusted=0.3619 (LOO r=0.3800, IS r=0.5662, gap=0.1862) [F1=0.3553 QWK=0.3077 Acc=0.4000]
+  gpf_logntc_dcv_r5.0: adjusted=0.3619 (LOO r=0.3717, IS r=0.5414, gap=0.1697) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_tig_dcv_bp_r20.0: adjusted=0.3600 (LOO r=0.3837, IS r=0.5810, gap=0.1973) [F1=0.2733 QWK=0.1739 Acc=0.3667]
+  gpf_logntc_tig_m5nn_r5.0: adjusted=0.3535 (LOO r=0.3668, IS r=0.5435, gap=0.1767) [F1=0.2657 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_m5nn_bp_r20.0: adjusted=0.3528 (LOO r=0.3665, IS r=0.5438, gap=0.1773) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  gpf_logntc_tig_m5nn_r10.0: adjusted=0.3505 (LOO r=0.3646, IS r=0.5429, gap=0.1782) [F1=0.2402 QWK=0.1600 Acc=0.3000]
+  gpf_logntc_m5nn_r1.0: adjusted=0.3495 (LOO r=0.3553, IS r=0.5169, gap=0.1616) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_dcv_r10.0: adjusted=0.3466 (LOO r=0.3606, IS r=0.5386, gap=0.1780) [F1=0.3553 QWK=0.3077 Acc=0.4000]
+  gpf_logntc_m5nn_r5.0: adjusted=0.3453 (LOO r=0.3524, IS r=0.5164, gap=0.1641) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_dcv_r0.5: adjusted=0.3432 (LOO r=0.3461, IS r=0.5019, gap=0.1558) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_tig_m5nn_bp_r10.0: adjusted=0.3425 (LOO r=0.3618, IS r=0.5505, gap=0.1886) [F1=0.2657 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_tig_bp_enet0.1: adjusted=0.3416 (LOO r=0.3608, IS r=0.5492, gap=0.1883) [F1=0.2657 QWK=0.2222 Acc=0.3000]
+  gpf_dcv_r1.0: adjusted=0.3399 (LOO r=0.3439, IS r=0.5017, gap=0.1578) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_tig_m5nn_bp_r20.0: adjusted=0.3392 (LOO r=0.3589, IS r=0.5484, gap=0.1895) [F1=0.1997 QWK=0.0870 Acc=0.3000]
+  gpf_logntc_m5nn_r10.0: adjusted=0.3381 (LOO r=0.3473, IS r=0.5156, gap=0.1683) [F1=0.3553 QWK=0.3077 Acc=0.4000]
+  gpf_logntc_tig_dcv_bp_enet0.05: adjusted=0.3378 (LOO r=0.3743, IS r=0.5973, gap=0.2230) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_tig_m5nn_r20.0: adjusted=0.3378 (LOO r=0.3558, IS r=0.5416, gap=0.1858) [F1=0.1809 QWK=0.0833 Acc=0.2667]
+  gpf_logntc_tig_dcv_r20.0: adjusted=0.3372 (LOO r=0.3624, IS r=0.5628, gap=0.2004) [F1=0.1997 QWK=0.0870 Acc=0.3000]
+  gpf_logntc_dcv_bp_enet0.1: adjusted=0.3319 (LOO r=0.3663, IS r=0.5849, gap=0.2187) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_tig_r50.0: adjusted=0.3277 (LOO r=0.3492, IS r=0.5421, gap=0.1930) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_bp_r50.0: adjusted=0.3271 (LOO r=0.3483, IS r=0.5405, gap=0.1923) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_tig_bp_r50.0: adjusted=0.3263 (LOO r=0.3485, IS r=0.5429, gap=0.1944) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  all_6_r10.0: adjusted=0.3207 (LOO r=0.3602, IS r=0.5893, gap=0.2291) [F1=0.2402 QWK=0.1600 Acc=0.3000]
+  gpf_logntc_m5nn_r20.0: adjusted=0.3200 (LOO r=0.3347, IS r=0.5139, gap=0.1793) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_logntc_dcv_r20.0: adjusted=0.3136 (LOO r=0.3372, IS r=0.5344, gap=0.1972) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_dcv_r5.0: adjusted=0.3115 (LOO r=0.3239, IS r=0.4988, gap=0.1749) [F1=0.2185 QWK=0.0909 Acc=0.3333]
+  all_6_r20.0: adjusted=0.3094 (LOO r=0.3494, IS r=0.5793, gap=0.2299) [F1=0.2593 QWK=0.1667 Acc=0.3333]
+  single_gland_patch_fraction_r0.5: adjusted=0.3036 (LOO r=0.3036, IS r=0.4156, gap=0.1120) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  single_gland_patch_fraction_r1.0: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  gpf_tig_r0.5: adjusted=0.2980 (LOO r=0.2980, IS r=0.4398, gap=0.1418) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  gpf_tig_r1.0: adjusted=0.2975 (LOO r=0.2975, IS r=0.4396, gap=0.1421) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  gpf_logntc_tig_dcv_m5nn_r10.0: adjusted=0.2970 (LOO r=0.3363, IS r=0.5649, gap=0.2286) [F1=0.2402 QWK=0.1600 Acc=0.3000]
+  single_gland_patch_fraction_r5.0: adjusted=0.2957 (LOO r=0.2957, IS r=0.4148, gap=0.1191) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_logntc_m5nn_bp_r50.0: adjusted=0.2951 (LOO r=0.3271, IS r=0.5409, gap=0.2139) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_tig_m5nn_bp_r50.0: adjusted=0.2942 (LOO r=0.3278, IS r=0.5449, gap=0.2171) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_tig_r5.0: adjusted=0.2927 (LOO r=0.2927, IS r=0.4373, gap=0.1446) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_dcv_m5nn_r5.0: adjusted=0.2927 (LOO r=0.3254, IS r=0.5409, gap=0.2155) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_tig_dcv_bp_enet0.1: adjusted=0.2886 (LOO r=0.3372, IS r=0.5845, gap=0.2473) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_tig_r10.0: adjusted=0.2861 (LOO r=0.2861, IS r=0.4337, gap=0.1476) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_tig_m5nn_r50.0: adjusted=0.2840 (LOO r=0.3191, IS r=0.5393, gap=0.2202) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  single_gland_patch_fraction_r10.0: adjusted=0.2829 (LOO r=0.2829, IS r=0.4148, gap=0.1319) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_tig_dcv_bp_r50.0: adjusted=0.2816 (LOO r=0.3272, IS r=0.5683, gap=0.2412) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_dcv_bp_r50.0: adjusted=0.2808 (LOO r=0.3271, IS r=0.5699, gap=0.2427) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_dcv_m5nn_r10.0: adjusted=0.2797 (LOO r=0.3154, IS r=0.5368, gap=0.2214) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_tig_dcv_m5nn_r20.0: adjusted=0.2780 (LOO r=0.3218, IS r=0.5595, gap=0.2377) [F1=0.2593 QWK=0.1667 Acc=0.3333]
+  gpf_m5nn_r0.5: adjusted=0.2772 (LOO r=0.2845, IS r=0.4490, gap=0.1645) [F1=0.2434 QWK=0.1667 Acc=0.3333]
+  gpf_m5nn_r1.0: adjusted=0.2767 (LOO r=0.2841, IS r=0.4489, gap=0.1648) [F1=0.2434 QWK=0.1667 Acc=0.3333]
+  gpf_m5nn_r5.0: adjusted=0.2722 (LOO r=0.2805, IS r=0.4470, gap=0.1665) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gpf_dcv_r10.0: adjusted=0.2699 (LOO r=0.2949, IS r=0.4948, gap=0.1999) [F1=0.2185 QWK=0.0909 Acc=0.3333]
+  gpf_m5nn_r10.0: adjusted=0.2616 (LOO r=0.2732, IS r=0.4466, gap=0.1733) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gpf_tig_r20.0: adjusted=0.2612 (LOO r=0.2685, IS r=0.4330, gap=0.1646) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_tig_dcv_r50.0: adjusted=0.2553 (LOO r=0.3059, IS r=0.5570, gap=0.2511) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_m5nn_r50.0: adjusted=0.2541 (LOO r=0.2895, IS r=0.5103, gap=0.2209) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  single_gland_patch_fraction_r20.0: adjusted=0.2528 (LOO r=0.2568, IS r=0.4148, gap=0.1580) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_dcv_m5nn_r20.0: adjusted=0.2515 (LOO r=0.2943, IS r=0.5300, gap=0.2356) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  all_6_r50.0: adjusted=0.2470 (LOO r=0.3035, IS r=0.5665, gap=0.2629) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  single_log_n_tumor_cells_r0.5: adjusted=0.2364 (LOO r=0.2364, IS r=0.3692, gap=0.1328) [F1=0.2733 QWK=0.1739 Acc=0.3667]
+  single_log_n_tumor_cells_r1.0: adjusted=0.2348 (LOO r=0.2348, IS r=0.3692, gap=0.1344) [F1=0.2733 QWK=0.1739 Acc=0.3667]
+  gpf_m5nn_r20.0: adjusted=0.2288 (LOO r=0.2513, IS r=0.4465, gap=0.1951) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  single_log_n_tumor_cells_r5.0: adjusted=0.2223 (LOO r=0.2223, IS r=0.3692, gap=0.1470) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_dcv_r50.0: adjusted=0.2155 (LOO r=0.2698, IS r=0.5283, gap=0.2586) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_tig_dcv_m5nn_r50.0: adjusted=0.2112 (LOO r=0.2745, IS r=0.5510, gap=0.2765) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_tig_m5nn_bp_r100.0: adjusted=0.2008 (LOO r=0.2646, IS r=0.5422, gap=0.2776) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  single_log_n_tumor_cells_r10.0: adjusted=0.2000 (LOO r=0.2064, IS r=0.3692, gap=0.1628) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_dcv_r20.0: adjusted=0.1951 (LOO r=0.2421, IS r=0.4860, gap=0.2439) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_dcv_m5nn_r50.0: adjusted=0.1688 (LOO r=0.2357, IS r=0.5195, gap=0.2838) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  single_log_n_tumor_cells_r20.0: adjusted=0.1517 (LOO r=0.1742, IS r=0.3692, gap=0.1950) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tig_m5nn_r0.5: adjusted=0.0476 (LOO r=0.0926, IS r=0.3327, gap=0.2400) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  tig_m5nn_r1.0: adjusted=0.0437 (LOO r=0.0900, IS r=0.3327, gap=0.2427) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  tig_m5nn_r5.0: adjusted=0.0140 (LOO r=0.0702, IS r=0.3327, gap=0.2624) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  single_tumor_in_gland_frac_r0.5: adjusted=0.0033 (LOO r=0.0347, IS r=0.2476, gap=0.2129) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  single_bp_area_frac_r0.5: adjusted=0.0010 (LOO r=0.0388, IS r=0.2645, gap=0.2256) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  single_tumor_in_gland_frac_r1.0: adjusted=0.0003 (LOO r=0.0327, IS r=0.2476, gap=0.2149) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  single_bp_area_frac_r1.0: adjusted=-0.0023 (LOO r=0.0366, IS r=0.2645, gap=0.2278) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  tig_m5nn_r10.0: adjusted=-0.0155 (LOO r=0.0506, IS r=0.3327, gap=0.2821) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  single_tumor_in_gland_frac_r5.0: adjusted=-0.0241 (LOO r=0.0165, IS r=0.2476, gap=0.2311) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  tig_bp_r5.0: adjusted=-0.0249 (LOO r=0.0269, IS r=0.2806, gap=0.2536) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  tig_bp_r1.0: adjusted=-0.0290 (LOO r=0.0242, IS r=0.2806, gap=0.2564) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  single_bp_area_frac_r5.0: adjusted=-0.0291 (LOO r=0.0187, IS r=0.2645, gap=0.2457) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tig_bp_r10.0: adjusted=-0.0304 (LOO r=0.0232, IS r=0.2805, gap=0.2573) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  tig_bp_r0.5: adjusted=-0.0306 (LOO r=0.0232, IS r=0.2806, gap=0.2575) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  tig_bp_r20.0: adjusted=-0.0541 (LOO r=0.0074, IS r=0.2804, gap=0.2730) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  single_tumor_in_gland_frac_r10.0: adjusted=-0.0546 (LOO r=-0.0039, IS r=0.2476, gap=0.2515) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  single_bp_area_frac_r10.0: adjusted=-0.0627 (LOO r=-0.0037, IS r=0.2645, gap=0.2681) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  single_tumor_in_gland_frac_r20.0: adjusted=-0.1155 (LOO r=-0.0445, IS r=0.2476, gap=0.2921) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  single_density_cv_r0.5: adjusted=-1.0000 (LOO r=-0.7149, IS r=0.0144, gap=0.7293) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_density_cv_r1.0: adjusted=-1.0000 (LOO r=-0.7174, IS r=0.0144, gap=0.7319) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_density_cv_r5.0: adjusted=-1.0000 (LOO r=-0.7366, IS r=0.0144, gap=0.7511) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_density_cv_r10.0: adjusted=-1.0000 (LOO r=-0.7583, IS r=0.0144, gap=0.7728) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_density_cv_r20.0: adjusted=-1.0000 (LOO r=-0.7952, IS r=0.0144, gap=0.8097) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_mean_5nn_dist_um_r0.5: adjusted=-1.0000 (LOO r=-0.0986, IS r=0.2104, gap=0.3090) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_mean_5nn_dist_um_r1.0: adjusted=-1.0000 (LOO r=-0.1014, IS r=0.2104, gap=0.3118) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_mean_5nn_dist_um_r5.0: adjusted=-1.0000 (LOO r=-0.1238, IS r=0.2104, gap=0.3342) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_mean_5nn_dist_um_r10.0: adjusted=-1.0000 (LOO r=-0.1516, IS r=0.2104, gap=0.3620) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_mean_5nn_dist_um_r20.0: adjusted=-1.0000 (LOO r=-0.2059, IS r=0.2104, gap=0.4164) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_bp_area_frac_r20.0: adjusted=-1.0000 (LOO r=-0.0484, IS r=0.2645, gap=0.3128) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_tig_dcv_m5nn_r100.0: adjusted=-1.0000 (LOO r=0.1928, IS r=0.5455, gap=0.3527) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_tig_dcv_bp_r100.0: adjusted=-1.0000 (LOO r=0.2390, IS r=0.5573, gap=0.3182) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  all_6_r100.0: adjusted=-1.0000 (LOO r=0.2280, IS r=0.5575, gap=0.3295) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  tig_dcv_r0.5: adjusted=-1.0000 (LOO r=-0.0838, IS r=0.2573, gap=0.3411) [F1=0.1404 QWK=0.0000 Acc=0.2667] DISQUALIFIED
+  tig_dcv_r1.0: adjusted=-1.0000 (LOO r=-0.0861, IS r=0.2573, gap=0.3434) [F1=0.1404 QWK=0.0000 Acc=0.2667] DISQUALIFIED
+  tig_dcv_r5.0: adjusted=-1.0000 (LOO r=-0.1055, IS r=0.2572, gap=0.3627) [F1=0.1404 QWK=0.0000 Acc=0.2667] DISQUALIFIED
+  tig_dcv_r10.0: adjusted=-1.0000 (LOO r=-0.1285, IS r=0.2569, gap=0.3854) [F1=0.1404 QWK=0.0000 Acc=0.2667] DISQUALIFIED
+  tig_dcv_r20.0: adjusted=-1.0000 (LOO r=-0.1714, IS r=0.2563, gap=0.4277) [F1=0.1538 QWK=0.0000 Acc=0.3000] DISQUALIFIED
+  tig_m5nn_r20.0: adjusted=-1.0000 (LOO r=0.0169, IS r=0.3327, gap=0.3158) [F1=0.1538 QWK=0.0000 Acc=0.3000] DISQUALIFIED
+  dcv_m5nn_r0.5: adjusted=-1.0000 (LOO r=-0.2828, IS r=0.2112, gap=0.4940) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_m5nn_r1.0: adjusted=-1.0000 (LOO r=-0.2852, IS r=0.2112, gap=0.4964) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_m5nn_r5.0: adjusted=-1.0000 (LOO r=-0.3045, IS r=0.2112, gap=0.5156) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_m5nn_r10.0: adjusted=-1.0000 (LOO r=-0.3277, IS r=0.2111, gap=0.5388) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  dcv_m5nn_r20.0: adjusted=-1.0000 (LOO r=-0.3719, IS r=0.2108, gap=0.5827) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_tig_dcv_bp_enet0.5: adjusted=-1.0000 (LOO r=-0.2708, IS r=0.5041, gap=0.7750) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_dcv_bp_enet0.5: adjusted=-1.0000 (LOO r=-0.2708, IS r=0.5041, gap=0.7750) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_tig_bp_enet0.5: adjusted=-1.0000 (LOO r=-0.2708, IS r=0.5041, gap=0.7750) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_tig_enet0.5: adjusted=-1.0000 (LOO r=-0.2708, IS r=0.5041, gap=0.7750) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_enet0.5: adjusted=-1.0000 (LOO r=-0.2708, IS r=0.5041, gap=0.7750) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_logntc_bp_enet0.5: adjusted=-1.0000 (LOO r=-0.2708, IS r=0.5041, gap=0.7750) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+
+BEST MODEL: gpf_logntc_dcv_bp_r5.0
+  Pearson r:      IS=0.5966  LOO=0.4316
+  IS-LOO Gap:     0.1650 (penalty=0.0075)
+  Adjusted Score: 0.4242
+  Macro F1:       0.3553
+  QWK:            0.3077
+  Accuracy:       0.4000
+
+ERRORS:
+  TCGA-A2-A0CS: GT=2 -> Pred=1 (cont=1.353) gpf=0.511 tig=0.0181 dcv=0.859 m5nn=36.8
+  TCGA-A2-A0ET: GT=2 -> Pred=3 (cont=2.698) gpf=0.112 tig=0.0002 dcv=1.183 m5nn=39.0
+  TCGA-A7-A3IY: GT=1 -> Pred=2 (cont=1.645) gpf=0.509 tig=0.0042 dcv=1.220 m5nn=12.9
+  TCGA-AR-A1AR: GT=3 -> Pred=2 (cont=2.160) gpf=0.032 tig=0.0030 dcv=1.984 m5nn=26.9
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (cont=1.932) gpf=0.119 tig=0.0002 dcv=1.823 m5nn=24.3
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (cont=2.197) gpf=0.105 tig=0.0040 dcv=1.891 m5nn=25.1
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (cont=2.101) gpf=0.167 tig=0.0007 dcv=1.722 m5nn=36.9
+  TCGA-BH-A0DX: GT=1 -> Pred=2 (cont=2.047) gpf=0.081 tig=0.0007 dcv=2.994 m5nn=28.0
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (cont=2.128) gpf=0.260 tig=0.0105 dcv=1.906 m5nn=37.0
+  TCGA-D8-A1XT: GT=3 -> Pred=2 (cont=2.291) gpf=0.160 tig=0.0070 dcv=1.287 m5nn=48.7
+  TCGA-D8-A27N: GT=3 -> Pred=2 (cont=2.231) gpf=0.290 tig=0.0026 dcv=0.874 m5nn=39.6
+  TCGA-D8-A27P: GT=1 -> Pred=2 (cont=2.044) gpf=0.197 tig=0.0129 dcv=1.502 m5nn=29.3
+  TCGA-D8-A4Z1: GT=3 -> Pred=2 (cont=2.264) gpf=0.085 tig=0.0001 dcv=1.365 m5nn=24.5
+  TCGA-D8-A73X: GT=1 -> Pred=2 (cont=1.866) gpf=0.353 tig=0.0042 dcv=1.326 m5nn=23.9
+  TCGA-E2-A14W: GT=3 -> Pred=2 (cont=1.931) gpf=0.063 tig=0.0004 dcv=2.466 m5nn=28.3
+  TCGA-E2-A1B1: GT=1 -> Pred=2 (cont=2.150) gpf=0.158 tig=0.0042 dcv=1.843 m5nn=25.7
+  TCGA-EW-A1PH: GT=3 -> Pred=2 (cont=2.043) gpf=0.235 tig=0.0109 dcv=1.648 m5nn=57.7
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (cont=2.260) gpf=0.093 tig=0.0106 dcv=1.543 m5nn=33.5

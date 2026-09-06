@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, os\nwith open('/scratch/context_bundle.json') as f:\n    obj=json.load(f)\nfor key in ['worker_brief','accepted_panel','panel_state','round','candidate','hypothesis','brief']:\n    if key in obj:\n        print(f'--- {key} ---')\n        print(json.dumps(obj[key], indent=2)[:12000])\n        print()\nprint('top-level keys:', list(obj.keys()))\nPY\necho '--- /scratch directory ---'\nls -1 /scratch | sed -n '1,120p'\nif [ -f /scratch/worker_brief.json ]; then\n  echo '--- worker_brief.json ---'\n  python - <<'PY'\nimport json\nwith open('/scratch/worker_brief.json') as f:\n    obj=json.load(f)\nprint(json.dumps(obj, indent=2)[:20000])\nPY\nfi",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- worker_brief ---\\n{\\n  \\\"worker_name\\\": \\\"round_0007_worker\\\",\\n  \\\"round_id\\\": 7,\\n  \\\"candidate_id\\\": \\\"ca1-reactive-burden-area\\\",\\n  \\\"candidate_type\\\": \\\"candidate\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [\\n      {\\n        \\\"slot\\\": 1,\\n        \\\"feature_name\\\": \\\"astrocytic_reactivity_fraction\\\",\\n        \\\"round_id\\\": 1,\\n        \\\"panel_candidate_score\\\": 0.4914,\\n        \\\"delta_panel_score\\\": null,\\n        \\\"status\\\": \\\"active\\\",\\n        \\\"worker_dir\\\": \\\"/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autores\", \"stderr\": \"\"}"
+  }
+]

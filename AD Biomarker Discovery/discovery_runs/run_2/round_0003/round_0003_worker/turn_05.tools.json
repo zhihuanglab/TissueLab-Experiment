@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.append('/shared/lib')\nfrom shared_analysis import stats, artifacts\nfrom shared_analysis import build_cell_table\nprint('partial_correlation signature:', inspect.signature(stats.partial_correlation))\nprint(inspect.getsource(stats.partial_correlation))\nprint('leave_one_out_summary signature:', inspect.signature(stats.leave_one_out_summary))\nprint(inspect.getsource(stats.leave_one_out_summary)[:4000])\nprint('build_results_payload signature:', inspect.signature(artifacts.build_results_payload))\nprint(inspect.getsource(artifacts.write_donor_feature_table)[:2500])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"partial_correlation signature: (df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]') -> 'dict[str, float]'\\ndef partial_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n) -> dict[str, float]:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds])\\n    feature_resid = residualize(frame[feature_col], frame[confounds])\\n    outcome_resid = residualize(frame[outcome_col], frame[confounds])\\n   \", \"stderr\": \"\"}"
+  }
+]

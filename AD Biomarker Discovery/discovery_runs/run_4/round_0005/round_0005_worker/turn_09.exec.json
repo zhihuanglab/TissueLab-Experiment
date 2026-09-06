@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "round_0001_worker ca1ec_reactive_to_pyramidal_logratio pr 0.44649923477818637 loo 0.3444885426318935 gap 0.10201069214629288 pen 0.0 adj 0.3444885426318935 adj-loo 0.0\n",
+  "stderr": ""
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, glob, math\ncount=0\nfor p in glob.glob('/data/autoresearch_runs/**/results.json', recursive=True):\n    try: obj=json.load(open(p))\n    except: continue\n    if 'selection_score' in obj and 'adjusted_score' in obj and 'is_loo_gap' in obj:\n        ss=obj['selection_score']; gap=obj['is_loo_gap']; adj=obj['adjusted_score']\n        if all(isinstance(x,(int,float)) for x in [ss,gap,adj]) and math.isfinite(ss) and math.isfinite(gap) and math.isfinite(adj):\n            print(ss, gap, adj, 'ss-gap', ss-gap, 'ss-abs', ss-abs(gap))\n            count+=1\n            if count>=5: break\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"0.5190730358441814 0.1463628776526022 0.3727101581915792 ss-gap 0.3727101581915792 ss-abs 0.3727101581915792\\n0.3961821816378823 0.1801129647584544 0.20101273450020074 ss-gap 0.21606921687942793 ss-abs 0.21606921687942793\\n0.5211272398849383 0.8822320127694601 -0.3611047728845218 ss-gap -0.3611047728845218 ss-abs -0.3611047728845218\\n0.5253796315504292 0.1433135946756922 0.382066036874737 ss-gap 0.382066036874737 ss-abs 0.382066036874737\\n0.5190730358441814 0.1463628776526022 0.3727101581915792 ss-g\", \"stderr\": \"\"}"
+  }
+]

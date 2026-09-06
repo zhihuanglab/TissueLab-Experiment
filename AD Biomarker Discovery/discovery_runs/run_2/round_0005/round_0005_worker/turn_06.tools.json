@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nPYTHONPATH=/shared/lib python - <<'PY'\nfrom pathlib import Path\nimport pandas as pd\nfrom shared_analysis import load_training_cohort, build_cell_table\nimport inspect\n\nprint('build_cell_table source file:', inspect.getsourcefile(build_cell_table))\nsrc = inspect.getsource(build_cell_table)\nprint('build_cell_table source head:')\nprint('\\n'.join(src.splitlines()[:90]))\n\ncohort = load_training_cohort('/data')\nslide = Path('/data') / cohort.iloc[0]['slide_name']\nprint('\\nTesting slide:', slide.name)\ncells = build_cell_table(slide, include_regions=True, include_geometry=False)\nprint('shape', cells.shape)\nprint('columns', list(cells.columns))\nfor c in ['classification','cell_type','region','x_centroid','y_centroid','centroid_x','centroid_y']:\n    if c in cells.columns:\n        print('\\nCOLUMN', c)\n        print('nunique=', cells[c].nunique(dropna=False))\n        print(cells[c].dropna().astype(str).value_counts().head(15))\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

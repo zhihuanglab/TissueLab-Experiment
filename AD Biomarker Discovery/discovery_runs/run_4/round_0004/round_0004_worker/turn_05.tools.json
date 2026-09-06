@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho 'shared lib files:'\nfind /shared/lib -maxdepth 2 -type f | sed -n '1,120p'\necho 'python path and available dirs'\npython - <<'PY'\nimport sys, os\nprint(sys.path[:10])\nprint(os.listdir('/shared/lib')[:20])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"shared lib files:\\n/shared/lib/shared_analysis/__init__.py\\n/shared/lib/shared_analysis/.___init__.py\\n/shared/lib/shared_analysis/context.py\\n/shared/lib/shared_analysis/._context.py\\n/shared/lib/shared_analysis/stats.py\\n/shared/lib/shared_analysis/._stats.py\\n/shared/lib/shared_analysis/pca.py\\n/shared/lib/shared_analysis/._pca.py\\n/shared/lib/shared_analysis/artifacts.py\\n/shared/lib/shared_analysis/._artifacts.py\\n/shared/lib/shared_analysis/embedding_mechanistic.py\\n/shared/lib/shared_analysis/._embed\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,39 @@
+Round 10
+========================================================================
+
+The machine-readable candidate enumeration for this round was not retained:
+the round's script and its details file were lost during the run. What follows
+is taken verbatim from the run log, which recorded the configuration this round
+selected, its scores, and the alternatives the round discussed and rejected.
+Rejected alternatives are therefore partial here, covering those the agent wrote
+about rather than every configuration it evaluated.
+
+ROUND 10 - [tumor_top3 PCA + gland_top4 PCA] + [Ridge α=5] (LOO)
+
+Features (7):
+  1. tumor_pca_top3 — 3 PCs from musk_tumor class-filtered mean embeddings (PCA 20, top 3 by |correlation|)
+  2. gland_pca_top4 — 4 PCs from musk_gland class-filtered mean embeddings (PCA 20, top 4 by |correlation|)
+Model: Ridge(alpha=5), StandardScaler, global PCA + PC selection, LOO for Ridge training only
+
+SELECTED CONFIGURATION
+Model:Ridge(alpha=5), StandardScaler, global PCA + PC selection, LOO for Ridge training only
+  LOO r      = 0.8338
+  IS r       = 0.8992
+  IS-LOO gap = 0.0654
+  adjusted   = 0.8338
+
+ALTERNATIVES RECORDED IN THIS ROUND'S FINDINGS
+  1. **New best: LOO r=0.8338, up from 0.8265 in Round 9.** The asymmetric configuration (3 tumor PCs + 4 gland PCs = 7 features) outperforms the symmetric 4+4 (8 features) from Round 9 by +0.0073 in LOO r. Fewer tumor PCs (3 vs 4) reduced noise while gland PCs (4) captured sufficient gland-formation signal. The IS-LOO gap dropped from 0.075 to 0.065, confirming less overfitting with one fewer feature.
+  2. **Adding tig did NOT help**: t3+g4+tig (Ridge α=5) gave LOO r=0.8297 vs 0.8338 without tig. The tig feature adds marginal IS fit (+0.0001 IS r) but hurts LOO by +0.0041, confirming the embedding PCA features already capture the spatial co-localization signal that tig provides. Adding tig consistently degrades LOO r across all tested configurations.
+  5. **Single-source baselines confirm dual-source value**: tumor_top5 alone peaks at LOO r=0.7037 (α=20), gland_top4 alone at 0.7148 (α=5). Combining them yields 0.8338 — a substantial +0.12 improvement, confirming the two sources capture complementary aspects of tubule formation.
+
+FINDINGS:
+  1. **New best: LOO r=0.8338, up from 0.8265 in Round 9.** The asymmetric configuration (3 tumor PCs + 4 gland PCs = 7 features) outperforms the symmetric 4+4 (8 features) from Round 9 by +0.0073 in LOO r. Fewer tumor PCs (3 vs 4) reduced noise while gland PCs (4) captured sufficient gland-formation signal. The IS-LOO gap dropped from 0.075 to 0.065, confirming less overfitting with one fewer feature.
+
+  2. **Adding tig did NOT help**: t3+g4+tig (Ridge α=5) gave LOO r=0.8297 vs 0.8338 without tig. The tig feature adds marginal IS fit (+0.0001 IS r) but hurts LOO by +0.0041, confirming the embedding PCA features already capture the spatial co-localization signal that tig provides. Adding tig consistently degrades LOO r across all tested configurations.
+
+  3. **Asymmetric PC counts matter**: t3+g4 > t4+g4 > t5+g5 > t3+g3. Gland needs 4 PCs (gland morphology is more complex), while tumor needs only 3 PCs (tumor presence/absence is simpler). t5+g5 (10 features) was not in the top 15, confirming that 10 features is too many for n=33.
+
+  4. **Ridge α sensitivity is low**: For t3+g4, α=3 (0.8338), α=5 (0.8338), α=7 (0.8333), α=10 (0.8312) are all very close. α=5 is chosen as best since it ties with α=3 but has a slightly smaller gap (0.0654 vs 0.0672).
+
+  5. **Single-source baselines confirm dual-source value**: tumor_top5 alone peaks at LOO r=0.7037 (α=20), gland_top4 alone at 0.7148 (α=5). Combining them yields 0.8338 — a substantial +0.12 improvement, confirming the two sources capture complementary aspects of tubule formation.

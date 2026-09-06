@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\ngrep -R \"Adjusted Score\" -n /shared /scratch /data/autoresearch_runs 2>/dev/null | sed -n '1,40p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"XXX\\\\n\\\\nPER-DONOR (LOO):\\\\n  donor_id  outcome  predicted  [key feature values]\\\\n```\\\\n\\\\nLimit to 8 variations maximum. Each variation should differ from the baseline\\\\nby exactly one thing.\\\\n\\\\n## Required report.md sections\\\\n\\\\n```markdown\\\\n## Summary\\\\nOne sentence: what was tested and what the best adjusted_score was.\\\\n\\\\n## Metrics\\\\nCopy exact numbers from stdout for the best variation.\\\\n\\\\n## Findings\\\\n1. What worked and why (tie to the biological meaning of the target)\\\\n2. What failed and why (spe\", \"stderr\": \"\"}"
+  }
+]

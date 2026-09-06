@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"Adjusted Score\" -n /shared /scratch /data/autoresearch_runs 2>/dev/null | head -20\ngrep -R \"is_loo_gap\" -n /shared /scratch /data/autoresearch_runs 2>/dev/null | head -40",
+    "output_preview": "{\"exit_code\": 141, \"stdout\": \"\\\\nthem produces results that look good in-sample but fail to generalise.\\\\n\\\\n- StandardScaler, PCA, and any feature selection that uses the outcome variable\\\\n  must be fitted inside each LOO fold, never on the full dataset before the loop.\\\\n- Never use LOO predictions from an inner model as a fixed feature in the outer\\\\n  LOO loop. This leaks information about each held-out sample through the training\\\\n  set. Symptom: LOO r jumps above 0.90 on a cohort smaller than 100.\\\\n- Keep effective feature \", \"stderr\": \"\"}"
+  }
+]

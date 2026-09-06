@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,260p' /data/autoresearch_runs/run_20260421_052101_efbee1/round_0007/round_0007_worker/result.py\necho '--- results ---'\npython - <<'PY'\nimport json\np='/data/autoresearch_runs/run_20260421_052101_efbee1/round_0007/round_0007_worker/results.json'\nwith open(p) as f: obj=json.load(f)\nimport pprint\npprint.pp(obj)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"ramidal_reactive_astrocytes': 426.0,\\n                    'n_ca1_reactive_astrocytes': 1387.0,\\n                    'n_ca1_pyramidal_neurons': 2778.0},\\n                   {'donor_id': 'H20.33.030',\\n                    'outcome': -0.1680423,\\n                    'predicted': -0.09850169732123677,\\n                    'actual_resid': -0.026008513106822312,\\n                    'predicted_resid': 0.04353208957194092,\\n                    'ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um'\", \"stderr\": \"\"}"
+  }
+]

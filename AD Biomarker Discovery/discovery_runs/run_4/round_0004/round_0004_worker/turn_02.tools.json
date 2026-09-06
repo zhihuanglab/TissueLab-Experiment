@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nfrom pathlib import Path\nobj=json.loads(Path('/scratch/context_bundle.json').read_text())\nprint('keys:', sorted(obj))\nfor k in ['worker_brief','candidate','round','accepted_panel','current_panel','plan','hypothesis','task','brief']:\n    if k in obj:\n        print(f'\\n--- {k} ---')\n        import pprint; pprint.pp(obj[k])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"keys: ['cohort_summary', 'dataset_guide_excerpt', 'runtime_manifest', 'runtime_quickstart_excerpt', 'slide_manifest_head', 'worker_brief']\\n\\n--- worker_brief ---\\n{'worker_name': 'round_0004_worker',\\n 'round_id': 4,\\n 'candidate_id': 'ca1-reactive-astrocyte-hypertrophy',\\n 'candidate_type': 'candidate',\\n 'accepted_panel': {'members': [{'slot': 1,\\n                                 'feature_name': 'ca1_pyramidal_fraction',\\n                                 'round_id': 1,\\n                                \", \"stderr\": \"\"}"
+  }
+]

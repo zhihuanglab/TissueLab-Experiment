@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 1,
+  "stdout": "PYTHONPATH=/shared/lib\ntotal 644\ndrwx------ 1 root root 131072 Apr 21 05:47 .\ndrwxr-xr-x 1 root root   4096 Apr 21 06:33 ..\n-????????? ? ?    ?         ?            ? ._cache\n-????????? ? ?    ?         ?            ? ._dataset_guide.md\n-????????? ? ?    ?         ?            ? ._lib\n-????????? ? ?    ?         ?            ? ._templates\ndrwx------ 1 root root 131072 Apr 21 05:47 cache\n-rwx------ 1 root root  17306 Apr  5 20:08 dataset_guide.md\ndrwx------ 1 root root 131072 Apr 21 05:47 lib\ndrwx------ 1 root root 131072 Apr 21 05:47 templates\n",
+  "stderr": "ls: cannot access '/shared/._dataset_guide.md': Operation not permitted\nls: cannot access '/shared/._cache': Operation not permitted\nls: cannot access '/shared/._lib': Operation not permitted\nls: cannot access '/shared/._templates': Operation not permitted\n"
+}

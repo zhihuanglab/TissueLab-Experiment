@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nfrom shared_analysis import load_training_cohort, build_cell_table\nimport pandas as pd\n\ndata_root=Path('/data')\ncohort=load_training_cohort(data_root)\nslide = data_root / cohort.iloc[0]['slide_name']\nprint('sample slide:', slide)\ncells = build_cell_table(slide, include_regions=True, include_geometry=False)\nprint('columns:', list(cells.columns))\nfor col in ['cell_type','region','donor_id']:\n    if col in cells.columns:\n        vals = cells[col].dropna().astype(str)\n        print(f'{col} unique sample:', vals.unique()[:20], 'n_unique=', vals.nunique())\nprint('nrows', len(cells))\nprint(cells[['cell_type','region']].head(10).to_string())\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 2, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

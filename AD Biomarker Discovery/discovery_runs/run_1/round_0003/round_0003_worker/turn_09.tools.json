@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0, '/shared/lib')\nfrom shared_analysis import stats, artifacts\nprint('stats funcs:', [n for n in dir(stats) if not n.startswith('_')])\nprint('\\npartial_correlation signature:', inspect.signature(stats.partial_correlation))\nprint(inspect.getsource(stats.partial_correlation))\nprint('\\nleave_one_out_summary signature:', inspect.signature(stats.leave_one_out_summary))\nprint(inspect.getsource(stats.leave_one_out_summary))\nprint('\\nwrite_donor_feature_table signature:', inspect.signature(artifacts.write_donor_feature_table))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"stats funcs: ['Iterable', 'annotations', 'bootstrap_partial_correlation', 'bootstrap_partial_correlation_stability', 'leave_one_out_partial_correlation', 'leave_one_out_summary', 'multifeature_loo_predictive_correlation', 'multifeature_residualized_correlation', 'np', 'partial_correlation', 'pd', 'pearsonr', 'residualize', 'residualized_loo_predictive_correlation']\\n\\npartial_correlation signature: (df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]') -> 'dict[str\", \"stderr\": \"\"}"
+  }
+]

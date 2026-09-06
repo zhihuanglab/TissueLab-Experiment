@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect, textwrap\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import sea_ad_lfb, stats\nprint('--- compute_contour_geometry ---')\nprint(textwrap.dedent(inspect.getsource(sea_ad_lfb.compute_contour_geometry)))\nprint('--- build_cell_table excerpt ---')\nsrc=inspect.getsource(sea_ad_lfb.build_cell_table)\nprint(textwrap.dedent('\\n'.join(src.splitlines()[:120])))\nprint('--- stats partial/loo signatures ---')\nfor name in ['partial_correlation','leave_one_out_summary','residualized_loo_predictive_correlation']:\n    fn=getattr(stats,name)\n    print(name, inspect.signature(fn))\n    print(textwrap.dedent('\\n'.join(inspect.getsource(fn).splitlines()[:80])))\n    print()\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- compute_contour_geometry ---\\ndef compute_contour_geometry(contours: np.ndarray) -> pd.DataFrame:\\n    contour_array = np.asarray(contours, dtype=np.float32)\\n    if contour_array.ndim != 3 or contour_array.shape[-1] != 2:\\n        raise ValueError(\\\"Contours must have shape (n_cells, n_vertices, 2)\\\")\\n    centered = contour_array - contour_array.mean(axis=1, keepdims=True)\\n    x = centered[:, :, 0]\\n    y = centered[:, :, 1]\\n    x_next = np.roll(x, -1, axis=1)\\n    y_next = np.roll(y, -1, axis=1)\\n \", \"stderr\": \"\"}"
+  }
+]

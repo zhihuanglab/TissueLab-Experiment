@@ -1,0 +1,81 @@
+{
+  "worker_name": "round_0006_worker",
+  "round_id": 6,
+  "candidate_id": "ca1-reactive-neuron-exclusion",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_enrichment",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astrocyte_neighbor_fraction",
+        "round_id": 3,
+        "panel_candidate_score": 0.5189,
+        "delta_panel_score": 0.0118,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_reactive_astrocyte_hypertrophy",
+        "round_id": 4,
+        "panel_candidate_score": 0.5408,
+        "delta_panel_score": 0.0219,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_reactive_local_purity",
+        "round_id": 5,
+        "panel_candidate_score": 0.5485,
+        "delta_panel_score": 0.0077,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0005/round_0005_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5485
+  },
+  "scientific_question": "Do donors with more CA1 reactive astrocytes embedded in pyramidal-neuron-poor local microenvironments show faster memory decline beyond the current CA1 neuron-loss and reactive-astrocyte panel?",
+  "approach": "Within CA1 only, assign each cell to region using annotation polygons, then identify cells labeled `Reactive Astrocyte` and `Pyramidal Neuron`. For every CA1 reactive astrocyte, find neighboring CA1 cells within a fixed 35 micrometer radius using centroid distances, excluding the center cell itself. Compute the local pyramidal-neuron fraction among those neighbors. Mark the reactive astrocyte as 'neuron-excluded' if that local pyramidal fraction is below the tested threshold. The donor-level biomarker is the fraction of CA1 reactive astrocytes that are neuron-excluded. Ignore reactive astrocytes with zero CA1 neighbors inside the radius; if a donor has no CA1 reactive astrocytes, return NaN.",
+  "variations": [
+    {
+      "name": "reactive_pyramidal_desert_t10",
+      "description": "Baseline: fraction of CA1 reactive astrocytes whose 35 micrometer CA1 neighborhood has less than 10% pyramidal neurons."
+    },
+    {
+      "name": "reactive_pyramidal_desert_t20",
+      "description": "Nearby threshold change: fraction of CA1 reactive astrocytes whose 35 micrometer CA1 neighborhood has less than 20% pyramidal neurons."
+    }
+  ],
+  "baseline_variation": "reactive_pyramidal_desert_t10",
+  "notes": "Use `CustomAnnotations` polygons with coordinates divided by 16 before region assignment. Restrict both centers and neighbors to CA1 so the feature stays region-specific. Use centroids from `SegmentationNode/centroids` and cell labels from `ClassificationNode/`. If available, convert 35 micrometers to pixels using slide MPP from the paired SVS; the cohort MPP range is narrow, so this should be stable. Keep the implementation simple and auditable: KD-tree or ball query over CA1 centroids is sufficient.",
+  "rationale": "Recent keeps suggest the strongest signal is a CA1 reactive injury niche: overall reactive enrichment, reactive hypertrophy, and reactive-local purity all helped, while the neuron-glia proximity feature from round 3 was useful but modest. The next clean test is to flip that proximity idea to the reactive-astrocyte viewpoint and ask whether reactive astrocytes specifically occupy neuron-depleted pockets, which could add new signal or replace the weaker proximity member with a more direct glial-scar-like niche measure."
+}

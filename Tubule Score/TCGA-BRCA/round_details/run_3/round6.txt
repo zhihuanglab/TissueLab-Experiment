@@ -1,0 +1,53 @@
+Round 6 Details
+================================================================================
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_fraction: r=-0.4148 (p=0.0226)
+  tumor_in_gland_fraction: r=-0.5653 (p=0.0011)
+  mean_nn_distance_tumor: r=-0.1941 (p=0.3041)
+
+================================================================================
+ALL CONFIGURATIONS (sorted by adjusted score):
+  tig+nn_R1: adjusted=0.5033 (LOO r=0.5033, IS r=0.6014, gap=0.0982) [F1=0.4581 QWK=0.3871 Acc=0.4667]
+  tig_only: adjusted=0.5008 (LOO r=0.5008, IS r=0.5653, gap=0.0645) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tig+nn_R5: adjusted=0.4966 (LOO r=0.4966, IS r=0.6014, gap=0.1049) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+gpca3_R10: adjusted=0.4939 (LOO r=0.4972, IS r=0.6538, gap=0.1566) [F1=0.3808 QWK=0.3200 Acc=0.4333]
+  tig_nn+tpca2_R5: adjusted=0.4840 (LOO r=0.4840, IS r=0.6239, gap=0.1399) [F1=0.3620 QWK=0.3077 Acc=0.4000]
+  tig+tpca2_R5: adjusted=0.4802 (LOO r=0.4802, IS r=0.5970, gap=0.1168) [F1=0.4554 QWK=0.4000 Acc=0.5000]
+  tig_nn+tpca2_R10: adjusted=0.4789 (LOO r=0.4789, IS r=0.6211, gap=0.1422) [F1=0.2783 QWK=0.1739 Acc=0.3667]
+  tig+tpca2_R10: adjusted=0.4776 (LOO r=0.4776, IS r=0.5938, gap=0.1162) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  tig+nn+gf_R5: adjusted=0.4752 (LOO r=0.4752, IS r=0.6053, gap=0.1301) [F1=0.4222 QWK=0.3333 Acc=0.4333]
+  tig+gpca2_R5: adjusted=0.4694 (LOO r=0.4694, IS r=0.6056, gap=0.1362) [F1=0.4074 QWK=0.3333 Acc=0.4667]
+  tig+nn+gf_R1: adjusted=0.4692 (LOO r=0.4692, IS r=0.6065, gap=0.1373) [F1=0.3935 QWK=0.3226 Acc=0.4000]
+  tig_nn+tpca2+gpca2_R10: adjusted=0.4672 (LOO r=0.4781, IS r=0.6498, gap=0.1717) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  tig+tpca2+gpca2_EN: adjusted=0.4672 (LOO r=0.4672, IS r=0.6065, gap=0.1393) [F1=0.4074 QWK=0.3333 Acc=0.4667]
+  tig+gpca2_R10: adjusted=0.4634 (LOO r=0.4634, IS r=0.6001, gap=0.1367) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  tig+tpca2+gpca2_R10: adjusted=0.4567 (LOO r=0.4631, IS r=0.6260, gap=0.1629) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  tig+tpca3_EN: adjusted=0.4564 (LOO r=0.4564, IS r=0.5833, gap=0.1269) [F1=0.4329 QWK=0.3846 Acc=0.4667]
+  tig_nn+tpca2+gpca2_R20: adjusted=0.4510 (LOO r=0.4627, IS r=0.6361, gap=0.1734) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  tig+tpca2+gpca2_R20: adjusted=0.4509 (LOO r=0.4541, IS r=0.6105, gap=0.1564) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  tig+tpca2+gpca2_PLS2: adjusted=0.4444 (LOO r=0.4594, IS r=0.6394, gap=0.1800) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  tig_nn+tpca3_R10: adjusted=0.4110 (LOO r=0.4344, IS r=0.6313, gap=0.1969) [F1=0.3808 QWK=0.3200 Acc=0.4333]
+  tig+tpca3_R10: adjusted=0.4072 (LOO r=0.4194, IS r=0.5938, gap=0.1744) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  tig+tpca3_R5: adjusted=0.4066 (LOO r=0.4200, IS r=0.5969, gap=0.1769) [F1=0.3996 QWK=0.3333 Acc=0.4667]
+  tig+tpca3_R20: adjusted=0.4011 (LOO r=0.4123, IS r=0.5848, gap=0.1725) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tig_nn+tpca3+gpca2_R20: adjusted=0.3921 (LOO r=0.4268, IS r=0.6463, gap=0.2195) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  tig+tpca3_PLS2: adjusted=0.3788 (LOO r=0.4049, IS r=0.6071, gap=0.2022) [F1=0.4525 QWK=0.3077 Acc=0.5000]
+  tig+tpca3+gpca2_R20: adjusted=0.3659 (LOO r=0.3975, IS r=0.6107, gap=0.2132) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tig+tpca3+gpca2_R10: adjusted=0.3617 (LOO r=0.3999, IS r=0.6264, gap=0.2265) [F1=0.4074 QWK=0.3333 Acc=0.4667]
+  gland_frac_only: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  tpca5_PLS2: adjusted=0.2954 (LOO r=0.3665, IS r=0.6587, gap=0.2922) [F1=0.1997 QWK=0.0870 Acc=0.3000]
+  tpca2_R5: adjusted=0.1698 (LOO r=0.2393, IS r=0.5283, gap=0.2890) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpca3_R10: adjusted=0.1457 (LOO r=0.2121, IS r=0.4948, gap=0.2828) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  nn_dist_only: adjusted=-1.0000 (LOO r=-0.2346, IS r=0.1941, gap=0.4287) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tpca3_R5: adjusted=-1.0000 (LOO r=0.1713, IS r=0.5311, gap=0.3599) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tpca3_R10: adjusted=-1.0000 (LOO r=0.1491, IS r=0.5203, gap=0.3712) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tpca3_R20: adjusted=-1.0000 (LOO r=0.1041, IS r=0.4975, gap=0.3933) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tpca2_R10: adjusted=-1.0000 (LOO r=0.2158, IS r=0.5174, gap=0.3017) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tpca5_R10: adjusted=-1.0000 (LOO r=0.3465, IS r=0.6492, gap=0.3027) [F1=0.2185 QWK=0.0909 Acc=0.3333]
+  tpca5_R20: adjusted=-1.0000 (LOO r=0.3242, IS r=0.6354, gap=0.3113) [F1=0.2185 QWK=0.0909 Acc=0.3333]
+  gpca2_R5: adjusted=-1.0000 (LOO r=0.1335, IS r=0.4606, gap=0.3271) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpca2_R10: adjusted=-1.0000 (LOO r=0.1106, IS r=0.4541, gap=0.3435) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tpca3_PLS2: adjusted=-1.0000 (LOO r=0.1932, IS r=0.5407, gap=0.3475) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+
+BEST: tig+nn_R1 adjusted=0.5033

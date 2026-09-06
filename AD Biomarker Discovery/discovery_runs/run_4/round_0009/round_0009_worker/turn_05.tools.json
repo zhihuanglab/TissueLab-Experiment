@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho 'Shared tree'\nfind /shared -maxdepth 3 -type f | sed -n '1,120p'\necho 'Python version and sys.path'\npython - <<'PY'\nimport sys\nprint(sys.version)\nprint(sys.path)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"Shared tree\\n/shared/dataset_guide.md\\n/shared/._dataset_guide.md\\n/shared/cache/region_polygons/H19.33.004-A12-LFB.svs.zarr.json\\n/shared/cache/region_polygons/._H19.33.004-A12-LFB.svs.zarr.json\\n/shared/cache/region_polygons/H20.33.008-A12-LFB.svs.zarr.json\\n/shared/cache/region_polygons/._H20.33.008-A12-LFB.svs.zarr.json\\n/shared/cache/region_polygons/H20.33.013-A12-LFB.svs.zarr.json\\n/shared/cache/region_polygons/._H20.33.013-A12-LFB.svs.zarr.json\\n/shared/cache/region_polygons/H20.33.018-A12-LFB.svs\", \"stderr\": \"\"}"
+  }
+]

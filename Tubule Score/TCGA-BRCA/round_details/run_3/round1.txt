@@ -1,0 +1,48 @@
+Round 1 Details
+================================================================================
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_fraction: r=-0.4148 (p=0.0226)
+  gland_patch_count: r=+0.0521 (p=0.7846)
+  total_patches: r=+0.3047 (p=0.1016)
+  gland_prob_mean: r=-0.4148 (p=0.0226)
+  tumor_patch_count: r=+0.3282 (p=0.0766)
+  tumor_patch_fraction: r=-0.0527 (p=0.7820)
+  gland_to_tumor_ratio: r=-0.2657 (p=0.1559)
+  gland_mask_area_fraction: r=-0.2642 (p=0.1583)
+  gland_mask_prob_mean: r=-0.2336 (p=0.2141)
+  tumor_cell_fraction: r=+0.0715 (p=0.7074)
+  total_cells: r=+0.3185 (p=0.0862)
+
+================================================================================
+ALL CONFIGURATIONS (sorted by adjusted score):
+  gland_frac_only__Ridge_a1: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  gland_frac_only__ElasticNet: adjusted=0.2838 (LOO r=0.2838, IS r=0.4148, gap=0.1310) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gland_frac_only__Ridge_a10: adjusted=0.2829 (LOO r=0.2829, IS r=0.4148, gap=0.1319) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  best_3__Ridge_a1: adjusted=0.2471 (LOO r=0.2887, IS r=0.5218, gap=0.2331) [F1=0.3816 QWK=0.2308 Acc=0.4333]
+  minimal_2feat__Ridge_a1: adjusted=0.2456 (LOO r=0.2537, IS r=0.4199, gap=0.1662) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  minimal_2feat__Ridge_a10: adjusted=0.2439 (LOO r=0.2509, IS r=0.4150, gap=0.1640) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  minimal_2feat__ElasticNet: adjusted=0.2262 (LOO r=0.2398, IS r=0.4170, gap=0.1772) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  best_3__Ridge_a10: adjusted=0.2134 (LOO r=0.2641, IS r=0.5154, gap=0.2513) [F1=0.2134 QWK=0.0000 Acc=0.3333]
+  gland_features__Ridge_a10: adjusted=0.2044 (LOO r=0.2372, IS r=0.4527, gap=0.2155) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gland_features__Ridge_a1: adjusted=0.2018 (LOO r=0.2398, IS r=0.4658, gap=0.2260) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gland_features__ElasticNet: adjusted=0.1851 (LOO r=0.2206, IS r=0.4416, gap=0.2209) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  best_3__ElasticNet: adjusted=0.1395 (LOO r=0.2143, IS r=0.5140, gap=0.2997) [F1=0.2134 QWK=0.0000 Acc=0.3333]
+  mask_area_only__Ridge_a1: adjusted=-0.0032 (LOO r=0.0360, IS r=0.2642, gap=0.2282) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gland2tumor_only__Ridge_a1: adjusted=-0.0602 (LOO r=-0.0015, IS r=0.2657, gap=0.2673) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  mask_area_only__Ridge_a10: adjusted=-0.0636 (LOO r=-0.0043, IS r=0.2642, gap=0.2685) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gland_frac_only__RF_d3: adjusted=-1.0000 (LOO r=-0.0508, IS r=0.7293, gap=0.7801) [F1=0.3054 QWK=-0.0690 Acc=0.3667]
+  mask_area_only__ElasticNet: adjusted=-1.0000 (LOO r=-0.0484, IS r=0.2642, gap=0.3126) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  mask_area_only__RF_d3: adjusted=-1.0000 (LOO r=0.3880, IS r=0.8207, gap=0.4327) [F1=0.4432 QWK=0.3226 Acc=0.5000]
+  gland2tumor_only__Ridge_a10: adjusted=-1.0000 (LOO r=-0.0739, IS r=0.2657, gap=0.3396) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  gland2tumor_only__ElasticNet: adjusted=-1.0000 (LOO r=-0.1009, IS r=0.2657, gap=0.3666) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  gland2tumor_only__RF_d3: adjusted=-1.0000 (LOO r=0.1687, IS r=0.8060, gap=0.6373) [F1=0.3738 QWK=0.1290 Acc=0.4000]
+  minimal_2feat__RF_d3: adjusted=-1.0000 (LOO r=0.3573, IS r=0.8861, gap=0.5288) [F1=0.4866 QWK=0.3333 Acc=0.5333]
+  gland_features__RF_d3: adjusted=-1.0000 (LOO r=0.3270, IS r=0.9281, gap=0.6011) [F1=0.3303 QWK=0.0769 Acc=0.4000]
+  all_handcrafted__Ridge_a1: adjusted=-1.0000 (LOO r=0.2458, IS r=0.5526, gap=0.3068) [F1=0.1653 QWK=0.0000 Acc=0.2333]
+  all_handcrafted__Ridge_a10: adjusted=-1.0000 (LOO r=0.2353, IS r=0.5458, gap=0.3104) [F1=0.1994 QWK=0.0000 Acc=0.3000]
+  all_handcrafted__ElasticNet: adjusted=-1.0000 (LOO r=0.1666, IS r=0.5376, gap=0.3711) [F1=0.2134 QWK=0.0000 Acc=0.3333]
+  all_handcrafted__RF_d3: adjusted=-1.0000 (LOO r=0.3484, IS r=0.9336, gap=0.5852) [F1=0.4152 QWK=0.2963 Acc=0.4667]
+  best_3__RF_d3: adjusted=-1.0000 (LOO r=0.4020, IS r=0.9137, gap=0.5117) [F1=0.5044 QWK=0.4138 Acc=0.5333]
+
+BEST: gland_frac_only__Ridge_a1 adjusted=0.3028

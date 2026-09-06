@@ -1,0 +1,41 @@
+{
+  "hypothesis_family": "ca1_pyramidal_hotspot_exposure",
+  "best_variation": "candidate_variant_a",
+  "feature_column": "feature__candidate_variant_a",
+  "partial_r": -0.5927359235636277,
+  "selection_score": 0.5927359235636277,
+  "loo_predictive_r": 0.5431269928237348,
+  "is_loo_gap": 0.04960893073989292,
+  "penalty": 0.04960893073989292,
+  "adjusted_score": 0.5431269928237348,
+  "ranked_variations": [
+    {
+      "variation_name": "candidate_variant_a",
+      "description": "CA1 pyramidal fraction exposed to reactive-astrocyte hotspots minus CA1 pyramidal fraction exposed to baseline astrocyte hotspots; hotspot = at least 3 same-label neighbors within 70 px.",
+      "radius_px": 70.0,
+      "hotspot_k": 3,
+      "feature_column": "feature__candidate_variant_a",
+      "n_analyzable": 35,
+      "partial_r": -0.5927359235636277,
+      "selection_score": 0.5927359235636277,
+      "loo_predictive_r": 0.5431269928237348,
+      "is_loo_gap": 0.04960893073989292,
+      "penalty": 0.04960893073989292,
+      "adjusted_score": 0.5431269928237348
+    },
+    {
+      "variation_name": "candidate_variant_b",
+      "description": "Same exposure difference, with higher hotspot stringency: at least 4 same-label neighbors within 70 px.",
+      "radius_px": 70.0,
+      "hotspot_k": 4,
+      "feature_column": "feature__candidate_variant_b",
+      "n_analyzable": 35,
+      "partial_r": -0.5268731362910991,
+      "selection_score": 0.5268731362910991,
+      "loo_predictive_r": 0.4463500774372357,
+      "is_loo_gap": 0.0805230588538634,
+      "penalty": 0.0805230588538634,
+      "adjusted_score": 0.4463500774372357
+    }
+  ]
+}

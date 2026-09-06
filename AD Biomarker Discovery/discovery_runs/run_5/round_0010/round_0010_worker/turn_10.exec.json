@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "ok 1.17.1 2026.3.3\n",
+  "stderr": ""
+}

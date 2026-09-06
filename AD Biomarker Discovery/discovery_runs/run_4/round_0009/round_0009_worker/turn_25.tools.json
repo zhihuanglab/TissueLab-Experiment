@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nfrom pathlib import Path\npath=Path('/scratch/result.py')\ntext=path.read_text()\nold = '''        donor_table[\n            [\n                \"donor_id\",\n                feature_col,\n                \"ca1_pyramidal_n\",\n                \"ca1_reactive_astrocyte_n\",\n                \"ca1_corpora_amylacea_n\",\n                \"reactive_niche_pyramidal_n\",\n            ]\n        ],'''\nnew = '''        donor_table[\n            [\n                \"donor_id\",\n                \"ca1_pyramidal_n\",\n                \"ca1_reactive_astrocyte_n\",\n                \"ca1_corpora_amylacea_n\",\n                \"reactive_niche_pyramidal_n\",\n            ]\n        ],'''\nif old not in text:\n    raise SystemExit('pattern not found')\npath.write_text(text.replace(old,new))\nprint('patched merge columns')\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"patched merge columns\\n\", \"stderr\": \"\"}"
+  }
+]

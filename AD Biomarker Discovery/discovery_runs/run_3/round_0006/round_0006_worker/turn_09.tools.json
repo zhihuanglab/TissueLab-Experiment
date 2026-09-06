@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect, textwrap\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import artifacts\nfor name in ['write_donor_feature_table','write_results_payload','build_results_payload','validate_results_payload']:\n    fn=getattr(artifacts,name)\n    print('---', name, inspect.signature(fn))\n    print(textwrap.dedent('\\n'.join(inspect.getsource(fn).splitlines()[:120])))\n    print()\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- write_donor_feature_table (path: 'str | Path', table: 'pd.DataFrame', *, feature_column: 'str', outcome_column: 'str', covariates: 'list[str]', id_columns: 'list[str] | None' = None, extra_columns: 'list[str] | None' = None) -> 'Path'\\ndef write_donor_feature_table(\\n    path: str | Path,\\n    table: pd.DataFrame,\\n    *,\\n    feature_column: str,\\n    outcome_column: str,\\n    covariates: list[str],\\n    id_columns: list[str] | None = None,\\n    extra_columns: list[str] | None = None,\\n) -> Path:\\n   \", \"stderr\": \"\"}"
+  }
+]

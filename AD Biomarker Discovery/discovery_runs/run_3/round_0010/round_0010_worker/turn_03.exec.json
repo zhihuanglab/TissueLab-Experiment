@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "['cohort_summary', 'dataset_guide_excerpt', 'runtime_manifest', 'runtime_quickstart_excerpt', 'slide_manifest_head', 'worker_brief']\nworker_brief dict keys= ['accepted_panel', 'approach', 'baseline_variation', 'candidate_id', 'candidate_type', 'notes', 'rationale', 'round_id', 'scientific_question', 'variations', 'worker_name'] ... total 11\nruntime_manifest dict keys= ['cache_paths', 'generated_at_utc', 'modules', 'prompt_context', 'python_import_root', 'runtime_version', 'shared_root', 'template_path', 'template_paths'] ... total 9\ncohort_summary dict keys= ['cohort_path', 'cohort_rows', 'dataset_guide_excerpt', 'dataset_guide_present', 'slide_count'] ... total 5\nslide_manifest_head dict keys= ['cohort_rows', 'data_root', 'slide_count', 'slides'] ... total 4\nruntime_quickstart_excerpt str # Shared Runtime Quickstart\n\n- Import helpers from `/shared/lib`. `PYTHONPATH` already includes it.\n- Generic starter te...\ndataset_guide_excerpt str # Dataset Guide: SEA-AD LFB Hippocampus Training Set\n\n## Overview of the dataset\n\nThis dataset contains **35 paired whol...\n",
+  "stderr": ""
+}

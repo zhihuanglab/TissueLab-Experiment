@@ -1,0 +1,39 @@
+{
+  "hypothesis_family": "ca1_reactive_astrocyte_microclustering",
+  "best_variation": "reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+  "feature_column": "feature__reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+  "n_analyzable": 35,
+  "n_total": 35,
+  "partial_r": -0.5125051225713363,
+  "selection_score": 0.5125051225713363,
+  "loo_predictive_r": 0.4641507689293291,
+  "is_loo_gap": 0.048354353642007186,
+  "penalty": 0.048354353642007186,
+  "adjusted_score": 0.4641507689293291,
+  "ranked_variations": [
+    {
+      "variation_name": "reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+      "feature_column": "feature__reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+      "n_analyzable": 35,
+      "n_total": 35,
+      "partial_r": -0.5125051225713363,
+      "selection_score": 0.5125051225713363,
+      "loo_predictive_r": 0.4641507689293291,
+      "is_loo_gap": 0.048354353642007186,
+      "penalty": 0.048354353642007186,
+      "adjusted_score": 0.4641507689293291
+    },
+    {
+      "variation_name": "reactive_minus_astrocyte_microcluster_fraction_r90px_k3",
+      "feature_column": "feature__reactive_minus_astrocyte_microcluster_fraction_r90px_k3",
+      "n_analyzable": 35,
+      "n_total": 35,
+      "partial_r": -0.48531481972275625,
+      "selection_score": 0.48531481972275625,
+      "loo_predictive_r": 0.42804513582128445,
+      "is_loo_gap": 0.0572696839014718,
+      "penalty": 0.0572696839014718,
+      "adjusted_score": 0.42804513582128445
+    }
+  ]
+}

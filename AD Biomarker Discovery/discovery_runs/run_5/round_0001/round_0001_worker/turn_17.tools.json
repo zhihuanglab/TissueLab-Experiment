@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport pandas as pd\ndf=pd.read_csv('/scratch/donor_feature_table.csv')\nprint(df.columns.tolist())\nprint(df.head(2).to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['donor_id', 'slide_name', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex_binary', 'ca1_reactive_astro_fraction', 'ca1_reactive_astro_n', 'ca1_astro_lineage_n', 'ca1_region_cells_n']\\n  donor_id                  slide_name  slope_zmem0  max_age_vis  braak_numeric  cerad_ordinal  sex_binary  ca1_reactive_astro_fraction  ca1_reactive_astro_n  ca1_astro_lineage_n  ca1_region_cells_n\\nH19.33.004 H19.33.004-A12-LFB.svs.zarr    -0.058769         80.0            4.0            0.0  \", \"stderr\": \"\"}"
+  }
+]

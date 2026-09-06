@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "HYPOTHESIS FAMILY: Program\nBEST VARIATION: planned_local_sweep_fallback\n  IS partial r:      0.0000\n  Selection score:   0.0000\n  LOO predictive r:  0.0000  (diagnostic)\n  IS-LOO Gap:        0.0000  (penalty=0.0000)\n  Adjusted Score:    0.0000\n\nRANKED VARIATIONS:\n  variation_name  partial_r  selection_score  loo_predictive_r\n  planned_local_sweep_fallback  0.0000  0.0000  0.0000\n\nPER-DONOR (LOO):\n  donor_id  outcome  predicted  [key feature values]\n\n-rwx------ 1 root root 1818 Apr 20 22:59 /scratch/report.md\n-rwxr-xr-x 1 root root 1729 Apr 20 22:59 /scratch/result.py\n-rwx------ 1 root root  730 Apr 20 22:59 /scratch/results.json\n",
+  "stderr": ""
+}

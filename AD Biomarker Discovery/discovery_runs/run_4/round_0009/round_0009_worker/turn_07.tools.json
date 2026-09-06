@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '261,520p' /data/autoresearch_runs/run_20260421_014751_94b13b/round_0008/round_0008_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"    return df.loc[:, cols].replace([np.inf, -np.inf], np.nan).dropna().reset_index(drop=True)\\n\\n\\ndef _loo_predictions(df: pd.DataFrame, feature_col: str) -> tuple[float, pd.DataFrame]:\\n    frame = _clean_analysis_frame(df, feature_col)\\n    rows: list[dict[str, Any]] = []\\n    pred_resid = []\\n    actual_resid = []\\n\\n    for i in range(len(frame)):\\n        train = frame.drop(index=i).reset_index(drop=True)\\n        test = frame.iloc[[i]].reset_index(drop=True)\\n\\n        x_train_conf = _design_matrix(tr\", \"stderr\": \"\"}"
+  }
+]

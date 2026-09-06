@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "(df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]', id_col: 'str | None' = None) -> 'pd.DataFrame'\ndef leave_one_out_partial_correlation(\n    df: pd.DataFrame,\n    *,\n    feature_col: str,\n    outcome_col: str,\n    confounds: list[str],\n    id_col: str | None = None,\n) -> pd.DataFrame:\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds, *( [id_col] if id_col else [] )]).reset_index(drop=True)\n    base = partial_correlation(\n        frame,\n        feature_col=feature_col,\n        outcome_col=outcome_col,\n        confounds=confounds,\n    )\n    rows = []\n    for idx in range(len(frame)):\n        reduced = frame.drop(index=idx).reset_index(drop=True)\n        result = partial_correlation(\n            reduced,\n            feature_col=feature_col,\n            outcome_col=outcome_col,\n            confounds=confounds,\n        )\n        row = {\n            \"index\": idx,\n            \"partial_r\": result[\"partial_r\"],\n            \"delta_from_full\": result[\"partial_r\"] - base[\"partial_r\"],\n        }\n        if id_col:\n            row[id_col] = frame.loc[idx, id_col]\n        rows.append(row)\n    return pd.DataFrame(rows)\n\n",
+  "stderr": ""
+}

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "   326\t        if frame.empty:\n   327\t            return \"none\"\n   328\t        items = []\n   329\t        for _, row in frame.iterrows():\n   330\t            items.append(\n   331\t                f'{row[\"donor_id\"]} (err={row[\"error\"]:+.4f}, '\n   332\t                f'braak={int(row[\"braak_numeric\"]) if pd.notna(row[\"braak_numeric\"]) else \"NA\"}, '\n   333\t                f'cerad={int(row[\"cerad_ordinal\"]) if pd.notna(row[\"cerad_ordinal\"]) else \"NA\"}, '\n   334\t                f'{row[\"cognitive_status\"]})'\n   335\t            )\n   336\t        return \", \".join(items)\n   337\t\n   338\t    mean_under_prox = float(under[prox_col].mean()) if (not under.empty and prox_col in under.columns) else float(\"nan\")\n   339\t    mean_over_prox = float(over[prox_col].mean()) if (not over.empty and prox_col in over.columns) else float(\"nan\")\n   340\t    mean_under_braak = float(under[\"braak_numeric\"].mean()) if (not under.empty and \"braak_numeric\" in under.columns) else float(\"nan\")\n   341\t    mean_over_braak = float(over[\"braak_numeric\"].mean()) if (not over.empty and \"braak_numeric\" in over.columns) else float(\"nan\")\n   342\t\n   343\t    findings_2 = []\n   344\t    for row in other_ranked:\n",
+  "stderr": ""
+}

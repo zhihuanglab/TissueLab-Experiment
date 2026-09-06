@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfind /data/autoresearch_runs -maxdepth 4 -path '*/round_0007/*' -type f | sed -n '1,40p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/data/autoresearch_runs/run_20260406_110805_82cf2b/round_0007/coordinator_plan.json\\n/data/autoresearch_runs/run_20260406_110805_82cf2b/round_0007/._coordinator_plan.json\\n/data/autoresearch_runs/run_20260406_110805_82cf2b/round_0007/Worker 1/._sandbox\\n/data/autoresearch_runs/run_20260406_110805_82cf2b/round_0007/Worker 1/turn_01.prompt.txt\\n/data/autoresearch_runs/run_20260406_110805_82cf2b/round_0007/Worker 1/._turn_01.prompt.txt\\n/data/autoresearch_runs/run_20260406_110805_82cf2b/round_0007/Worke\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "best_panel_score": 0.7052,
+  "members": [
+    {
+      "slot": 1,
+      "feature_name": "ca1_reactive_astro_fraction",
+      "round_id": 1,
+      "panel_candidate_score": 0.4914,
+      "delta_panel_score": null,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/result.py"
+    },
+    {
+      "slot": 2,
+      "feature_name": "ca1_pyramidal_near_reactive_astro_fraction_30um",
+      "round_id": 2,
+      "panel_candidate_score": 0.5513,
+      "delta_panel_score": 0.0599,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/result.py"
+    },
+    {
+      "slot": 3,
+      "feature_name": "ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um",
+      "round_id": 3,
+      "panel_candidate_score": 0.5984,
+      "delta_panel_score": 0.0471,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/result.py"
+    },
+    {
+      "slot": 4,
+      "feature_name": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+      "round_id": 4,
+      "panel_candidate_score": 0.6307,
+      "delta_panel_score": 0.0323,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/result.py"
+    },
+    {
+      "slot": 5,
+      "feature_name": "ca1_peripyramidal_astro_reactivity_index_30um",
+      "round_id": 5,
+      "panel_candidate_score": 0.6323,
+      "delta_panel_score": 0.0016,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker/result.py"
+    },
+    {
+      "slot": 6,
+      "feature_name": "ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um",
+      "round_id": 6,
+      "panel_candidate_score": 0.6347,
+      "delta_panel_score": 0.0024,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0006/round_0006_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0006/round_0006_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0006/round_0006_worker/result.py"
+    },
+    {
+      "slot": 7,
+      "feature_name": "ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um",
+      "round_id": 7,
+      "panel_candidate_score": 0.6491,
+      "delta_panel_score": 0.0144,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0007/round_0007_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0007/round_0007_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0007/round_0007_worker/result.py"
+    },
+    {
+      "slot": 8,
+      "feature_name": "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um",
+      "round_id": 8,
+      "panel_candidate_score": 0.659,
+      "delta_panel_score": 0.01,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0008/round_0008_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0008/round_0008_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0008/round_0008_worker/result.py"
+    },
+    {
+      "slot": 9,
+      "feature_name": "ca1_ra_exposed_pyramidal_lym_ge1_fraction_25um",
+      "round_id": 9,
+      "panel_candidate_score": 0.6594,
+      "delta_panel_score": 0.0004,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0009/round_0009_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0009/round_0009_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0009/round_0009_worker/result.py"
+    },
+    {
+      "slot": 10,
+      "feature_name": "ca1_peripyramidal_ra_lymphocyte_area_burden_20um",
+      "round_id": 10,
+      "panel_candidate_score": 0.7052,
+      "delta_panel_score": 0.0458,
+      "status": "active",
+      "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0010/round_0010_worker",
+      "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0010/round_0010_worker/results.json",
+      "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0010/round_0010_worker/result.py"
+    }
+  ]
+}

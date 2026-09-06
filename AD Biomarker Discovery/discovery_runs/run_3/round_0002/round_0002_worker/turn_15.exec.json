@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "  File \"/scratch/result.py\", line 351\n    )\n    ^\nSyntaxError: f-string expression part cannot include a backslash\n"
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "grep -E '^(CANONICAL_VARIATION|FEATURE_NAME|FEATURE_COLUMN) =' /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"CANONICAL_VARIATION = \\\"candidate_variant_a\\\"\\nFEATURE_NAME = \\\"ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um\\\"\\nFEATURE_COLUMN = \\\"ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um\\\"\\n\", \"stderr\": \"\"}"
+  }
+]

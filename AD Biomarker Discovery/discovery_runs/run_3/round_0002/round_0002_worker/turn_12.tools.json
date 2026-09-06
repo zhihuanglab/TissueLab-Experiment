@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"def write_donor_feature_table\\|def write_results_payload\" -n /shared/lib/shared_analysis/artifacts.py\nsed -n '260,380p' /shared/lib/shared_analysis/artifacts.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"332:def write_donor_feature_table(\\n363:def write_results_payload(path: str | Path, results: dict[str, Any]) -> Path:\\n            \\\"incumbent_score\\\": coerced[\\\"incumbent_score\\\"],\\n            \\\"coverage_gate_passed\\\": coerced[\\\"coverage_gate_passed\\\"],\\n            \\\"bootstrap_stability_passed\\\": coerced[\\\"bootstrap_stability_passed\\\"],\\n            \\\"bootstrap_median_partial_r\\\": coerced[\\\"bootstrap_median_partial_r\\\"],\\n            \\\"bootstrap_sign_consistency\\\": coerced[\\\"bootstrap_sign_consistency\\\"],\\n            \", \"stderr\": \"\"}"
+  }
+]

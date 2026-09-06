@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- results.json summary ---'\npython - <<'PY'\nimport json\nwith open('/scratch/results.json') as f:\n    obj=json.load(f)\nfor k in ['best_variation','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','loo_unstable_count','loo_max_shift']:\n    print(k, obj[k])\nprint('ranked len', len(obj['ranked_variations']))\nprint('best per_donor sample', obj['ranked_variations'][0]['per_donor_loo'][:2])\nPY\necho '--- report.md ---'\nsed -n '1,240p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- results.json summary ---\\nbest_variation candidate_variant_a\\nfeature_column ca1_peripyramidal_astro_reactivity_index_30um\\npartial_r -0.48661801692015805\\nselection_score 0.48661801692015805\\nloo_predictive_r 0.33883668941742745\\nis_loo_gap 0.8254547063375854\\nadjusted_score -0.3388366894174274\\nloo_unstable_count 1\\nloo_max_shift 0.10148993822578312\\nranked len 2\\nbest per_donor sample [{'donor_id': 'H19.33.004', 'outcome': -0.0587685, 'predicted': -0.07321863369092672, 'predicted_residual': -0.00264\", \"stderr\": \"\"}"
+  }
+]

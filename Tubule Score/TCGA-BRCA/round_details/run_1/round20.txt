@@ -1,0 +1,139 @@
+Round 20 Details
+================================================================================
+
+APPROACH: Test biomedparse morphological features (connected components)
+CHANGE FROM R19: Added log_n_sig_components, log_mean_component_area, log_max_component_area, log_median_component_area, component_area_cv from connected component analysis of biomedparse gland masks
+
+KEY QUESTIONS:
+  1. Do morphological features capture tubule structure info beyond gland ratio?
+  2. Should they supplement or replace bp_gland_ratio?
+  3. Which morphological feature is most informative?
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_ratio: r=-0.415 (p=0.023)
+  bp_gland_ratio: r=-0.307 (p=0.099)
+  log_n_sig_components: r=+0.213 (p=0.258)
+  log_mean_component_area: r=-0.070 (p=0.714)
+  log_max_component_area: r=+0.014 (p=0.941)
+  log_median_component_area: r=-0.185 (p=0.327)
+  component_area_cv: r=+0.047 (p=0.804)
+
+Gland PCA explained variance: 0.9589
+Tumor PCA explained variance: 0.9666
+
+FACTOR ANALYSIS SUMMARY:
+  A (2HC baseline)                   : A_2HC_g4t3_EN01                               adj=0.7705 LOO_r=0.770 gap=0.150
+  B (+log_n_comp)                    : B_+log_n_comp_g4t3_EN01                       adj=0.7483 LOO_r=0.755 gap=0.164
+  C (+log_mean_area)                 : C_+log_mean_area_g4t3_EN01                    adj=0.7384 LOO_r=0.749 gap=0.171
+  D (+log_max_area)                  : D_+log_max_area_g4t3_EN01                     adj=0.7707 LOO_r=0.777 gap=0.162
+  E (+log_median_area)               : E_+log_med_area_g4t3_EN01                     adj=0.7809 LOO_r=0.781 gap=0.142
+  F (+area_cv)                       : F_+area_cv_g4t3_EN01                          adj=0.7887 LOO_r=0.789 gap=0.150
+  G (gr+maxA replace bp)             : G_gr+maxA_g4t3_EN01                           adj=0.6965 LOO_r=0.715 gap=0.187
+  H (gr+meanA replace bp)            : H_gr+meanA_g4t3_Rdg2                          adj=0.7179 LOO_r=0.731 gap=0.176
+  I (4HC gr+bp+max+mean)             : I_4HC_g4t3_EN01                               adj=0.7598 LOO_r=0.771 gap=0.173
+  J (gr+ncomp+maxA)                  : J_gr+ncomp+maxA_g4t3_EN01                     adj=0.6802 LOO_r=0.704 gap=0.198
+  K (4HC gr+bp+ncomp+maxA)           : K_4HC_ncomp_maxA_g4t3_EN01                    adj=0.7663 LOO_r=0.775 gap=0.168
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  F_+area_cv_g4t3_EN01: adjusted=0.7887 (LOO r=0.789, IS r=0.939, gap=0.150) [F1=0.710 QWK=0.743]
+  F_+area_cv_g4t3_Rdg2: adjusted=0.7869 (LOO r=0.787, IS r=0.935, gap=0.149) [F1=0.708 QWK=0.727]
+  E_+log_med_area_g4t3_EN01: adjusted=0.7809 (LOO r=0.781, IS r=0.923, gap=0.142) [F1=0.679 QWK=0.722]
+  D3_+log_max_g4t3_EN0.01_0.7: adjusted=0.7709 (LOO r=0.777, IS r=0.938, gap=0.161) [F1=0.705 QWK=0.727]
+  D_+log_max_area_g4t3_EN01: adjusted=0.7707 (LOO r=0.777, IS r=0.938, gap=0.162) [F1=0.705 QWK=0.727]
+  A_2HC_g4t3_EN01: adjusted=0.7705 (LOO r=0.770, IS r=0.920, gap=0.150) [F1=0.679 QWK=0.722]
+  A2_2HC_g4t3_EN0.005_0.5: adjusted=0.7703 (LOO r=0.771, IS r=0.921, gap=0.151) [F1=0.679 QWK=0.722]
+  A2_2HC_g4t3_EN0.01_0.7: adjusted=0.7702 (LOO r=0.770, IS r=0.920, gap=0.149) [F1=0.679 QWK=0.722]
+  A2_2HC_g4t3_EN0.01_0.3: adjusted=0.7698 (LOO r=0.770, IS r=0.920, gap=0.150) [F1=0.679 QWK=0.722]
+  D3_+log_max_g4t3_EN0.01_0.3: adjusted=0.7689 (LOO r=0.776, IS r=0.939, gap=0.163) [F1=0.705 QWK=0.727]
+  E_+log_med_area_g4t3_Rdg2: adjusted=0.7686 (LOO r=0.769, IS r=0.920, gap=0.151) [F1=0.742 QWK=0.778]
+  D3_+log_max_g4t3_EN0.005_0.5: adjusted=0.7670 (LOO r=0.775, IS r=0.940, gap=0.165) [F1=0.676 QWK=0.706]
+  K_4HC_ncomp_maxA_g4t3_EN01: adjusted=0.7663 (LOO r=0.775, IS r=0.944, gap=0.168) [F1=0.696 QWK=0.727]
+  A2_2HC_g4t3_EN0.02_0.5: adjusted=0.7652 (LOO r=0.766, IS r=0.918, gap=0.152) [F1=0.676 QWK=0.706]
+  D3_+log_max_g4t3_EN0.02_0.5: adjusted=0.7645 (LOO r=0.771, IS r=0.935, gap=0.164) [F1=0.667 QWK=0.688]
+  D2_+log_max_g4t4_Rdg2: adjusted=0.7635 (LOO r=0.771, IS r=0.935, gap=0.164) [F1=0.639 QWK=0.667]
+  I_4HC_g4t3_EN01: adjusted=0.7598 (LOO r=0.771, IS r=0.944, gap=0.173) [F1=0.642 QWK=0.686]
+  D2_+log_max_g4t4_EN01: adjusted=0.7588 (LOO r=0.770, IS r=0.941, gap=0.171) [F1=0.676 QWK=0.706]
+  D_+log_max_area_g4t3_Rdg2: adjusted=0.7586 (LOO r=0.767, IS r=0.933, gap=0.166) [F1=0.741 QWK=0.765]
+  A_2HC_g4t3_Rdg2: adjusted=0.7584 (LOO r=0.761, IS r=0.917, gap=0.156) [F1=0.679 QWK=0.722]
+  D_+log_max_area_g4t3_Rdg3: adjusted=0.7486 (LOO r=0.759, IS r=0.929, gap=0.170) [F1=0.673 QWK=0.688]
+  B_+log_n_comp_g4t3_EN01: adjusted=0.7483 (LOO r=0.755, IS r=0.919, gap=0.164) [F1=0.644 QWK=0.611]
+  A2_2HC_g4t3_EN0.05_0.3: adjusted=0.7470 (LOO r=0.753, IS r=0.913, gap=0.161) [F1=0.642 QWK=0.686]
+  K_4HC_ncomp_maxA_g4t3_Rdg3: adjusted=0.7441 (LOO r=0.756, IS r=0.931, gap=0.175) [F1=0.667 QWK=0.688]
+  B_+log_n_comp_g4t3_Rdg2: adjusted=0.7413 (LOO r=0.750, IS r=0.917, gap=0.167) [F1=0.679 QWK=0.722]
+  D3_+log_max_g4t3_EN0.05_0.3: adjusted=0.7403 (LOO r=0.753, IS r=0.927, gap=0.175) [F1=0.667 QWK=0.688]
+  I_4HC_g4t3_Rdg3: adjusted=0.7400 (LOO r=0.754, IS r=0.933, gap=0.179) [F1=0.609 QWK=0.625]
+  C_+log_mean_area_g4t3_EN01: adjusted=0.7384 (LOO r=0.749, IS r=0.920, gap=0.171) [F1=0.646 QWK=0.686]
+  B_+log_n_comp_g4t3_Rdg3: adjusted=0.7363 (LOO r=0.746, IS r=0.914, gap=0.168) [F1=0.679 QWK=0.722]
+  C_+log_mean_area_g4t3_Rdg2: adjusted=0.7306 (LOO r=0.743, IS r=0.917, gap=0.174) [F1=0.611 QWK=0.647]
+  C_+log_mean_area_g4t3_Rdg3: adjusted=0.7270 (LOO r=0.739, IS r=0.914, gap=0.174) [F1=0.710 QWK=0.743]
+  I_4HC_g4t3_Rdg5: adjusted=0.7212 (LOO r=0.739, IS r=0.925, gap=0.186) [F1=0.609 QWK=0.625]
+  K_4HC_ncomp_maxA_g4t3_Rdg5: adjusted=0.7205 (LOO r=0.738, IS r=0.922, gap=0.184) [F1=0.600 QWK=0.600]
+  H_gr+meanA_g4t3_Rdg2: adjusted=0.7179 (LOO r=0.731, IS r=0.907, gap=0.176) [F1=0.579 QWK=0.629]
+  C2_+log_mean_g4t2_EN01: adjusted=0.7178 (LOO r=0.731, IS r=0.907, gap=0.176) [F1=0.604 QWK=0.625]
+  H_gr+meanA_g4t3_EN01: adjusted=0.7161 (LOO r=0.730, IS r=0.908, gap=0.178) [F1=0.643 QWK=0.703]
+  C2_+log_mean_g4t4_EN01: adjusted=0.7145 (LOO r=0.733, IS r=0.921, gap=0.187) [F1=0.646 QWK=0.686]
+  D2_+log_max_g4t2_EN01: adjusted=0.7087 (LOO r=0.727, IS r=0.915, gap=0.188) [F1=0.633 QWK=0.645]
+  D2_+log_max_g4t2_Rdg2: adjusted=0.7026 (LOO r=0.721, IS r=0.906, gap=0.186) [F1=0.604 QWK=0.625]
+  D2_+log_max_g5t3_EN01: adjusted=0.6974 (LOO r=0.731, IS r=0.947, gap=0.217) [F1=0.702 QWK=0.710]
+  G2_gr+maxA_g4t4_EN01: adjusted=0.6969 (LOO r=0.717, IS r=0.907, gap=0.190) [F1=0.580 QWK=0.629]
+  G_gr+maxA_g4t3_EN01: adjusted=0.6965 (LOO r=0.715, IS r=0.903, gap=0.187) [F1=0.612 QWK=0.667]
+  G_gr+maxA_g4t3_Rdg3: adjusted=0.6927 (LOO r=0.712, IS r=0.902, gap=0.189) [F1=0.579 QWK=0.629]
+  G_gr+maxA_g4t3_Rdg2: adjusted=0.6922 (LOO r=0.712, IS r=0.903, gap=0.190) [F1=0.612 QWK=0.667]
+  D2_+log_max_g5t3_Rdg2: adjusted=0.6842 (LOO r=0.719, IS r=0.939, gap=0.220) [F1=0.600 QWK=0.600]
+  J_gr+ncomp+maxA_g4t3_EN01: adjusted=0.6802 (LOO r=0.704, IS r=0.903, gap=0.198) [F1=0.611 QWK=0.667]
+  J_gr+ncomp+maxA_g4t3_Rdg2: adjusted=0.6793 (LOO r=0.704, IS r=0.903, gap=0.199) [F1=0.579 QWK=0.629]
+  G2_gr+maxA_g4t2_EN01: adjusted=0.6499 (LOO r=0.674, IS r=0.872, gap=0.198) [F1=0.580 QWK=0.629]
+  C2_+log_mean_g5t3_EN01: adjusted=0.6207 (LOO r=0.673, IS r=0.929, gap=0.255) [F1=0.607 QWK=0.625]
+  G2_gr+maxA_g5t3_EN01: adjusted=0.5690 (LOO r=0.630, IS r=0.903, gap=0.273) [F1=0.541 QWK=0.514]
+  D2_+log_max_g3t3_EN01: adjusted=-1.0000 (LOO r=0.466, IS r=0.857, gap=0.390) [F1=0.459 QWK=0.424]
+  D2_+log_max_g3t3_Rdg2: adjusted=-1.0000 (LOO r=0.495, IS r=0.855, gap=0.360) [F1=0.428 QWK=0.375]
+  C2_+log_mean_g3t3_EN01: adjusted=-1.0000 (LOO r=0.470, IS r=0.842, gap=0.372) [F1=0.459 QWK=0.424]
+  G2_gr+maxA_g3t3_EN01: adjusted=-1.0000 (LOO r=0.482, IS r=0.841, gap=0.360) [F1=0.393 QWK=0.323]
+
+BEST: F_+area_cv_g4t3_EN01 adjusted=0.7887
+Selected gland PCs (IS): [1, 5, 9, 16]
+Selected tumor PCs (IS): [1, 4, 7]
+Model: elasticnet, params={'alpha': 0.01, 'l1_ratio': 0.5}
+
+PER-CASE LOO PREDICTIONS:
+  TCGA-A2-A0CS         GT=2 pred=2.027 cls=2 ok gr=0.511 bp=0.0292 lnc=8.30 lma=5.87 lxa=9.17
+  TCGA-A2-A0ET         GT=2 pred=2.444 cls=2 ok gr=0.112 bp=0.0264 lnc=6.98 lma=7.10 lxa=10.73
+  TCGA-A7-A0D9         GT=2 pred=2.579 cls=3 MISS gr=0.501 bp=0.0275 lnc=6.16 lma=6.14 lxa=9.28
+  TCGA-A7-A3IY         GT=1 pred=1.255 cls=1 ok gr=0.509 bp=0.0454 lnc=5.11 lma=7.68 lxa=9.96
+  TCGA-AC-A23E         GT=1 pred=1.674 cls=2 MISS gr=0.438 bp=0.0325 lnc=6.55 lma=6.53 lxa=9.86
+  TCGA-AC-A2FM         GT=2 pred=2.277 cls=2 ok gr=0.080 bp=0.0294 lnc=6.69 lma=6.39 lxa=9.77
+  TCGA-AC-A3TN         GT=1 pred=1.475 cls=1 ok gr=0.224 bp=0.0241 lnc=6.38 lma=6.57 lxa=9.01
+  TCGA-AC-A7VB         GT=2 pred=2.027 cls=2 ok gr=0.107 bp=0.0222 lnc=5.68 lma=6.94 lxa=9.45
+  TCGA-AR-A0U4         GT=3 pred=1.854 cls=2 MISS gr=0.055 bp=0.0187 lnc=7.31 lma=6.76 lxa=10.10
+  TCGA-AR-A1AR         GT=3 pred=2.616 cls=3 ok gr=0.032 bp=0.0126 lnc=6.08 lma=6.66 lxa=10.31
+  TCGA-AR-A2LO         GT=3 pred=2.808 cls=3 ok gr=0.119 bp=0.0152 lnc=6.62 lma=6.40 lxa=9.37
+  TCGA-BH-A0B8         GT=3 pred=1.894 cls=2 MISS gr=0.105 bp=0.0317 lnc=7.06 lma=6.60 lxa=9.98
+  TCGA-BH-A0C3         GT=3 pred=2.373 cls=2 MISS gr=0.167 bp=0.0235 lnc=7.06 lma=6.75 lxa=9.43
+  TCGA-BH-A0DX         GT=1 pred=1.312 cls=1 ok gr=0.081 bp=0.0156 lnc=6.64 lma=6.12 lxa=8.84
+  TCGA-BH-A0W4         GT=1 pred=1.330 cls=1 ok gr=0.260 bp=0.0208 lnc=7.72 lma=6.36 lxa=9.69
+  TCGA-BH-A42V         GT=2 pred=2.369 cls=2 ok gr=0.236 bp=0.0221 lnc=6.80 lma=6.67 lxa=10.33
+  TCGA-D8-A1XD         GT=2 pred=2.290 cls=2 ok gr=0.187 bp=0.0674 lnc=7.92 lma=7.10 lxa=10.58
+  TCGA-D8-A1XT         GT=3 pred=2.512 cls=3 ok gr=0.160 bp=0.0258 lnc=7.87 lma=6.28 lxa=9.85
+  TCGA-D8-A27N         GT=3 pred=2.733 cls=3 ok gr=0.290 bp=0.0319 lnc=7.42 lma=6.55 lxa=9.99
+  TCGA-D8-A27P         GT=1 pred=1.591 cls=2 MISS gr=0.197 bp=0.0445 lnc=6.80 lma=7.30 lxa=10.74
+  TCGA-D8-A4Z1         GT=3 pred=2.828 cls=3 ok gr=0.085 bp=0.0154 lnc=6.49 lma=6.18 lxa=8.70
+  TCGA-D8-A73X         GT=1 pred=1.110 cls=1 ok gr=0.353 bp=0.0432 lnc=7.18 lma=6.19 lxa=9.77
+  TCGA-E2-A10E         GT=2 pred=2.697 cls=3 MISS gr=0.175 bp=0.0200 lnc=7.69 lma=6.34 lxa=9.78
+  TCGA-E2-A14W         GT=3 pred=2.583 cls=3 ok gr=0.063 bp=0.0381 lnc=6.56 lma=6.79 lxa=10.51
+  TCGA-E2-A1B1         GT=1 pred=1.000 cls=1 ok gr=0.158 bp=0.0107 lnc=6.30 lma=5.75 lxa=8.46
+  TCGA-E2-A1IG         GT=2 pred=1.732 cls=2 ok gr=0.481 bp=0.0270 lnc=8.48 lma=6.00 lxa=10.33
+  TCGA-EW-A1IY         GT=2 pred=1.980 cls=2 ok gr=0.194 bp=0.0196 lnc=7.68 lma=6.22 lxa=9.68
+  TCGA-EW-A1PH         GT=3 pred=2.241 cls=2 MISS gr=0.235 bp=0.0265 lnc=7.94 lma=7.14 lxa=10.85
+  TCGA-LL-A5YO         GT=1 pred=1.943 cls=2 MISS gr=0.093 bp=0.0343 lnc=7.49 lma=6.88 lxa=11.12
+  TCGA-OL-A5RX         GT=1 pred=1.000 cls=1 ok gr=0.814 bp=0.0778 lnc=6.20 lma=7.52 lxa=11.40
+
+ERROR ANALYSIS:
+  TCGA-A7-A0D9: GT=2 pred=2.579 cls=3 (over) gr=0.501 bp=0.0275 lnc=6.16 lma=6.14 lxa=9.28
+  TCGA-AC-A23E: GT=1 pred=1.674 cls=2 (over) gr=0.438 bp=0.0325 lnc=6.55 lma=6.53 lxa=9.86
+  TCGA-AR-A0U4: GT=3 pred=1.854 cls=2 (under) gr=0.055 bp=0.0187 lnc=7.31 lma=6.76 lxa=10.10
+  TCGA-BH-A0B8: GT=3 pred=1.894 cls=2 (under) gr=0.105 bp=0.0317 lnc=7.06 lma=6.60 lxa=9.98
+  TCGA-BH-A0C3: GT=3 pred=2.373 cls=2 (under) gr=0.167 bp=0.0235 lnc=7.06 lma=6.75 lxa=9.43
+  TCGA-D8-A27P: GT=1 pred=1.591 cls=2 (over) gr=0.197 bp=0.0445 lnc=6.80 lma=7.30 lxa=10.74
+  TCGA-E2-A10E: GT=2 pred=2.697 cls=3 (over) gr=0.175 bp=0.0200 lnc=7.69 lma=6.34 lxa=9.78
+  TCGA-EW-A1PH: GT=3 pred=2.241 cls=2 (under) gr=0.235 bp=0.0265 lnc=7.94 lma=7.14 lxa=10.85
+  TCGA-LL-A5YO: GT=1 pred=1.943 cls=2 (over) gr=0.093 bp=0.0343 lnc=7.49 lma=6.88 lxa=11.12

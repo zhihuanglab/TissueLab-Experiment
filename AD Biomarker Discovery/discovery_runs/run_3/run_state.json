@@ -1,0 +1,10 @@
+{
+  "next_round_id": 11,
+  "config": {
+    "rounds": 10,
+    "model": "gpt-5.4",
+    "reasoning_effort": "high",
+    "worker_wall_clock_sec": 900,
+    "primary_outcome": "slope_zmem0"
+  }
+}

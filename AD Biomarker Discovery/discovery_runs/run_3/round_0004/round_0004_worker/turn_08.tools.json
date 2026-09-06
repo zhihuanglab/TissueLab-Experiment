@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport json, os, glob\npaths = sorted(Path('/data/autoresearch_runs').rglob('round_0003_worker/results.json'))\nprint(paths[:3])\nif paths:\n    p=paths[0]\n    print('using',p)\n    print(p.read_text()[:2000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"[PosixPath('/data/autoresearch_runs/run_20260410_201937_2df939/round_0003/round_0003_worker/results.json'), PosixPath('/data/autoresearch_runs/run_20260410_234232_33d000/round_0003/round_0003_worker/results.json'), PosixPath('/data/autoresearch_runs/run_20260411_095807_373b21/round_0003/round_0003_worker/results.json')]\\nusing /data/autoresearch_runs/run_20260410_201937_2df939/round_0003/round_0003_worker/results.json\\n{\\n  \\\"status\\\": \\\"unknown\\\",\\n  \\\"feature_name\\\": \\\"feature_value\\\",\\n  \\\"outcome\\\": \\\"\\\",\\n  \", \"stderr\": \"\"}"
+  }
+]

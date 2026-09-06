@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "def load_region_annotations(zarr_path: str | Path, *, scale: float = 16.0) -> list[dict[str, Any]]:\n    root = open_slide_zarr(zarr_path)\n    annotations = root[\"CustomAnnotations\"]\n    rows: list[dict[str, Any]] = []\n    for key in sorted(annotations.group_keys()):\n        group = annotations[key]\n        raw_json = _decode_scalar(group[\"annotation_json\"][()])\n        if not raw_json:\n            continue\n        try:\n            annotation = json.loads(raw_json)\n        except json.JSONDecodeError:\n            continue\n        raw_label = str(_decode_scalar(group[\"comment\"][()]) or \"\").strip()\n        polygon = _extract_polygon_points(annotation, scale=scale)\n        if len(polygon) < 3:\n            continue\n        rows.append(\n            {\n                \"annotation_id\": key,\n                \"raw_label\": raw_label,\n                \"canonical_region\": canonicalize_region_label(raw_label),\n                \"points\": polygon,\n            }\n        )\n    return rows\n\ndef open_slide_zarr(zarr_path: str | Path):\n    return zarr.open(str(Path(zarr_path)), mode=\"r\")\n\n",
+  "stderr": ""
+}

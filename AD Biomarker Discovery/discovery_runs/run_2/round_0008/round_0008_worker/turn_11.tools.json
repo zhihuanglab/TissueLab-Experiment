@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\npath=Path('/scratch/result.py')\ntext=path.read_text()\nold = '''    per_donor_cols = [\n        \"donor_id\",\n        OUTCOME_COLUMN,\n        FEATURE_COLUMN,\n        f\"{WINNING_VARIATION}__n_reactive_centers\",\n'''\nnew = '''    per_donor_cols = [\n        \"donor_id\",\n        OUTCOME_COLUMN,\n        f\"{WINNING_VARIATION}__n_reactive_centers\",\n'''\ntext=text.replace(old,new)\npath.write_text(text)\nPY\npython /scratch/result.py | tee /scratch/run_output.txt | sed -n '1,18p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: ca1_reactive_hotspot_oligodendrocyte_depletion\\nBEST VARIATION: candidate_variant_b\\n  IS partial r:      0.3976\\n  Selection score:   0.3976\\n  LOO predictive r:  0.2580  (diagnostic)\\n  IS-LOO Gap:        0.1396  (penalty=0.0000)\\n  Adjusted Score:    0.2580\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  candidate_variant_b  0.3976  0.3976  0.2580\\n  candidate_variant_a  0.3296  0.3296  0.2348\\n\\nPER-DONOR (LOO):\\n  donor_id   outcome  predicted  \", \"stderr\": \"\"}"
+  }
+]

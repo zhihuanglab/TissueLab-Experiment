@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '260,380p' /shared/lib/shared_analysis/stats.py\necho '--- artifacts.py ---'\nsed -n '1,240p' /shared/lib/shared_analysis/artifacts.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"        preds.append(float(slope * resid_feature_test[0]))\\n        actuals.append(float(resid_outcome_test[0]))\\n\\n    pred_arr = np.asarray(preds, dtype=float)\\n    act_arr = np.asarray(actuals, dtype=float)\\n    mask = np.isfinite(pred_arr) & np.isfinite(act_arr)\\n    if mask.sum() < 3 or np.std(pred_arr[mask]) == 0 or np.std(act_arr[mask]) == 0:\\n        return float(\\\"nan\\\")\\n    return float(np.corrcoef(pred_arr[mask], act_arr[mask])[0, 1])\\n\\n\\ndef multifeature_residualized_correlation(\\n    df: pd.Dat\", \"stderr\": \"\"}"
+  }
+]

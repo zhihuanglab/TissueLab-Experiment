@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- prior round 6 result.py ---'\nsed -n '1,260p' \"/data/autoresearch_runs/run_20260406_110805_82cf2b/round_0006/Worker 1/candidate_bundle/artifacts/result.py\" || true\necho\necho '--- prior round 6 results.json ---'\npython - <<'PY'\nimport json, glob, os\npaths=glob.glob('/data/autoresearch_runs/run_20260406_110805_82cf2b/round_0006/**/results.json', recursive=True)\nprint(paths[:5])\nfor p in paths[:3]:\n    print('PATH',p)\n    with open(p) as f:\n        obj=json.load(f)\n    print(json.dumps(obj, indent=2)[:4000])\n    print()\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- prior round 6 result.py ---\\nfrom __future__ import annotations\\n\\nfrom functools import lru_cache\\nfrom pathlib import Path\\nimport importlib.util\\nimport sys\\nimport warnings\\n\\nimport numpy as np\\nfrom scipy.spatial import cKDTree\\n\\nif importlib.util.find_spec(\\\"shared_analysis\\\") is None:  # evaluator/sandbox fallback\\n    shared_lib = Path(\\\"/shared/lib\\\")\\n    if shared_lib.exists():\\n        sys.path.insert(0, str(shared_lib))\\n\\nfrom shared_analysis import build_cell_table, load_training_cohort\\n\\n\\nFEATUR\", \"stderr\": \"\"}"
+  }
+]

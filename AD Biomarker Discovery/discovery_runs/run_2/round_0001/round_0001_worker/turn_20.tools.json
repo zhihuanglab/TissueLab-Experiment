@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: CA1 pyramidal neuron burden\\nBEST VARIATION: ca1_pyramidal_fraction\\n  IS partial r:      0.2940\\n  Selection score:   0.2940\\n  LOO predictive r:  0.0976  (diagnostic)\\n  IS-LOO Gap:        0.1964  (penalty=0.0964)\\n  Adjusted Score:    0.1976\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  ca1_pyramidal_fraction  0.2940  0.2940  0.0976\\n  ca1_pyramidal_density  0.2122  0.2122  0.0246\\n\\nPER-DONOR (LOO):\\n  donor_id  outcome  predicted  ca1_pyramida\", \"stderr\": \"\"}"
+  }
+]

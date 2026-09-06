@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport pandas as pd\nfrom shared_analysis import build_cell_table\n\n# inspect prior round artifacts if locally available\nfor p in [\n    Path('/data/autoresearch_runs'),\n    Path('/data')\n]:\n    print('exists', p, p.exists())\n\n# find prior round 9 result if present\nfor q in Path('/data').rglob('round_0009_worker/result.py'):\n    print('FOUND PRIOR RESULT', q)\n    print(q.read_text()[:3500])\n    break\nelse:\n    print('No local prior round_0009_worker/result.py found under /data')\n\nslide = Path('/data/H20.33.024-A12-LFB.svs.zarr')\ncells = build_cell_table(slide, include_regions=True, include_geometry=False)\nprint('columns:', cells.columns.tolist())\nprint('shape:', cells.shape)\nprint(cells[['cell_label','region_label']].head())\nprint('region counts top:', cells['region_label'].value_counts(dropna=False).head(10).to_dict())\nprint('labels:', cells['cell_label'].value_counts().to_dict())\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

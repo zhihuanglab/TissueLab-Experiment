@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- context_bundle.json ---'\npython - <<'PY'\nimport json, textwrap\npath='/scratch/context_bundle.json'\nwith open(path) as f:\n    obj=json.load(f)\nprint(json.dumps(obj, indent=2)[:20000])\nPY\necho\necho '--- program.md ---'\nsed -n '1,240p' /scratch/program.md\necho\necho '--- preseeded result.py ---'\nsed -n '1,240p' /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"variant_a\\\",\\n    \\\"notes\\\": \\\"Use centroids only; no WSI pixels are required. Exclude the center cell from same-type neighbor counts. Restrict oligodendrocyte neighbor counting to CA1-assigned cells. Build KD-trees or equivalent for efficient radius queries. If one hotspot set is empty but the corresponding CA1 cell class exists, fall back to using all CA1 cells of that astroglial class as centers for that side so donor coverage stays high; return NaN only if CA1 or required cell classes are genuine\", \"stderr\": \"\"}"
+  }
+]

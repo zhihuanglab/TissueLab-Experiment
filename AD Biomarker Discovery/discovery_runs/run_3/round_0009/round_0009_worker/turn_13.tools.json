@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"ca1_pyramidal_immune_admixed_reactive_cuff_fraction\" -n /data/autoresearch_runs/*/round_0008/round_0008_worker/results.json | head -10",
+    "output_preview": "{\"exit_code\": 141, \"stdout\": \"/data/autoresearch_runs/run_20260421_001115_585b70/round_0008/round_0008_worker/results.json:3:  \\\"feature_name\\\": \\\"ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r50um_ra2_ly1\\\",\\n/data/autoresearch_runs/run_20260421_001115_585b70/round_0008/round_0008_worker/results.json:73:  \\\"hypothesis_family\\\": \\\"ca1_pyramidal_immune_admixed_reactive_cuff_fraction\\\",\\n/data/autoresearch_runs/run_20260421_001115_585b70/round_0008/round_0008_worker/results.json:74:  \\\"best_variation\\\": \\\"ca1_pyramidal_immune_admixe\", \"stderr\": \"\"}"
+  }
+]

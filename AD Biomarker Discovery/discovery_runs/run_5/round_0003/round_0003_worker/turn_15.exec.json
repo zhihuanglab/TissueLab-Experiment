@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "-rwx------ 1 root root  3780 Apr 21 09:45 /scratch/donor_feature_table.csv\n-rwx------ 1 root root  4775 Apr 21 09:46 /scratch/report.md\n-rwx------ 1 root root 13918 Apr 21 09:44 /scratch/result.py\n-rwx------ 1 root root  2124 Apr 21 09:45 /scratch/results.json\n",
+  "stderr": ""
+}

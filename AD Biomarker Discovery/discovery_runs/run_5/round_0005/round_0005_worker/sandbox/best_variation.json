@@ -1,0 +1,7 @@
+{
+  "best_variation": "candidate_variant_a",
+  "feature_name": "ca1_peripyramidal_astro_reactivity_index_30um",
+  "feature_column": "ca1_peripyramidal_astro_reactivity_index_30um",
+  "hypothesis_family": "CA1 peripyramidal astrocyte-lineage reactivity index",
+  "radius_um": 30.0
+}

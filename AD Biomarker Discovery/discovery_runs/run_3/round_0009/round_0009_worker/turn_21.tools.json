@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys\nsys.path.append('/shared/lib')\nfrom shared_analysis import load_training_cohort\nfrom pathlib import Path\ncohort=load_training_cohort(Path('/data'))\nprint(cohort.columns.tolist())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex', 'slide_id']\\n\", \"stderr\": \"\"}"
+  }
+]

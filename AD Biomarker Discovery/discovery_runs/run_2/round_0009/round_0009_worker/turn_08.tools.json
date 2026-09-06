@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '140,245p' /shared/lib/shared_analysis/sea_ad_lfb.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"        group = annotations[key]\\n        raw_json = _decode_scalar(group[\\\"annotation_json\\\"][()])\\n        if not raw_json:\\n            continue\\n        try:\\n            annotation = json.loads(raw_json)\\n        except json.JSONDecodeError:\\n            continue\\n        raw_label = str(_decode_scalar(group[\\\"comment\\\"][()]) or \\\"\\\").strip()\\n        polygon = _extract_polygon_points(annotation, scale=scale)\\n        if len(polygon) < 3:\\n            continue\\n        rows.append(\\n            {\\n            \", \"stderr\": \"\"}"
+  }
+]

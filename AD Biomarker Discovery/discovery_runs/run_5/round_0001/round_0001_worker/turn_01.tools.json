@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- context_bundle.json ---'\npython - <<'PY'\nimport json, pathlib\np=pathlib.Path('/scratch/context_bundle.json')\nobj=json.loads(p.read_text())\nimport pprint\npprint.pp(obj)\nPY\necho '--- program.md ---'\nsed -n '1,240p' /scratch/program.md\necho '--- result.py template head ---'\nsed -n '1,240p' /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"              'cohort_match_count': 1,\\n                                     'donor_id': 'H20.33.024'}]},\\n 'runtime_quickstart_excerpt': '# Shared Runtime Quickstart\\\\n'\\n                               '\\\\n'\\n                               '- Import helpers from `/shared/lib`. '\\n                               '`PYTHONPATH` already includes it.\\\\n'\\n                               '- Generic starter template: '\\n                               '`/shared/templates/worker_analysis_template.py`\\\\n'\\n           \", \"stderr\": \"\"}"
+  }
+]

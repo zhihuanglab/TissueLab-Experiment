@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "echo '--- results.json ---'\ncat /scratch/results.json\necho\necho '--- report.md ---'\ncat /scratch/report.md\necho\necho '--- donor_feature_table.csv head ---'\nsed -n '1,5p' /scratch/donor_feature_table.csv\necho\necho '--- replay config ---'\ncat /scratch/result_replay.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- results.json ---\\n{\\n  \\\"hypothesis_family\\\": \\\"CA1 pyramidal neuron burden\\\",\\n  \\\"best_variation\\\": \\\"ca1_pyramidal_fraction\\\",\\n  \\\"feature_name\\\": \\\"ca1_pyramidal_burden__ca1_pyramidal_fraction\\\",\\n  \\\"feature_column\\\": \\\"ca1_pyramidal_fraction\\\",\\n  \\\"variation_name\\\": \\\"ca1_pyramidal_fraction\\\",\\n  \\\"description\\\": \\\"CA1 Pyramidal Neuron count divided by all classified CA1 cells.\\\",\\n  \\\"n_total\\\": 35,\\n  \\\"n_analyzable\\\": 35,\\n  \\\"partial_r\\\": 0.29397628619873717,\\n  \\\"p_value\\\": 0.0865043209227582,\\n  \\\"selection_score\\\": 0.2939\", \"stderr\": \"\"}"
+  }
+]

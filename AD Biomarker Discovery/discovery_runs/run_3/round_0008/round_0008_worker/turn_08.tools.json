@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect, json\nsys.path.append('/shared/lib')\nimport shared_analysis\nfrom shared_analysis import stats, artifacts\nprint('shared_analysis exports:', [a for a in dir(shared_analysis) if not a.startswith('_')][:50])\nprint('\\npartial_correlation:\\n', inspect.getsource(stats.partial_correlation))\nprint('\\nresidualized_loo_predictive_correlation:\\n', inspect.getsource(stats.residualized_loo_predictive_correlation))\nprint('\\nwrite_donor_feature_table:\\n', inspect.getsource(artifacts.write_donor_feature_table))\nprint('\\nbuild_results_payload:\\n', inspect.getsource(artifacts.build_results_payload))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"shared_analysis exports: ['DEFAULT_CONFOUNDS', 'DonorPrimitive', 'KNOWN_REGIONS', 'apply_pca_basis', 'artifacts', 'assign_centroids_to_regions', 'bootstrap_partial_correlation', 'build_cell_table', 'build_mechanistic_embedding_round', 'build_population_primitive', 'build_population_primitives_for_cohort', 'build_results_payload', 'build_slide_manifest', 'canonicalize_region_label', 'coerce_results_payload', 'compute_contour_geometry', 'compute_local_positive_fraction', 'context', 'donor_scalar_f\", \"stderr\": \"\"}"
+  }
+]

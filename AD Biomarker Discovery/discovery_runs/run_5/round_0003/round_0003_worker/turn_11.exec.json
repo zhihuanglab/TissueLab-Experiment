@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "HYPOTHESIS FAMILY: ca1_peripyramidal_reactive_astro_crowding\nBEST VARIATION: k3_within_30um\n  IS partial r:      -0.5247\n  Selection score:   0.5247\n  LOO predictive r:  0.4026  (diagnostic)\n  IS-LOO Gap:        0.1220  (penalty=0.1220)\n  Adjusted Score:    0.4026\n\nRANKED VARIATIONS:\n  variation_name  partial_r  selection_score  loo_predictive_r\n  k3_within_30um  -0.5247  0.5247  0.4026\n  k2_within_30um  -0.5084  0.5084  0.3492\n\nPER-DONOR (LOO):\n  donor_id  outcome  predicted  ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um\nstderr lines: 0\n",
+  "stderr": ""
+}

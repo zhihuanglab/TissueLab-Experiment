@@ -1,0 +1,49 @@
+HYPOTHESIS FAMILY: ca1_reactive_astro_fraction
+BEST VARIATION: candidate_variant_a
+  IS partial r:      -0.4914
+  Selection score:   0.4914
+  LOO predictive r:  0.3598  (diagnostic)
+  IS-LOO Gap:        0.1316  (penalty=0.0000)
+  Adjusted Score:    0.4914
+
+RANKED VARIATIONS:
+  variation_name  partial_r  selection_score  loo_predictive_r
+  candidate_variant_a  -0.4914  0.4914  0.3598
+  candidate_variant_b  -0.4801  0.4801  0.3507
+
+PER-DONOR (LOO):
+  H19.33.004  -0.058769  -0.083007  ca1_reactive_astro_fraction=0.5069; ca1_reactive_astro_n=1107; ca1_astro_lineage_n=2184; ca1_region_cells_n=9413
+  H20.33.008  -0.120506  -0.116349  ca1_reactive_astro_fraction=0.4509; ca1_reactive_astro_n=620; ca1_astro_lineage_n=1375; ca1_region_cells_n=5951
+  H20.33.013  -0.031742  -0.094769  ca1_reactive_astro_fraction=0.3910; ca1_reactive_astro_n=678; ca1_astro_lineage_n=1734; ca1_region_cells_n=8568
+  H20.33.018  -0.304214  -0.136365  ca1_reactive_astro_fraction=0.7409; ca1_reactive_astro_n=1161; ca1_astro_lineage_n=1567; ca1_region_cells_n=7397
+  H20.33.024  -0.010335  -0.056583  ca1_reactive_astro_fraction=0.2759; ca1_reactive_astro_n=745; ca1_astro_lineage_n=2700; ca1_region_cells_n=18023
+  H20.33.025  -0.072310  -0.099717  ca1_reactive_astro_fraction=0.4126; ca1_reactive_astro_n=604; ca1_astro_lineage_n=1464; ca1_region_cells_n=8513
+  H20.33.027  -0.112593  -0.163174  ca1_reactive_astro_fraction=0.6473; ca1_reactive_astro_n=745; ca1_astro_lineage_n=1151; ca1_region_cells_n=5508
+  H20.33.029  -0.094810  -0.100359  ca1_reactive_astro_fraction=0.3659; ca1_reactive_astro_n=1387; ca1_astro_lineage_n=3791; ca1_region_cells_n=16714
+  H20.33.030  -0.168042  -0.174537  ca1_reactive_astro_fraction=0.6735; ca1_reactive_astro_n=1023; ca1_astro_lineage_n=1519; ca1_region_cells_n=7715
+  H20.33.034  -0.052201  -0.064634  ca1_reactive_astro_fraction=0.4101; ca1_reactive_astro_n=251; ca1_astro_lineage_n=612; ca1_region_cells_n=6187
+  H20.33.037  -0.250804  -0.156777  ca1_reactive_astro_fraction=0.6134; ca1_reactive_astro_n=895; ca1_astro_lineage_n=1459; ca1_region_cells_n=6584
+  H20.33.038  -0.237209  -0.182468  ca1_reactive_astro_fraction=0.7561; ca1_reactive_astro_n=747; ca1_astro_lineage_n=988; ca1_region_cells_n=5031
+  H20.33.040  -0.102634  -0.147497  ca1_reactive_astro_fraction=0.5453; ca1_reactive_astro_n=1258; ca1_astro_lineage_n=2307; ca1_region_cells_n=9725
+  H20.33.041  -0.107902  -0.112682  ca1_reactive_astro_fraction=0.4422; ca1_reactive_astro_n=547; ca1_astro_lineage_n=1237; ca1_region_cells_n=5932
+  H20.33.043  -0.059960  -0.058970  ca1_reactive_astro_fraction=0.3639; ca1_reactive_astro_n=1473; ca1_astro_lineage_n=4048; ca1_region_cells_n=15615
+  H20.33.044  -0.054459  -0.040719  ca1_reactive_astro_fraction=0.3797; ca1_reactive_astro_n=371; ca1_astro_lineage_n=977; ca1_region_cells_n=7372
+  H20.33.046  -0.201711  -0.107623  ca1_reactive_astro_fraction=0.4394; ca1_reactive_astro_n=482; ca1_astro_lineage_n=1097; ca1_region_cells_n=8887
+  H21.33.001  -0.081578  -0.035383  ca1_reactive_astro_fraction=0.4337; ca1_reactive_astro_n=880; ca1_astro_lineage_n=2029; ca1_region_cells_n=8193
+  H21.33.004  -0.119825  -0.039325  ca1_reactive_astro_fraction=0.4664; ca1_reactive_astro_n=818; ca1_astro_lineage_n=1754; ca1_region_cells_n=8897
+  H21.33.006  -0.053967  -0.190249  ca1_reactive_astro_fraction=0.8106; ca1_reactive_astro_n=1010; ca1_astro_lineage_n=1246; ca1_region_cells_n=6703
+  H21.33.007  -0.097514  -0.156138  ca1_reactive_astro_fraction=0.5538; ca1_reactive_astro_n=803; ca1_astro_lineage_n=1450; ca1_region_cells_n=7659
+  H21.33.012  -0.100924  -0.114617  ca1_reactive_astro_fraction=0.5528; ca1_reactive_astro_n=314; ca1_astro_lineage_n=568; ca1_region_cells_n=4909
+  H21.33.013  -0.161261  -0.141264  ca1_reactive_astro_fraction=0.6086; ca1_reactive_astro_n=625; ca1_astro_lineage_n=1027; ca1_region_cells_n=7829
+  H21.33.018  -0.144019  -0.029427  ca1_reactive_astro_fraction=0.2539; ca1_reactive_astro_n=345; ca1_astro_lineage_n=1359; ca1_region_cells_n=7260
+  H21.33.021  -0.098358  -0.116481  ca1_reactive_astro_fraction=0.5267; ca1_reactive_astro_n=839; ca1_astro_lineage_n=1593; ca1_region_cells_n=10390
+  H21.33.023  -0.154629  -0.003694  ca1_reactive_astro_fraction=0.3251; ca1_reactive_astro_n=449; ca1_astro_lineage_n=1381; ca1_region_cells_n=7543
+  H21.33.025  -0.042285  -0.128681  ca1_reactive_astro_fraction=0.5244; ca1_reactive_astro_n=818; ca1_astro_lineage_n=1560; ca1_region_cells_n=8040
+  H21.33.033  -0.046636  -0.077519  ca1_reactive_astro_fraction=0.2539; ca1_reactive_astro_n=339; ca1_astro_lineage_n=1335; ca1_region_cells_n=6013
+  H21.33.035  -0.049824  -0.058394  ca1_reactive_astro_fraction=0.1117; ca1_reactive_astro_n=318; ca1_astro_lineage_n=2846; ca1_region_cells_n=11665
+  H21.33.037  -0.088135  -0.095367  ca1_reactive_astro_fraction=0.5679; ca1_reactive_astro_n=903; ca1_astro_lineage_n=1590; ca1_region_cells_n=7900
+  H21.33.038  -0.051828  -0.073976  ca1_reactive_astro_fraction=0.4801; ca1_reactive_astro_n=988; ca1_astro_lineage_n=2058; ca1_region_cells_n=9662
+  H21.33.040  -0.032794  -0.108788  ca1_reactive_astro_fraction=0.3087; ca1_reactive_astro_n=339; ca1_astro_lineage_n=1098; ca1_region_cells_n=7003
+  H21.33.043  -0.072355  -0.060815  ca1_reactive_astro_fraction=0.3261; ca1_reactive_astro_n=660; ca1_astro_lineage_n=2024; ca1_region_cells_n=14366
+  H21.33.044  -0.099128  -0.154576  ca1_reactive_astro_fraction=0.5196; ca1_reactive_astro_n=1342; ca1_astro_lineage_n=2583; ca1_region_cells_n=12895
+  H21.33.046  -0.161623  -0.128662  ca1_reactive_astro_fraction=0.5920; ca1_reactive_astro_n=811; ca1_astro_lineage_n=1370; ca1_region_cells_n=9132

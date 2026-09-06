@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "   cell_index        x      y  class_id         cell_type region\n0           0  22901.0   43.0         0  Negative control    NaN\n1           1  23020.0   98.0         0  Negative control    NaN\n2           2  22719.0  306.0         0  Negative control    NaN\n\nUnique regions: ['CA1', 'CA2', 'CA3', 'CA4', 'DG', 'EC', 'SB', 'TEC']\n\nCA1 n= 9413\ncell_type\nNegative control      3106\nOligodendrocyte       2353\nPyramidal Neuron      1732\nReactive Astrocyte    1107\nAstrocyte             1077\nGranule Neuron          23\nCorpora Amylacea         8\nLymphocyte               7\n",
+  "stderr": ""
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\npaths=list(Path('/data/autoresearch_runs').rglob('round_0008_worker/results.json'))\nprint('n', len(paths))\nfor p in paths[:3]:\n    print(p)\n    print(p.read_text()[:2000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"n 15\\n/data/autoresearch_runs/run_20260410_201937_2df939/round_0008/round_0008_worker/results.json\\n{\\n  \\\"status\\\": \\\"unknown\\\",\\n  \\\"feature_name\\\": \\\"ca1_pyr_frac\\\",\\n  \\\"outcome\\\": \\\"\\\",\\n  \\\"n_total\\\": null,\\n  \\\"n_analyzable\\\": 35,\\n  \\\"partial_r\\\": 0.29397628619873717,\\n  \\\"ci_lo\\\": null,\\n  \\\"ci_hi\\\": null,\\n  \\\"p_value\\\": null,\\n  \\\"loo_predictive_r\\\": 0.09756083569822228,\\n  \\\"adjusted_score\\\": 0.07435311044796483,\\n  \\\"is_loo_gap\\\": 0.1964154505005149,\\n  \\\"gap_penalty\\\": null,\\n  \\\"loo_unstable_count\\\": 0,\\n  \\\"loo_max_shift\\\": null,\\n \", \"stderr\": \"\"}"
+  }
+]

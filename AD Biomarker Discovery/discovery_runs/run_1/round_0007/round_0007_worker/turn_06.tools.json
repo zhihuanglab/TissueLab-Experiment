@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfind /shared/lib -maxdepth 3 -type f | sed -n '1,120p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/shared/lib/shared_analysis/__init__.py\\n/shared/lib/shared_analysis/.___init__.py\\n/shared/lib/shared_analysis/context.py\\n/shared/lib/shared_analysis/._context.py\\n/shared/lib/shared_analysis/stats.py\\n/shared/lib/shared_analysis/._stats.py\\n/shared/lib/shared_analysis/pca.py\\n/shared/lib/shared_analysis/._pca.py\\n/shared/lib/shared_analysis/artifacts.py\\n/shared/lib/shared_analysis/._artifacts.py\\n/shared/lib/shared_analysis/embedding_mechanistic.py\\n/shared/lib/shared_analysis/._embedding_mechanistic.p\", \"stderr\": \"\"}"
+  }
+]

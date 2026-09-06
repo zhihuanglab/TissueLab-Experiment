@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis.sea_ad_lfb import load_training_cohort\nfrom pathlib import Path\ncohort=load_training_cohort(Path('/data'))\nprint(cohort.columns.tolist())\nPY\npython - <<'PY'\nfrom pathlib import Path\np=Path('/scratch/result.py')\ns=p.read_text()\ns=s.replace('''            \"sex\": row[\"sex\"],\\n            \"cognitive_status\": row[\"cognitive_status\"],\\n''','''            \"sex\": row[\"sex\"],\\n''')\np.write_text(s)\nPY\npython -m py_compile /scratch/result.py\npython /scratch/result.py | tee /scratch/result_stdout.txt",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex', 'slide_id']\\n\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 32, in _execute\\n    runpy.run_path(path, run_name=\\\"__main__\\\")\\n  File \\\"<frozen runpy>\\\", line 291, in run_path\\n  File \\\"<frozen runpy>\\\", line 98, in _run_module_code\\n  File \\\"<frozen runpy>\\\", line 88, in _run_code\\n  File \\\"/scratch/result.py\\\", line 422, in <module>\\n    run_sweep(\\\"/data\\\")\\n  File \\\"/scratch/result.py\\\", line 327, in run_sweep\\n    results = [evaluate_variation(features, name) for name in VARIATIONS]\\n \"}"
+  }
+]

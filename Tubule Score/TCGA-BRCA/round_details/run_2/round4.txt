@@ -1,0 +1,45 @@
+Round 4 Details
+================================================================================
+
+Feature-GT Correlations (interpretable):
+  bp_gland_pixel_frac: r=-0.2642
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+
+All Configurations (sorted by adjusted):
+  interp3__Ridge_a1: adj=0.5680 LOO_r=0.5680 IS_r=0.6617 gap=0.0937 F1=0.4236 QWK=0.4138
+  interp3_gland_pca3__PLS2: adj=0.5618 LOO_r=0.5618 IS_r=0.7005 gap=0.1387 F1=0.5123 QWK=0.5000
+  interp3__Ridge_a10: adj=0.5513 LOO_r=0.5513 IS_r=0.6504 gap=0.0991 F1=0.4070 QWK=0.3704
+  interp3_tumor_pca3__Ridge_a10: adj=0.5123 LOO_r=0.5262 IS_r=0.7040 gap=0.1778 F1=0.3620 QWK=0.3077
+  interp3_gland_pca3__PLS3: adj=0.4968 LOO_r=0.5165 IS_r=0.7059 gap=0.1894 F1=0.4829 QWK=0.4828
+  interp3_tumor_pca5__Ridge_a10: adj=0.4851 LOO_r=0.5202 IS_r=0.7406 gap=0.2203 F1=0.3105 QWK=0.2400
+  interp3_gland_pca3__Ridge_a10: adj=0.4850 LOO_r=0.5054 IS_r=0.6961 gap=0.1907 F1=0.4749 QWK=0.4444
+  interp3_gland_pca3__ElasticNet_01: adj=0.4766 LOO_r=0.4991 IS_r=0.6939 gap=0.1949 F1=0.4749 QWK=0.4444
+  interp3_gland_pca5__PLS2: adj=0.4633 LOO_r=0.4870 IS_r=0.6843 gap=0.1973 F1=0.4524 QWK=0.4286
+  interp3_gland2_tumor2__Ridge_a10: adj=0.4468 LOO_r=0.4882 IS_r=0.7209 gap=0.2327 F1=0.4329 QWK=0.3846
+  interp3_gland_pca5__PLS3: adj=0.4372 LOO_r=0.4817 IS_r=0.7206 gap=0.2389 F1=0.4895 QWK=0.4828
+  interp3_tumor_pca5__Ridge_a50: adj=0.4039 LOO_r=0.4535 IS_r=0.7029 gap=0.2493 F1=0.3105 QWK=0.2400
+  interp3_gland3_tumor2__Ridge_a10: adj=0.3803 LOO_r=0.4437 IS_r=0.7205 gap=0.2768 F1=0.4329 QWK=0.3846
+  interp3_gland_pca3__Ridge_a50: adj=0.3770 LOO_r=0.4124 IS_r=0.6331 gap=0.2207 F1=0.3519 QWK=0.2609
+  interp3_tumor_pca3__Ridge_a50: adj=0.3747 LOO_r=0.4173 IS_r=0.6525 gap=0.2352 F1=0.2733 QWK=0.1739
+  interp3_gland_pca5__ElasticNet_01: adj=0.3528 LOO_r=0.4172 IS_r=0.6960 gap=0.2789 F1=0.4951 QWK=0.3704
+  tumor_emb_pca5__Ridge_a10: adj=0.3398 LOO_r=0.4002 IS_r=0.6709 gap=0.2707 F1=0.1997 QWK=0.0870
+  tumor_emb_pca5__Ridge_a50: adj=0.3384 LOO_r=0.3993 IS_r=0.6711 gap=0.2718 F1=0.1997 QWK=0.0870
+  interp3_gland_pca5__Ridge_a10: adj=0.3315 LOO_r=0.4027 IS_r=0.6951 gap=0.2924 F1=0.4525 QWK=0.3077
+  interp3_gland2_tumor2__Ridge_a50: adj=0.3039 LOO_r=0.3780 IS_r=0.6761 gap=0.2981 F1=0.3519 QWK=0.2609
+  gland_emb_pca3__Ridge_a10: adj=0.1897 LOO_r=0.2445 IS_r=0.5040 gap=0.2595 F1=0.2315 QWK=0.0952
+  gland_emb_pca3__Ridge_a50: adj=0.1880 LOO_r=0.2432 IS_r=0.5037 gap=0.2604 F1=0.2315 QWK=0.0952
+  gland_emb_pca5__Ridge_a10: adj=-1.0000 LOO_r=0.1383 IS_r=0.5308 gap=0.3924 F1=0.2913 QWK=0.0870
+  gland_emb_pca5__Ridge_a50: adj=-1.0000 LOO_r=0.1380 IS_r=0.5308 gap=0.3927 F1=0.2913 QWK=0.0870
+  tumor_emb_pca3__Ridge_a10: adj=-1.0000 LOO_r=0.1911 IS_r=0.5422 gap=0.3510 F1=0.1538 QWK=0.0000
+  tumor_emb_pca3__Ridge_a50: adj=-1.0000 LOO_r=0.1900 IS_r=0.5417 gap=0.3518 F1=0.1538 QWK=0.0000
+  interp3_gland_pca5__Ridge_a50: adj=-1.0000 LOO_r=0.2726 IS_r=0.6231 gap=0.3504 F1=0.4525 QWK=0.3077
+  interp3_gland3_tumor3__Ridge_a10: adj=-1.0000 LOO_r=0.4108 IS_r=0.7556 gap=0.3448 F1=0.4933 QWK=0.4000
+  interp3_gland3_tumor3__Ridge_a50: adj=-1.0000 LOO_r=0.3082 IS_r=0.7063 gap=0.3981 F1=0.4263 QWK=0.2963
+  interp3_gland3_tumor2__Ridge_a50: adj=-1.0000 LOO_r=0.3555 IS_r=0.6764 gap=0.3208 F1=0.4074 QWK=0.3333
+
+Best: interp3__Ridge_a1
+  Features: interp3
+  Adjusted: 0.5680
+  LOO r: 0.5680
+  Gap: 0.0937

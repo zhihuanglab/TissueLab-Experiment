@@ -1,0 +1,30 @@
+Round 19
+============================================================
+Best: base_a2, adj=0.8470, LOO_r=0.8470, gap=0.0675
+Features: ['T1', 'T7', 'T4', 'G9', 'G5', 'G1', 'G16', 'ac', 'md'], alpha=2
+
+base_a2: adj=0.8470 LOO_r=0.8470 IS_r=0.9144 gap=0.0675
+base_a3: adj=0.8443 LOO_r=0.8443 IS_r=0.9115 gap=0.0672
+base_a4: adj=0.8425 LOO_r=0.8425 IS_r=0.9094 gap=0.0668
+base_a5: adj=0.8411 LOO_r=0.8411 IS_r=0.9076 gap=0.0665
+base_a7: adj=0.8387 LOO_r=0.8387 IS_r=0.9046 gap=0.0659
+base+circ_a2: adj=0.8365 LOO_r=0.8365 IS_r=0.9139 gap=0.0773
+base+circ_a3: adj=0.8344 LOO_r=0.8344 IS_r=0.9109 gap=0.0765
+base+circ_a4: adj=0.8330 LOO_r=0.8330 IS_r=0.9088 gap=0.0758
+base+circ_a5: adj=0.8319 LOO_r=0.8319 IS_r=0.9071 gap=0.0752
+md+circ_a5: adj=0.8314 LOO_r=0.8314 IS_r=0.9054 gap=0.0739
+md+circ_a7: adj=0.8314 LOO_r=0.8314 IS_r=0.9039 gap=0.0725
+md+circ_a3: adj=0.8307 LOO_r=0.8307 IS_r=0.9068 gap=0.0761
+base+circ_a7: adj=0.8304 LOO_r=0.8304 IS_r=0.9044 gap=0.0741
+base+circ_a10: adj=0.8281 LOO_r=0.8281 IS_r=0.9013 gap=0.0731
+ac+circ_a7: adj=0.8215 LOO_r=0.8215 IS_r=0.8977 gap=0.0762
+ac+circ_a5: adj=0.8212 LOO_r=0.8212 IS_r=0.8992 gap=0.0780
+ac+circ_a3: adj=0.8200 LOO_r=0.8200 IS_r=0.9009 gap=0.0809
+T4G5_all_a5: adj=0.8050 LOO_r=0.8050 IS_r=0.9082 gap=0.1032
+T4G5_all_a3: adj=0.8030 LOO_r=0.8030 IS_r=0.9122 gap=0.1092
+T2G4_all_a5: adj=0.7766 LOO_r=0.7766 IS_r=0.8736 gap=0.0971
+T2G4_all_a3: adj=0.7725 LOO_r=0.7725 IS_r=0.8750 gap=0.1025
+T3G3_all_a5: adj=0.7164 LOO_r=0.7164 IS_r=0.8415 gap=0.1251
+T3G3_all_a3: adj=0.7163 LOO_r=0.7163 IS_r=0.8476 gap=0.1312
+T2G3_all_a5: adj=0.6285 LOO_r=0.6306 IS_r=0.7849 gap=0.1543
+T2G3_all_a3: adj=0.6089 LOO_r=0.6178 IS_r=0.7855 gap=0.1677

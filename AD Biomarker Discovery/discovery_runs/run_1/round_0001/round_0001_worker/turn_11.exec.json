@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "candidate_variant_a {'n': 35.0, 'partial_r': 0.29397628619873717, 'p_value': 0.0865043209227582} selection 0.29397628619873717 loo 0.09756083569822228 gap 0.1964154505005149\ncandidate_variant_b {'n': 35.0, 'partial_r': 0.26683137720183536, 'p_value': 0.12125882949961647} selection 0.26683137720183536 loo 0.057313853160537144 gap 0.20951752404129823\n",
+  "stderr": ""
+}

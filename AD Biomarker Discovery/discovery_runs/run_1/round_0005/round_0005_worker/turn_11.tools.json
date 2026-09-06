@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\nsed -n '130,230p' /shared/templates/worker_embedding_mechanistic_template.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"        chunk_size=int(config[\\\"chunk_size\\\"]),\\n    )\\n    basis = load_pca_basis(paths[\\\"basis\\\"])\\n    value = donor_scalar_from_basis(\\n        primitive,\\n        basis,\\n        component=int(config[\\\"component\\\"]),\\n        summary_mode=str(config[\\\"summary_mode\\\"]),\\n        niche_column=str(config[\\\"niche_column\\\"]),\\n        low_quantile=float(config[\\\"low_quantile\\\"]),\\n        high_quantile=float(config[\\\"high_quantile\\\"]),\\n        tail_quantile=float(config[\\\"tail_quantile\\\"]),\\n    )\\n    return float(value) \", \"stderr\": \"\"}"
+  }
+]

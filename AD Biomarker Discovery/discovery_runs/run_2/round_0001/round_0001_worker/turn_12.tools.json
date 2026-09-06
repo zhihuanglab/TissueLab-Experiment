@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nimport sys, inspect, textwrap\nsys.path.insert(0, '/shared/lib')\nimport shared_analysis.stats as stats\nfor name in ['_design_matrix','residualize','_clean_frame']:\n    fn=getattr(stats,name)\n    print(f'\\n--- {name} ---')\n    print(textwrap.dedent(inspect.getsource(fn))[:2400])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\n--- _design_matrix ---\\ndef _design_matrix(confounds: pd.DataFrame) -> np.ndarray:\\n    matrix = confounds.astype(float).to_numpy()\\n    intercept = np.ones((len(confounds), 1), dtype=float)\\n    return np.hstack([intercept, matrix])\\n\\n\\n--- residualize ---\\ndef residualize(values: pd.Series | np.ndarray, confounds: pd.DataFrame) -> np.ndarray:\\n    y = np.asarray(values, dtype=float)\\n    x = _design_matrix(confounds)\\n    beta, *_ = np.linalg.lstsq(x, y, rcond=None)\\n    return y - x @ beta\\n\\n\\n--- _clean\", \"stderr\": \"\"}"
+  }
+]

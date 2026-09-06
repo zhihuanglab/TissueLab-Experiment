@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"def load_centroids\\|def load_class_ids\\|def load_class_lookup\\|def load_region_polygons\" -n /shared/lib/shared_analysis/sea_ad_lfb.py\nsed -n '1,260p' /shared/lib/shared_analysis/sea_ad_lfb.py | sed -n '1,240p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"86:def load_centroids(zarr_path: str | Path) -> np.ndarray:\\n107:def load_class_lookup(zarr_path: str | Path) -> dict[int, str]:\\n111:def load_class_ids(zarr_path: str | Path) -> np.ndarray:\\n163:def load_region_polygons(zarr_path: str | Path, *, scale: float = 16.0) -> dict[str, list[np.ndarray]]:\\nfrom __future__ import annotations\\n\\nimport json\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nimport numpy as np\\nimport pandas as pd\\nimport zarr\\nfrom matplotlib.path import Path as MplPath\\n\\n\\nKNOWN_REG\", \"stderr\": \"\"}"
+  }
+]

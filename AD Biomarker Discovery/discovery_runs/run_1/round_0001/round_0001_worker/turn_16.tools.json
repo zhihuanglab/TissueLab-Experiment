@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nwith open('/scratch/results.json') as f:\n    res=json.load(f)\nbest=[r for r in res['ranked_variations'] if r['variation_name']==res['best_variation']][0]\nprint(best)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"{'variation_name': 'candidate_variant_a', 'description': 'CA1 pyramidal neuron fraction', 'feature_column': 'ca1_pyramidal_fraction', 'regions': ['CA1'], 'n_analyzable': 35, 'n_total': 35, 'coverage': 1.0, 'partial_r': 0.29397628619873717, 'p_value': 0.0865043209227582, 'selection_score': 0.29397628619873717, 'loo_predictive_r': 0.09756083569822228, 'is_loo_gap': 0.1964154505005149, 'penalty': 0.1964154505005149, 'adjusted_score': 0.09756083569822227, 'max_shift': 0.11210152254652836, 'unstable_\", \"stderr\": \"\"}"
+  }
+]

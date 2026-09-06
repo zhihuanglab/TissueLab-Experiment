@@ -1,0 +1,32 @@
+Round 18 Details
+================================================================================
+
+KEY CHANGE: Replace bp_component_area_cv with bp_small_round_gland_frac + bp_large_irregular_frac
+
+Feature-GT Correlations:
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+  gland_in_tumor_frac: r=-0.5442
+  tumor_cell_density: r=-0.0306
+  bp_component_area_cv: r=-0.2540
+  bp_small_round_gland_frac: r=-0.3164
+  bp_large_irregular_frac: r=-0.2274
+
+All Configurations:
+  i5old_gm4_tm4_gv2_a1.0: adj=0.8261 LOO_r=0.8261 IS_r=0.9545 gap=0.1284
+  i5old_gm4_tm4_gv2_a1.5: adj=0.8226 LOO_r=0.8226 IS_r=0.9520 gap=0.1294
+  i5old_only_a1.0: adj=0.6871 LOO_r=0.6871 IS_r=0.7760 gap=0.0890
+  i5sr_gm4_tm4_gv2_a1.5: adj=0.6400 LOO_r=0.6841 IS_r=0.9221 gap=0.2381
+  i6new_gm4_tm4_gv2_a2.0: adj=0.6380 LOO_r=0.6826 IS_r=0.9217 gap=0.2391
+  i5sr_gm4_tm4_gv2_a1.0: adj=0.6279 LOO_r=0.6762 IS_r=0.9227 gap=0.2465
+  i5li_gm4_tm4_gv2_a1.5: adj=0.6271 LOO_r=0.6755 IS_r=0.9224 gap=0.2469
+  i6new_gm4_tm4_gv2_a1.5: adj=0.6234 LOO_r=0.6731 IS_r=0.9225 gap=0.2494
+  i5li_gm4_tm4_gv2_a1.0: adj=0.6107 LOO_r=0.6650 IS_r=0.9234 gap=0.2584
+  i6new_gm4_tm4_gv2_a1.0: adj=0.6056 LOO_r=0.6615 IS_r=0.9233 gap=0.2618
+  i6new_only_a1.0: adj=0.3745 LOO_r=0.4278 IS_r=0.6844 gap=0.2566
+  i6new_gm3_tm3_gv2_a1.0: adj=-1.0000 LOO_r=0.4787 IS_r=0.8659 gap=0.3872
+  i6new_gm3_tm3_gv2_a1.5: adj=-1.0000 LOO_r=0.4956 IS_r=0.8651 gap=0.3695
+  i6new_gm5_tm5_gv2_a1.5: adj=-1.0000 LOO_r=0.6010 IS_r=0.9223 gap=0.3213
+  i6new_gm5_tm5_gv2_a2.0: adj=-1.0000 LOO_r=0.6167 IS_r=0.9213 gap=0.3047
+
+Best: i5old_gm4_tm4_gv2_a1.0 adj=0.8261

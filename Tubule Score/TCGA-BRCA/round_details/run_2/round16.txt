@@ -1,0 +1,48 @@
+Round 16 Details
+================================================================================
+
+KEY CHANGE: Added variance-pooled embedding PCA features alongside mean-pooled
+Variance captures morphological heterogeneity within each patch class
+
+Interpretable Feature-GT Correlations:
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+  gland_in_tumor_frac: r=-0.5442
+  tumor_cell_density: r=-0.0306
+  bp_component_area_cv: r=-0.2266
+
+All Configurations (sorted by adjusted):
+  interp5_gmPC4_tmPC4_gvPC2_a1.0: adj=0.8373 LOO_r=0.8373 IS_r=0.9572 gap=0.1199 F1=0.7078 QWK=0.7568
+  R9_baseline_interp5_gmPC4_tmPC4_a1.0: adj=0.8311 LOO_r=0.8311 IS_r=0.9444 gap=0.1134 F1=0.7407 QWK=0.7778
+  interp5_gmPC4_tmPC4_gvPC2_a2.0: adj=0.8299 LOO_r=0.8299 IS_r=0.9526 gap=0.1227 F1=0.7089 QWK=0.7429
+  R9_baseline_interp5_gmPC4_tmPC4_a2.0: adj=0.8297 LOO_r=0.8297 IS_r=0.9409 gap=0.1112 F1=0.7738 QWK=0.8108
+  R9_baseline_interp5_gmPC4_tmPC4_a3.0: adj=0.8277 LOO_r=0.8277 IS_r=0.9383 gap=0.1107 F1=0.7738 QWK=0.8108
+  interp5_gmPC4_tmPC4_tvPC2_a2.0: adj=0.8116 LOO_r=0.8116 IS_r=0.9597 gap=0.1481 F1=0.7075 QWK=0.7273
+  interp5_gmPC4_tmPC4_tvPC2_a1.0: adj=0.8073 LOO_r=0.8090 IS_r=0.9623 gap=0.1533 F1=0.6774 QWK=0.7059
+  FULL_interp5_gmPC4_tmPC4_gvPC3_tvPC3_a3.0: adj=0.7900 LOO_r=0.7986 IS_r=0.9659 gap=0.1673 F1=0.7079 QWK=0.7429
+  FULL_interp5_gmPC4_tmPC4_gvPC3_tvPC3_a2.0: adj=0.7863 LOO_r=0.7967 IS_r=0.9675 gap=0.1708 F1=0.7079 QWK=0.7429
+  FULL_interp5_gmPC4_tmPC4_gvPC3_tvPC3_a1.0: adj=0.7779 LOO_r=0.7919 IS_r=0.9697 gap=0.1779 F1=0.7718 QWK=0.8108
+  interp5_gvPC4_tvPC5_a1.0: adj=0.7763 LOO_r=0.7874 IS_r=0.9594 gap=0.1720 F1=0.7384 QWK=0.7895
+  interp5_gvPC4_tvPC4_a1.0: adj=0.7715 LOO_r=0.7825 IS_r=0.9543 gap=0.1719 F1=0.6420 QWK=0.6857
+  interp5_gvPC4_tvPC4_a1.0: adj=0.7715 LOO_r=0.7825 IS_r=0.9543 gap=0.1719 F1=0.6420 QWK=0.6857
+  interp5_gvPC4_tvPC4_a2.0: adj=0.7657 LOO_r=0.7781 IS_r=0.9529 gap=0.1748 F1=0.6417 QWK=0.7027
+  interp5_gvPC4_tvPC4_a3.0: adj=0.7568 LOO_r=0.7717 IS_r=0.9514 gap=0.1797 F1=0.6084 QWK=0.6667
+  interp5_gvPC5_tvPC5_a1.0: adj=0.7328 LOO_r=0.7600 IS_r=0.9644 gap=0.2044 F1=0.6707 QWK=0.7368
+  interp5_gvPC5_tvPC4_a1.0: adj=0.7226 LOO_r=0.7510 IS_r=0.9577 gap=0.2067 F1=0.5783 QWK=0.6286
+  interp5_only_a1.0: adj=0.6942 LOO_r=0.6942 IS_r=0.7836 gap=0.0894 F1=0.5081 QWK=0.5161
+  interp5_gvPC3_tvPC3_a1.0: adj=0.6882 LOO_r=0.7267 IS_r=0.9537 gap=0.2270 F1=0.5783 QWK=0.6286
+  interp5_gvPC3_tvPC3_a2.0: adj=0.6880 LOO_r=0.7261 IS_r=0.9523 gap=0.2261 F1=0.6071 QWK=0.6250
+  interp5_gvPC3_tvPC3_a3.0: adj=0.6857 LOO_r=0.7240 IS_r=0.9507 gap=0.2267 F1=0.5333 QWK=0.5333
+  RED_interp5_gmPC3_tmPC3_gvPC2_tvPC2_a1.0: adj=-1.0000 LOO_r=0.5520 IS_r=0.9502 gap=0.3982 F1=0.3757 QWK=0.3529
+  RED_interp5_gmPC3_tmPC3_gvPC2_tvPC2_a2.0: adj=-1.0000 LOO_r=0.5705 IS_r=0.9473 gap=0.3768 F1=0.3018 QWK=0.2500
+  RED_interp5_gmPC3_tmPC3_gvPC2_tvPC2_a3.0: adj=-1.0000 LOO_r=0.5789 IS_r=0.9449 gap=0.3660 F1=0.3278 QWK=0.2581
+  MIN_interp5_gmPC3_tmPC3_gvPC1_tvPC1_a1.0: adj=-1.0000 LOO_r=0.5281 IS_r=0.8922 gap=0.3642 F1=0.3514 QWK=0.4118
+  MIN_interp5_gmPC3_tmPC3_gvPC1_tvPC1_a2.0: adj=-1.0000 LOO_r=0.5361 IS_r=0.8903 gap=0.3543 F1=0.3143 QWK=0.3636
+  MIN_interp5_gmPC3_tmPC3_gvPC1_tvPC1_a3.0: adj=-1.0000 LOO_r=0.5422 IS_r=0.8885 gap=0.3463 F1=0.3410 QWK=0.3750
+
+Best: interp5_gmPC4_tmPC4_gvPC2_a1.0
+  Adjusted: 0.8373
+  LOO r: 0.8373
+  IS r: 0.9572
+  Gap: 0.1199
+  Selected PCs: {'gm': [1, 5, 9, 16], 'tm': [1, 3, 4, 7], 'gv': [2, 5]}

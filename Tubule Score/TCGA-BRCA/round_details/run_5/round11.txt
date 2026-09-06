@@ -1,0 +1,91 @@
+Round 11 Details
+============================================================
+
+HYPOTHESIS: LOO-safe PLS on tumor/gland embeddings + tumor_in_gland_frac
+Key change: PLS fit strictly inside each LOO fold to avoid leakage.
+New feature: tumor_in_gland_frac = fraction of tumor cells inside gland mask.
+
+FEATURE-GT CORRELATIONS:
+  gpf: r=-0.4148
+  logntc: r=+0.3692
+  bp_area_frac: r=-0.2645
+  tumor_in_gland_frac: r=-0.2466
+
+ALL CONFIGURATIONS (sorted by adjusted score, top 50):
+  gpf_logntc_tumorpls2_r20.0: adjusted=0.4852 (LOO r=0.5598, IS r=0.8589, gap=0.2992) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  logntc_tumorpls1_r1.0: adjusted=0.4840 (LOO r=0.5404, IS r=0.8033, gap=0.2629) [F1=0.4678 QWK=0.3571 Acc=0.5000]
+  logntc_tumorpls1_r5.0: adjusted=0.4803 (LOO r=0.5349, IS r=0.7941, gap=0.2592) [F1=0.4304 QWK=0.3846 Acc=0.4667]
+  logntc_tig_tumorpls1_r5.0: adjusted=0.4778 (LOO r=0.5340, IS r=0.7964, gap=0.2624) [F1=0.4304 QWK=0.3846 Acc=0.4667]
+  logntc_tumorpls1_r10.0: adjusted=0.4756 (LOO r=0.5285, IS r=0.7843, gap=0.2558) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  logntc_tig_tumorpls1_r10.0: adjusted=0.4743 (LOO r=0.5287, IS r=0.7874, gap=0.2587) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  logntc_tig_tumorpls1_r1.0: adjusted=0.4733 (LOO r=0.5337, IS r=0.8046, gap=0.2709) [F1=0.4272 QWK=0.2963 Acc=0.4667]
+  logntc_tig_tumorpls1_r20.0: adjusted=0.4645 (LOO r=0.5177, IS r=0.7740, gap=0.2563) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  logntc_combpls1_r5.0: adjusted=0.4623 (LOO r=0.5246, IS r=0.7993, gap=0.2746) [F1=0.4500 QWK=0.3077 Acc=0.5000]
+  logntc_tumorpls1_r20.0: adjusted=0.4622 (LOO r=0.5150, IS r=0.7705, gap=0.2555) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  logntc_combpls1_r10.0: adjusted=0.4547 (LOO r=0.5164, IS r=0.7898, gap=0.2734) [F1=0.4074 QWK=0.3333 Acc=0.4667]
+  gpf_logntc_tumorpls1_r20.0: adjusted=0.4510 (LOO r=0.5043, IS r=0.7607, gap=0.2565) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_tumorpls1_r10.0: adjusted=0.4494 (LOO r=0.5104, IS r=0.7824, gap=0.2720) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_tig_tumorpls1_r20.0: adjusted=0.4482 (LOO r=0.5041, IS r=0.7658, gap=0.2618) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_tig_tumorpls1_r10.0: adjusted=0.4460 (LOO r=0.5094, IS r=0.7864, gap=0.2769) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  logntc_combpls1_r20.0: adjusted=0.4428 (LOO r=0.5034, IS r=0.7746, gap=0.2712) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  gpf_logntc_bp_tumorpls1_r10.0: adjusted=0.4426 (LOO r=0.5082, IS r=0.7894, gap=0.2812) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  gpf_logntc_bp_tumorpls1_r20.0: adjusted=0.4416 (LOO r=0.5004, IS r=0.7681, gap=0.2677) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_bp_tig_tumorpls1_r20.0: adjusted=0.4351 (LOO r=0.4964, IS r=0.7689, gap=0.2725) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_tumorpls1_r5.0: adjusted=0.4339 (LOO r=0.5054, IS r=0.7982, gap=0.2929) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  gpf_logntc_bp_tig_tumorpls1_r10.0: adjusted=0.4321 (LOO r=0.5013, IS r=0.7896, gap=0.2883) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  gpf_logntc_combpls1_r20.0: adjusted=0.4311 (LOO r=0.4923, IS r=0.7647, gap=0.2724) [F1=0.4074 QWK=0.3333 Acc=0.4667]
+  gpf_logntc_combpls1_r10.0: adjusted=0.4291 (LOO r=0.4989, IS r=0.7885, gap=0.2896) [F1=0.4074 QWK=0.3333 Acc=0.4667]
+  gpf_logntc_tig_tumorpls1_r5.0: adjusted=0.4290 (LOO r=0.5030, IS r=0.8010, gap=0.2980) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  gpf_logntc_tig_tumorpls1_r50.0: adjusted=0.4278 (LOO r=0.4775, IS r=0.7267, gap=0.2493) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_tumorpls1_r50.0: adjusted=0.4218 (LOO r=0.4741, IS r=0.7287, gap=0.2546) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_tig_combpls1_r20.0: adjusted=0.4215 (LOO r=0.4858, IS r=0.7644, gap=0.2786) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  gpf_logntc_bp_tumorpls1_r50.0: adjusted=0.4200 (LOO r=0.4716, IS r=0.7249, gap=0.2532) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  logntc_tig_tumorpls1_r50.0: adjusted=0.4161 (LOO r=0.4792, IS r=0.7552, gap=0.2760) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_tig_combpls1_r10.0: adjusted=0.4152 (LOO r=0.4895, IS r=0.7881, gap=0.2986) [F1=0.4074 QWK=0.3333 Acc=0.4667]
+  gpf_logntc_bp_tig_tumorpls1_r50.0: adjusted=0.4151 (LOO r=0.4671, IS r=0.7212, gap=0.2541) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_bp_r5.0: adjusted=0.4124 (LOO r=0.4124, IS r=0.5451, gap=0.1327) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gpf_logntc_bp_r1.0: adjusted=0.4107 (LOO r=0.4107, IS r=0.5464, gap=0.1357) [F1=0.2677 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_tig_r1.0: adjusted=0.4101 (LOO r=0.4101, IS r=0.5429, gap=0.1328) [F1=0.3056 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_bp_r0.5: adjusted=0.4100 (LOO r=0.4100, IS r=0.5466, gap=0.1365) [F1=0.2677 QWK=0.2222 Acc=0.3000]
+  gpf_logntc_tig_r0.5: adjusted=0.4099 (LOO r=0.4099, IS r=0.5430, gap=0.1331) [F1=0.3415 QWK=0.3448 Acc=0.3667]
+  gpf_logntc_tig_r5.0: adjusted=0.4092 (LOO r=0.4092, IS r=0.5429, gap=0.1336) [F1=0.3056 QWK=0.2857 Acc=0.3333]
+  gpf_logntc_bp_r10.0: adjusted=0.4075 (LOO r=0.4075, IS r=0.5443, gap=0.1368) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  logntc_glandpls1_r1.0: adjusted=0.4073 (LOO r=0.4788, IS r=0.7717, gap=0.2929) [F1=0.5141 QWK=0.4138 Acc=0.5333]
+  logntc_glandpls1_r5.0: adjusted=0.4072 (LOO r=0.4765, IS r=0.7652, gap=0.2886) [F1=0.4653 QWK=0.3571 Acc=0.5000]
+  gpf_logntc_combpls1_r50.0: adjusted=0.4065 (LOO r=0.4646, IS r=0.7307, gap=0.2661) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_tig_r10.0: adjusted=0.4047 (LOO r=0.4047, IS r=0.5428, gap=0.1380) [F1=0.2657 QWK=0.2222 Acc=0.3000]
+  logntc_glandpls1_r10.0: adjusted=0.4032 (LOO r=0.4715, IS r=0.7582, gap=0.2867) [F1=0.4263 QWK=0.2963 Acc=0.4667]
+  logntc_tumorpls1_r50.0: adjusted=0.4031 (LOO r=0.4726, IS r=0.7615, gap=0.2889) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_logntc_tig_combpls1_r50.0: adjusted=0.4023 (LOO r=0.4598, IS r=0.7248, gap=0.2650) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logntc_r0.5: adjusted=0.3997 (LOO r=0.3997, IS r=0.5161, gap=0.1165) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_bp_tig_r10.0: adjusted=0.3996 (LOO r=0.3996, IS r=0.5492, gap=0.1496) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gpf_logntc_r1.0: adjusted=0.3991 (LOO r=0.3991, IS r=0.5161, gap=0.1170) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_logntc_glandpls1_r20.0: adjusted=0.3990 (LOO r=0.4613, IS r=0.7358, gap=0.2745) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  gpf_logntc_bp_tig_r5.0: adjusted=0.3990 (LOO r=0.3994, IS r=0.5501, gap=0.1508) [F1=0.2657 QWK=0.2222 Acc=0.3000]
+
+BEST MODEL: gpf_logntc_tumorpls2_r20.0
+  Pearson r:      IS=0.8589  LOO=0.5598
+  IS-LOO Gap:     0.2992 (penalty=0.0746)
+  Adjusted Score: 0.4852
+  Macro F1:       0.3851
+  QWK:            0.3200
+  Accuracy:       0.4333
+
+ERRORS:
+  TCGA-A2-A0CS: GT=2 -> Pred=1 (continuous=1.397)
+  TCGA-AC-A23E: GT=1 -> Pred=2 (continuous=1.524)
+  TCGA-AC-A3TN: GT=1 -> Pred=2 (continuous=1.863)
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (continuous=2.393)
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (continuous=1.921)
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (continuous=2.019)
+  TCGA-BH-A0DX: GT=1 -> Pred=2 (continuous=1.663)
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (continuous=1.862)
+  TCGA-D8-A1XT: GT=3 -> Pred=2 (continuous=2.241)
+  TCGA-D8-A27N: GT=3 -> Pred=2 (continuous=2.087)
+  TCGA-D8-A27P: GT=1 -> Pred=2 (continuous=1.988)
+  TCGA-D8-A4Z1: GT=3 -> Pred=2 (continuous=1.912)
+  TCGA-D8-A73X: GT=1 -> Pred=2 (continuous=1.972)
+  TCGA-E2-A14W: GT=3 -> Pred=2 (continuous=2.356)
+  TCGA-E2-A1B1: GT=1 -> Pred=2 (continuous=1.682)
+  TCGA-EW-A1PH: GT=3 -> Pred=2 (continuous=2.219)
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (continuous=2.361)

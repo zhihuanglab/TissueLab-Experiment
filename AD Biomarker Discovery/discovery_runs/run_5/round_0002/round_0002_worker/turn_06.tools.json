@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"Adjusted Score\" -n /shared/lib /shared/templates /data/autoresearch_runs 2>/dev/null | head -20 || true\ngrep -R \"selection_score\" -n /shared/lib /data/autoresearch_runs 2>/dev/null | head -50 || true",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"ad_table(table_path)\\\\n\\\\n    target_col = _pick_target(df)\\\\n    if target_col is None:\\\\n        return {\\\\n            \\\\\\\"status\\\\\\\": \\\\\\\"null\\\\\\\",\\\\n            \\\\\\\"reason\\\\\\\": \\\\\\\"No plausible target column found in first discovered table\\\\\\\",\\\\n            \\\\\\\"data_file\\\\\\\": str(table_path),\\\\n            \\\\\\\"n_rows\\\\\\\": int(len(df)),\\\\n            \\\\\\\"n_cols\\\\\\\": int(df.shape[1]),\\\\n        }\\\\n\\\\n    biomarker_col, score, method = _pick_biomarker_feature(df, target_col)\\\\n    if biomarker_col is None:\\\\n        return {\\\\n      \", \"stderr\": \"\"}"
+  }
+]

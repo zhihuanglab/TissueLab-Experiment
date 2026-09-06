@@ -1,0 +1,51 @@
+Round 17 Details
+================================================================================
+
+KEY CHANGE: Testing tumor variance PCs, regularization tuning, mixed variance
+Hypothesis: tumor var PCs may complement or replace gland var PCs; higher alpha may reduce gap
+
+Interpretable Feature-GT Correlations:
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+  gland_in_tumor_frac: r=-0.5442
+  tumor_cell_density: r=-0.0306
+  bp_component_area_cv: r=-0.2266
+
+All Configurations (sorted by adjusted):
+  R16best_i5_gm4_tm4_gv2_a1.0: adj=0.8373 LOO_r=0.8373 IS_r=0.9572 gap=0.1199 F1=0.7078 QWK=0.7568
+  i5_gm4_tm4_gv2_a1.5: adj=0.8336 LOO_r=0.8336 IS_r=0.9546 gap=0.1211 F1=0.7089 QWK=0.7429
+  R9_baseline_i5_gm4_tm4_a1.0: adj=0.8311 LOO_r=0.8311 IS_r=0.9444 gap=0.1134 F1=0.7407 QWK=0.7778
+  R9_i5_gm4_tm4_a1.5: adj=0.8306 LOO_r=0.8306 IS_r=0.9425 gap=0.1120 F1=0.7738 QWK=0.8108
+  i5_gm4_tm4_gv2_a2.0: adj=0.8299 LOO_r=0.8299 IS_r=0.9526 gap=0.1227 F1=0.7089 QWK=0.7429
+  R9_i5_gm4_tm4_a2.0: adj=0.8297 LOO_r=0.8297 IS_r=0.9409 gap=0.1112 F1=0.7738 QWK=0.8108
+  i5_gm4_tm4_gv1_tv1_a1.0: adj=0.8237 LOO_r=0.8237 IS_r=0.9554 gap=0.1317 F1=0.6757 QWK=0.7059
+  i5_gm4_tm4_gv1_tv1_a1.5: adj=0.8228 LOO_r=0.8228 IS_r=0.9526 gap=0.1298 F1=0.6757 QWK=0.7059
+  i5_gm4_tm4_gv2_tv1_a1.0: adj=0.8221 LOO_r=0.8221 IS_r=0.9589 gap=0.1368 F1=0.7407 QWK=0.7778
+  i5_gm4_tm4_gv1_tv1_a2.0: adj=0.8211 LOO_r=0.8211 IS_r=0.9503 gap=0.1292 F1=0.6757 QWK=0.7059
+  i5_gm5_tm5_gv2_a1.5: adj=0.8202 LOO_r=0.8202 IS_r=0.9543 gap=0.1342 F1=0.8054 QWK=0.8421
+  i5_gm4_tm4_gv2_tv1_a1.5: adj=0.8193 LOO_r=0.8193 IS_r=0.9565 gap=0.1372 F1=0.7407 QWK=0.7778
+  i5_gm4_tm4_gv3_a1.0: adj=0.8187 LOO_r=0.8187 IS_r=0.9595 gap=0.1408 F1=0.7079 QWK=0.7429
+  i5_gm5_tm5_gv2_a2.0: adj=0.8178 LOO_r=0.8178 IS_r=0.9521 gap=0.1343 F1=0.8054 QWK=0.8421
+  i5_gm4_tm4_gv2_tv1_a2.0: adj=0.8166 LOO_r=0.8166 IS_r=0.9547 gap=0.1381 F1=0.6757 QWK=0.7059
+  i5_gm4_tm4_gv3_a1.5: adj=0.8164 LOO_r=0.8164 IS_r=0.9559 gap=0.1395 F1=0.7089 QWK=0.7429
+  i5_gm4_tm4_gv3_a2.0: adj=0.8143 LOO_r=0.8143 IS_r=0.9531 gap=0.1387 F1=0.7089 QWK=0.7429
+  i5_gm4_tm4_tv3_a2.0: adj=0.8124 LOO_r=0.8124 IS_r=0.9598 gap=0.1474 F1=0.7400 QWK=0.7647
+  i5_gm4_tm4_tv2_a2.0: adj=0.8116 LOO_r=0.8116 IS_r=0.9597 gap=0.1481 F1=0.7075 QWK=0.7273
+  i5_gm4_tm4_tv2_a1.5: adj=0.8110 LOO_r=0.8110 IS_r=0.9609 gap=0.1499 F1=0.7075 QWK=0.7273
+  i5_gm4_tm4_tv3_a1.5: adj=0.8097 LOO_r=0.8101 IS_r=0.9609 gap=0.1508 F1=0.7400 QWK=0.7647
+  i5_gm4_tm4_tv2_a1.0: adj=0.8073 LOO_r=0.8090 IS_r=0.9623 gap=0.1533 F1=0.6774 QWK=0.7059
+  i5_gm4_tm4_gv1_tv2_a1.5: adj=0.8037 LOO_r=0.8069 IS_r=0.9634 gap=0.1564 F1=0.7079 QWK=0.7429
+  i5_gm4_tm4_gv1_tv2_a2.0: adj=0.8035 LOO_r=0.8063 IS_r=0.9619 gap=0.1556 F1=0.7079 QWK=0.7429
+  i5_gm4_tm4_tv3_a1.0: adj=0.8034 LOO_r=0.8063 IS_r=0.9623 gap=0.1560 F1=0.7400 QWK=0.7647
+  i5_gm4_tm4_gv1_tv2_a1.0: adj=0.8030 LOO_r=0.8070 IS_r=0.9651 gap=0.1581 F1=0.7079 QWK=0.7429
+  interp5_only_a1.0: adj=0.6942 LOO_r=0.6942 IS_r=0.7836 gap=0.0894 F1=0.5081 QWK=0.5161
+  i5_gm3_tm3_gv2_tv2_a1.0: adj=-1.0000 LOO_r=0.5520 IS_r=0.9502 gap=0.3982 F1=0.3757 QWK=0.3529
+  i5_gm3_tm3_gv2_tv2_a1.5: adj=-1.0000 LOO_r=0.5634 IS_r=0.9487 gap=0.3853 F1=0.3414 QWK=0.3030
+  i5_gm3_tm3_gv2_tv2_a2.0: adj=-1.0000 LOO_r=0.5705 IS_r=0.9473 gap=0.3768 F1=0.3018 QWK=0.2500
+
+Best: R16best_i5_gm4_tm4_gv2_a1.0
+  Adjusted: 0.8373
+  LOO r: 0.8373
+  IS r: 0.9572
+  Gap: 0.1199
+  Selected PCs: {'gm': [1, 5, 9, 16], 'tm': [1, 3, 4, 7], 'gv': [2, 5]}

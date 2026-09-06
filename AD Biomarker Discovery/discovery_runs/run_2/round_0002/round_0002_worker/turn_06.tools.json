@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, os\nprint('PYTHONPATH env=', os.environ.get('PYTHONPATH'))\nprint(sys.path)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"PYTHONPATH env= None\\n['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\\n\", \"stderr\": \"\"}"
+  }
+]

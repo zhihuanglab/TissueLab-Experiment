@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- remainder stats helper ---'\nsed -n '260,420p' /shared/lib/shared_analysis/stats.py\necho '--- artifacts helper ---'\nsed -n '1,260p' /shared/lib/shared_analysis/artifacts.py\necho '--- openslide availability ---'\npython - <<'PY'\nimport importlib.util\nprint('openslide', importlib.util.find_spec('openslide'))\nprint('tifffile', importlib.util.find_spec('tifffile'))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- remainder stats helper ---\\n        preds.append(float(slope * resid_feature_test[0]))\\n        actuals.append(float(resid_outcome_test[0]))\\n\\n    pred_arr = np.asarray(preds, dtype=float)\\n    act_arr = np.asarray(actuals, dtype=float)\\n    mask = np.isfinite(pred_arr) & np.isfinite(act_arr)\\n    if mask.sum() < 3 or np.std(pred_arr[mask]) == 0 or np.std(act_arr[mask]) == 0:\\n        return float(\\\"nan\\\")\\n    return float(np.corrcoef(pred_arr[mask], act_arr[mask])[0, 1])\\n\\n\\ndef multifeature_residuali\", \"stderr\": \"\"}"
+  }
+]

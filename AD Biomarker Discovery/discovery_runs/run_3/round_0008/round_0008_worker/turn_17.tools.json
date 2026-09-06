@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pprint\nobj=json.load(open('/scratch/context_bundle.json'))\nrm=obj['runtime_manifest']\nprint(rm.keys())\nprint('slide manifest head', obj['slide_manifest_head'][:3] if isinstance(obj['slide_manifest_head'], list) else obj['slide_manifest_head'])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"dict_keys(['runtime_version', 'generated_at_utc', 'shared_root', 'python_import_root', 'template_path', 'template_paths', 'cache_paths', 'modules', 'prompt_context'])\\nslide manifest head {'data_root': '/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training', 'cohort_rows': 35, 'slide_count': 35, 'slides': [{'slide_name': 'H19.33.004-A12-LFB.svs.zarr', 'slide_id': 'H19.33.004-A12-LFB', 'zarr_path': '/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H19.33.004-A12-LFB.svs.zarr',\", \"stderr\": \"\"}"
+  }
+]

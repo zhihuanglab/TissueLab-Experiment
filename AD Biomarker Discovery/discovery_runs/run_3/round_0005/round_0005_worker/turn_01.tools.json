@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\necho '--- context_bundle.json ---'\npython - <<'PY'\nimport json, textwrap\nwith open('/scratch/context_bundle.json') as f:\n    obj=json.load(f)\nprint(json.dumps(obj, indent=2)[:20000])\nPY\necho\necho '--- program.md ---'\nsed -n '1,240p' /scratch/program.md\necho\necho '--- existing result.py ---'\nsed -n '1,240p' /scratch/result.py || true",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"  ]\\n      },\\n      {\\n        \\\"module\\\": \\\"shared_analysis.pca\\\",\\n        \\\"functions\\\": [\\n          \\\"fit_pca_basis\\\",\\n          \\\"save_pca_basis\\\",\\n          \\\"load_pca_basis\\\",\\n          \\\"apply_pca_basis\\\"\\n        ]\\n      },\\n      {\\n        \\\"module\\\": \\\"shared_analysis.artifacts\\\",\\n        \\\"functions\\\": [\\n          \\\"coerce_results_payload\\\",\\n          \\\"build_results_payload\\\",\\n          \\\"write_donor_feature_table\\\",\\n          \\\"write_results_payload\\\",\\n          \\\"validate_results_payload\\\"\\n        ]\\n      },\\n      \", \"stderr\": \"\"}"
+  }
+]

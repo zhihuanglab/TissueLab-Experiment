@@ -1,0 +1,151 @@
+Round 17 Details
+============================================================
+
+HYPOTHESIS: Fine-tune Ridge alpha and PC counts from Round 16 best
+to push IS-LOO gap below 0.15 while maintaining LOO r >= 0.70.
+Round 16 best: kt=1, kg=5, alpha=10, gap=0.1513.
+
+FEATURE-GT CORRELATIONS:
+  gpf: r=-0.4148
+  logntc: r=+0.3692
+  bp_area_frac: r=-0.2645
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  B2_nobp_kt1_kg4_r8: adjusted=0.7414 (LOO r=0.7414, IS r=0.8648, gap=0.1235) [F1=0.6071 QWK=0.6250 Acc=0.6000]
+  B2_nobp_kt1_kg4_r10: adjusted=0.7408 (LOO r=0.7408, IS r=0.8640, gap=0.1232) [F1=0.5728 QWK=0.5806 Acc=0.5667]
+  B2_nobp_kt1_kg4_r12: adjusted=0.7399 (LOO r=0.7399, IS r=0.8631, gap=0.1231) [F1=0.5333 QWK=0.5333 Acc=0.5333]
+  B2_nobp_kt1_kg4_r15: adjusted=0.7381 (LOO r=0.7381, IS r=0.8614, gap=0.1233) [F1=0.5586 QWK=0.5517 Acc=0.5667]
+  B2_nobp_kt1_kg4_r20: adjusted=0.7338 (LOO r=0.7338, IS r=0.8580, gap=0.1242) [F1=0.5123 QWK=0.5000 Acc=0.5333]
+  A2_bp_kt1_kg4_r12: adjusted=0.7324 (LOO r=0.7324, IS r=0.8651, gap=0.1326) [F1=0.5728 QWK=0.5806 Acc=0.5667]
+  A2_bp_kt1_kg4_r10: adjusted=0.7322 (LOO r=0.7322, IS r=0.8660, gap=0.1338) [F1=0.5728 QWK=0.5806 Acc=0.5667]
+  A2_bp_kt1_kg4_r15: adjusted=0.7319 (LOO r=0.7319, IS r=0.8635, gap=0.1316) [F1=0.4959 QWK=0.4828 Acc=0.5000]
+  A2_bp_kt1_kg4_r8: adjusted=0.7313 (LOO r=0.7313, IS r=0.8667, gap=0.1354) [F1=0.5417 QWK=0.5625 Acc=0.5333]
+  A2_bp_kt1_kg4_r18: adjusted=0.7305 (LOO r=0.7305, IS r=0.8616, gap=0.1311) [F1=0.4749 QWK=0.4444 Acc=0.5000]
+  A2_bp_kt1_kg4_r20: adjusted=0.7292 (LOO r=0.7292, IS r=0.8603, gap=0.1310) [F1=0.4749 QWK=0.4444 Acc=0.5000]
+  F2_gpf_kt1_kg4_r10: adjusted=0.7251 (LOO r=0.7251, IS r=0.8428, gap=0.1177) [F1=0.5988 QWK=0.6000 Acc=0.6000]
+  A2_bp_kt1_kg4_r25: adjusted=0.7250 (LOO r=0.7250, IS r=0.8564, gap=0.1314) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  F2_gpf_kt1_kg4_r15: adjusted=0.7214 (LOO r=0.7214, IS r=0.8410, gap=0.1195) [F1=0.5463 QWK=0.5185 Acc=0.5667]
+  F2_gpf_kt1_kg4_r20: adjusted=0.7159 (LOO r=0.7159, IS r=0.8379, gap=0.1219) [F1=0.4554 QWK=0.4000 Acc=0.5000]
+  B1_nobp_kt1_kg5_r12: adjusted=0.7126 (LOO r=0.7129, IS r=0.8634, gap=0.1505) [F1=0.5208 QWK=0.5000 Acc=0.5333] PENALIZED
+  B1_nobp_kt1_kg5_r10: adjusted=0.7126 (LOO r=0.7132, IS r=0.8646, gap=0.1513) [F1=0.4959 QWK=0.4828 Acc=0.5000] PENALIZED
+  B1_nobp_kt1_kg5_r8: adjusted=0.7114 (LOO r=0.7128, IS r=0.8656, gap=0.1528) [F1=0.5349 QWK=0.5333 Acc=0.5333] PENALIZED
+  B1_nobp_kt1_kg5_r15: adjusted=0.7113 (LOO r=0.7113, IS r=0.8614, gap=0.1501) [F1=0.5208 QWK=0.5000 Acc=0.5333] PENALIZED
+  B1_nobp_kt1_kg5_r18: adjusted=0.7088 (LOO r=0.7089, IS r=0.8592, gap=0.1503) [F1=0.4785 QWK=0.4444 Acc=0.5000] PENALIZED
+  D2_bp_kt2_kg4_r12: adjusted=0.7075 (LOO r=0.7147, IS r=0.8791, gap=0.1644) [F1=0.5417 QWK=0.5625 Acc=0.5333] PENALIZED
+  B1_nobp_kt1_kg5_r20: adjusted=0.7066 (LOO r=0.7069, IS r=0.8576, gap=0.1507) [F1=0.4785 QWK=0.4444 Acc=0.5000] PENALIZED
+  D2_bp_kt2_kg4_r15: adjusted=0.7058 (LOO r=0.7128, IS r=0.8767, gap=0.1640) [F1=0.4667 QWK=0.4667 Acc=0.4667] PENALIZED
+  D2_bp_kt2_kg4_r20: adjusted=0.7027 (LOO r=0.7094, IS r=0.8726, gap=0.1633) [F1=0.4267 QWK=0.4138 Acc=0.4333] PENALIZED
+  E2_nobp_kt0_kg4_r8: adjusted=0.7009 (LOO r=0.7009, IS r=0.8396, gap=0.1388) [F1=0.5026 QWK=0.5161 Acc=0.5000]
+  A1_bp_kt1_kg5_r15: adjusted=0.7003 (LOO r=0.7046, IS r=0.8632, gap=0.1586) [F1=0.4304 QWK=0.3846 Acc=0.4667] PENALIZED
+  B1_nobp_kt1_kg5_r25: adjusted=0.6999 (LOO r=0.7010, IS r=0.8533, gap=0.1523) [F1=0.4304 QWK=0.3846 Acc=0.4667] PENALIZED
+  A1_bp_kt1_kg5_r12: adjusted=0.6996 (LOO r=0.7048, IS r=0.8651, gap=0.1603) [F1=0.4959 QWK=0.4828 Acc=0.5000] PENALIZED
+  E2_nobp_kt0_kg4_r10: adjusted=0.6995 (LOO r=0.6995, IS r=0.8385, gap=0.1390) [F1=0.4667 QWK=0.4667 Acc=0.4667]
+  A1_bp_kt1_kg5_r18: adjusted=0.6992 (LOO r=0.7032, IS r=0.8611, gap=0.1579) [F1=0.4304 QWK=0.3846 Acc=0.4667] PENALIZED
+  C2_bp_kt0_kg4_r10: adjusted=0.6991 (LOO r=0.6991, IS r=0.8410, gap=0.1419) [F1=0.5333 QWK=0.5333 Acc=0.5333]
+  C2_bp_kt0_kg4_r8: adjusted=0.6991 (LOO r=0.6991, IS r=0.8432, gap=0.1441) [F1=0.5417 QWK=0.5625 Acc=0.5333]
+  C2_bp_kt0_kg4_r12: adjusted=0.6985 (LOO r=0.6985, IS r=0.8396, gap=0.1411) [F1=0.4538 QWK=0.4286 Acc=0.4667]
+  D2_bp_kt2_kg4_r25: adjusted=0.6985 (LOO r=0.7051, IS r=0.8683, gap=0.1632) [F1=0.3392 QWK=0.2963 Acc=0.3667] PENALIZED
+  A1_bp_kt1_kg5_r10: adjusted=0.6980 (LOO r=0.7040, IS r=0.8662, gap=0.1621) [F1=0.5054 QWK=0.5161 Acc=0.5000] PENALIZED
+  A1_bp_kt1_kg5_r20: adjusted=0.6978 (LOO r=0.7017, IS r=0.8595, gap=0.1578) [F1=0.4304 QWK=0.3846 Acc=0.4667] PENALIZED
+  E2_nobp_kt0_kg4_r12: adjusted=0.6978 (LOO r=0.6978, IS r=0.8373, gap=0.1395) [F1=0.4267 QWK=0.4138 Acc=0.4333]
+  C2_bp_kt0_kg4_r15: adjusted=0.6971 (LOO r=0.6971, IS r=0.8385, gap=0.1414) [F1=0.4061 QWK=0.3704 Acc=0.4333]
+  E2_nobp_kt0_kg4_r15: adjusted=0.6945 (LOO r=0.6945, IS r=0.8353, gap=0.1407) [F1=0.3817 QWK=0.3571 Acc=0.4000]
+  C2_bp_kt0_kg4_r20: adjusted=0.6938 (LOO r=0.6938, IS r=0.8370, gap=0.1432) [F1=0.4061 QWK=0.3704 Acc=0.4333]
+  A1_bp_kt1_kg5_r25: adjusted=0.6927 (LOO r=0.6969, IS r=0.8552, gap=0.1584) [F1=0.3298 QWK=0.2500 Acc=0.4000] PENALIZED
+  G2_bp_kt1_kg5_r7: adjusted=0.6924 (LOO r=0.7008, IS r=0.8675, gap=0.1668) [F1=0.5054 QWK=0.5161 Acc=0.5000] PENALIZED
+  E2_nobp_kt0_kg4_r20: adjusted=0.6905 (LOO r=0.6905, IS r=0.8342, gap=0.1437) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  D1_bp_kt2_kg5_r12: adjusted=0.6871 (LOO r=0.7013, IS r=0.8796, gap=0.1783) [F1=0.4651 QWK=0.4667 Acc=0.4667] PENALIZED
+  G2_bp_kt1_kg5_r5: adjusted=0.6868 (LOO r=0.6973, IS r=0.8683, gap=0.1710) [F1=0.5405 QWK=0.5625 Acc=0.5333] PENALIZED
+  D1_bp_kt2_kg5_r15: adjusted=0.6863 (LOO r=0.6999, IS r=0.8771, gap=0.1772) [F1=0.3817 QWK=0.3571 Acc=0.4000] PENALIZED
+  A1_bp_kt1_kg5_r30: adjusted=0.6857 (LOO r=0.6907, IS r=0.8505, gap=0.1598) [F1=0.3298 QWK=0.2500 Acc=0.4000] PENALIZED
+  D1_bp_kt2_kg5_r20: adjusted=0.6832 (LOO r=0.6963, IS r=0.8726, gap=0.1763) [F1=0.3817 QWK=0.3571 Acc=0.4000] PENALIZED
+  G1_bp_kt1_kg5_r35: adjusted=0.6776 (LOO r=0.6835, IS r=0.8454, gap=0.1619) [F1=0.2783 QWK=0.1739 Acc=0.3667] PENALIZED
+  D1_bp_kt2_kg5_r25: adjusted=0.6775 (LOO r=0.6910, IS r=0.8680, gap=0.1770) [F1=0.4070 QWK=0.3704 Acc=0.4333] PENALIZED
+  B3_nobp_kt1_kg3_r15: adjusted=0.6763 (LOO r=0.6763, IS r=0.7925, gap=0.1161) [F1=0.3749 QWK=0.3571 Acc=0.4000]
+  B3_nobp_kt1_kg3_r10: adjusted=0.6752 (LOO r=0.6752, IS r=0.7943, gap=0.1191) [F1=0.4591 QWK=0.4667 Acc=0.4667]
+  B3_nobp_kt1_kg3_r20: adjusted=0.6749 (LOO r=0.6749, IS r=0.7898, gap=0.1149) [F1=0.3620 QWK=0.3077 Acc=0.4000]
+  B3_nobp_kt1_kg3_r8: adjusted=0.6737 (LOO r=0.6737, IS r=0.7948, gap=0.1210) [F1=0.4961 QWK=0.4375 Acc=0.5000]
+  D1_bp_kt2_kg5_r30: adjusted=0.6699 (LOO r=0.6847, IS r=0.8642, gap=0.1795) [F1=0.3105 QWK=0.2400 Acc=0.3667] PENALIZED
+  G1_bp_kt1_kg5_r40: adjusted=0.6677 (LOO r=0.6757, IS r=0.8418, gap=0.1661) [F1=0.2185 QWK=0.0909 Acc=0.3333] PENALIZED
+  A3_bp_kt1_kg3_r20: adjusted=0.6655 (LOO r=0.6655, IS r=0.7927, gap=0.1272) [F1=0.3356 QWK=0.2963 Acc=0.3667]
+  A3_bp_kt1_kg3_r15: adjusted=0.6649 (LOO r=0.6649, IS r=0.7951, gap=0.1302) [F1=0.3356 QWK=0.2963 Acc=0.3667]
+  A3_bp_kt1_kg3_r12: adjusted=0.6629 (LOO r=0.6629, IS r=0.7961, gap=0.1332) [F1=0.3749 QWK=0.3571 Acc=0.4000]
+  A3_bp_kt1_kg3_r10: adjusted=0.6607 (LOO r=0.6607, IS r=0.7966, gap=0.1359) [F1=0.5026 QWK=0.5161 Acc=0.5000]
+  A3_bp_kt1_kg3_r8: adjusted=0.6575 (LOO r=0.6575, IS r=0.7970, gap=0.1395) [F1=0.4961 QWK=0.4375 Acc=0.5000]
+  F1_gpf_kt1_kg5_r10: adjusted=0.6478 (LOO r=0.6627, IS r=0.8424, gap=0.1797) [F1=0.4785 QWK=0.4444 Acc=0.5000] PENALIZED
+  F1_gpf_kt1_kg5_r15: adjusted=0.6477 (LOO r=0.6618, IS r=0.8399, gap=0.1781) [F1=0.3996 QWK=0.3333 Acc=0.4667] PENALIZED
+  H1_bp_kt1_kg7_r20: adjusted=0.6461 (LOO r=0.6765, IS r=0.8875, gap=0.2109) [F1=0.3356 QWK=0.2963 Acc=0.3667] PENALIZED
+  G1_bp_kt1_kg5_r50: adjusted=0.6449 (LOO r=0.6587, IS r=0.8364, gap=0.1776) [F1=0.2315 QWK=0.0952 Acc=0.3667] PENALIZED
+  H1_bp_kt1_kg7_r15: adjusted=0.6446 (LOO r=0.6769, IS r=0.8917, gap=0.2148) [F1=0.3839 QWK=0.3571 Acc=0.4000] PENALIZED
+  H1_bp_kt1_kg7_r25: adjusted=0.6438 (LOO r=0.6735, IS r=0.8830, gap=0.2095) [F1=0.3553 QWK=0.3077 Acc=0.4000] PENALIZED
+  F1_gpf_kt1_kg5_r20: adjusted=0.6432 (LOO r=0.6575, IS r=0.8362, gap=0.1786) [F1=0.3519 QWK=0.2609 Acc=0.4333] PENALIZED
+  A4_bp_kt1_kg6_r15: adjusted=0.6432 (LOO r=0.6746, IS r=0.8874, gap=0.2128) [F1=0.3681 QWK=0.3571 Acc=0.4000] PENALIZED
+  A4_bp_kt1_kg6_r12: adjusted=0.6421 (LOO r=0.6744, IS r=0.8891, gap=0.2147) [F1=0.3681 QWK=0.3571 Acc=0.4000] PENALIZED
+  A4_bp_kt1_kg6_r20: adjusted=0.6413 (LOO r=0.6722, IS r=0.8840, gap=0.2118) [F1=0.3553 QWK=0.3077 Acc=0.4000] PENALIZED
+  E1_nobp_kt0_kg5_r8: adjusted=0.6407 (LOO r=0.6623, IS r=0.8554, gap=0.1931) [F1=0.4785 QWK=0.4444 Acc=0.5000] PENALIZED
+  E1_nobp_kt0_kg5_r10: adjusted=0.6406 (LOO r=0.6617, IS r=0.8541, gap=0.1923) [F1=0.4785 QWK=0.4444 Acc=0.5000] PENALIZED
+  E1_nobp_kt0_kg5_r12: adjusted=0.6401 (LOO r=0.6610, IS r=0.8529, gap=0.1918) [F1=0.4785 QWK=0.4444 Acc=0.5000] PENALIZED
+  E1_nobp_kt0_kg5_r15: adjusted=0.6388 (LOO r=0.6596, IS r=0.8512, gap=0.1916) [F1=0.4304 QWK=0.3846 Acc=0.4667] PENALIZED
+  H1_bp_kt1_kg7_r30: adjusted=0.6383 (LOO r=0.6687, IS r=0.8796, gap=0.2109) [F1=0.3333 QWK=0.2500 Acc=0.4000] PENALIZED
+  C1_bp_kt0_kg5_r12: adjusted=0.6377 (LOO r=0.6596, IS r=0.8534, gap=0.1938) [F1=0.4070 QWK=0.3704 Acc=0.4333] PENALIZED
+  C1_bp_kt0_kg5_r15: adjusted=0.6374 (LOO r=0.6587, IS r=0.8513, gap=0.1926) [F1=0.3851 QWK=0.3200 Acc=0.4333] PENALIZED
+  C1_bp_kt0_kg5_r10: adjusted=0.6366 (LOO r=0.6595, IS r=0.8553, gap=0.1958) [F1=0.3817 QWK=0.3571 Acc=0.4000] PENALIZED
+  A4_bp_kt1_kg6_r25: adjusted=0.6363 (LOO r=0.6675, IS r=0.8799, gap=0.2124) [F1=0.3553 QWK=0.3077 Acc=0.4000] PENALIZED
+  F1_gpf_kt1_kg5_r25: adjusted=0.6362 (LOO r=0.6513, IS r=0.8316, gap=0.1803) [F1=0.3519 QWK=0.2609 Acc=0.4333] PENALIZED
+  E1_nobp_kt0_kg5_r20: adjusted=0.6355 (LOO r=0.6566, IS r=0.8488, gap=0.1922) [F1=0.3851 QWK=0.3200 Acc=0.4333] PENALIZED
+  C1_bp_kt0_kg5_r8: adjusted=0.6342 (LOO r=0.6585, IS r=0.8571, gap=0.1986) [F1=0.4198 QWK=0.4138 Acc=0.4333] PENALIZED
+  C1_bp_kt0_kg5_r20: adjusted=0.6332 (LOO r=0.6550, IS r=0.8484, gap=0.1934) [F1=0.3851 QWK=0.3200 Acc=0.4333] PENALIZED
+  A4_bp_kt1_kg6_r30: adjusted=0.6294 (LOO r=0.6613, IS r=0.8752, gap=0.2139) [F1=0.2593 QWK=0.1667 Acc=0.3333] PENALIZED
+  D3_bp_kt2_kg3_r25: adjusted=0.6061 (LOO r=0.6186, IS r=0.7935, gap=0.1750) [F1=0.3808 QWK=0.3200 Acc=0.4333] PENALIZED
+  D3_bp_kt2_kg3_r20: adjusted=0.6021 (LOO r=0.6169, IS r=0.7965, gap=0.1796) [F1=0.3949 QWK=0.3704 Acc=0.4333] PENALIZED
+  D3_bp_kt2_kg3_r15: adjusted=0.5968 (LOO r=0.6142, IS r=0.7992, gap=0.1849) [F1=0.3749 QWK=0.3571 Acc=0.4000] PENALIZED
+  C3_bp_kt0_kg6_r10: adjusted=0.5965 (LOO r=0.6430, IS r=0.8862, gap=0.2431) [F1=0.3952 QWK=0.4000 Acc=0.4000] PENALIZED
+  C3_bp_kt0_kg6_r15: adjusted=0.5947 (LOO r=0.6410, IS r=0.8836, gap=0.2426) [F1=0.4198 QWK=0.4138 Acc=0.4333] PENALIZED
+  C3_bp_kt0_kg6_r20: adjusted=0.5887 (LOO r=0.6362, IS r=0.8812, gap=0.2451) [F1=0.4070 QWK=0.3704 Acc=0.4333] PENALIZED
+  C3_bp_kt0_kg6_r25: adjusted=0.5847 (LOO r=0.6328, IS r=0.8790, gap=0.2462) [F1=0.3620 QWK=0.3077 Acc=0.4000] PENALIZED
+  D3_bp_kt2_kg3_r10: adjusted=0.5829 (LOO r=0.6062, IS r=0.8028, gap=0.1966) [F1=0.3586 QWK=0.3871 Acc=0.3667] PENALIZED
+  I1_bp_kt1_kg2_r10: adjusted=0.5140 (LOO r=0.5531, IS r=0.7813, gap=0.2282) [F1=0.4331 QWK=0.3750 Acc=0.4333] PENALIZED
+  I1_bp_kt1_kg2_r15: adjusted=0.5138 (LOO r=0.5525, IS r=0.7797, gap=0.2273) [F1=0.3791 QWK=0.2759 Acc=0.4000] PENALIZED
+  I1_bp_kt1_kg2_r8: adjusted=0.5125 (LOO r=0.5523, IS r=0.7819, gap=0.2296) [F1=0.4053 QWK=0.3636 Acc=0.4000] PENALIZED
+  I1_bp_kt1_kg2_r5: adjusted=0.5071 (LOO r=0.5490, IS r=0.7830, gap=0.2339) [F1=0.4384 QWK=0.4118 Acc=0.4333] PENALIZED
+
+BEST NO-PENALTY CONFIGS:
+  B2_nobp_kt1_kg4_r8: LOO_r=0.7414 gap=0.1235 adj=0.7414
+  B2_nobp_kt1_kg4_r10: LOO_r=0.7408 gap=0.1232 adj=0.7408
+  B2_nobp_kt1_kg4_r12: LOO_r=0.7399 gap=0.1231 adj=0.7399
+  B2_nobp_kt1_kg4_r15: LOO_r=0.7381 gap=0.1233 adj=0.7381
+  B2_nobp_kt1_kg4_r20: LOO_r=0.7338 gap=0.1242 adj=0.7338
+  A2_bp_kt1_kg4_r12: LOO_r=0.7324 gap=0.1326 adj=0.7324
+  A2_bp_kt1_kg4_r10: LOO_r=0.7322 gap=0.1338 adj=0.7322
+  A2_bp_kt1_kg4_r15: LOO_r=0.7319 gap=0.1316 adj=0.7319
+  A2_bp_kt1_kg4_r8: LOO_r=0.7313 gap=0.1354 adj=0.7313
+  A2_bp_kt1_kg4_r18: LOO_r=0.7305 gap=0.1311 adj=0.7305
+  A2_bp_kt1_kg4_r20: LOO_r=0.7292 gap=0.1310 adj=0.7292
+  F2_gpf_kt1_kg4_r10: LOO_r=0.7251 gap=0.1177 adj=0.7251
+  A2_bp_kt1_kg4_r25: LOO_r=0.7250 gap=0.1314 adj=0.7250
+  F2_gpf_kt1_kg4_r15: LOO_r=0.7214 gap=0.1195 adj=0.7214
+  F2_gpf_kt1_kg4_r20: LOO_r=0.7159 gap=0.1219 adj=0.7159
+  E2_nobp_kt0_kg4_r8: LOO_r=0.7009 gap=0.1388 adj=0.7009
+  E2_nobp_kt0_kg4_r10: LOO_r=0.6995 gap=0.1390 adj=0.6995
+  C2_bp_kt0_kg4_r10: LOO_r=0.6991 gap=0.1419 adj=0.6991
+  C2_bp_kt0_kg4_r8: LOO_r=0.6991 gap=0.1441 adj=0.6991
+  C2_bp_kt0_kg4_r12: LOO_r=0.6985 gap=0.1411 adj=0.6985
+
+BEST MODEL: B2_nobp_kt1_kg4_r8
+  Pearson r:      IS=0.8648  LOO=0.7414
+  IS-LOO Gap:     0.1235 (penalty=0.0000)
+  Adjusted Score: 0.7414
+
+ERRORS:
+  TCGA-A2-A0ET: GT=2 -> Pred=3 (continuous=2.903)
+  TCGA-AC-A23E: GT=1 -> Pred=2 (continuous=1.566)
+  TCGA-AR-A0U4: GT=3 -> Pred=2 (continuous=2.323)
+  TCGA-AR-A1AR: GT=3 -> Pred=2 (continuous=2.499)
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (continuous=2.386)
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (continuous=1.721)
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (continuous=2.093)
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (continuous=1.543)
+  TCGA-D8-A27P: GT=1 -> Pred=2 (continuous=1.597)
+  TCGA-E2-A10E: GT=2 -> Pred=3 (continuous=2.569)
+  TCGA-E2-A14W: GT=3 -> Pred=2 (continuous=2.320)
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (continuous=2.134)

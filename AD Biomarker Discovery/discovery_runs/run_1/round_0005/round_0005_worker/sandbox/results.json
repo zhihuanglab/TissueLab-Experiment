@@ -1,0 +1,24 @@
+{
+  "best_variation": "planned_local_sweep_fallback",
+  "feature_column": "uncomputed_feature_placeholder",
+  "partial_r": 0.0,
+  "selection_score": 0.0,
+  "loo_predictive_r": 0.0,
+  "is_loo_gap": 0.0,
+  "penalty": 0.0,
+  "adjusted_score": 0.0,
+  "ranked_variations": [
+    {
+      "variation_name": "planned_local_sweep_fallback",
+      "partial_r": 0.0,
+      "selection_score": 0.0,
+      "loo_predictive_r": 0.0,
+      "is_loo_gap": 0.0,
+      "penalty": 0.0,
+      "adjusted_score": 0.0,
+      "n_analyzable": 0,
+      "n_total": 0
+    }
+  ],
+  "note": "Emergency fallback result written because the round could not be completed before timeout. This preserves replay structure and a canonical target for later replacement."
+}

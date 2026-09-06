@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython /scratch/result.py > /scratch/run_stdout.txt\ncat /scratch/run_stdout.txt\necho '--- results.json head ---'\npython - <<'PY'\nimport json\nfrom pathlib import Path\np=Path('/scratch/results.json')\nprint('exists', p.exists(), 'size', p.stat().st_size if p.exists() else None)\nif p.exists():\n    obj=json.loads(p.read_text())\n    print({k: obj.get(k) for k in ['best_variation','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score']})\n    print('ranked count', len(obj.get('ranked_variations', [])))\nPY\necho '--- report.md head ---'\nsed -n '1,220p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"/usr/local/lib/python3.11/site-packages/zarr/core/group.py:3535: ZarrUserWarning: Object at ._TEC_01 is not recognized as a component of a Zarr hierarchy.\\n  warnings.warn(\\n/usr/local/lib/python3.11/site-packages/zarr/core/group.py:3535: ZarrUserWarning: Object at ._EC_01 is not recognized as a component of a Zarr hierarchy.\\n  warnings.warn(\\n/usr/local/lib/python3.11/site-packages/zarr/core/group.py:3535: ZarrUserWarning: Object at ._CA2_01 is not recognized as a component of a Zarr hierarchy.\\n  \"}"
+  }
+]

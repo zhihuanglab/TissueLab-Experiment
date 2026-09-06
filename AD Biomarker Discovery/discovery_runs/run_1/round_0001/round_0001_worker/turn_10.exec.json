@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "['Negative control', 'Tumor', 'Lymphocyte', 'Pyramidal Neuron', 'Granule Neuron', 'Reactive Astrocyte', 'Astrocyte', 'Oligodendrocyte', 'Corpora Amylacea']\n",
+  "stderr": ""
+}

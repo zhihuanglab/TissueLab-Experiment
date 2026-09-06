@@ -1,0 +1,81 @@
+{
+  "worker_name": "round_0006_worker",
+  "round_id": 6,
+  "candidate_id": "ca1-reactive-astro-pyramidal-isolation",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_reactive_astro_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_pyramidal_near_reactive_astro_fraction_30um",
+        "round_id": 2,
+        "panel_candidate_score": 0.5513,
+        "delta_panel_score": 0.0599,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um",
+        "round_id": 3,
+        "panel_candidate_score": 0.5984,
+        "delta_panel_score": 0.0471,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+        "round_id": 4,
+        "panel_candidate_score": 0.6307,
+        "delta_panel_score": 0.0323,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_peripyramidal_astro_reactivity_index_30um",
+        "round_id": 5,
+        "panel_candidate_score": 0.6323,
+        "delta_panel_score": 0.0016,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0005/round_0005_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.6323
+  },
+  "scientific_question": "Do donors with worse memory decline have a higher fraction of CA1 pyramidal neurons that are both exposed to nearby reactive astrocytes and locally depleted of neighboring pyramidal neurons?",
+  "approach": "Assign cells to CA1 using CustomAnnotations polygons after dividing annotation coordinates by 16. From ClassificationNode labels, select CA1 Pyramidal Neuron and Reactive Astrocyte centroids. For each CA1 pyramidal neuron, count (1) reactive astrocytes within a 30 um radius and (2) other CA1 pyramidal neurons within the same 30 um radius, excluding the index cell. Mark a pyramidal neuron as 'reactive-astro-associated isolated' if it has at least one reactive astrocyte neighbor and no more than k other pyramidal neighbors. The donor-level biomarker is the fraction of CA1 pyramidal neurons meeting that criterion.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Fraction of CA1 pyramidal neurons with at least 1 reactive astrocyte within 30 um and at most 5 other CA1 pyramidal neighbors within 30 um."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Same feature, but the low-pyramidal-neighbor threshold is relaxed to at most 8 other CA1 pyramidal neighbors within 30 um."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use centroids only; no contour-derived morphology is needed. Keep the radius at the same 30 um scale as prior accepted niche features, converting microns to pixels with slide MPP if available from the paired SVS; in this cohort 30 um is about 60 px. Exclude the index pyramidal neuron from the pyramidal-neighbor count. If CA1 is missing or a donor has zero CA1 pyramidal neurons, return NaN gracefully.",
+  "rationale": "Rounds 1-5 established a strong CA1 reactive-astrocyte niche signal, but the last addition produced only a very small gain, which suggests the current panel is nearing saturation on astrocyte-only summaries. The next focused test should ask whether the same niche also carries a distinct neuronal disorganization signal: pyramidal neurons sitting in reactive-astro neighborhoods while lacking nearby pyramidal peers. That is mechanistically interpretable as reactive-astro-associated local pyramidal dropout or isolation, and it could add nonredundant signal or serve as a cleaner replacement for a weaker astro-only member."
+}

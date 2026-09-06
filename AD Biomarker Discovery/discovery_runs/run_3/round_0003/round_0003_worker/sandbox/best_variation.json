@@ -1,0 +1,9 @@
+{
+  "best_variation": "r35_ge1",
+  "min_neighbors": 1,
+  "feature_column": "ca1_pyramidal_cuffed_fraction_r35um_ge1",
+  "radius_um": 35.0,
+  "region": "CA1",
+  "target_cell_type": "Pyramidal Neuron",
+  "neighbor_cell_type": "Reactive Astrocyte"
+}

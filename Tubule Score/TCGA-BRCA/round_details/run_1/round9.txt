@@ -1,0 +1,179 @@
+Round 9 Details
+================================================================================
+
+APPROACH: HC3 + PCA-reduced musk_gland AND musk_tumor embeddings with LOO-safe PC selection
+CHANGE FROM R8: Added musk_tumor PCA components alongside gland PCA; broader alpha sweep
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_ratio: r=-0.415
+  tumor_median_nnd: r=+0.420
+  gland_mask_fraction: r=-0.264
+
+Gland PCA explained variance: 0.9589
+Tumor PCA explained variance: 0.9666
+
+Embedding availability: gland=30/30, tumor=30/30
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  hc3+gPC4+tPC1__Ridge20: adjusted=0.7051 (LOO r=0.705, IS r=0.847, gap=0.142) [F1=0.411 QWK=0.370]
+  hc3+gPC4+tPC1__Ridge10: adjusted=0.7048 (LOO r=0.705, IS r=0.851, gap=0.146) [F1=0.505 QWK=0.516]
+  hc3+gPC4+tPC1__Ridge5: adjusted=0.6966 (LOO r=0.698, IS r=0.851, gap=0.153) [F1=0.513 QWK=0.545]
+  hc3+gPC4+tPC3__Ridge5: adjusted=0.6911 (LOO r=0.710, IS r=0.898, gap=0.188) [F1=0.542 QWK=0.588]
+  hc3+gPC4+tPC3__Ridge10: adjusted=0.6901 (LOO r=0.708, IS r=0.893, gap=0.185) [F1=0.465 QWK=0.467]
+  hc3+gPC4+tPC3__Ridge20: adjusted=0.6773 (LOO r=0.696, IS r=0.883, gap=0.187) [F1=0.273 QWK=0.174]
+  hc3+gPC4+tPC2__Ridge20: adjusted=0.6755 (LOO r=0.688, IS r=0.864, gap=0.176) [F1=0.407 QWK=0.370]
+  hc3+gPC4+tPC2__Ridge10: adjusted=0.6750 (LOO r=0.690, IS r=0.872, gap=0.181) [F1=0.420 QWK=0.414]
+  hc3+gPC4+tPC3__Ridge1: adjusted=0.6736 (LOO r=0.699, IS r=0.901, gap=0.202) [F1=0.673 QWK=0.737]
+  hc3+gPC4+tPC1__Ridge1: adjusted=0.6733 (LOO r=0.683, IS r=0.851, gap=0.169) [F1=0.566 QWK=0.579]
+  hc3+gPC4+tPC1__Ridge50: adjusted=0.6716 (LOO r=0.672, IS r=0.820, gap=0.148) [F1=0.297 QWK=0.182]
+  hc3+gPC4__Ridge10: adjusted=0.6681 (LOO r=0.670, IS r=0.825, gap=0.154) [F1=0.454 QWK=0.429]
+  hc3+gPC4__Ridge20: adjusted=0.6669 (LOO r=0.668, IS r=0.820, gap=0.152) [F1=0.406 QWK=0.370]
+  hc3+gPC4+tPC2__Ridge5: adjusted=0.6641 (LOO r=0.685, IS r=0.877, gap=0.192) [F1=0.546 QWK=0.588]
+  hc3+gPC4__Ridge5: adjusted=0.6613 (LOO r=0.668, IS r=0.830, gap=0.162) [F1=0.476 QWK=0.500]
+  hc3+gPC4+tPC2__Ridge50: adjusted=0.6448 (LOO r=0.659, IS r=0.839, gap=0.179) [F1=0.287 QWK=0.182]
+  hc3+gPC4+tPC2__Ridge1: adjusted=0.6448 (LOO r=0.673, IS r=0.881, gap=0.207) [F1=0.611 QWK=0.667]
+  hc3+gPC4__Ridge1: adjusted=0.6427 (LOO r=0.656, IS r=0.833, gap=0.177) [F1=0.476 QWK=0.500]
+  hc3+gPC5+tPC1__Ridge20: adjusted=0.6425 (LOO r=0.661, IS r=0.847, gap=0.186) [F1=0.375 QWK=0.320]
+  hc3+gPC3+tPC1__Ridge20: adjusted=0.6391 (LOO r=0.639, IS r=0.778, gap=0.139) [F1=0.333 QWK=0.250]
+  hc3+gPC5+tPC2__Ridge20: adjusted=0.6387 (LOO r=0.664, IS r=0.865, gap=0.201) [F1=0.362 QWK=0.308]
+  hc3+gPC5+tPC1__Ridge10: adjusted=0.6339 (LOO r=0.656, IS r=0.851, gap=0.195) [F1=0.427 QWK=0.414]
+  hc3+gPC5+tPC2__Ridge10: adjusted=0.6326 (LOO r=0.663, IS r=0.873, gap=0.211) [F1=0.465 QWK=0.467]
+  hc3+gPC3+tPC1__Ridge10: adjusted=0.6317 (LOO r=0.632, IS r=0.781, gap=0.149) [F1=0.368 QWK=0.276]
+  hc3+gPC4+tPC3__Ridge50: adjusted=0.6247 (LOO r=0.654, IS r=0.862, gap=0.209) [F1=0.287 QWK=0.182]
+  hc3+gPC4__Ridge50: adjusted=0.6168 (LOO r=0.629, IS r=0.805, gap=0.175) [F1=0.352 QWK=0.261]
+  hc3+gPC3+tPC1__Ridge50: adjusted=0.6161 (LOO r=0.616, IS r=0.754, gap=0.138) [F1=0.297 QWK=0.182]
+  hc3+gPC5+tPC1__Ridge5: adjusted=0.6155 (LOO r=0.644, IS r=0.852, gap=0.208) [F1=0.507 QWK=0.471]
+  hc3+gPC5+tPC2__Ridge5: adjusted=0.6146 (LOO r=0.653, IS r=0.880, gap=0.227) [F1=0.477 QWK=0.500]
+  hc3+gPC3+tPC1__Ridge5: adjusted=0.6139 (LOO r=0.619, IS r=0.780, gap=0.161) [F1=0.467 QWK=0.424]
+  hc3+gPC5+tPC1__Ridge50: adjusted=0.6088 (LOO r=0.629, IS r=0.819, gap=0.190) [F1=0.232 QWK=0.095]
+  hc3+gPC3__Ridge20: adjusted=0.6081 (LOO r=0.608, IS r=0.755, gap=0.147) [F1=0.333 QWK=0.250]
+  hc3+gPC3__Ridge10: adjusted=0.6037 (LOO r=0.607, IS r=0.763, gap=0.156) [F1=0.427 QWK=0.296]
+  hc3+gPC5+tPC2__Ridge50: adjusted=0.6036 (LOO r=0.632, IS r=0.840, gap=0.207) [F1=0.287 QWK=0.182]
+  hc3+gPC3__Ridge50: adjusted=0.5968 (LOO r=0.597, IS r=0.741, gap=0.145) [F1=0.352 QWK=0.261]
+  hc3+gPC3__Ridge5: adjusted=0.5935 (LOO r=0.602, IS r=0.768, gap=0.166) [F1=0.448 QWK=0.345]
+  hc3+gPC5+tPC2__Ridge1: adjusted=0.5845 (LOO r=0.634, IS r=0.883, gap=0.249) [F1=0.541 QWK=0.514]
+  hc3+gPC3+tPC1__Ridge1: adjusted=0.5825 (LOO r=0.598, IS r=0.779, gap=0.181) [F1=0.537 QWK=0.514]
+  hc3+gPC5__Ridge20: adjusted=0.5798 (LOO r=0.615, IS r=0.834, gap=0.220) [F1=0.385 QWK=0.320]
+  hc3+gPC5__Ridge10: adjusted=0.5752 (LOO r=0.614, IS r=0.841, gap=0.227) [F1=0.382 QWK=0.357]
+  hc3+gPC3__Ridge1: adjusted=0.5730 (LOO r=0.589, IS r=0.771, gap=0.182) [F1=0.396 QWK=0.323]
+  hc3+gPC5+tPC1__Ridge1: adjusted=0.5691 (LOO r=0.614, IS r=0.853, gap=0.239) [F1=0.573 QWK=0.579]
+  hc3+gPC3+tPC2__Ridge50: adjusted=0.5690 (LOO r=0.585, IS r=0.767, gap=0.182) [F1=0.287 QWK=0.182]
+  hc3+gPC3+tPC2__Ridge20: adjusted=0.5672 (LOO r=0.590, IS r=0.785, gap=0.195) [F1=0.311 QWK=0.240]
+  hc3+gPC3+tPC1__Ridge100: adjusted=0.5669 (LOO r=0.573, IS r=0.734, gap=0.161) [F1=0.232 QWK=0.095]
+  hc3+gPC4__Ridge100: adjusted=0.5663 (LOO r=0.592, IS r=0.794, gap=0.202) [F1=0.232 QWK=0.095]
+  hc3+gPC4+tPC1__Ridge100: adjusted=0.5635 (LOO r=0.591, IS r=0.795, gap=0.204) [F1=0.232 QWK=0.095]
+  hc3+gPC5__Ridge5: adjusted=0.5614 (LOO r=0.606, IS r=0.844, gap=0.239) [F1=0.417 QWK=0.333]
+  hc3+gPC3__Ridge100: adjusted=0.5520 (LOO r=0.562, IS r=0.732, gap=0.170) [F1=0.167 QWK=0.000]
+  hc3+gPC4+tPC2__Ridge100: adjusted=0.5475 (LOO r=0.589, IS r=0.823, gap=0.234) [F1=0.232 QWK=0.095]
+  hc3+gPC3+tPC2__Ridge100: adjusted=0.5413 (LOO r=0.563, IS r=0.758, gap=0.194) [F1=0.232 QWK=0.095]
+  hc3+gPC5__Ridge50: adjusted=0.5412 (LOO r=0.583, IS r=0.816, gap=0.233) [F1=0.232 QWK=0.095]
+  hc3+gPC3+tPC2__Ridge10: adjusted=0.5395 (LOO r=0.573, IS r=0.791, gap=0.217) [F1=0.336 QWK=0.296]
+  hc3+gPC5__Ridge1: adjusted=0.5308 (LOO r=0.586, IS r=0.848, gap=0.261) [F1=0.507 QWK=0.471]
+  hc3+gPC3+tPC3__Ridge20: adjusted=0.5266 (LOO r=0.575, IS r=0.822, gap=0.247) [F1=0.273 QWK=0.174]
+  hc3+gPC3+tPC3__Ridge50: adjusted=0.5255 (LOO r=0.568, IS r=0.803, gap=0.235) [F1=0.273 QWK=0.174]
+  hc3+gPC4+tPC3__Ridge100: adjusted=0.5228 (LOO r=0.581, IS r=0.847, gap=0.266) [F1=0.232 QWK=0.095]
+  hc3+gPC2+tPC1__Ridge10: adjusted=0.5111 (LOO r=0.547, IS r=0.769, gap=0.222) [F1=0.356 QWK=0.267]
+  hc3+gPC2+tPC1__Ridge20: adjusted=0.5070 (LOO r=0.543, IS r=0.764, gap=0.222) [F1=0.259 QWK=0.080]
+  hc3+gPC2+tPC1__Ridge5: adjusted=0.5058 (LOO r=0.544, IS r=0.770, gap=0.226) [F1=0.433 QWK=0.375]
+  hc3+gPC3+tPC2__Ridge5: adjusted=0.5028 (LOO r=0.550, IS r=0.793, gap=0.244) [F1=0.403 QWK=0.333]
+  hc3+gPC3+tPC3__Ridge100: adjusted=0.5026 (LOO r=0.549, IS r=0.792, gap=0.243) [F1=0.232 QWK=0.095]
+  hc3+gPC5+tPC2__Ridge100: adjusted=0.5017 (LOO r=0.558, IS r=0.822, gap=0.263) [F1=0.232 QWK=0.095]
+  hc3+gPC5+tPC1__Ridge100: adjusted=0.5011 (LOO r=0.549, IS r=0.793, gap=0.245) [F1=0.232 QWK=0.095]
+  hc3+gPC3+tPC3__Ridge10: adjusted=0.5002 (LOO r=0.561, IS r=0.832, gap=0.271) [F1=0.269 QWK=0.083]
+  hc3+gPC5__Ridge100: adjusted=0.4944 (LOO r=0.547, IS r=0.802, gap=0.255) [F1=0.232 QWK=0.095]
+  hc3+gPC2+tPC1__Ridge1: adjusted=0.4888 (LOO r=0.532, IS r=0.769, gap=0.237) [F1=0.475 QWK=0.457]
+  hc3+gPC2__Ridge1: adjusted=0.4661 (LOO r=0.511, IS r=0.751, gap=0.240) [F1=0.475 QWK=0.457]
+  hc3+gPC2__Ridge5: adjusted=0.4657 (LOO r=0.510, IS r=0.749, gap=0.239) [F1=0.329 QWK=0.258]
+  hc3+gPC3+tPC3__Ridge5: adjusted=0.4641 (LOO r=0.538, IS r=0.835, gap=0.297) [F1=0.313 QWK=0.207]
+  hc3+gPC2+tPC1__Ridge50: adjusted=0.4606 (LOO r=0.507, IS r=0.748, gap=0.242) [F1=0.232 QWK=0.095]
+  hc3+tPC1__Ridge20: adjusted=0.4605 (LOO r=0.464, IS r=0.622, gap=0.158) [F1=0.297 QWK=0.182]
+  hc3+gPC2__Ridge10: adjusted=0.4599 (LOO r=0.505, IS r=0.745, gap=0.240) [F1=0.286 QWK=0.148]
+  hc3+tPC1__Ridge10: adjusted=0.4551 (LOO r=0.465, IS r=0.635, gap=0.170) [F1=0.297 QWK=0.182]
+  hc3+gPC2__Ridge20: adjusted=0.4422 (LOO r=0.492, IS r=0.741, gap=0.249) [F1=0.278 QWK=0.083]
+  hc3+gPC2+tPC2__Ridge20: adjusted=0.4419 (LOO r=0.503, IS r=0.774, gap=0.271) [F1=0.339 QWK=0.296]
+  hc3+gPC3+tPC2__Ridge1: adjusted=0.4413 (LOO r=0.509, IS r=0.794, gap=0.285) [F1=0.360 QWK=0.312]
+  hc3+tPC1__Ridge5: adjusted=0.4367 (LOO r=0.455, IS r=0.640, gap=0.186) [F1=0.297 QWK=0.182]
+  hc3+gPC2+tPC2__Ridge10: adjusted=0.4278 (LOO r=0.495, IS r=0.780, gap=0.285) [F1=0.336 QWK=0.214]
+  hc3+tPC1__Ridge50: adjusted=0.4238 (LOO r=0.425, IS r=0.579, gap=0.153) [F1=0.232 QWK=0.095]
+  hc3+gPC2+tPC2__Ridge50: adjusted=0.4210 (LOO r=0.486, IS r=0.766, gap=0.280) [F1=0.232 QWK=0.095]
+  hc3+tPC2__Ridge20: adjusted=0.4055 (LOO r=0.449, IS r=0.685, gap=0.236) [F1=0.315 QWK=0.240]
+  hc3_only__Ridge5: adjusted=0.4051 (LOO r=0.408, IS r=0.565, gap=0.157) [F1=0.311 QWK=0.240]
+  hc3_only__Ridge10: adjusted=0.4040 (LOO r=0.406, IS r=0.560, gap=0.154) [F1=0.297 QWK=0.182]
+  hc3+gPC1+tPC1__Ridge20: adjusted=0.4020 (LOO r=0.465, IS r=0.740, gap=0.276) [F1=0.330 QWK=0.250]
+  hc3_only__Ridge1: adjusted=0.4000 (LOO r=0.406, IS r=0.568, gap=0.162) [F1=0.311 QWK=0.240]
+  hc3+tPC1__Ridge1: adjusted=0.3974 (LOO r=0.429, IS r=0.643, gap=0.214) [F1=0.297 QWK=0.182]
+  hc3+tPC2__Ridge10: adjusted=0.3943 (LOO r=0.444, IS r=0.693, gap=0.249) [F1=0.411 QWK=0.370]
+  hc3_only__Ridge20: adjusted=0.3922 (LOO r=0.394, IS r=0.549, gap=0.154) [F1=0.232 QWK=0.095]
+  hc3+gPC1+tPC1__Ridge10: adjusted=0.3907 (LOO r=0.459, IS r=0.746, gap=0.287) [F1=0.311 QWK=0.154]
+  hc3+tPC2__Ridge50: adjusted=0.3885 (LOO r=0.428, IS r=0.658, gap=0.230) [F1=0.232 QWK=0.095]
+  hc3+gPC2__Ridge50: adjusted=0.3868 (LOO r=0.453, IS r=0.736, gap=0.283) [F1=0.232 QWK=0.095]
+  hc3+gPC2+tPC1__Ridge100: adjusted=0.3866 (LOO r=0.454, IS r=0.738, gap=0.284) [F1=0.232 QWK=0.095]
+  hc3+tPC2__Ridge5: adjusted=0.3792 (LOO r=0.435, IS r=0.696, gap=0.261) [F1=0.409 QWK=0.286]
+  hc3+gPC1+tPC1__Ridge5: adjusted=0.3754 (LOO r=0.449, IS r=0.747, gap=0.298) [F1=0.359 QWK=0.222]
+  hc3+gPC1+tPC1__Ridge50: adjusted=0.3752 (LOO r=0.443, IS r=0.728, gap=0.285) [F1=0.232 QWK=0.095]
+  hc3+tPC3__Ridge20: adjusted=0.3564 (LOO r=0.427, IS r=0.719, gap=0.292) [F1=0.260 QWK=0.167]
+  hc3+tPC2__Ridge1: adjusted=0.3551 (LOO r=0.419, IS r=0.697, gap=0.278) [F1=0.409 QWK=0.286]
+  hc3+tPC3__Ridge50: adjusted=0.3345 (LOO r=0.406, IS r=0.700, gap=0.294) [F1=0.232 QWK=0.095]
+  hc3_only__Ridge50: adjusted=0.3345 (LOO r=0.352, IS r=0.536, gap=0.185) [F1=0.232 QWK=0.095]
+  hc3+tPC1__Ridge100: adjusted=0.3289 (LOO r=0.358, IS r=0.566, gap=0.208) [F1=0.232 QWK=0.095]
+  hc3+tPC2__Ridge100: adjusted=0.3232 (LOO r=0.382, IS r=0.650, gap=0.268) [F1=0.232 QWK=0.095]
+  hc3_only__Ridge100: adjusted=0.2357 (LOO r=0.285, IS r=0.535, gap=0.249) [F1=0.232 QWK=0.095]
+  hc3+gPC1__Ridge1: adjusted=-1.0000 (LOO r=0.403, IS r=0.714, gap=0.311) [F1=0.422 QWK=0.333]
+  hc3+gPC1__Ridge5: adjusted=-1.0000 (LOO r=0.397, IS r=0.713, gap=0.316) [F1=0.405 QWK=0.286]
+  hc3+gPC1__Ridge10: adjusted=-1.0000 (LOO r=0.396, IS r=0.713, gap=0.317) [F1=0.385 QWK=0.320]
+  hc3+gPC1__Ridge20: adjusted=-1.0000 (LOO r=0.389, IS r=0.711, gap=0.322) [F1=0.333 QWK=0.250]
+  hc3+gPC1__Ridge50: adjusted=-1.0000 (LOO r=0.357, IS r=0.708, gap=0.351) [F1=0.167 QWK=0.000]
+  hc3+gPC1__Ridge100: adjusted=-1.0000 (LOO r=0.288, IS r=0.705, gap=0.417) [F1=0.167 QWK=0.000]
+  hc3+gPC2__Ridge100: adjusted=-1.0000 (LOO r=0.390, IS r=0.731, gap=0.340) [F1=0.167 QWK=0.000]
+  hc3+tPC3__Ridge1: adjusted=-1.0000 (LOO r=0.385, IS r=0.739, gap=0.354) [F1=0.297 QWK=0.148]
+  hc3+tPC3__Ridge5: adjusted=-1.0000 (LOO r=0.411, IS r=0.734, gap=0.323) [F1=0.363 QWK=0.222]
+  hc3+tPC3__Ridge10: adjusted=-1.0000 (LOO r=0.423, IS r=0.728, gap=0.305) [F1=0.362 QWK=0.308]
+  hc3+tPC3__Ridge100: adjusted=-1.0000 (LOO r=0.364, IS r=0.692, gap=0.328) [F1=0.232 QWK=0.095]
+  hc3+gPC3+tPC3__Ridge1: adjusted=-1.0000 (LOO r=0.492, IS r=0.837, gap=0.345) [F1=0.365 QWK=0.312]
+  hc3+gPC2+tPC2__Ridge1: adjusted=-1.0000 (LOO r=0.458, IS r=0.783, gap=0.325) [F1=0.371 QWK=0.353]
+  hc3+gPC2+tPC2__Ridge5: adjusted=-1.0000 (LOO r=0.482, IS r=0.782, gap=0.300) [F1=0.354 QWK=0.267]
+  hc3+gPC2+tPC2__Ridge100: adjusted=-1.0000 (LOO r=0.452, IS r=0.759, gap=0.307) [F1=0.232 QWK=0.095]
+  hc3+gPC1+tPC1__Ridge1: adjusted=-1.0000 (LOO r=0.433, IS r=0.747, gap=0.313) [F1=0.403 QWK=0.286]
+  hc3+gPC1+tPC1__Ridge100: adjusted=-1.0000 (LOO r=0.402, IS r=0.718, gap=0.316) [F1=0.232 QWK=0.095]
+  hc3+gPC1+tPC2__Ridge1: adjusted=-1.0000 (LOO r=0.382, IS r=0.757, gap=0.375) [F1=0.354 QWK=0.267]
+  hc3+gPC1+tPC2__Ridge5: adjusted=-1.0000 (LOO r=0.406, IS r=0.756, gap=0.350) [F1=0.379 QWK=0.276]
+  hc3+gPC1+tPC2__Ridge10: adjusted=-1.0000 (LOO r=0.422, IS r=0.754, gap=0.332) [F1=0.384 QWK=0.357]
+  hc3+gPC1+tPC2__Ridge20: adjusted=-1.0000 (LOO r=0.434, IS r=0.748, gap=0.314) [F1=0.363 QWK=0.308]
+  hc3+gPC1+tPC2__Ridge50: adjusted=-1.0000 (LOO r=0.428, IS r=0.741, gap=0.313) [F1=0.219 QWK=0.091]
+  hc3+gPC1+tPC2__Ridge100: adjusted=-1.0000 (LOO r=0.399, IS r=0.735, gap=0.336) [F1=0.232 QWK=0.095]
+
+BEST: hc3+gPC4+tPC1__Ridge20 adjusted=0.7051
+Selected gland PCs (IS): [1, 5, 9, 16]
+Selected tumor PCs (IS): [1]
+
+PER-CASE LOO PREDICTIONS:
+  TCGA-A2-A0CS         GT=2 pred=1.760 cls=2 ok
+  TCGA-A2-A0ET         GT=2 pred=2.528 cls=3 MISS
+  TCGA-A7-A0D9         GT=2 pred=1.741 cls=2 ok
+  TCGA-A7-A3IY         GT=1 pred=1.471 cls=1 ok
+  TCGA-AC-A23E         GT=1 pred=1.775 cls=2 MISS
+  TCGA-AC-A2FM         GT=2 pred=2.349 cls=2 ok
+  TCGA-AC-A3TN         GT=1 pred=1.648 cls=2 MISS
+  TCGA-AC-A7VB         GT=2 pred=2.017 cls=2 ok
+  TCGA-AR-A0U4         GT=3 pred=2.249 cls=2 MISS
+  TCGA-AR-A1AR         GT=3 pred=2.322 cls=2 MISS
+  TCGA-AR-A2LO         GT=3 pred=2.337 cls=2 MISS
+  TCGA-BH-A0B8         GT=3 pred=1.715 cls=2 MISS
+  TCGA-BH-A0C3         GT=3 pred=2.076 cls=2 MISS
+  TCGA-BH-A0DX         GT=1 pred=1.717 cls=2 MISS
+  TCGA-BH-A0W4         GT=1 pred=1.608 cls=2 MISS
+  TCGA-BH-A42V         GT=2 pred=2.284 cls=2 ok
+  TCGA-D8-A1XD         GT=2 pred=1.604 cls=2 ok
+  TCGA-D8-A1XT         GT=3 pred=2.775 cls=3 ok
+  TCGA-D8-A27N         GT=3 pred=2.475 cls=2 MISS
+  TCGA-D8-A27P         GT=1 pred=1.680 cls=2 MISS
+  TCGA-D8-A4Z1         GT=3 pred=2.422 cls=2 MISS
+  TCGA-D8-A73X         GT=1 pred=1.406 cls=1 ok
+  TCGA-E2-A10E         GT=2 pred=2.501 cls=3 MISS
+  TCGA-E2-A14W         GT=3 pred=2.227 cls=2 MISS
+  TCGA-E2-A1B1         GT=1 pred=1.653 cls=2 MISS
+  TCGA-E2-A1IG         GT=2 pred=2.131 cls=2 ok
+  TCGA-EW-A1IY         GT=2 pred=1.908 cls=2 ok
+  TCGA-EW-A1PH         GT=3 pred=2.599 cls=3 ok
+  TCGA-LL-A5YO         GT=1 pred=2.119 cls=2 MISS
+  TCGA-OL-A5RX         GT=1 pred=1.000 cls=1 ok

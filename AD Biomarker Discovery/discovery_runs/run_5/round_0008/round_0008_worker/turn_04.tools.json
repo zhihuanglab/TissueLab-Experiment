@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nexport PYTHONPATH=/shared/lib:${PYTHONPATH:-}\npython - <<'PY'\nimport inspect, textwrap\nfrom shared_analysis import build_cell_table\nfrom shared_analysis import stats as st\nprint('build_cell_table signature:', inspect.signature(build_cell_table))\nprint(textwrap.dedent(inspect.getsource(build_cell_table))[:3500])\nprint('\\npartial_correlation sig:', inspect.signature(st.partial_correlation))\nprint(textwrap.dedent(inspect.getsource(st.partial_correlation))[:1400])\nprint('\\nleave_one_out_summary sig:', inspect.signature(st.leave_one_out_summary))\nprint(textwrap.dedent(inspect.getsource(st.leave_one_out_summary))[:2400])\nPY\npython - <<'PY'\nfrom shared_analysis import build_cell_table\nfrom pathlib import Path\nslide=Path('/data')/'H19.33.004-A12-LFB.svs.zarr'\ndf=build_cell_table(slide, include_regions=True, include_geometry=False)\nprint(df.head().to_string())\nprint(df.columns.tolist())\nprint('\\nvalue counts:')\nprint(df[['cell_label','region_name']].value_counts().head(20).to_string())\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 2, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

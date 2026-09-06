@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\ntext=Path('/data/autoresearch_runs/run_20260421_001115_585b70/round_0006/round_0006_worker/result.py').read_text().splitlines()\nfor i,l in enumerate(text):\n    if 'def adjusted_metrics' in l:\n        for j in range(i, i+20):\n            print(text[j])\n        break\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"def adjusted_metrics(partial_r_value: float | None, loo_r_value: float | None) -> tuple[float, float, float]:\\n    is_r = abs(float(partial_r_value)) if partial_r_value is not None and math.isfinite(float(partial_r_value)) else 0.0\\n    loo_r = abs(float(loo_r_value)) if loo_r_value is not None and math.isfinite(float(loo_r_value)) else 0.0\\n    gap = float(is_r - loo_r)\\n    penalty = float(max(0.0, gap - 0.15))\\n    adjusted = float(loo_r - penalty)\\n    return gap, penalty, adjusted\\n\\n\\ndef raw_loo_p\", \"stderr\": \"\"}"
+  }
+]

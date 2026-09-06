@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex']\n     donor_id                   slide_name                                                                                 slide_path  slope_zmem0  max_age_vis  braak_numeric  cerad_ordinal     sex\n0  H19.33.004  H19.33.004-A12-LFB.svs.zarr  /Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H19.33.004-A12-LFB.svs.zarr    -0.058769         80.0              4              0  Female\n1  H20.33.008  H20.33.008-A12-LFB.svs.zarr  /Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/H20.33.008-A12-LFB.svs.zarr    -0.120506         90.0              5              2  Female\n",
+  "stderr": ""
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ncat /scratch/results.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"{\\n  \\\"status\\\": \\\"ok\\\",\\n  \\\"feature_name\\\": \\\"ca1_pyramidal_reactive_astro_coverage_60px\\\",\\n  \\\"outcome\\\": \\\"slope_zmem0\\\",\\n  \\\"n_total\\\": 35,\\n  \\\"n_analyzable\\\": 35,\\n  \\\"partial_r\\\": -0.5176089960436686,\\n  \\\"ci_lo\\\": NaN,\\n  \\\"ci_hi\\\": NaN,\\n  \\\"p_value\\\": 0.0014502076507958426,\\n  \\\"loo_predictive_r\\\": 0.3704881385755467,\\n  \\\"loo_unstable_count\\\": 0,\\n  \\\"loo_max_shift\\\": NaN,\\n  \\\"donor_ids_used\\\": [\\n    \\\"H19.33.004\\\",\\n    \\\"H20.33.008\\\",\\n    \\\"H20.33.013\\\",\\n    \\\"H20.33.018\\\",\\n    \\\"H20.33.024\\\",\\n    \\\"H20.33.025\\\",\\n    \\\"H20.33.027\\\",\\n    \", \"stderr\": \"\"}"
+  }
+]

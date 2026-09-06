@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "36:CANONICAL_VARIATION_NAME = \"candidate_variant_a\"\n37:CANONICAL_FEATURE_COLUMN = \"reactive_astro_fraction_ca1\"\n38:FEATURE_COLUMN = CANONICAL_FEATURE_COLUMN\n138:    if CANONICAL_VARIATION_NAME in VARIATIONS:\n139:        return CANONICAL_VARIATION_NAME\n432:        r'CANONICAL_VARIATION_NAME = \".*?\"',\n433:        f'CANONICAL_VARIATION_NAME = \"{best_variation}\"',\n438:        r'CANONICAL_FEATURE_COLUMN = \".*?\"',\n439:        f'CANONICAL_FEATURE_COLUMN = \"{feature_column}\"',\n444:        r'FEATURE_COLUMN = CANONICAL_FEATURE_COLUMN',\n445:        'FEATURE_COLUMN = CANONICAL_FEATURE_COLUMN',\n",
+  "stderr": ""
+}

@@ -1,0 +1,37 @@
+{
+  "worker_name": "round_0002_worker",
+  "round_id": 2,
+  "candidate_id": "ca1-reactive-astrocyte-enrichment",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.294
+  },
+  "scientific_question": "Does increased reactive astrocyte enrichment in CA1 capture a glial injury-response signal that adds to CA1 pyramidal neuron depletion for predicting slope_zmem0?",
+  "approach": "For each donor, load the paired `.svs.zarr`, read cell centroids and cell-type labels from the classification outputs, and assign cells to CA1 by centroid-in-polygon using `CustomAnnotations` CA1 polygons after dividing polygon coordinates by 16. Count CA1 `Reactive Astrocyte`, CA1 `Astrocyte`, and total classified CA1 cells. Compute the donor biomarker as a CA1 reactive astrocyte enrichment ratio according to the chosen variation, returning NaN only when the required denominator is zero or CA1 is unavailable.",
+  "variations": [
+    {
+      "name": "reactive_over_astroglia",
+      "description": "Baseline: CA1 Reactive Astrocyte / (CA1 Reactive Astrocyte + CA1 Astrocyte), measuring reactive-state enrichment within the astroglial lineage."
+    },
+    {
+      "name": "reactive_over_all_cells",
+      "description": "Nearby denominator change: CA1 Reactive Astrocyte / all classified CA1 cells, measuring overall reactive astrocyte burden in the CA1 tissue compartment."
+    }
+  ],
+  "baseline_variation": "reactive_over_astroglia",
+  "notes": "Use the cohort table to map donor_id to `slide_name`, then open `Path(data_root) / slide_name`. Ignore macOS `._*` files. Use centroid-based region assignment and union multiple CA1 polygons if present. Keep label matching exact to the classification vocabulary, especially `Astrocyte` and `Reactive Astrocyte`. This candidate is intended to be easy to audit and potentially additive to `ca1_pyramidal_fraction` rather than a re-expression of it.",
+  "rationale": "The accepted seed feature shows that CA1 is already the strongest regional axis, so the next high-value test is a biologically distinct CA1 signal rather than another global abundance summary. Reactive astrocytes are a plausible companion process to CA1 neuronal loss and may contribute additive information by measuring local gliosis or tissue stress instead of neuron fraction alone. A small denominator sweep can test whether the useful summary is lineage-specific astrocyte activation or broader reactive-cell burden within CA1."
+}

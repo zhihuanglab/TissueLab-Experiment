@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython /scratch/result.py > /scratch/result_stdout.txt\ntail -n 160 /scratch/result_stdout.txt\necho '--- results.json head ---'\npython - <<'PY'\nimport json\nwith open('/scratch/results.json') as f:\n    obj=json.load(f)\nprint(json.dumps({k: obj[k] for k in ['best_variation','feature_name','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','gap_penalty','adjusted_score']}, indent=2))\nprint('ranked count', len(obj['ranked_variations']))\nPY\necho '--- report.md ---'\nsed -n '1,220p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: ca1_reactive_astrocyte_proximal_small_pyramidal_fraction\\nBEST VARIATION: candidate_variant_b\\n  IS partial r:      0.3287\\n  Selection score:   0.3287\\n  LOO predictive r:  0.2259  (diagnostic)\\n  IS-LOO Gap:        0.1028  (penalty=0.0000)\\n  Adjusted Score:    0.2259\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  candidate_variant_b  0.3287  0.3287  0.2259\\n  candidate_variant_a  0.2568  0.2568  0.1277\\n\\nPER-DONOR (LOO):\\n  H19.33.004  -0.0588  \", \"stderr\": \"\"}"
+  }
+]

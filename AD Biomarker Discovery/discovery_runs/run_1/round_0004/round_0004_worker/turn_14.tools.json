@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython3 - <<'PY'\nfrom pathlib import Path\npath = Path('/scratch/result.py')\ntext = path.read_text()\nold = '    gap = float(is_partial_r - loo_predictive_r)\\n'\nnew = '    gap = float(abs(is_partial_r) - abs(loo_predictive_r))\\n'\nif old not in text:\n    raise SystemExit('expected text not found')\npath.write_text(text.replace(old, new), encoding='utf-8')\nprint('patched gap definition')\nPY\n/usr/local/bin/python3 /scratch/result.py | tee /scratch/run_stdout.txt\ngrep -n \"IS-LOO Gap\" -n /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"patched gap definition\\nHYPOTHESIS FAMILY: ca1_peripyramidal_reactive_astro_coverage\\nBEST VARIATION: coverage_60px\\n  IS partial r:      -0.5176\\n  Selection score:   0.5176\\n  LOO predictive r:  0.3705  (diagnostic)\\n  IS-LOO Gap:        0.1471  (penalty=0.0000)\\n  Adjusted Score:    0.5176\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  coverage_60px  -0.5176  0.5176  0.3705\\n  coverage_80px  -0.5156  0.5156  0.3700\\n\\nPER-DONOR (LOO):\\n  donor_id  outcome  predicted\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um nonzero 5 max 0.0121951219512195 mean 0.0008599189103541943\n",
+  "stderr": ""
+}

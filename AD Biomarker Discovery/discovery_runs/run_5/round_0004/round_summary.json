@@ -1,0 +1,930 @@
+{
+  "round_id": 4,
+  "candidate_id": "ca1-peripyramidal-reactive-astro-area",
+  "status": "completed",
+  "decision": "keep",
+  "reason": "panel_improved",
+  "review_action": "add",
+  "review_slot": null,
+  "accepted_panel_score": 0.6307,
+  "accepted_panel_delta": 0.032299999999999995,
+  "panel_review": {
+    "actions": [
+      {
+        "action": "add",
+        "slot": null,
+        "replaced_feature_name": null,
+        "candidate_panel_score": 0.6307,
+        "baseline_panel_score": 0.5984,
+        "delta_panel_score": 0.0323
+      },
+      {
+        "action": "replace",
+        "slot": 1,
+        "replaced_feature_name": "ca1_reactive_astro_fraction",
+        "candidate_panel_score": 0.5511,
+        "baseline_panel_score": 0.5458,
+        "delta_panel_score": 0.0053
+      },
+      {
+        "action": "replace",
+        "slot": 2,
+        "replaced_feature_name": "ca1_pyramidal_near_reactive_astro_fraction_30um",
+        "candidate_panel_score": 0.6217,
+        "baseline_panel_score": 0.5973,
+        "delta_panel_score": 0.0244
+      },
+      {
+        "action": "replace",
+        "slot": 3,
+        "replaced_feature_name": "ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um",
+        "candidate_panel_score": 0.6003,
+        "baseline_panel_score": 0.5513,
+        "delta_panel_score": 0.049
+      }
+    ]
+  },
+  "summary": "ca1-peripyramidal-reactive-astro-area: decision=keep (panel_improved), action=add, partial_r=-0.3754509459578057, accepted=0.6307, base=0.5984, full=0.6307, gain=0.032299999999999995",
+  "results": {
+    "status": "ok",
+    "feature_name": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+    "outcome": "slope_zmem0",
+    "n_total": 35,
+    "n_analyzable": 35,
+    "partial_r": -0.3754509459578057,
+    "ci_lo": -0.717798612095521,
+    "ci_hi": 0.3583023809488867,
+    "p_value": 0.026246324999386873,
+    "loo_predictive_r": 0.0995407657155956,
+    "coverage_ratio": 1.0,
+    "selection_score": 0.3755,
+    "incumbent_score": 0.3755,
+    "coverage_gate_passed": true,
+    "bootstrap_stability_passed": true,
+    "bootstrap_median_partial_r": -0.3922119206057917,
+    "bootstrap_sign_consistency": 0.9075,
+    "adjusted_score": 0.0366,
+    "is_loo_gap": 0.2759,
+    "gap_penalty": 0.063,
+    "loo_unstable_count": 1,
+    "loo_max_shift": 0.3399870191999622,
+    "donor_ids_used": [
+      "H19.33.004",
+      "H20.33.008",
+      "H20.33.013",
+      "H20.33.018",
+      "H20.33.024",
+      "H20.33.025",
+      "H20.33.027",
+      "H20.33.029",
+      "H20.33.030",
+      "H20.33.034",
+      "H20.33.037",
+      "H20.33.038",
+      "H20.33.040",
+      "H20.33.041",
+      "H20.33.043",
+      "H20.33.044",
+      "H20.33.046",
+      "H21.33.001",
+      "H21.33.004",
+      "H21.33.006",
+      "H21.33.007",
+      "H21.33.012",
+      "H21.33.013",
+      "H21.33.018",
+      "H21.33.021",
+      "H21.33.023",
+      "H21.33.025",
+      "H21.33.033",
+      "H21.33.035",
+      "H21.33.037",
+      "H21.33.038",
+      "H21.33.040",
+      "H21.33.043",
+      "H21.33.044",
+      "H21.33.046"
+    ],
+    "covariates": [
+      "max_age_vis",
+      "braak_numeric",
+      "cerad_ordinal",
+      "sex_binary"
+    ],
+    "recomputed_from_raw": true,
+    "registry_written": false,
+    "artifacts": {
+      "donor_feature_table": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/sandbox/donor_feature_table.csv",
+      "best_variation_sidecar": "/scratch/best_variation.json"
+    },
+    "hypothesis_family": "CA1 peripyramidal reactive astrocyte hypertrophy area",
+    "feature_column": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+    "best_variation": "candidate_variant_a",
+    "ranked_variations": [
+      {
+        "name": "candidate_variant_a",
+        "description": "Median area of CA1 reactive astrocytes whose centroids are within 30 microns of any CA1 pyramidal neuron.",
+        "feature_column": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+        "feature_name": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+        "n_total": 35,
+        "n_analyzable": 35,
+        "coverage_ratio": 1.0,
+        "partial_r": -0.37545094595780576,
+        "p_value": 0.026246324999386884,
+        "ci_lo": -0.7105794891047611,
+        "ci_hi": 0.3260981925926482,
+        "selection_score": 0.37545094595780576,
+        "loo_predictive_r": 0.0995407657155956,
+        "gap": 0.4749917116734014,
+        "penalty": 0.4749917116734014,
+        "adjusted_score": -0.09954076571559561,
+        "loo_unstable_count": 1,
+        "loo_max_shift": 0.339987019199962,
+        "unstable_donors": [
+          {
+            "index": 3,
+            "partial_r": -0.03546392675784376,
+            "delta_from_full": 0.339987019199962,
+            "donor_id": "H20.33.018"
+          }
+        ],
+        "bootstrap_median_partial_r": -0.38516676747386736,
+        "bootstrap_q25_partial_r": -0.4593966239764119,
+        "bootstrap_q75_partial_r": -0.2707026478933161,
+        "bootstrap_sign_consistency": 0.9225,
+        "bootstrap_positive_fraction": 0.0775,
+        "bootstrap_negative_fraction": 0.9225,
+        "donor_ids_used": [
+          "H19.33.004",
+          "H20.33.008",
+          "H20.33.013",
+          "H20.33.018",
+          "H20.33.024",
+          "H20.33.025",
+          "H20.33.027",
+          "H20.33.029",
+          "H20.33.030",
+          "H20.33.034",
+          "H20.33.037",
+          "H20.33.038",
+          "H20.33.040",
+          "H20.33.041",
+          "H20.33.043",
+          "H20.33.044",
+          "H20.33.046",
+          "H21.33.001",
+          "H21.33.004",
+          "H21.33.006",
+          "H21.33.007",
+          "H21.33.012",
+          "H21.33.013",
+          "H21.33.018",
+          "H21.33.021",
+          "H21.33.023",
+          "H21.33.025",
+          "H21.33.033",
+          "H21.33.035",
+          "H21.33.037",
+          "H21.33.038",
+          "H21.33.040",
+          "H21.33.043",
+          "H21.33.044",
+          "H21.33.046"
+        ],
+        "per_donor_loo": [
+          {
+            "donor_id": "H19.33.004",
+            "outcome": -0.0587685,
+            "predicted": -0.04594964790558985,
+            "predicted_residual": 0.024624324917641202,
+            "actual_residual": 0.01180547282323105,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 13.256048520000002,
+            "abs_error": 0.012818852094410152
+          },
+          {
+            "donor_id": "H20.33.008",
+            "outcome": -0.1205063,
+            "predicted": -0.13596730285570993,
+            "predicted_residual": -0.007694184860212969,
+            "actual_residual": 0.007766817995496958,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 16.442598645000004,
+            "abs_error": 0.015461002855709935
+          },
+          {
+            "donor_id": "H20.33.013",
+            "outcome": -0.0317417,
+            "predicted": -0.09481594061262978,
+            "predicted_residual": 0.013053064418836547,
+            "actual_residual": 0.07612730503146634,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 12.491276490000002,
+            "abs_error": 0.06307424061262978
+          },
+          {
+            "donor_id": "H20.33.018",
+            "outcome": -0.3042141,
+            "predicted": -0.10657797548801819,
+            "predicted_residual": -0.009846483226019416,
+            "actual_residual": -0.2074826077380012,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 25.4747592,
+            "abs_error": 0.19763612451198181
+          },
+          {
+            "donor_id": "H20.33.024",
+            "outcome": -0.0103346,
+            "predicted": -0.09979037337286398,
+            "predicted_residual": -0.00756841208135972,
+            "actual_residual": 0.08188736129150426,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 15.976762560000003,
+            "abs_error": 0.08945577337286398
+          },
+          {
+            "donor_id": "H20.33.025",
+            "outcome": -0.0723104,
+            "predicted": -0.08901336877454638,
+            "predicted_residual": 0.023079062725875916,
+            "actual_residual": 0.039782031500422296,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 11.7902354625,
+            "abs_error": 0.016702968774546384
+          },
+          {
+            "donor_id": "H20.33.027",
+            "outcome": -0.1125932,
+            "predicted": -0.13636347943162677,
+            "predicted_residual": -0.0076540488004138135,
+            "actual_residual": 0.016116230631212952,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 15.805288620000002,
+            "abs_error": 0.023770279431626767
+          },
+          {
+            "donor_id": "H20.33.029",
+            "outcome": -0.0948095,
+            "predicted": -0.12483808487640513,
+            "predicted_residual": 0.004350113168113595,
+            "actual_residual": 0.03437869804451872,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 14.970352320000002,
+            "abs_error": 0.030028584876405126
+          },
+          {
+            "donor_id": "H20.33.030",
+            "outcome": -0.1680423,
+            "predicted": -0.11233420594044533,
+            "predicted_residual": 0.029699580952732584,
+            "actual_residual": -0.02600851310682209,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 11.825320320000001,
+            "abs_error": 0.05570809405955468
+          },
+          {
+            "donor_id": "H20.33.034",
+            "outcome": -0.0522007,
+            "predicted": -0.06359381465503713,
+            "predicted_residual": 0.010791651548599434,
+            "actual_residual": 0.02218476620363656,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 14.718749760000001,
+            "abs_error": 0.011393114655037131
+          },
+          {
+            "donor_id": "H20.33.037",
+            "outcome": -0.2508045,
+            "predicted": -0.18039554871403973,
+            "predicted_residual": -0.0410441713262074,
+            "actual_residual": -0.11145312261216767,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 21.008813760000002,
+            "abs_error": 0.07040895128596025
+          },
+          {
+            "donor_id": "H20.33.038",
+            "outcome": -0.2372091,
+            "predicted": -0.11149645656892525,
+            "predicted_residual": 0.02657334020156139,
+            "actual_residual": -0.09913930322951336,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 12.328525440000002,
+            "abs_error": 0.12571264343107474
+          },
+          {
+            "donor_id": "H20.33.040",
+            "outcome": -0.1026342,
+            "predicted": -0.14237138160070567,
+            "predicted_residual": -0.011358938424245136,
+            "actual_residual": 0.028378243176460552,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 14.907451680000001,
+            "abs_error": 0.039737181600705676
+          },
+          {
+            "donor_id": "H20.33.041",
+            "outcome": -0.1079018,
+            "predicted": -0.1247899178604264,
+            "predicted_residual": 0.0005252174715593648,
+            "actual_residual": 0.01741333533198576,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 15.486633607500004,
+            "abs_error": 0.01688811786042639
+          },
+          {
+            "donor_id": "H20.33.043",
+            "outcome": -0.0599597,
+            "predicted": -0.060843355348254684,
+            "predicted_residual": 0.012537921143903764,
+            "actual_residual": 0.01342157649215845,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 13.209134400000002,
+            "abs_error": 0.0008836553482546861
+          },
+          {
+            "donor_id": "H20.33.044",
+            "outcome": -0.0544588,
+            "predicted": -0.07376777784643837,
+            "predicted_residual": -0.02096505474171274,
+            "actual_residual": -0.0016560768952743748,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 17.73798048,
+            "abs_error": 0.01930897784643837
+          },
+          {
+            "donor_id": "H20.33.046",
+            "outcome": -0.2017114,
+            "predicted": -0.07846038496896121,
+            "predicted_residual": 0.04473347772277733,
+            "actual_residual": -0.07851753730826147,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 10.693108800000001,
+            "abs_error": 0.1232510150310388
+          },
+          {
+            "donor_id": "H21.33.001",
+            "outcome": -0.0815782,
+            "predicted": -0.047263738446458245,
+            "predicted_residual": -0.02149864491124539,
+            "actual_residual": -0.05581310646478714,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 16.983172800000002,
+            "abs_error": 0.03431446155354176
+          },
+          {
+            "donor_id": "H21.33.004",
+            "outcome": -0.1198253,
+            "predicted": -0.03199472773937233,
+            "predicted_residual": -0.010247565212103788,
+            "actual_residual": -0.09807813747273145,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 15.221954880000002,
+            "abs_error": 0.08783057226062767
+          },
+          {
+            "donor_id": "H21.33.006",
+            "outcome": -0.0539668,
+            "predicted": -0.09429455134231585,
+            "predicted_residual": -0.009001282724078276,
+            "actual_residual": 0.031326468618237575,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 15.599358720000001,
+            "abs_error": 0.040327751342315844
+          },
+          {
+            "donor_id": "H21.33.007",
+            "outcome": -0.0975144,
+            "predicted": -0.178965396772806,
+            "predicted_residual": -0.030291427070235154,
+            "actual_residual": 0.05115956970257085,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 18.42988752,
+            "abs_error": 0.08145099677280601
+          },
+          {
+            "donor_id": "H21.33.012",
+            "outcome": -0.1009244,
+            "predicted": -0.07606978377088668,
+            "predicted_residual": 0.022663331136122303,
+            "actual_residual": -0.002191285092991019,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 12.768829920000002,
+            "abs_error": 0.02485461622911332
+          },
+          {
+            "donor_id": "H21.33.013",
+            "outcome": -0.161261,
+            "predicted": -0.1046125157268639,
+            "predicted_residual": 0.015617804255651473,
+            "actual_residual": -0.04103068001748461,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 13.71233952,
+            "abs_error": 0.05664848427313608
+          },
+          {
+            "donor_id": "H21.33.018",
+            "outcome": -0.144019,
+            "predicted": -0.09104609303215805,
+            "predicted_residual": 0.020112486479120527,
+            "actual_residual": -0.032860420488721426,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 12.172621477500002,
+            "abs_error": 0.05297290696784196
+          },
+          {
+            "donor_id": "H21.33.021",
+            "outcome": -0.0983582,
+            "predicted": -0.1058940576302821,
+            "predicted_residual": -0.008671904114957763,
+            "actual_residual": -0.0011360464846756624,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 14.592948480000002,
+            "abs_error": 0.007535857630282097
+          },
+          {
+            "donor_id": "H21.33.023",
+            "outcome": -0.1546294,
+            "predicted": -0.06042687781855048,
+            "predicted_residual": -0.026345829264660173,
+            "actual_residual": -0.12054835144610969,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 17.926682400000004,
+            "abs_error": 0.09420252218144952
+          },
+          {
+            "donor_id": "H21.33.025",
+            "outcome": -0.0422854,
+            "predicted": -0.09205134767929966,
+            "predicted_residual": 0.028997020775033105,
+            "actual_residual": 0.07876296845433277,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 11.089194435000001,
+            "abs_error": 0.04976594767929966
+          },
+          {
+            "donor_id": "H21.33.033",
+            "outcome": -0.0466362,
+            "predicted": -0.12291961582802126,
+            "predicted_residual": 0.002695133507138389,
+            "actual_residual": 0.07897854933515965,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 15.295440600000003,
+            "abs_error": 0.07628341582802126
+          },
+          {
+            "donor_id": "H21.33.035",
+            "outcome": -0.0498238,
+            "predicted": -0.15878924619011164,
+            "predicted_residual": -0.014154489933919481,
+            "actual_residual": 0.09481095625619215,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 16.952446665000004,
+            "abs_error": 0.10896544619011164
+          },
+          {
+            "donor_id": "H21.33.037",
+            "outcome": -0.0881349,
+            "predicted": -0.07368821455256257,
+            "predicted_residual": -0.003025963190338368,
+            "actual_residual": -0.017472648637775798,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 16.29126576,
+            "abs_error": 0.014446685447437435
+          },
+          {
+            "donor_id": "H21.33.038",
+            "outcome": -0.0518276,
+            "predicted": -0.04016576767751839,
+            "predicted_residual": 0.02349994373574773,
+            "actual_residual": 0.011838111413266114,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 12.957531840000001,
+            "abs_error": 0.011661832322481615
+          },
+          {
+            "donor_id": "H21.33.040",
+            "outcome": -0.0327944,
+            "predicted": -0.14364615252161944,
+            "predicted_residual": 0.003443977096706116,
+            "actual_residual": 0.11429572961832557,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 14.020820550000002,
+            "abs_error": 0.11085175252161944
+          },
+          {
+            "donor_id": "H21.33.043",
+            "outcome": -0.072355,
+            "predicted": -0.12681259340018403,
+            "predicted_residual": -0.03657133050854082,
+            "actual_residual": 0.01788626289164319,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 17.972142705000003,
+            "abs_error": 0.05445759340018402
+          },
+          {
+            "donor_id": "H21.33.044",
+            "outcome": -0.0991281,
+            "predicted": -0.1378060631122579,
+            "predicted_residual": 0.019873783060075156,
+            "actual_residual": 0.05855174617233305,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 13.209134400000002,
+            "abs_error": 0.03867796311225791
+          },
+          {
+            "donor_id": "H21.33.046",
+            "outcome": -0.1616234,
+            "predicted": -0.0832632970908082,
+            "predicted_residual": 0.020862359733232614,
+            "actual_residual": -0.057497743175959196,
+            "ca1_peripyramidal_reactive_astro_area_median_30um_um2": 12.328525440000002,
+            "abs_error": 0.0783601029091918
+          }
+        ]
+      },
+      {
+        "name": "candidate_variant_b",
+        "description": "75th percentile area of CA1 reactive astrocytes whose centroids are within 30 microns of any CA1 pyramidal neuron.",
+        "feature_column": "ca1_peripyramidal_reactive_astro_area_p75_30um_um2",
+        "feature_name": "ca1_peripyramidal_reactive_astro_area_p75_30um_um2",
+        "n_total": 35,
+        "n_analyzable": 35,
+        "coverage_ratio": 1.0,
+        "partial_r": -0.23062708203036314,
+        "p_value": 0.18256216808565096,
+        "ci_lo": -0.5747563516163277,
+        "ci_hi": 0.23396382610817942,
+        "selection_score": 0.23062708203036314,
+        "loo_predictive_r": 0.034180132969726516,
+        "gap": 0.26480721500008964,
+        "penalty": 0.26480721500008964,
+        "adjusted_score": -0.034180132969726496,
+        "loo_unstable_count": 2,
+        "loo_max_shift": 0.1371818695943706,
+        "unstable_donors": [
+          {
+            "index": 3,
+            "partial_r": -0.09344521243599255,
+            "delta_from_full": 0.1371818695943706,
+            "donor_id": "H20.33.018"
+          },
+          {
+            "index": 10,
+            "partial_r": -0.12128199941887452,
+            "delta_from_full": 0.10934508261148862,
+            "donor_id": "H20.33.037"
+          }
+        ],
+        "bootstrap_median_partial_r": -0.24104830231792135,
+        "bootstrap_q25_partial_r": -0.29184991227739976,
+        "bootstrap_q75_partial_r": -0.16487356735211336,
+        "bootstrap_sign_consistency": 0.975,
+        "bootstrap_positive_fraction": 0.025,
+        "bootstrap_negative_fraction": 0.975,
+        "donor_ids_used": [
+          "H19.33.004",
+          "H20.33.008",
+          "H20.33.013",
+          "H20.33.018",
+          "H20.33.024",
+          "H20.33.025",
+          "H20.33.027",
+          "H20.33.029",
+          "H20.33.030",
+          "H20.33.034",
+          "H20.33.037",
+          "H20.33.038",
+          "H20.33.040",
+          "H20.33.041",
+          "H20.33.043",
+          "H20.33.044",
+          "H20.33.046",
+          "H21.33.001",
+          "H21.33.004",
+          "H21.33.006",
+          "H21.33.007",
+          "H21.33.012",
+          "H21.33.013",
+          "H21.33.018",
+          "H21.33.021",
+          "H21.33.023",
+          "H21.33.025",
+          "H21.33.033",
+          "H21.33.035",
+          "H21.33.037",
+          "H21.33.038",
+          "H21.33.040",
+          "H21.33.043",
+          "H21.33.044",
+          "H21.33.046"
+        ],
+        "per_donor_loo": [
+          {
+            "donor_id": "H19.33.004",
+            "outcome": -0.0587685,
+            "predicted": -0.04819457350137006,
+            "predicted_residual": 0.022379399321860994,
+            "actual_residual": 0.01180547282323105,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 20.903768820000003,
+            "abs_error": 0.01057392649862994
+          },
+          {
+            "donor_id": "H20.33.008",
+            "outcome": -0.1205063,
+            "predicted": -0.12417604323094358,
+            "predicted_residual": 0.004097074764553376,
+            "actual_residual": 0.007766817995496958,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 27.786717090000003,
+            "abs_error": 0.003669743230943587
+          },
+          {
+            "donor_id": "H20.33.013",
+            "outcome": -0.0317417,
+            "predicted": -0.097546420697151,
+            "predicted_residual": 0.010322584334315342,
+            "actual_residual": 0.07612730503146634,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 22.624505887500003,
+            "abs_error": 0.065804720697151
+          },
+          {
+            "donor_id": "H20.33.018",
+            "outcome": -0.3042141,
+            "predicted": -0.10577002492153871,
+            "predicted_residual": -0.00903853265953994,
+            "actual_residual": -0.2074826077380012,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 36.23076864000001,
+            "abs_error": 0.1984440750784613
+          },
+          {
+            "donor_id": "H20.33.024",
+            "outcome": -0.0103346,
+            "predicted": -0.09415660100338251,
+            "predicted_residual": -0.0019346397118782594,
+            "actual_residual": 0.08188736129150426,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 28.714142160000005,
+            "abs_error": 0.08382200100338251
+          },
+          {
+            "donor_id": "H20.33.025",
+            "outcome": -0.0723104,
+            "predicted": -0.11120509442200267,
+            "predicted_residual": 0.0008873370784196231,
+            "actual_residual": 0.039782031500422296,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 27.563658581250003,
+            "abs_error": 0.038894694422002676
+          },
+          {
+            "donor_id": "H20.33.027",
+            "outcome": -0.1125932,
+            "predicted": -0.12882270851309016,
+            "predicted_residual": -0.00011327788187719195,
+            "actual_residual": 0.016116230631212952,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 29.188799145000004,
+            "abs_error": 0.016229508513090157
+          },
+          {
+            "donor_id": "H20.33.029",
+            "outcome": -0.0948095,
+            "predicted": -0.13068227815063516,
+            "predicted_residual": -0.0014940801061164403,
+            "actual_residual": 0.03437869804451872,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 29.814903360000002,
+            "abs_error": 0.03587277815063515
+          },
+          {
+            "donor_id": "H20.33.030",
+            "outcome": -0.1680423,
+            "predicted": -0.14441847805762228,
+            "predicted_residual": -0.002384691164444356,
+            "actual_residual": -0.02600851310682209,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 29.122996320000006,
+            "abs_error": 0.02362382194237772
+          },
+          {
+            "donor_id": "H20.33.034",
+            "outcome": -0.0522007,
+            "predicted": -0.0737851821273409,
+            "predicted_residual": 0.0006002840762956612,
+            "actual_residual": 0.02218476620363656,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 28.588340880000004,
+            "abs_error": 0.021584482127340904
+          },
+          {
+            "donor_id": "H20.33.037",
+            "outcome": -0.2508045,
+            "predicted": -0.1577523095272103,
+            "predicted_residual": -0.01840093213937799,
+            "actual_residual": -0.11145312261216767,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 41.38862112,
+            "abs_error": 0.09305219047278968
+          },
+          {
+            "donor_id": "H20.33.038",
+            "outcome": -0.2372091,
+            "predicted": -0.14505760195564216,
+            "predicted_residual": -0.006987805185155527,
+            "actual_residual": -0.09913930322951336,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 31.387419360000003,
+            "abs_error": 0.09215149804435785
+          },
+          {
+            "donor_id": "H20.33.040",
+            "outcome": -0.1026342,
+            "predicted": -0.1193208215682168,
+            "predicted_residual": 0.01169162160824374,
+            "actual_residual": 0.028378243176460552,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 22.770031680000002,
+            "abs_error": 0.016686621568216806
+          },
+          {
+            "donor_id": "H20.33.041",
+            "outcome": -0.1079018,
+            "predicted": -0.12643626667915547,
+            "predicted_residual": -0.001121131347169703,
+            "actual_residual": 0.01741333533198576,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 29.379992152500005,
+            "abs_error": 0.018534466679155467
+          },
+          {
+            "donor_id": "H20.33.043",
+            "outcome": -0.0599597,
+            "predicted": -0.057999975654558694,
+            "predicted_residual": 0.015381300837599754,
+            "actual_residual": 0.01342157649215845,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 21.008813760000002,
+            "abs_error": 0.0019597243454413035
+          },
+          {
+            "donor_id": "H20.33.044",
+            "outcome": -0.0544588,
+            "predicted": -0.06095503259971862,
+            "predicted_residual": -0.008152309494992996,
+            "actual_residual": -0.0016560768952743748,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 30.066505920000004,
+            "abs_error": 0.00649623259971862
+          },
+          {
+            "donor_id": "H20.33.046",
+            "outcome": -0.2017114,
+            "predicted": -0.09635790607735834,
+            "predicted_residual": 0.026835956614380208,
+            "actual_residual": -0.07851753730826147,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 21.26041632,
+            "abs_error": 0.10535349392264168
+          },
+          {
+            "donor_id": "H21.33.001",
+            "outcome": -0.0815782,
+            "predicted": -0.03129468490323179,
+            "predicted_residual": -0.005529591368018932,
+            "actual_residual": -0.05581310646478714,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 27.550480320000002,
+            "abs_error": 0.05028351509676821
+          },
+          {
+            "donor_id": "H21.33.004",
+            "outcome": -0.1198253,
+            "predicted": -0.03189417394723075,
+            "predicted_residual": -0.010147011419962205,
+            "actual_residual": -0.09807813747273145,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 29.877804000000005,
+            "abs_error": 0.08793112605276925
+          },
+          {
+            "donor_id": "H21.33.006",
+            "outcome": -0.0539668,
+            "predicted": -0.1523788407800416,
+            "predicted_residual": -0.06708557216180404,
+            "actual_residual": 0.031326468618237575,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 43.212739680000006,
+            "abs_error": 0.09841204078004159
+          },
+          {
+            "donor_id": "H21.33.007",
+            "outcome": -0.0975144,
+            "predicted": -0.15611827055335684,
+            "predicted_residual": -0.00744430085078598,
+            "actual_residual": 0.05115956970257085,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 30.852763920000005,
+            "abs_error": 0.058603870553356835
+          },
+          {
+            "donor_id": "H21.33.012",
+            "outcome": -0.1009244,
+            "predicted": -0.05939415971857582,
+            "predicted_residual": 0.03933895518843316,
+            "actual_residual": -0.002191285092991019,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 16.6686696,
+            "abs_error": 0.04153024028142418
+          },
+          {
+            "donor_id": "H21.33.013",
+            "outcome": -0.161261,
+            "predicted": -0.10932876009116164,
+            "predicted_residual": 0.010901559891353737,
+            "actual_residual": -0.04103068001748461,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 24.845752800000003,
+            "abs_error": 0.05193223990883834
+          },
+          {
+            "donor_id": "H21.33.018",
+            "outcome": -0.144019,
+            "predicted": -0.0870937292411159,
+            "predicted_residual": 0.02406485027016268,
+            "actual_residual": -0.032860420488721426,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 20.489517303750002,
+            "abs_error": 0.05692527075888411
+          },
+          {
+            "donor_id": "H21.33.021",
+            "outcome": -0.0983582,
+            "predicted": -0.1169506136866892,
+            "predicted_residual": -0.01972846017136486,
+            "actual_residual": -0.0011360464846756624,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 32.95993536,
+            "abs_error": 0.018592413686689194
+          },
+          {
+            "donor_id": "H21.33.023",
+            "outcome": -0.1546294,
+            "predicted": -0.031046312411426746,
+            "predicted_residual": 0.003034736142463566,
+            "actual_residual": -0.12054835144610969,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 27.959334480000003,
+            "abs_error": 0.12358308758857325
+          },
+          {
+            "donor_id": "H21.33.025",
+            "outcome": -0.0422854,
+            "predicted": -0.1125367617711622,
+            "predicted_residual": 0.008511606683170567,
+            "actual_residual": 0.07876296845433277,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 24.2815119525,
+            "abs_error": 0.0702513617711622
+          },
+          {
+            "donor_id": "H21.33.033",
+            "outcome": -0.0466362,
+            "predicted": -0.13740434240134902,
+            "predicted_residual": -0.011789593066189381,
+            "actual_residual": 0.07897854933515965,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 32.247887265,
+            "abs_error": 0.09076814240134902
+          },
+          {
+            "donor_id": "H21.33.035",
+            "outcome": -0.0498238,
+            "predicted": -0.13634042698805227,
+            "predicted_residual": 0.008294329268139902,
+            "actual_residual": 0.09481095625619215,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 26.51209704,
+            "abs_error": 0.08651662698805226
+          },
+          {
+            "donor_id": "H21.33.037",
+            "outcome": -0.0881349,
+            "predicted": -0.0849212220282791,
+            "predicted_residual": -0.014258970666054903,
+            "actual_residual": -0.017472648637775798,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 34.09214688,
+            "abs_error": 0.0032136779717208963
+          },
+          {
+            "donor_id": "H21.33.038",
+            "outcome": -0.0518276,
+            "predicted": -0.06022568339767262,
+            "predicted_residual": 0.003440028015593495,
+            "actual_residual": 0.011838111413266114,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 26.418268800000003,
+            "abs_error": 0.008398083397672618
+          },
+          {
+            "donor_id": "H21.33.040",
+            "outcome": -0.0327944,
+            "predicted": -0.1412581063091575,
+            "predicted_residual": 0.0058320233091680666,
+            "actual_residual": 0.11429572961832557,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 24.090318945,
+            "abs_error": 0.1084637063091575
+          },
+          {
+            "donor_id": "H21.33.043",
+            "outcome": -0.072355,
+            "predicted": -0.09954124579852804,
+            "predicted_residual": -0.00929998290688484,
+            "actual_residual": 0.01788626289164319,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 30.272226187500003,
+            "abs_error": 0.027186245798528033
+          },
+          {
+            "donor_id": "H21.33.044",
+            "outcome": -0.0991281,
+            "predicted": -0.15573421356155923,
+            "predicted_residual": 0.0019456326107738116,
+            "actual_residual": 0.05855174617233305,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 28.305288000000004,
+            "abs_error": 0.05660611356155923
+          },
+          {
+            "donor_id": "H21.33.046",
+            "outcome": -0.1616234,
+            "predicted": -0.08293829087223578,
+            "predicted_residual": 0.021187365951805023,
+            "actual_residual": -0.057497743175959196,
+            "ca1_peripyramidal_reactive_astro_area_p75_30um_um2": 21.795071760000003,
+            "abs_error": 0.07868510912776422
+          }
+        ]
+      }
+    ],
+    "current_panel_score": 0.5984,
+    "accepted_panel_members": [
+      "ca1_reactive_astro_fraction",
+      "ca1_pyramidal_near_reactive_astro_fraction_30um",
+      "ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um"
+    ],
+    "bootstrap_q25_partial_r": -0.4531047437341758,
+    "bootstrap_q75_partial_r": -0.2746018760208734,
+    "bootstrap_positive_fraction": 0.0925,
+    "bootstrap_negative_fraction": 0.9075,
+    "bootstrap_valid_samples": 400,
+    "bootstrap_sample_size": 28,
+    "incumbent_eligible": true,
+    "raw_r": -0.32269284308977,
+    "raw_p_value": null,
+    "panel_member_count": 3,
+    "panel_baseline_score": 0.5984,
+    "panel_candidate_score": 0.6307,
+    "delta_panel_score": 0.0323,
+    "panel_baseline_loo_score": 0.2488,
+    "panel_candidate_loo_score": 0.2613,
+    "candidate_redundancy": 0.5469
+  }
+}

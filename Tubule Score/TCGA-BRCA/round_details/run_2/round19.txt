@@ -1,0 +1,58 @@
+Round 19 Details
+================================================================================
+
+KEY CHANGE: Ridge alpha sweep (0.3-10.0) + feature set ablation
+Set A: 5 interp + gm4+tm4+gv2 (15 features, Round 16 baseline)
+Set B: 4 interp (drop tumor_cell_density) + gm4+tm4+gv2 (14 features)
+Set C: 3 interp (top 3 only) + gm4+tm4+gv2 (13 features)
+Set D: Various PC counts
+Set E: Add tumor variance PCs
+
+Feature-GT Correlations:
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+  gland_in_tumor_frac: r=-0.5442
+  tumor_cell_density: r=-0.0306
+  bp_component_area_cv: r=-0.2540
+
+All Configurations (sorted by adjusted):
+  SetA_i5_gm4tm4gv2_a0.5: adj=0.8277 LOO_r=0.8277 IS_r=0.9577 gap=0.1300 F1=0.6744 QWK=0.7368
+  SetA_i5_gm4tm4gv2_a0.7: adj=0.8276 LOO_r=0.8276 IS_r=0.9564 gap=0.1287 F1=0.6754 QWK=0.7222
+  SetA_i5_gm4tm4gv2_a1.0: adj=0.8261 LOO_r=0.8261 IS_r=0.9545 gap=0.1284 F1=0.7089 QWK=0.7429
+  SetA_i5_gm4tm4gv2_a0.3: adj=0.8258 LOO_r=0.8258 IS_r=0.9591 gap=0.1333 F1=0.7045 QWK=0.7692
+  SetB_i4_gm4tm4gv2_a0.3: adj=0.8255 LOO_r=0.8255 IS_r=0.9551 gap=0.1295 F1=0.7078 QWK=0.7568
+  SetB_i4_gm4tm4gv2_a0.5: adj=0.8252 LOO_r=0.8252 IS_r=0.9539 gap=0.1286 F1=0.7078 QWK=0.7568
+  SetB_i4_gm4tm4gv2_a0.7: adj=0.8244 LOO_r=0.8244 IS_r=0.9527 gap=0.1283 F1=0.7078 QWK=0.7568
+  SetB_i4_gm4tm4gv2_a1.0: adj=0.8227 LOO_r=0.8227 IS_r=0.9512 gap=0.1285 F1=0.7078 QWK=0.7568
+  SetA_i5_gm4tm4gv2_a1.5: adj=0.8226 LOO_r=0.8226 IS_r=0.9520 gap=0.1294 F1=0.7089 QWK=0.7429
+  SetB_i4_gm4tm4gv2_a1.5: adj=0.8196 LOO_r=0.8196 IS_r=0.9491 gap=0.1295 F1=0.7089 QWK=0.7429
+  SetA_i5_gm4tm4gv2_a2.0: adj=0.8192 LOO_r=0.8192 IS_r=0.9500 gap=0.1308 F1=0.7089 QWK=0.7429
+  SetB_i4_gm4tm4gv2_a2.0: adj=0.8168 LOO_r=0.8168 IS_r=0.9476 gap=0.1308 F1=0.7089 QWK=0.7429
+  SetA_i5_gm4tm4gv2_a3.0: adj=0.8137 LOO_r=0.8137 IS_r=0.9473 gap=0.1335 F1=0.7089 QWK=0.7429
+  SetB_i4_gm4tm4gv2_a3.0: adj=0.8116 LOO_r=0.8116 IS_r=0.9455 gap=0.1339 F1=0.7089 QWK=0.7429
+  SetD_i5_gm5tm5gv2_a1.0: adj=0.8085 LOO_r=0.8085 IS_r=0.9543 gap=0.1457 F1=0.7738 QWK=0.8108
+  SetD_i5_gm5tm5gv2_a2.0: adj=0.8042 LOO_r=0.8042 IS_r=0.9493 gap=0.1451 F1=0.7423 QWK=0.7778
+  SetA_i5_gm4tm4gv2_a5.0: adj=0.8039 LOO_r=0.8039 IS_r=0.9434 gap=0.1395 F1=0.6774 QWK=0.7059
+  SetB_i4_gm4tm4gv2_a5.0: adj=0.8033 LOO_r=0.8033 IS_r=0.9425 gap=0.1392 F1=0.6774 QWK=0.7059
+  SetD_i5_gm4tm4gv3_a1.0: adj=0.8032 LOO_r=0.8042 IS_r=0.9562 gap=0.1520 F1=0.7089 QWK=0.7429
+  SetD_i4_gm5tm5gv2_a1.0: adj=0.8032 LOO_r=0.8032 IS_r=0.9508 gap=0.1477 F1=0.7423 QWK=0.7778
+  SetD_i5_gm4tm4gv3_a2.0: adj=0.8014 LOO_r=0.8014 IS_r=0.9501 gap=0.1487 F1=0.6774 QWK=0.7059
+  SetD_i4_gm5tm5gv2_a2.0: adj=0.8003 LOO_r=0.8003 IS_r=0.9472 gap=0.1470 F1=0.7423 QWK=0.7778
+  SetE_i5_gm4tm4gv2tv2_a1.0: adj=0.7993 LOO_r=0.8058 IS_r=0.9689 gap=0.1630 F1=0.6759 QWK=0.7222
+  SetE_i4_gm4tm4gv2tv2_a1.0: adj=0.7964 LOO_r=0.8036 IS_r=0.9680 gap=0.1644 F1=0.6420 QWK=0.6857
+  SetE_i5_gm4tm4gv2tv2_a1.5: adj=0.7959 LOO_r=0.8032 IS_r=0.9676 gap=0.1644 F1=0.6759 QWK=0.7222
+  SetA_i5_gm4tm4gv2_a7.0: adj=0.7955 LOO_r=0.7955 IS_r=0.9407 gap=0.1452 F1=0.6774 QWK=0.7059
+  SetB_i4_gm4tm4gv2_a7.0: adj=0.7953 LOO_r=0.7953 IS_r=0.9401 gap=0.1447 F1=0.6774 QWK=0.7059
+  SetE_i4_gm4tm4gv2tv2_a1.5: adj=0.7928 LOO_r=0.8008 IS_r=0.9667 gap=0.1660 F1=0.6420 QWK=0.6857
+  SetE_i5_gm4tm4gv2tv2_a2.0: adj=0.7922 LOO_r=0.8003 IS_r=0.9665 gap=0.1662 F1=0.6759 QWK=0.7222
+  SetE_i4_gm4tm4gv2tv2_a2.0: adj=0.7892 LOO_r=0.7980 IS_r=0.9657 gap=0.1677 F1=0.6420 QWK=0.6857
+  SetA_i5_gm4tm4gv2_a10.0: adj=0.7832 LOO_r=0.7845 IS_r=0.9370 gap=0.1525 F1=0.6774 QWK=0.7059
+  SetB_i4_gm4tm4gv2_a10.0: adj=0.7830 LOO_r=0.7842 IS_r=0.9366 gap=0.1524 F1=0.6774 QWK=0.7059
+  SetC_i3_gm4tm4gv2_a5.0: adj=0.6740 LOO_r=0.7048 IS_r=0.9164 gap=0.2116 F1=0.5802 QWK=0.6061
+  SetC_i3_gm4tm4gv2_a2.0: adj=0.6563 LOO_r=0.6938 IS_r=0.9189 gap=0.2250 F1=0.5474 QWK=0.5882
+  SetC_i3_gm4tm4gv2_a1.0: adj=0.6383 LOO_r=0.6820 IS_r=0.9194 gap=0.2374 F1=0.5474 QWK=0.5882
+  SetC_i3_gm4tm4gv2_a0.5: adj=0.6265 LOO_r=0.6742 IS_r=0.9196 gap=0.2454 F1=0.5474 QWK=0.5882
+  SetD_i5_gm3tm3gv2_a2.0: adj=0.5383 LOO_r=0.6079 IS_r=0.8970 gap=0.2891 F1=0.4407 QWK=0.4516
+  SetD_i5_gm3tm3gv2_a1.0: adj=-1.0000 LOO_r=0.5871 IS_r=0.8980 gap=0.3109 F1=0.4407 QWK=0.4516
+
+Best: SetA_i5_gm4tm4gv2_a0.5 adj=0.8277

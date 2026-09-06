@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "patched _write_report\n",
+  "stderr": ""
+}

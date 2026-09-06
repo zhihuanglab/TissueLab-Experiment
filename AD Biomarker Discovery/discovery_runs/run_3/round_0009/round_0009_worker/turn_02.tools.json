@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nfrom pathlib import Path\nobj=json.loads(Path('/scratch/context_bundle.json').read_text())\nprint('keys:', sorted(obj))\nfor k in sorted(obj):\n    v=obj[k]\n    if isinstance(v,(str,int,float,bool)) or v is None:\n        print(f'\\n## {k}\\n{v}')\n    elif isinstance(v,list):\n        print(f'\\n## {k} (list len={len(v)})')\n        for i,item in enumerate(v[:5]):\n            print(f'[{i}] {item}')\n        if len(v)>5: print('...')\n    elif isinstance(v,dict):\n        print(f'\\n## {k} (dict keys={list(v)[:20]})')\n        # print selected subkeys fully if interesting\n        if k in ('worker_brief','round','accepted_panel','candidate','plan'):\n            import pprint; pprint.pp(v)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"keys: ['cohort_summary', 'dataset_guide_excerpt', 'runtime_manifest', 'runtime_quickstart_excerpt', 'slide_manifest_head', 'worker_brief']\\n\\n## cohort_summary (dict keys=['cohort_path', 'cohort_rows', 'slide_count', 'dataset_guide_present', 'dataset_guide_excerpt'])\\n\\n## dataset_guide_excerpt\\n# Dataset Guide: SEA-AD LFB Hippocampus Training Set\\n\\n## Overview of the dataset\\n\\nThis dataset contains **35 paired whole-slide images (WSIs)** and per-slide **Zarr stores** for LFB-stained hippocampal tissue\", \"stderr\": \"\"}"
+  }
+]

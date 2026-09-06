@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\necho '--- canonical variation line ---'\ngrep -n 'CANONICAL_VARIATION' /scratch/result.py | sed -n '1,3p'\necho '--- results.json head ---'\nsed -n '1,220p' /scratch/results.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- canonical variation line ---\\n32:CANONICAL_VARIATION = \\\"r6_neighbor_fraction\\\"\\n94:    if CANONICAL_VARIATION in VARIATION_RADII:\\n95:        return CANONICAL_VARIATION\\n--- results.json head ---\\n{\\n  \\\"status\\\": \\\"ok\\\",\\n  \\\"hypothesis_family\\\": \\\"ca1_pyramidal_reactive_astrocyte_neighbor_fraction\\\",\\n  \\\"best_variation\\\": \\\"r6_neighbor_fraction\\\",\\n  \\\"feature_name\\\": \\\"ca1_pyramidal_reactive_astrocyte_neighbor_fraction\\\",\\n  \\\"feature_column\\\": \\\"ca1_pyramidal_reactive_neighbor_fraction_r6_neighbor_fraction\\\",\\n  \\\"outc\", \"stderr\": \"\"}"
+  }
+]

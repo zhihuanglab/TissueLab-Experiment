@@ -1,0 +1,110 @@
+Round 14 Details
+================================================================================
+
+APPROACH: ElasticNet on full PCA feature set (L1 does selection) vs LOO-safe Ridge baseline
+CHANGE FROM R13: Instead of manually selecting PCs inside LOO folds,
+  feed ALL 20 gland + 20 tumor PCs + gland_ratio into ElasticNet.
+  ElasticNet L1 penalty handles sparsification automatically.
+  Also test Ridge with very high alpha on full feature set.
+
+Gland PCA explained variance: 0.9589
+Tumor PCA explained variance: 0.9666
+Embedding availability: gland=30/30, tumor=30/30
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  Baseline_g4t1_R7.0: adjusted=0.7261 (LOO r=0.726, IS r=0.843, gap=0.117) [F1=0.672 QWK=0.688]
+  Baseline_g4t1_R5.0: adjusted=0.7259 (LOO r=0.726, IS r=0.844, gap=0.118) [F1=0.641 QWK=0.667]
+  Baseline_g4t1_R10.0: adjusted=0.7251 (LOO r=0.725, IS r=0.843, gap=0.118) [F1=0.599 QWK=0.600]
+  Baseline_g4t2_R7.0: adjusted=0.7146 (LOO r=0.715, IS r=0.866, gap=0.151) [F1=0.533 QWK=0.533]
+  Baseline_g4t2_R10.0: adjusted=0.7117 (LOO r=0.713, IS r=0.864, gap=0.152) [F1=0.493 QWK=0.483]
+  Baseline_g4t0_R5.0: adjusted=0.7009 (LOO r=0.701, IS r=0.823, gap=0.122) [F1=0.570 QWK=0.581]
+  Baseline_g4t0_R7.0: adjusted=0.6982 (LOO r=0.698, IS r=0.820, gap=0.122) [F1=0.599 QWK=0.600]
+  Baseline_g3t1_R7.0: adjusted=0.6482 (LOO r=0.648, IS r=0.776, gap=0.128) [F1=0.536 QWK=0.485]
+  Baseline_g5t1_R10.0: adjusted=0.6478 (LOO r=0.663, IS r=0.842, gap=0.180) [F1=0.479 QWK=0.444]
+  Baseline_g3t1_R5.0: adjusted=0.6459 (LOO r=0.646, IS r=0.776, gap=0.130) [F1=0.536 QWK=0.485]
+  Baseline_g5t1_R7.0: adjusted=0.6440 (LOO r=0.660, IS r=0.843, gap=0.183) [F1=0.641 QWK=0.667]
+  EN_B_a0.1_l0.5: adjusted=0.6282 (LOO r=0.679, IS r=0.930, gap=0.251) nz=14 [F1=0.604 QWK=0.625]
+  EN_B_a0.05_l0.9: adjusted=0.6203 (LOO r=0.675, IS r=0.933, gap=0.259) nz=15 [F1=0.673 QWK=0.706]
+  EN_B_a0.1_l0.3: adjusted=0.6184 (LOO r=0.676, IS r=0.940, gap=0.264) nz=17 [F1=0.673 QWK=0.706]
+  EN_A_a0.1_l0.3: adjusted=0.6157 (LOO r=0.682, IS r=0.964, gap=0.282) nz=22 [F1=0.642 QWK=0.686]
+  EN_A_a0.1_l0.5: adjusted=0.6136 (LOO r=0.677, IS r=0.954, gap=0.277) nz=19 [F1=0.635 QWK=0.645]
+  EN_B_a0.05_l0.5: adjusted=0.6122 (LOO r=0.672, IS r=0.943, gap=0.270) nz=17 [F1=0.642 QWK=0.686]
+  EN_B_a0.05_l0.7: adjusted=0.6120 (LOO r=0.671, IS r=0.939, gap=0.268) nz=16 [F1=0.642 QWK=0.686]
+  EN_B_a0.1_l0.7: adjusted=0.6076 (LOO r=0.662, IS r=0.920, gap=0.258) nz=12 [F1=0.663 QWK=0.667]
+  EN_A_a0.05_l0.9: adjusted=0.5904 (LOO r=0.663, IS r=0.958, gap=0.295) nz=18 [F1=0.642 QWK=0.686]
+  EN_A_a0.1_l0.7: adjusted=0.5871 (LOO r=0.655, IS r=0.940, gap=0.285) nz=15 [F1=0.562 QWK=0.552]
+  EN_A_a0.15_l0.5: adjusted=0.5836 (LOO r=0.651, IS r=0.936, gap=0.285) nz=18 [F1=0.562 QWK=0.552]
+  EN_B_a0.1_l0.9: adjusted=0.5800 (LOO r=0.639, IS r=0.906, gap=0.268) nz=11 [F1=0.533 QWK=0.429]
+  EN_A_a0.15_l0.7: adjusted=0.5787 (LOO r=0.638, IS r=0.908, gap=0.269) nz=12 [F1=0.355 QWK=0.308]
+  EN_A_a0.2_l0.5: adjusted=0.5753 (LOO r=0.638, IS r=0.912, gap=0.275) nz=13 [F1=0.355 QWK=0.308]
+  EN_A_a0.1_l0.9: adjusted=0.5682 (LOO r=0.636, IS r=0.921, gap=0.286) nz=14 [F1=0.533 QWK=0.533]
+  EN_A_a0.15_l0.9: adjusted=0.5646 (LOO r=0.622, IS r=0.887, gap=0.265) nz=8 [F1=0.381 QWK=0.320]
+  EN_A_a0.2_l0.7: adjusted=0.5581 (LOO r=0.618, IS r=0.886, gap=0.269) nz=8 [F1=0.278 QWK=0.174]
+  EN_B_a0.15_l0.7: adjusted=0.5551 (LOO r=0.618, IS r=0.893, gap=0.276) nz=11 [F1=0.400 QWK=0.240]
+  EN_B2_a0.1_l0.7: adjusted=0.5421 (LOO r=0.604, IS r=0.877, gap=0.273) nz=9 [F1=0.519 QWK=0.500]
+  EN_A_a0.3_l0.5: adjusted=0.5413 (LOO r=0.605, IS r=0.883, gap=0.278) nz=9 [F1=0.232 QWK=0.095]
+  EN_B2_a0.2_l0.7: adjusted=0.5023 (LOO r=0.561, IS r=0.828, gap=0.267) nz=6 [F1=0.352 QWK=0.261]
+  EN_B_a0.2_l0.7: adjusted=0.4890 (LOO r=0.562, IS r=0.858, gap=0.296) nz=8 [F1=0.287 QWK=0.182]
+  EN_A_a0.05_l0.5: adjusted=-1.0000 (LOO r=0.634, IS r=0.968, gap=0.334) nz=23 [F1=0.609 QWK=0.595]
+  EN_A_a0.05_l0.7: adjusted=-1.0000 (LOO r=0.660, IS r=0.963, gap=0.303) nz=20 [F1=0.642 QWK=0.686]
+  EN_A_a0.2_l0.9: adjusted=-1.0000 (LOO r=0.518, IS r=0.866, gap=0.349) nz=7 [F1=0.167 QWK=0.000]
+  EN_A_a0.3_l0.7: adjusted=-1.0000 (LOO r=0.389, IS r=0.846, gap=0.457) nz=7 [F1=0.167 QWK=0.000]
+  EN_A_a0.3_l0.9: adjusted=-1.0000 (LOO r=0.168, IS r=0.738, gap=0.570) nz=5 [F1=0.167 QWK=0.000]
+  EN_A_a0.5_l0.5: adjusted=-1.0000 (LOO r=0.177, IS r=0.791, gap=0.613) nz=6 [F1=0.167 QWK=0.000]
+  EN_A_a0.5_l0.7: adjusted=-1.0000 (LOO r=-0.522, IS r=0.653, gap=1.175) nz=2 [F1=0.167 QWK=0.000]
+  EN_A_a0.5_l0.9: adjusted=-1.0000 (LOO r=-0.982, IS r=0.000, gap=0.982) nz=0 [F1=0.167 QWK=0.000]
+  EN_A_a0.05_l0.1: adjusted=-1.0000 (LOO r=0.468, IS r=0.985, gap=0.517) nz=34 [F1=0.502 QWK=0.368]
+  EN_A_a0.1_l0.1: adjusted=-1.0000 (LOO r=0.578, IS r=0.976, gap=0.398) nz=29 [F1=0.641 QWK=0.686]
+  EN_A_a0.2_l0.1: adjusted=-1.0000 (LOO r=0.663, IS r=0.966, gap=0.302) nz=27 [F1=0.635 QWK=0.667]
+  EN_B_a0.3_l0.7: adjusted=-1.0000 (LOO r=0.311, IS r=0.799, gap=0.487) nz=5 [F1=0.167 QWK=0.000]
+  EN_B_a0.5_l0.7: adjusted=-1.0000 (LOO r=-0.729, IS r=0.455, gap=1.185) nz=1 [F1=0.167 QWK=0.000]
+  EN_B2_a0.1_l0.5: adjusted=-1.0000 (LOO r=0.565, IS r=0.887, gap=0.322) nz=10 [F1=0.508 QWK=0.516]
+  EN_B2_a0.3_l0.7: adjusted=-1.0000 (LOO r=0.325, IS r=0.713, gap=0.388) nz=5 [F1=0.232 QWK=0.095]
+  Ridge_A_a30: adjusted=-1.0000 (LOO r=0.515, IS r=0.960, gap=0.444) [F1=0.352 QWK=0.261]
+  Ridge_A_a50: adjusted=-1.0000 (LOO r=0.487, IS r=0.954, gap=0.467) [F1=0.297 QWK=0.182]
+  Ridge_A_a75: adjusted=-1.0000 (LOO r=0.455, IS r=0.949, gap=0.495) [F1=0.232 QWK=0.095]
+  Ridge_A_a100: adjusted=-1.0000 (LOO r=0.424, IS r=0.946, gap=0.522) [F1=0.232 QWK=0.095]
+  Ridge_A_a150: adjusted=-1.0000 (LOO r=0.367, IS r=0.941, gap=0.574) [F1=0.167 QWK=0.000]
+  Ridge_A_a200: adjusted=-1.0000 (LOO r=0.311, IS r=0.939, gap=0.628) [F1=0.167 QWK=0.000]
+  Ridge_A_a300: adjusted=-1.0000 (LOO r=0.196, IS r=0.935, gap=0.739) [F1=0.167 QWK=0.000]
+  Ridge_A_a500: adjusted=-1.0000 (LOO r=-0.041, IS r=0.932, gap=0.973) [F1=0.167 QWK=0.000]
+  Ridge_B_a30: adjusted=-1.0000 (LOO r=0.547, IS r=0.938, gap=0.390) [F1=0.297 QWK=0.182]
+  Ridge_B_a50: adjusted=-1.0000 (LOO r=0.497, IS r=0.932, gap=0.435) [F1=0.232 QWK=0.095]
+  Ridge_B_a75: adjusted=-1.0000 (LOO r=0.446, IS r=0.927, gap=0.481) [F1=0.167 QWK=0.000]
+  Ridge_B_a100: adjusted=-1.0000 (LOO r=0.400, IS r=0.923, gap=0.524) [F1=0.167 QWK=0.000]
+  Ridge_B_a150: adjusted=-1.0000 (LOO r=0.310, IS r=0.918, gap=0.608) [F1=0.167 QWK=0.000]
+  Ridge_B_a200: adjusted=-1.0000 (LOO r=0.220, IS r=0.915, gap=0.695) [F1=0.167 QWK=0.000]
+
+BEST: Baseline_g4t1_R7.0 adjusted=0.7261
+
+PER-CASE LOO PREDICTIONS:
+  TCGA-A2-A0CS         GT=2 pred=1.738 cls=2 ok
+  TCGA-A2-A0ET         GT=2 pred=2.570 cls=3 MISS
+  TCGA-A7-A0D9         GT=2 pred=1.882 cls=2 ok
+  TCGA-A7-A3IY         GT=1 pred=1.436 cls=1 ok
+  TCGA-AC-A23E         GT=1 pred=1.888 cls=2 MISS
+  TCGA-AC-A2FM         GT=2 pred=2.481 cls=2 ok
+  TCGA-AC-A3TN         GT=1 pred=1.608 cls=2 MISS
+  TCGA-AC-A7VB         GT=2 pred=2.140 cls=2 ok
+  TCGA-AR-A0U4         GT=3 pred=2.080 cls=2 MISS
+  TCGA-AR-A1AR         GT=3 pred=2.514 cls=3 ok
+  TCGA-AR-A2LO         GT=3 pred=2.704 cls=3 ok
+  TCGA-BH-A0B8         GT=3 pred=1.593 cls=2 MISS
+  TCGA-BH-A0C3         GT=3 pred=2.074 cls=2 MISS
+  TCGA-BH-A0DX         GT=1 pred=1.603 cls=2 MISS
+  TCGA-BH-A0W4         GT=1 pred=1.357 cls=1 ok
+  TCGA-BH-A42V         GT=2 pred=2.409 cls=2 ok
+  TCGA-D8-A1XD         GT=2 pred=1.516 cls=2 ok
+  TCGA-D8-A1XT         GT=3 pred=2.921 cls=3 ok
+  TCGA-D8-A27N         GT=3 pred=2.591 cls=3 ok
+  TCGA-D8-A27P         GT=1 pred=1.606 cls=2 MISS
+  TCGA-D8-A4Z1         GT=3 pred=2.730 cls=3 ok
+  TCGA-D8-A73X         GT=1 pred=1.253 cls=1 ok
+  TCGA-E2-A10E         GT=2 pred=2.432 cls=2 ok
+  TCGA-E2-A14W         GT=3 pred=2.380 cls=2 MISS
+  TCGA-E2-A1B1         GT=1 pred=1.481 cls=1 ok
+  TCGA-E2-A1IG         GT=2 pred=1.940 cls=2 ok
+  TCGA-EW-A1IY         GT=2 pred=1.688 cls=2 ok
+  TCGA-EW-A1PH         GT=3 pred=2.616 cls=3 ok
+  TCGA-LL-A5YO         GT=1 pred=2.034 cls=2 MISS
+  TCGA-OL-A5RX         GT=1 pred=1.000 cls=1 ok

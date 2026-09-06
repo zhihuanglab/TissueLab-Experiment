@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"adjusted_score\" -n /shared/lib /data/autoresearch_runs | head -30",
+    "output_preview": "{\"exit_code\": 141, \"stdout\": \"/shared/lib/shared_analysis/artifacts.py:217:        \\\"adjusted_score\\\": _coalesce_result_values(\\n/shared/lib/shared_analysis/artifacts.py:218:            raw.get(\\\"adjusted_score\\\"),\\n/shared/lib/shared_analysis/artifacts.py:219:            metrics.get(\\\"adjusted_score\\\"),\\n/shared/lib/shared_analysis/artifacts.py:220:            best_variation.get(\\\"adjusted_score\\\"),\\n/shared/lib/shared_analysis/artifacts.py:265:            \\\"adjusted_score\\\": coerced[\\\"adjusted_score\\\"],\\n/data/autoresearch_runs/run_2026041\", \"stderr\": \"3_833f87/shared/cache/region_polygons/._H20.33.029-A12-LFB.svs.zarr.json: Operation not permitted\\ngrep: /data/autoresearch_runs/run_20260410_153753_833f87/shared/cache/region_polygons/._H20.33.030-A12-LFB.svs.zarr.json: Operation not permitted\\ngrep: /data/autoresearch_runs/run_20260410_153753_833f87/shared/cache/region_polygons/._H20.33.034-A12-LFB.svs.zarr.json: Operation not permitted\\ngrep: /data/autoresearch_runs/run_20260410_153753_833f87/shared/cache/region_polygons/._H20.33.037-A12-LFB.svs\"}"
+  }
+]

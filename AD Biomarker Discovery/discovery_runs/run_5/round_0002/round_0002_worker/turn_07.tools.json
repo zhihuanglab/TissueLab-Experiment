@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,260p' /data/autoresearch_runs/run_20260412_150614_9b299b/shared/worker_chains/ca1_pyramidal_reactive_astro_niche/sandbox/result.py\necho '--- more ---'\nsed -n '261,560p' /data/autoresearch_runs/run_20260412_150614_9b299b/shared/worker_chains/ca1_pyramidal_reactive_astro_niche/sandbox/result.py\necho '--- results json ---'\ncat /data/autoresearch_runs/run_20260412_150614_9b299b/shared/worker_chains/ca1_pyramidal_reactive_astro_niche/sandbox/results.json",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \" = ca1_mask & (class_ids == reactive_id)\\n\\n    n_pyramidal = int(pyramidal_mask.sum())\\n    n_reactive = int(reactive_mask.sum())\\n\\n    if n_pyramidal < MIN_PYRAMIDAL_CELLS:\\n        return {\\n            \\\"score\\\": None,\\n            \\\"status\\\": \\\"too_few_pyramidal\\\",\\n            \\\"slide_name\\\": slide_name,\\n            \\\"ca1_polygon_count\\\": len(ca1_polygons),\\n            \\\"ca1_cell_count\\\": ca1_cell_count,\\n            \\\"ca1_pyramidal_count\\\": n_pyramidal,\\n            \\\"ca1_reactive_astro_count\\\": n_reactive,\\n      \", \"stderr\": \"\"}"
+  }
+]

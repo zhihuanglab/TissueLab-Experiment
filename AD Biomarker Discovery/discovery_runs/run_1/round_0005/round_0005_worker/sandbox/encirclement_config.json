@@ -1,0 +1,24 @@
+{
+  "family": "ca1_pyramidal_reactive_astro_encirclement",
+  "region": "CA1",
+  "source_cell_type": "Pyramidal Neuron",
+  "target_cell_type": "Reactive Astrocyte",
+  "radius_px": 60.0,
+  "best_variation": "encirclement_k3_60px",
+  "best_feature_column": "ca1_pyramidal_reactive_astro_encirclement_k3_60px",
+  "canonical_feature_column": "feature_value",
+  "variations": {
+    "encirclement_k2_60px": {
+      "k": 2,
+      "feature_column": "ca1_pyramidal_reactive_astro_encirclement_k2_60px"
+    },
+    "encirclement_k3_60px": {
+      "k": 3,
+      "feature_column": "ca1_pyramidal_reactive_astro_encirclement_k3_60px"
+    },
+    "encirclement_k4_60px": {
+      "k": 4,
+      "feature_column": "ca1_pyramidal_reactive_astro_encirclement_k4_60px"
+    }
+  }
+}

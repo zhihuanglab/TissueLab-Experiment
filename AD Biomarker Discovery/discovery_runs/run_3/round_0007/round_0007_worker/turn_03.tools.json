@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- prior round 6 result.py ---'\nsed -n '1,260p' /data/autoresearch_runs/run_20260421_001115_585b70/round_0006/round_0006_worker/result.py\necho\necho '--- prior round 3 result.py ---'\nsed -n '1,260p' /data/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/result.py\necho\necho '--- sample zarr tree (top 3 levels) ---'\nfind /data/H19.33.004-A12-LFB.svs.zarr -maxdepth 3 | sed -n '1,120p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- prior round 6 result.py ---\\nfrom __future__ import annotations\\n\\nimport json\\nimport math\\nimport re\\nimport warnings\\nfrom pathlib import Path\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom scipy.spatial import cKDTree\\n\\nimport sys\\n\\nsys.path.insert(0, \\\"/shared/lib\\\")\\n\\nfrom shared_analysis import (\\n    assign_centroids_to_regions,\\n    bootstrap_partial_correlation,\\n    build_results_payload,\\n    leave_one_out_summary,\\n    load_centroids,\\n    load_class_ids,\\n    load_class_lookup,\\n    load_contours,\\n \", \"stderr\": \"\"}"
+  }
+]

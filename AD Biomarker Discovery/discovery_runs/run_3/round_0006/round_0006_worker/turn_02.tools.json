@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- worker_brief.json ---'\npython - <<'PY'\nimport json\nwith open('/scratch/worker_brief.json') as f:\n    data=json.load(f)\nprint(json.dumps(data, indent=2))\nPY\necho\necho '--- shared embedding template head ---'\nsed -n '1,260p' /shared/templates/worker_embedding_mechanistic_template.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- worker_brief.json ---\\n{\\n  \\\"worker_name\\\": \\\"round_0006_worker\\\",\\n  \\\"round_id\\\": 6,\\n  \\\"candidate_id\\\": \\\"ca1-peripyramidal-reactive-hypertrophy\\\",\\n  \\\"candidate_type\\\": \\\"candidate\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [\\n      {\\n        \\\"slot\\\": 1,\\n        \\\"feature_name\\\": \\\"astrocytic_reactivity_fraction\\\",\\n        \\\"round_id\\\": 1,\\n        \\\"panel_candidate_score\\\": 0.4914,\\n        \\\"delta_panel_score\\\": null,\\n        \\\"status\\\": \\\"active\\\",\\n        \\\"worker_dir\\\": \\\"/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Spl\", \"stderr\": \"\"}"
+  }
+]

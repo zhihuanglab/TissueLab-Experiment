@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfind /shared -maxdepth 3 -type d | sed -n '1,80p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/shared\\n/shared/cache\\n/shared/cache/region_polygons\\n/shared/lib\\n/shared/lib/shared_analysis\\n/shared/lib/shared_analysis/__pycache__\\n/shared/templates\\n/shared/templates/__pycache__\\n\", \"stderr\": \"\"}"
+  }
+]

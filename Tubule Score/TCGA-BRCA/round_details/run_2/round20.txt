@@ -1,0 +1,55 @@
+Round 20 Details
+================================================================================
+
+KEY CHANGE: Add bp_gland_tumor_ratio (biomedparse gland area / musk_tumor area)
+SetA: R16 baseline (i5 + gm4tm4gv2)
+SetB: R16 + bp_gland_tumor_ratio (i6)
+SetC: Replace tumor_cell_density with ratio (i5r)
+SetD: Drop tcd+bp_cv, add ratio (i4r)
+SetE: Drop tcd only (i4)
+SetF: gpf+git_frac+ratio (i3r)
+SetG: PC count variations
+
+Feature-GT Correlations:
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+  gland_in_tumor_frac: r=-0.5442
+  tumor_cell_density: r=-0.0306
+  bp_component_area_cv: r=-0.2540
+  bp_gland_tumor_ratio: r=-0.1623
+
+All Configurations (sorted by adjusted):
+  SetA_i5_gm4tm4gv2_a1.0: adj=0.8261 LOO_r=0.8261 IS_r=0.9545 gap=0.1284 F1=0.7089 QWK=0.7429
+  SetE_i4_gm4tm4gv2_a1.0: adj=0.8227 LOO_r=0.8227 IS_r=0.9512 gap=0.1285 F1=0.7078 QWK=0.7568
+  SetE_i4_gm4tm4gv2_a1.5: adj=0.8196 LOO_r=0.8196 IS_r=0.9491 gap=0.1295 F1=0.7089 QWK=0.7429
+  SetE_i4_gm4tm4gv2_a2.0: adj=0.8168 LOO_r=0.8168 IS_r=0.9476 gap=0.1308 F1=0.7089 QWK=0.7429
+  SetG_i5r_gm5tm4gv2_a1.0: adj=0.8067 LOO_r=0.8067 IS_r=0.9561 gap=0.1494 F1=0.7380 QWK=0.7895
+  SetC_i5r_gm4tm4gv2_a0.5: adj=0.7941 LOO_r=0.7999 IS_r=0.9614 gap=0.1615 F1=0.6461 QWK=0.7027
+  SetG_i5r_gm4tm5gv2_a1.0: adj=0.7939 LOO_r=0.7980 IS_r=0.9561 gap=0.1581 F1=0.6774 QWK=0.7059
+  SetC_i5r_gm4tm4gv2_a1.0: adj=0.7925 LOO_r=0.7971 IS_r=0.9564 gap=0.1593 F1=0.6774 QWK=0.7059
+  SetC_i5r_gm4tm4gv2_a1.5: adj=0.7903 LOO_r=0.7944 IS_r=0.9528 gap=0.1583 F1=0.6774 QWK=0.7059
+  SetC_i5r_gm4tm4gv2_a2.0: adj=0.7882 LOO_r=0.7922 IS_r=0.9503 gap=0.1581 F1=0.6774 QWK=0.7059
+  SetG_i6_gm5tm4gv2_a1.0: adj=0.7843 LOO_r=0.7919 IS_r=0.9570 gap=0.1652 F1=0.7078 QWK=0.7568
+  SetB_i6_gm4tm4gv2_a2.0: adj=0.7781 LOO_r=0.7858 IS_r=0.9512 gap=0.1654 F1=0.6774 QWK=0.7059
+  SetB_i6_gm4tm4gv2_a1.5: adj=0.7763 LOO_r=0.7854 IS_r=0.9538 gap=0.1683 F1=0.7089 QWK=0.7429
+  SetB_i6_gm4tm4gv2_a1.0: adj=0.7726 LOO_r=0.7841 IS_r=0.9572 gap=0.1731 F1=0.7089 QWK=0.7429
+  SetB_i6_gm4tm4gv2_a0.5: adj=0.7639 LOO_r=0.7800 IS_r=0.9621 gap=0.1821 F1=0.6778 QWK=0.7222
+  SetG_i6_gm4tm5gv2_a1.0: adj=0.7592 LOO_r=0.7751 IS_r=0.9569 gap=0.1818 F1=0.7423 QWK=0.7778
+  SetG_i5r_gm4tm4gv3_a1.0: adj=0.7336 LOO_r=0.7585 IS_r=0.9581 gap=0.1997 F1=0.6774 QWK=0.7059
+  SetG_i6_gm4tm4gv3_a1.0: adj=0.7064 LOO_r=0.7404 IS_r=0.9586 gap=0.2182 F1=0.6774 QWK=0.7059
+  SetF_i3r_gm4tm4gv2_a2.0: adj=0.6299 LOO_r=0.6757 IS_r=0.9172 gap=0.2415 F1=0.5474 QWK=0.5882
+  SetF_i3r_gm4tm4gv2_a1.5: adj=0.6213 LOO_r=0.6702 IS_r=0.9179 gap=0.2477 F1=0.5474 QWK=0.5882
+  SetF_i3r_gm4tm4gv2_a1.0: adj=0.6084 LOO_r=0.6619 IS_r=0.9187 gap=0.2569 F1=0.5474 QWK=0.5882
+  SetD_i4r_gm4tm4gv2_a2.0: adj=0.5975 LOO_r=0.6552 IS_r=0.9207 gap=0.2655 F1=0.5802 QWK=0.6061
+  SetF_i3r_gm4tm4gv2_a0.5: adj=0.5879 LOO_r=0.6485 IS_r=0.9198 gap=0.2713 F1=0.5474 QWK=0.5882
+  SetD_i4r_gm4tm4gv2_a1.5: adj=0.5848 LOO_r=0.6469 IS_r=0.9213 gap=0.2743 F1=0.5474 QWK=0.5882
+  SetD_i4r_gm4tm4gv2_a1.0: adj=0.5668 LOO_r=0.6352 IS_r=0.9220 gap=0.2868 F1=0.5474 QWK=0.5882
+  SetD_i4r_gm4tm4gv2_a0.5: adj=-1.0000 LOO_r=0.6222 IS_r=0.9228 gap=0.3005 F1=0.5474 QWK=0.5882
+  SetG_i5r_gm3tm3gv2_a1.0: adj=-1.0000 LOO_r=0.5301 IS_r=0.8967 gap=0.3666 F1=0.3935 QWK=0.3226
+  SetG_i6_gm3tm3gv2_a1.0: adj=-1.0000 LOO_r=0.5408 IS_r=0.8981 gap=0.3573 F1=0.3648 QWK=0.3125
+  SetG_i4r_gm4tm4gv3_a1.0: adj=-1.0000 LOO_r=0.5801 IS_r=0.9220 gap=0.3419 F1=0.5474 QWK=0.5882
+  SetG_i4r_gm5tm4gv2_a1.0: adj=-1.0000 LOO_r=0.6195 IS_r=0.9219 gap=0.3024 F1=0.5733 QWK=0.5556
+  SetG_i4r_gm4tm5gv2_a1.0: adj=-1.0000 LOO_r=0.6053 IS_r=0.9218 gap=0.3165 F1=0.5474 QWK=0.5882
+  SetG_i4r_gm3tm3gv2_a1.0: adj=-1.0000 LOO_r=0.4574 IS_r=0.8633 gap=0.4058 F1=0.4813 QWK=0.4000
+
+Best: SetA_i5_gm4tm4gv2_a1.0 adj=0.8261

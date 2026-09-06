@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\n['dataset_guide.md', '._dataset_guide.md', 'cache', '._cache', 'lib', '._lib', 'templates', '._templates']\n['shared_analysis', '._shared_analysis']\n",
+  "stderr": ""
+}

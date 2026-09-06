@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport tifffile\nsvs = next(Path('/data').glob('*.svs'))\nprint('sample svs', svs)\nwith tifffile.TiffFile(svs) as tf:\n    page = tf.pages[0]\n    desc = page.description\n    print('description head:', desc[:500])\n    tags = {tag.name: tag.value for tag in page.tags.values() if tag.name in ['XResolution','YResolution','ResolutionUnit']}\n    print('tags', tags)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"sample svs /data/H19.33.004-A12-LFB.svs\\ndescription head: Aperio Image Library v12.0.16 \\n69088x39140 [0,100 67728x39040] (240x240) JPEG/RGB Q=70|AppMag = 20|StripeWidth = 2032|ScanScope ID = HRT-KNE-713-SCO|Filename = 6992-A12-LFB|Date = 05/04/22|Time = 11:39:56|Time Zone = GMT-07:00|User = a0b31d87-c515-4437-98b8-8654b08571d3|MPP = 0.5049|Left = 21.005411|Top = 21.633224|LineCameraSkew = 0.002132|LineAreaXOffset = 0.020983|LineAreaYOffset = 0.014251|Focus Offset = 0.000000|ImageID = 1004103|Exp\", \"stderr\": \"\"}"
+  }
+]

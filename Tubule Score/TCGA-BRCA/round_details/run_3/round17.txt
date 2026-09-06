@@ -1,0 +1,40 @@
+Round 17
+========================================================================
+
+The machine-readable candidate enumeration for this round was not retained:
+the round's script and its details file were lost during the run. What follows
+is taken verbatim from the run log, which recorded the configuration this round
+selected, its scores, and the alternatives the round discussed and rejected.
+Rejected alternatives are therefore partial here, covering those the agent wrote
+about rather than every configuration it evaluated.
+
+ROUND 17 - [T3+G4+area_conc+max_dom+biomedparse_prob_features] + [Ridge] (LOO)
+
+Features (9, best config = T3+G4+area_conc+max_dom):
+  1. tumor_pca_top3 — musk_tumor/, tissue_class_id==1 mean-pooled 1024D → PCA(20) → top 3 PCs by |corr|
+  2. gland_pca_top4 — musk_gland/, tissue_class_id==1 mean-pooled 1024D → PCA(20) → top 4 PCs by |corr|
+  3. area_conc — biomedparse/ gland mask connected components, area concentration
+  4. max_dom — biomedparse/ gland mask, max dominant component fraction
+  5. bp_highconf_gland_frac — NEW: fraction of total image pixels with gland prob > 0.7
+  6. bp_mean_gland_prob — NEW: mean probability among detected gland pixels
+
+Model: Ridge(alpha=3) — best config is T3+G4+area_conc+max_dom (same as Round 16 but with alpha=3 instead of 5)
+
+SELECTED CONFIGURATION
+Model:Ridge(alpha=3) — best config is T3+G4+area_conc+max_dom (same as Round 16 but with alpha=3 instead of 5)
+  LOO r      = 0.8539
+  IS r       = 0.9185
+  IS-LOO gap = 0.0647
+  adjusted   = 0.8539
+
+ALTERNATIVES RECORDED IN THIS ROUND'S FINDINGS
+  1. The best config is the **same feature set as Round 16** (T3+G4+area_conc+max_dom) but with alpha=3 instead of alpha=5, achieving LOO r=0.8539 vs. 0.8483 in R16 — a marginal improvement of +0.0056. The slightly lower regularization captures more signal with 9 features.
+  2. **New biomedparse probability features did NOT help.** Adding bp_highconf_gland_frac to the baseline (Rank 2: LOO r=0.8522) slightly degraded performance vs. baseline (0.8539). Adding bp_mean_gland_prob (Rank 5: LOO r=0.8450) hurt more. The kitchen sink config (11 features, Rank 9: LOO r=0.8404) was worse still, confirming that more features without signal just adds noise with n=30.
+  5. T4+G4+area_conc+max_dom (adding a 4th tumor PC) at alpha=7 gives interesting results: LOO r=0.8411 but Acc=0.8000 and QWK=0.8333 — better classification despite lower r. This suggests the 4th tumor PC helps classification boundaries but hurts continuous prediction slightly.
+
+FINDINGS:
+  1. The best config is the **same feature set as Round 16** (T3+G4+area_conc+max_dom) but with alpha=3 instead of alpha=5, achieving LOO r=0.8539 vs. 0.8483 in R16 — a marginal improvement of +0.0056. The slightly lower regularization captures more signal with 9 features.
+  2. **New biomedparse probability features did NOT help.** Adding bp_highconf_gland_frac to the baseline (Rank 2: LOO r=0.8522) slightly degraded performance vs. baseline (0.8539). Adding bp_mean_gland_prob (Rank 5: LOO r=0.8450) hurt more. The kitchen sink config (11 features, Rank 9: LOO r=0.8404) was worse still, confirming that more features without signal just adds noise with n=30.
+  3. bp_mean_gland_prob has extremely narrow range (0.799-0.886) across all 33 cases — insufficient variation to discriminate tubule scores. The mini-explore hypothesis was correct: probability confidence is remarkably similar across error cases and doesn't distinguish true vs. pseudo-glands.
+  4. bp_highconf_gland_frac has better range but is largely redundant with existing features (area_conc, max_dom already capture gland extent). TCGA-D8-A1XD has very high hc_frac (0.078) confirming the model's pull toward GT=1, but it's actually GT=2 — this feature exacerbates that error.
+  5. T4+G4+area_conc+max_dom (adding a 4th tumor PC) at alpha=7 gives interesting results: LOO r=0.8411 but Acc=0.8000 and QWK=0.8333 — better classification despite lower r. This suggests the 4th tumor PC helps classification boundaries but hurts continuous prediction slightly.

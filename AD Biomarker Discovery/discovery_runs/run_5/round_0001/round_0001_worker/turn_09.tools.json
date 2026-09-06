@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"Adjusted Score\" -n /shared/lib /shared/templates /data/autoresearch_runs 2>/dev/null | sed -n '1,60p'\necho '---'\ngrep -R \"penalty=\" -n /shared/lib /shared/templates /data/autoresearch_runs 2>/dev/null | sed -n '1,120p'",
+    "output_preview": "{\"exit_code\": 2, \"stdout\": \". Then use shell_exec to inspect the\\\\ndata files that are directly relevant to your hypothesis. The data in this domain\\\\nis complex \\\\u2014 zarr files have nested group structures, coordinates are in different\\\\npixel spaces across sources, and case ID formats differ between directories. You\\\\nshould inspect enough to be confident about the data layout before writing code.\\\\n\\\\nDo not re-explore facts already described in the dataset guide or context bundle.\\\\nStop exploring as soon as you understand \", \"stderr\": \"\"}"
+  }
+]

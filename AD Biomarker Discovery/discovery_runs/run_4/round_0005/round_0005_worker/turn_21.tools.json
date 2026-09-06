@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport json\nprint(Path('/scratch/result.py').exists(), Path('/scratch/report.md').exists(), Path('/scratch/results.json').exists())\nres=json.load(open('/scratch/results.json'))\nprint(res['best_variation'], res['feature_column'])\nprint('result.py head:')\nfor i,line in enumerate(open('/scratch/result.py')):\n    if i>25: break\n    print(line.rstrip())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"True True True\\nreactive_purity_r60um ca1_reactive_local_purity_r60um\\nresult.py head:\\nfrom __future__ import annotations\\n\\nimport json\\nimport math\\nimport sys\\nimport warnings\\nfrom dataclasses import dataclass\\nfrom pathlib import Path\\nfrom typing import Iterable\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom scipy.spatial import cKDTree\\n\\nsys.path.insert(0, \\\"/shared/lib\\\")\\nfrom shared_analysis.artifacts import write_donor_feature_table\\nfrom shared_analysis.sea_ad_lfb import build_cell_table, load_traini\", \"stderr\": \"\"}"
+  }
+]

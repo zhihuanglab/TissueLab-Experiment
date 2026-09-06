@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"Adjusted Score\\|penalty=\" -n /shared/lib /data/autoresearch_runs /scratch 2>/dev/null | sed -n '1,120p'",
+    "output_preview": "{\"exit_code\": 2, \"stdout\": \"red with Ridge or ElasticNet\\\\n  regularisation. Let the IS-LOO gap guide you: gap below 0.15 is healthy,\\\\n  above 0.30 means the result is disqualified.\\\\n- Never abandon a data source after one failed variant. Try at least three\\\\n  substantially different approaches before concluding it has no signal.\\\\n- Adjusted score = LOO r \\\\u2212 gap penalty, where gap penalty = max(0, gap \\\\u2212 0.15) \\\\u00d7 0.5\\\\n  and gap > 0.30 means adjusted = \\\\u22121 (disqualified).\\\\n\\\\n## Memory and performance rules\\\\n\\\\\", \"stderr\": \"\"}"
+  }
+]

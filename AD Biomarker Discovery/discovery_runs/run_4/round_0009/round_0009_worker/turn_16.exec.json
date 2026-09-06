@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "nonzero donors:   donor_id  ca1_reactive_niche_pyramidal_corpora_any_fraction_r96px  ca1_pyramidal_n  ca1_reactive_astrocyte_n  ca1_corpora_amylacea_n  reactive_niche_pyramidal_n\nH20.33.018                                                 0.011925             1020                      1161                       7                         587\nH20.33.034                                                 0.037500              833                       251                     120                          80\nH20.33.038                                                 0.003891              527                       747                       4                         257\nH21.33.006                                                 0.001866             1378                      1010                       3                         536\nH21.33.043                                                 0.001946             1666                       660                       1                         514\nsummary count    35.000000\nmean      0.001632\nstd       0.006592\nmin       0.000000\n25%       0.000000\n50%       0.000000\n75%       0.000000\nmax       0.037500\nName: ca1_reactive_niche_pyramidal_corpora_any_fraction_r96px, dtype: float64\n",
+  "stderr": ""
+}

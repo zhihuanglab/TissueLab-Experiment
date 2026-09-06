@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nfrom pathlib import Path\nimport zarr, json, inspect\nfrom shared_analysis import sea_ad_lfb\nslide = Path('/data/H19.33.004-A12-LFB.svs.zarr')\nprint('--- zarr tree top 3 levels ---')\nroot = zarr.open(str(slide), mode='r')\ndef walk(g, prefix='', depth=0, maxdepth=3):\n    if depth>maxdepth: return\n    for k,v in g.groups():\n        print(prefix + k + '/')\n        walk(v, prefix+'  ', depth+1, maxdepth)\n    for k,v in g.arrays():\n        try: shp=v.shape; dt=v.dtype\n        except Exception: shp='?'; dt='?'\n        print(prefix + f'{k}  shape={shp} dtype={dt}')\nwalk(root)\n\nprint('\\n--- shared_analysis.sea_ad_lfb helper signatures/source snippets ---')\nfor name in ['build_cell_table','load_region_polygons']:\n    fn = getattr(sea_ad_lfb, name)\n    print(f'\\n{name}{inspect.signature(fn)}')\n    src = inspect.getsource(fn)\n    print(src[:3000])\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

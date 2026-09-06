@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nimport sys, inspect, textwrap, re\nsys.path.insert(0, '/shared/lib')\nimport shared_analysis.sea_ad_lfb as mod\nsrc = inspect.getsource(mod)\nfor pat in ['mpp','openslide','tiff','slide']:\n    if pat in src.lower():\n        pass\n# Print relevant snippets around mpp\nfor m in re.finditer('mpp', src, flags=re.I):\n    start=max(0,m.start()-250); end=min(len(src),m.end()+400)\n    print('--- snippet ---')\n    print(src[start:end])\n    print()\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\", \"stderr\": \"\"}"
+  }
+]

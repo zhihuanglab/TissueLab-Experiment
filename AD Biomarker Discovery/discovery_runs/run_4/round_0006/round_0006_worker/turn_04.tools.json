@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nexport PYTHONPATH=/shared/lib:${PYTHONPATH:-}\npython - <<'PY'\nimport inspect, zarr\nfrom pathlib import Path\nfrom shared_analysis.sea_ad_lfb import build_cell_table\n\nprint('--- build_cell_table source snippet ---')\nsrc = inspect.getsource(build_cell_table)\nprint(src[:4500])\n\nslide = Path('/data/H19.33.004-A12-LFB.svs.zarr')\nprint('\\n--- sample zarr groups ---')\nroot = zarr.open(slide, mode='r')\nprint(root.tree()[:3000] if hasattr(root.tree(),'__str__') else root.tree())\n\nprint('\\n--- sample cell table columns/head ---')\ndf = build_cell_table(slide, include_regions=True, include_geometry=False)\ncols=[c for c in ['cell_id','centroid_x','centroid_y','cell_type','region_label','classification_label','class_label'] if c in df.columns]\nprint(df.columns.tolist())\nprint(df[cols].head().to_string(index=False))\nprint('n=', len(df))\nprint('region counts top:', df['region_label'].value_counts(dropna=False).head(10).to_dict())\nprint('cell_type counts top:', df['cell_type'].value_counts(dropna=False).head(10).to_dict())\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 3, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

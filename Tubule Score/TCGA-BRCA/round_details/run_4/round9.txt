@@ -1,0 +1,248 @@
+Round 9 Details
+================================================================================
+
+Best model: gland_emb_PCA20_Ridge_a1
+Description: gland emb PCA(20) + Ridge(a=1)
+LOO Pearson r: 0.6571
+IS Pearson r: 0.9466
+Gap: 0.2895
+Adjusted: 0.5874
+
+Feature correlations with GT:
+  gland_patch_fraction: r=-0.4148 (p=0.0226)
+  bp_gland_tissue_frac: r=-0.3067 (p=0.0992)
+  bp_n_large_components: r=+0.2040 (p=0.2795)
+  bp_large_comp_area_frac: r=-0.2552 (p=0.1735)
+  bp_median_comp_size: r=-0.2747 (p=0.1418)
+  bp_n_components_gt100: r=+0.1990 (p=0.2917)
+  bp_mean_large_comp_size: r=+0.0141 (p=0.9409)
+  bp_total_gland_area_lv0: r=+0.2029 (p=0.2821)
+  log_bp_n_large_components: r=+0.2680 (p=0.1523)
+  log_bp_median_comp_size: r=-0.2785 (p=0.1362)
+  log_bp_n_components_gt100: r=+0.2748 (p=0.1417)
+  log_bp_mean_large_comp_size: r=+0.0569 (p=0.7653)
+  log_bp_total_gland_area_lv0: r=+0.2419 (p=0.1978)
+
+Best per category:
+  Interpretable: single_gland_patch_fraction_a0.1 adj=0.3042 LOO_r=0.3042 gap=0.1114
+  Gland Embedding: gland_emb_PCA20_Ridge_a1 adj=0.5874 LOO_r=0.6571 gap=0.2895
+  Blend: blend_w0.8_single_gland_patch_fraction_a0.1 adj=0.5814 LOO_r=0.6522 gap=0.2917
+
+All configurations (sorted by adjusted):
+  gland_emb_PCA20_Ridge_a1: adj=0.5874 LOO_r=0.6571 IS_r=0.9466 gap=0.2895 F1=0.6071 QWK=0.6250
+  gland_emb_PCA20_Ridge_a5: adj=0.5862 LOO_r=0.6562 IS_r=0.9464 gap=0.2901 F1=0.6071 QWK=0.6250
+  gland_emb_PCA20_Ridge_a10: adj=0.5847 LOO_r=0.6552 IS_r=0.9461 gap=0.2910 F1=0.6071 QWK=0.6250
+  blend_w0.8_single_gland_patch_fraction_a0.1: adj=0.5814 LOO_r=0.6522 IS_r=0.9439 gap=0.2917 F1=0.5333 QWK=0.5333
+  blend_w0.8_single_gland_patch_fraction_a1.0: adj=0.5813 LOO_r=0.6522 IS_r=0.9440 gap=0.2918 F1=0.5333 QWK=0.5333
+  blend_w0.8_single_gland_patch_fraction_a10.0: adj=0.5810 LOO_r=0.6523 IS_r=0.9451 gap=0.2928 F1=0.5333 QWK=0.5333
+  3way_w0.5_0.3_0.2_single_gland_patch_fraction_a0.1: adj=0.5809 LOO_r=0.6518 IS_r=0.9438 gap=0.2919 F1=0.5333 QWK=0.5333
+  3way_w0.5_0.3_0.2_single_gland_patch_fraction_a1.0: adj=0.5808 LOO_r=0.6518 IS_r=0.9439 gap=0.2920 F1=0.5333 QWK=0.5333
+  3way_w0.5_0.3_0.2_single_gland_patch_fraction_a10.0: adj=0.5805 LOO_r=0.6520 IS_r=0.9450 gap=0.2930 F1=0.5333 QWK=0.5333
+  blend_w0.7_single_gland_patch_fraction_a10.0: adj=0.5734 LOO_r=0.6460 IS_r=0.9411 gap=0.2951 F1=0.4927 QWK=0.4828
+  3way_w0.5_0.2_0.3_single_gland_patch_fraction_a10.0: adj=0.5730 LOO_r=0.6457 IS_r=0.9410 gap=0.2953 F1=0.4927 QWK=0.4828
+  3way_w0.4_0.3_0.3_single_gland_patch_fraction_a10.0: adj=0.5728 LOO_r=0.6455 IS_r=0.9410 gap=0.2954 F1=0.4927 QWK=0.4828
+  avgEmb_blend_w0.7_single_gland_patch_fraction_a10.0: adj=0.5727 LOO_r=0.6455 IS_r=0.9409 gap=0.2955 F1=0.4927 QWK=0.4828
+  blend_w0.7_single_gland_patch_fraction_a1.0: adj=0.5727 LOO_r=0.6443 IS_r=0.9376 gap=0.2933 F1=0.5333 QWK=0.5333
+  blend_w0.7_single_gland_patch_fraction_a0.1: adj=0.5726 LOO_r=0.6441 IS_r=0.9373 gap=0.2931 F1=0.5333 QWK=0.5333
+  3way_w0.5_0.2_0.3_single_gland_patch_fraction_a1.0: adj=0.5723 LOO_r=0.6440 IS_r=0.9375 gap=0.2935 F1=0.5333 QWK=0.5333
+  3way_w0.5_0.2_0.3_single_gland_patch_fraction_a0.1: adj=0.5722 LOO_r=0.6438 IS_r=0.9372 gap=0.2933 F1=0.5333 QWK=0.5333
+  3way_w0.4_0.3_0.3_single_gland_patch_fraction_a1.0: adj=0.5721 LOO_r=0.6439 IS_r=0.9375 gap=0.2936 F1=0.5333 QWK=0.5333
+  avgEmb_blend_w0.7_single_gland_patch_fraction_a1.0: adj=0.5720 LOO_r=0.6438 IS_r=0.9375 gap=0.2936 F1=0.5333 QWK=0.5333
+  3way_w0.4_0.3_0.3_single_gland_patch_fraction_a0.1: adj=0.5720 LOO_r=0.6437 IS_r=0.9371 gap=0.2934 F1=0.5333 QWK=0.5333
+  avgEmb_blend_w0.7_single_gland_patch_fraction_a0.1: adj=0.5719 LOO_r=0.6436 IS_r=0.9371 gap=0.2935 F1=0.5333 QWK=0.5333
+  blend_w0.8_top6_Ridge_a50.0: adj=0.5706 LOO_r=0.6447 IS_r=0.9431 gap=0.2983 F1=0.5333 QWK=0.5333
+  blend_w0.8_ext_core5_Ridge_a10.0: adj=0.5692 LOO_r=0.6432 IS_r=0.9413 gap=0.2981 F1=0.5333 QWK=0.5333
+  blend_w0.6_single_gland_patch_fraction_a10.0: adj=0.5610 LOO_r=0.6349 IS_r=0.9327 gap=0.2978 F1=0.4329 QWK=0.3846
+  3way_w0.5_0.1_0.4_single_gland_patch_fraction_a10.0: adj=0.5608 LOO_r=0.6347 IS_r=0.9326 gap=0.2979 F1=0.4329 QWK=0.3846
+  3way_w0.4_0.2_0.4_single_gland_patch_fraction_a10.0: adj=0.5605 LOO_r=0.6345 IS_r=0.9326 gap=0.2980 F1=0.4329 QWK=0.3846
+  3way_w0.3_0.3_0.4_single_gland_patch_fraction_a10.0: adj=0.5603 LOO_r=0.6344 IS_r=0.9325 gap=0.2982 F1=0.4329 QWK=0.3846
+  avgEmb_blend_w0.6_single_gland_patch_fraction_a10.0: adj=0.5603 LOO_r=0.6344 IS_r=0.9325 gap=0.2982 F1=0.4329 QWK=0.3846
+  blend_w0.6_single_gland_patch_fraction_a1.0: adj=0.5582 LOO_r=0.6305 IS_r=0.9250 gap=0.2945 F1=0.4785 QWK=0.4444
+  3way_w0.5_0.1_0.4_single_gland_patch_fraction_a1.0: adj=0.5580 LOO_r=0.6303 IS_r=0.9250 gap=0.2946 F1=0.4785 QWK=0.4444
+  blend_w0.6_single_gland_patch_fraction_a0.1: adj=0.5579 LOO_r=0.6300 IS_r=0.9243 gap=0.2943 F1=0.4785 QWK=0.4444
+  3way_w0.4_0.2_0.4_single_gland_patch_fraction_a1.0: adj=0.5578 LOO_r=0.6301 IS_r=0.9249 gap=0.2948 F1=0.4785 QWK=0.4444
+  3way_w0.5_0.1_0.4_single_gland_patch_fraction_a0.1: adj=0.5577 LOO_r=0.6298 IS_r=0.9242 gap=0.2944 F1=0.4785 QWK=0.4444
+  3way_w0.3_0.3_0.4_single_gland_patch_fraction_a1.0: adj=0.5575 LOO_r=0.6299 IS_r=0.9248 gap=0.2949 F1=0.4785 QWK=0.4444
+  avgEmb_blend_w0.6_single_gland_patch_fraction_a1.0: adj=0.5575 LOO_r=0.6299 IS_r=0.9248 gap=0.2949 F1=0.4785 QWK=0.4444
+  3way_w0.4_0.2_0.4_single_gland_patch_fraction_a0.1: adj=0.5574 LOO_r=0.6297 IS_r=0.9241 gap=0.2945 F1=0.4785 QWK=0.4444
+  3way_w0.3_0.3_0.4_single_gland_patch_fraction_a0.1: adj=0.5572 LOO_r=0.6295 IS_r=0.9241 gap=0.2946 F1=0.4785 QWK=0.4444
+  avgEmb_blend_w0.6_single_gland_patch_fraction_a0.1: adj=0.5572 LOO_r=0.6295 IS_r=0.9241 gap=0.2946 F1=0.4785 QWK=0.4444
+  blend_w0.5_single_gland_patch_fraction_a1.0: adj=0.5363 LOO_r=0.6083 IS_r=0.9024 gap=0.2941 F1=0.3851 QWK=0.3200
+  3way_w0.4_0.1_0.5_single_gland_patch_fraction_a1.0: adj=0.5360 LOO_r=0.6081 IS_r=0.9023 gap=0.2943 F1=0.3851 QWK=0.3200
+  3way_w0.3_0.2_0.5_single_gland_patch_fraction_a1.0: adj=0.5357 LOO_r=0.6079 IS_r=0.9023 gap=0.2944 F1=0.3851 QWK=0.3200
+  blend_w0.5_single_gland_patch_fraction_a0.1: adj=0.5356 LOO_r=0.6074 IS_r=0.9011 gap=0.2936 F1=0.3851 QWK=0.3200
+  avgEmb_blend_w0.5_single_gland_patch_fraction_a1.0: adj=0.5355 LOO_r=0.6077 IS_r=0.9022 gap=0.2945 F1=0.3851 QWK=0.3200
+  3way_w0.4_0.1_0.5_single_gland_patch_fraction_a0.1: adj=0.5353 LOO_r=0.6072 IS_r=0.9010 gap=0.2938 F1=0.3851 QWK=0.3200
+  3way_w0.3_0.2_0.5_single_gland_patch_fraction_a0.1: adj=0.5350 LOO_r=0.6070 IS_r=0.9009 gap=0.2939 F1=0.3851 QWK=0.3200
+  avgEmb_blend_w0.5_single_gland_patch_fraction_a0.1: adj=0.5349 LOO_r=0.6069 IS_r=0.9008 gap=0.2940 F1=0.3851 QWK=0.3200
+  blend_w0.4_single_gland_patch_fraction_a1.0: adj=0.5053 LOO_r=0.5750 IS_r=0.8642 gap=0.2893 F1=0.3298 QWK=0.2500
+  3way_w0.3_0.1_0.6_single_gland_patch_fraction_a1.0: adj=0.5049 LOO_r=0.5747 IS_r=0.8641 gap=0.2894 F1=0.3298 QWK=0.2500
+  avgEmb_blend_w0.4_single_gland_patch_fraction_a1.0: adj=0.5046 LOO_r=0.5744 IS_r=0.8640 gap=0.2896 F1=0.3298 QWK=0.2500
+  blend_w0.4_single_gland_patch_fraction_a0.1: adj=0.5045 LOO_r=0.5737 IS_r=0.8620 gap=0.2883 F1=0.3298 QWK=0.2500
+  3way_w0.3_0.1_0.6_single_gland_patch_fraction_a0.1: adj=0.5041 LOO_r=0.5734 IS_r=0.8619 gap=0.2885 F1=0.3298 QWK=0.2500
+  avgEmb_blend_w0.4_single_gland_patch_fraction_a0.1: adj=0.5037 LOO_r=0.5731 IS_r=0.8617 gap=0.2887 F1=0.3298 QWK=0.2500
+  blend_w0.3_single_gland_patch_fraction_a10.0: adj=0.4710 LOO_r=0.5431 IS_r=0.8373 gap=0.2942 F1=0.2647 QWK=0.1739
+  avgEmb_blend_w0.3_single_gland_patch_fraction_a10.0: adj=0.4702 LOO_r=0.5425 IS_r=0.8370 gap=0.2946 F1=0.2647 QWK=0.1739
+  blend_w0.3_single_gland_patch_fraction_a1.0: adj=0.4654 LOO_r=0.5278 IS_r=0.8027 gap=0.2749 F1=0.2647 QWK=0.1739
+  avgEmb_blend_w0.3_single_gland_patch_fraction_a1.0: adj=0.4646 LOO_r=0.5272 IS_r=0.8024 gap=0.2752 F1=0.2647 QWK=0.1739
+  blend_w0.3_single_gland_patch_fraction_a0.1: adj=0.4646 LOO_r=0.5263 IS_r=0.7996 gap=0.2733 F1=0.2647 QWK=0.1739
+  avgEmb_blend_w0.3_single_gland_patch_fraction_a0.1: adj=0.4639 LOO_r=0.5257 IS_r=0.7993 gap=0.2736 F1=0.2647 QWK=0.1739
+  blend_w0.2_single_gland_patch_fraction_a1.0: adj=0.4185 LOO_r=0.4654 IS_r=0.7091 gap=0.2437 F1=0.2647 QWK=0.1739
+  blend_w0.2_single_gland_patch_fraction_a0.1: adj=0.4183 LOO_r=0.4641 IS_r=0.7057 gap=0.2416 F1=0.2647 QWK=0.1739
+  blend_w0.2_single_gland_patch_fraction_a10.0: adj=0.4172 LOO_r=0.4783 IS_r=0.7504 gap=0.2722 F1=0.2315 QWK=0.0952
+  blend_w0.2_ext_core5_Ridge_a10.0: adj=0.3783 LOO_r=0.4508 IS_r=0.7458 gap=0.2950 F1=0.2865 QWK=0.1818
+  single_gland_patch_fraction_a0.1: adj=0.3042 LOO_r=0.3042 IS_r=0.4157 gap=0.1114 F1=0.1772 QWK=0.0833
+  single_gland_patch_fraction_a1.0: adj=0.3028 LOO_r=0.3028 IS_r=0.4155 gap=0.1126 F1=0.1772 QWK=0.0833
+  single_gland_patch_fraction_a10.0: adj=0.2829 LOO_r=0.2829 IS_r=0.4148 gap=0.1319 F1=0.2315 QWK=0.0952
+  ext_core5_Ridge_a10.0: adj=0.2686 LOO_r=0.2957 IS_r=0.4998 gap=0.2041 F1=0.2865 QWK=0.1818
+  top6_Ridge_a10.0: adj=0.2562 LOO_r=0.2910 IS_r=0.5106 gap=0.2196 F1=0.2647 QWK=0.1739
+  top4_Ridge_a10.0: adj=0.2465 LOO_r=0.2719 IS_r=0.4727 gap=0.2008 F1=0.2647 QWK=0.1739
+  top6_Ridge_a50.0: adj=0.2446 LOO_r=0.2762 IS_r=0.4895 gap=0.2133 F1=0.2865 QWK=0.1818
+  ext_core5_Ridge_a3.0: adj=0.2443 LOO_r=0.2809 IS_r=0.5042 gap=0.2232 F1=0.2647 QWK=0.1739
+  core3_Ridge_a10.0: adj=0.2399 LOO_r=0.2512 IS_r=0.4239 gap=0.1727 F1=0.2315 QWK=0.0952
+  top5_Ridge_a10.0: adj=0.2361 LOO_r=0.2643 IS_r=0.4706 gap=0.2063 F1=0.2647 QWK=0.1739
+  core3_Ridge_a3.0: adj=0.2340 LOO_r=0.2494 IS_r=0.4302 gap=0.1808 F1=0.2315 QWK=0.0952
+  top4_Ridge_a3.0: adj=0.2266 LOO_r=0.2602 IS_r=0.4775 gap=0.2173 F1=0.2647 QWK=0.1739
+  top6_Ridge_a3.0: adj=0.2235 LOO_r=0.2749 IS_r=0.5276 gap=0.2527 F1=0.3298 QWK=0.2500
+  ext_core5_Ridge_a50.0: adj=0.2216 LOO_r=0.2580 IS_r=0.4807 gap=0.2227 F1=0.2315 QWK=0.0952
+  top3_Ridge_a10.0: adj=0.2174 LOO_r=0.2377 IS_r=0.4282 gap=0.1905 F1=0.2315 QWK=0.0952
+  top4_Ridge_a50.0: adj=0.2169 LOO_r=0.2487 IS_r=0.4624 gap=0.2136 F1=0.2315 QWK=0.0952
+  top4_Ridge_a1.0: adj=0.2146 LOO_r=0.2526 IS_r=0.4785 gap=0.2259 F1=0.2647 QWK=0.1739
+  top5_Ridge_a3.0: adj=0.2136 LOO_r=0.2515 IS_r=0.4772 gap=0.2257 F1=0.2647 QWK=0.1739
+  core3_Ridge_a1.0: adj=0.2123 LOO_r=0.2355 IS_r=0.4319 gap=0.1964 F1=0.2315 QWK=0.0952
+  ext_core5_Ridge_a1.0: adj=0.2115 LOO_r=0.2593 IS_r=0.5049 gap=0.2456 F1=0.2647 QWK=0.1739
+  top4_Ridge_a0.5: adj=0.2102 LOO_r=0.2497 IS_r=0.4788 gap=0.2290 F1=0.2647 QWK=0.1739
+  top5_Ridge_a50.0: adj=0.2077 LOO_r=0.2402 IS_r=0.4552 gap=0.2150 F1=0.2865 QWK=0.1818
+  top4_Ridge_a0.1: adj=0.2064 LOO_r=0.2473 IS_r=0.4790 gap=0.2317 F1=0.2647 QWK=0.1739
+  top4_Ridge_a0.01: adj=0.2055 LOO_r=0.2467 IS_r=0.4790 gap=0.2323 F1=0.2647 QWK=0.1739
+  top3_Ridge_a3.0: adj=0.2011 LOO_r=0.2277 IS_r=0.4311 gap=0.2033 F1=0.2647 QWK=0.1739
+  core3_Ridge_a0.5: adj=0.1952 LOO_r=0.2242 IS_r=0.4323 gap=0.2081 F1=0.2315 QWK=0.0952
+  top3_Ridge_a1.0: adj=0.1922 LOO_r=0.2221 IS_r=0.4318 gap=0.2097 F1=0.2647 QWK=0.1739
+  ext_core5_Ridge_a0.5: adj=0.1903 LOO_r=0.2453 IS_r=0.5052 gap=0.2599 F1=0.2647 QWK=0.1739
+  top5_Ridge_a1.0: adj=0.1902 LOO_r=0.2366 IS_r=0.4794 gap=0.2428 F1=0.2647 QWK=0.1739
+  top3_Ridge_a0.5: adj=0.1895 LOO_r=0.2203 IS_r=0.4319 gap=0.2116 F1=0.2434 QWK=0.1667
+  top3_Ridge_a0.1: adj=0.1872 LOO_r=0.2188 IS_r=0.4319 gap=0.2131 F1=0.2434 QWK=0.1667
+  top3_Ridge_a0.01: adj=0.1867 LOO_r=0.2185 IS_r=0.4320 gap=0.2135 F1=0.2434 QWK=0.1667
+  top6_Ridge_a1.0: adj=0.1862 LOO_r=0.2530 IS_r=0.5365 gap=0.2835 F1=0.3082 QWK=0.2400
+  all_orig_Ridge_a10.0: adj=0.1787 LOO_r=0.2361 IS_r=0.5009 gap=0.2648 F1=0.2647 QWK=0.1739
+  all_orig_Ridge_a50.0: adj=0.1755 LOO_r=0.2295 IS_r=0.4874 gap=0.2579 F1=0.2315 QWK=0.0952
+  top5_Ridge_a0.5: adj=0.1738 LOO_r=0.2260 IS_r=0.4803 gap=0.2543 F1=0.2647 QWK=0.1739
+  core3_Ridge_a0.1: adj=0.1664 LOO_r=0.2051 IS_r=0.4324 gap=0.2273 F1=0.2315 QWK=0.0952
+  top3_Ridge_a50.0: adj=0.1633 LOO_r=0.1996 IS_r=0.4221 gap=0.2225 F1=0.2315 QWK=0.0952
+  core3_Ridge_a50.0: adj=0.1613 LOO_r=0.1944 IS_r=0.4107 gap=0.2162 F1=0.2315 QWK=0.0952
+  ext_core5_Ridge_a0.1: adj=0.1575 LOO_r=0.2235 IS_r=0.5054 gap=0.2819 F1=0.2434 QWK=0.1667
+  core3_Ridge_a0.01: adj=0.1557 LOO_r=0.1979 IS_r=0.4323 gap=0.2344 F1=0.2315 QWK=0.0952
+  ext_core5_Ridge_a0.01: adj=0.1456 LOO_r=0.2155 IS_r=0.5054 gap=0.2899 F1=0.2434 QWK=0.1667
+  top5_Ridge_a0.1: adj=0.1432 LOO_r=0.2059 IS_r=0.4813 gap=0.2754 F1=0.2647 QWK=0.1739
+  top5_Ridge_a0.01: adj=0.1298 LOO_r=0.1970 IS_r=0.4816 gap=0.2846 F1=0.2647 QWK=0.1739
+  single_bp_gland_tissue_frac_a0.1: adj=0.1040 LOO_r=0.1216 IS_r=0.3067 gap=0.1851 F1=0.2135 QWK=0.0909
+  single_bp_gland_tissue_frac_a1.0: adj=0.0991 LOO_r=0.1183 IS_r=0.3067 gap=0.1884 F1=0.2135 QWK=0.0909
+  single_bp_gland_tissue_frac_a10.0: adj=0.0498 LOO_r=0.0855 IS_r=0.3067 gap=0.2212 F1=0.2135 QWK=0.0909
+  single_log_bp_n_components_gt100_a0.1: adj=0.0472 LOO_r=0.0731 IS_r=0.2748 gap=0.2017 F1=0.1538 QWK=0.0000
+  single_log_bp_median_comp_size_a0.1: adj=0.0470 LOO_r=0.0742 IS_r=0.2785 gap=0.2043 F1=0.1404 QWK=0.0000
+  single_log_bp_median_comp_size_a1.0: adj=0.0414 LOO_r=0.0704 IS_r=0.2785 gap=0.2081 F1=0.1538 QWK=0.0000
+  single_bp_median_comp_size_a0.1: adj=0.0413 LOO_r=0.0691 IS_r=0.2747 gap=0.2056 F1=0.1538 QWK=0.0000
+  single_log_bp_n_components_gt100_a1.0: adj=0.0413 LOO_r=0.0691 IS_r=0.2748 gap=0.2057 F1=0.1538 QWK=0.0000
+  single_bp_median_comp_size_a1.0: adj=0.0355 LOO_r=0.0652 IS_r=0.2747 gap=0.2094 F1=0.1538 QWK=0.0000
+  single_log_bp_n_large_components_a0.1: adj=0.0076 LOO_r=0.0444 IS_r=0.2680 gap=0.2236 F1=0.1538 QWK=0.0000
+  single_log_bp_n_large_components_a1.0: adj=0.0017 LOO_r=0.0404 IS_r=0.2680 gap=0.2275 F1=0.1538 QWK=0.0000
+  single_log_bp_median_comp_size_a10.0: adj=-0.0154 LOO_r=0.0325 IS_r=0.2785 gap=0.2459 F1=0.1667 QWK=0.0000
+  single_log_bp_n_components_gt100_a10.0: adj=-0.0184 LOO_r=0.0293 IS_r=0.2748 gap=0.2455 F1=0.1667 QWK=0.0000
+  single_bp_median_comp_size_a10.0: adj=-0.0225 LOO_r=0.0266 IS_r=0.2747 gap=0.2481 F1=0.1667 QWK=0.0000
+  single_bp_large_comp_area_frac_a0.1: adj=-0.0234 LOO_r=0.0195 IS_r=0.2552 gap=0.2357 F1=0.1538 QWK=0.0000
+  single_bp_large_comp_area_frac_a1.0: adj=-0.0291 LOO_r=0.0156 IS_r=0.2552 gap=0.2395 F1=0.1538 QWK=0.0000
+  single_log_bp_n_large_components_a10.0: adj=-0.0578 LOO_r=0.0008 IS_r=0.2680 gap=0.2672 F1=0.1667 QWK=0.0000
+  single_log_bp_total_gland_area_lv0_a0.1: adj=-0.0670 LOO_r=-0.0140 IS_r=0.2419 gap=0.2559 F1=0.1667 QWK=0.0000
+  single_log_bp_total_gland_area_lv0_a1.0: adj=-0.0735 LOO_r=-0.0184 IS_r=0.2419 gap=0.2603 F1=0.1667 QWK=0.0000
+  single_bp_large_comp_area_frac_a10.0: adj=-0.0867 LOO_r=-0.0228 IS_r=0.2552 gap=0.2779 F1=0.1538 QWK=0.0000
+  single_bp_n_components_gt100_a0.1: adj=-0.0894 LOO_r=-0.0433 IS_r=0.1990 gap=0.2423 F1=0.1538 QWK=0.0000
+  single_bp_n_components_gt100_a1.0: adj=-0.0939 LOO_r=-0.0463 IS_r=0.1990 gap=0.2453 F1=0.1538 QWK=0.0000
+  single_bp_n_large_components_a0.1: adj=-0.1155 LOO_r=-0.0590 IS_r=0.2040 gap=0.2630 F1=0.1538 QWK=0.0000
+  single_bp_n_large_components_a1.0: adj=-0.1219 LOO_r=-0.0633 IS_r=0.2040 gap=0.2673 F1=0.1538 QWK=0.0000
+  single_bp_n_components_gt100_a10.0: adj=-0.1519 LOO_r=-0.0849 IS_r=0.1990 gap=0.2839 F1=0.1538 QWK=0.0000
+  single_bp_total_gland_area_lv0_a0.1: adj=-0.1600 LOO_r=-0.0890 IS_r=0.2029 gap=0.2919 F1=0.1538 QWK=0.0000
+  single_bp_total_gland_area_lv0_a1.0: adj=-0.1675 LOO_r=-0.0941 IS_r=0.2029 gap=0.2970 F1=0.1538 QWK=0.0000
+  top6_Ridge_a0.01: adj=-1.0000 LOO_r=0.1942 IS_r=0.5386 gap=0.3445 F1=0.2402 QWK=0.1600
+  top6_Ridge_a0.1: adj=-1.0000 LOO_r=0.2069 IS_r=0.5388 gap=0.3319 F1=0.2880 QWK=0.2308
+  top6_Ridge_a0.5: adj=-1.0000 LOO_r=0.2368 IS_r=0.5384 gap=0.3016 F1=0.3632 QWK=0.3077
+  all_orig_Ridge_a0.01: adj=-1.0000 LOO_r=-0.0753 IS_r=0.5087 gap=0.5840 F1=0.2139 QWK=0.0000
+  all_orig_Ridge_a0.1: adj=-1.0000 LOO_r=-0.0238 IS_r=0.5084 gap=0.5322 F1=0.2303 QWK=0.0000
+  all_orig_Ridge_a0.5: adj=-1.0000 LOO_r=0.0835 IS_r=0.5072 gap=0.4237 F1=0.2507 QWK=0.1667
+  all_orig_Ridge_a1.0: adj=-1.0000 LOO_r=0.1302 IS_r=0.5064 gap=0.3762 F1=0.2647 QWK=0.1739
+  all_orig_Ridge_a3.0: adj=-1.0000 LOO_r=0.1917 IS_r=0.5050 gap=0.3133 F1=0.2647 QWK=0.1739
+  single_bp_n_large_components_a10.0: adj=-1.0000 LOO_r=-0.1058 IS_r=0.2040 gap=0.3098 F1=0.1538 QWK=0.0000
+  single_bp_mean_large_comp_size_a0.1: adj=-1.0000 LOO_r=-0.7474 IS_r=0.0141 gap=0.7616 F1=0.1667 QWK=0.0000
+  single_bp_mean_large_comp_size_a1.0: adj=-1.0000 LOO_r=-0.7520 IS_r=0.0141 gap=0.7661 F1=0.1667 QWK=0.0000
+  single_bp_mean_large_comp_size_a10.0: adj=-1.0000 LOO_r=-0.7923 IS_r=0.0141 gap=0.8064 F1=0.1667 QWK=0.0000
+  single_bp_total_gland_area_lv0_a10.0: adj=-1.0000 LOO_r=-0.1441 IS_r=0.2029 gap=0.3470 F1=0.1667 QWK=0.0000
+  single_log_bp_mean_large_comp_size_a0.1: adj=-1.0000 LOO_r=-0.6142 IS_r=0.0569 gap=0.6711 F1=0.1667 QWK=0.0000
+  single_log_bp_mean_large_comp_size_a1.0: adj=-1.0000 LOO_r=-0.6201 IS_r=0.0569 gap=0.6769 F1=0.1667 QWK=0.0000
+  single_log_bp_mean_large_comp_size_a10.0: adj=-1.0000 LOO_r=-0.6733 IS_r=0.0569 gap=0.7302 F1=0.1667 QWK=0.0000
+  single_log_bp_total_gland_area_lv0_a10.0: adj=-1.0000 LOO_r=-0.0620 IS_r=0.2419 gap=0.3039 F1=0.1667 QWK=0.0000
+  gland_emb_PCA7_Ridge_a1: adj=-1.0000 LOO_r=0.3573 IS_r=0.7106 gap=0.3533 F1=0.3519 QWK=0.2609
+  gland_emb_PCA7_Ridge_a3: adj=-1.0000 LOO_r=0.3573 IS_r=0.7106 gap=0.3533 F1=0.3519 QWK=0.2609
+  gland_emb_PCA7_Ridge_a5: adj=-1.0000 LOO_r=0.3571 IS_r=0.7106 gap=0.3534 F1=0.3519 QWK=0.2609
+  gland_emb_PCA8_Ridge_a1: adj=-1.0000 LOO_r=0.3214 IS_r=0.7084 gap=0.3871 F1=0.3519 QWK=0.2609
+  gland_emb_PCA8_Ridge_a3: adj=-1.0000 LOO_r=0.3214 IS_r=0.7084 gap=0.3870 F1=0.3519 QWK=0.2609
+  gland_emb_PCA8_Ridge_a5: adj=-1.0000 LOO_r=0.3213 IS_r=0.7084 gap=0.3871 F1=0.3519 QWK=0.2609
+  gland_emb_PCA10_Ridge_a1: adj=-1.0000 LOO_r=0.4754 IS_r=0.8320 gap=0.3566 F1=0.4149 QWK=0.3846
+  gland_emb_PCA10_Ridge_a3: adj=-1.0000 LOO_r=0.4748 IS_r=0.8321 gap=0.3573 F1=0.4149 QWK=0.3846
+  gland_emb_PCA10_Ridge_a5: adj=-1.0000 LOO_r=0.4754 IS_r=0.8320 gap=0.3565 F1=0.4149 QWK=0.3846
+  gland_emb_PCA10_Ridge_a10: adj=-1.0000 LOO_r=0.4750 IS_r=0.8320 gap=0.3569 F1=0.4149 QWK=0.3846
+  gland_emb_PCA12_Ridge_a1: adj=-1.0000 LOO_r=0.4758 IS_r=0.8366 gap=0.3608 F1=0.4470 QWK=0.4286
+  gland_emb_PCA12_Ridge_a3: adj=-1.0000 LOO_r=0.4758 IS_r=0.8366 gap=0.3607 F1=0.4470 QWK=0.4286
+  gland_emb_PCA12_Ridge_a5: adj=-1.0000 LOO_r=0.4756 IS_r=0.8366 gap=0.3610 F1=0.4470 QWK=0.4286
+  gland_emb_PCA15_Ridge_a5: adj=-1.0000 LOO_r=0.4834 IS_r=0.8689 gap=0.3855 F1=0.4717 QWK=0.4242
+  gland_emb_PCA15_Ridge_a10: adj=-1.0000 LOO_r=0.4839 IS_r=0.8686 gap=0.3847 F1=0.4717 QWK=0.4242
+  gland_emb_PCA5_Ridge_a1: adj=-1.0000 LOO_r=0.1384 IS_r=0.5307 gap=0.3923 F1=0.3519 QWK=0.1667
+  gland_emb_PCA5_Ridge_a3: adj=-1.0000 LOO_r=0.1383 IS_r=0.5307 gap=0.3924 F1=0.3519 QWK=0.1667
+  gland_emb_PCA5_Ridge_a5: adj=-1.0000 LOO_r=0.1383 IS_r=0.5307 gap=0.3924 F1=0.3519 QWK=0.1667
+  blend_w0.4_single_gland_patch_fraction_a10.0: adj=-1.0000 LOO_r=0.5876 IS_r=0.8881 gap=0.3005 F1=0.2647 QWK=0.1739
+  blend_w0.5_single_gland_patch_fraction_a10.0: adj=-1.0000 LOO_r=0.6167 IS_r=0.9169 gap=0.3002 F1=0.3298 QWK=0.2500
+  blend_w0.3_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.5094 IS_r=0.8205 gap=0.3110 F1=0.2865 QWK=0.1818
+  blend_w0.4_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.5549 IS_r=0.8702 gap=0.3153 F1=0.3519 QWK=0.2609
+  blend_w0.5_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.5889 IS_r=0.9022 gap=0.3133 F1=0.3851 QWK=0.3200
+  blend_w0.6_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.6135 IS_r=0.9222 gap=0.3087 F1=0.4329 QWK=0.3846
+  blend_w0.7_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.6310 IS_r=0.9343 gap=0.3033 F1=0.5333 QWK=0.5333
+  blend_w0.2_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.4386 IS_r=0.7442 gap=0.3056 F1=0.2647 QWK=0.1739
+  blend_w0.3_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.4967 IS_r=0.8174 gap=0.3207 F1=0.3519 QWK=0.2609
+  blend_w0.4_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.5432 IS_r=0.8672 gap=0.3241 F1=0.4074 QWK=0.3333
+  blend_w0.5_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.5790 IS_r=0.8999 gap=0.3209 F1=0.4329 QWK=0.3846
+  blend_w0.6_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.6060 IS_r=0.9207 gap=0.3147 F1=0.4070 QWK=0.3704
+  blend_w0.7_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.6257 IS_r=0.9334 gap=0.3077 F1=0.5333 QWK=0.5333
+  blend_w0.8_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.6400 IS_r=0.9409 gap=0.3009 F1=0.5333 QWK=0.5333
+  blend_w0.2_top4_Ridge_a10.0: adj=-1.0000 LOO_r=0.4334 IS_r=0.7364 gap=0.3030 F1=0.2865 QWK=0.1818
+  blend_w0.3_top4_Ridge_a10.0: adj=-1.0000 LOO_r=0.4953 IS_r=0.8164 gap=0.3210 F1=0.2865 QWK=0.1818
+  blend_w0.4_top4_Ridge_a10.0: adj=-1.0000 LOO_r=0.5439 IS_r=0.8691 gap=0.3252 F1=0.2865 QWK=0.1818
+  blend_w0.5_top4_Ridge_a10.0: adj=-1.0000 LOO_r=0.5805 IS_r=0.9024 gap=0.3219 F1=0.4554 QWK=0.4000
+  blend_w0.6_top4_Ridge_a10.0: adj=-1.0000 LOO_r=0.6074 IS_r=0.9229 gap=0.3155 F1=0.4329 QWK=0.3846
+  blend_w0.7_top4_Ridge_a10.0: adj=-1.0000 LOO_r=0.6269 IS_r=0.9351 gap=0.3082 F1=0.5333 QWK=0.5333
+  blend_w0.8_top4_Ridge_a10.0: adj=-1.0000 LOO_r=0.6407 IS_r=0.9419 gap=0.3012 F1=0.5333 QWK=0.5333
+  blend_w0.2_top6_Ridge_a50.0: adj=-1.0000 LOO_r=0.4691 IS_r=0.7856 gap=0.3165 F1=0.2865 QWK=0.1818
+  blend_w0.3_top6_Ridge_a50.0: adj=-1.0000 LOO_r=0.5293 IS_r=0.8543 gap=0.3250 F1=0.2865 QWK=0.1818
+  blend_w0.4_top6_Ridge_a50.0: adj=-1.0000 LOO_r=0.5713 IS_r=0.8941 gap=0.3229 F1=0.2865 QWK=0.1818
+  blend_w0.5_top6_Ridge_a50.0: adj=-1.0000 LOO_r=0.6004 IS_r=0.9173 gap=0.3169 F1=0.4074 QWK=0.3333
+  blend_w0.6_top6_Ridge_a50.0: adj=-1.0000 LOO_r=0.6206 IS_r=0.9308 gap=0.3102 F1=0.4074 QWK=0.3333
+  blend_w0.7_top6_Ridge_a50.0: adj=-1.0000 LOO_r=0.6347 IS_r=0.9386 gap=0.3039 F1=0.4927 QWK=0.4828
+  blend_w0.2_ext_core5_Ridge_a3.0: adj=-1.0000 LOO_r=0.4278 IS_r=0.7333 gap=0.3055 F1=0.2865 QWK=0.1818
+  blend_w0.3_ext_core5_Ridge_a3.0: adj=-1.0000 LOO_r=0.4880 IS_r=0.8082 gap=0.3202 F1=0.3298 QWK=0.2500
+  blend_w0.4_ext_core5_Ridge_a3.0: adj=-1.0000 LOO_r=0.5372 IS_r=0.8605 gap=0.3233 F1=0.3298 QWK=0.2500
+  blend_w0.5_ext_core5_Ridge_a3.0: adj=-1.0000 LOO_r=0.5755 IS_r=0.8954 gap=0.3199 F1=0.4329 QWK=0.3846
+  blend_w0.6_ext_core5_Ridge_a3.0: adj=-1.0000 LOO_r=0.6044 IS_r=0.9180 gap=0.3136 F1=0.4329 QWK=0.3846
+  blend_w0.7_ext_core5_Ridge_a3.0: adj=-1.0000 LOO_r=0.6254 IS_r=0.9320 gap=0.3066 F1=0.5333 QWK=0.5333
+  blend_w0.8_ext_core5_Ridge_a3.0: adj=-1.0000 LOO_r=0.6402 IS_r=0.9403 gap=0.3000 F1=0.5333 QWK=0.5333
+  avgEmb_blend_w0.4_single_gland_patch_fraction_a10.0: adj=-1.0000 LOO_r=0.5870 IS_r=0.8879 gap=0.3009 F1=0.2647 QWK=0.1739
+  avgEmb_blend_w0.5_single_gland_patch_fraction_a10.0: adj=-1.0000 LOO_r=0.6161 IS_r=0.9166 gap=0.3006 F1=0.3298 QWK=0.2500
+  avgEmb_blend_w0.3_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.5089 IS_r=0.8201 gap=0.3112 F1=0.2865 QWK=0.1818
+  avgEmb_blend_w0.4_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.5544 IS_r=0.8699 gap=0.3155 F1=0.3519 QWK=0.2609
+  avgEmb_blend_w0.5_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.5883 IS_r=0.9019 gap=0.3136 F1=0.3851 QWK=0.3200
+  avgEmb_blend_w0.6_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.6130 IS_r=0.9220 gap=0.3090 F1=0.4329 QWK=0.3846
+  avgEmb_blend_w0.7_ext_core5_Ridge_a10.0: adj=-1.0000 LOO_r=0.6305 IS_r=0.9341 gap=0.3036 F1=0.5333 QWK=0.5333
+  avgEmb_blend_w0.3_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.4962 IS_r=0.8171 gap=0.3209 F1=0.3519 QWK=0.2609
+  avgEmb_blend_w0.4_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.5426 IS_r=0.8669 gap=0.3243 F1=0.4074 QWK=0.3333
+  avgEmb_blend_w0.5_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.5785 IS_r=0.8996 gap=0.3211 F1=0.4329 QWK=0.3846
+  avgEmb_blend_w0.6_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.6054 IS_r=0.9204 gap=0.3150 F1=0.4070 QWK=0.3704
+  avgEmb_blend_w0.7_top6_Ridge_a10.0: adj=-1.0000 LOO_r=0.6252 IS_r=0.9332 gap=0.3080 F1=0.5333 QWK=0.5333
+  3way_w0.3_0.1_0.6_single_gland_patch_fraction_a10.0: adj=-1.0000 LOO_r=0.5873 IS_r=0.8880 gap=0.3007 F1=0.2647 QWK=0.1739
+  3way_w0.3_0.2_0.5_single_gland_patch_fraction_a10.0: adj=-1.0000 LOO_r=0.6162 IS_r=0.9167 gap=0.3005 F1=0.3298 QWK=0.2500
+  3way_w0.4_0.1_0.5_single_gland_patch_fraction_a10.0: adj=-1.0000 LOO_r=0.6164 IS_r=0.9168 gap=0.3004 F1=0.3298 QWK=0.2500

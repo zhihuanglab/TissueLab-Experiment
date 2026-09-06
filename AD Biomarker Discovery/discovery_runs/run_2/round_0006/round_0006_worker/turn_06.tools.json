@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- shared_analysis/__init__.py ---'\nsed -n '1,220p' /shared/lib/shared_analysis/__init__.py\necho '--- sea_ad_lfb.py relevant bits ---'\ngrep -n \"def build_cell_table\\|def load_training_cohort\\|def load_region_polygons\\|def compute_contour_geometry\" -n /shared/lib/shared_analysis/sea_ad_lfb.py\nsed -n '1,260p' /shared/lib/shared_analysis/sea_ad_lfb.py\necho '--- round 5 result.py ---'\nsed -n '1,260p' /data/autoresearch_runs/run_20260420_215745_90b105/round_0005/round_0005_worker/result.py\necho '--- round 3 result.py ---'\nsed -n '1,260p' /data/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \" \\\"class_id\\\": class_ids,\\n            \\\"cell_type\\\": [class_lookup.get(int(cid), f\\\"class_{int(cid)}\\\") for cid in class_ids],\\n        }\\n    )\\n    if include_regions:\\n        polygons = load_region_polygons(zarr_path, scale=scale)\\n        frame[\\\"region\\\"] = assign_centroids_to_regions(centroids, polygons)\\n    if include_geometry:\\n        geometry = compute_contour_geometry(load_contours(zarr_path))\\n        frame = pd.concat([frame, geometry], axis=1)\\n    return frame\\n\\n\\ndef build_slide_manifest(data_roo\", \"stderr\": \"\"}"
+  }
+]

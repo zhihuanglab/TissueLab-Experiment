@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport openslide, pandas as pd\ncohort = pd.read_csv('/data/training_cohort.csv')\nsvs='/data/'+cohort.iloc[0]['slide_name'].replace('.zarr','')\nslide=openslide.OpenSlide(svs)\nprint(slide.properties.get('openslide.mpp-x'), slide.properties.get('openslide.mpp-y'))\nprint([k for k in slide.properties.keys() if 'mpp' in k.lower()][:10])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"0.50490000000000002 0.50490000000000002\\n['aperio.MPP', 'openslide.mpp-x', 'openslide.mpp-y']\\n\", \"stderr\": \"\"}"
+  }
+]

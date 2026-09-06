@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.append('/shared/lib')\nfrom shared_analysis import stats\nfor fn in ['leave_one_out_summary','bootstrap_partial_correlation','leave_one_out_partial_correlation','residualize']:\n    print(f'\\n--- {fn} ---')\n    print(inspect.getsource(getattr(stats, fn)))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\n--- leave_one_out_summary ---\\ndef leave_one_out_summary(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n    id_col: str | None = None,\\n    unstable_delta: float = 0.10,\\n) -> dict[str, object]:\\n    loo = leave_one_out_partial_correlation(\\n        df,\\n        feature_col=feature_col,\\n        outcome_col=outcome_col,\\n        confounds=confounds,\\n        id_col=id_col,\\n    )\\n    if loo.empty:\\n        return {\\\"max_shift\\\": float(\\\"nan\\\"), \\\"unstable_do\", \"stderr\": \"\"}"
+  }
+]

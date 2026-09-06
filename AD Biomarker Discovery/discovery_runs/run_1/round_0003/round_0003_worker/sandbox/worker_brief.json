@@ -1,0 +1,48 @@
+{
+  "worker_name": "round_0003_worker",
+  "round_id": 3,
+  "candidate_id": "ca1-perineuronal-reactive-astro",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_lineage_fraction",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0002/round_0002_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5071
+  },
+  "scientific_question": "Does memory decline track the extent to which CA1 pyramidal neurons sit inside local reactive-astrocyte niches, beyond overall CA1 neuron and reactive astrocyte fractions?",
+  "approach": "Assign cells to CA1 using centroid-in-polygon against CA1 annotations after dividing annotation coordinates by 16. Within CA1, identify cells labeled Pyramidal Neuron and Reactive Astrocyte. For each CA1 pyramidal neuron, query whether at least one CA1 reactive astrocyte centroid lies within radius r. The donor-level biomarker is the proportion of CA1 pyramidal neurons with at least one reactive astrocyte neighbor within that radius; return 0 if CA1 reactive astrocytes are absent, and NaN only if CA1 has too few pyramidal neurons to define the denominator reliably.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "CA1 proportion of pyramidal neurons with at least one reactive astrocyte within 80 full-resolution pixels (~40 \u00b5m)."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Same metric with a 120 pixel (~60 \u00b5m) neighborhood to test a slightly broader perineuronal niche."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use SegmentationNode/centroids for spatial queries and ClassificationNode labels for cell types. Restrict both source and neighbor cells to CA1. Annotation polygons in CustomAnnotations are stored at 16x cell coordinates, so divide polygon vertices by 16 before region assignment. A KD-tree or ball query is sufficient. If a minimum-count rule is needed, use a simple guard such as NaN when CA1 has fewer than 50 pyramidal neurons; otherwise keep zeros valid when no reactive astrocytes are present.",
+  "rationale": "The current panel already points to a CA1 injury axis with higher pyramidal neuron abundance and lower reactive astrocyte lineage burden carrying complementary signal. The next focused test should ask whether the glial signal is specifically organized around vulnerable CA1 pyramidal neurons rather than being only a global compositional shift. A perineuronal reactive-astrocyte niche feature is biologically interpretable, stays on the strongest CA1 lead, and could either add spatial information to the panel or replace one of the existing global CA1 fractions with a cleaner local readout."
+}

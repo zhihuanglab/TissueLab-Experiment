@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nexport PYTHONPATH=/shared/lib:${PYTHONPATH:-}\npython - <<'PY'\nimport inspect\nfrom shared_analysis import build_cell_table, load_region_polygons, compute_contour_geometry\nprint('=== build_cell_table ===')\nprint(inspect.getsource(build_cell_table))\nprint('\\n=== load_region_polygons ===')\nprint(inspect.getsource(load_region_polygons))\nprint('\\n=== compute_contour_geometry ===')\nprint(inspect.getsource(compute_contour_geometry))\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 2, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

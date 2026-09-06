@@ -1,0 +1,378 @@
+Round 15 Details
+============================================================
+
+HYPOTHESIS: Test aggressive regularization, direct PLS, ensembles,
+and ElasticNet to find optimal LOO r vs gap tradeoff.
+
+FEATURE-GT CORRELATIONS:
+  gpf: r=-0.4148
+  logntc: r=+0.3692
+  bp_area_frac: r=-0.2645
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  ens_scalar_glbp_r10_direct_tumor_pls2_w0.5: adjusted=0.4958 (LOO r=0.5660, IS r=0.8565, gap=0.2905) [F1=0.4304 QWK=0.3846 Acc=0.4667]
+  ens_scalar_glbp_r10_direct_tumor_pls2_w0.6: adjusted=0.4886 (LOO r=0.5505, IS r=0.8242, gap=0.2738) [F1=0.4304 QWK=0.3846 Acc=0.4667]
+  A_gpf_logntc_tpls2_r20: adjusted=0.4852 (LOO r=0.5598, IS r=0.8589, gap=0.2992) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  ens_scalar_gl_r10_direct_tumor_pls2_w0.5: adjusted=0.4851 (LOO r=0.5573, IS r=0.8518, gap=0.2945) [F1=0.4304 QWK=0.3846 Acc=0.4667]
+  D_logntc_tpls1_en_a0.05_l10.2: adjusted=0.4805 (LOO r=0.5379, IS r=0.8027, gap=0.2648) [F1=0.4272 QWK=0.2963 Acc=0.4667]
+  D_logntc_tpls1_en_a0.05_l10.3: adjusted=0.4787 (LOO r=0.5368, IS r=0.8030, gap=0.2661) [F1=0.4272 QWK=0.2963 Acc=0.4667]
+  ens_scalar_gl_r10_direct_tumor_pls2_w0.6: adjusted=0.4774 (LOO r=0.5410, IS r=0.8183, gap=0.2772) [F1=0.4061 QWK=0.3704 Acc=0.4333]
+  ens_scalar_glbp_r10_direct_tumor_pls2_w0.7: adjusted=0.4760 (LOO r=0.5270, IS r=0.7790, gap=0.2520) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  D_logntc_tpls1_en_a0.1_l10.2: adjusted=0.4758 (LOO r=0.5336, IS r=0.7992, gap=0.2656) [F1=0.4304 QWK=0.3846 Acc=0.4667]
+  A_logntc_tpls1_r10: adjusted=0.4756 (LOO r=0.5285, IS r=0.7843, gap=0.2558) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  E_logntc_tpls1_r10: adjusted=0.4756 (LOO r=0.5285, IS r=0.7843, gap=0.2558) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  D_logntc_tpls1_en_a0.05_l10.5: adjusted=0.4751 (LOO r=0.5345, IS r=0.8034, gap=0.2689) [F1=0.4272 QWK=0.2963 Acc=0.4667]
+  D_logntc_tpls1_en_a0.1_l10.3: adjusted=0.4720 (LOO r=0.5312, IS r=0.7995, gap=0.2683) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  D_logntc_tpls1_en_a0.05_l10.7: adjusted=0.4711 (LOO r=0.5320, IS r=0.8038, gap=0.2718) [F1=0.3816 QWK=0.2308 Acc=0.4333]
+  D_logntc_tpls1_en_a0.2_l10.2: adjusted=0.4659 (LOO r=0.5250, IS r=0.7931, gap=0.2682) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  D_gpf_logntc_tpls1_en_a0.2_l10.2: adjusted=0.4659 (LOO r=0.5249, IS r=0.7931, gap=0.2682) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_gl_r10_direct_tumor_pls2_w0.7: adjusted=0.4647 (LOO r=0.5167, IS r=0.7709, gap=0.2541) [F1=0.3508 QWK=0.3077 Acc=0.4000]
+  D_logntc_tpls1_en_a0.1_l10.5: adjusted=0.4636 (LOO r=0.5257, IS r=0.7997, gap=0.2741) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  A_logntc_tpls1_r20: adjusted=0.4622 (LOO r=0.5150, IS r=0.7705, gap=0.2555) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  E_logntc_tpls1_r20: adjusted=0.4622 (LOO r=0.5150, IS r=0.7705, gap=0.2555) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_glbp_r10_direct_tumor_pls1_w0.5: adjusted=0.4590 (LOO r=0.5114, IS r=0.7662, gap=0.2548) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  ens_scalar_glbp_r5_tpls_gl_r50_p2_w0.3: adjusted=0.4584 (LOO r=0.5140, IS r=0.7754, gap=0.2614) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  ens_scalar_glbp_r10_direct_tumor_pls1_w0.6: adjusted=0.4578 (LOO r=0.5016, IS r=0.7393, gap=0.2376) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  D_logntc_tpls1_en_a0.2_l10.3: adjusted=0.4569 (LOO r=0.5190, IS r=0.7933, gap=0.2743) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  D_gpf_logntc_tpls1_en_a0.2_l10.3: adjusted=0.4569 (LOO r=0.5190, IS r=0.7933, gap=0.2743) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r50_p2_w0.4: adjusted=0.4561 (LOO r=0.5030, IS r=0.7470, gap=0.2440) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r50_p2_w0.3: adjusted=0.4554 (LOO r=0.5140, IS r=0.7811, gap=0.2671) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_glbp_r10_direct_tumor_pls1_w0.4: adjusted=0.4547 (LOO r=0.5149, IS r=0.7853, gap=0.2704) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  D_gpf_logntc_tpls1_en_a0.1_l10.5: adjusted=0.4542 (LOO r=0.5194, IS r=0.7997, gap=0.2804) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  ens_scalar_gl_r10_tpls_gl_r50_p2_w0.3: adjusted=0.4537 (LOO r=0.5098, IS r=0.7719, gap=0.2621) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  D_gpf_logntc_tpls1_en_a0.1_l10.7: adjusted=0.4535 (LOO r=0.5189, IS r=0.7997, gap=0.2808) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  D_logntc_tpls1_en_a0.1_l10.7: adjusted=0.4535 (LOO r=0.5189, IS r=0.7997, gap=0.2808) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r50_p2_w0.4: adjusted=0.4528 (LOO r=0.5033, IS r=0.7543, gap=0.2510) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r50_direct_tumor_pls1_w0.40_0.30_0.30: adjusted=0.4525 (LOO r=0.5001, IS r=0.7453, gap=0.2452) [F1=0.2783 QWK=0.1739 Acc=0.3667]
+  ens_scalar_gl_r10_direct_tumor_pls1_w0.5: adjusted=0.4522 (LOO r=0.5042, IS r=0.7581, gap=0.2539) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r50_p2_w0.5: adjusted=0.4522 (LOO r=0.4901, IS r=0.7159, gap=0.2258) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r50_direct_tumor_pls1_w0.34_0.33_0.33: adjusted=0.4519 (LOO r=0.5036, IS r=0.7569, gap=0.2534) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_direct_tumor_pls1_w0.7: adjusted=0.4515 (LOO r=0.4855, IS r=0.7035, gap=0.2181) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  A_gpf_logntc_tpls1_r20: adjusted=0.4510 (LOO r=0.5043, IS r=0.7607, gap=0.2565) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_gl_r10_direct_tumor_pls1_w0.6: adjusted=0.4508 (LOO r=0.4936, IS r=0.7293, gap=0.2356) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_gl_r50_p2_w0.4: adjusted=0.4504 (LOO r=0.4979, IS r=0.7428, gap=0.2450) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  A_gpf_logntc_tpls1_r10: adjusted=0.4494 (LOO r=0.5104, IS r=0.7824, gap=0.2720) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r50_p2_w0.5: adjusted=0.4488 (LOO r=0.4906, IS r=0.7243, gap=0.2336) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_gl_r10_direct_tumor_pls1_w0.4: adjusted=0.4481 (LOO r=0.5084, IS r=0.7788, gap=0.2704) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r50_p2_w0.6: adjusted=0.4472 (LOO r=0.4758, IS r=0.6829, gap=0.2071) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_direct_tumor_pls1_w0.3: adjusted=0.4454 (LOO r=0.5129, IS r=0.7978, gap=0.2849) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_gl_r50_p2_w0.5: adjusted=0.4453 (LOO r=0.4837, IS r=0.7105, gap=0.2268) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens3_scalar_gl_r10_tpls_gl_r50_direct_tumor_pls1_w0.40_0.30_0.30: adjusted=0.4447 (LOO r=0.4925, IS r=0.7379, gap=0.2455) [F1=0.2783 QWK=0.1739 Acc=0.3667]
+  ens3_scalar_gl_r10_tpls_gl_r50_direct_tumor_pls1_w0.34_0.33_0.33: adjusted=0.4446 (LOO r=0.4967, IS r=0.7507, gap=0.2540) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_gl_r10_direct_tumor_pls1_w0.7: adjusted=0.4438 (LOO r=0.4762, IS r=0.6909, gap=0.2147) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r50_p2_w0.6: adjusted=0.4435 (LOO r=0.4761, IS r=0.6913, gap=0.2153) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r100_direct_tumor_pls1_w0.40_0.30_0.30: adjusted=0.4430 (LOO r=0.4934, IS r=0.7442, gap=0.2508) [F1=0.2783 QWK=0.1739 Acc=0.3667]
+  A_gpf_logntc_bp_tpls1_r10: adjusted=0.4426 (LOO r=0.5082, IS r=0.7894, gap=0.2812) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  A_gpf_logntc_bp_tpls1_r20: adjusted=0.4416 (LOO r=0.5004, IS r=0.7681, gap=0.2677) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r100_direct_tumor_pls1_w0.34_0.33_0.33: adjusted=0.4416 (LOO r=0.4968, IS r=0.7572, gap=0.2604) [F1=0.2783 QWK=0.1739 Acc=0.3667]
+  ens_scalar_glbp_r5_tpls_gl_r50_p2_w0.7: adjusted=0.4413 (LOO r=0.4604, IS r=0.6486, gap=0.1882) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  ens_scalar_gl_r10_direct_tumor_pls1_w0.3: adjusted=0.4395 (LOO r=0.5072, IS r=0.7927, gap=0.2855) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_gl_r50_p2_w0.6: adjusted=0.4385 (LOO r=0.4675, IS r=0.6753, gap=0.2078) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r50_p2_w0.7: adjusted=0.4371 (LOO r=0.4602, IS r=0.6562, gap=0.1961) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r100_direct_tumor_pls1_w0.40_0.30_0.30: adjusted=0.4348 (LOO r=0.4853, IS r=0.7362, gap=0.2509) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r100_direct_tumor_pls1_w0.34_0.33_0.33: adjusted=0.4338 (LOO r=0.4893, IS r=0.7503, gap=0.2610) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_lntc_r50_w0.3: adjusted=0.4336 (LOO r=0.4754, IS r=0.7090, gap=0.2336) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r5_tpls_gl_r50_w0.3: adjusted=0.4331 (LOO r=0.4665, IS r=0.6835, gap=0.2169) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_glbp_r5_tpls_lntc_r50_w0.4: adjusted=0.4328 (LOO r=0.4671, IS r=0.6859, gap=0.2187) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  D_logntc_tpls1_en_a0.2_l10.5: adjusted=0.4326 (LOO r=0.5030, IS r=0.7940, gap=0.2909) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  D_gpf_logntc_tpls1_en_a0.2_l10.5: adjusted=0.4326 (LOO r=0.5030, IS r=0.7940, gap=0.2909) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r50_w0.4: adjusted=0.4320 (LOO r=0.4596, IS r=0.6648, gap=0.2052) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_lntc_r50_w0.5: adjusted=0.4306 (LOO r=0.4576, IS r=0.6617, gap=0.2041) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_glbp_r10_tpls_lntc_r50_w0.3: adjusted=0.4305 (LOO r=0.4749, IS r=0.7136, gap=0.2387) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_gl_r50_p2_w0.7: adjusted=0.4303 (LOO r=0.4494, IS r=0.6377, gap=0.1883) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r50_w0.5: adjusted=0.4302 (LOO r=0.4519, IS r=0.6452, gap=0.1933) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r50_w0.3: adjusted=0.4299 (LOO r=0.4655, IS r=0.6867, gap=0.2212) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_tpls_lntc_r50_w0.4: adjusted=0.4296 (LOO r=0.4669, IS r=0.6916, gap=0.2247) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  D_gpf_logntc_tpls1_en_a0.1_l10.3: adjusted=0.4293 (LOO r=0.5035, IS r=0.8020, gap=0.2985) [F1=0.3851 QWK=0.3200 Acc=0.4333]
+  ens_scalar_glbp_r10_tpls_gl_r50_w0.4: adjusted=0.4284 (LOO r=0.4586, IS r=0.6688, gap=0.2103) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_glbp_r5_tpls_gl_r50_w0.6: adjusted=0.4281 (LOO r=0.4437, IS r=0.6250, gap=0.1813) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r100_p2_w0.4: adjusted=0.4281 (LOO r=0.4708, IS r=0.7062, gap=0.2354) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_lntc_r50_w0.6: adjusted=0.4280 (LOO r=0.4478, IS r=0.6372, gap=0.1895) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r100_p2_w0.5: adjusted=0.4279 (LOO r=0.4602, IS r=0.6749, gap=0.2146) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_glbp_r5_tpls_gl_r100_p2_w0.6: adjusted=0.4270 (LOO r=0.4497, IS r=0.6451, gap=0.1954) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_lntc_r50_w0.5: adjusted=0.4270 (LOO r=0.4573, IS r=0.6679, gap=0.2106) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r100_p2_w0.3: adjusted=0.4270 (LOO r=0.4807, IS r=0.7383, gap=0.2575) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_glbp_r10_tpls_gl_r50_direct_gland_pls1_w0.40_0.30_0.30: adjusted=0.4268 (LOO r=0.4776, IS r=0.7294, gap=0.2517) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens3_scalar_gl_r10_tpls_gl_r50_direct_gland_pls1_w0.40_0.30_0.30: adjusted=0.4266 (LOO r=0.4767, IS r=0.7271, gap=0.2504) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_glbp_r10_tpls_gl_r50_w0.5: adjusted=0.4261 (LOO r=0.4506, IS r=0.6496, gap=0.1990) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r50_w0.7: adjusted=0.4260 (LOO r=0.4355, IS r=0.6046, gap=0.1691) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  ens_scalar_glbp_r5_tpls_gl_r100_p2_w0.7: adjusted=0.4257 (LOO r=0.4396, IS r=0.6172, gap=0.1776) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_lntc_r50_w0.7: adjusted=0.4257 (LOO r=0.4381, IS r=0.6130, gap=0.1749) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r50_direct_gland_pls1_w0.34_0.33_0.33: adjusted=0.4254 (LOO r=0.4801, IS r=0.7396, gap=0.2594) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens3_scalar_glbp_r10_tpls_gl_r50_direct_gland_pls1_w0.34_0.33_0.33: adjusted=0.4253 (LOO r=0.4806, IS r=0.7410, gap=0.2605) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  D_logntc_tpls1_en_a0.5_l10.2: adjusted=0.4252 (LOO r=0.4925, IS r=0.7771, gap=0.2846) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_glbp_r10_tpls_lntc_r50_w0.6: adjusted=0.4239 (LOO r=0.4470, IS r=0.6432, gap=0.1962) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r50_w0.6: adjusted=0.4235 (LOO r=0.4421, IS r=0.6294, gap=0.1873) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r100_p2_w0.4: adjusted=0.4232 (LOO r=0.4701, IS r=0.7140, gap=0.2439) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_tpls_gl_r100_p2_w0.5: adjusted=0.4228 (LOO r=0.4595, IS r=0.6828, gap=0.2234) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r100_p2_w0.3: adjusted=0.4224 (LOO r=0.4800, IS r=0.7452, gap=0.2652) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  D_gpf_logntc_tpls1_en_a0.5_l10.2: adjusted=0.4221 (LOO r=0.4904, IS r=0.7771, gap=0.2867) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  A_gpf_logntc_tpls1_r50: adjusted=0.4218 (LOO r=0.4741, IS r=0.7287, gap=0.2546) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_glbp_r10_tpls_gl_r50_gpls_gl_r50_w0.40_0.40_0.20: adjusted=0.4217 (LOO r=0.4529, IS r=0.6653, gap=0.2124) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r100_p2_w0.6: adjusted=0.4216 (LOO r=0.4485, IS r=0.6523, gap=0.2038) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_direct_gland_pls1_w0.7: adjusted=0.4215 (LOO r=0.4562, IS r=0.6756, gap=0.2194) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_gl_r10_direct_gland_pls1_w0.6: adjusted=0.4214 (LOO r=0.4673, IS r=0.7090, gap=0.2417) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_glbp_r10_tpls_gl_r50_w0.7: adjusted=0.4208 (LOO r=0.4334, IS r=0.6085, gap=0.1751) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_lntc_r50_w0.7: adjusted=0.4208 (LOO r=0.4365, IS r=0.6181, gap=0.1815) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_direct_gland_pls1_w0.7: adjusted=0.4206 (LOO r=0.4574, IS r=0.6810, gap=0.2236) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_gl_r50_w0.3: adjusted=0.4201 (LOO r=0.4566, IS r=0.6795, gap=0.2229) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  A_gpf_logntc_bp_tpls1_r50: adjusted=0.4200 (LOO r=0.4716, IS r=0.7249, gap=0.2532) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_tpls_gl_r100_p2_w0.7: adjusted=0.4200 (LOO r=0.4377, IS r=0.6230, gap=0.1853) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  ens_scalar_glbp_r10_direct_gland_pls1_w0.6: adjusted=0.4182 (LOO r=0.4658, IS r=0.7110, gap=0.2452) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_scalar_gl_r10_tpls_gl_r100_p2_w0.3: adjusted=0.4181 (LOO r=0.4733, IS r=0.7336, gap=0.2603) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_gl_r100_p2_w0.4: adjusted=0.4176 (LOO r=0.4617, IS r=0.6999, gap=0.2382) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_glbp_r10_tpls_gl_r50_gpls_gl_r50_w0.40_0.30_0.30: adjusted=0.4176 (LOO r=0.4493, IS r=0.6628, gap=0.2135) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r50_gpls_gl_r50_w0.34_0.33_0.33: adjusted=0.4176 (LOO r=0.4530, IS r=0.6738, gap=0.2208) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r50_gpls_gl_r50_w0.50_0.25_0.25: adjusted=0.4172 (LOO r=0.4428, IS r=0.6438, gap=0.2011) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_gl_r50_w0.4: adjusted=0.4172 (LOO r=0.4479, IS r=0.6592, gap=0.2114) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_lntc_r50_w0.3: adjusted=0.4164 (LOO r=0.4630, IS r=0.7063, gap=0.2433) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_tpls_gl_r50_gpls_gl_r50_w0.7: adjusted=0.4164 (LOO r=0.4707, IS r=0.7295, gap=0.2587) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_direct_gland_pls1_w0.5: adjusted=0.4163 (LOO r=0.4722, IS r=0.7339, gap=0.2617) [F1=0.4074 QWK=0.3333 Acc=0.4667]
+  ens_scalar_gl_r10_tpls_gl_r100_p2_w0.5: adjusted=0.4158 (LOO r=0.4493, IS r=0.6664, gap=0.2171) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_glbp_r10_tpls_gl_r50_gpls_gl_r100_w0.40_0.40_0.20: adjusted=0.4147 (LOO r=0.4463, IS r=0.6595, gap=0.2132) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_lntc_r50_w0.4: adjusted=0.4143 (LOO r=0.4535, IS r=0.6819, gap=0.2284) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_tpls_gl_r50_w0.5: adjusted=0.4138 (LOO r=0.4384, IS r=0.6374, gap=0.1991) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r100_w0.7: adjusted=0.4138 (LOO r=0.4214, IS r=0.5865, gap=0.1652) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r50_gpls_gl_r50_w0.40_0.40_0.20: adjusted=0.4137 (LOO r=0.4448, IS r=0.6570, gap=0.2122) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_tpls_gl_r50_gpls_lntc_r50_w0.7: adjusted=0.4134 (LOO r=0.4728, IS r=0.7416, gap=0.2688) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_gl_r100_p2_w0.6: adjusted=0.4131 (LOO r=0.4366, IS r=0.6336, gap=0.1970) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r100_direct_gland_pls1_w0.40_0.30_0.30: adjusted=0.4129 (LOO r=0.4662, IS r=0.7228, gap=0.2566) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens3_scalar_glbp_r10_tpls_gl_r100_direct_gland_pls1_w0.40_0.30_0.30: adjusted=0.4129 (LOO r=0.4669, IS r=0.7249, gap=0.2580) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens_tpls_gl_r50_gpls_gl_r50_w0.6: adjusted=0.4127 (LOO r=0.4680, IS r=0.7286, gap=0.2606) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  scalar_gpf_logntc_bp_r5.0: adjusted=0.4124 (LOO r=0.4124, IS r=0.5451, gap=0.1327) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  ens_scalar_glbp_r10_direct_gland_pls1_w0.5: adjusted=0.4123 (LOO r=0.4696, IS r=0.7340, gap=0.2644) [F1=0.4074 QWK=0.3333 Acc=0.4667]
+  ens3_scalar_gl_r10_tpls_gl_r50_gpls_gl_r50_w0.34_0.33_0.33: adjusted=0.4118 (LOO r=0.4471, IS r=0.6676, gap=0.2205) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_tpls_lntc_r50_gpls_gl_r50_w0.7: adjusted=0.4114 (LOO r=0.4760, IS r=0.7552, gap=0.2792) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_tpls_lntc_r50_w0.5: adjusted=0.4113 (LOO r=0.4428, IS r=0.6557, gap=0.2129) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r5_tpls_lntc_r100_w0.7: adjusted=0.4111 (LOO r=0.4213, IS r=0.5918, gap=0.1705) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r50_gpls_gl_r50_w0.40_0.30_0.30: adjusted=0.4110 (LOO r=0.4424, IS r=0.6551, gap=0.2128) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  scalar_gpf_logntc_bp_r1.0: adjusted=0.4107 (LOO r=0.4107, IS r=0.5464, gap=0.1357) [F1=0.2677 QWK=0.2222 Acc=0.3000]
+  ens_scalar_glbp_r5_tpls_gl_r100_w0.6: adjusted=0.4107 (LOO r=0.4247, IS r=0.6029, gap=0.1782) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_gl_r50_w0.6: adjusted=0.4104 (LOO r=0.4284, IS r=0.6144, gap=0.1860) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r100_direct_gland_pls1_w0.34_0.33_0.33: adjusted=0.4101 (LOO r=0.4687, IS r=0.7361, gap=0.2674) [F1=0.2967 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_gl_r100_p2_w0.7: adjusted=0.4099 (LOO r=0.4239, IS r=0.6020, gap=0.1780) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  ens_tpls_lntc_r50_gpls_gl_r50_w0.6: adjusted=0.4098 (LOO r=0.4736, IS r=0.7512, gap=0.2776) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_glbp_r10_tpls_gl_r100_direct_gland_pls1_w0.34_0.33_0.33: adjusted=0.4097 (LOO r=0.4689, IS r=0.7374, gap=0.2685) [F1=0.3519 QWK=0.2609 Acc=0.4333]
+  ens3_scalar_gl_r10_tpls_gl_r50_gpls_gl_r50_w0.50_0.25_0.25: adjusted=0.4092 (LOO r=0.4339, IS r=0.6335, gap=0.1995) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r50_gpls_gl_r100_w0.50_0.25_0.25: adjusted=0.4085 (LOO r=0.4338, IS r=0.6345, gap=0.2007) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_gpls_gl_r50_w0.6: adjusted=0.4083 (LOO r=0.4280, IS r=0.6176, gap=0.1895) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_tpls_gl_r50_gpls_gl_r50_w0.5: adjusted=0.4083 (LOO r=0.4645, IS r=0.7271, gap=0.2626) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_lntc_r50_w0.6: adjusted=0.4081 (LOO r=0.4315, IS r=0.6282, gap=0.1967) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_tpls_gl_r50_gpls_lntc_r50_w0.6: adjusted=0.4079 (LOO r=0.4701, IS r=0.7443, gap=0.2742) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  scalar_gpf_logntc_bp_r10.0: adjusted=0.4075 (LOO r=0.4075, IS r=0.5443, gap=0.1368) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_gl_r50_w0.7: adjusted=0.4071 (LOO r=0.4182, IS r=0.5905, gap=0.1723) [F1=0.3298 QWK=0.2500 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r100_w0.7: adjusted=0.4069 (LOO r=0.4177, IS r=0.5893, gap=0.1716) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  ens_scalar_glbp_r5_tpls_gl_r100_w0.5: adjusted=0.4069 (LOO r=0.4281, IS r=0.6206, gap=0.1925) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r50_gpls_gl_r100_w0.40_0.30_0.30: adjusted=0.4067 (LOO r=0.4391, IS r=0.6538, gap=0.2147) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_lntc_r100_w0.6: adjusted=0.4066 (LOO r=0.4248, IS r=0.6113, gap=0.1864) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_tpls_lntc_r50_gpls_gl_r50_w0.5: adjusted=0.4065 (LOO r=0.4697, IS r=0.7462, gap=0.2765) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_direct_gland_pls1_w0.4: adjusted=0.4064 (LOO r=0.4715, IS r=0.7517, gap=0.2802) [F1=0.4500 QWK=0.3077 Acc=0.5000]
+  ens_scalar_glbp_r10_gpls_gl_r50_w0.5: adjusted=0.4059 (LOO r=0.4324, IS r=0.6354, gap=0.2030) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r50_gpls_gl_r100_w0.34_0.33_0.33: adjusted=0.4054 (LOO r=0.4420, IS r=0.6653, gap=0.2233) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_lntc_r50_w0.7: adjusted=0.4051 (LOO r=0.4201, IS r=0.6000, gap=0.1799) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r50_gpls_gl_r100_w0.40_0.40_0.20: adjusted=0.4049 (LOO r=0.4366, IS r=0.6500, gap=0.2135) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_glbp_r10_tpls_gl_r100_gpls_gl_r50_w0.50_0.25_0.25: adjusted=0.4044 (LOO r=0.4301, IS r=0.6315, gap=0.2014) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_lntc_r100_w0.7: adjusted=0.4040 (LOO r=0.4179, IS r=0.5956, gap=0.1777) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_gpls_lntc_r50_w0.6: adjusted=0.4040 (LOO r=0.4291, IS r=0.6295, gap=0.2004) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r100_w0.6: adjusted=0.4039 (LOO r=0.4214, IS r=0.6065, gap=0.1850) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  A_logntc_tpls1_r50: adjusted=0.4031 (LOO r=0.4726, IS r=0.7615, gap=0.2889) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  E_logntc_tpls1_r50: adjusted=0.4031 (LOO r=0.4726, IS r=0.7615, gap=0.2889) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_tpls_gl_r50_gpls_gl_r100_w0.7: adjusted=0.4031 (LOO r=0.4613, IS r=0.7277, gap=0.2664) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_direct_gland_pls1_w0.4: adjusted=0.4030 (LOO r=0.4690, IS r=0.7510, gap=0.2820) [F1=0.4554 QWK=0.4000 Acc=0.5000]
+  ens_scalar_glbp_r10_gpls_gl_r50_w0.4: adjusted=0.4028 (LOO r=0.4361, IS r=0.6527, gap=0.2166) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r200_w0.7: adjusted=0.4026 (LOO r=0.4089, IS r=0.5714, gap=0.1625) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  ens_scalar_glbp_r5_tpls_gl_r100_w0.4: adjusted=0.4022 (LOO r=0.4313, IS r=0.6396, gap=0.2083) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_gpls_gl_r50_w0.6: adjusted=0.4019 (LOO r=0.4198, IS r=0.6056, gap=0.1858) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r100_gpls_gl_r50_w0.40_0.30_0.30: adjusted=0.4015 (LOO r=0.4344, IS r=0.6502, gap=0.2158) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_gpls_gl_r50_w0.5: adjusted=0.4013 (LOO r=0.4264, IS r=0.6266, gap=0.2002) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_lntc_r100_w0.5: adjusted=0.4013 (LOO r=0.4285, IS r=0.6330, gap=0.2045) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_tpls_gl_r50_gpls_lntc_r50_w0.5: adjusted=0.4009 (LOO r=0.4660, IS r=0.7461, gap=0.2801) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_tpls_gl_r100_w0.5: adjusted=0.4003 (LOO r=0.4251, IS r=0.6246, gap=0.1996) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r100_gpls_gl_r50_w0.40_0.40_0.20: adjusted=0.4002 (LOO r=0.4330, IS r=0.6486, gap=0.2156) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_gpls_lntc_r50_w0.5: adjusted=0.4000 (LOO r=0.4337, IS r=0.6510, gap=0.2173) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_tpls_lntc_r50_gpls_lntc_r50_w0.7: adjusted=0.4000 (LOO r=0.4713, IS r=0.7641, gap=0.2927) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_gpls_gl_r50_w0.4: adjusted=0.3997 (LOO r=0.4320, IS r=0.6466, gap=0.2146) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_lntc_r100_w0.6: adjusted=0.3996 (LOO r=0.4218, IS r=0.6163, gap=0.1944) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r100_gpls_gl_r50_w0.34_0.33_0.33: adjusted=0.3993 (LOO r=0.4367, IS r=0.6615, gap=0.2248) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  scalar_gpf_logntc_r1.0: adjusted=0.3991 (LOO r=0.3991, IS r=0.5161, gap=0.1170) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  ens3_scalar_gl_r10_tpls_gl_r50_gpls_gl_r100_w0.50_0.25_0.25: adjusted=0.3980 (LOO r=0.4228, IS r=0.6223, gap=0.1995) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r50_gpls_gl_r100_w0.40_0.30_0.30: adjusted=0.3976 (LOO r=0.4298, IS r=0.6444, gap=0.2145) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_gl_r10_tpls_gl_r50_gpls_gl_r100_w0.34_0.33_0.33: adjusted=0.3971 (LOO r=0.4339, IS r=0.6575, gap=0.2236) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_gpls_lntc_r50_w0.6: adjusted=0.3966 (LOO r=0.4204, IS r=0.6181, gap=0.1977) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_gl_r100_w0.3: adjusted=0.3959 (LOO r=0.4338, IS r=0.6597, gap=0.2259) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_tpls_gl_r100_w0.4: adjusted=0.3958 (LOO r=0.4284, IS r=0.6437, gap=0.2153) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_gl_r10_tpls_gl_r100_gpls_gl_r50_w0.50_0.25_0.25: adjusted=0.3956 (LOO r=0.4204, IS r=0.6200, gap=0.1996) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_tpls_lntc_r50_gpls_lntc_r50_w0.6: adjusted=0.3955 (LOO r=0.4681, IS r=0.7631, gap=0.2951) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_tpls_gl_r50_gpls_gl_r100_w0.6: adjusted=0.3947 (LOO r=0.4554, IS r=0.7266, gap=0.2713) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_gpls_lntc_r50_w0.4: adjusted=0.3947 (LOO r=0.4371, IS r=0.6719, gap=0.2348) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  scalar_gpf_logntc_r5.0: adjusted=0.3946 (LOO r=0.3946, IS r=0.5161, gap=0.1216) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  ens_scalar_gl_r10_gpls_lntc_r50_w0.5: adjusted=0.3945 (LOO r=0.4274, IS r=0.6431, gap=0.2157) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r5_tpls_lntc_r100_w0.4: adjusted=0.3944 (LOO r=0.4319, IS r=0.6570, gap=0.2251) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_tpls_lntc_r100_w0.5: adjusted=0.3943 (LOO r=0.4258, IS r=0.6388, gap=0.2130) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  scalar_gpf_logntc_bp_r20.0: adjusted=0.3942 (LOO r=0.3942, IS r=0.5430, gap=0.1488) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  ens3_scalar_gl_r10_tpls_gl_r100_gpls_gl_r50_w0.40_0.30_0.30: adjusted=0.3941 (LOO r=0.4266, IS r=0.6416, gap=0.2150) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_glbp_r10_tpls_gl_r100_gpls_gl_r100_w0.50_0.25_0.25: adjusted=0.3940 (LOO r=0.4193, IS r=0.6200, gap=0.2006) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_tpls_gl_r200_w0.7: adjusted=0.3940 (LOO r=0.4037, IS r=0.5731, gap=0.1694) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_glbp_r10_gpls_gl_r100_w0.6: adjusted=0.3940 (LOO r=0.4120, IS r=0.5980, gap=0.1860) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_tpls_lntc_r50_gpls_gl_r100_w0.7: adjusted=0.3939 (LOO r=0.4646, IS r=0.7561, gap=0.2914) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r5_tpls_gl_r200_w0.6: adjusted=0.3936 (LOO r=0.4068, IS r=0.5832, gap=0.1764) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r100_gpls_gl_r50_w0.34_0.33_0.33: adjusted=0.3929 (LOO r=0.4301, IS r=0.6545, gap=0.2244) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_direct_gland_pls1_w0.3: adjusted=0.3927 (LOO r=0.4664, IS r=0.7639, gap=0.2975) [F1=0.4500 QWK=0.3077 Acc=0.5000]
+  ens_scalar_gl_r10_tpls_gl_r100_w0.7: adjusted=0.3916 (LOO r=0.4006, IS r=0.5687, gap=0.1680) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_gl_r10_tpls_gl_r100_gpls_gl_r50_w0.40_0.40_0.20: adjusted=0.3909 (LOO r=0.4235, IS r=0.6389, gap=0.2153) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_gpls_lntc_r50_w0.4: adjusted=0.3908 (LOO r=0.4328, IS r=0.6668, gap=0.2340) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_glbp_r10_tpls_gl_r100_gpls_gl_r100_w0.40_0.40_0.20: adjusted=0.3907 (LOO r=0.4240, IS r=0.6404, gap=0.2165) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_direct_gland_pls1_w0.3: adjusted=0.3904 (LOO r=0.4646, IS r=0.7630, gap=0.2984) [F1=0.4500 QWK=0.3077 Acc=0.5000]
+  ens_scalar_glbp_r10_tpls_gl_r100_w0.3: adjusted=0.3899 (LOO r=0.4310, IS r=0.6633, gap=0.2323) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_tpls_lntc_r50_gpls_lntc_r50_w0.5: adjusted=0.3895 (LOO r=0.4634, IS r=0.7612, gap=0.2978) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_tpls_gl_r100_w0.6: adjusted=0.3887 (LOO r=0.4053, IS r=0.5885, gap=0.1832) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  scalar_gpf_logntc_r10.0: adjusted=0.3881 (LOO r=0.3881, IS r=0.5161, gap=0.1281) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  ens3_scalar_glbp_r10_tpls_gl_r100_gpls_gl_r100_w0.40_0.30_0.30: adjusted=0.3878 (LOO r=0.4214, IS r=0.6384, gap=0.2171) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_tpls_lntc_r50_gpls_gl_r100_w0.6: adjusted=0.3876 (LOO r=0.4592, IS r=0.7526, gap=0.2934) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r10_tpls_lntc_r100_w0.4: adjusted=0.3875 (LOO r=0.4294, IS r=0.6632, gap=0.2338) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_gpls_lntc_r100_w0.6: adjusted=0.3873 (LOO r=0.4103, IS r=0.6062, gap=0.1959) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_lntc_r100_w0.7: adjusted=0.3868 (LOO r=0.3994, IS r=0.5745, gap=0.1752) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_gpls_gl_r100_w0.5: adjusted=0.3867 (LOO r=0.4124, IS r=0.6139, gap=0.2015) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_gl_r100_w0.5: adjusted=0.3854 (LOO r=0.4100, IS r=0.6094, gap=0.1993) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_tpls_gl_r50_gpls_gl_r100_w0.5: adjusted=0.3850 (LOO r=0.4483, IS r=0.7250, gap=0.2767) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r5_tpls_lntc_r100_w0.3: adjusted=0.3848 (LOO r=0.4342, IS r=0.6831, gap=0.2489) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r10_tpls_gl_r200_w0.6: adjusted=0.3843 (LOO r=0.4014, IS r=0.5857, gap=0.1842) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_gpls_gl_r100_w0.6: adjusted=0.3837 (LOO r=0.3999, IS r=0.5823, gap=0.1824) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens3_scalar_glbp_r10_tpls_gl_r100_gpls_gl_r100_w0.34_0.33_0.33: adjusted=0.3834 (LOO r=0.4223, IS r=0.6500, gap=0.2277) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_gl_r10_tpls_gl_r100_gpls_gl_r100_w0.50_0.25_0.25: adjusted=0.3824 (LOO r=0.4070, IS r=0.6062, gap=0.1992) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r5_tpls_gl_r200_w0.5: adjusted=0.3822 (LOO r=0.4038, IS r=0.5971, gap=0.1932) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_lntc_r100_w0.6: adjusted=0.3817 (LOO r=0.4037, IS r=0.5978, gap=0.1941) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_tpls_gl_r100_w0.4: adjusted=0.3815 (LOO r=0.4148, IS r=0.6312, gap=0.2165) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_tpls_lntc_r50_gpls_gl_r100_w0.5: adjusted=0.3793 (LOO r=0.4522, IS r=0.7480, gap=0.2958) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens3_scalar_gl_r10_tpls_gl_r100_gpls_gl_r100_w0.40_0.40_0.20: adjusted=0.3791 (LOO r=0.4124, IS r=0.6291, gap=0.2167) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r10_tpls_lntc_r100_w0.3: adjusted=0.3780 (LOO r=0.4316, IS r=0.6889, gap=0.2573) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r10_gpls_gl_r100_w0.4: adjusted=0.3779 (LOO r=0.4122, IS r=0.6308, gap=0.2186) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_gpls_gl_r100_w0.5: adjusted=0.3779 (LOO r=0.4024, IS r=0.6014, gap=0.1990) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_gl_r10_tpls_gl_r100_gpls_gl_r100_w0.40_0.30_0.30: adjusted=0.3774 (LOO r=0.4108, IS r=0.6276, gap=0.2168) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_glbp_r10_gpls_lntc_r100_w0.5: adjusted=0.3770 (LOO r=0.4099, IS r=0.6257, gap=0.2158) [F1=0.2865 QWK=0.1818 Acc=0.4000]
+  ens_scalar_gl_r10_tpls_gl_r200_w0.7: adjusted=0.3769 (LOO r=0.3846, IS r=0.5499, gap=0.1653) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_gl_r100_w0.3: adjusted=0.3768 (LOO r=0.4191, IS r=0.6537, gap=0.2346) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_tpls_lntc_r100_w0.5: adjusted=0.3757 (LOO r=0.4082, IS r=0.6231, gap=0.2149) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_gpls_lntc_r100_w0.6: adjusted=0.3754 (LOO r=0.3971, IS r=0.5905, gap=0.1934) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_tpls_gl_r100_gpls_gl_r50_w0.5: adjusted=0.3741 (LOO r=0.4397, IS r=0.7209, gap=0.2812) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens3_scalar_gl_r10_tpls_gl_r100_gpls_gl_r100_w0.34_0.33_0.33: adjusted=0.3738 (LOO r=0.4129, IS r=0.6409, gap=0.2281) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  scalar_gpf_logntc_r20.0: adjusted=0.3734 (LOO r=0.3734, IS r=0.5161, gap=0.1427) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  ens_scalar_glbp_r10_tpls_gl_r200_w0.5: adjusted=0.3722 (LOO r=0.3982, IS r=0.6003, gap=0.2021) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_tpls_gl_r100_gpls_gl_r50_w0.6: adjusted=0.3719 (LOO r=0.4386, IS r=0.7219, gap=0.2833) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_gpls_gl_r100_w0.4: adjusted=0.3706 (LOO r=0.4042, IS r=0.6215, gap=0.2173) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_tpls_gl_r100_gpls_gl_r50_w0.7: adjusted=0.3686 (LOO r=0.4366, IS r=0.7224, gap=0.2859) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_lntc_r100_w0.4: adjusted=0.3684 (LOO r=0.4124, IS r=0.6502, gap=0.2379) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r5_tpls_gl_r200_w0.4: adjusted=0.3674 (LOO r=0.3994, IS r=0.6136, gap=0.2142) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_gl_r200_w0.6: adjusted=0.3666 (LOO r=0.3826, IS r=0.5646, gap=0.1820) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_gpls_lntc_r100_w0.5: adjusted=0.3662 (LOO r=0.3986, IS r=0.6134, gap=0.2148) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r10_gpls_lntc_r100_w0.4: adjusted=0.3641 (LOO r=0.4083, IS r=0.6467, gap=0.2384) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_tpls_lntc_r100_w0.3: adjusted=0.3590 (LOO r=0.4156, IS r=0.6787, gap=0.2631) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r10_tpls_gl_r200_w0.4: adjusted=0.3566 (LOO r=0.3935, IS r=0.6174, gap=0.2238) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  A_gpf_logntc_bp_tpls1_r100: adjusted=0.3548 (LOO r=0.4239, IS r=0.7120, gap=0.2881) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  ens_scalar_gl_r10_gpls_lntc_r100_w0.4: adjusted=0.3544 (LOO r=0.3989, IS r=0.6378, gap=0.2389) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_tpls_gl_r200_w0.5: adjusted=0.3538 (LOO r=0.3797, IS r=0.5816, gap=0.2018) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  A_gpf_logntc_tpls1_r100: adjusted=0.3484 (LOO r=0.4219, IS r=0.7189, gap=0.2970) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r5_tpls_gl_r200_w0.3: adjusted=0.3470 (LOO r=0.3925, IS r=0.6335, gap=0.2410) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_tpls_gl_r200_w0.4: adjusted=0.3378 (LOO r=0.3756, IS r=0.6013, gap=0.2257) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_glbp_r10_tpls_gl_r200_w0.3: adjusted=0.3357 (LOO r=0.3862, IS r=0.6373, gap=0.2511) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  scalar_gpf_logntc_bp_r50.0: adjusted=0.3271 (LOO r=0.3483, IS r=0.5405, gap=0.1923) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ens_scalar_gl_r10_tpls_gl_r200_w0.3: adjusted=0.3169 (LOO r=0.3693, IS r=0.6243, gap=0.2549) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  scalar_gpf_logntc_r50.0: adjusted=0.3013 (LOO r=0.3229, IS r=0.5161, gap=0.1932) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  A_gpf_logntc_tpls1_r200: adjusted=-1.0000 (LOO r=0.3084, IS r=0.7129, gap=0.4046) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_tpls1_r500: adjusted=-1.0000 (LOO r=-0.0929, IS r=0.7089, gap=0.8018) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_tpls1_r1000: adjusted=-1.0000 (LOO r=-0.6183, IS r=0.7075, gap=1.3258) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_tpls2_r10: adjusted=-1.0000 (LOO r=0.5656, IS r=0.8847, gap=0.3192) [F1=0.4070 QWK=0.3704 Acc=0.4333] DISQUALIFIED
+  A_gpf_logntc_tpls2_r50: adjusted=-1.0000 (LOO r=0.5310, IS r=0.8377, gap=0.3067) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  A_gpf_logntc_tpls2_r100: adjusted=-1.0000 (LOO r=0.4960, IS r=0.8258, gap=0.3297) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  A_gpf_logntc_tpls2_r200: adjusted=-1.0000 (LOO r=0.4192, IS r=0.8179, gap=0.3987) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_tpls2_r500: adjusted=-1.0000 (LOO r=0.1352, IS r=0.8123, gap=0.6771) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_tpls2_r1000: adjusted=-1.0000 (LOO r=-0.3744, IS r=0.8102, gap=1.1846) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_logntc_tpls1_r100: adjusted=-1.0000 (LOO r=0.3963, IS r=0.7596, gap=0.3634) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_logntc_tpls1_r200: adjusted=-1.0000 (LOO r=0.2201, IS r=0.7582, gap=0.5381) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_logntc_tpls1_r500: adjusted=-1.0000 (LOO r=-0.3615, IS r=0.7571, gap=1.1186) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_logntc_tpls1_r1000: adjusted=-1.0000 (LOO r=-0.8153, IS r=0.7567, gap=1.5719) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_logntc_tpls2_r10: adjusted=-1.0000 (LOO r=0.5728, IS r=0.8869, gap=0.3142) [F1=0.4524 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  A_logntc_tpls2_r20: adjusted=-1.0000 (LOO r=0.5639, IS r=0.8692, gap=0.3052) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  A_logntc_tpls2_r50: adjusted=-1.0000 (LOO r=0.5379, IS r=0.8552, gap=0.3173) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  A_logntc_tpls2_r100: adjusted=-1.0000 (LOO r=0.4935, IS r=0.8455, gap=0.3520) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_logntc_tpls2_r200: adjusted=-1.0000 (LOO r=0.3902, IS r=0.8386, gap=0.4484) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_logntc_tpls2_r500: adjusted=-1.0000 (LOO r=-0.0063, IS r=0.8334, gap=0.8397) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_logntc_tpls2_r1000: adjusted=-1.0000 (LOO r=-0.5854, IS r=0.8314, gap=1.4168) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_bp_tpls1_r200: adjusted=-1.0000 (LOO r=0.3211, IS r=0.7033, gap=0.3823) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_bp_tpls1_r500: adjusted=-1.0000 (LOO r=-0.0410, IS r=0.6970, gap=0.7381) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_bp_tpls1_r1000: adjusted=-1.0000 (LOO r=-0.5574, IS r=0.6946, gap=1.2520) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_bp_tpls2_r10: adjusted=-1.0000 (LOO r=0.5672, IS r=0.8875, gap=0.3203) [F1=0.4785 QWK=0.4444 Acc=0.5000] DISQUALIFIED
+  A_gpf_logntc_bp_tpls2_r20: adjusted=-1.0000 (LOO r=0.5628, IS r=0.8633, gap=0.3004) [F1=0.4304 QWK=0.3846 Acc=0.4667] DISQUALIFIED
+  A_gpf_logntc_bp_tpls2_r50: adjusted=-1.0000 (LOO r=0.5331, IS r=0.8429, gap=0.3098) [F1=0.3333 QWK=0.2500 Acc=0.4000] DISQUALIFIED
+  A_gpf_logntc_bp_tpls2_r100: adjusted=-1.0000 (LOO r=0.4947, IS r=0.8297, gap=0.3351) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  A_gpf_logntc_bp_tpls2_r200: adjusted=-1.0000 (LOO r=0.4231, IS r=0.8203, gap=0.3972) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_bp_tpls2_r500: adjusted=-1.0000 (LOO r=0.1620, IS r=0.8131, gap=0.6510) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  A_gpf_logntc_bp_tpls2_r1000: adjusted=-1.0000 (LOO r=-0.3203, IS r=0.8103, gap=1.1305) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  B_direct_tumor_pls1: adjusted=-1.0000 (LOO r=0.4843, IS r=0.8080, gap=0.3237) [F1=0.3505 QWK=0.2222 Acc=0.4000] DISQUALIFIED
+  B_direct_tumor_pls2: adjusted=-1.0000 (LOO r=0.5712, IS r=0.9111, gap=0.3399) [F1=0.5333 QWK=0.5333 Acc=0.5333] DISQUALIFIED
+  B_direct_tumor_pls3: adjusted=-1.0000 (LOO r=0.5044, IS r=0.9395, gap=0.4351) [F1=0.4723 QWK=0.5000 Acc=0.4667] DISQUALIFIED
+  B_direct_gland_pls1: adjusted=-1.0000 (LOO r=0.4363, IS r=0.7785, gap=0.3422) [F1=0.4909 QWK=0.3704 Acc=0.5333] DISQUALIFIED
+  B_direct_gland_pls2: adjusted=-1.0000 (LOO r=0.5459, IS r=0.8971, gap=0.3512) [F1=0.4444 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  B_direct_gland_pls3: adjusted=-1.0000 (LOO r=0.5748, IS r=0.9297, gap=0.3548) [F1=0.4717 QWK=0.4242 Acc=0.4667] DISQUALIFIED
+  ens_scalar_glbp_r10_direct_tumor_pls2_w0.3: adjusted=-1.0000 (LOO r=0.5787, IS r=0.8935, gap=0.3148) [F1=0.4524 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  ens_scalar_glbp_r10_direct_tumor_pls2_w0.4: adjusted=-1.0000 (LOO r=0.5750, IS r=0.8787, gap=0.3038) [F1=0.4304 QWK=0.3846 Acc=0.4667] DISQUALIFIED
+  ens_scalar_gl_r10_direct_tumor_pls2_w0.3: adjusted=-1.0000 (LOO r=0.5724, IS r=0.8906, gap=0.3182) [F1=0.4524 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  ens_scalar_gl_r10_direct_tumor_pls2_w0.4: adjusted=-1.0000 (LOO r=0.5672, IS r=0.8750, gap=0.3077) [F1=0.4070 QWK=0.3704 Acc=0.4333] DISQUALIFIED
+  ens_tpls_gl_r100_gpls_gl_r100_w0.5: adjusted=-1.0000 (LOO r=0.4134, IS r=0.7174, gap=0.3040) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  ens_tpls_gl_r100_gpls_gl_r100_w0.6: adjusted=-1.0000 (LOO r=0.4164, IS r=0.7187, gap=0.3024) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  ens_tpls_gl_r100_gpls_gl_r100_w0.7: adjusted=-1.0000 (LOO r=0.4187, IS r=0.7195, gap=0.3008) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  ens_tpls_gl_r100_gpls_lntc_r50_w0.5: adjusted=-1.0000 (LOO r=0.4381, IS r=0.7434, gap=0.3053) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  ens_tpls_gl_r100_gpls_lntc_r50_w0.6: adjusted=-1.0000 (LOO r=0.4382, IS r=0.7416, gap=0.3033) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  ens_tpls_gl_r100_gpls_lntc_r50_w0.7: adjusted=-1.0000 (LOO r=0.4369, IS r=0.7384, gap=0.3015) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a0.05_l10.2: adjusted=-1.0000 (LOO r=0.4882, IS r=0.8096, gap=0.3214) [F1=0.4272 QWK=0.2963 Acc=0.4667] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a0.05_l10.3: adjusted=-1.0000 (LOO r=0.4894, IS r=0.8098, gap=0.3204) [F1=0.4272 QWK=0.2963 Acc=0.4667] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a0.05_l10.5: adjusted=-1.0000 (LOO r=0.4911, IS r=0.8097, gap=0.3186) [F1=0.4272 QWK=0.2963 Acc=0.4667] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a0.05_l10.7: adjusted=-1.0000 (LOO r=0.4928, IS r=0.8087, gap=0.3159) [F1=0.3816 QWK=0.2308 Acc=0.4333] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a0.1_l10.2: adjusted=-1.0000 (LOO r=0.5000, IS r=0.8037, gap=0.3036) [F1=0.3851 QWK=0.3200 Acc=0.4333] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a0.2_l10.7: adjusted=-1.0000 (LOO r=0.4793, IS r=0.7916, gap=0.3123) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a0.5_l10.3: adjusted=-1.0000 (LOO r=0.4630, IS r=0.7709, gap=0.3079) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a0.5_l10.5: adjusted=-1.0000 (LOO r=0.4142, IS r=0.7442, gap=0.3299) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a0.5_l10.7: adjusted=-1.0000 (LOO r=0.3735, IS r=0.7442, gap=0.3707) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a1.0_l10.2: adjusted=-1.0000 (LOO r=0.3849, IS r=0.7588, gap=0.3739) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a1.0_l10.3: adjusted=-1.0000 (LOO r=0.3393, IS r=0.7442, gap=0.4048) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a1.0_l10.5: adjusted=-1.0000 (LOO r=-0.0574, IS r=0.7442, gap=0.8015) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_gpf_logntc_tpls1_en_a1.0_l10.7: adjusted=-1.0000 (LOO r=-1.0000, IS r=0.0000, gap=1.0000) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_logntc_tpls1_en_a0.2_l10.7: adjusted=-1.0000 (LOO r=0.4793, IS r=0.7916, gap=0.3123) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  D_logntc_tpls1_en_a0.5_l10.3: adjusted=-1.0000 (LOO r=0.4630, IS r=0.7709, gap=0.3079) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  D_logntc_tpls1_en_a0.5_l10.5: adjusted=-1.0000 (LOO r=0.4142, IS r=0.7442, gap=0.3299) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  D_logntc_tpls1_en_a0.5_l10.7: adjusted=-1.0000 (LOO r=0.3735, IS r=0.7442, gap=0.3707) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_logntc_tpls1_en_a1.0_l10.2: adjusted=-1.0000 (LOO r=0.3878, IS r=0.7588, gap=0.3710) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_logntc_tpls1_en_a1.0_l10.3: adjusted=-1.0000 (LOO r=0.3393, IS r=0.7442, gap=0.4048) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_logntc_tpls1_en_a1.0_l10.5: adjusted=-1.0000 (LOO r=-0.0574, IS r=0.7442, gap=0.8015) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  D_logntc_tpls1_en_a1.0_l10.7: adjusted=-1.0000 (LOO r=-1.0000, IS r=0.0000, gap=1.0000) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  E_logntc_tpls1_r100: adjusted=-1.0000 (LOO r=0.3963, IS r=0.7596, gap=0.3634) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  E_logntc_tpls1_r200: adjusted=-1.0000 (LOO r=0.2201, IS r=0.7582, gap=0.5381) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  E_logntc_tpls1_r500: adjusted=-1.0000 (LOO r=-0.3615, IS r=0.7571, gap=1.1186) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  E_tpls1only_r1: adjusted=-1.0000 (LOO r=0.4824, IS r=0.8052, gap=0.3228) [F1=0.3553 QWK=0.3077 Acc=0.4000] DISQUALIFIED
+  E_tpls1only_r5: adjusted=-1.0000 (LOO r=0.4740, IS r=0.7954, gap=0.3214) [F1=0.3808 QWK=0.3200 Acc=0.4333] DISQUALIFIED
+  E_tpls1only_r10: adjusted=-1.0000 (LOO r=0.4633, IS r=0.7869, gap=0.3237) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  E_tpls1only_r20: adjusted=-1.0000 (LOO r=0.4453, IS r=0.7687, gap=0.3234) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  E_tpls1only_r50: adjusted=-1.0000 (LOO r=0.3880, IS r=0.7442, gap=0.3561) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+
+BEST MODEL: ens_scalar_glbp_r10_direct_tumor_pls2_w0.5
+  Pearson r:      IS=0.8565  LOO=0.5660
+  IS-LOO Gap:     0.2905 (penalty=0.0702)
+  Adjusted Score: 0.4958
+
+ERRORS:
+  TCGA-A2-A0CS: GT=2 -> Pred=1 (continuous=1.294)
+  TCGA-AC-A3TN: GT=1 -> Pred=2 (continuous=1.781)
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (continuous=2.378)
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (continuous=1.996)
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (continuous=2.064)
+  TCGA-BH-A0DX: GT=1 -> Pred=2 (continuous=1.752)
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (continuous=1.936)
+  TCGA-D8-A1XT: GT=3 -> Pred=2 (continuous=2.272)
+  TCGA-D8-A27N: GT=3 -> Pred=2 (continuous=2.118)
+  TCGA-D8-A27P: GT=1 -> Pred=2 (continuous=1.980)
+  TCGA-D8-A4Z1: GT=3 -> Pred=2 (continuous=1.967)
+  TCGA-D8-A73X: GT=1 -> Pred=2 (continuous=1.953)
+  TCGA-E2-A14W: GT=3 -> Pred=2 (continuous=2.391)
+  TCGA-E2-A1B1: GT=1 -> Pred=2 (continuous=1.766)
+  TCGA-EW-A1PH: GT=3 -> Pred=2 (continuous=2.242)
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (continuous=2.359)

@@ -1,0 +1,904 @@
+{
+  "hypothesis_family": "CA1 pyramidal neuron reactive-astrocyte plus lymphocyte triad fraction",
+  "best_variation": "candidate_variant_c",
+  "feature_column": "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um",
+  "partial_r": 0.16041283077161586,
+  "p_value": 0.35729581367689345,
+  "selection_score": 0.16041283077161586,
+  "loo_predictive_r": 0.056716095983467926,
+  "is_loo_gap": 0.10369673478814793,
+  "penalty": 0.10369673478814793,
+  "adjusted_score": 0.056716095983467926,
+  "n_total": 35,
+  "n_analyzable": 35,
+  "ranked_variations": [
+    {
+      "variation_name": "candidate_variant_c",
+      "feature_column": "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um",
+      "lymphocyte_radius_um": 25.0,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "partial_r": 0.16041283077161586,
+      "p_value": 0.35729581367689345,
+      "selection_score": 0.16041283077161586,
+      "loo_predictive_r": 0.056716095983467926,
+      "is_loo_gap": 0.10369673478814793,
+      "penalty": 0.10369673478814793,
+      "adjusted_score": 0.056716095983467926,
+      "per_donor_loo": [
+        {
+          "donor_id": "H19.33.004",
+          "outcome": -0.0587685,
+          "predicted": -0.05827742810252776,
+          "actual_resid": 0.01180547282323105,
+          "predicted_resid": 0.01229654472070329,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0005773672055427252
+        },
+        {
+          "donor_id": "H20.33.008",
+          "outcome": -0.1205063,
+          "predicted": -0.13596429748311362,
+          "actual_resid": 0.007766817995496958,
+          "predicted_resid": -0.007691179487616656,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.013",
+          "outcome": -0.0317417,
+          "predicted": -0.09852400468462152,
+          "actual_resid": 0.07612730503146634,
+          "predicted_resid": 0.009345000346844814,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0006472491909385113
+        },
+        {
+          "donor_id": "H20.33.018",
+          "outcome": -0.3042141,
+          "predicted": -0.10056751704008302,
+          "actual_resid": -0.2074826077380012,
+          "predicted_resid": -0.003836024778084239,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.024",
+          "outcome": -0.0103346,
+          "predicted": -0.0919349114504522,
+          "actual_resid": 0.08188736129150426,
+          "predicted_resid": 0.00028704984105205997,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.025",
+          "outcome": -0.0723104,
+          "predicted": -0.11456809149051654,
+          "actual_resid": 0.039782031500422296,
+          "predicted_resid": -0.0024756599900942417,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.027",
+          "outcome": -0.1125932,
+          "predicted": -0.10781669488202571,
+          "actual_resid": 0.016116230631212952,
+          "predicted_resid": 0.020892735749187253,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0011614401858304297
+        },
+        {
+          "donor_id": "H20.33.029",
+          "outcome": -0.0948095,
+          "predicted": -0.12741199106517767,
+          "actual_resid": 0.03437869804451872,
+          "predicted_resid": 0.0017762069793410599,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0003599712023038157
+        },
+        {
+          "donor_id": "H20.33.030",
+          "outcome": -0.1680423,
+          "predicted": -0.08453290329417704,
+          "actual_resid": -0.02600851310682209,
+          "predicted_resid": 0.057500883599000886,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0015616866215512754
+        },
+        {
+          "donor_id": "H20.33.034",
+          "outcome": -0.0522007,
+          "predicted": -0.07858136353775277,
+          "actual_resid": 0.02218476620363656,
+          "predicted_resid": -0.004195897334116218,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.037",
+          "outcome": -0.2508045,
+          "predicted": -0.14643030915167943,
+          "actual_resid": -0.11145312261216767,
+          "predicted_resid": -0.0070789317638470985,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.038",
+          "outcome": -0.2372091,
+          "predicted": -0.14445313329024043,
+          "actual_resid": -0.09913930322951336,
+          "predicted_resid": -0.006383336519753796,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.040",
+          "outcome": -0.1026342,
+          "predicted": -0.126198847705044,
+          "actual_resid": 0.028378243176460552,
+          "predicted_resid": 0.004813595471416542,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.00043252595155709344
+        },
+        {
+          "donor_id": "H20.33.041",
+          "outcome": -0.1079018,
+          "predicted": -0.13212538351875003,
+          "actual_resid": 0.01741333533198576,
+          "predicted_resid": -0.0068102481867642695,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.043",
+          "outcome": -0.0599597,
+          "predicted": -0.07351255201890819,
+          "actual_resid": 0.01342157649215845,
+          "predicted_resid": -0.0001312755267497384,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.044",
+          "outcome": -0.0544588,
+          "predicted": -0.04771140536842106,
+          "actual_resid": -0.0016560768952743748,
+          "predicted_resid": 0.005091317736304562,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H20.33.046",
+          "outcome": -0.2017114,
+          "predicted": -0.12606621611573407,
+          "actual_resid": -0.07851753730826147,
+          "predicted_resid": -0.002872353423995519,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.001",
+          "outcome": -0.0815782,
+          "predicted": -0.02418056286143367,
+          "actual_resid": -0.05581310646478714,
+          "predicted_resid": 0.001584530673779188,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.004",
+          "outcome": -0.1198253,
+          "predicted": -0.02453272862755942,
+          "actual_resid": -0.09807813747273145,
+          "predicted_resid": -0.002785566100290881,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.006",
+          "outcome": -0.0539668,
+          "predicted": -0.08802191431502566,
+          "actual_resid": 0.031326468618237575,
+          "predicted_resid": -0.002728645696788082,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.007",
+          "outcome": -0.0975144,
+          "predicted": -0.15801642741450514,
+          "actual_resid": 0.05115956970257085,
+          "predicted_resid": -0.009342457711934298,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.012",
+          "outcome": -0.1009244,
+          "predicted": -0.10590988931394867,
+          "actual_resid": -0.002191285092991019,
+          "predicted_resid": -0.007176774406939692,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.013",
+          "outcome": -0.161261,
+          "predicted": -0.12590139376577852,
+          "actual_resid": -0.04103068001748461,
+          "predicted_resid": -0.005671073783263144,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.018",
+          "outcome": -0.144019,
+          "predicted": -0.1298644134784562,
+          "actual_resid": -0.032860420488721426,
+          "predicted_resid": -0.018705833967177617,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.021",
+          "outcome": -0.0983582,
+          "predicted": -0.10394904330942104,
+          "actual_resid": -0.0011360464846756624,
+          "predicted_resid": -0.006726889794096697,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.023",
+          "outcome": -0.1546294,
+          "predicted": -0.03614374154781999,
+          "actual_resid": -0.12054835144610969,
+          "predicted_resid": -0.002062692993929682,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.025",
+          "outcome": -0.0422854,
+          "predicted": -0.13042079191856248,
+          "actual_resid": 0.07876296845433277,
+          "predicted_resid": -0.009372423464229718,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.033",
+          "outcome": -0.0466362,
+          "predicted": -0.13181181977513137,
+          "actual_resid": 0.07897854933515965,
+          "predicted_resid": -0.006197070439971712,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.035",
+          "outcome": -0.0498238,
+          "predicted": -0.156202953682526,
+          "actual_resid": 0.09481095625619215,
+          "predicted_resid": -0.01156819742633387,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.037",
+          "outcome": -0.0881349,
+          "predicted": -0.07509337347483001,
+          "actual_resid": -0.017472648637775798,
+          "predicted_resid": -0.004431122112605813,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.038",
+          "outcome": -0.0518276,
+          "predicted": -0.06890648054194655,
+          "actual_resid": 0.011838111413266114,
+          "predicted_resid": -0.005240769128680438,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.040",
+          "outcome": -0.0327944,
+          "predicted": -0.1490409208313406,
+          "actual_resid": 0.11429572961832557,
+          "predicted_resid": -0.0019507912130150248,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        },
+        {
+          "donor_id": "H21.33.043",
+          "outcome": -0.072355,
+          "predicted": -0.06576800513068995,
+          "actual_resid": 0.01788626289164319,
+          "predicted_resid": 0.02447325776095324,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0012004801920768306
+        },
+        {
+          "donor_id": "H21.33.044",
+          "outcome": -0.0991281,
+          "predicted": -0.14119527688057434,
+          "actual_resid": 0.05855174617233305,
+          "predicted_resid": 0.016484569291758695,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0011350737797956867
+        },
+        {
+          "donor_id": "H21.33.046",
+          "outcome": -0.1616234,
+          "predicted": -0.10706778540112187,
+          "actual_resid": -0.057497743175959196,
+          "predicted_resid": -0.002942128577081067,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_25um": 0.0
+        }
+      ]
+    },
+    {
+      "variation_name": "candidate_variant_a",
+      "feature_column": "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um",
+      "lymphocyte_radius_um": 20.0,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "partial_r": 0.13271968358042713,
+      "p_value": 0.4472329199569682,
+      "selection_score": 0.13271968358042713,
+      "loo_predictive_r": 0.058602830100098875,
+      "is_loo_gap": 0.07411685348032826,
+      "penalty": 0.07411685348032826,
+      "adjusted_score": 0.05860283010009887,
+      "per_donor_loo": [
+        {
+          "donor_id": "H19.33.004",
+          "outcome": -0.0587685,
+          "predicted": -0.05675701958810318,
+          "actual_resid": 0.01180547282323105,
+          "predicted_resid": 0.013816953235127868,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0005773672055427252
+        },
+        {
+          "donor_id": "H20.33.008",
+          "outcome": -0.1205063,
+          "predicted": -0.1335431791440052,
+          "actual_resid": 0.007766817995496958,
+          "predicted_resid": -0.0052700611485082555,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.013",
+          "outcome": -0.0317417,
+          "predicted": -0.10006534687585128,
+          "actual_resid": 0.07612730503146634,
+          "predicted_resid": 0.007803658155615059,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0006472491909385113
+        },
+        {
+          "donor_id": "H20.33.018",
+          "outcome": -0.3042141,
+          "predicted": -0.09653002983385067,
+          "actual_resid": -0.2074826077380012,
+          "predicted_resid": 0.00020146242814809872,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.024",
+          "outcome": -0.0103346,
+          "predicted": -0.0914002604779136,
+          "actual_resid": 0.08188736129150426,
+          "predicted_resid": 0.0008217008135906683,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.025",
+          "outcome": -0.0723104,
+          "predicted": -0.11363123410971622,
+          "actual_resid": 0.039782031500422296,
+          "predicted_resid": -0.0015388026092939219,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.027",
+          "outcome": -0.1125932,
+          "predicted": -0.10449022837491607,
+          "actual_resid": 0.016116230631212952,
+          "predicted_resid": 0.024219202256296878,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0011614401858304297
+        },
+        {
+          "donor_id": "H20.33.029",
+          "outcome": -0.0948095,
+          "predicted": -0.13443342361449837,
+          "actual_resid": 0.03437869804451872,
+          "predicted_resid": -0.005245225569979649,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.030",
+          "outcome": -0.1680423,
+          "predicted": -0.10491780663749142,
+          "actual_resid": -0.02600851310682209,
+          "predicted_resid": 0.0371159802556865,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.001041124414367517
+        },
+        {
+          "donor_id": "H20.33.034",
+          "outcome": -0.0522007,
+          "predicted": -0.07794932956156085,
+          "actual_resid": 0.02218476620363656,
+          "predicted_resid": -0.0035638633579242935,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.037",
+          "outcome": -0.2508045,
+          "predicted": -0.14431198570545012,
+          "actual_resid": -0.11145312261216767,
+          "predicted_resid": -0.004960608317617786,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.038",
+          "outcome": -0.2372091,
+          "predicted": -0.1421793407555857,
+          "actual_resid": -0.09913930322951336,
+          "predicted_resid": -0.004109543985099058,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.040",
+          "outcome": -0.1026342,
+          "predicted": -0.1256196871509434,
+          "actual_resid": 0.028378243176460552,
+          "predicted_resid": 0.005392756025517155,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.00043252595155709344
+        },
+        {
+          "donor_id": "H20.33.041",
+          "outcome": -0.1079018,
+          "predicted": -0.1294813907567356,
+          "actual_resid": 0.01741333533198576,
+          "predicted_resid": -0.004166255424749823,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.043",
+          "outcome": -0.0599597,
+          "predicted": -0.07368137586501912,
+          "actual_resid": 0.01342157649215845,
+          "predicted_resid": -0.000300099372860672,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.044",
+          "outcome": -0.0544588,
+          "predicted": -0.04703328273345406,
+          "actual_resid": -0.0016560768952743748,
+          "predicted_resid": 0.005769440371271572,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H20.33.046",
+          "outcome": -0.2017114,
+          "predicted": -0.12354463907940647,
+          "actual_resid": -0.07851753730826147,
+          "predicted_resid": -0.0003507763876679225,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.001",
+          "outcome": -0.0815782,
+          "predicted": -0.025941638812449642,
+          "actual_resid": -0.05581310646478714,
+          "predicted_resid": -0.00017654527723678356,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.004",
+          "outcome": -0.1198253,
+          "predicted": -0.026732638908066434,
+          "actual_resid": -0.09807813747273145,
+          "predicted_resid": -0.004985476380797893,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.006",
+          "outcome": -0.0539668,
+          "predicted": -0.08897830185185886,
+          "actual_resid": 0.031326468618237575,
+          "predicted_resid": -0.003685033233621278,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.007",
+          "outcome": -0.0975144,
+          "predicted": -0.1541535407313617,
+          "actual_resid": 0.05115956970257085,
+          "predicted_resid": -0.005479571028790837,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.012",
+          "outcome": -0.1009244,
+          "predicted": -0.10512574885126583,
+          "actual_resid": -0.002191285092991019,
+          "predicted_resid": -0.0063926339442568455,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.013",
+          "outcome": -0.161261,
+          "predicted": -0.12351560938524961,
+          "actual_resid": -0.04103068001748461,
+          "predicted_resid": -0.0032852894027342364,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.018",
+          "outcome": -0.144019,
+          "predicted": -0.12902427710145534,
+          "actual_resid": -0.032860420488721426,
+          "predicted_resid": -0.017865697590176744,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.021",
+          "outcome": -0.0983582,
+          "predicted": -0.10548371280593437,
+          "actual_resid": -0.0011360464846756624,
+          "predicted_resid": -0.008261559290610026,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.023",
+          "outcome": -0.1546294,
+          "predicted": -0.037547884851309485,
+          "actual_resid": -0.12054835144610969,
+          "predicted_resid": -0.00346683629741917,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.025",
+          "outcome": -0.0422854,
+          "predicted": -0.12867590974314214,
+          "actual_resid": 0.07876296845433277,
+          "predicted_resid": -0.007627541288809368,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.033",
+          "outcome": -0.0466362,
+          "predicted": -0.1284033717525071,
+          "actual_resid": 0.07897854933515965,
+          "predicted_resid": -0.0027886224173474536,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.035",
+          "outcome": -0.0498238,
+          "predicted": -0.1535657301896642,
+          "actual_resid": 0.09481095625619215,
+          "predicted_resid": -0.008930973933472048,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.037",
+          "outcome": -0.0881349,
+          "predicted": -0.07456011904098779,
+          "actual_resid": -0.017472648637775798,
+          "predicted_resid": -0.003897867678763591,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.038",
+          "outcome": -0.0518276,
+          "predicted": -0.06922634034767641,
+          "actual_resid": 0.011838111413266114,
+          "predicted_resid": -0.0055606289344102946,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.040",
+          "outcome": -0.0327944,
+          "predicted": -0.1463254935374798,
+          "actual_resid": 0.11429572961832557,
+          "predicted_resid": 0.000764636080845747,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        },
+        {
+          "donor_id": "H21.33.043",
+          "outcome": -0.072355,
+          "predicted": -0.06553023866231314,
+          "actual_resid": 0.01788626289164319,
+          "predicted_resid": 0.02471102422933006,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0012004801920768306
+        },
+        {
+          "donor_id": "H21.33.044",
+          "outcome": -0.0991281,
+          "predicted": -0.15288608958631694,
+          "actual_resid": 0.05855174617233305,
+          "predicted_resid": 0.0047937565860161,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.00028376844494892167
+        },
+        {
+          "donor_id": "H21.33.046",
+          "outcome": -0.1616234,
+          "predicted": -0.1063369106758554,
+          "actual_resid": -0.057497743175959196,
+          "predicted_resid": -0.0022112538518146065,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_20um": 0.0
+        }
+      ]
+    },
+    {
+      "variation_name": "candidate_variant_b",
+      "feature_column": "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um",
+      "lymphocyte_radius_um": 15.0,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "partial_r": 0.0061700235345209156,
+      "p_value": 0.9719386326402305,
+      "selection_score": 0.0061700235345209156,
+      "loo_predictive_r": -0.17979923598090944,
+      "is_loo_gap": -0.17362921244638851,
+      "penalty": 0.0,
+      "adjusted_score": 0.0061700235345209156,
+      "per_donor_loo": [
+        {
+          "donor_id": "H19.33.004",
+          "outcome": -0.0587685,
+          "predicted": -0.0743262952598614,
+          "actual_resid": 0.01180547282323105,
+          "predicted_resid": -0.003752322436630344,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0005773672055427252
+        },
+        {
+          "donor_id": "H20.33.008",
+          "outcome": -0.1205063,
+          "predicted": -0.1284448834001079,
+          "actual_resid": 0.007766817995496958,
+          "predicted_resid": -0.00017176540461094947,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.013",
+          "outcome": -0.0317417,
+          "predicted": -0.10787054524551701,
+          "actual_resid": 0.07612730503146634,
+          "predicted_resid": -1.540214050675152e-06,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.018",
+          "outcome": -0.3042141,
+          "predicted": -0.09641720920638391,
+          "actual_resid": -0.2074826077380012,
+          "predicted_resid": 0.00031428305561485555,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.024",
+          "outcome": -0.0103346,
+          "predicted": -0.09222366904575809,
+          "actual_resid": 0.08188736129150426,
+          "predicted_resid": -1.7077542538298466e-06,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.025",
+          "outcome": -0.0723104,
+          "predicted": -0.11207027656725115,
+          "actual_resid": 0.039782031500422296,
+          "predicted_resid": 2.2154933171141398e-05,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.027",
+          "outcome": -0.1125932,
+          "predicted": -0.12908829160170981,
+          "actual_resid": 0.016116230631212952,
+          "predicted_resid": -0.00037886097049687,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.029",
+          "outcome": -0.0948095,
+          "predicted": -0.1294788663069089,
+          "actual_resid": 0.03437869804451872,
+          "predicted_resid": -0.00029066826239019573,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.030",
+          "outcome": -0.1680423,
+          "predicted": -0.12879700051084897,
+          "actual_resid": -0.02600851310682209,
+          "predicted_resid": 0.013236786382328941,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0005205622071837585
+        },
+        {
+          "donor_id": "H20.33.034",
+          "outcome": -0.0522007,
+          "predicted": -0.07512745637548994,
+          "actual_resid": 0.02218476620363656,
+          "predicted_resid": -0.0007419901718533708,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.037",
+          "outcome": -0.2508045,
+          "predicted": -0.13917240208645765,
+          "actual_resid": -0.11145312261216767,
+          "predicted_resid": 0.00017897530137466955,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.038",
+          "outcome": -0.2372091,
+          "predicted": -0.1378074319632918,
+          "actual_resid": -0.09913930322951336,
+          "predicted_resid": 0.0002623648071948556,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.040",
+          "outcome": -0.1026342,
+          "predicted": -0.1309855879840925,
+          "actual_resid": 0.028378243176460552,
+          "predicted_resid": 2.6855192368067333e-05,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.041",
+          "outcome": -0.1079018,
+          "predicted": -0.12555268123681607,
+          "actual_resid": 0.01741333533198576,
+          "predicted_resid": -0.00023754590483031273,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.043",
+          "outcome": -0.0599597,
+          "predicted": -0.0734409544259402,
+          "actual_resid": 0.01342157649215845,
+          "predicted_resid": -5.9677933781760246e-05,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.044",
+          "outcome": -0.0544588,
+          "predicted": -0.05279460402426004,
+          "actual_resid": -0.0016560768952743748,
+          "predicted_resid": 8.119080465587608e-06,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H20.33.046",
+          "outcome": -0.2017114,
+          "predicted": -0.12223310986284831,
+          "actual_resid": -0.07851753730826147,
+          "predicted_resid": 0.0009607528288902338,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.001",
+          "outcome": -0.0815782,
+          "predicted": -0.02553176559157846,
+          "actual_resid": -0.05581310646478714,
+          "predicted_resid": 0.00023332794363439892,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.004",
+          "outcome": -0.1198253,
+          "predicted": -0.020780140657295564,
+          "actual_resid": -0.09807813747273145,
+          "predicted_resid": 0.0009670218699729763,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.006",
+          "outcome": -0.0539668,
+          "predicted": -0.08530069618778069,
+          "actual_resid": 0.031326468618237575,
+          "predicted_resid": -7.427569543107131e-06,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.007",
+          "outcome": -0.0975144,
+          "predicted": -0.14905196277138882,
+          "actual_resid": 0.05115956970257085,
+          "predicted_resid": -0.00037799306881796784,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.012",
+          "outcome": -0.1009244,
+          "predicted": -0.09895623717983835,
+          "actual_resid": -0.002191285092991019,
+          "predicted_resid": -0.0002231222728293775,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.013",
+          "outcome": -0.161261,
+          "predicted": -0.12016641304321421,
+          "actual_resid": -0.04103068001748461,
+          "predicted_resid": 6.390693930117022e-05,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.018",
+          "outcome": -0.144019,
+          "predicted": -0.1098853865625883,
+          "actual_resid": -0.032860420488721426,
+          "predicted_resid": 0.0012731929486902909,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.021",
+          "outcome": -0.0983582,
+          "predicted": -0.09730729849614565,
+          "actual_resid": -0.0011360464846756624,
+          "predicted_resid": -8.514498082130389e-05,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.023",
+          "outcome": -0.1546294,
+          "predicted": -0.03408649533137852,
+          "actual_resid": -0.12054835144610969,
+          "predicted_resid": -5.4467774882084656e-06,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.025",
+          "outcome": -0.0422854,
+          "predicted": -0.1223260876779716,
+          "actual_resid": 0.07876296845433277,
+          "predicted_resid": -0.0012777192236388235,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.033",
+          "outcome": -0.0466362,
+          "predicted": -0.12631456280840836,
+          "actual_resid": 0.07897854933515965,
+          "predicted_resid": -0.0006998134732486977,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.035",
+          "outcome": -0.0498238,
+          "predicted": -0.14508084432474988,
+          "actual_resid": 0.09481095625619215,
+          "predicted_resid": -0.00044608806855773086,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.037",
+          "outcome": -0.0881349,
+          "predicted": -0.07064895642516447,
+          "actual_resid": -0.017472648637775798,
+          "predicted_resid": 1.3294937059725614e-05,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.038",
+          "outcome": -0.0518276,
+          "predicted": -0.06455561461925523,
+          "actual_resid": 0.011838111413266114,
+          "predicted_resid": -0.0008899032059891137,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.040",
+          "outcome": -0.0327944,
+          "predicted": -0.1471215295809705,
+          "actual_resid": 0.11429572961832557,
+          "predicted_resid": -3.1399962644925e-05,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.043",
+          "outcome": -0.072355,
+          "predicted": -0.09656976499936777,
+          "actual_resid": 0.01788626289164319,
+          "predicted_resid": -0.006328502107724578,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0006002400960384153
+        },
+        {
+          "donor_id": "H21.33.044",
+          "outcome": -0.0991281,
+          "predicted": -0.15778228547939016,
+          "actual_resid": 0.05855174617233305,
+          "predicted_resid": -0.00010243930705710258,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        },
+        {
+          "donor_id": "H21.33.046",
+          "outcome": -0.1616234,
+          "predicted": -0.1038901153054162,
+          "actual_resid": -0.057497743175959196,
+          "predicted_resid": 0.000235541518624603,
+          "ca1_pyramidal_reactive_astro_lymphocyte_triad_fraction_15um": 0.0
+        }
+      ]
+    }
+  ]
+}

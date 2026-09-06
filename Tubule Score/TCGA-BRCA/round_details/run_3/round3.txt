@@ -1,0 +1,58 @@
+Round 3 Details
+================================================================================
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_fraction: r=-0.4148 (p=0.0226)
+  gland_patch_count: r=+0.0521 (p=0.7846)
+  total_patches: r=+0.3047 (p=0.1016)
+  tumor_in_gland_fraction: r=-0.5653 (p=0.0011)
+  tumor_density_cv: r=-0.0322 (p=0.8657)
+  mean_nn_distance_tumor: r=-0.1941 (p=0.3041)
+  n_tumor_cells: r=+0.2959 (p=0.1123)
+  tumor_cell_fraction: r=+0.0715 (p=0.7074)
+  total_cells: r=+0.3185 (p=0.0862)
+  tumor_cells: r=+0.2959 (p=0.1123)
+  gland_mask_area_fraction: r=-0.2642 (p=0.1583)
+
+================================================================================
+ALL CONFIGURATIONS (sorted by adjusted score):
+  tumor_in_gland+nn_dist__Ridge_a1: adjusted=0.5033 (LOO r=0.5033, IS r=0.6014, gap=0.0982) [F1=0.4581 QWK=0.3871 Acc=0.4667]
+  tumor_in_gland_only__Ridge_a1: adjusted=0.5008 (LOO r=0.5008, IS r=0.5653, gap=0.0645) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tumor_in_gland+nn_dist__Ridge_a10: adjusted=0.4881 (LOO r=0.4881, IS r=0.6014, gap=0.1133) [F1=0.3333 QWK=0.2500 Acc=0.4000]
+  tumor_in_gland_only__Ridge_a10: adjusted=0.4864 (LOO r=0.4864, IS r=0.5653, gap=0.0789) [F1=0.3205 QWK=0.2500 Acc=0.4000]
+  gland+tig+nn__Ridge_a10: adjusted=0.4752 (LOO r=0.4752, IS r=0.6034, gap=0.1282) [F1=0.3620 QWK=0.3077 Acc=0.4000]
+  gland+tig+nn__Ridge_a1: adjusted=0.4692 (LOO r=0.4692, IS r=0.6065, gap=0.1373) [F1=0.3935 QWK=0.3226 Acc=0.4000]
+  gland_frac+tumor_in_gland__Ridge_a10: adjusted=0.4560 (LOO r=0.4560, IS r=0.5629, gap=0.1069) [F1=0.2880 QWK=0.2308 Acc=0.3333]
+  gland_frac+tumor_in_gland__Ridge_a1: adjusted=0.4540 (LOO r=0.4540, IS r=0.5678, gap=0.1138) [F1=0.3670 QWK=0.3871 Acc=0.3667]
+  tumor_in_gland+density_cv__Ridge_a1: adjusted=0.4517 (LOO r=0.4517, IS r=0.5671, gap=0.1154) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  gland+mask+tig__Ridge_a10: adjusted=0.4478 (LOO r=0.4478, IS r=0.5834, gap=0.1356) [F1=0.3082 QWK=0.2400 Acc=0.3667]
+  gland+mask+tig+cv__Ridge_a10: adjusted=0.4443 (LOO r=0.4516, IS r=0.6162, gap=0.1646) [F1=0.3392 QWK=0.2963 Acc=0.3667]
+  gland+tig+cv+nn__Ridge_a10: adjusted=0.4416 (LOO r=0.4467, IS r=0.6067, gap=0.1601) [F1=0.2402 QWK=0.1600 Acc=0.3000]
+  tumor_in_gland+density_cv__Ridge_a10: adjusted=0.4327 (LOO r=0.4327, IS r=0.5671, gap=0.1344) [F1=0.3205 QWK=0.2500 Acc=0.4000]
+  gland+tig+cv__Ridge_a10: adjusted=0.4321 (LOO r=0.4321, IS r=0.5764, gap=0.1442) [F1=0.3148 QWK=0.2400 Acc=0.3667]
+  gland+mask+tig__Ridge_a1: adjusted=0.4133 (LOO r=0.4235, IS r=0.5941, gap=0.1706) [F1=0.4222 QWK=0.3333 Acc=0.4333]
+  gland+tig+cv+nn__Ridge_a1: adjusted=0.4128 (LOO r=0.4279, IS r=0.6081, gap=0.1802) [F1=0.4222 QWK=0.3333 Acc=0.4333]
+  gland+tig+cv__Ridge_a1: adjusted=0.4065 (LOO r=0.4137, IS r=0.5781, gap=0.1644) [F1=0.3733 QWK=0.3871 Acc=0.3667]
+  gland+mask+tig+cv__Ridge_a1: adjusted=0.3851 (LOO r=0.4152, IS r=0.6252, gap=0.2101) [F1=0.3556 QWK=0.2667 Acc=0.3667]
+  gland+cv+nn__Ridge_a1: adjusted=0.3611 (LOO r=0.3677, IS r=0.5311, gap=0.1634) [F1=0.3356 QWK=0.2963 Acc=0.3667]
+  gland+mask+cv__Ridge_a1: adjusted=0.3573 (LOO r=0.3736, IS r=0.5564, gap=0.1827) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gland_frac+nn_dist__Ridge_a1: adjusted=0.3526 (LOO r=0.3526, IS r=0.4808, gap=0.1283) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gland_frac+density_cv__Ridge_a1: adjusted=0.3503 (LOO r=0.3526, IS r=0.5072, gap=0.1546) [F1=0.3105 QWK=0.2400 Acc=0.3667]
+  gland_frac+nn_dist__Ridge_a10: adjusted=0.3226 (LOO r=0.3253, IS r=0.4808, gap=0.1555) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gland_frac_only__Ridge_a1: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  gland+mask+cv__Ridge_a10: adjusted=0.2986 (LOO r=0.3273, IS r=0.5348, gap=0.2075) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gland+cv+nn__Ridge_a10: adjusted=0.2920 (LOO r=0.3203, IS r=0.5269, gap=0.2066) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gland_frac_only__Ridge_a10: adjusted=0.2829 (LOO r=0.2829, IS r=0.4148, gap=0.1319) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gland_frac+density_cv__Ridge_a10: adjusted=0.2814 (LOO r=0.3045, IS r=0.5007, gap=0.1962) [F1=0.2185 QWK=0.0909 Acc=0.3333]
+  gland_frac+mask_area__Ridge_a1: adjusted=0.2456 (LOO r=0.2537, IS r=0.4199, gap=0.1662) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  gland_frac+mask_area__Ridge_a10: adjusted=0.2439 (LOO r=0.2509, IS r=0.4150, gap=0.1640) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  mask_area_only__Ridge_a1: adjusted=-0.0032 (LOO r=0.0360, IS r=0.2642, gap=0.2282) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  mask_area_only__Ridge_a10: adjusted=-0.0636 (LOO r=-0.0043, IS r=0.2642, gap=0.2685) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  density_cv_only__Ridge_a1: adjusted=-1.0000 (LOO r=-0.7255, IS r=0.0322, gap=0.7578) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  density_cv_only__Ridge_a10: adjusted=-1.0000 (LOO r=-0.7662, IS r=0.0322, gap=0.7984) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  nn_dist_only__Ridge_a1: adjusted=-1.0000 (LOO r=-0.2346, IS r=0.1941, gap=0.4287) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  nn_dist_only__Ridge_a10: adjusted=-1.0000 (LOO r=-0.2943, IS r=0.1941, gap=0.4883) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tumor_frac_only__Ridge_a1: adjusted=-1.0000 (LOO r=-0.5168, IS r=0.0715, gap=0.5882) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  tumor_frac_only__Ridge_a10: adjusted=-1.0000 (LOO r=-0.5679, IS r=0.0715, gap=0.6393) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+
+BEST: tumor_in_gland+nn_dist__Ridge_a1 adjusted=0.5033

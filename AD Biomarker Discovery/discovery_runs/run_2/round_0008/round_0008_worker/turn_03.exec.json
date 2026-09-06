@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 2,
+  "stdout": "--- round 7 result.py ---\n",
+  "stderr": "sed: can't read /Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0007/round_0007_worker/result.py: No such file or directory\n"
+}

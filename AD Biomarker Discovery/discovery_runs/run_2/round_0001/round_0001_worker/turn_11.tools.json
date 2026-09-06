@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nfrom pathlib import Path\nslide=Path('/data/H19.33.004-A12-LFB.svs')\ntry:\n    import openslide\n    s=openslide.OpenSlide(str(slide))\n    print('openslide ok')\n    for k in ['aperio.MPP','openslide.mpp-x','openslide.mpp-y','aperio.AppMag']:\n        print(k, s.properties.get(k))\nexcept Exception as e:\n    print('openslide failed', e)\n    try:\n        import tifffile\n        with tifffile.TiffFile(str(slide)) as tf:\n            print('tifffile ok pages', len(tf.pages))\n            print(tf.pages[0].description[:1000])\n    except Exception as e2:\n        print('tifffile failed', e2)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"openslide ok\\naperio.MPP 0.5049\\nopenslide.mpp-x 0.50490000000000002\\nopenslide.mpp-y 0.50490000000000002\\naperio.AppMag 20\\n\", \"stderr\": \"\"}"
+  }
+]

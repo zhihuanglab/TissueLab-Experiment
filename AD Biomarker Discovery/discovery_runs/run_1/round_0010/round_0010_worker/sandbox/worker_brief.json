@@ -1,0 +1,81 @@
+{
+  "worker_name": "round_0010_worker",
+  "round_id": 10,
+  "candidate_id": "ec-ra-proximal-pyramidal-lower-tail-area",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_lineage_fraction",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astro_niche_fraction_80px",
+        "round_id": 3,
+        "panel_candidate_score": 0.5505,
+        "delta_panel_score": 0.0434,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_pyramidal_reactive_astro_coverage_60px",
+        "round_id": 4,
+        "panel_candidate_score": 0.5536,
+        "delta_panel_score": 0.0031,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "ca1_pyramidal_reactive_astro_proximal_median_log_area_80px",
+        "round_id": 6,
+        "panel_candidate_score": 0.594,
+        "delta_panel_score": 0.0405,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0006/round_0006_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0006/round_0006_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0006/round_0006_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.6454
+  },
+  "scientific_question": "Does entorhinal cortex reactive-astrocyte-proximal pyramidal neuron lower-tail cell area capture a memory-decline signal that is complementary to the existing CA1-focused panel?",
+  "approach": "For each donor, assign cells to EC using CustomAnnotations polygons after dividing annotation coordinates by 16. Within EC only, identify cells labeled Pyramidal Neuron and Reactive Astrocyte from ClassificationNode. Compute contour area for each EC pyramidal neuron from centered contour vertices, then take log1p(area). Build a nearest-neighbor search on EC reactive astrocyte centroids and mark EC pyramidal neurons whose nearest EC reactive astrocyte is within radius r. The donor biomarker is the 10th percentile of log1p(area) among these EC reactive-astrocyte-proximal pyramidal neurons.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "EC reactive-astrocyte-proximal pyramidal lower-tail area using an 80 px proximity radius and the 10th percentile of log1p(contour area)."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Same feature, but with a tighter 60 px proximity radius to test a more local pericellular niche."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use centroid-based region assignment and keep the proximity search within EC only. If EC has multiple polygons, treat them as a union. Divide annotation polygon coordinates by 16 before point-in-polygon testing. Center each contour before area calculation to avoid float32 cancellation. Use Euclidean distance in cell-coordinate pixels. Handle low-count donors gracefully; if fewer than about 10 EC pyramidal neurons meet the proximity criterion, return NaN rather than an unstable quantile.",
+  "rationale": "Recent keeps show that the strongest incremental gains came from shifting beyond reactive astrocyte abundance toward lower-tail pyramidal morphology inside the reactive-astrocyte niche, while a further CA1 normalization/enrichment variant was discarded as likely redundant. The clean next test is therefore a one-change regional transfer of the same mechanistic readout into EC, a memory-relevant region present on all slides, which could add distinct regional neurodegeneration signal or replace a weaker CA1 niche-composition member if it is cleaner."
+}

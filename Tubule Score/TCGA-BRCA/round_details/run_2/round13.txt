@@ -1,0 +1,42 @@
+Round 13 Details
+================================================================================
+
+KEY CHANGE: PCA(20) → PCA(30) candidate pool for LOO-safe PC selection
+Goal: Improve over Round 9 best (PCA20, gPC4+tPC4, α=1.0, adj=0.8311)
+
+Interpretable Feature-GT Correlations:
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+  gland_in_tumor_frac: r=-0.5442
+  tumor_cell_density: r=-0.0306
+  bp_component_area_cv: r=-0.2266
+
+All Configurations (sorted by adjusted):
+  PCA20_interp5+gPC4+tPC4__a1.0: adj=0.8311 LOO_r=0.8311 IS_r=0.9444 gap=0.1134 F1=0.7407 QWK=0.7778
+  PCA20_interp5+gPC4+tPC4__a0.5: adj=0.8302 LOO_r=0.8302 IS_r=0.9467 gap=0.1165 F1=0.7097 QWK=0.7568
+  PCA30_interp5+gPC4+tPC4__a3.0: adj=0.7639 LOO_r=0.7796 IS_r=0.9612 gap=0.1815 F1=0.6111 QWK=0.6667
+  PCA30_interp5+gPC4+tPC4__a2.0: adj=0.7547 LOO_r=0.7741 IS_r=0.9627 gap=0.1886 F1=0.6111 QWK=0.6667
+  PCA30_interp5+gPC4+tPC4__a1.0: adj=0.7378 LOO_r=0.7633 IS_r=0.9644 gap=0.2010 F1=0.5718 QWK=0.6486
+  PCA30_interp5+gPC4+tPC5__a1.0: adj=0.7344 LOO_r=0.7622 IS_r=0.9677 gap=0.2055 F1=0.7532 QWK=0.7879
+  PCA30_interp5+gPC6+tPC6__a2.0: adj=0.7335 LOO_r=0.7640 IS_r=0.9752 gap=0.2111 F1=0.5580 QWK=0.6061
+  PCA30_interp5+gPC4+tPC4__a0.5: adj=0.7243 LOO_r=0.7546 IS_r=0.9652 gap=0.2106 F1=0.6001 QWK=0.6667
+  PCA30_interp5+gPC6+tPC6__a1.0: adj=0.7118 LOO_r=0.7502 IS_r=0.9771 gap=0.2268 F1=0.5081 QWK=0.5714
+  PCA30_interp5+gPC5+tPC5__a3.0: adj=0.6961 LOO_r=0.7353 IS_r=0.9638 gap=0.2285 F1=0.6534 QWK=0.6875
+  interp5__Ridge_a1.0: adj=0.6942 LOO_r=0.6942 IS_r=0.7836 gap=0.0894 F1=0.5081 QWK=0.5161
+  PCA30_interp5+gPC5+tPC5__a2.0: adj=0.6862 LOO_r=0.7294 IS_r=0.9657 gap=0.2363 F1=0.6543 QWK=0.7059
+  PCA30_interp5+gPC5+tPC5__a1.0: adj=0.6692 LOO_r=0.7187 IS_r=0.9678 gap=0.2490 F1=0.6809 QWK=0.7273
+  PCA30_interp5+gPC5+tPC4__a1.0: adj=0.6571 LOO_r=0.7096 IS_r=0.9644 gap=0.2548 F1=0.5331 QWK=0.6111
+  PCA30_interp5+gPC5+tPC5__a0.5: adj=0.6560 LOO_r=0.7104 IS_r=0.9692 gap=0.2588 F1=0.6086 QWK=0.6667
+  PCA30_interp5+gPC4+tPC3__a1.0: adj=0.6416 LOO_r=0.6920 IS_r=0.9429 gap=0.2509 F1=0.5723 QWK=0.6061
+  PCA30_interp5+gPC3+tPC3__a1.0: adj=-1.0000 LOO_r=0.5791 IS_r=0.9197 gap=0.3406 F1=0.4581 QWK=0.3871
+  PCA30_interp5+gPC3+tPC3__a0.5: adj=-1.0000 LOO_r=0.5675 IS_r=0.9203 gap=0.3528 F1=0.4115 QWK=0.3333
+  PCA30_interp5+gPC3+tPC3__a2.0: adj=-1.0000 LOO_r=0.5958 IS_r=0.9185 gap=0.3227 F1=0.4581 QWK=0.3871
+  PCA30_interp5+gPC3+tPC4__a1.0: adj=-1.0000 LOO_r=0.6443 IS_r=0.9572 gap=0.3128 F1=0.5820 QWK=0.6250
+
+Best: PCA20_interp5+gPC4+tPC4__a1.0
+  Adjusted: 0.8311
+  LOO r: 0.8311
+  IS r: 0.9444
+  Gap: 0.1134
+  Selected gland PCs: [1, 5, 9, 16]
+  Selected tumor PCs: [1, 3, 4, 7]

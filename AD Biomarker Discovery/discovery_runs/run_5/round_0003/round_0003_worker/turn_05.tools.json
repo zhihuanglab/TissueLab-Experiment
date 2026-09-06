@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho 'shared dirs:'\nfind /shared -maxdepth 3 -type d | sed -n '1,60p'\necho 'python sys.path default:'\npython - <<'PY'\nimport sys\nprint(sys.path)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"shared dirs:\\n/shared\\n/shared/cache\\n/shared/cache/region_polygons\\n/shared/lib\\n/shared/lib/shared_analysis\\n/shared/lib/shared_analysis/__pycache__\\n/shared/templates\\n/shared/templates/__pycache__\\npython sys.path default:\\n['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\\n\", \"stderr\": \"\"}"
+  }
+]

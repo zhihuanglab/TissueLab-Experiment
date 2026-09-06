@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\nfind /data/autoresearch_runs -path '*round_0001_worker/results.json' | head -n 3 | while read f; do echo 'FILE' $f; cat \"$f\"; done",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"ual_resid\\\": 0.03978203150042209,\\n      \\\"ca1sb_reactive_to_pyramidal_logratio__score\\\": -0.950254249097012,\\n      \\\"ca1sb_reactive_to_pyramidal_logratio__numerator\\\": 1290.0,\\n      \\\"ca1sb_reactive_to_pyramidal_logratio__denominator\\\": 3338.0,\\n      \\\"ca1sb_reactive_to_pyramidal_logratio__region_cells\\\": 28275.0\\n    },\\n    {\\n      \\\"donor_id\\\": \\\"H20.33.027\\\",\\n      \\\"outcome\\\": -0.1125932,\\n      \\\"predicted\\\": -0.1582603277243816,\\n      \\\"predicted_resid\\\": -0.029550897093168847,\\n      \\\"actual_resid\\\": 0.01611623\", \"stderr\": \"\"}"
+  }
+]

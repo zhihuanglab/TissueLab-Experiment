@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect, textwrap\nsys.path.insert(0, '/shared/lib')\nimport shared_analysis.stats as st\nfor name in ['residualized_loo_predictive_correlation','residualize','leave_one_out_partial_correlation','bootstrap_partial_correlation']:\n    print(f'--- {name} ---')\n    print(textwrap.dedent(inspect.getsource(getattr(st,name)))[:5000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- residualized_loo_predictive_correlation ---\\ndef residualized_loo_predictive_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n) -> float:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds]).reset_index(drop=True)\\n    preds: list[float] = []\\n    actuals: list[float] = []\\n    for idx in range(len(frame)):\\n        train = frame.drop(index=idx).reset_index(drop=True)\\n        test = frame.iloc[[idx]].reset_index(drop=T\", \"stderr\": \"\"}"
+  }
+]

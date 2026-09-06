@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nls -l /scratch/result.py /scratch/results.json /scratch/report.md /scratch/donor_feature_table.csv /scratch/feature_spec.json\necho '--- results.json summary ---'\npython - <<'PY'\nimport json\nwith open('/scratch/results.json') as f:\n    r=json.load(f)\nprint({k:r.get(k) for k in ['best_variation','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','gap_penalty','adjusted_score']})\nprint('ranked_variations len', len(r.get('ranked_variations', [])))\nprint('best feature column present in table?', r['feature_column'] in open('/scratch/donor_feature_table.csv').readline().strip().split(','))\nPY\necho '--- report.md ---'\nsed -n '1,220p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"-rwx------ 1 root root  3975 Apr 21 03:13 /scratch/donor_feature_table.csv\\n-rwx------ 1 root root  1188 Apr 21 03:13 /scratch/feature_spec.json\\n-rwx------ 1 root root  2977 Apr 21 03:13 /scratch/report.md\\n-rwx------ 1 root root 26490 Apr 21 03:13 /scratch/result.py\\n-rwx------ 1 root root 37446 Apr 21 03:13 /scratch/results.json\\n--- results.json summary ---\\n{'best_variation': 'candidate_variant_a', 'feature_column': 'ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_l\", \"stderr\": \"\"}"
+  }
+]

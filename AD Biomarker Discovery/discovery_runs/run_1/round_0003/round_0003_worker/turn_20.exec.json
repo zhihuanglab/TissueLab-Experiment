@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "/scratch/result.py True 14273\n/scratch/report.md True 3464\n/scratch/results.json True 18610\n/scratch/donor_feature_table.csv True 4522\n",
+  "stderr": ""
+}

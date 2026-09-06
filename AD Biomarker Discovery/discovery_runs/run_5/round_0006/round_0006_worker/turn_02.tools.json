@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nfrom pprint import pprint\nwith open('/scratch/context_bundle.json') as f:\n    data=json.load(f)\nprint(\"TOP KEYS:\", list(data.keys()))\nfor k in ['worker_brief','accepted_panel','round','candidate','hypothesis','plan','current_panel','panel_context','prior_rounds']:\n    if k in data:\n        print(f\"\\n--- {k} ---\")\n        pprint(data[k], width=120)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"TOP KEYS: ['worker_brief', 'runtime_manifest', 'cohort_summary', 'slide_manifest_head', 'runtime_quickstart_excerpt', 'dataset_guide_excerpt']\\n\\n--- worker_brief ---\\n{'accepted_panel': {'best_panel_score': 0.6323,\\n                    'members': [{'delta_panel_score': None,\\n                                 'feature_name': 'ca1_reactive_astro_fraction',\\n                                 'panel_candidate_score': 0.4914,\\n                                 'result_path': '/Volumes/SSK SSD/TissueLab '\\n   \", \"stderr\": \"\"}"
+  }
+]

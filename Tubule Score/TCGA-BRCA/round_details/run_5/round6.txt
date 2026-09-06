@@ -1,0 +1,179 @@
+Round 6 Details
+============================================================
+
+HYPOTHESIS: Tumor cell morphology (area, eccentricity from contours)
+captures cellular architecture differences between tubule scores.
+Well-differentiated (score 1): polarized, elongated cells around lumina.
+Poorly-differentiated (score 3): rounder cells in solid sheets.
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_fraction: r=-0.4148
+  log_n_tumor_cells: r=+0.3692
+  log_tumor_density: r=+0.3439
+  tumor_cell_density: r=+0.3009
+  n_tumor_cells: r=+0.2959
+  log_total_density: r=+0.2565
+  total_cell_density: r=+0.2405
+  tumor_cell_area_median: r=+0.1841
+  tumor_cell_ecc_mean: r=-0.1146
+  tumor_cell_area_mean: r=-0.0955
+  tumor_cell_fraction: r=+0.0715
+  tumor_cell_area_std: r=-0.0487
+  tumor_cell_area_cv: r=+0.0437
+  tumor_cell_ecc_std: r=+0.0306
+
+INDIVIDUAL FEATURE RESULTS:
+  single_gland_patch_fraction: adj=0.3028 LOO_r=0.3028 gap=0.1126
+  single_gland_patch_fraction_enet0.1: adj=0.2838 LOO_r=0.2838 gap=0.1310
+  single_log_n_tumor_cells: adj=0.2348 LOO_r=0.2348 gap=0.1344
+  single_log_tumor_density: adj=0.2249 LOO_r=0.2249 gap=0.1345
+  single_log_total_density: adj=0.1092 LOO_r=0.1092 gap=0.1488
+  single_n_tumor_cells: adj=0.0996 LOO_r=0.1151 gap=0.1809
+  single_tumor_cell_density: adj=0.0891 LOO_r=0.1097 gap=0.1912
+  single_total_cell_density: adj=-0.0884 LOO_r=-0.0288 gap=0.2693
+  single_tumor_cell_area_median: adj=-1.0000 LOO_r=-0.2701 gap=0.4542
+  single_tumor_cell_area_mean: adj=-1.0000 LOO_r=-0.4290 gap=0.5245
+  single_tumor_cell_area_std: adj=-1.0000 LOO_r=-0.4825 gap=0.5312
+  single_tumor_cell_area_cv: adj=-1.0000 LOO_r=-0.5324 gap=0.5761
+  single_tumor_cell_ecc_mean: adj=-1.0000 LOO_r=-0.4691 gap=0.5837
+  single_tumor_cell_ecc_std: adj=-1.0000 LOO_r=-0.7591 gap=0.7897
+  single_tumor_cell_fraction: adj=-1.0000 LOO_r=-0.5168 gap=0.5882
+  single_gland_patch_fraction_enet0.5: adj=-1.0000 LOO_r=-0.1881 gap=0.6029
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  gpf_log_n_tumor_cells_r1: adjusted=0.3991 (LOO r=0.3991, IS r=0.5161, gap=0.1170) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_log_n_tumor_cells_r10: adjusted=0.3881 (LOO r=0.3881, IS r=0.5161, gap=0.1281) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  gpf_log_n_tumor_cells_enet0.1: adjusted=0.3726 (LOO r=0.3726, IS r=0.5161, gap=0.1436) [F1=0.3303 QWK=0.2963 Acc=0.3667]
+  single_gland_patch_fraction: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  single_gland_patch_fraction_enet0.1: adjusted=0.2838 (LOO r=0.2838, IS r=0.4148, gap=0.1310) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_log_tumor_density_r10: adjusted=0.2837 (LOO r=0.2862, IS r=0.4413, gap=0.1551) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_log_total_density_enet0.1: adjusted=0.2825 (LOO r=0.2825, IS r=0.4148, gap=0.1323) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_tumor_cell_fraction_r1: adjusted=0.2802 (LOO r=0.2861, IS r=0.4477, gap=0.1616) [F1=0.2065 QWK=0.1538 Acc=0.2667]
+  gpf_log_total_density_r1: adjusted=0.2786 (LOO r=0.2786, IS r=0.4157, gap=0.1371) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  gpf_tumor_cell_ecc_mean_r1: adjusted=0.2776 (LOO r=0.2858, IS r=0.4522, gap=0.1664) [F1=0.3077 QWK=0.1538 Acc=0.3667]
+  gpf_log_total_density_r10: adjusted=0.2700 (LOO r=0.2700, IS r=0.4102, gap=0.1401) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_log_tumor_density_r1: adjusted=0.2666 (LOO r=0.2766, IS r=0.4466, gap=0.1700) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_tumor_cell_density_r1: adjusted=0.2565 (LOO r=0.2701, IS r=0.4474, gap=0.1773) [F1=0.1997 QWK=0.0870 Acc=0.3000]
+  gpf_tumor_cell_density_r10: adjusted=0.2541 (LOO r=0.2678, IS r=0.4452, gap=0.1774) [F1=0.1997 QWK=0.0870 Acc=0.3000]
+  gpf_logdens_ecc_r10: adjusted=0.2422 (LOO r=0.2664, IS r=0.4647, gap=0.1983) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_ecc_logdens_r10: adjusted=0.2422 (LOO r=0.2664, IS r=0.4647, gap=0.1983) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_tumor_cell_ecc_mean_r10: adjusted=0.2376 (LOO r=0.2591, IS r=0.4519, gap=0.1929) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_tumor_cell_fraction_r10: adjusted=0.2350 (LOO r=0.2557, IS r=0.4471, gap=0.1914) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  single_log_n_tumor_cells: adjusted=0.2348 (LOO r=0.2348, IS r=0.3692, gap=0.1344) [F1=0.2733 QWK=0.1739 Acc=0.3667]
+  gpf_log_tumor_density_enet0.1: adjusted=0.2342 (LOO r=0.2516, IS r=0.4366, gap=0.1849) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_tumor_cell_ecc_std_r1: adjusted=0.2340 (LOO r=0.2448, IS r=0.4166, gap=0.1717) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  gpf_tumor_cell_area_median_r1: adjusted=0.2263 (LOO r=0.2433, IS r=0.4275, gap=0.1841) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  gpf_tumor_cell_area_median_r10: adjusted=0.2252 (LOO r=0.2404, IS r=0.4208, gap=0.1804) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  single_log_tumor_density: adjusted=0.2249 (LOO r=0.2249, IS r=0.3594, gap=0.1345) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_ecc_logdens_r1: adjusted=0.2222 (LOO r=0.2540, IS r=0.4678, gap=0.2137) [F1=0.3077 QWK=0.1538 Acc=0.3667]
+  gpf_logdens_ecc_r1: adjusted=0.2222 (LOO r=0.2540, IS r=0.4678, gap=0.2137) [F1=0.3077 QWK=0.1538 Acc=0.3667]
+  gpf_tumor_cell_density_enet0.1: adjusted=0.2147 (LOO r=0.2416, IS r=0.4453, gap=0.2037) [F1=0.1997 QWK=0.0870 Acc=0.3000]
+  gpf_frac_ecc_r1: adjusted=0.2146 (LOO r=0.2482, IS r=0.4654, gap=0.2172) [F1=0.2325 QWK=0.0769 Acc=0.3000]
+  gpf_ecc_frac_r1: adjusted=0.2146 (LOO r=0.2482, IS r=0.4654, gap=0.2172) [F1=0.2325 QWK=0.0769 Acc=0.3000]
+  gpf_tumor_cell_fraction_enet0.1: adjusted=0.2143 (LOO r=0.2406, IS r=0.4431, gap=0.2026) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_area_med_frac_r1: adjusted=0.2123 (LOO r=0.2438, IS r=0.4568, gap=0.2130) [F1=0.2065 QWK=0.1538 Acc=0.2667]
+  gpf_total_cell_density_r10: adjusted=0.2122 (LOO r=0.2297, IS r=0.4148, gap=0.1851) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_area_med_ecc_r1: adjusted=0.2057 (LOO r=0.2405, IS r=0.4602, gap=0.2197) [F1=0.2778 QWK=0.0833 Acc=0.3667]
+  gpf_tumor_cell_ecc_mean_enet0.1: adjusted=0.2049 (LOO r=0.2363, IS r=0.4490, gap=0.2127) [F1=0.2177 QWK=0.0000 Acc=0.3333]
+  gpf_total_cell_density_r1: adjusted=0.2038 (LOO r=0.2254, IS r=0.4186, gap=0.1932) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  gpf_ecc_dens_r1: adjusted=0.2008 (LOO r=0.2393, IS r=0.4664, gap=0.2270) [F1=0.2325 QWK=0.0769 Acc=0.3000]
+  gpf_dens_ecc_r1: adjusted=0.2008 (LOO r=0.2393, IS r=0.4664, gap=0.2270) [F1=0.2325 QWK=0.0769 Acc=0.3000]
+  gpf_dens_ecc_r10: adjusted=0.1991 (LOO r=0.2376, IS r=0.4647, gap=0.2271) [F1=0.1809 QWK=0.0833 Acc=0.2667]
+  gpf_ecc_dens_r10: adjusted=0.1991 (LOO r=0.2376, IS r=0.4647, gap=0.2271) [F1=0.1809 QWK=0.0833 Acc=0.2667]
+  gpf_tumor_cell_ecc_std_r10: adjusted=0.1973 (LOO r=0.2201, IS r=0.4158, gap=0.1956) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_logdens_ecc_r50: adjusted=0.1946 (LOO r=0.2310, IS r=0.4537, gap=0.2228) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_ecc_logdens_r50: adjusted=0.1946 (LOO r=0.2310, IS r=0.4537, gap=0.2228) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_area_med_ecc_r10: adjusted=0.1941 (LOO r=0.2319, IS r=0.4576, gap=0.2257) [F1=0.2177 QWK=0.0000 Acc=0.3333]
+  gpf_area_med_frac_r10: adjusted=0.1809 (LOO r=0.2224, IS r=0.4554, gap=0.2330) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gpf_area_med_dens_r10: adjusted=0.1800 (LOO r=0.2189, IS r=0.4468, gap=0.2278) [F1=0.1997 QWK=0.0870 Acc=0.3000]
+  gpf_ecc_frac_r10: adjusted=0.1693 (LOO r=0.2180, IS r=0.4653, gap=0.2473) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  gpf_frac_ecc_r10: adjusted=0.1693 (LOO r=0.2180, IS r=0.4653, gap=0.2473) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  gpf_area_cv_ecc_r1: adjusted=0.1652 (LOO r=0.2134, IS r=0.4600, gap=0.2465) [F1=0.3081 QWK=0.0741 Acc=0.3667]
+  gpf_tumor_cell_area_cv_r1: adjusted=0.1651 (LOO r=0.1994, IS r=0.4179, gap=0.2185) [F1=0.1810 QWK=0.0000 Acc=0.2667]
+  gpf_area_med_dens_r1: adjusted=0.1552 (LOO r=0.2039, IS r=0.4513, gap=0.2474) [F1=0.1997 QWK=0.0870 Acc=0.3000]
+  gpf_tumor_cell_area_cv_r10: adjusted=0.1448 (LOO r=0.1856, IS r=0.4170, gap=0.2315) [F1=0.2360 QWK=0.0000 Acc=0.3667]
+  gpf_area_med_dens_r50: adjusted=0.1270 (LOO r=0.1818, IS r=0.4413, gap=0.2595) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_area_cv_ecc_r10: adjusted=0.1163 (LOO r=0.1807, IS r=0.4595, gap=0.2788) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  single_log_total_density: adjusted=0.1092 (LOO r=0.1092, IS r=0.2580, gap=0.1488) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gpf_dens_ecc_r50: adjusted=0.1049 (LOO r=0.1733, IS r=0.4602, gap=0.2868) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  gpf_ecc_dens_r50: adjusted=0.1049 (LOO r=0.1733, IS r=0.4602, gap=0.2868) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  single_n_tumor_cells: adjusted=0.0996 (LOO r=0.1151, IS r=0.2959, gap=0.1809) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  single_tumor_cell_density: adjusted=0.0891 (LOO r=0.1097, IS r=0.3009, gap=0.1912) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  gpf_tumor_cell_area_mean_r1: adjusted=0.0739 (LOO r=0.1443, IS r=0.4352, gap=0.2908) [F1=0.1994 QWK=0.0000 Acc=0.3000]
+  gpf_tumor_cell_area_std_r1: adjusted=0.0681 (LOO r=0.1359, IS r=0.4215, gap=0.2856) [F1=0.1994 QWK=0.0000 Acc=0.3000]
+  frac_dens_r1: adjusted=-0.0225 (LOO r=0.0439, IS r=0.3266, gap=0.2828) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  area_dens_r1: adjusted=-0.0344 (LOO r=0.0319, IS r=0.3146, gap=0.2827) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  ecc_dens_r1: adjusted=-0.0626 (LOO r=0.0099, IS r=0.3050, gap=0.2950) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  single_total_cell_density: adjusted=-0.0884 (LOO r=-0.0288, IS r=0.2405, gap=0.2693) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  single_tumor_cell_area_median: adjusted=-1.0000 (LOO r=-0.2701, IS r=0.1841, gap=0.4542) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_tumor_cell_area_mean: adjusted=-1.0000 (LOO r=-0.4290, IS r=0.0955, gap=0.5245) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  single_tumor_cell_area_std: adjusted=-1.0000 (LOO r=-0.4825, IS r=0.0487, gap=0.5312) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  single_tumor_cell_area_cv: adjusted=-1.0000 (LOO r=-0.5324, IS r=0.0437, gap=0.5761) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_tumor_cell_ecc_mean: adjusted=-1.0000 (LOO r=-0.4691, IS r=0.1146, gap=0.5837) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_tumor_cell_ecc_std: adjusted=-1.0000 (LOO r=-0.7591, IS r=0.0306, gap=0.7897) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_tumor_cell_fraction: adjusted=-1.0000 (LOO r=-0.5168, IS r=0.0715, gap=0.5882) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  gpf_tumor_cell_area_mean_r10: adjusted=-1.0000 (LOO r=0.0959, IS r=0.4346, gap=0.3387) [F1=0.2177 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_tumor_cell_area_std_r10: adjusted=-1.0000 (LOO r=0.1133, IS r=0.4210, gap=0.3077) [F1=0.2177 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_area_med_ecc_r50: adjusted=-1.0000 (LOO r=0.1204, IS r=0.4524, gap=0.3320) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_area_std_ecc_r1: adjusted=-1.0000 (LOO r=0.1343, IS r=0.4532, gap=0.3189) [F1=0.2594 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_area_std_ecc_r10: adjusted=-1.0000 (LOO r=0.0945, IS r=0.4530, gap=0.3585) [F1=0.2177 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_area_std_ecc_r50: adjusted=-1.0000 (LOO r=-0.0090, IS r=0.4520, gap=0.4610) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_area_cv_ecc_r50: adjusted=-1.0000 (LOO r=0.0479, IS r=0.4571, gap=0.4092) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_frac_ecc_r50: adjusted=-1.0000 (LOO r=0.0746, IS r=0.4647, gap=0.3900) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_area_med_frac_r50: adjusted=-1.0000 (LOO r=0.0974, IS r=0.4481, gap=0.3507) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_ecc_frac_r50: adjusted=-1.0000 (LOO r=0.0746, IS r=0.4647, gap=0.3900) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  area_ecc_frac_r1: adjusted=-1.0000 (LOO r=-0.4003, IS r=0.2313, gap=0.6316) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  area_ecc_frac_r10: adjusted=-1.0000 (LOO r=-0.4306, IS r=0.2312, gap=0.6618) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  area_ecc_frac_r50: adjusted=-1.0000 (LOO r=-0.5643, IS r=0.2309, gap=0.7952) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  area_ecc_dens_r1: adjusted=-1.0000 (LOO r=-0.0720, IS r=0.3211, gap=0.3931) [F1=0.1538 QWK=0.0000 Acc=0.3000] DISQUALIFIED
+  area_ecc_dens_r10: adjusted=-1.0000 (LOO r=-0.0737, IS r=0.3209, gap=0.3946) [F1=0.1538 QWK=0.0000 Acc=0.3000] DISQUALIFIED
+  area_ecc_dens_r50: adjusted=-1.0000 (LOO r=-0.1560, IS r=0.3201, gap=0.4761) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  area_med_ecc_r1: adjusted=-1.0000 (LOO r=-0.3183, IS r=0.2239, gap=0.5421) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  area_med_ecc_r10: adjusted=-1.0000 (LOO r=-0.3717, IS r=0.2239, gap=0.5956) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  area_std_ecc_r1: adjusted=-1.0000 (LOO r=-0.5452, IS r=0.1167, gap=0.6620) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  area_std_ecc_r10: adjusted=-1.0000 (LOO r=-0.5744, IS r=0.1166, gap=0.6910) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  area_cv_ecc_r1: adjusted=-1.0000 (LOO r=-0.5519, IS r=0.1344, gap=0.6863) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  area_cv_ecc_r10: adjusted=-1.0000 (LOO r=-0.6002, IS r=0.1343, gap=0.7345) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  ecc_frac_r1: adjusted=-1.0000 (LOO r=-0.5406, IS r=0.1183, gap=0.6588) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  ecc_frac_r10: adjusted=-1.0000 (LOO r=-0.5576, IS r=0.1181, gap=0.6756) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  ecc_dens_r10: adjusted=-1.0000 (LOO r=-0.0160, IS r=0.3046, gap=0.3206) [F1=0.1538 QWK=0.0000 Acc=0.3000] DISQUALIFIED
+  area_frac_r1: adjusted=-1.0000 (LOO r=-0.3534, IS r=0.2106, gap=0.5640) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  area_frac_r10: adjusted=-1.0000 (LOO r=-0.4054, IS r=0.2105, gap=0.6159) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  area_dens_r10: adjusted=-1.0000 (LOO r=0.0126, IS r=0.3142, gap=0.3016) [F1=0.1538 QWK=0.0000 Acc=0.3000] DISQUALIFIED
+  frac_dens_r10: adjusted=-1.0000 (LOO r=-0.0314, IS r=0.3205, gap=0.3518) [F1=0.1538 QWK=0.0000 Acc=0.3000] DISQUALIFIED
+  gpf_tumor_cell_fraction_enet0.5: adjusted=-1.0000 (LOO r=-0.1881, IS r=0.4148, gap=0.6029) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  single_gland_patch_fraction_enet0.5: adjusted=-1.0000 (LOO r=-0.1881, IS r=0.4148, gap=0.6029) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_log_tumor_density_enet0.5: adjusted=-1.0000 (LOO r=-0.2289, IS r=0.4148, gap=0.6438) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_log_total_density_enet0.5: adjusted=-1.0000 (LOO r=-0.1881, IS r=0.4148, gap=0.6029) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_tumor_cell_ecc_mean_enet0.5: adjusted=-1.0000 (LOO r=-0.1881, IS r=0.4148, gap=0.6029) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_tumor_cell_density_enet0.5: adjusted=-1.0000 (LOO r=-0.1839, IS r=0.4148, gap=0.5987) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  gpf_log_n_tumor_cells_enet0.5: adjusted=-1.0000 (LOO r=-0.2708, IS r=0.5041, gap=0.7750) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+
+BEST MODEL: gpf_log_n_tumor_cells_r1
+  Pearson r:      IS=0.5161  LOO=0.3991
+  IS-LOO Gap:     0.1170 (penalty=0.0000)
+  Adjusted Score: 0.3991
+  Macro F1:       0.3303
+  QWK:            0.2963
+  Accuracy:       0.3667
+
+ERRORS:
+  TCGA-A2-A0CS: GT=2 -> Pred=1 (continuous=1.360)
+  TCGA-A2-A0ET: GT=2 -> Pred=3 (continuous=2.684)
+  TCGA-A7-A0D9: GT=2 -> Pred=1 (continuous=1.193)
+  TCGA-AC-A3TN: GT=1 -> Pred=2 (continuous=1.616)
+  TCGA-AR-A1AR: GT=3 -> Pred=2 (continuous=2.271)
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (continuous=1.865)
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (continuous=2.278)
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (continuous=2.105)
+  TCGA-BH-A0DX: GT=1 -> Pred=2 (continuous=2.143)
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (continuous=2.147)
+  TCGA-D8-A1XT: GT=3 -> Pred=2 (continuous=2.171)
+  TCGA-D8-A27N: GT=3 -> Pred=2 (continuous=1.968)
+  TCGA-D8-A27P: GT=1 -> Pred=2 (continuous=2.129)
+  TCGA-D8-A4Z1: GT=3 -> Pred=2 (continuous=2.030)
+  TCGA-D8-A73X: GT=1 -> Pred=2 (continuous=1.804)
+  TCGA-E2-A14W: GT=3 -> Pred=2 (continuous=2.234)
+  TCGA-E2-A1B1: GT=1 -> Pred=2 (continuous=1.935)
+  TCGA-EW-A1PH: GT=3 -> Pred=2 (continuous=2.295)
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (continuous=2.412)

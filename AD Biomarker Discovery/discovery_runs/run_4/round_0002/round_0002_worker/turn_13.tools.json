@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nimport json, pathlib\nprint(pathlib.Path('/scratch/report.md').read_text().splitlines()[0:25])\ndata=json.load(open('/scratch/results.json'))\nprint(data['ci_lo'], data['ci_hi'])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['## Summary', 'Tested the `ca1_reactive_astrocyte_enrichment` family in CA1; `reactive_over_astroglia` won the local sweep with selection score 0.4914.', '', '## Metrics', 'Winning variation: `reactive_over_astroglia` (`ca1_reactive_astrocyte_enrichment__reactive_over_astroglia`)', '', '- IS partial r: -0.4914', '- Selection score: 0.4914', '- LOO predictive r: 0.3598', '- IS-LOO gap: 0.1316', '- Penalty: 0.0000', '- Adjusted score: 0.3598', '- Bootstrap 95% CI: [-0.7652, -0.1146]', '- n analyz\", \"stderr\": \"\"}"
+  }
+]

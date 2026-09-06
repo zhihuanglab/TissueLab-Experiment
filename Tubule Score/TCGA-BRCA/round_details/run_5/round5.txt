@@ -1,0 +1,118 @@
+Round 5 Details
+============================================================
+
+HYPOTHESIS: PCA-reduced gland embeddings from musk_gland capture
+morphological patterns (tubule quality) while gland_patch_fraction
+captures quantity. PCA reduces 1024D to 3-5D to prevent overfitting.
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_fraction: r=-0.4148
+
+PCA VARIANCE EXPLAINED:
+  PC1: 0.1803 (cum=0.1803)
+  PC2: 0.1362 (cum=0.3165)
+  PC3: 0.1122 (cum=0.4288)
+  PC4: 0.0755 (cum=0.5042)
+  PC5: 0.0750 (cum=0.5792)
+  PC6: 0.0621 (cum=0.6413)
+  PC7: 0.0448 (cum=0.6861)
+  PC8: 0.0403 (cum=0.7265)
+  PC9: 0.0374 (cum=0.7639)
+  PC10: 0.0305 (cum=0.7943)
+
+PCA COMPONENT-GT CORRELATIONS:
+  PC1: r=+0.2452
+  PC2: r=-0.3812
+  PC3: r=-0.1651
+  PC4: r=-0.0520
+  PC5: r=-0.2008
+  PC6: r=-0.4155
+  PC7: r=-0.0273
+  PC8: r=+0.0199
+  PC9: r=-0.1430
+  PC10: r=-0.4555
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  gpf_only_ridge1: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  pca3_gpf_ridge10: adjusted=0.2473 (LOO r=0.3033, IS r=0.5655, gap=0.2622) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  pca3_gpf_ridge50: adjusted=0.2018 (LOO r=0.2581, IS r=0.5207, gap=0.2626) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  pca3_ridge1: adjusted=0.1856 (LOO r=0.2414, IS r=0.5030, gap=0.2616) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  pca3_ridge10: adjusted=0.1435 (LOO r=0.2092, IS r=0.4907, gap=0.2815) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  pca3_ridge50: adjusted=-1.0000 (LOO r=0.0599, IS r=0.4824, gap=0.4224) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca3_ridge100: adjusted=-1.0000 (LOO r=-0.1315, IS r=0.4824, gap=0.6138) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca3_ridge500: adjusted=-1.0000 (LOO r=-0.8583, IS r=0.4824, gap=1.3407) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca5_ridge1: adjusted=-1.0000 (LOO r=0.1355, IS r=0.5304, gap=0.3948) [F1=0.2360 QWK=0.0000 Acc=0.3667] DISQUALIFIED
+  pca5_ridge10: adjusted=-1.0000 (LOO r=0.1100, IS r=0.5251, gap=0.4151) [F1=0.1709 QWK=-0.0952 Acc=0.3333] DISQUALIFIED
+  pca5_ridge50: adjusted=-1.0000 (LOO r=-0.0055, IS r=0.5251, gap=0.5306) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca5_ridge100: adjusted=-1.0000 (LOO r=-0.1492, IS r=0.5251, gap=0.6743) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca5_ridge500: adjusted=-1.0000 (LOO r=-0.7956, IS r=0.5251, gap=1.3207) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca2_ridge1: adjusted=-1.0000 (LOO r=0.1496, IS r=0.4690, gap=0.3193) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca2_ridge10: adjusted=-1.0000 (LOO r=0.1078, IS r=0.4574, gap=0.3497) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca2_ridge50: adjusted=-1.0000 (LOO r=-0.0820, IS r=0.4532, gap=0.5353) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca2_ridge100: adjusted=-1.0000 (LOO r=-0.3054, IS r=0.4532, gap=0.7586) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca3_gpf_ridge1: adjusted=-1.0000 (LOO r=0.2705, IS r=0.5819, gap=0.3114) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  pca3_gpf_ridge100: adjusted=-1.0000 (LOO r=0.1707, IS r=0.5175, gap=0.3468) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca3_gpf_ridge500: adjusted=-1.0000 (LOO r=-0.5213, IS r=0.5126, gap=1.0339) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca5_gpf_ridge1: adjusted=-1.0000 (LOO r=0.1462, IS r=0.5696, gap=0.4233) [F1=0.2963 QWK=0.0000 Acc=0.4000] DISQUALIFIED
+  pca5_gpf_ridge10: adjusted=-1.0000 (LOO r=0.2169, IS r=0.5622, gap=0.3453) [F1=0.2360 QWK=0.0000 Acc=0.3667] DISQUALIFIED
+  pca5_gpf_ridge50: adjusted=-1.0000 (LOO r=0.1900, IS r=0.5423, gap=0.3524) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  pca5_gpf_ridge100: adjusted=-1.0000 (LOO r=0.1123, IS r=0.5390, gap=0.4267) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca5_gpf_ridge500: adjusted=-1.0000 (LOO r=-0.5092, IS r=0.5337, gap=1.0429) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pls1_emb: adjusted=-1.0000 (LOO r=0.4363, IS r=0.7785, gap=0.3422) [F1=0.4909 QWK=0.3704 Acc=0.5333] DISQUALIFIED
+  pls2_emb: adjusted=-1.0000 (LOO r=0.5459, IS r=0.8971, gap=0.3512) [F1=0.4444 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  pls3_emb: adjusted=-1.0000 (LOO r=0.5748, IS r=0.9297, gap=0.3548) [F1=0.4717 QWK=0.4242 Acc=0.4667] DISQUALIFIED
+  pls1_emb_gpf: adjusted=-1.0000 (LOO r=0.4370, IS r=0.7782, gap=0.3413) [F1=0.4909 QWK=0.3704 Acc=0.5333] DISQUALIFIED
+  pls2_emb_gpf: adjusted=-1.0000 (LOO r=0.5455, IS r=0.8970, gap=0.3516) [F1=0.4444 QWK=0.4286 Acc=0.4667] DISQUALIFIED
+  pls3_emb_gpf: adjusted=-1.0000 (LOO r=0.5744, IS r=0.9297, gap=0.3553) [F1=0.4717 QWK=0.4242 Acc=0.4667] DISQUALIFIED
+  raw_emb_ridge500: adjusted=-1.0000 (LOO r=0.5727, IS r=0.9409, gap=0.3681) [F1=0.3704 QWK=0.2308 Acc=0.4333] DISQUALIFIED
+  raw_emb_ridge1000: adjusted=-1.0000 (LOO r=0.5347, IS r=0.9067, gap=0.3720) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  raw_emb_ridge5000: adjusted=-1.0000 (LOO r=0.3782, IS r=0.8146, gap=0.4364) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  raw_emb_ridge10000: adjusted=-1.0000 (LOO r=0.2537, IS r=0.7841, gap=0.5304) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  raw_emb_gpf_ridge500: adjusted=-1.0000 (LOO r=0.5727, IS r=0.9409, gap=0.3682) [F1=0.3704 QWK=0.2308 Acc=0.4333] DISQUALIFIED
+  raw_emb_gpf_ridge1000: adjusted=-1.0000 (LOO r=0.5349, IS r=0.9068, gap=0.3719) [F1=0.3519 QWK=0.2609 Acc=0.4333] DISQUALIFIED
+  raw_emb_gpf_ridge5000: adjusted=-1.0000 (LOO r=0.3788, IS r=0.8143, gap=0.4355) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  raw_emb_gpf_ridge10000: adjusted=-1.0000 (LOO r=0.2552, IS r=0.7838, gap=0.5286) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca3_gpf_enet_a0.1: adjusted=-1.0000 (LOO r=0.2183, IS r=0.5686, gap=0.3503) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  pca3_gpf_enet_a0.5: adjusted=-1.0000 (LOO r=-0.2259, IS r=0.4651, gap=0.6910) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca3_gpf_enet_a1.0: adjusted=-1.0000 (LOO r=-1.0000, IS r=0.0000, gap=1.0000) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca5_gpf_enet_a0.1: adjusted=-1.0000 (LOO r=0.1142, IS r=0.5668, gap=0.4526) [F1=0.2360 QWK=0.0000 Acc=0.3667] DISQUALIFIED
+  pca5_gpf_enet_a0.5: adjusted=-1.0000 (LOO r=-0.2269, IS r=0.4651, gap=0.6920) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca5_gpf_enet_a1.0: adjusted=-1.0000 (LOO r=-1.0000, IS r=0.0000, gap=1.0000) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca7_gpf_ridge50: adjusted=-1.0000 (LOO r=0.3001, IS r=0.6409, gap=0.3408) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  pca7_gpf_ridge100: adjusted=-1.0000 (LOO r=0.2408, IS r=0.6337, gap=0.3929) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  pca7_gpf_ridge500: adjusted=-1.0000 (LOO r=-0.3391, IS r=0.6239, gap=0.9631) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+  pca10_gpf_ridge50: adjusted=-1.0000 (LOO r=0.3950, IS r=0.8105, gap=0.4155) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  pca10_gpf_ridge100: adjusted=-1.0000 (LOO r=0.3362, IS r=0.8024, gap=0.4662) [F1=0.2315 QWK=0.0952 Acc=0.3667] DISQUALIFIED
+  pca10_gpf_ridge500: adjusted=-1.0000 (LOO r=-0.1995, IS r=0.7883, gap=0.9878) [F1=0.1667 QWK=0.0000 Acc=0.3333] DISQUALIFIED
+
+BEST MODEL: gpf_only_ridge1
+  Pearson r:      IS=0.4155  LOO=0.3028
+  IS-LOO Gap:     0.1126 (penalty=0.0000)
+  Adjusted Score: 0.3028
+  Macro F1:       0.1772
+  QWK:            0.0833
+  Accuracy:       0.2667
+
+ERRORS:
+  TCGA-A2-A0CS: GT=2 -> Pred=1 (continuous=1.428)
+  TCGA-A7-A0D9: GT=2 -> Pred=1 (continuous=1.452)
+  TCGA-A7-A3IY: GT=1 -> Pred=2 (continuous=1.556)
+  TCGA-AC-A23E: GT=1 -> Pred=2 (continuous=1.677)
+  TCGA-AC-A3TN: GT=1 -> Pred=2 (continuous=2.054)
+  TCGA-AR-A0U4: GT=3 -> Pred=2 (continuous=2.282)
+  TCGA-AR-A1AR: GT=3 -> Pred=2 (continuous=2.320)
+  TCGA-AR-A2LO: GT=3 -> Pred=2 (continuous=2.172)
+  TCGA-BH-A0B8: GT=3 -> Pred=2 (continuous=2.196)
+  TCGA-BH-A0C3: GT=3 -> Pred=2 (continuous=2.089)
+  TCGA-BH-A0DX: GT=1 -> Pred=2 (continuous=2.358)
+  TCGA-BH-A0W4: GT=1 -> Pred=2 (continuous=1.986)
+  TCGA-D8-A1XT: GT=3 -> Pred=2 (continuous=2.100)
+  TCGA-D8-A27N: GT=3 -> Pred=2 (continuous=1.856)
+  TCGA-D8-A27P: GT=1 -> Pred=2 (continuous=2.106)
+  TCGA-D8-A4Z1: GT=3 -> Pred=2 (continuous=2.231)
+  TCGA-D8-A73X: GT=1 -> Pred=2 (continuous=1.820)
+  TCGA-E2-A14W: GT=3 -> Pred=2 (continuous=2.267)
+  TCGA-E2-A1B1: GT=1 -> Pred=2 (continuous=2.186)
+  TCGA-E2-A1IG: GT=2 -> Pred=1 (continuous=1.499)
+  TCGA-EW-A1PH: GT=3 -> Pred=2 (continuous=1.963)
+  TCGA-LL-A5YO: GT=1 -> Pred=2 (continuous=2.329)

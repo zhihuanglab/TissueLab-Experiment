@@ -1,0 +1,45 @@
+{
+  "hypothesis_family": "ca1_reactive_astro_pyramidal_isolation_fraction_30um",
+  "best_variation": "candidate_variant_a",
+  "feature_name": "ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um",
+  "feature_column": "ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um",
+  "partial_r": -0.5243735359829851,
+  "p_value": 0.0012228139838885686,
+  "selection_score": 0.5243735359829851,
+  "loo_predictive_r": 0.3922089955364106,
+  "is_loo_gap": 0.1321645404465745,
+  "penalty": 0.1321645404465745,
+  "adjusted_score": 0.3922089955364106,
+  "n_total": 35,
+  "n_analyzable": 35,
+  "ranked_variations": [
+    {
+      "variation_name": "candidate_variant_a",
+      "feature_name": "ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um",
+      "feature_column": "ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um",
+      "partial_r": -0.5243735359829851,
+      "p_value": 0.0012228139838885686,
+      "selection_score": 0.5243735359829851,
+      "loo_predictive_r": 0.3922089955364106,
+      "is_loo_gap": 0.1321645404465745,
+      "penalty": 0.1321645404465745,
+      "adjusted_score": 0.3922089955364106,
+      "n_total": 35,
+      "n_analyzable": 35
+    },
+    {
+      "variation_name": "candidate_variant_b",
+      "feature_name": "ca1_pyramidal_reactive_astro_isolated_fraction_k8_30um",
+      "feature_column": "ca1_pyramidal_reactive_astro_isolated_fraction_k8_30um",
+      "partial_r": -0.5199993591176338,
+      "p_value": 0.0013659362846739369,
+      "selection_score": 0.5199993591176338,
+      "loo_predictive_r": 0.3804306768812557,
+      "is_loo_gap": 0.13956868223637814,
+      "penalty": 0.13956868223637814,
+      "adjusted_score": 0.3804306768812557,
+      "n_total": 35,
+      "n_analyzable": 35
+    }
+  ]
+}

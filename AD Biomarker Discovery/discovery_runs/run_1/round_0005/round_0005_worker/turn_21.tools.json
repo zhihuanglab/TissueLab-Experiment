@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nfrom pathlib import Path\npath=Path('/scratch/result.py')\ntext=path.read_text()\ntext=text.replace(\n\"\"\"        donor_table[\n            [\n                \"donor_id\",\n                feature_col,\n                \"ca1_pyramidal_count\",\n                \"ca1_reactive_astrocyte_count\",\n            ]\n        ],\n\"\"\",\n\"\"\"        donor_table[\n            [\n                \"donor_id\",\n                \"ca1_pyramidal_count\",\n                \"ca1_reactive_astrocyte_count\",\n            ]\n        ],\n\"\"\")\npath.write_text(text)\nPY\npython /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"HYPOTHESIS FAMILY: ca1_pyramidal_reactive_astro_encirclement\\nBEST VARIATION: encirclement_k3_60px\\n  IS partial r:      -0.5255\\n  Selection score:    0.5255\\n  LOO predictive r:   0.4064  (diagnostic)\\n  IS-LOO Gap:         0.1191  (penalty= 0.0000)\\n  Adjusted Score:     0.4064\\n\\nRANKED VARIATIONS:\\n  variation_name  partial_r  selection_score  loo_predictive_r\\n  encirclement_k3_60px  -0.5255   0.5255   0.4064\\n  encirclement_k2_60px  -0.4967   0.4967   0.3261\\n  encirclement_k4_60px  -0.4509   0.4509 \", \"stderr\": \"\"}"
+  }
+]

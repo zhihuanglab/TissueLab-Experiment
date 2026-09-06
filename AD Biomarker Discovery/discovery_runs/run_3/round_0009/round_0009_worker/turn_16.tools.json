@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '260,520p' /data/autoresearch_runs/run_20260421_001115_585b70/round_0008/round_0008_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"        preds_resid.append(pred_resid)\\n        acts_resid.append(float(outcome_resid_test[0]))\\n\\n    out = frame.copy()\\n    out[\\\"predicted\\\"] = preds_raw\\n    out[\\\"predicted_residual\\\"] = preds_resid\\n    out[\\\"outcome_residual\\\"] = acts_resid\\n\\n    mask = np.isfinite(out[\\\"predicted_residual\\\"].to_numpy()) & np.isfinite(out[\\\"outcome_residual\\\"].to_numpy())\\n    if mask.sum() >= 3 and np.std(out.loc[mask, \\\"predicted_residual\\\"]) > 0 and np.std(out.loc[mask, \\\"outcome_residual\\\"]) > 0:\\n        loo_r = float(np.\", \"stderr\": \"\"}"
+  }
+]

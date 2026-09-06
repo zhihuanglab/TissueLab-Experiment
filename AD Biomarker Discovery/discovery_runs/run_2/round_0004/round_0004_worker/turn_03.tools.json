@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pprint\nwith open('/scratch/context_bundle.json') as f:\n    data=json.load(f)\npprint.pp(data['worker_brief'])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"{'worker_name': 'round_0004_worker',\\n 'round_id': 4,\\n 'candidate_id': 'ca1-reactive-astrocyte-hypertrophy',\\n 'candidate_type': 'candidate',\\n 'accepted_panel': {'members': [{'slot': 1,\\n                                 'feature_name': 'ca1_pyramidal_burden__ca1_pyramidal_fraction',\\n                                 'round_id': 1,\\n                                 'panel_candidate_score': 0.294,\\n                                 'delta_panel_score': None,\\n                                 'status': 'ac\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "29:FEATURE_NAME = \"ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um\"\n30:FEATURE_COLUMN = \"ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um\"\n31:CANONICAL_VARIATION = \"candidate_variant_b\"\n359:    if CANONICAL_VARIATION not in VARIATION_BY_NAME:\n372:    feature_name, feature_col = _canonical_from_variation(CANONICAL_VARIATION)\n388:        r'^FEATURE_NAME = \".*\"$': f'FEATURE_NAME = \"{feature_name}\"',\n389:        r'^FEATURE_COLUMN = \".*\"$': f'FEATURE_COLUMN = \"{feature_column}\"',\n390:        r'^CANONICAL_VARIATION = \".*\"$': f'CANONICAL_VARIATION = \"{variation_name}\"',\n",
+  "stderr": ""
+}

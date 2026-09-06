@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport os, glob, json, re\npaths=glob.glob('/data/autoresearch_runs/**/*report.md', recursive=True)\nfor p in paths[:20]:\n    txt=open(p,errors='ignore').read()\n    if 'Adjusted Score' in txt or 'Selection score' in txt:\n        print('PATH',p)\n        print('\\n'.join(txt.splitlines()[:60]))\n        break\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"PATH /data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/sandbox/report.md\\n## Summary\\nTested six direct count-based region-restricted glia-to-neuron log-ratio biomarkers for memory decline, and the best adjusted_score was 0.4330 for the CA1+SB reactive-astrocyte-to-pyramidal-neuron log-ratio.\\n\\n## Metrics\\n- Best variation: `ca1sb_reactive_to_pyramidal_logratio`\\n- IS partial r: `-0.5038`\\n- LOO predictive r: `0.4330`\\n- IS-LOO Gap: `0.0709` `(penalty=0.0000)`\\n- Adjusted S\", \"stderr\": \"\"}"
+  }
+]

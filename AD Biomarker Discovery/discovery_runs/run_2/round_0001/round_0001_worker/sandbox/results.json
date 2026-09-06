@@ -1,0 +1,47 @@
+{
+  "hypothesis_family": "CA1 pyramidal neuron burden",
+  "best_variation": "ca1_pyramidal_fraction",
+  "feature_name": "ca1_pyramidal_burden__ca1_pyramidal_fraction",
+  "feature_column": "ca1_pyramidal_fraction",
+  "variation_name": "ca1_pyramidal_fraction",
+  "description": "CA1 Pyramidal Neuron count divided by all classified CA1 cells.",
+  "n_total": 35,
+  "n_analyzable": 35,
+  "partial_r": 0.29397628619873717,
+  "p_value": 0.0865043209227582,
+  "selection_score": 0.29397628619873717,
+  "loo_predictive_r": 0.09756083569822228,
+  "is_loo_gap": 0.1964154505005149,
+  "penalty": 0.0964154505005149,
+  "adjusted_score": 0.19756083569822228,
+  "ranked_variations": [
+    {
+      "variation_name": "ca1_pyramidal_fraction",
+      "description": "CA1 Pyramidal Neuron count divided by all classified CA1 cells.",
+      "feature_column": "ca1_pyramidal_fraction",
+      "n_total": 35,
+      "n_analyzable": 35,
+      "partial_r": 0.29397628619873717,
+      "p_value": 0.0865043209227582,
+      "selection_score": 0.29397628619873717,
+      "loo_predictive_r": 0.09756083569822228,
+      "is_loo_gap": 0.1964154505005149,
+      "penalty": 0.0964154505005149,
+      "adjusted_score": 0.19756083569822228
+    },
+    {
+      "variation_name": "ca1_pyramidal_density",
+      "description": "CA1 Pyramidal Neuron count divided by annotated CA1 area in mm^2.",
+      "feature_column": "ca1_pyramidal_density",
+      "n_total": 35,
+      "n_analyzable": 35,
+      "partial_r": 0.21224385461390308,
+      "p_value": 0.22093179008855665,
+      "selection_score": 0.21224385461390308,
+      "loo_predictive_r": 0.024624281684394653,
+      "is_loo_gap": 0.18761957292950843,
+      "penalty": 0.08761957292950842,
+      "adjusted_score": 0.12462428168439466
+    }
+  ]
+}

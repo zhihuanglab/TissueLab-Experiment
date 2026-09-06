@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "slide H19.33.004-A12-LFB.svs.zarr n_ca1 9413 n_polys 1\n{'Negative control': 3106, 'Lymphocyte': 7, 'Pyramidal Neuron': 1732, 'Granule Neuron': 23, 'Reactive Astrocyte': 1107, 'Astrocyte': 1077, 'Oligodendrocyte': 2353, 'Corpora Amylacea': 8}\n",
+  "stderr": ""
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect, textwrap\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis.sea_ad_lfb import build_cell_table, load_region_polygons, load_training_cohort\nfrom shared_analysis.stats import partial_correlation, leave_one_out_summary, residualized_loo_predictive_correlation\nfrom shared_analysis.artifacts import write_donor_feature_table, build_results_payload, validate_results_payload\nfor fn in [load_training_cohort, build_cell_table, load_region_polygons, partial_correlation, leave_one_out_summary, residualized_loo_predictive_correlation, write_donor_feature_table, build_results_payload, validate_results_payload]:\n    print(f\"\\n### SOURCE: {fn.__module__}.{fn.__name__}\")\n    src = inspect.getsource(fn)\n    print(textwrap.dedent(src[:3500]))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\n### SOURCE: shared_analysis.sea_ad_lfb.load_training_cohort\\ndef load_training_cohort(data_root: str | Path) -> pd.DataFrame:\\n    cohort_path = find_training_cohort(data_root)\\n    cohort = pd.read_csv(cohort_path)\\n    if \\\"slide_id\\\" not in cohort.columns and \\\"slide_name\\\" in cohort.columns:\\n        cohort[\\\"slide_id\\\"] = cohort[\\\"slide_name\\\"].map(slide_id_from_name)\\n    if \\\"slide_id\\\" not in cohort.columns and \\\"slide_path\\\" in cohort.columns:\\n        cohort[\\\"slide_id\\\"] = cohort[\\\"slide_path\\\"].map(slide_\", \"stderr\": \"\"}"
+  }
+]

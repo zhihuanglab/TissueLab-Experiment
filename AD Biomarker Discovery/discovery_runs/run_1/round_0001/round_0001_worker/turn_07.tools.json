@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,320p' /shared/lib/shared_analysis/sea_ad_lfb.py | sed -n '1,320p'\necho '--- stats.py relevant functions ---'\ngrep -n \"def partial_correlation\\|def leave_one_out_summary\\|def residualized_loo_predictive_correlation\" -n /shared/lib/shared_analysis/stats.py\nsed -n '1,260p' /shared/lib/shared_analysis/stats.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"from __future__ import annotations\\n\\nimport json\\nfrom pathlib import Path\\nfrom typing import Any\\n\\nimport numpy as np\\nimport pandas as pd\\nimport zarr\\nfrom matplotlib.path import Path as MplPath\\n\\n\\nKNOWN_REGIONS = (\\\"CA1\\\", \\\"CA2\\\", \\\"CA3\\\", \\\"CA4\\\", \\\"DG\\\", \\\"EC\\\", \\\"SB\\\", \\\"TEC\\\")\\nDEFAULT_CONFOUNDS = [\\\"max_age_vis\\\", \\\"braak_numeric\\\", \\\"cerad_ordinal\\\"]\\n\\n\\ndef _is_ignored_name(name: str) -> bool:\\n    return name.startswith(\\\"._\\\") or name.startswith(\\\".DS_Store\\\")\\n\\n\\ndef _decode_scalar(value: Any) -> Any:\\n    if isinstance\", \"stderr\": \"\"}"
+  }
+]

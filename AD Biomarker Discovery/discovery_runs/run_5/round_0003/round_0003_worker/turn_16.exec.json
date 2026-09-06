@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "{\n  \"best_variation\": \"k3_within_30um\",\n  \"feature_column\": \"ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um\",\n  \"partial_r\": -0.5246508556443269,\n  \"selection_score\": 0.5246508556443269,\n  \"loo_predictive_r\": 0.4026304939669779,\n  \"is_loo_gap\": 0.12202036167734898,\n  \"adjusted_score\": 0.4026304939669779\n}\n",
+  "stderr": ""
+}

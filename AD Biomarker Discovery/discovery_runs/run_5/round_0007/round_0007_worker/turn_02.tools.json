@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nobj=json.load(open('/scratch/context_bundle.json'))\nprint('TOP KEYS:', list(obj.keys()))\nfor k in ['worker_brief','current_panel','accepted_panel','round','candidate','hypothesis','family','plan','context','panel_state']:\n    if k in obj:\n        print(f'\\n## {k}')\n        print(json.dumps(obj[k], indent=2)[:6000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"TOP KEYS: ['worker_brief', 'runtime_manifest', 'cohort_summary', 'slide_manifest_head', 'runtime_quickstart_excerpt', 'dataset_guide_excerpt']\\n\\n## worker_brief\\n{\\n  \\\"worker_name\\\": \\\"round_0007_worker\\\",\\n  \\\"round_id\\\": 7,\\n  \\\"candidate_id\\\": \\\"ca1-peripyramidal-reactive-astro-lymphocyte-contact\\\",\\n  \\\"candidate_type\\\": \\\"candidate\\\",\\n  \\\"accepted_panel\\\": {\\n    \\\"members\\\": [\\n      {\\n        \\\"slot\\\": 1,\\n        \\\"feature_name\\\": \\\"ca1_reactive_astro_fraction\\\",\\n        \\\"round_id\\\": 1,\\n        \\\"panel_candidate_score\\\": \", \"stderr\": \"\"}"
+  }
+]

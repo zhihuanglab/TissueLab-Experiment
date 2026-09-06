@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport pandas as pd, json\nres=json.load(open('/scratch/results.json'))\nbest=res['feature_column']\nper=pd.read_csv('/scratch/donor_feature_table.csv')[['donor_id',best,'reactive_niche_pyramidal_n','ca1_corpora_amylacea_n']]\nloo_rows=res['ranked_variations'][0]  # not per donor\n# parse from stdout unavailable, recompute by reading report? easier load from result? no per_donor absent results\n# use donor_feature_table and estimates from report? Let's read per-donor from printed? skip\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\", \"stderr\": \"\"}"
+  }
+]

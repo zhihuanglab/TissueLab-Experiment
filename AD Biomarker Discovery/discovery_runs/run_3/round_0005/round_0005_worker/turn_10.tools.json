@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\npython - <<'PY'\nfrom pathlib import Path\nimport pandas as pd, zarr\ncohort = pd.read_csv('/data/training_cohort.csv')\nslide = Path('/data') / cohort.iloc[0]['slide_name']\nroot = zarr.open_group(str(slide), mode='r')\nfor ann in ['CA1_01','CA2_01']:\n    grp=root['CustomAnnotations'][ann]\n    print(ann, list(grp.keys()))\n    for k in grp.keys():\n        a=grp[k]\n        print(\" \",k, getattr(a,'shape',None), getattr(a,'dtype',None))\n        try:\n            print(\"   head\", a[:5].tolist())\n        except Exception:\n            pass\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"CA1_01 ['annotation_json', 'comment']\\n  annotation_json () StringDType()\\n  comment () StringDType()\\nCA2_01 ['comment', 'annotation_json']\\n  comment () StringDType()\\n  annotation_json () StringDType()\\n\", \"stderr\": \"/usr/local/lib/python3.11/site-packages/zarr/core/group.py:3535: ZarrUserWarning: Object at ._annotation_json is not recognized as a component of a Zarr hierarchy.\\n  warnings.warn(\\n/usr/local/lib/python3.11/site-packages/zarr/core/group.py:3535: ZarrUserWarning: Object at ._comment is not recognized as a component of a Zarr hierarchy.\\n  warnings.warn(\\n/usr/local/lib/python3.11/site-packages/zarr/core/group.py:3535: ZarrUserWarning: Object at ._.zattrs is not recognized as a component of a Zarr h\"}"
+  }
+]

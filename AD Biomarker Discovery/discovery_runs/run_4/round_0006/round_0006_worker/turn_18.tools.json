@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- results.json head ---'\nsed -n '1,220p' /scratch/results.json\necho\necho '--- report.md ---'\nsed -n '1,260p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- results.json head ---\\n{\\n  \\\"status\\\": \\\"ok\\\",\\n  \\\"feature_name\\\": \\\"ca1_reactive_neuron_exclusion\\\",\\n  \\\"hypothesis_family\\\": \\\"ca1_reactive_neuron_exclusion\\\",\\n  \\\"best_variation\\\": \\\"reactive_pyramidal_desert_t20\\\",\\n  \\\"feature_column\\\": \\\"ca1_reactive_pyramidal_desert_t20\\\",\\n  \\\"outcome\\\": \\\"slope_zmem0\\\",\\n  \\\"n_total\\\": 35,\\n  \\\"n_analyzable\\\": 35,\\n  \\\"partial_r\\\": -0.2544902281784801,\\n  \\\"p_value\\\": 0.14012639244525626,\\n  \\\"selection_score\\\": 0.2544902281784801,\\n  \\\"loo_predictive_r\\\": 0.006421163596153315,\\n  \\\"is_loo_gap\\\":\", \"stderr\": \"\"}"
+  }
+]

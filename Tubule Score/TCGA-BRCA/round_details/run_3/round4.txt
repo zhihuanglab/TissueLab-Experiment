@@ -1,0 +1,73 @@
+Round 4 Details
+================================================================================
+
+FEATURE-GT CORRELATIONS:
+  n_tumor_cells: r=+0.2959 (p=0.1123)
+  gland_patch_fraction: r=-0.4148 (p=0.0226)
+  high_conf_gland_fraction: r=-0.4148 (p=0.0226)
+  tumor_in_gland_fraction: r=-0.5653 (p=0.0011)
+  tumor_in_biomedparse_gland: r=-0.2438 (p=0.1942)
+  gland_mask_area_fraction: r=-0.2642 (p=0.1583)
+  mean_nn_distance_tumor: r=-0.1941 (p=0.3041)
+
+================================================================================
+ALL CONFIGURATIONS (sorted by adjusted score):
+  bio_coloc+tig+nn_dist__Ridge_a1: adjusted=0.5444 (LOO r=0.5444, IS r=0.6361, gap=0.0917) [F1=0.4345 QWK=0.3750 Acc=0.4333]
+  bio_coloc+tig+nn_dist__Ridge_a5: adjusted=0.5375 (LOO r=0.5375, IS r=0.6361, gap=0.0986) [F1=0.3817 QWK=0.3571 Acc=0.4000]
+  bio_coloc+tig__Ridge_a1: adjusted=0.5151 (LOO r=0.5151, IS r=0.5967, gap=0.0816) [F1=0.4379 QWK=0.4516 Acc=0.4333]
+  bio_coloc+tig__Ridge_a5: adjusted=0.5092 (LOO r=0.5092, IS r=0.5953, gap=0.0862) [F1=0.4267 QWK=0.4138 Acc=0.4333]
+  bio_coloc+tig+nn_dist__ElasticNet: adjusted=0.5081 (LOO r=0.5081, IS r=0.6333, gap=0.1251) [F1=0.3392 QWK=0.2963 Acc=0.3667]
+  tig+nn_dist__Ridge_a1: adjusted=0.5033 (LOO r=0.5033, IS r=0.6014, gap=0.0982) [F1=0.4581 QWK=0.3871 Acc=0.4667]
+  bio_coloc+tig__ElasticNet: adjusted=0.5020 (LOO r=0.5020, IS r=0.5924, gap=0.0903) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tumor_in_gland_only__Ridge_a1: adjusted=0.5008 (LOO r=0.5008, IS r=0.5653, gap=0.0645) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tig+nn_dist__Ridge_a5: adjusted=0.4966 (LOO r=0.4966, IS r=0.6014, gap=0.1049) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tumor_in_gland_only__Ridge_a5: adjusted=0.4945 (LOO r=0.4945, IS r=0.5653, gap=0.0709) [F1=0.4524 QWK=0.4286 Acc=0.4667]
+  tumor_in_gland_only__ElasticNet: adjusted=0.4911 (LOO r=0.4911, IS r=0.5653, gap=0.0742) [F1=0.4524 QWK=0.4286 Acc=0.4667]
+  hc_gland+tig+nn_dist__Ridge_a5: adjusted=0.4752 (LOO r=0.4752, IS r=0.6053, gap=0.1301) [F1=0.4222 QWK=0.3333 Acc=0.4333]
+  gland_frac+tig+nn_dist__Ridge_a5: adjusted=0.4752 (LOO r=0.4752, IS r=0.6053, gap=0.1301) [F1=0.4222 QWK=0.3333 Acc=0.4333]
+  tig+nn_dist__ElasticNet: adjusted=0.4741 (LOO r=0.4741, IS r=0.5998, gap=0.1257) [F1=0.3392 QWK=0.2963 Acc=0.3667]
+  hc_gland+tig+nn_dist__Ridge_a1: adjusted=0.4692 (LOO r=0.4692, IS r=0.6065, gap=0.1373) [F1=0.3935 QWK=0.3226 Acc=0.4000]
+  gland_frac+tig+nn_dist__Ridge_a1: adjusted=0.4692 (LOO r=0.4692, IS r=0.6065, gap=0.1373) [F1=0.3935 QWK=0.3226 Acc=0.4000]
+  hc_gland+tig+nn_dist__ElasticNet: adjusted=0.4330 (LOO r=0.4402, IS r=0.6048, gap=0.1646) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  gland_frac+tig+nn_dist__ElasticNet: adjusted=0.4330 (LOO r=0.4402, IS r=0.6048, gap=0.1646) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  bio_coloc+gland_frac+nn_dist__Ridge_a1: adjusted=0.3775 (LOO r=0.3775, IS r=0.5045, gap=0.1269) [F1=0.2952 QWK=0.2400 Acc=0.3667]
+  bio_coloc+gland_frac+nn_dist__Ridge_a5: adjusted=0.3663 (LOO r=0.3663, IS r=0.5043, gap=0.1380) [F1=0.3095 QWK=0.2500 Acc=0.4000]
+  hc_gland+nn_dist__Ridge_a1: adjusted=0.3526 (LOO r=0.3526, IS r=0.4808, gap=0.1283) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gland_frac+nn_dist__Ridge_a1: adjusted=0.3526 (LOO r=0.3526, IS r=0.4808, gap=0.1283) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  hc_gland+nn_dist__Ridge_a5: adjusted=0.3404 (LOO r=0.3404, IS r=0.4808, gap=0.1404) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gland_frac+nn_dist__Ridge_a5: adjusted=0.3404 (LOO r=0.3404, IS r=0.4808, gap=0.1404) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  bio_coloc+gland_frac+nn_dist__ElasticNet: adjusted=0.3041 (LOO r=0.3202, IS r=0.5024, gap=0.1822) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  high_conf_gland_only__Ridge_a1: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  gland_frac_only__Ridge_a1: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  bio_coloc+gland_frac__Ridge_a1: adjusted=0.2967 (LOO r=0.2967, IS r=0.4388, gap=0.1421) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  hc_gland+bio_coloc__Ridge_a1: adjusted=0.2967 (LOO r=0.2967, IS r=0.4388, gap=0.1421) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  high_conf_gland_only__Ridge_a5: adjusted=0.2957 (LOO r=0.2957, IS r=0.4148, gap=0.1191) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gland_frac_only__Ridge_a5: adjusted=0.2957 (LOO r=0.2957, IS r=0.4148, gap=0.1191) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  hc_gland+nn_dist__ElasticNet: adjusted=0.2930 (LOO r=0.3051, IS r=0.4795, gap=0.1743) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  gland_frac+nn_dist__ElasticNet: adjusted=0.2930 (LOO r=0.3051, IS r=0.4795, gap=0.1743) [F1=0.2647 QWK=0.1739 Acc=0.3667]
+  bio_coloc+gland_frac__Ridge_a5: adjusted=0.2919 (LOO r=0.2919, IS r=0.4365, gap=0.1446) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  hc_gland+bio_coloc__Ridge_a5: adjusted=0.2919 (LOO r=0.2919, IS r=0.4365, gap=0.1446) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  high_conf_gland_only__ElasticNet: adjusted=0.2838 (LOO r=0.2838, IS r=0.4148, gap=0.1310) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gland_frac_only__ElasticNet: adjusted=0.2838 (LOO r=0.2838, IS r=0.4148, gap=0.1310) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  hc_gland+bio_coloc__ElasticNet: adjusted=0.2705 (LOO r=0.2746, IS r=0.4329, gap=0.1582) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  bio_coloc+gland_frac__ElasticNet: adjusted=0.2705 (LOO r=0.2746, IS r=0.4329, gap=0.1582) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  mask_area+nn_dist__Ridge_a1: adjusted=0.0906 (LOO r=0.1340, IS r=0.3708, gap=0.2368) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  bio_coloc+mask_area+nn_dist__Ridge_a1: adjusted=0.0683 (LOO r=0.1222, IS r=0.3801, gap=0.2578) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  mask_area+nn_dist__Ridge_a5: adjusted=0.0519 (LOO r=0.1082, IS r=0.3708, gap=0.2626) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  bio_coloc+mask_area+nn_dist__Ridge_a5: adjusted=0.0508 (LOO r=0.1104, IS r=0.3795, gap=0.2691) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+  bio_coloc+nn_dist__Ridge_a1: adjusted=0.0294 (LOO r=0.0810, IS r=0.3343, gap=0.2533) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  mask_area_only__Ridge_a1: adjusted=-0.0032 (LOO r=0.0360, IS r=0.2642, gap=0.2282) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  bio_coloc+nn_dist__Ridge_a5: adjusted=-0.0034 (LOO r=0.0591, IS r=0.3343, gap=0.2751) [F1=0.1954 QWK=0.0870 Acc=0.3000]
+  tumor_in_biomedparse_only__Ridge_a1: adjusted=-0.0069 (LOO r=0.0266, IS r=0.2438, gap=0.2172) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  mask_area_only__Ridge_a5: adjusted=-0.0300 (LOO r=0.0181, IS r=0.2642, gap=0.2461) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  tumor_in_biomedparse_only__Ridge_a5: adjusted=-0.0315 (LOO r=0.0102, IS r=0.2438, gap=0.2335) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  tumor_in_biomedparse_only__ElasticNet: adjusted=-0.1059 (LOO r=-0.0393, IS r=0.2438, gap=0.2831) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  nn_dist_only__Ridge_a1: adjusted=-1.0000 (LOO r=-0.2346, IS r=0.1941, gap=0.4287) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  nn_dist_only__Ridge_a5: adjusted=-1.0000 (LOO r=-0.2615, IS r=0.1941, gap=0.4556) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  nn_dist_only__ElasticNet: adjusted=-1.0000 (LOO r=-0.4741, IS r=0.1941, gap=0.6681) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  mask_area_only__ElasticNet: adjusted=-1.0000 (LOO r=-0.0484, IS r=0.2642, gap=0.3126) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  bio_coloc+nn_dist__ElasticNet: adjusted=-1.0000 (LOO r=-0.0488, IS r=0.3340, gap=0.3829) [F1=0.1404 QWK=0.0000 Acc=0.2667]
+  mask_area+nn_dist__ElasticNet: adjusted=-1.0000 (LOO r=-0.0018, IS r=0.3704, gap=0.3722) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  bio_coloc+mask_area+nn_dist__ElasticNet: adjusted=-1.0000 (LOO r=-0.0241, IS r=0.3796, gap=0.4037) [F1=0.1538 QWK=0.0000 Acc=0.3000]
+
+BEST: bio_coloc+tig+nn_dist__Ridge_a1 adjusted=0.5444

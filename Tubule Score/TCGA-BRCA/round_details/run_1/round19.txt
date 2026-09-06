@@ -1,0 +1,122 @@
+Round 19 Details
+================================================================================
+
+APPROACH: Test mean_tumor_prob and tumor_nuclei_ratio as new HC features
+CHANGE FROM R18: Added mean_tumor_prob (from musk_tumor probability), std_tumor_prob, frac_high_tumor_prob, and tumor_nuclei_ratio (from stardist_tumor ClassificationNode)
+
+KEY QUESTIONS:
+  1. Does mean_tumor_prob add info beyond gland_ratio and bp_ratio?
+  2. Does tumor_nuclei_ratio from stardist_tumor help?
+  3. Which tumor probability variant is most useful?
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_ratio: r=-0.415 (p=0.023)
+  bp_gland_ratio: r=-0.307 (p=0.099)
+  mean_tumor_prob: constant
+  std_tumor_prob: constant
+  frac_high_tumor_prob: constant
+  tumor_nuclei_ratio: r=+0.071 (p=0.707)
+
+Gland PCA explained variance: 0.9589
+Tumor PCA explained variance: 0.9666
+
+FACTOR ANALYSIS SUMMARY:
+  A (2HC baseline)                   : A_2HC_g4t3_EN01_05                            adj=0.7705 LOO_r=0.770 gap=0.150
+  B (+mean_tumor_prob)               : B_3HC_mtp_g4t3_EN0.01_0.5                     adj=0.7705 LOO_r=0.770 gap=0.150
+  C (+tumor_nuclei_ratio)            : C_3HC_tnr_g4t3_EN0.01_0.5                     adj=0.7322 LOO_r=0.745 gap=0.175
+  D (+both new)                      : D_4HC_both_g4t3_EN0.01_0.5                    adj=0.7322 LOO_r=0.745 gap=0.175
+  E (+std_tumor_prob)                : E_3HC_stp_g4t3_EN0.01_0.5                     adj=0.7705 LOO_r=0.770 gap=0.150
+  F (+frac_high_tumor)               : F_3HC_fhtp_g4t3_EN0.01_0.5                    adj=0.7705 LOO_r=0.770 gap=0.150
+  G (mtp, PC variants)               : G_3HC_mtp_g4t2_EN01_05                        adj=0.7451 LOO_r=0.749 gap=0.157
+  H (tnr, PC variants)               : H_3HC_tnr_g4t2_Rdg2.0                         adj=0.7105 LOO_r=0.725 gap=0.178
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  A_2HC_g4t3_EN01_05: adjusted=0.7705 (LOO r=0.770, IS r=0.920, gap=0.150) [F1=0.679 QWK=0.722]
+  B_3HC_mtp_g4t3_EN0.01_0.5: adjusted=0.7705 (LOO r=0.770, IS r=0.920, gap=0.150) [F1=0.679 QWK=0.722]
+  E_3HC_stp_g4t3_EN0.01_0.5: adjusted=0.7705 (LOO r=0.770, IS r=0.920, gap=0.150) [F1=0.679 QWK=0.722]
+  F_3HC_fhtp_g4t3_EN0.01_0.5: adjusted=0.7705 (LOO r=0.770, IS r=0.920, gap=0.150) [F1=0.679 QWK=0.722]
+  B_3HC_mtp_g4t3_EN0.01_0.3: adjusted=0.7698 (LOO r=0.770, IS r=0.920, gap=0.150) [F1=0.679 QWK=0.722]
+  A_2HC_g4t3_Rdg1.5: adjusted=0.7616 (LOO r=0.764, IS r=0.918, gap=0.154) [F1=0.679 QWK=0.722]
+  A_2HC_g4t3_Rdg2: adjusted=0.7584 (LOO r=0.761, IS r=0.917, gap=0.156) [F1=0.679 QWK=0.722]
+  B_3HC_mtp_g4t3_Rdg2.0: adjusted=0.7584 (LOO r=0.761, IS r=0.917, gap=0.156) [F1=0.679 QWK=0.722]
+  E_3HC_stp_g4t3_Rdg2.0: adjusted=0.7584 (LOO r=0.761, IS r=0.917, gap=0.156) [F1=0.679 QWK=0.722]
+  F_3HC_fhtp_g4t3_Rdg2.0: adjusted=0.7584 (LOO r=0.761, IS r=0.917, gap=0.156) [F1=0.679 QWK=0.722]
+  A_2HC_g4t3_Rdg2.5: adjusted=0.7550 (LOO r=0.759, IS r=0.916, gap=0.157) [F1=0.710 QWK=0.743]
+  B_3HC_mtp_g4t3_Rdg3.0: adjusted=0.7523 (LOO r=0.756, IS r=0.915, gap=0.158) [F1=0.710 QWK=0.743]
+  E_3HC_stp_g4t3_Rdg3.0: adjusted=0.7523 (LOO r=0.756, IS r=0.915, gap=0.158) [F1=0.710 QWK=0.743]
+  F_3HC_fhtp_g4t3_Rdg3.0: adjusted=0.7523 (LOO r=0.756, IS r=0.915, gap=0.158) [F1=0.710 QWK=0.743]
+  B_3HC_mtp_g4t3_EN0.05_0.3: adjusted=0.7470 (LOO r=0.753, IS r=0.913, gap=0.161) [F1=0.642 QWK=0.686]
+  G_3HC_mtp_g4t2_EN01_05: adjusted=0.7451 (LOO r=0.749, IS r=0.906, gap=0.157) [F1=0.641 QWK=0.667]
+  G_3HC_mtp_g4t4_Rdg2.0: adjusted=0.7424 (LOO r=0.751, IS r=0.917, gap=0.167) [F1=0.646 QWK=0.686]
+  G_3HC_mtp_g4t2_Rdg2.0: adjusted=0.7409 (LOO r=0.744, IS r=0.900, gap=0.156) [F1=0.641 QWK=0.667]
+  G_3HC_mtp_g4t4_EN01_05: adjusted=0.7403 (LOO r=0.750, IS r=0.920, gap=0.170) [F1=0.646 QWK=0.686]
+  B_3HC_mtp_g4t3_Rdg5.0: adjusted=0.7399 (LOO r=0.747, IS r=0.910, gap=0.164) [F1=0.644 QWK=0.667]
+  C_3HC_tnr_g4t3_EN0.01_0.5: adjusted=0.7322 (LOO r=0.745, IS r=0.920, gap=0.175) [F1=0.644 QWK=0.703]
+  D_4HC_both_g4t3_EN0.01_0.5: adjusted=0.7322 (LOO r=0.745, IS r=0.920, gap=0.175) [F1=0.644 QWK=0.703]
+  D_4HC_both_g4t3_Rdg2.0: adjusted=0.7286 (LOO r=0.741, IS r=0.916, gap=0.175) [F1=0.708 QWK=0.757]
+  C_3HC_tnr_g4t3_Rdg2.0: adjusted=0.7286 (LOO r=0.741, IS r=0.916, gap=0.175) [F1=0.708 QWK=0.757]
+  C_3HC_tnr_g4t3_Rdg3.0: adjusted=0.7264 (LOO r=0.739, IS r=0.913, gap=0.175) [F1=0.676 QWK=0.722]
+  D_4HC_both_g4t3_Rdg3.0: adjusted=0.7264 (LOO r=0.739, IS r=0.913, gap=0.175) [F1=0.676 QWK=0.722]
+  C_3HC_tnr_g4t3_Rdg5.0: adjusted=0.7213 (LOO r=0.734, IS r=0.909, gap=0.175) [F1=0.611 QWK=0.647]
+  D_4HC_both_g4t3_Rdg5.0: adjusted=0.7213 (LOO r=0.734, IS r=0.909, gap=0.175) [F1=0.611 QWK=0.647]
+  H_3HC_tnr_g4t2_Rdg2.0: adjusted=0.7105 (LOO r=0.725, IS r=0.903, gap=0.178) [F1=0.611 QWK=0.647]
+  C_3HC_tnr_g4t3_EN0.05_0.3: adjusted=0.7086 (LOO r=0.727, IS r=0.913, gap=0.186) [F1=0.676 QWK=0.722]
+  D_4HC_both_g4t3_EN0.05_0.3: adjusted=0.7086 (LOO r=0.727, IS r=0.913, gap=0.186) [F1=0.676 QWK=0.722]
+  H_3HC_tnr_g4t2_EN01_05: adjusted=0.7075 (LOO r=0.725, IS r=0.909, gap=0.184) [F1=0.611 QWK=0.647]
+  G_3HC_mtp_g5t3_EN01_05: adjusted=0.6794 (LOO r=0.712, IS r=0.926, gap=0.215) [F1=0.607 QWK=0.625]
+  G_3HC_mtp_g5t3_Rdg2.0: adjusted=0.6757 (LOO r=0.708, IS r=0.922, gap=0.214) [F1=0.607 QWK=0.625]
+  H_3HC_tnr_g5t3_Rdg2.0: adjusted=0.6692 (LOO r=0.703, IS r=0.921, gap=0.218) [F1=0.575 QWK=0.606]
+  H_3HC_tnr_g5t3_EN01_05: adjusted=0.6651 (LOO r=0.702, IS r=0.926, gap=0.224) [F1=0.575 QWK=0.606]
+  G_3HC_mtp_g3t3_Rdg2.0: adjusted=-1.0000 (LOO r=0.530, IS r=0.840, gap=0.310) [F1=0.459 QWK=0.424]
+  G_3HC_mtp_g3t3_EN01_05: adjusted=-1.0000 (LOO r=0.504, IS r=0.840, gap=0.336) [F1=0.484 QWK=0.438]
+  H_3HC_tnr_g3t3_Rdg2.0: adjusted=-1.0000 (LOO r=0.518, IS r=0.841, gap=0.324) [F1=0.459 QWK=0.424]
+  H_3HC_tnr_g3t3_EN01_05: adjusted=-1.0000 (LOO r=0.490, IS r=0.841, gap=0.351) [F1=0.459 QWK=0.424]
+
+BEST: A_2HC_g4t3_EN01_05 adjusted=0.7705
+Selected gland PCs (IS): [1, 5, 9, 16]
+Selected tumor PCs (IS): [1, 4, 7]
+Model: elasticnet, params={'alpha': 0.01, 'l1_ratio': 0.5}
+
+PER-CASE LOO PREDICTIONS:
+  TCGA-A2-A0CS         GT=2 pred=1.870 cls=2 ok gr=0.511 bp=0.0292 mtp=0.000 tnr=0.126
+  TCGA-A2-A0ET         GT=2 pred=2.568 cls=3 MISS gr=0.112 bp=0.0264 mtp=0.000 tnr=0.701
+  TCGA-A7-A0D9         GT=2 pred=2.029 cls=2 ok gr=0.501 bp=0.0275 mtp=0.000 tnr=0.311
+  TCGA-A7-A3IY         GT=1 pred=1.000 cls=1 ok gr=0.509 bp=0.0454 mtp=0.000 tnr=0.487
+  TCGA-AC-A23E         GT=1 pred=1.727 cls=2 MISS gr=0.438 bp=0.0325 mtp=0.000 tnr=0.036
+  TCGA-AC-A2FM         GT=2 pred=2.214 cls=2 ok gr=0.080 bp=0.0294 mtp=0.000 tnr=0.206
+  TCGA-AC-A3TN         GT=1 pred=1.344 cls=1 ok gr=0.224 bp=0.0241 mtp=0.000 tnr=0.082
+  TCGA-AC-A7VB         GT=2 pred=1.889 cls=2 ok gr=0.107 bp=0.0222 mtp=0.000 tnr=0.354
+  TCGA-AR-A0U4         GT=3 pred=1.950 cls=2 MISS gr=0.055 bp=0.0187 mtp=0.000 tnr=0.504
+  TCGA-AR-A1AR         GT=3 pred=2.817 cls=3 ok gr=0.032 bp=0.0126 mtp=0.000 tnr=0.155
+  TCGA-AR-A2LO         GT=3 pred=2.705 cls=3 ok gr=0.119 bp=0.0152 mtp=0.000 tnr=0.117
+  TCGA-BH-A0B8         GT=3 pred=1.850 cls=2 MISS gr=0.105 bp=0.0317 mtp=0.000 tnr=0.531
+  TCGA-BH-A0C3         GT=3 pred=2.264 cls=2 MISS gr=0.167 bp=0.0235 mtp=0.000 tnr=0.240
+  TCGA-BH-A0DX         GT=1 pred=1.299 cls=1 ok gr=0.081 bp=0.0156 mtp=0.000 tnr=0.243
+  TCGA-BH-A0W4         GT=1 pred=1.321 cls=1 ok gr=0.260 bp=0.0208 mtp=0.000 tnr=0.304
+  TCGA-BH-A42V         GT=2 pred=2.532 cls=3 MISS gr=0.236 bp=0.0221 mtp=0.000 tnr=0.298
+  TCGA-D8-A1XD         GT=2 pred=1.589 cls=2 ok gr=0.187 bp=0.0674 mtp=0.000 tnr=0.254
+  TCGA-D8-A1XT         GT=3 pred=2.434 cls=2 MISS gr=0.160 bp=0.0258 mtp=0.000 tnr=0.270
+  TCGA-D8-A27N         GT=3 pred=2.951 cls=3 ok gr=0.290 bp=0.0319 mtp=0.000 tnr=0.476
+  TCGA-D8-A27P         GT=1 pred=1.653 cls=2 MISS gr=0.197 bp=0.0445 mtp=0.000 tnr=0.364
+  TCGA-D8-A4Z1         GT=3 pred=2.650 cls=3 ok gr=0.085 bp=0.0154 mtp=0.000 tnr=0.211
+  TCGA-D8-A73X         GT=1 pred=1.158 cls=1 ok gr=0.353 bp=0.0432 mtp=0.000 tnr=0.337
+  TCGA-E2-A10E         GT=2 pred=2.574 cls=3 MISS gr=0.175 bp=0.0200 mtp=0.000 tnr=0.418
+  TCGA-E2-A14W         GT=3 pred=2.513 cls=3 ok gr=0.063 bp=0.0381 mtp=0.000 tnr=0.431
+  TCGA-E2-A1B1         GT=1 pred=1.000 cls=1 ok gr=0.158 bp=0.0107 mtp=0.000 tnr=0.191
+  TCGA-E2-A1IG         GT=2 pred=1.979 cls=2 ok gr=0.481 bp=0.0270 mtp=0.000 tnr=0.331
+  TCGA-EW-A1IY         GT=2 pred=1.878 cls=2 ok gr=0.194 bp=0.0196 mtp=0.000 tnr=0.509
+  TCGA-EW-A1PH         GT=3 pred=2.546 cls=3 ok gr=0.235 bp=0.0265 mtp=0.000 tnr=0.333
+  TCGA-LL-A5YO         GT=1 pred=2.326 cls=2 MISS gr=0.093 bp=0.0343 mtp=0.000 tnr=0.170
+  TCGA-OL-A5RX         GT=1 pred=1.000 cls=1 ok gr=0.814 bp=0.0778 mtp=0.000 tnr=0.759
+
+ERROR ANALYSIS:
+  TCGA-A2-A0ET: GT=2 pred=2.568 cls=3 (over) gr=0.112 bp=0.0264 mtp=0.000 tnr=0.701
+  TCGA-AC-A23E: GT=1 pred=1.727 cls=2 (over) gr=0.438 bp=0.0325 mtp=0.000 tnr=0.036
+  TCGA-AR-A0U4: GT=3 pred=1.950 cls=2 (under) gr=0.055 bp=0.0187 mtp=0.000 tnr=0.504
+  TCGA-BH-A0B8: GT=3 pred=1.850 cls=2 (under) gr=0.105 bp=0.0317 mtp=0.000 tnr=0.531
+  TCGA-BH-A0C3: GT=3 pred=2.264 cls=2 (under) gr=0.167 bp=0.0235 mtp=0.000 tnr=0.240
+  TCGA-BH-A42V: GT=2 pred=2.532 cls=3 (over) gr=0.236 bp=0.0221 mtp=0.000 tnr=0.298
+  TCGA-D8-A1XT: GT=3 pred=2.434 cls=2 (under) gr=0.160 bp=0.0258 mtp=0.000 tnr=0.270
+  TCGA-D8-A27P: GT=1 pred=1.653 cls=2 (over) gr=0.197 bp=0.0445 mtp=0.000 tnr=0.364
+  TCGA-E2-A10E: GT=2 pred=2.574 cls=3 (over) gr=0.175 bp=0.0200 mtp=0.000 tnr=0.418
+  TCGA-LL-A5YO: GT=1 pred=2.326 cls=2 (over) gr=0.093 bp=0.0343 mtp=0.000 tnr=0.170

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -R \"Adjusted Score\" -n /shared /data/autoresearch_runs | sed -n '1,40p' || true\ngrep -R \"\\\"adjusted_score\\\"\" -n /data/autoresearch_runs | sed -n '1,40p' || true",
+    "output_preview": "{\"exit_code\": -1, \"stdout\": \"\", \"stderr\": \"Command timed out after 300s\"}"
+  }
+]

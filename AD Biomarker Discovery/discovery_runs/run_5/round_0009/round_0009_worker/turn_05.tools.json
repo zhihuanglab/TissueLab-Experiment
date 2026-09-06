@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho 'Shared top-level:'\nfind /shared -maxdepth 2 -type d | sort | sed -n '1,40p'\necho\necho 'Search for sea_ad_lfb.py and templates:'\nfind /shared -maxdepth 4 \\( -name 'sea_ad_lfb.py' -o -name 'worker_embedding_mechanistic_template.py' -o -name 'worker_analysis_template.py' -o -name 'stats.py' \\) | sort\necho\necho 'One zarr tree sample:'\nfind /data/H19.33.004-A12-LFB.svs.zarr -maxdepth 3 | sed -n '1,80p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"Shared top-level:\\n/shared\\n/shared/cache\\n/shared/cache/region_polygons\\n/shared/lib\\n/shared/lib/shared_analysis\\n/shared/templates\\n/shared/templates/__pycache__\\n\\nSearch for sea_ad_lfb.py and templates:\\n/shared/lib/shared_analysis/sea_ad_lfb.py\\n/shared/lib/shared_analysis/stats.py\\n/shared/templates/worker_analysis_template.py\\n/shared/templates/worker_embedding_mechanistic_template.py\\n\\nOne zarr tree sample:\\n/data/H19.33.004-A12-LFB.svs.zarr\\n\", \"stderr\": \"\"}"
+  }
+]

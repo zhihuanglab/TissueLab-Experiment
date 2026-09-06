@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nimport json\nres=json.load(open('/scratch/results.json'))\nprint({k:res[k] for k in ['bootstrap_median_partial_r','bootstrap_sign_consistency','ci_lo','ci_hi']})\nfor r in res['ranked_variations']:\n    print(r['name'], r['bootstrap_median_partial_r'], r['bootstrap_sign_consistency'], r['ci_lo'], r['ci_hi'])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"{'bootstrap_median_partial_r': -0.38516676747386736, 'bootstrap_sign_consistency': 0.9225, 'ci_lo': -0.7105794891047611, 'ci_hi': 0.3260981925926482}\\ncandidate_variant_a -0.38516676747386736 0.9225 -0.7105794891047611 0.3260981925926482\\ncandidate_variant_b -0.24104830231792135 0.975 -0.5747563516163277 0.23396382610817942\\n\", \"stderr\": \"\"}"
+  }
+]

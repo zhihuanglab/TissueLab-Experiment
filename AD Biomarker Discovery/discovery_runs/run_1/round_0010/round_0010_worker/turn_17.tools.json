@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nnl -ba /scratch/result.py | sed -n '326,344p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"   326\\t        if frame.empty:\\n   327\\t            return \\\"none\\\"\\n   328\\t        items = []\\n   329\\t        for _, row in frame.iterrows():\\n   330\\t            items.append(\\n   331\\t                f'{row[\\\"donor_id\\\"]} (err={row[\\\"error\\\"]:+.4f}, '\\n   332\\t                f'braak={int(row[\\\"braak_numeric\\\"]) if pd.notna(row[\\\"braak_numeric\\\"]) else \\\"NA\\\"}, '\\n   333\\t                f'cerad={int(row[\\\"cerad_ordinal\\\"]) if pd.notna(row[\\\"cerad_ordinal\\\"]) else \\\"NA\\\"}, '\\n   334\\t                f'{row[\\\"cognitive_status\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys\nsys.path.append('/shared/lib')\nimport zarr, pandas as pd\ncohort = pd.read_csv('/data/training_cohort.csv')\npath = '/data/' + cohort.iloc[0]['slide_name']\nroot = zarr.open(path, mode='r')\nprint(root['SegmentationNode']['centroids'].shape, root['SegmentationNode']['centroids'].dtype)\nprint(root['SegmentationNode']['contours'].shape, root['SegmentationNode']['contours'].dtype)\nprint(root['ClassificationNode']['nuclei_class_id'].shape, root['ClassificationNode']['nuclei_class_id'].dtype)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"(263786, 2) int32\\n(263786, 32, 2) float32\\n(263786,) int32\\n\", \"stderr\": \"\"}"
+  }
+]

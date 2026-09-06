@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nexport PYTHONPATH=/shared/lib:${PYTHONPATH:-}\npython - <<'PY'\nfrom pathlib import Path\nfrom shared_analysis import load_training_cohort, build_cell_table\ncohort=load_training_cohort('/data')\nrow=cohort.iloc[0]\nprint('sample donor', row['donor_id'], row['slide_name'])\ncells=build_cell_table(Path('/data')/row['slide_name'], include_regions=True, include_geometry=False)\nprint(cells.head().to_string())\nprint('columns:', list(cells.columns))\nfor col in ['cell_type','predicted_class','region_label','region_name','x_centroid','y_centroid','centroid_x','centroid_y']:\n    if col in cells.columns:\n        vals=cells[col].dropna().astype(str).unique()[:20]\n        print(col, vals)\nprint('n=', len(cells))\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 2, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

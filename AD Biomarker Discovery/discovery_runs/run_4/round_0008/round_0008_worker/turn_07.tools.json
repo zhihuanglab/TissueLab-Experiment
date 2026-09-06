@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect, textwrap\nsys.path.insert(0, '/shared/lib')\nimport shared_analysis.stats as st\nimport shared_analysis.artifacts as art\nimport shared_analysis.sea_ad_lfb as sea\nprint('--- stats.leave_one_out_summary ---')\nprint(textwrap.dedent(inspect.getsource(st.leave_one_out_summary))[:5000])\nprint('--- stats.partial_correlation ---')\nprint(textwrap.dedent(inspect.getsource(st.partial_correlation))[:3000])\nprint('--- artifacts write helpers ---')\nfor name in ['write_donor_feature_table','build_results_payload','write_results_payload','coerce_results_payload','validate_results_payload']:\n    print(f'FUNCTION {name}')\n    print(textwrap.dedent(inspect.getsource(getattr(art,name)))[:2500])\n    print()\nprint('--- sea_ad_lfb.build_cell_table ---')\nprint(textwrap.dedent(inspect.getsource(sea.build_cell_table))[:5000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- stats.leave_one_out_summary ---\\ndef leave_one_out_summary(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n    id_col: str | None = None,\\n    unstable_delta: float = 0.10,\\n) -> dict[str, object]:\\n    loo = leave_one_out_partial_correlation(\\n        df,\\n        feature_col=feature_col,\\n        outcome_col=outcome_col,\\n        confounds=confounds,\\n        id_col=id_col,\\n    )\\n    if loo.empty:\\n        return {\\\"max_shift\\\": float(\\\"nan\\\"), \\\"unstab\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython -m py_compile /scratch/result.py\necho 'result.py syntax OK'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"result.py syntax OK\\n\", \"stderr\": \"\"}"
+  }
+]

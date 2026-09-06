@@ -1,0 +1,325 @@
+{
+  "status": "ok",
+  "feature_name": "ca1_ra_proximal_small_pyramidal_fraction_q33_r80",
+  "outcome": "slope_zmem0",
+  "n_total": 35,
+  "n_analyzable": 35,
+  "partial_r": 0.32874343079267515,
+  "ci_lo": null,
+  "ci_hi": null,
+  "p_value": 0.05382836539435236,
+  "loo_predictive_r": 0.22589468605826674,
+  "loo_unstable_count": 0,
+  "loo_max_shift": 0.08716440311912244,
+  "donor_ids_used": [
+    "H19.33.004",
+    "H20.33.008",
+    "H20.33.013",
+    "H20.33.018",
+    "H20.33.024",
+    "H20.33.025",
+    "H20.33.027",
+    "H20.33.029",
+    "H20.33.030",
+    "H20.33.034",
+    "H20.33.037",
+    "H20.33.038",
+    "H20.33.040",
+    "H20.33.041",
+    "H20.33.043",
+    "H20.33.044",
+    "H20.33.046",
+    "H21.33.001",
+    "H21.33.004",
+    "H21.33.006",
+    "H21.33.007",
+    "H21.33.012",
+    "H21.33.013",
+    "H21.33.018",
+    "H21.33.021",
+    "H21.33.023",
+    "H21.33.025",
+    "H21.33.033",
+    "H21.33.035",
+    "H21.33.037",
+    "H21.33.038",
+    "H21.33.040",
+    "H21.33.043",
+    "H21.33.044",
+    "H21.33.046"
+  ],
+  "covariates": [
+    "max_age_vis",
+    "braak_numeric",
+    "cerad_ordinal",
+    "sex_binary"
+  ],
+  "recomputed_from_raw": true,
+  "registry_written": false,
+  "artifacts": {
+    "donor_feature_table": "/scratch/donor_feature_table.csv",
+    "report": "/scratch/report.md"
+  },
+  "best_variation": "candidate_variant_b",
+  "ranked_variations": [
+    {
+      "name": "candidate_variant_b",
+      "description": "80 px reactive-astrocyte radius; small pyramidal neurons defined below donor CA1 pyramidal area 33rd percentile.",
+      "feature_name": "ca1_ra_proximal_small_pyramidal_fraction_q33_r80",
+      "feature_column": "ca1_ra_proximal_small_pyramidal_fraction_q33_r80",
+      "radius_px": 80.0,
+      "small_quantile": 0.33,
+      "n_analyzable": 35,
+      "coverage_ratio": 1.0,
+      "partial_r": 0.32874343079267515,
+      "p_value": 0.05382836539435236,
+      "selection_score": 0.32874343079267515,
+      "loo_predictive_r": 0.22589468605826674,
+      "gap": 0.10284874473440841,
+      "penalty": 0.0,
+      "adjusted_score": 0.22589468605826674,
+      "loo_unstable_count": 0,
+      "loo_max_shift": 0.08716440311912244,
+      "unstable_donors": []
+    },
+    {
+      "name": "candidate_variant_a",
+      "description": "80 px reactive-astrocyte radius; small pyramidal neurons defined below donor CA1 pyramidal area 25th percentile.",
+      "feature_name": "ca1_ra_proximal_small_pyramidal_fraction_q25_r80",
+      "feature_column": "ca1_ra_proximal_small_pyramidal_fraction_q25_r80",
+      "radius_px": 80.0,
+      "small_quantile": 0.25,
+      "n_analyzable": 35,
+      "coverage_ratio": 1.0,
+      "partial_r": 0.256777688006866,
+      "p_value": 0.136476055091744,
+      "selection_score": 0.256777688006866,
+      "loo_predictive_r": 0.12765510102595207,
+      "gap": 0.12912258698091394,
+      "penalty": 0.0,
+      "adjusted_score": 0.12765510102595207,
+      "loo_unstable_count": 0,
+      "loo_max_shift": 0.09563990818165574,
+      "unstable_donors": []
+    }
+  ],
+  "selection_score": 0.32874343079267515,
+  "is_loo_gap": 0.10284874473440841,
+  "gap_penalty": 0.0,
+  "adjusted_score": 0.22589468605826674,
+  "feature_column": "ca1_ra_proximal_small_pyramidal_fraction_q33_r80",
+  "coverage_ratio": 1.0,
+  "hypothesis_family": "ca1_reactive_astrocyte_proximal_small_pyramidal_fraction",
+  "loo_predictions": [
+    {
+      "donor_id": "H19.33.004",
+      "outcome": -0.0587685,
+      "predicted": -0.05149576697117467,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.4250614250614251
+    },
+    {
+      "donor_id": "H20.33.008",
+      "outcome": -0.1205063,
+      "predicted": -0.13977856627050433,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.354978354978355
+    },
+    {
+      "donor_id": "H20.33.013",
+      "outcome": -0.0317417,
+      "predicted": -0.08948603410737922,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3684210526315789
+    },
+    {
+      "donor_id": "H20.33.018",
+      "outcome": -0.3042141,
+      "predicted": -0.11230932950096005,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3412969283276451
+    },
+    {
+      "donor_id": "H20.33.024",
+      "outcome": -0.0103346,
+      "predicted": -0.09513532760196891,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.34994462901439644
+    },
+    {
+      "donor_id": "H20.33.025",
+      "outcome": -0.0723104,
+      "predicted": -0.10474273079332325,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3524416135881104
+    },
+    {
+      "donor_id": "H20.33.027",
+      "outcome": -0.1125932,
+      "predicted": -0.10852110920286069,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.39705882352941174
+    },
+    {
+      "donor_id": "H20.33.029",
+      "outcome": -0.0948095,
+      "predicted": -0.15525459912739706,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.33533653846153844
+    },
+    {
+      "donor_id": "H20.33.030",
+      "outcome": -0.1680423,
+      "predicted": -0.14812169349496787,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.35261194029850745
+    },
+    {
+      "donor_id": "H20.33.034",
+      "outcome": -0.0522007,
+      "predicted": 0.04299875862164769,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.5125
+    },
+    {
+      "donor_id": "H20.33.037",
+      "outcome": -0.2508045,
+      "predicted": -0.13719516179855556,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.36272040302267
+    },
+    {
+      "donor_id": "H20.33.038",
+      "outcome": -0.2372091,
+      "predicted": -0.1676220531169456,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3035019455252918
+    },
+    {
+      "donor_id": "H20.33.040",
+      "outcome": -0.1026342,
+      "predicted": -0.14379865551952786,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3050058207217695
+    },
+    {
+      "donor_id": "H20.33.041",
+      "outcome": -0.1079018,
+      "predicted": -0.14496842058424456,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.34375
+    },
+    {
+      "donor_id": "H20.33.043",
+      "outcome": -0.0599597,
+      "predicted": -0.08227231138700003,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.33810375670840787
+    },
+    {
+      "donor_id": "H20.33.044",
+      "outcome": -0.0544588,
+      "predicted": -0.07441560268865816,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.34210526315789475
+    },
+    {
+      "donor_id": "H20.33.046",
+      "outcome": -0.2017114,
+      "predicted": -0.13277481234898586,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.31788079470198677
+    },
+    {
+      "donor_id": "H21.33.001",
+      "outcome": -0.0815782,
+      "predicted": -0.04556635582494495,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.33399602385685884
+    },
+    {
+      "donor_id": "H21.33.004",
+      "outcome": -0.1198253,
+      "predicted": -0.03371686869100761,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.33617021276595743
+    },
+    {
+      "donor_id": "H21.33.006",
+      "outcome": -0.0539668,
+      "predicted": -0.10121854387979178,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3246268656716418
+    },
+    {
+      "donor_id": "H21.33.007",
+      "outcome": -0.0975144,
+      "predicted": -0.14007488697880316,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.376425855513308
+    },
+    {
+      "donor_id": "H21.33.012",
+      "outcome": -0.1009244,
+      "predicted": -0.11783139551610766,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.35185185185185186
+    },
+    {
+      "donor_id": "H21.33.013",
+      "outcome": -0.161261,
+      "predicted": -0.1252026302995248,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.36666666666666664
+    },
+    {
+      "donor_id": "H21.33.018",
+      "outcome": -0.144019,
+      "predicted": -0.08217706698594474,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3770491803278688
+    },
+    {
+      "donor_id": "H21.33.021",
+      "outcome": -0.0983582,
+      "predicted": -0.10281203028649798,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3231552162849873
+    },
+    {
+      "donor_id": "H21.33.023",
+      "outcome": -0.1546294,
+      "predicted": -0.012156860263365814,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.38380281690140844
+    },
+    {
+      "donor_id": "H21.33.025",
+      "outcome": -0.0422854,
+      "predicted": -0.12017506347594627,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.37193763919821826
+    },
+    {
+      "donor_id": "H21.33.033",
+      "outcome": -0.0466362,
+      "predicted": -0.11319866678664862,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.39732142857142855
+    },
+    {
+      "donor_id": "H21.33.035",
+      "outcome": -0.0498238,
+      "predicted": -0.14465041200759773,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3717105263157895
+    },
+    {
+      "donor_id": "H21.33.037",
+      "outcome": -0.0881349,
+      "predicted": -0.07502673594601333,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.38902147971360385
+    },
+    {
+      "donor_id": "H21.33.038",
+      "outcome": -0.0518276,
+      "predicted": -0.09336343319051442,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.35294117647058826
+    },
+    {
+      "donor_id": "H21.33.040",
+      "outcome": -0.0327944,
+      "predicted": -0.108034280217907,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3987341772151899
+    },
+    {
+      "donor_id": "H21.33.043",
+      "outcome": -0.072355,
+      "predicted": -0.09689976994659635,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3638132295719844
+    },
+    {
+      "donor_id": "H21.33.044",
+      "outcome": -0.0991281,
+      "predicted": -0.1363649927313707,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.40141557128412536
+    },
+    {
+      "donor_id": "H21.33.046",
+      "outcome": -0.1616234,
+      "predicted": -0.09018928497310752,
+      "ca1_ra_proximal_small_pyramidal_fraction_q33_r80": 0.3598673300165838
+    }
+  ]
+}

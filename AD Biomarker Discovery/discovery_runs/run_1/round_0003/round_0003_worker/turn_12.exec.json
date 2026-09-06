@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "def write_donor_feature_table(\n    path: str | Path,\n    table: pd.DataFrame,\n    *,\n    feature_column: str,\n    outcome_column: str,\n    covariates: list[str],\n    id_columns: list[str] | None = None,\n    extra_columns: list[str] | None = None,\n) -> Path:\n    id_columns = id_columns or [\"donor_id\", \"slide_name\"]\n    extra_columns = extra_columns or []\n    resolved_covariates = resolve_covariate_names(table.columns, covariates)\n    issues = validate_donor_feature_table_columns(\n        table.columns,\n        feature_column=feature_column,\n        outcome_column=outcome_column,\n        covariates=resolved_covariates,\n    )\n    if issues:\n        raise ValueError(\"; \".join(issues))\n\n    ordered_cols: list[str] = []\n    for col in [*id_columns, feature_column, outcome_column, *resolved_covariates, *extra_columns]:\n        if col in table.columns and col not in ordered_cols:\n            ordered_cols.append(col)\n\n    path = Path(path)\n    path.parent.mkdir(parents=True, exist_ok=True)\n    table.loc[:, ordered_cols].to_csv(path, index=False)\n    return path\n\n",
+  "stderr": ""
+}

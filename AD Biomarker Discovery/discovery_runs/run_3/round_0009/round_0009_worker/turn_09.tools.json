@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, os\nsys.path.insert(0,'/shared/lib')\nfrom pathlib import Path\nfrom shared_analysis.sea_ad_lfb import build_cell_table, load_training_cohort\nimport numpy as np\ndata_root=Path('/data')\nrow=load_training_cohort(data_root).iloc[0]\ncells=build_cell_table(data_root/row['slide_name'], include_regions=False)\nprint('x range', float(cells.x.min()), float(cells.x.max()))\nprint('y range', float(cells.y.min()), float(cells.y.max()))\ntry:\n    import openslide\n    slide=openslide.OpenSlide(str(data_root/row['slide_name'].replace('.zarr','')))\n    print('slide dims', slide.dimensions)\n    print('mpp', slide.properties.get('aperio.MPP'))\nexcept Exception as e:\n    print('openslide failed', repr(e))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"x range 1.0 67323.0\\ny range 43.0 37776.0\\nslide dims (67728, 39040)\\nmpp 0.5049\\n\", \"stderr\": \"\"}"
+  }
+]

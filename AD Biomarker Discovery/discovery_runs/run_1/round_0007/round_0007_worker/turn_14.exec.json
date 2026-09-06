@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "        \"include_geometry\": INCLUDE_GEOMETRY,\n        \"chunk_size\": CHUNK_SIZE,\n    }\n\n\ndef _adjusted_metrics(partial_r: float | None, loo_predictive_r: float | None) -> tuple[float, float, float]:\n    is_r = abs(float(partial_r)) if partial_r is not None and np.isfinite(partial_r) else 0.0\n    loo_r = abs(float(loo_predictive_r)) if loo_predictive_r is not None and np.isfinite(loo_predictive_r) else 0.0\n    gap = is_r - loo_r\n    if gap > 0.30:\n        return float(gap), float(gap), -1.0\n    penalty = max(0.0, gap - 0.15) * 0.5\n    return float(gap), float(penalty), float(loo_r - penalty)\n\n\ndef _selection_score(partial_r: float | None, n_analyzable: int | None, n_total: int | None) -> float:\n    if partial_r is None or not np.isfinite(partial_r):\n        return float(\"nan\")\n    if n_analyzable is None or n_total is None or n_total <= 0:\n",
+  "stderr": ""
+}

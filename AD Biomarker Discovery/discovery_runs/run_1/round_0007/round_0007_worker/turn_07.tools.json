@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0, '/shared/lib')\nimport shared_analysis.sea_ad_lfb as lfb\nimport shared_analysis.stats as stats\nimport shared_analysis.artifacts as artifacts\n\ntargets = [\n    ('build_cell_table', lfb.build_cell_table),\n    ('compute_contour_geometry', lfb.compute_contour_geometry),\n    ('partial_correlation', stats.partial_correlation),\n    ('residualized_loo_predictive_correlation', stats.residualized_loo_predictive_correlation),\n    ('leave_one_out_summary', stats.leave_one_out_summary),\n    ('write_donor_feature_table', artifacts.write_donor_feature_table),\n]\nfor name, obj in targets:\n    print(f'\\n=== {name} signature ===')\n    print(inspect.signature(obj))\n    src = inspect.getsource(obj).splitlines()\n    for line in src[:120]:\n        print(line)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\n=== build_cell_table signature ===\\n(zarr_path: 'str | Path', *, include_regions: 'bool' = True, include_geometry: 'bool' = False, scale: 'float' = 16.0) -> 'pd.DataFrame'\\ndef build_cell_table(\\n    zarr_path: str | Path,\\n    *,\\n    include_regions: bool = True,\\n    include_geometry: bool = False,\\n    scale: float = 16.0,\\n) -> pd.DataFrame:\\n    centroids = load_centroids(zarr_path)\\n    class_ids = load_class_ids(zarr_path)\\n    class_lookup = load_class_lookup(zarr_path)\\n    frame = pd.DataFrame(\\n\", \"stderr\": \"\"}"
+  }
+]

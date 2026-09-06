@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "/shared/lib/shared_analysis/stats.py:89:def bootstrap_partial_correlation_stability(\n",
+  "stderr": ""
+}

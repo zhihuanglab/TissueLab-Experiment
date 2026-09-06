@@ -1,0 +1,1 @@
+grep -E '^(CANONICAL_VARIATION|FEATURE_NAME|FEATURE_COLUMN) =' /scratch/result.py

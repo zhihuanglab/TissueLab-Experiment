@@ -1,0 +1,48 @@
+{
+  "worker_name": "round_0003_worker",
+  "round_id": 3,
+  "candidate_id": "ca1-peripyramidal-reactive-astro-crowding",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_reactive_astro_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_pyramidal_near_reactive_astro_fraction_30um",
+        "round_id": 2,
+        "panel_candidate_score": 0.5513,
+        "delta_panel_score": 0.0599,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5513
+  },
+  "scientific_question": "Does the fraction of CA1 pyramidal neurons surrounded by multiple nearby reactive astrocytes predict donor memory decline better than simple any-neighbor exposure?",
+  "approach": "Assign cells to CA1 using the annotation polygons, then take CA1 Pyramidal Neurons as anchor cells and CA1 Reactive Astrocytes as neighbors. For each CA1 pyramidal neuron, count how many CA1 reactive astrocyte centroids fall within a fixed 30 um radius of the pyramidal centroid. The donor-level biomarker is the fraction of CA1 pyramidal neurons whose local reactive-astrocyte count meets a prespecified threshold.",
+  "variations": [
+    {
+      "name": "k2_within_30um",
+      "description": "Fraction of CA1 pyramidal neurons with at least 2 CA1 reactive astrocytes within 30 um."
+    },
+    {
+      "name": "k3_within_30um",
+      "description": "Fraction of CA1 pyramidal neurons with at least 3 CA1 reactive astrocytes within 30 um."
+    }
+  ],
+  "baseline_variation": "k2_within_30um",
+  "notes": "Use centroids from SegmentationNode and cell labels from ClassificationNode. For region assignment, divide CustomAnnotations polygon coordinates by 16 before point-in-polygon testing. Restrict both anchor and neighbor cells to CA1. Centroids are in full-resolution pixel space; convert 30 um to pixels using slide MPP if available, or use the cohort-consistent approximation of about 60 px. If a donor has zero CA1 pyramidal neurons, return NaN rather than forcing 0.",
+  "rationale": "The first two kept panel members point to one coherent signal: CA1 reactive astrocyte burden matters, and it becomes stronger when localized to the pyramidal-neuron niche. The next clean test is whether more severe local reactive-astrocyte crowding around pyramidal neurons carries extra signal beyond overall CA1 reactive astrocyte fraction and the existing binary near-reactive-astro feature. This is a small, interpretable refinement of the current lead and could either add signal or replace the broader peripyramidal exposure metric if it is cleaner."
+}

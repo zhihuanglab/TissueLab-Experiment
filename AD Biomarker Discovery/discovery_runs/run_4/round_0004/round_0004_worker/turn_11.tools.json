@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\ntxt=Path('/shared/templates/worker_embedding_mechanistic_template.py').read_text().splitlines()\nfor start in [70,80,160,180,194]:\n    print(f'--- lines {start}-{start+35} ---')\n    for i in range(start-1,min(start+35,len(txt))):\n        print(f'{i+1}: {txt[i]}')\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- lines 70-105 ---\\n70:     }\\n71: \\n72: \\n73: def _adjusted_metrics(partial_r: float | None, loo_predictive_r: float | None) -> tuple[float, float, float]:\\n74:     is_r = abs(float(partial_r)) if partial_r is not None and np.isfinite(partial_r) else 0.0\\n75:     loo_r = abs(float(loo_predictive_r)) if loo_predictive_r is not None and np.isfinite(loo_predictive_r) else 0.0\\n76:     gap = is_r - loo_r\\n77:     if gap > 0.30:\\n78:         return float(gap), float(gap), -1.0\\n79:     penalty = max(0.0, ga\", \"stderr\": \"\"}"
+  }
+]

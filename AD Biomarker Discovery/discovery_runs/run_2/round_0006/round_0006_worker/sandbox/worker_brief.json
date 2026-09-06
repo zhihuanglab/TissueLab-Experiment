@@ -1,0 +1,81 @@
+{
+  "worker_name": "round_0006_worker",
+  "round_id": 6,
+  "candidate_id": "ca1-pyramidal-hotspot-exposure",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_burden__ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_enrichment__reactive_over_astroglial",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_niche__reactive_over_astroglial_neighbored_pyramidal_fraction_r70px",
+        "round_id": 3,
+        "panel_candidate_score": 0.5076,
+        "delta_panel_score": 0.0005,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_reactive_astrocyte_hypertrophy__reactive_minus_astrocyte_median_log1p_area_ca1",
+        "round_id": 4,
+        "panel_candidate_score": 0.5425,
+        "delta_panel_score": 0.0349,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0004/round_0004_worker/result.py"
+      },
+      {
+        "slot": 5,
+        "feature_name": "feature__reactive_minus_astrocyte_microcluster_fraction_r70px_k3",
+        "round_id": 5,
+        "panel_candidate_score": 0.6581,
+        "delta_panel_score": 0.1156,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0005/round_0005_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0005/round_0005_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0005/round_0005_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.6581
+  },
+  "scientific_question": "Does the fraction of CA1 pyramidal neurons exposed to focal reactive-astrocyte hotspots, relative to exposure to baseline astrocyte hotspots, capture neuron-facing gliosis burden beyond the current CA1 panel?",
+  "approach": "Assign cells to CA1 using annotation polygons after dividing polygon coordinates by 16. Within CA1, identify Pyramidal Neuron, Reactive Astrocyte, and Astrocyte centroids. Define a reactive hotspot cell as a CA1 Reactive Astrocyte with at least k same-label Reactive Astrocyte neighbors within 70 px, excluding self; define an astrocyte hotspot cell analogously for CA1 Astrocytes. For each CA1 pyramidal neuron, mark whether it lies within 70 px of at least one reactive hotspot cell and whether it lies within 70 px of at least one astrocyte hotspot cell. Compute reactive hotspot exposure fraction across CA1 pyramidal neurons and astrocyte hotspot exposure fraction across the same denominator. The donor-level biomarker is reactive exposure fraction minus astrocyte exposure fraction.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Baseline hotspot stringency: hotspot defined as at least 3 same-label neighbors within 70 px; score = pyramidal fraction exposed to reactive hotspots minus pyramidal fraction exposed to astrocyte hotspots."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Higher hotspot stringency: same computation but hotspot defined as at least 4 same-label neighbors within 70 px."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use centroid coordinates in the native cell coordinate system; annotation polygons must be scaled down by 16 before region assignment. Use a radius-neighbor search or KD-tree for efficiency. Exclude self from hotspot neighbor counts. Exposure is binary per pyramidal neuron, not the number of nearby hotspots. If a donor has no CA1 pyramidal neurons, return NaN; if there are no hotspot cells of a given label, that exposure fraction is 0.",
+  "rationale": "The accepted panel has converged on a strong CA1 reactive astrocyte story, and round 5 showed that reactive microclustering is much more informative than bulk gliosis alone. By contrast, the earlier generic pyramidal-adjacent reactive niche in round 3 added almost no gain, suggesting that simple adjacency was too coarse. The right next test is therefore a sharper neuron-facing version of the hotspot signal: are CA1 pyramidal neurons specifically embedded in reactive astrocyte microclusters rather than ordinary astrocyte clusters? This is biologically interpretable, closely follows the strongest recent result, and could either add complementary signal or replace the weaker round 3 niche feature."
+}

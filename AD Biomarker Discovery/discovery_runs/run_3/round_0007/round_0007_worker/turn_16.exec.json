@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "                \"ci_lo\": float(boot.get(\"ci_lo\", float(\"nan\"))),\n                \"ci_hi\": float(boot.get(\"ci_hi\", float(\"nan\"))),\n                \"selection_score\": float(sel),\n                \"loo_predictive_r\": float(loo_r),\n                \"is_loo_gap\": float(gap),\n                \"gap_penalty\": float(penalty),\n                \"adjusted_score\": float(adjusted),\n                \"loo_unstable_count\": int(loo_shift.get(\"unstable_count\", 0) or 0),\n                \"loo_max_shift\": float(loo_shift.get(\"max_shift\", float(\"nan\"))),\n            }\n        )\n\n    ranked_variations.sort(\n        key=lambda row: (\n            -float(row[\"selection_score\"]) if math.isfinite(float(row[\"selection_score\"])) else float(\"inf\"),\n            -float(row[\"adjusted_score\"]) if math.isfinite(float(row[\"adjusted_score\"])) else float(\"inf\"),\n            -abs(float(row[\"partial_r\"])) if math.isfinite(float(row[\"partial_r\"])) else float(\"inf\"),\n        )\n    )\n    best = ranked_variations[0]\n    best_variation = str(best[\"variation_name\"])\n    best_feature_col = str(best[\"feature_column\"])\n",
+  "stderr": ""
+}

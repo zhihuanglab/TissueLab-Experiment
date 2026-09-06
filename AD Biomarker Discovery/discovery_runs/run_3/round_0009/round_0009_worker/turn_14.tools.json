@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\np=Path('/data/autoresearch_runs/run_20260421_001115_585b70/round_0008/round_0008_worker/results.json')\nprint(p.read_text()[:4000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"{\\n  \\\"status\\\": \\\"unknown\\\",\\n  \\\"feature_name\\\": \\\"ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r50um_ra2_ly1\\\",\\n  \\\"outcome\\\": \\\"slope_zmem0\\\",\\n  \\\"n_total\\\": 35,\\n  \\\"n_analyzable\\\": 35,\\n  \\\"partial_r\\\": -0.47517659057284917,\\n  \\\"ci_lo\\\": -0.7747881176202693,\\n  \\\"ci_hi\\\": 0.24454889928556903,\\n  \\\"p_value\\\": 0.003918998603012737,\\n  \\\"loo_predictive_r\\\": 0.23521320239508683,\\n  \\\"coverage_ratio\\\": 1.0,\\n  \\\"selection_score\\\": 0.4752,\\n  \\\"incumbent_score\\\": 0.4752,\\n  \\\"coverage_gate_passed\\\": true,\\n  \\\"bootstrap_stability_pass\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,340 @@
+{
+  "status": "unknown",
+  "feature_name": "ca1_reactive_hotspot_pyramidal_depletion",
+  "outcome": "slope_zmem0",
+  "n_total": 35,
+  "n_analyzable": 28,
+  "partial_r": -0.054529997715664066,
+  "ci_lo": -0.5408053033251482,
+  "ci_hi": 0.41943657272617274,
+  "p_value": 0.7828590329607876,
+  "loo_predictive_r": -0.5480210769776296,
+  "coverage_ratio": 0.8,
+  "selection_score": 0.0436,
+  "incumbent_score": null,
+  "coverage_gate_passed": true,
+  "bootstrap_stability_passed": false,
+  "bootstrap_median_partial_r": -0.048304125676482804,
+  "bootstrap_sign_consistency": 0.6175,
+  "adjusted_score": 0.548,
+  "is_loo_gap": -0.4935,
+  "gap_penalty": 0.0,
+  "loo_unstable_count": 3,
+  "loo_max_shift": 0.13577331042146007,
+  "donor_ids_used": [
+    "H19.33.004",
+    "H20.33.008",
+    "H20.33.013",
+    "H20.33.018",
+    "H20.33.024",
+    "H20.33.025",
+    "H20.33.027",
+    "H20.33.029",
+    "H20.33.030",
+    "H20.33.034",
+    "H20.33.037",
+    "H20.33.040",
+    "H20.33.043",
+    "H20.33.046",
+    "H21.33.001",
+    "H21.33.004",
+    "H21.33.007",
+    "H21.33.013",
+    "H21.33.018",
+    "H21.33.021",
+    "H21.33.023",
+    "H21.33.025",
+    "H21.33.037",
+    "H21.33.038",
+    "H21.33.040",
+    "H21.33.043",
+    "H21.33.044",
+    "H21.33.046"
+  ],
+  "covariates": [
+    "max_age_vis",
+    "braak_numeric",
+    "cerad_ordinal",
+    "sex_binary"
+  ],
+  "recomputed_from_raw": true,
+  "registry_written": false,
+  "artifacts": {
+    "donor_feature_table": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_215745_90b105/round_0007/round_0007_worker/sandbox/donor_feature_table.csv"
+  },
+  "best_variation": "candidate_variant_b",
+  "feature_column": "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b",
+  "penalty": 0.0,
+  "ranked_variations": [
+    {
+      "variation_name": "candidate_variant_b",
+      "description": "Same hotspot definition, but pyramidal neighbors counted within 50 px to focus on immediate pericellular depletion.",
+      "feature_column": "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b",
+      "partial_r": -0.05452999771566416,
+      "n_analyzable": 28,
+      "n_total": 35,
+      "coverage": 0.8,
+      "selection_score": 0.04362399817253133,
+      "loo_predictive_r": -0.5480210769776296,
+      "is_loo_gap": -0.49349107926196545,
+      "penalty": 0.0,
+      "adjusted_score": -0.5480210769776296
+    },
+    {
+      "variation_name": "candidate_variant_a",
+      "description": "Reactive and baseline astrocyte hotspots defined in CA1 with same-class radius 70 px and k>=3; pyramidal neighbors counted within 70 px.",
+      "feature_column": "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_a",
+      "partial_r": 0.05203228035724903,
+      "n_analyzable": 28,
+      "n_total": 35,
+      "coverage": 0.8,
+      "selection_score": 0.04162582428579922,
+      "loo_predictive_r": -0.46460574077173594,
+      "is_loo_gap": -0.4125734604144869,
+      "penalty": 0.0,
+      "adjusted_score": -0.46460574077173594
+    }
+  ],
+  "loo_rows": [
+    {
+      "donor_id": "H19.33.004",
+      "outcome": -0.0587685,
+      "predicted": -0.0826254932221506,
+      "actual_resid": 0.023053426466810772,
+      "predicted_resid": -0.0008035667553398252,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.0293467768523695
+    },
+    {
+      "donor_id": "H20.33.008",
+      "outcome": -0.1205063,
+      "predicted": -0.14207335453055586,
+      "actual_resid": 0.019232099961713392,
+      "predicted_resid": -0.002334954568842462,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.16503504299046318
+    },
+    {
+      "donor_id": "H20.33.013",
+      "outcome": -0.0317417,
+      "predicted": -0.11441265501792355,
+      "actual_resid": 0.07742333746254586,
+      "predicted_resid": -0.005247617555377691,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": -0.2658101034182435
+    },
+    {
+      "donor_id": "H20.33.018",
+      "outcome": -0.3042141,
+      "predicted": -0.07295156423333972,
+      "actual_resid": -0.2235750480154618,
+      "predicted_resid": 0.007687487751198486,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.04883440443363968
+    },
+    {
+      "donor_id": "H20.33.024",
+      "outcome": -0.0103346,
+      "predicted": -0.1233488012057006,
+      "actual_resid": 0.09389056398618015,
+      "predicted_resid": -0.01912363721952045,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.3200629957900666
+    },
+    {
+      "donor_id": "H20.33.025",
+      "outcome": -0.0723104,
+      "predicted": -0.12206996724480326,
+      "actual_resid": 0.0462879534567574,
+      "predicted_resid": -0.0034716137880458587,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": -0.3255691302630046
+    },
+    {
+      "donor_id": "H20.33.027",
+      "outcome": -0.1125932,
+      "predicted": -0.14194366178441334,
+      "actual_resid": 0.02981122801614483,
+      "predicted_resid": 0.0004607662317315042,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.008022536812036407
+    },
+    {
+      "donor_id": "H20.33.029",
+      "outcome": -0.0948095,
+      "predicted": -0.1405242887346877,
+      "actual_resid": 0.0457072415407883,
+      "predicted_resid": -7.547193899386218e-06,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.07197784683302694
+    },
+    {
+      "donor_id": "H20.33.030",
+      "outcome": -0.1680423,
+      "predicted": -0.1395051452499285,
+      "actual_resid": -0.02568844774561324,
+      "predicted_resid": 0.0028487070044582743,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.0
+    },
+    {
+      "donor_id": "H20.33.034",
+      "outcome": -0.0522007,
+      "predicted": -0.08842701709985715,
+      "actual_resid": 0.03604114582117056,
+      "predicted_resid": -0.00018517127868658938,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.0
+    },
+    {
+      "donor_id": "H20.33.037",
+      "outcome": -0.2508045,
+      "predicted": -0.14309358741098988,
+      "actual_resid": -0.10799843911398097,
+      "predicted_resid": -0.0002875265249708459,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.21004460016968035
+    },
+    {
+      "donor_id": "H20.33.040",
+      "outcome": -0.1026342,
+      "predicted": -0.12870278831211496,
+      "actual_resid": 0.0266903394393241,
+      "predicted_resid": 0.0006217511272091253,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.037076841861707344
+    },
+    {
+      "donor_id": "H20.33.043",
+      "outcome": -0.0599597,
+      "predicted": -0.07027482088040432,
+      "actual_resid": 0.013422440569794365,
+      "predicted_resid": 0.0031073196893900445,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": -0.13006239767307737
+    },
+    {
+      "donor_id": "H20.33.046",
+      "outcome": -0.2017114,
+      "predicted": -0.1215631842760287,
+      "actual_resid": -0.07423507146301553,
+      "predicted_resid": 0.005913144260955785,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.44793986730701374
+    },
+    {
+      "donor_id": "H21.33.001",
+      "outcome": -0.0815782,
+      "predicted": -0.016249158326035865,
+      "actual_resid": -0.06509669264462947,
+      "predicted_resid": 0.00023234902933466043,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.1997230461224621
+    },
+    {
+      "donor_id": "H21.33.004",
+      "outcome": -0.1198253,
+      "predicted": -0.020248279818145646,
+      "actual_resid": -0.0999424074386791,
+      "predicted_resid": -0.00036538725682475526,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": -0.0577622650466621
+    },
+    {
+      "donor_id": "H21.33.007",
+      "outcome": -0.0975144,
+      "predicted": -0.14983965300632862,
+      "actual_resid": 0.05320058067220118,
+      "predicted_resid": 0.0008753276658725471,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.058668101174580836
+    },
+    {
+      "donor_id": "H21.33.013",
+      "outcome": -0.161261,
+      "predicted": -0.11990788933781917,
+      "actual_resid": -0.03546681718323447,
+      "predicted_resid": 0.0058862934789463495,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": -0.10397207708399175
+    },
+    {
+      "donor_id": "H21.33.018",
+      "outcome": -0.144019,
+      "predicted": -0.09003576654779404,
+      "actual_resid": -0.05622374219592527,
+      "predicted_resid": -0.0022405087437192966,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.12593413398444392
+    },
+    {
+      "donor_id": "H21.33.021",
+      "outcome": -0.0983582,
+      "predicted": -0.09565074567957972,
+      "actual_resid": -0.002589147144753945,
+      "predicted_resid": 0.000118307175666341,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.0
+    },
+    {
+      "donor_id": "H21.33.023",
+      "outcome": -0.1546294,
+      "predicted": -0.04857095460559894,
+      "actual_resid": -0.10668426909267839,
+      "predicted_resid": -0.0006258236982773288,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.0
+    },
+    {
+      "donor_id": "H21.33.025",
+      "outcome": -0.0422854,
+      "predicted": -0.14234716692342775,
+      "actual_resid": 0.08196532387170477,
+      "predicted_resid": -0.018096443051722987,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.3346227768220425
+    },
+    {
+      "donor_id": "H21.33.037",
+      "outcome": -0.0881349,
+      "predicted": -0.08535919586303578,
+      "actual_resid": -0.003326792984727614,
+      "predicted_resid": -0.0005510888477633962,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.01296948986494699
+    },
+    {
+      "donor_id": "H21.33.038",
+      "outcome": -0.0518276,
+      "predicted": -0.06511663909534504,
+      "actual_resid": 0.017331654118827297,
+      "predicted_resid": 0.004042615023482263,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": -0.24923034110761913
+    },
+    {
+      "donor_id": "H21.33.040",
+      "outcome": -0.0327944,
+      "predicted": -0.1435487188489706,
+      "actual_resid": 0.10802662452524675,
+      "predicted_resid": -0.0027276943237238465,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.18904014015271234
+    },
+    {
+      "donor_id": "H21.33.043",
+      "outcome": -0.072355,
+      "predicted": -0.09421007483455096,
+      "actual_resid": 0.022162581466698278,
+      "predicted_resid": 0.0003075066321473175,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": -0.06689035841065727
+    },
+    {
+      "donor_id": "H21.33.044",
+      "outcome": -0.0991281,
+      "predicted": -0.16567079685954372,
+      "actual_resid": 0.06608748031006514,
+      "predicted_resid": -0.00045521654947858935,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.15937365199895795
+    },
+    {
+      "donor_id": "H21.33.046",
+      "outcome": -0.1616234,
+      "predicted": -0.110775753207552,
+      "actual_resid": -0.05024444563151828,
+      "predicted_resid": 0.0006032011609297227,
+      "ca1_reactive_hotspot_pyramidal_depletion__candidate_variant_b": 0.04332169878499658
+    }
+  ],
+  "bootstrap_q25_partial_r": -0.14545450501689958,
+  "bootstrap_q75_partial_r": 0.04515047516645244,
+  "bootstrap_positive_fraction": 0.3825,
+  "bootstrap_negative_fraction": 0.6175,
+  "bootstrap_valid_samples": 400,
+  "bootstrap_sample_size": 22,
+  "incumbent_eligible": false,
+  "raw_r": -0.18911725813087532,
+  "raw_p_value": null,
+  "panel_member_count": 6,
+  "panel_baseline_score": 0.6673,
+  "panel_candidate_score": 0.7017,
+  "delta_panel_score": 0.0345,
+  "panel_baseline_loo_score": 0.4227,
+  "panel_candidate_loo_score": 0.1834,
+  "candidate_redundancy": 0.2161
+}

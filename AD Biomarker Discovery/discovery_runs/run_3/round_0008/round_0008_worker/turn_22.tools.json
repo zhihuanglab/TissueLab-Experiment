@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pandas as pd\nobj=json.load(open('/scratch/results.json'))\ndf=pd.DataFrame(obj['per_donor_loo'])\ndf['abs_error']=(df['predicted']-df['slope_zmem0']).abs()\nprint(df.sort_values('abs_error', ascending=False).head(10).to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"  donor_id  slope_zmem0  predicted  predicted_residual  outcome_residual  ca1_pyramidal_immune_admixed_reactive_cuff_fraction_r50um_ra2_ly1  ca1_pyramidal_n  ca1_reactive_astrocyte_n  ca1_lymphocyte_n  abs_error\\nH20.33.018    -0.304214  -0.125273           -0.028542         -0.207483                                                           0.007843             1020                      1161                10   0.178941\\nH20.33.038    -0.237209  -0.105039            0.033031         -0.099139    \", \"stderr\": \"\"}"
+  }
+]

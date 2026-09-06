@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '261,520p' /data/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\ndef _loo_prediction_table(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n    donor_col: str = \\\"donor_id\\\",\\n) -> pd.DataFrame:\\n    cols = [donor_col, feature_col, outcome_col, *confounds]\\n    frame = _clean_frame(df, cols)\\n    rows: list[dict[str, Any]] = []\\n\\n    for idx in range(len(frame)):\\n        train = frame.drop(index=idx).reset_index(drop=True)\\n        test = frame.iloc[[idx]].reset_index(drop=True)\\n\\n        x_train_conf = _design_matri\", \"stderr\": \"\"}"
+  }
+]

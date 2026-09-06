@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\nsed -n '1,130p' /shared/templates/worker_embedding_mechanistic_template.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"from __future__ import annotations\\n\\nimport json\\nfrom pathlib import Path\\n\\nimport numpy as np\\nimport pandas as pd\\n\\nfrom shared_analysis import (\\n    DEFAULT_CONFOUNDS,\\n    build_mechanistic_embedding_round,\\n    build_population_primitive,\\n    donor_scalar_from_basis,\\n    load_pca_basis,\\n    load_training_cohort,\\n    write_donor_feature_table,\\n    write_results_payload,\\n)\\n\\n\\nFEATURE_NAME = \\\"mechanistic_embedding_biomarker\\\"\\nFEATURE_COLUMN = \\\"feature_value\\\"\\nOUTCOME_COLUMN = \\\"slope_zmem0\\\"\\nCONFOUNDS = \", \"stderr\": \"\"}"
+  }
+]

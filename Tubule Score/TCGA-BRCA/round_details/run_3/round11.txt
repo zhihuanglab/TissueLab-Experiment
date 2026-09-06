@@ -1,0 +1,40 @@
+Round 11
+========================================================================
+
+The machine-readable candidate enumeration for this round was not retained:
+the round's script and its details file were lost during the run. What follows
+is taken verbatim from the run log, which recorded the configuration this round
+selected, its scores, and the alternatives the round discussed and rejected.
+Rejected alternatives are therefore partial here, covering those the agent wrote
+about rather than every configuration it evaluated.
+
+ROUND 11 - [tumor_top3 + gland_top4 PCA + biomedparse morphometry variants] + [Ridge] (IS/LOO)
+
+Features (7-9 depending on config):
+  1. tumor_pca_top3 (musk_tumor, tissue_class_id==1, mean-pool → PCA(20) → top 3 by |corr|)
+  2. gland_pca_top4 (musk_gland, tissue_class_id==1, mean-pool → PCA(20) → top 4 by |corr|)
+  3. tig (tumor_in_gland_fraction, optional addition)
+  4. log_mean_area (log of mean connected component area from biomedparse gland mask, optional)
+  5. log_num_comp (log of number of connected components from biomedparse gland mask, optional)
+Model: Ridge regression, alpha tested at {3, 5, 7, 10, 15}
+
+SELECTED CONFIGURATION
+Model:Ridge regression, alpha tested at {3, 5, 7, 10, 15}
+  LOO r      = 0.8338
+  IS r       = 0.8992
+  IS-LOO gap = 0.0654
+  adjusted   = 0.8338
+
+ALTERNATIVES RECORDED IN THIS ROUND'S FINDINGS
+  1. **No improvement over Round 10**: The best config remains t3+g4 with Ridge α=5, achieving identical LOO r=0.8338. The biomedparse morphometry features (log_mean_area, log_num_comp) did NOT improve LOO r when added — all configs with added morphometry features scored 0.8268-0.8300, slightly below baseline.
+  2. **Biomedparse features hurt marginally**: Adding log_mean_area to t3+g4 gave LOO r=0.8300 (rank 6), adding log_num_comp gave LOO r=0.8286 (rank 11), adding tig gave LOO r=0.8300 (rank 5). None exceeded the base 0.8338. This suggests these morphometric features are either redundant with the PCA embeddings or introduce noise for borderline cases. With n=33 and already 7 features, each additional feature risks diluting signal.
+  3. **Alternative PC count combinations also underperformed**: t4+g4 (LOO r=0.8265, rank 16), t3+g5 and t2+g4 (not in top 20). The t3+g4 combination remains robustly the best PC allocation.
+
+FINDINGS:
+  1. **No improvement over Round 10**: The best config remains t3+g4 with Ridge α=5, achieving identical LOO r=0.8338. The biomedparse morphometry features (log_mean_area, log_num_comp) did NOT improve LOO r when added — all configs with added morphometry features scored 0.8268-0.8300, slightly below baseline.
+  
+  2. **Biomedparse features hurt marginally**: Adding log_mean_area to t3+g4 gave LOO r=0.8300 (rank 6), adding log_num_comp gave LOO r=0.8286 (rank 11), adding tig gave LOO r=0.8300 (rank 5). None exceeded the base 0.8338. This suggests these morphometric features are either redundant with the PCA embeddings or introduce noise for borderline cases. With n=33 and already 7 features, each additional feature risks diluting signal.
+  
+  3. **Alternative PC count combinations also underperformed**: t4+g4 (LOO r=0.8265, rank 16), t3+g5 and t2+g4 (not in top 20). The t3+g4 combination remains robustly the best PC allocation.
+  
+  4. **Feature relevance**: The 7 PCA features (3 tumor + 4 gland) capture almost all available discriminative signal at this sample size. Biomedparse morphometry is correlated with tubule_score but the signal overlaps with what musk_gland PCA already encodes — patch-level gland embeddings implicitly capture gland size/structure information.

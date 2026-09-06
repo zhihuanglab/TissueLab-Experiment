@@ -1,0 +1,35 @@
+Round 14
+========================================================================
+
+The machine-readable candidate enumeration for this round was not retained:
+the round's script and its details file were lost during the run. What follows
+is taken verbatim from the run log, which recorded the configuration this round
+selected, its scores, and the alternatives the round discussed and rejected.
+Rejected alternatives are therefore partial here, covering those the agent wrote
+about rather than every configuration it evaluated.
+
+ROUND 14 - [musk_tumor PCA + musk_gland PCA, varying PCA dimensionality] + [Ridge] (LOO)
+
+Features (7):
+  1. tumor_pca_top3 (musk_tumor, tissue_class_id==1 mean-pooled embeddings, PCA(20), top 3 PCs by |corr|)
+  2. gland_pca_top4 (musk_gland, tissue_class_id==1 mean-pooled embeddings, PCA(20), top 4 PCs by |corr|)
+Model: Ridge(alpha=4)
+
+SELECTED CONFIGURATION
+Model:Ridge(alpha=4)
+  LOO r      = 0.8340
+  IS r       = 0.9002
+  IS-LOO gap = 0.0662
+  adjusted   = 0.8340
+
+ALTERNATIVES RECORDED IN THIS ROUND'S FINDINGS
+  (none recorded)
+
+FINDINGS:
+  1. **PCA(20) remains strictly optimal**: The systematic grid over PCA dimensionality N ∈ {8, 10, 12, 15, 20} conclusively shows that PCA(20) dominates all lower dimensionalities. Best results by PCA dim: PCA(8)=0.6769, PCA(10)=0.7387, PCA(12)=0.7387, PCA(15)=0.7649, PCA(20)=0.8340. There is a monotonic improvement with increasing N — more PCA components provide finer-grained linear combinations of the 1024D embedding space, allowing PC selection to find components that better isolate tubule-relevant morphological signal. The hypothesis that lower PCA dims would concentrate variance more efficiently was wrong; the discriminative signal lives in directions that explain relatively little total variance, and these are only captured when enough PCs are computed.
+
+  2. **T3+G4 allocation confirmed optimal across ALL PCA dims**: At PCA(20), T3+G4 (adj=0.8340) > T3+G5 (0.8241) > T4+G4 (0.8265) > T2+G4 (0.7960) > T4+G5 (0.8152) > T5+G5 (0.8026) > T2+G5 (0.7862). The 5th gland PC and 4th+ tumor PCs consistently add noise rather than signal. The model's effective complexity sweet spot is exactly 7 features with n=30.
+
+  3. **Ridge α landscape is remarkably flat around the optimum**: α=3 through α=7 all give LOO r ∈ [0.8333, 0.8340] — a range of only 0.0007. α=4 wins by a hair at 0.8340. This confirms the model is well-regularized and not sensitive to hyperparameter choice.
+
+  4. **6 consecutive rounds at LOO r≈0.834**: This is now the established ceiling under the current methodology. Every axis of variation within human constraints has been exhausted: PCA dimensionality (this round), ElasticNet (Round 13), variance-weighted selection (Round 13), probability weighting (Round 11), tig feature (Round 10), alternative PC counts (Rounds 9-14), Ridge alpha (Rounds 10-14).

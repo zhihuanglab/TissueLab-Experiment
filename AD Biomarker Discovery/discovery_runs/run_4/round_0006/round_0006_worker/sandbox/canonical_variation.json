@@ -1,0 +1,7 @@
+{
+  "hypothesis_family": "ca1_reactive_neuron_exclusion",
+  "best_variation": "reactive_pyramidal_desert_t20",
+  "feature_column": "ca1_reactive_pyramidal_desert_t20",
+  "local_radius_um": 35.0,
+  "threshold": 0.2
+}

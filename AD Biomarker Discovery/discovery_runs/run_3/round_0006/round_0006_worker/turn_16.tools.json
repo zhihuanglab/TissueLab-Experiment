@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfor r in 4 5; do\n  base=\"/data/autoresearch_runs/run_20260421_001115_585b70/round_000${r}/round_000${r}_worker/result.py\"\n  echo \"--- round ${r} script head ---\"\n  sed -n '1,260p' \"$base\" | sed -n '1,220p'\n  echo\ndone",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- round 4 script head ---\\nfrom __future__ import annotations\\n\\nimport json\\nimport math\\nimport re\\nimport sys\\nimport warnings\\nfrom pathlib import Path\\n\\nsys.path.append(\\\"/shared/lib\\\")\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom scipy.spatial import cKDTree\\n\\nfrom shared_analysis.sea_ad_lfb import build_cell_table, load_training_cohort\\nfrom shared_analysis.stats import (\\n    leave_one_out_summary,\\n    partial_correlation,\\n    residualized_loo_predictive_correlation,\\n)\\nfrom shared_analysis.artifacts\", \"stderr\": \"\"}"
+  }
+]

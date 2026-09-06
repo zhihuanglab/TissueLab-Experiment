@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- results.json ---'\npython - <<'PY'\nimport json\ndata=json.load(open('/scratch/results.json'))\nprint(json.dumps({k:data[k] for k in ['best_variation','feature_column','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score']}, indent=2))\nprint('ranked_variations len', len(data['ranked_variations']))\nPY\necho '--- report.md ---'\nsed -n '1,240p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- results.json ---\\n{\\n  \\\"best_variation\\\": \\\"candidate_variant_a\\\",\\n  \\\"feature_column\\\": \\\"ca1_peripyramidal_ra_lymphocyte_area_burden_20um\\\",\\n  \\\"partial_r\\\": 0.2106638897720901,\\n  \\\"selection_score\\\": 0.2106638897720901,\\n  \\\"loo_predictive_r\\\": 0.14854812910244222,\\n  \\\"is_loo_gap\\\": 0.062115760669647885,\\n  \\\"adjusted_score\\\": 0.14854812910244222\\n}\\nranked_variations len 2\\n--- report.md ---\\n## Summary\\nOne sentence: tested the CA1 peripyramidal reactive astrocyte lymphocyte-contact area burden family, candidate\", \"stderr\": \"\"}"
+  }
+]

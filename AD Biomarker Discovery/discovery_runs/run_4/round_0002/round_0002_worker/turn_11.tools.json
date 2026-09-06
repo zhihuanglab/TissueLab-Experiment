@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -e\necho '--- result.py head ---'\nsed -n '1,80p' /scratch/result.py\necho\necho '--- results.json ---'\npython - <<'PY'\nimport json\np='/scratch/results.json'\ndata=json.load(open(p))\nprint(json.dumps({k:data[k] for k in ['best_variation','feature_column','selection_score','partial_r','loo_predictive_r','is_loo_gap','penalty','adjusted_score']}, indent=2))\nprint('ranked count', len(data['ranked_variations']))\nPY\necho\necho '--- report.md ---'\nsed -n '1,260p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- result.py head ---\\nfrom __future__ import annotations\\n\\nimport json\\nimport math\\nimport re\\nimport sys\\nimport warnings\\nfrom pathlib import Path\\n\\nimport numpy as np\\nimport pandas as pd\\n\\nsys.path.insert(0, \\\"/shared/lib\\\")\\n\\nfrom shared_analysis.artifacts import build_results_payload, write_donor_feature_table\\nfrom shared_analysis.sea_ad_lfb import build_cell_table\\nfrom shared_analysis.stats import bootstrap_partial_correlation, partial_correlation\\n\\n\\nFEATURE_FAMILY = \\\"ca1_reactive_astrocyte_enrichme\", \"stderr\": \"\"}"
+  }
+]

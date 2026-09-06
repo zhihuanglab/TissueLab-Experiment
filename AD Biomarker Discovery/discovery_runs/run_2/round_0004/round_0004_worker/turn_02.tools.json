@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json\nfrom pathlib import Path\np=Path('/scratch/context_bundle.json')\ndata=json.loads(p.read_text())\nprint('TOP KEYS:', list(data))\nfor k,v in data.items():\n    if isinstance(v, (str,int,float,bool)) or v is None:\n        print(f'\\n## {k}\\n{v if len(str(v))<3000 else str(v)[:3000]+\"...\"}')\n    else:\n        print(f'\\n## {k} type={type(v).__name__}')\n        if isinstance(v, dict):\n            print('keys:', list(v)[:50])\n            for sk,sv in v.items():\n                if sk in ('worker_brief','candidate','round_plan','accepted_panel','current_panel','candidate_brief'):\n                    print(f'-- {sk}: {sv}')\n        elif isinstance(v, list):\n            print('len=', len(v))\n            for i,item in enumerate(v[:3]):\n                print(i, item)\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"TOP KEYS: ['worker_brief', 'runtime_manifest', 'cohort_summary', 'slide_manifest_head', 'runtime_quickstart_excerpt', 'dataset_guide_excerpt']\\n\\n## worker_brief type=dict\\nkeys: ['worker_name', 'round_id', 'candidate_id', 'candidate_type', 'accepted_panel', 'scientific_question', 'approach', 'variations', 'baseline_variation', 'notes', 'rationale']\\n-- accepted_panel: {'members': [{'slot': 1, 'feature_name': 'ca1_pyramidal_burden__ca1_pyramidal_fraction', 'round_id': 1, 'panel_candidate_score': 0.2\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nimport json, glob\npaths=sorted(glob.glob('/data/autoresearch_runs/**/*/results.json', recursive=True))\nprint('n results', len(paths))\nfor p in paths[-3:]:\n    print('---', p)\n    with open(p) as f:\n        d=json.load(f)\n    print({k:d.get(k) for k in ['best_variation','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','feature_column']})\n    if 'ranked_variations' in d:\n        print('ranked first', d['ranked_variations'][:2])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"n results 511\\n--- /data/autoresearch_runs/run_36de1c1495/round_0001/round_0001_worker/sandbox/results.json\\n{'best_variation': 'candidate_variant_b', 'partial_r': -0.057297446511237575, 'selection_score': 0.057297446511237575, 'loo_predictive_r': -0.25709561149867904, 'is_loo_gap': -0.19979816498744146, 'adjusted_score': 0.057297446511237575, 'feature_column': 'oligodendrocyte_density_sb_ec'}\\nranked first [{'variation_name': 'candidate_variant_b', 'description': 'Oligodendrocyte density within SB\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- canonical target in result.py ---'\ngrep -n \"BEST_VARIATION_NAME\\|BEST_VARIATION_RADIUS_PX\\|BEST_FEATURE_COLUMN\" /scratch/result.py\necho '--- results.json head ---'\npython - <<'PY'\nimport json\nwith open('/scratch/results.json') as f:\n    obj=json.load(f)\nprint(json.dumps({\n    'best_variation': obj.get('best_variation'),\n    'feature_column': obj.get('feature_column'),\n    'n_total': obj.get('n_total'),\n    'n_analyzable': obj.get('n_analyzable'),\n    'partial_r': obj.get('partial_r'),\n    'selection_score': obj.get('selection_score'),\n    'loo_predictive_r': obj.get('loo_predictive_r'),\n    'ranked_variations': obj.get('ranked_variations'),\n}, indent=2)[:6000])\nPY\necho '--- report.md ---'\nsed -n '1,220p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- canonical target in result.py ---\\n47:BEST_VARIATION_NAME = \\\"candidate_variant_a\\\"\\n48:BEST_VARIATION_RADIUS_PX = 60.0\\n49:BEST_FEATURE_COLUMN = \\\"ca1_reactive_pyramidal_log_area_shift_r60px\\\"\\n136:    CA1 reactive astrocyte within BEST_VARIATION_RADIUS_PX minus the median(log\\n140:    return _contour_feature_for_variation(donor_metrics, BEST_FEATURE_COLUMN)\\n337:        f'BEST_VARIATION_NAME = \\\"{best_name}\\\"\\\\n'\\n338:        f\\\"BEST_VARIATION_RADIUS_PX = {best_radius_px!r}\\\\n\\\"\\n339:        f'BEST_FEATURE_\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport inspect\nfrom shared_analysis import build_cell_table, compute_contour_geometry\nfrom shared_analysis import partial_correlation, residualized_loo_predictive_correlation, write_donor_feature_table\nimport shared_analysis\nimport shared_analysis.sea_ad_lfb as lfb\nimport shared_analysis.stats as stats\nimport shared_analysis.artifacts as artifacts\n\nfor name, obj in [('build_cell_table', lfb.build_cell_table),\n                  ('compute_contour_geometry', lfb.compute_contour_geometry),\n                  ('partial_correlation', stats.partial_correlation),\n                  ('residualized_loo_predictive_correlation', stats.residualized_loo_predictive_correlation),\n                  ('write_donor_feature_table', artifacts.write_donor_feature_table)]:\n    print(f'\\n=== {name} signature ===')\n    print(inspect.signature(obj))\n    try:\n        src = inspect.getsource(obj)\n        print('\\n'.join(src.splitlines()[:120]))\n    except Exception as e:\n        print('source unavailable', e)\nPY",
+    "output_preview": "{\"exit_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"/scratch/.tl_runtime/runtime_server.py\\\", line 47, in _execute\\n    exec(compile(code, \\\"<tl_runtime>\\\", \\\"exec\\\"), {\\\"__name__\\\": \\\"__main__\\\"})\\n  File \\\"<tl_runtime>\\\", line 2, in <module>\\nModuleNotFoundError: No module named 'shared_analysis'\\n\"}"
+  }
+]

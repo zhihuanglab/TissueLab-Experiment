@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/scratch/.tl_runtime/runtime_server.py\", line 32, in _execute\n    runpy.run_path(path, run_name=\"__main__\")\n  File \"<frozen runpy>\", line 291, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/scratch/result.py\", line 561, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/scratch/result.py\", line 450, in main\n    feature_table = _build_feature_table(data_root)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/scratch/result.py\", line 329, in _build_feature_table\n    \"cognitive_status\": str(row.cognitive_status),\n                            ^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Pandas' object has no attribute 'cognitive_status'\n"
+}

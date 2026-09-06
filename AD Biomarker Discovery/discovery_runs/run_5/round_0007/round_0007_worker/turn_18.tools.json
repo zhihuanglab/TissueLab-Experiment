@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "grep -n 'FEATURE_NAME\\|FEATURE_COLUMN\\|CANONICAL_VARIATION' /scratch/result.py | sed -n '1,20p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"29:FEATURE_NAME = \\\"ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um\\\"\\n30:FEATURE_COLUMN = \\\"ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um\\\"\\n31:CANONICAL_VARIATION = \\\"candidate_variant_b\\\"\\n359:    if CANONICAL_VARIATION not in VARIATION_BY_NAME:\\n372:    feature_name, feature_col = _canonical_from_variation(CANONICAL_VARIATION)\\n388:        r'^FEATURE_NAME = \\\".*\\\"$': f'FEATURE_NAME = \\\"{feature_name}\\\"',\\n389:        r'^FEATURE_COLUMN = \\\".*\\\"$': f'FEATURE_COLUMN = \\\"{feat\", \"stderr\": \"\"}"
+  }
+]

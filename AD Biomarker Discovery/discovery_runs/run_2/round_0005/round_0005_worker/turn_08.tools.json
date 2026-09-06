@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0, '/shared/lib')\nfrom shared_analysis.stats import partial_correlation, leave_one_out_summary, residualized_loo_predictive_correlation\nfrom shared_analysis.artifacts import write_donor_feature_table\nprint('partial_correlation:\\n', '\\n'.join(inspect.getsource(partial_correlation).splitlines()[:80]))\nprint('\\nleave_one_out_summary:\\n', '\\n'.join(inspect.getsource(leave_one_out_summary).splitlines()[:140]))\nprint('\\nwrite_donor_feature_table:\\n', '\\n'.join(inspect.getsource(write_donor_feature_table).splitlines()[:120]))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"partial_correlation:\\n def partial_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n) -> dict[str, float]:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds])\\n    feature_resid = residualize(frame[feature_col], frame[confounds])\\n    outcome_resid = residualize(frame[outcome_col], frame[confounds])\\n    if np.std(feature_resid) == 0 or np.std(outcome_resid) == 0:\\n        return {\\\"n\\\": float(len(frame)), \\\"partial_r\\\": floa\", \"stderr\": \"\"}"
+  }
+]

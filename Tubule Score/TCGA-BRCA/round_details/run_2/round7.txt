@@ -1,0 +1,33 @@
+Round 7 Details
+================================================================================
+
+All Configurations (sorted by adjusted):
+  B_interp_Ridge1: adj=0.6030 LOO_r=0.6030 IS_r=0.7055 gap=0.1025 F1=0.3839 QWK=0.3571
+  B_interp_Ridge5: adj=0.5846 LOO_r=0.5846 IS_r=0.6922 gap=0.1077 F1=0.4225 QWK=0.3846
+  B_interp_Ridge10: adj=0.5641 LOO_r=0.5641 IS_r=0.6785 gap=0.1144 F1=0.3996 QWK=0.3333
+  A_emb_Ridge100: adj=-1.0000 LOO_r=0.5797 IS_r=0.9871 gap=0.4074 F1=0.4873 QWK=0.4000
+  A_emb_Ridge500: adj=-1.0000 LOO_r=0.5727 IS_r=0.9409 gap=0.3681 F1=0.3704 QWK=0.2308
+  A_emb_Ridge1000: adj=-1.0000 LOO_r=0.5347 IS_r=0.9067 gap=0.3720 F1=0.3519 QWK=0.2609
+  A_emb_Ridge2000: adj=-1.0000 LOO_r=0.4715 IS_r=0.8657 gap=0.3942 F1=0.2967 QWK=0.1818
+  A_emb_Ridge5000: adj=-1.0000 LOO_r=0.3782 IS_r=0.8146 gap=0.4364 F1=0.2315 QWK=0.0952
+  A_emb_PLS2: adj=-1.0000 LOO_r=0.5459 IS_r=0.8971 gap=0.3512 F1=0.4444 QWK=0.4286
+  A_emb_PLS3: adj=-1.0000 LOO_r=0.5748 IS_r=0.9297 gap=0.3548 F1=0.4717 QWK=0.4242
+  A_emb_PLS4: adj=-1.0000 LOO_r=0.6057 IS_r=0.9646 gap=0.3589 F1=0.5643 QWK=0.5000
+  A_emb_PLS1: adj=-1.0000 LOO_r=0.4363 IS_r=0.7785 gap=0.3422 F1=0.4909 QWK=0.3704
+  A_emb_EN01: adj=-1.0000 LOO_r=0.4650 IS_r=0.9774 gap=0.5124 F1=0.4331 QWK=0.3750
+  A_emb_EN05: adj=-1.0000 LOO_r=0.2172 IS_r=0.8593 gap=0.6421 F1=0.2315 QWK=0.0952
+  A_emb_EN1: adj=-1.0000 LOO_r=-0.8390 IS_r=0.6167 gap=1.4557 F1=0.1667 QWK=0.0000
+  C_hybrid_PLS2: adj=-1.0000 LOO_r=0.5494 IS_r=0.8975 gap=0.3481 F1=0.4444 QWK=0.4286
+  C_hybrid_PLS3: adj=-1.0000 LOO_r=0.5779 IS_r=0.9303 gap=0.3524 F1=0.4717 QWK=0.4242
+  C_hybrid_PLS4: adj=-1.0000 LOO_r=0.6084 IS_r=0.9653 gap=0.3570 F1=0.5603 QWK=0.4242
+  C_hybrid_PLS1: adj=-1.0000 LOO_r=0.4393 IS_r=0.7795 gap=0.3402 F1=0.4909 QWK=0.3704
+  C_hybrid_Ridge100: adj=-1.0000 LOO_r=0.5871 IS_r=0.9875 gap=0.4004 F1=0.5284 QWK=0.4516
+  C_hybrid_Ridge500: adj=-1.0000 LOO_r=0.5766 IS_r=0.9416 gap=0.3650 F1=0.3704 QWK=0.2308
+  C_hybrid_Ridge1000: adj=-1.0000 LOO_r=0.5383 IS_r=0.9075 gap=0.3692 F1=0.3519 QWK=0.2609
+  C_hybrid_Ridge2000: adj=-1.0000 LOO_r=0.4748 IS_r=0.8665 gap=0.3916 F1=0.2967 QWK=0.1818
+  C_hybrid_EN01: adj=-1.0000 LOO_r=0.3968 IS_r=0.9776 gap=0.5808 F1=0.4193 QWK=0.2581
+
+Best: B_interp_Ridge1
+  Adjusted: 0.6030
+  LOO r: 0.6030
+  Gap: 0.1025

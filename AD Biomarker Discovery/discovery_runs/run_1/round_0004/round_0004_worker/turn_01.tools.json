@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- context_bundle.json ---'\ncat /scratch/context_bundle.json\necho\necho '--- program.md ---'\ncat /scratch/program.md\necho\necho '--- seeded result.py head ---'\nsed -n '1,220p' /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"  },\\n      {\\n        \\\"module\\\": \\\"shared_analysis.context\\\",\\n        \\\"functions\\\": [\\n          \\\"load_worker_context\\\",\\n          \\\"load_runtime_manifest\\\",\\n          \\\"render_report\\\"\\n        ]\\n      },\\n      {\\n        \\\"module\\\": \\\"shared_analysis.embedding_mechanistic\\\",\\n        \\\"functions\\\": [\\n          \\\"build_population_primitive\\\",\\n          \\\"build_population_primitives_for_cohort\\\",\\n          \\\"build_mechanistic_embedding_round\\\",\\n          \\\"donor_scalar_from_basis\\\",\\n          \\\"summarize_embedding_scores\\\"\\n \", \"stderr\": \"\"}"
+  }
+]

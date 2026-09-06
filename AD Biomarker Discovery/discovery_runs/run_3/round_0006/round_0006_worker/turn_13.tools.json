@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0,'/shared/lib')\nimport shared_analysis\nprint(shared_analysis.DEFAULT_CONFOUNDS)\nprint(inspect.getsource(shared_analysis))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['max_age_vis', 'braak_numeric', 'cerad_ordinal']\\n\\\"\\\"\\\"Reusable helper library copied into /shared/lib for worker scripts.\\\"\\\"\\\"\\n\\nfrom .artifacts import (\\n    build_results_payload,\\n    coerce_results_payload,\\n    normalize_covariate_names,\\n    resolve_covariate_names,\\n    validate_donor_feature_table_columns,\\n    validate_feature_spec,\\n    validate_results_payload,\\n    write_donor_feature_table,\\n    write_feature_spec,\\n    write_results_payload,\\n)\\nfrom .context import (\\n    load_runtime_manifest,\\n  \", \"stderr\": \"\"}"
+  }
+]

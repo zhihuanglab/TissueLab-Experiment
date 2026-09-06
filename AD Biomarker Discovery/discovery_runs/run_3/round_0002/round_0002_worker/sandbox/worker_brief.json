@@ -1,0 +1,37 @@
+{
+  "worker_name": "round_0002_worker",
+  "round_id": 2,
+  "candidate_id": "ca1-peripyramidal-reactivity",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "astrocytic_reactivity_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.4914
+  },
+  "scientific_question": "Is the memory-decline signal in CA1 astrocytic reactivity strongest specifically in astrocytes immediately adjacent to CA1 pyramidal neurons rather than across CA1 as a whole?",
+  "approach": "Assign cells to CA1 using annotation polygons, then select CA1 Pyramidal Neuron, Astrocyte, and Reactive Astrocyte cells. For each CA1 astrocyte-lineage cell (Astrocyte or Reactive Astrocyte), determine whether at least one CA1 Pyramidal Neuron centroid lies within radius R. Compute the donor-level score as the reactive fraction within this peripyramidal astrocyte niche: reactive_astrocytes_near_pyramidal / (reactive_astrocytes_near_pyramidal + astrocytes_near_pyramidal).",
+  "variations": [
+    {
+      "name": "peripyramidal_reactivity_r25um",
+      "description": "Baseline: reactive fraction among CA1 astrocyte-lineage cells lying within 25 \u00b5m of at least one CA1 pyramidal neuron."
+    },
+    {
+      "name": "peripyramidal_reactivity_r35um",
+      "description": "Local radius expansion to 35 \u00b5m to test whether the signal is tightly peripyramidal or slightly broader within the CA1 pyramidal field."
+    }
+  ],
+  "baseline_variation": "peripyramidal_reactivity_r25um",
+  "notes": "Use SegmentationNode/centroids for geometry and ClassificationNode labels for cell identity. Region polygons in CustomAnnotations are stored at 16x cell coordinates, so divide polygon vertices by 16 before point-in-polygon assignment. A KD-tree or cKDTree on CA1 pyramidal centroids is adequate for radius queries. If convenient, convert \u00b5m to pixels using slide-specific Aperio MPP from the paired .svs; otherwise a fixed ~0.503 \u00b5m/pixel approximation is acceptable given the small cohort MPP spread. If CA1 is absent or the peripyramidal astrocyte-lineage denominator is too small for a stable fraction, return NaN.",
+  "rationale": "Round 1 found a strong CA1 reactive-astrocyte fraction signal, so the right next test is a tighter niche version of the same biology rather than jumping to an unrelated summary. A peripyramidal astrocyte-reactivity biomarker could clarify whether the accepted signal is driven by neuron-adjacent gliosis, and it gives the evaluator a plausible cleaner replacement for the current panel member or a partly nonredundant addition if the local niche is sharper than the region-wide fraction."
+}

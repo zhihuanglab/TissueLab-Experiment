@@ -1,0 +1,875 @@
+{
+  "status": "ok",
+  "feature_name": "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3",
+  "outcome": "slope_zmem0",
+  "n_total": 35,
+  "n_analyzable": 35,
+  "partial_r": -0.2570802846477412,
+  "ci_lo": -0.566090042667472,
+  "ci_hi": 0.06809426405821764,
+  "p_value": 0.13599846198865748,
+  "loo_predictive_r": 0.14559507078549033,
+  "loo_unstable_count": 0,
+  "loo_max_shift": 0.07495623630652598,
+  "donor_ids_used": [
+    "H19.33.004",
+    "H20.33.008",
+    "H20.33.013",
+    "H20.33.018",
+    "H20.33.024",
+    "H20.33.025",
+    "H20.33.027",
+    "H20.33.029",
+    "H20.33.030",
+    "H20.33.034",
+    "H20.33.037",
+    "H20.33.038",
+    "H20.33.040",
+    "H20.33.041",
+    "H20.33.043",
+    "H20.33.044",
+    "H20.33.046",
+    "H21.33.001",
+    "H21.33.004",
+    "H21.33.006",
+    "H21.33.007",
+    "H21.33.012",
+    "H21.33.013",
+    "H21.33.018",
+    "H21.33.021",
+    "H21.33.023",
+    "H21.33.025",
+    "H21.33.033",
+    "H21.33.035",
+    "H21.33.037",
+    "H21.33.038",
+    "H21.33.040",
+    "H21.33.043",
+    "H21.33.044",
+    "H21.33.046"
+  ],
+  "covariates": [
+    "max_age_vis",
+    "braak_numeric",
+    "cerad_ordinal",
+    "sex_binary"
+  ],
+  "recomputed_from_raw": true,
+  "registry_written": false,
+  "artifacts": {
+    "donor_feature_table": "/scratch/donor_feature_table.csv",
+    "feature_spec": "/scratch/feature_spec.json",
+    "report": "/scratch/report.md",
+    "result_py": "/scratch/result.py"
+  },
+  "best_variation": "candidate_variant_a",
+  "feature_column": "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3",
+  "coverage_ratio": 1.0,
+  "selection_score": 0.2570802846477412,
+  "adjusted_score": 0.1564114457894333,
+  "is_loo_gap": 0.4026753554332315,
+  "gap_penalty": 0.10066883885830788,
+  "bootstrap_median_partial_r": -0.2733127366099046,
+  "bootstrap_sign_consistency": 1.0,
+  "ranked_variations": [
+    {
+      "name": "candidate_variant_a",
+      "feature_name": "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3",
+      "feature_column": "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3",
+      "description": "Reactive-astrocyte hotspot local Corpora Amylacea fraction minus astrocyte hotspot local Corpora Amylacea fraction in CA1, r=70 px, k=3.",
+      "radius_px": 70.0,
+      "k_same_class": 3,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "coverage_ratio": 1.0,
+      "partial_r": -0.2570802846477412,
+      "p_value": 0.13599846198865748,
+      "ci_lo": -0.566090042667472,
+      "ci_hi": 0.06809426405821764,
+      "selection_score": 0.2570802846477412,
+      "loo_predictive_r": 0.14559507078549033,
+      "is_loo_gap": 0.4026753554332315,
+      "gap_penalty": 0.10066883885830788,
+      "adjusted_score": 0.1564114457894333,
+      "bootstrap_median_partial_r": -0.2733127366099046,
+      "bootstrap_sign_consistency": 1.0,
+      "bootstrap_q25_partial_r": -0.3207784924389118,
+      "bootstrap_q75_partial_r": -0.2158118971883159,
+      "loo_unstable_count": 0,
+      "loo_max_shift": 0.07495623630652598,
+      "loo_unstable_donors": [],
+      "per_donor_loo": [
+        {
+          "donor_id": "H19.33.004",
+          "outcome": -0.0587685,
+          "predicted": -0.08081043364913688,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.00452085713161661,
+          "abs_error": 0.022041933649136883
+        },
+        {
+          "donor_id": "H20.33.008",
+          "outcome": -0.1205063,
+          "predicted": -0.13574288251733366,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.022353968782540215,
+          "abs_error": 0.01523658251733366
+        },
+        {
+          "donor_id": "H20.33.013",
+          "outcome": -0.0317417,
+          "predicted": -0.09879180071216806,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.01544048930196941,
+          "abs_error": 0.06705010071216806
+        },
+        {
+          "donor_id": "H20.33.018",
+          "outcome": -0.3042141,
+          "predicted": -0.10099211827064335,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0068373247407689935,
+          "abs_error": 0.20322198172935663
+        },
+        {
+          "donor_id": "H20.33.024",
+          "outcome": -0.0103346,
+          "predicted": -0.11333929420867203,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.05925283847578272,
+          "abs_error": 0.10300469420867203
+        },
+        {
+          "donor_id": "H20.33.025",
+          "outcome": -0.0723104,
+          "predicted": -0.10328263331395961,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.017684504048140412,
+          "abs_error": 0.03097223331395961
+        },
+        {
+          "donor_id": "H20.33.027",
+          "outcome": -0.1125932,
+          "predicted": -0.13586947935481236,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.02889216395139596,
+          "abs_error": 0.023276279354812357
+        },
+        {
+          "donor_id": "H20.33.029",
+          "outcome": -0.0948095,
+          "predicted": -0.13159756275407294,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0041357589967592895,
+          "abs_error": 0.03678806275407294
+        },
+        {
+          "donor_id": "H20.33.030",
+          "outcome": -0.1680423,
+          "predicted": -0.158825391547989,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.06402417027417026,
+          "abs_error": 0.009216908452011008
+        },
+        {
+          "donor_id": "H20.33.034",
+          "outcome": -0.0522007,
+          "predicted": -0.10603080533459067,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.06349206349206347,
+          "abs_error": 0.053830105334590664
+        },
+        {
+          "donor_id": "H20.33.037",
+          "outcome": -0.2508045,
+          "predicted": -0.1507109217523695,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.05577946257770819,
+          "abs_error": 0.10009357824763049
+        },
+        {
+          "donor_id": "H20.33.038",
+          "outcome": -0.2372091,
+          "predicted": -0.15936474452261173,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.10970536408036406,
+          "abs_error": 0.07784435547738827
+        },
+        {
+          "donor_id": "H20.33.040",
+          "outcome": -0.1026342,
+          "predicted": -0.1270533239836437,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.02039390129257901,
+          "abs_error": 0.024419123983643695
+        },
+        {
+          "donor_id": "H20.33.041",
+          "outcome": -0.1079018,
+          "predicted": -0.08717451586003032,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.13249559082892415,
+          "abs_error": 0.020727284139969687
+        },
+        {
+          "donor_id": "H20.33.043",
+          "outcome": -0.0599597,
+          "predicted": -0.07319001833262144,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0011293864617215321,
+          "abs_error": 0.013230318332621442
+        },
+        {
+          "donor_id": "H20.33.044",
+          "outcome": -0.0544588,
+          "predicted": -0.016343061686373492,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.11205235396411865,
+          "abs_error": 0.03811573831362651
+        },
+        {
+          "donor_id": "H20.33.046",
+          "outcome": -0.2017114,
+          "predicted": -0.1300886027764639,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.043452380952380965,
+          "abs_error": 0.07162279722353612
+        },
+        {
+          "donor_id": "H21.33.001",
+          "outcome": -0.0815782,
+          "predicted": -0.029843763971129453,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.004357526586033375,
+          "abs_error": 0.051734436028870553
+        },
+        {
+          "donor_id": "H21.33.004",
+          "outcome": -0.1198253,
+          "predicted": -0.02058185981635436,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0012539543789543695,
+          "abs_error": 0.09924344018364564
+        },
+        {
+          "donor_id": "H21.33.006",
+          "outcome": -0.0539668,
+          "predicted": -0.1266868533354521,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.12037668214138803,
+          "abs_error": 0.07272005333545209
+        },
+        {
+          "donor_id": "H21.33.007",
+          "outcome": -0.0975144,
+          "predicted": -0.1553432505379851,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.026458422529851103,
+          "abs_error": 0.05782885053798509
+        },
+        {
+          "donor_id": "H21.33.012",
+          "outcome": -0.1009244,
+          "predicted": -0.0649413264575144,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.11521164021164021,
+          "abs_error": 0.0359830735424856
+        },
+        {
+          "donor_id": "H21.33.013",
+          "outcome": -0.161261,
+          "predicted": -0.12071258260042005,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.00574814074814077,
+          "abs_error": 0.04054841739957994
+        },
+        {
+          "donor_id": "H21.33.018",
+          "outcome": -0.144019,
+          "predicted": -0.09849841068012244,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.0068383863327683425,
+          "abs_error": 0.04552058931987757
+        },
+        {
+          "donor_id": "H21.33.021",
+          "outcome": -0.0983582,
+          "predicted": -0.08127859758927489,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.022957003314146143,
+          "abs_error": 0.01707960241072512
+        },
+        {
+          "donor_id": "H21.33.023",
+          "outcome": -0.1546294,
+          "predicted": -0.037250469601946494,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.010208808285731369,
+          "abs_error": 0.1173789303980535
+        },
+        {
+          "donor_id": "H21.33.025",
+          "outcome": -0.0422854,
+          "predicted": -0.12474722454229104,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0110846688432895,
+          "abs_error": 0.08246182454229103
+        },
+        {
+          "donor_id": "H21.33.033",
+          "outcome": -0.0466362,
+          "predicted": -0.10059330080428712,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.12110847706085799,
+          "abs_error": 0.05395710080428712
+        },
+        {
+          "donor_id": "H21.33.035",
+          "outcome": -0.0498238,
+          "predicted": -0.12066260596728684,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.10868107859413141,
+          "abs_error": 0.07083880596728684
+        },
+        {
+          "donor_id": "H21.33.037",
+          "outcome": -0.0881349,
+          "predicted": -0.07481531966014535,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.011161811161811155,
+          "abs_error": 0.013319580339854656
+        },
+        {
+          "donor_id": "H21.33.038",
+          "outcome": -0.0518276,
+          "predicted": -0.07118437624955955,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0006515657831447502,
+          "abs_error": 0.019356776249559546
+        },
+        {
+          "donor_id": "H21.33.040",
+          "outcome": -0.0327944,
+          "predicted": -0.15178589707975257,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.030270865498138233,
+          "abs_error": 0.11899149707975257
+        },
+        {
+          "donor_id": "H21.33.043",
+          "outcome": -0.072355,
+          "predicted": -0.0916999226840696,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0055642019095343,
+          "abs_error": 0.019344922684069593
+        },
+        {
+          "donor_id": "H21.33.044",
+          "outcome": -0.0991281,
+          "predicted": -0.15630365594712087,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.006285759828689244,
+          "abs_error": 0.05717555594712087
+        },
+        {
+          "donor_id": "H21.33.046",
+          "outcome": -0.1616234,
+          "predicted": -0.10364478776446905,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.014154207720384199,
+          "abs_error": 0.057978612235530955
+        }
+      ]
+    },
+    {
+      "name": "candidate_variant_b",
+      "feature_name": "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3",
+      "feature_column": "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3",
+      "description": "Reactive-astrocyte hotspot local Corpora Amylacea fraction minus astrocyte hotspot local Corpora Amylacea fraction in CA1, r=90 px, k=3.",
+      "radius_px": 90.0,
+      "k_same_class": 3,
+      "n_total": 35,
+      "n_analyzable": 35,
+      "coverage_ratio": 1.0,
+      "partial_r": -0.03632929100958793,
+      "p_value": 0.8358617602808951,
+      "ci_lo": -0.3978609264208627,
+      "ci_hi": 0.26241771289969373,
+      "selection_score": 0.03632929100958793,
+      "loo_predictive_r": -0.17911231030330935,
+      "is_loo_gap": 0.14278301929372142,
+      "gap_penalty": 0.035695754823430355,
+      "adjusted_score": 0.0006335361861575725,
+      "bootstrap_median_partial_r": -0.03943687506518982,
+      "bootstrap_sign_consistency": 0.715,
+      "bootstrap_q25_partial_r": -0.09673177868024743,
+      "bootstrap_q75_partial_r": 0.009286999887216282,
+      "loo_unstable_count": 0,
+      "loo_max_shift": 0.09225066247796718,
+      "loo_unstable_donors": [],
+      "per_donor_loo": [
+        {
+          "donor_id": "H19.33.004",
+          "outcome": -0.0587685,
+          "predicted": -0.07169737047516805,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.009344981642496322,
+          "abs_error": 0.012928870475168053
+        },
+        {
+          "donor_id": "H20.33.008",
+          "outcome": -0.1205063,
+          "predicted": -0.1299546882341029,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.0304851648078249,
+          "abs_error": 0.009448388234102892
+        },
+        {
+          "donor_id": "H20.33.013",
+          "outcome": -0.0317417,
+          "predicted": -0.10761066887113237,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.01783273387917672,
+          "abs_error": 0.07586896887113237
+        },
+        {
+          "donor_id": "H20.33.018",
+          "outcome": -0.3042141,
+          "predicted": -0.09668245175892842,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.003912798920001667,
+          "abs_error": 0.20753164824107156
+        },
+        {
+          "donor_id": "H20.33.024",
+          "outcome": -0.0103346,
+          "predicted": -0.09170933472414756,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.020387903497215976,
+          "abs_error": 0.08137473472414757
+        },
+        {
+          "donor_id": "H20.33.025",
+          "outcome": -0.0723104,
+          "predicted": -0.11119402510593634,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.014176741619552055,
+          "abs_error": 0.03888362510593635
+        },
+        {
+          "donor_id": "H20.33.027",
+          "outcome": -0.1125932,
+          "predicted": -0.12868522624529058,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.02246402503931448,
+          "abs_error": 0.016092026245290575
+        },
+        {
+          "donor_id": "H20.33.029",
+          "outcome": -0.0948095,
+          "predicted": -0.12922939576964473,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.010782663856953478,
+          "abs_error": 0.03441989576964473
+        },
+        {
+          "donor_id": "H20.33.030",
+          "outcome": -0.1680423,
+          "predicted": -0.14138753692592185,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.00109507495871132,
+          "abs_error": 0.026654763074078158
+        },
+        {
+          "donor_id": "H20.33.034",
+          "outcome": -0.0522007,
+          "predicted": -0.0862911828805507,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.06615745365745362,
+          "abs_error": 0.03409048288055069
+        },
+        {
+          "donor_id": "H20.33.037",
+          "outcome": -0.2508045,
+          "predicted": -0.13971590976164908,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.030385854980836693,
+          "abs_error": 0.11108859023835091
+        },
+        {
+          "donor_id": "H20.33.038",
+          "outcome": -0.2372091,
+          "predicted": -0.13803282448935789,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.03131818858007166,
+          "abs_error": 0.09917627551064212
+        },
+        {
+          "donor_id": "H20.33.040",
+          "outcome": -0.1026342,
+          "predicted": -0.1317577352962566,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.020429358669888625,
+          "abs_error": 0.029123535296256595
+        },
+        {
+          "donor_id": "H20.33.041",
+          "outcome": -0.1079018,
+          "predicted": -0.1241379088765368,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.010234839384636957,
+          "abs_error": 0.0162361088765368
+        },
+        {
+          "donor_id": "H20.33.043",
+          "outcome": -0.0599597,
+          "predicted": -0.07407036071432793,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.00023550703621537383,
+          "abs_error": 0.014110660714327934
+        },
+        {
+          "donor_id": "H20.33.044",
+          "outcome": -0.0544588,
+          "predicted": -0.04347682651978585,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.08954951710369666,
+          "abs_error": 0.010981973480214152
+        },
+        {
+          "donor_id": "H20.33.046",
+          "outcome": -0.2017114,
+          "predicted": -0.12378131133521939,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.014405757641051772,
+          "abs_error": 0.07793008866478063
+        },
+        {
+          "donor_id": "H21.33.001",
+          "outcome": -0.0815782,
+          "predicted": -0.026526978765474322,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.0018737096617061633,
+          "abs_error": 0.05505122123452568
+        },
+        {
+          "donor_id": "H21.33.004",
+          "outcome": -0.1198253,
+          "predicted": -0.020265180252668262,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.006729001192630896,
+          "abs_error": 0.09956011974733173
+        },
+        {
+          "donor_id": "H21.33.006",
+          "outcome": -0.0539668,
+          "predicted": -0.12656278272468718,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.10934968845416604,
+          "abs_error": 0.07259598272468717
+        },
+        {
+          "donor_id": "H21.33.007",
+          "outcome": -0.0975144,
+          "predicted": -0.14843132444179047,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.005085502193364261,
+          "abs_error": 0.05091692444179047
+        },
+        {
+          "donor_id": "H21.33.012",
+          "outcome": -0.1009244,
+          "predicted": -0.09832507378089887,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.006723572676258074,
+          "abs_error": 0.002599326219101125
+        },
+        {
+          "donor_id": "H21.33.013",
+          "outcome": -0.161261,
+          "predicted": -0.11864271120859494,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.010313933316752871,
+          "abs_error": 0.04261828879140504
+        },
+        {
+          "donor_id": "H21.33.018",
+          "outcome": -0.144019,
+          "predicted": -0.10758949995946995,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.0012749773204736442,
+          "abs_error": 0.036429500040530055
+        },
+        {
+          "donor_id": "H21.33.021",
+          "outcome": -0.0983582,
+          "predicted": -0.09688726797848171,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.009559524854049886,
+          "abs_error": 0.0014709320215182953
+        },
+        {
+          "donor_id": "H21.33.023",
+          "outcome": -0.1546294,
+          "predicted": -0.030477386569709046,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.010519396828920613,
+          "abs_error": 0.12415201343029095
+        },
+        {
+          "donor_id": "H21.33.025",
+          "outcome": -0.0422854,
+          "predicted": -0.12109269526302369,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.010299332069667017,
+          "abs_error": 0.07880729526302369
+        },
+        {
+          "donor_id": "H21.33.033",
+          "outcome": -0.0466362,
+          "predicted": -0.12753751505131705,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.015385122356276204,
+          "abs_error": 0.08090131505131705
+        },
+        {
+          "donor_id": "H21.33.035",
+          "outcome": -0.0498238,
+          "predicted": -0.14801807223617816,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.023760438268793538,
+          "abs_error": 0.09819427223617816
+        },
+        {
+          "donor_id": "H21.33.037",
+          "outcome": -0.0881349,
+          "predicted": -0.06946804286652929,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.009559881851065669,
+          "abs_error": 0.018666857133470716
+        },
+        {
+          "donor_id": "H21.33.038",
+          "outcome": -0.0518276,
+          "predicted": -0.06377646587721003,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.0024580054079321734,
+          "abs_error": 0.01194886587721003
+        },
+        {
+          "donor_id": "H21.33.040",
+          "outcome": -0.0327944,
+          "predicted": -0.15135366204669176,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.0106195837219593,
+          "abs_error": 0.11855926204669176
+        },
+        {
+          "donor_id": "H21.33.043",
+          "outcome": -0.072355,
+          "predicted": -0.08873108146492303,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": 0.0028668185142344815,
+          "abs_error": 0.01637608146492303
+        },
+        {
+          "donor_id": "H21.33.044",
+          "outcome": -0.0991281,
+          "predicted": -0.15694518477979574,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.01222220656712826,
+          "abs_error": 0.05781708477979575
+        },
+        {
+          "donor_id": "H21.33.046",
+          "outcome": -0.1616234,
+          "predicted": -0.10284818254396516,
+          "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r90px_k3": -0.0067690401028525915,
+          "abs_error": 0.05877521745603484
+        }
+      ]
+    }
+  ],
+  "per_donor_loo": [
+    {
+      "donor_id": "H19.33.004",
+      "outcome": -0.0587685,
+      "predicted": -0.08081043364913688,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.00452085713161661,
+      "abs_error": 0.022041933649136883
+    },
+    {
+      "donor_id": "H20.33.008",
+      "outcome": -0.1205063,
+      "predicted": -0.13574288251733366,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.022353968782540215,
+      "abs_error": 0.01523658251733366
+    },
+    {
+      "donor_id": "H20.33.013",
+      "outcome": -0.0317417,
+      "predicted": -0.09879180071216806,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.01544048930196941,
+      "abs_error": 0.06705010071216806
+    },
+    {
+      "donor_id": "H20.33.018",
+      "outcome": -0.3042141,
+      "predicted": -0.10099211827064335,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0068373247407689935,
+      "abs_error": 0.20322198172935663
+    },
+    {
+      "donor_id": "H20.33.024",
+      "outcome": -0.0103346,
+      "predicted": -0.11333929420867203,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.05925283847578272,
+      "abs_error": 0.10300469420867203
+    },
+    {
+      "donor_id": "H20.33.025",
+      "outcome": -0.0723104,
+      "predicted": -0.10328263331395961,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.017684504048140412,
+      "abs_error": 0.03097223331395961
+    },
+    {
+      "donor_id": "H20.33.027",
+      "outcome": -0.1125932,
+      "predicted": -0.13586947935481236,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.02889216395139596,
+      "abs_error": 0.023276279354812357
+    },
+    {
+      "donor_id": "H20.33.029",
+      "outcome": -0.0948095,
+      "predicted": -0.13159756275407294,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0041357589967592895,
+      "abs_error": 0.03678806275407294
+    },
+    {
+      "donor_id": "H20.33.030",
+      "outcome": -0.1680423,
+      "predicted": -0.158825391547989,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.06402417027417026,
+      "abs_error": 0.009216908452011008
+    },
+    {
+      "donor_id": "H20.33.034",
+      "outcome": -0.0522007,
+      "predicted": -0.10603080533459067,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.06349206349206347,
+      "abs_error": 0.053830105334590664
+    },
+    {
+      "donor_id": "H20.33.037",
+      "outcome": -0.2508045,
+      "predicted": -0.1507109217523695,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.05577946257770819,
+      "abs_error": 0.10009357824763049
+    },
+    {
+      "donor_id": "H20.33.038",
+      "outcome": -0.2372091,
+      "predicted": -0.15936474452261173,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.10970536408036406,
+      "abs_error": 0.07784435547738827
+    },
+    {
+      "donor_id": "H20.33.040",
+      "outcome": -0.1026342,
+      "predicted": -0.1270533239836437,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.02039390129257901,
+      "abs_error": 0.024419123983643695
+    },
+    {
+      "donor_id": "H20.33.041",
+      "outcome": -0.1079018,
+      "predicted": -0.08717451586003032,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.13249559082892415,
+      "abs_error": 0.020727284139969687
+    },
+    {
+      "donor_id": "H20.33.043",
+      "outcome": -0.0599597,
+      "predicted": -0.07319001833262144,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0011293864617215321,
+      "abs_error": 0.013230318332621442
+    },
+    {
+      "donor_id": "H20.33.044",
+      "outcome": -0.0544588,
+      "predicted": -0.016343061686373492,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.11205235396411865,
+      "abs_error": 0.03811573831362651
+    },
+    {
+      "donor_id": "H20.33.046",
+      "outcome": -0.2017114,
+      "predicted": -0.1300886027764639,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.043452380952380965,
+      "abs_error": 0.07162279722353612
+    },
+    {
+      "donor_id": "H21.33.001",
+      "outcome": -0.0815782,
+      "predicted": -0.029843763971129453,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.004357526586033375,
+      "abs_error": 0.051734436028870553
+    },
+    {
+      "donor_id": "H21.33.004",
+      "outcome": -0.1198253,
+      "predicted": -0.02058185981635436,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0012539543789543695,
+      "abs_error": 0.09924344018364564
+    },
+    {
+      "donor_id": "H21.33.006",
+      "outcome": -0.0539668,
+      "predicted": -0.1266868533354521,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.12037668214138803,
+      "abs_error": 0.07272005333545209
+    },
+    {
+      "donor_id": "H21.33.007",
+      "outcome": -0.0975144,
+      "predicted": -0.1553432505379851,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.026458422529851103,
+      "abs_error": 0.05782885053798509
+    },
+    {
+      "donor_id": "H21.33.012",
+      "outcome": -0.1009244,
+      "predicted": -0.0649413264575144,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.11521164021164021,
+      "abs_error": 0.0359830735424856
+    },
+    {
+      "donor_id": "H21.33.013",
+      "outcome": -0.161261,
+      "predicted": -0.12071258260042005,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.00574814074814077,
+      "abs_error": 0.04054841739957994
+    },
+    {
+      "donor_id": "H21.33.018",
+      "outcome": -0.144019,
+      "predicted": -0.09849841068012244,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.0068383863327683425,
+      "abs_error": 0.04552058931987757
+    },
+    {
+      "donor_id": "H21.33.021",
+      "outcome": -0.0983582,
+      "predicted": -0.08127859758927489,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.022957003314146143,
+      "abs_error": 0.01707960241072512
+    },
+    {
+      "donor_id": "H21.33.023",
+      "outcome": -0.1546294,
+      "predicted": -0.037250469601946494,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.010208808285731369,
+      "abs_error": 0.1173789303980535
+    },
+    {
+      "donor_id": "H21.33.025",
+      "outcome": -0.0422854,
+      "predicted": -0.12474722454229104,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0110846688432895,
+      "abs_error": 0.08246182454229103
+    },
+    {
+      "donor_id": "H21.33.033",
+      "outcome": -0.0466362,
+      "predicted": -0.10059330080428712,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.12110847706085799,
+      "abs_error": 0.05395710080428712
+    },
+    {
+      "donor_id": "H21.33.035",
+      "outcome": -0.0498238,
+      "predicted": -0.12066260596728684,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.10868107859413141,
+      "abs_error": 0.07083880596728684
+    },
+    {
+      "donor_id": "H21.33.037",
+      "outcome": -0.0881349,
+      "predicted": -0.07481531966014535,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.011161811161811155,
+      "abs_error": 0.013319580339854656
+    },
+    {
+      "donor_id": "H21.33.038",
+      "outcome": -0.0518276,
+      "predicted": -0.07118437624955955,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0006515657831447502,
+      "abs_error": 0.019356776249559546
+    },
+    {
+      "donor_id": "H21.33.040",
+      "outcome": -0.0327944,
+      "predicted": -0.15178589707975257,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.030270865498138233,
+      "abs_error": 0.11899149707975257
+    },
+    {
+      "donor_id": "H21.33.043",
+      "outcome": -0.072355,
+      "predicted": -0.0916999226840696,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.0055642019095343,
+      "abs_error": 0.019344922684069593
+    },
+    {
+      "donor_id": "H21.33.044",
+      "outcome": -0.0991281,
+      "predicted": -0.15630365594712087,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": -0.006285759828689244,
+      "abs_error": 0.05717555594712087
+    },
+    {
+      "donor_id": "H21.33.046",
+      "outcome": -0.1616234,
+      "predicted": -0.10364478776446905,
+      "ca1_reactive_hotspot_corpora_amylacea_enrichment__reactive_minus_astro_hotspot_local_ca_fraction_r70px_k3": 0.014154207720384199,
+      "abs_error": 0.057978612235530955
+    }
+  ],
+  "family_name": "ca1_reactive_hotspot_corpora_amylacea_enrichment",
+  "population": "CA1 reactive-astrocyte and astrocyte hotspots",
+  "niche": "CA1 hotspot-local neighborhoods",
+  "donor_scalar": "mean local Corpora Amylacea fraction around reactive hotspots minus matched astrocyte hotspots"
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '220,320p' /shared/lib/shared_analysis/stats.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n) -> float:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds]).reset_index(drop=True)\\n    preds: list[float] = []\\n    actuals: list[float] = []\\n    for idx in range(len(frame)):\\n        train = frame.drop(index=idx).reset_index(drop=True)\\n        test = frame.iloc[[idx]].reset_index(drop=True)\\n\\n        x_train_conf = _design_matrix(train[confounds])\\n        x_test_conf = _design_m\", \"stderr\": \"\"}"
+  }
+]

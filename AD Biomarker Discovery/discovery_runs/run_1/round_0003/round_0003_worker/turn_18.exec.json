@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "47:CANONICAL_VARIATION = \"candidate_variant_a\"\n48:CANONICAL_RADIUS_PX = 80.0\n49:FEATURE_NAME = \"ca1_pyramidal_reactive_astro_niche_fraction_80px\"\n50:FEATURE_COLUMN = \"ca1_pyramidal_with_reactive_astro_within_80px_fraction\"\n",
+  "stderr": ""
+}

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 1,
+  "stdout": "centroids shape (263786, 2) int32\nclass_id shape (263786,) int32\nclass_name shape (9,) |S256\nfirst class names [b'Negative control', b'Tumor', b'Lymphocyte', b'Pyramidal Neuron', b'Granule Neuron', b'Reactive Astrocyte', b'Astrocyte', b'Oligodendrocyte', b'Corpora Amylacea']\nfirst class ids [0, 0, 0, 3, 0, 3, 0, 0, 0, 0]\nmetadata keys []\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/scratch/.tl_runtime/runtime_server.py\", line 47, in _execute\n    exec(compile(code, \"<tl_runtime>\", \"exec\"), {\"__name__\": \"__main__\"})\n  File \"<tl_runtime>\", line 14, in <module>\nAttributeError: 'Group' object has no attribute 'shape'\n"
+}

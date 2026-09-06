@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfind /data/autoresearch_runs -maxdepth 4 \\( -name results.json -o -name report.md -o -name result.py \\) | sed -n '1,60p'",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"/data/autoresearch_runs/run_20260406_102839_f31166/round_0001/Worker 1/result.py\\n/data/autoresearch_runs/run_20260406_102839_f31166/round_0001/Worker 2/result.py\\n/data/autoresearch_runs/run_20260406_102839_f31166/round_0001/Worker 4/result.py\\n/data/autoresearch_runs/run_20260406_102839_f31166/round_0001/Worker 5/result.py\\n/data/autoresearch_runs/run_20260406_102839_f31166/round_0001/Worker 3/result.py\\n/data/autoresearch_runs/run_20260406_102839_f31166/round_0002/Worker 1/result.py\\n/data/autorese\", \"stderr\": \"\"}"
+  }
+]

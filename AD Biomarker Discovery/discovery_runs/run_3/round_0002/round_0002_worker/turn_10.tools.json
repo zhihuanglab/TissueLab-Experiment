@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\ngrep -n \"def partial_correlation\\|def bootstrap_partial_correlation\\|def leave_one_out_summary\\|def residualized_loo_predictive_correlation\\|def analyze_loo_instability\" -n /shared/lib/shared_analysis/stats.py\nsed -n '1,220p' /shared/lib/shared_analysis/stats.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"30:def partial_correlation(\\n46:def bootstrap_partial_correlation(\\n89:def bootstrap_partial_correlation_stability(\\n192:def leave_one_out_summary(\\n219:def residualized_loo_predictive_correlation(\\nfrom __future__ import annotations\\n\\nfrom typing import Iterable\\n\\nimport numpy as np\\nimport pandas as pd\\nfrom scipy.stats import pearsonr\\n\\n\\ndef _clean_frame(df: pd.DataFrame, columns: Iterable[str]) -> pd.DataFrame:\\n    cleaned = df.loc[:, list(columns)].replace([np.inf, -np.inf], np.nan).dropna()\\n    if c\", \"stderr\": \"\"}"
+  }
+]

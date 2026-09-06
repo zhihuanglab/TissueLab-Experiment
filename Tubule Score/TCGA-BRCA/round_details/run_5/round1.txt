@@ -1,0 +1,38 @@
+Round 1 Details
+============================================================
+
+FEATURE-GT CORRELATIONS:
+  gland_patch_fraction: r=-0.4148
+  gland_among_tumor: r=-0.2657
+  biomedparse_gland_fraction: r=-0.3066
+  tumor_cell_fraction: r=+0.0715
+  mean_gland_prob: r=+0.0000
+  tumor_patch_fraction: r=-0.0527
+  stardist_tumor_frac: r=+0.0715
+
+ALL CONFIGURATIONS (sorted by adjusted score):
+  single_gland_patch_fraction_ridge: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  top2_ridge10: adjusted=0.2610 (LOO r=0.2650, IS r=0.4230, gap=0.1580) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  top2_ridge: adjusted=0.2588 (LOO r=0.2654, IS r=0.4284, gap=0.1631) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gland_features_ridge: adjusted=0.2344 (LOO r=0.2783, IS r=0.5159, gap=0.2377) [F1=0.4042 QWK=0.2400 Acc=0.4667]
+  top3_ridge: adjusted=0.2344 (LOO r=0.2783, IS r=0.5159, gap=0.2377) [F1=0.4042 QWK=0.2400 Acc=0.4667]
+  top3_ridge10: adjusted=0.2173 (LOO r=0.2655, IS r=0.5118, gap=0.2463) [F1=0.2963 QWK=0.0870 Acc=0.4000]
+  gland_features_ridge10: adjusted=0.2173 (LOO r=0.2655, IS r=0.5118, gap=0.2463) [F1=0.2963 QWK=0.0870 Acc=0.4000]
+  single_biomedparse_gland_fraction_ridge: adjusted=0.0989 (LOO r=0.1181, IS r=0.3066, gap=0.1885) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  single_gland_among_tumor_ridge: adjusted=-0.0602 (LOO r=-0.0015, IS r=0.2657, gap=0.2673) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  single_tumor_cell_fraction_ridge: adjusted=-1.0000 (LOO r=-0.5168, IS r=0.0715, gap=0.5882) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  single_tumor_patch_fraction_ridge: adjusted=-1.0000 (LOO r=-0.6066, IS r=0.0527, gap=0.6593) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  single_stardist_tumor_frac_ridge: adjusted=-1.0000 (LOO r=-0.5168, IS r=0.0715, gap=0.5882) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  gland_features_enet: adjusted=-1.0000 (LOO r=0.2098, IS r=0.5110, gap=0.3011) [F1=0.2963 QWK=0.0870 Acc=0.4000]
+  all_features_ridge: adjusted=-1.0000 (LOO r=0.2185, IS r=0.5270, gap=0.3085) [F1=0.2440 QWK=0.1379 Acc=0.2667]
+  all_features_ridge10: adjusted=-1.0000 (LOO r=0.2145, IS r=0.5263, gap=0.3118) [F1=0.1994 QWK=0.0000 Acc=0.3000]
+  all_features_enet: adjusted=-1.0000 (LOO r=0.1747, IS r=0.5215, gap=0.3468) [F1=0.2177 QWK=0.0000 Acc=0.3333]
+  all_features_rf: adjusted=-1.0000 (LOO r=-0.0934, IS r=0.9029, gap=0.9962) [F1=0.2347 QWK=-0.0714 Acc=0.3000]
+
+BEST MODEL: single_gland_patch_fraction_ridge
+  Pearson r:      IS=0.4155  LOO=0.3028
+  IS-LOO Gap:     0.1126 (penalty=0.0000)
+  Adjusted Score: 0.3028
+  Macro F1:       0.1772
+  QWK:            0.0833
+  Accuracy:       0.2667

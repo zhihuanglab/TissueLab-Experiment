@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfind /data/autoresearch_runs -name results.json | head -5 | while read f; do echo '---' $f; python - <<PY\nimport json,sys\nwith open(\"$f\") as fh:\n    j=json.load(fh)\nfor k in ['best_variation','partial_r','selection_score','loo_predictive_r','is_loo_gap','adjusted_score','feature_column','ranked_variations']:\n    if k in j:\n        print(k, j[k] if k!='ranked_variations' else j[k][:2])\nPY\ndone",
+    "output_preview": "{\"exit_code\": 141, \"stdout\": \"--- /data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/sandbox/results.json\\nbest_variation ca1sb_reactive_to_pyramidal_logratio\\n--- /data/autoresearch_runs/run_20260410_154305_f2f9d8/round_0001/round_0001_worker/results.json\\nbest_variation ca1sb_reactive_to_pyramidal_logratio\\n--- /data/autoresearch_runs/run_20260410_155640_434a75/round_0001/round_0001_worker/sandbox/results.json\\nbest_variation ca1ec_reactive_to_pyramidal_logratio\\nranked_variations [{'name': 'ca1ec_re\", \"stderr\": \"\"}"
+  }
+]

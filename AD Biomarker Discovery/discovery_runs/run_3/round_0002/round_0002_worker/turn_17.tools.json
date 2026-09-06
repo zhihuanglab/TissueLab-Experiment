@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "python - <<'PY'\nfrom pathlib import Path\npath=Path('/scratch/result.py')\ntext=path.read_text()\ntext=text.replace(\n    \"    for row in top_errors:\\n        top_error_lines.append(\\n            f\\\"- {row['donor_id']}: outcome {row['outcome']:.3f}, predicted {row['predicted']:.3f}, \\\"\\n            f\\\"|error| {row['abs_error']:.3f}, status {row['cognitive_status']}, Braak {row['braak_numeric']}, \\\"\\n            f\\\"CERAD {row['cerad_ordinal']}, denominator {int(row[f\\\\\\\"{best['feature_column']}_denom\\\\\\\"])}.\\\"\\n        )\\n\",\n    \"    denom_key = f\\\"{best['feature_column']}_denom\\\"\\n    for row in top_errors:\\n        top_error_lines.append(\\n            f\\\"- {row['donor_id']}: outcome {row['outcome']:.3f}, predicted {row['predicted']:.3f}, \\\"\\n            f\\\"|error| {row['abs_error']:.3f}, status {row['cognitive_status']}, Braak {row['braak_numeric']}, \\\"\\n            f\\\"CERAD {row['cerad_ordinal']}, denominator {int(row[denom_key])}.\\\"\\n        )\\n\"\n)\npath.write_text(text)\nPY\npython -m py_compile /scratch/result.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\", \"stderr\": \"\"}"
+  }
+]

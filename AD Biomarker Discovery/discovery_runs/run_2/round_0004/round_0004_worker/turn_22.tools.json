@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport importlib.util, json\nfrom pathlib import Path\nspec = importlib.util.spec_from_file_location('worker_result', '/scratch/result.py')\nmod = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(mod)\nprint('canonical variation:', mod.CANONICAL_REPLAY_VARIATION)\nprint('sample score:', mod.compute_donor_score(donor_id='H19.33.004', data_root='/data'))\nprint('results keys:', sorted(json.loads(Path('/scratch/results.json').read_text()).keys())[:20])\nprint('report exists:', Path('/scratch/report.md').exists())\nprint('donor table exists:', Path('/scratch/donor_feature_table.csv').exists())\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"canonical variation: candidate_variant_a\\nsample score: -0.22508341613203608\\nresults keys: ['adjusted_score', 'approach', 'artifacts', 'best_variation', 'canonical_replay_variation', 'feature_column', 'feature_name', 'hypothesis_family', 'is_loo_gap', 'loo_max_shift', 'loo_predictive_r', 'loo_unstable_count', 'n_analyzable', 'n_total', 'p_value', 'partial_r', 'penalty', 'ranked_variations', 'scientific_question', 'selection_score']\\nreport exists: True\\ndonor table exists: True\\n\", \"stderr\": \"\"}"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nfrom pathlib import Path\nfor p in [\n'/data/autoresearch_runs/run_20260421_001115_585b70/round_0006/round_0006_worker/result.py',\n'/data/autoresearch_runs/run_20260421_001115_585b70/round_0005/round_0005_worker/result.py']:\n    text=Path(p).read_text()\n    for needle in ['adjusted_score','penalty']:\n        idx=text.find(needle)\n        print('FILE',p,'first',needle,'at',idx)\n    print('---snip---')\n    for line in text.splitlines():\n        if 'adjusted_score' in line or 'penalty' in line:\n            print(line)\n    print('========')\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"FILE /data/autoresearch_runs/run_20260421_001115_585b70/round_0006/round_0006_worker/result.py first adjusted_score at 14327\\nFILE /data/autoresearch_runs/run_20260421_001115_585b70/round_0006/round_0006_worker/result.py first penalty at 10659\\n---snip---\\n    penalty = float(max(0.0, gap - 0.15))\\n    adjusted = float(loo_r - penalty)\\n    return gap, penalty, adjusted\\n    penalty_value = float(best[\\\"gap_penalty\\\"])\\n    adjusted_value = float(best[\\\"adjusted_score\\\"])\\n- IS-LOO Gap: {gap_value:.4f} (pen\", \"stderr\": \"\"}"
+  }
+]

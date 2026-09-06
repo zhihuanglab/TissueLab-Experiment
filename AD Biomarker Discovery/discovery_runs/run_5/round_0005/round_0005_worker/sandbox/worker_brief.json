@@ -1,0 +1,70 @@
+{
+  "worker_name": "round_0005_worker",
+  "round_id": 5,
+  "candidate_id": "ca1-peripyramidal-astro-reactivity-index",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_reactive_astro_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_pyramidal_near_reactive_astro_fraction_30um",
+        "round_id": 2,
+        "panel_candidate_score": 0.5513,
+        "delta_panel_score": 0.0599,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astro_crowding_fraction_k3_30um",
+        "round_id": 3,
+        "panel_candidate_score": 0.5984,
+        "delta_panel_score": 0.0471,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_peripyramidal_reactive_astro_area_median_30um_um2",
+        "round_id": 4,
+        "panel_candidate_score": 0.6307,
+        "delta_panel_score": 0.0323,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0004/round_0004_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.6307
+  },
+  "scientific_question": "Do donors with worse memory decline show a higher fraction of reactive astrocytes among astrocyte-lineage cells specifically in the CA1 pyramidal-neuron niche, beyond the existing panel's burden, exposure, crowding, and size signals?",
+  "approach": "Assign cells to CA1 using CustomAnnotations polygons after dividing polygon coordinates by 16. From CA1 cells, identify Pyramidal Neuron, Astrocyte, and Reactive Astrocyte labels. Build a spatial query on CA1 pyramidal centroids, then mark each CA1 Astrocyte or Reactive Astrocyte cell whose centroid lies within radius r of at least one CA1 pyramidal neuron, counting each astrocyte-lineage cell only once even if it is near multiple pyramidal neurons. The donor biomarker is reactive_niche_count / (reactive_niche_count + astro_niche_count), where the denominator includes only Astrocyte plus Reactive Astrocyte cells in that peripyramidal niche.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "CA1 peripyramidal astrocyte reactivity index using a 30 um niche radius around CA1 pyramidal neurons."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Same CA1 peripyramidal astrocyte reactivity index using a tighter 20 um niche radius around CA1 pyramidal neurons."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use slide_name from training_cohort.csv to open /data/<slide_name>. Convert microns to pixels using slide-specific MPP if available from the paired SVS; otherwise a cohort-wide approximation near 0.503 um/pixel is acceptable if used consistently. Count only CA1-assigned cells on both sides of the query. Deduplicate astrocyte-lineage cells that fall near multiple pyramidal neurons. If CA1 is missing or the peripyramidal astrocyte-lineage denominator is too small for a stable fraction, return NaN rather than forcing a value.",
+  "rationale": "The accepted panel has consistently improved by narrowing from global CA1 reactive-astrocyte burden to the CA1 peripyramidal niche, suggesting that astrocyte state around vulnerable pyramidal neurons matters more than bulk abundance alone. The clean next test is to keep the same biology and niche but change the summary from absolute reactive-astrocyte amount to an astrocyte-lineage state balance: reactive astrocytes divided by reactive astrocytes plus non-reactive astrocytes near CA1 pyramidal neurons. This could add a distinct state-transition signal or serve as a cleaner replacement for the broad CA1 reactive-astrocyte fraction."
+}

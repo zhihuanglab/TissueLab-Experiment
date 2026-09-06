@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, os\nprint(sys.path)\nprint(os.listdir('/shared'))\nprint(os.listdir('/shared/lib')[:20])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"['/scratch/.tl_runtime', '/usr/local/lib/python311.zip', '/usr/local/lib/python3.11', '/usr/local/lib/python3.11/lib-dynload', '/usr/local/lib/python3.11/site-packages']\\n['dataset_guide.md', '._dataset_guide.md', 'cache', '._cache', 'lib', '._lib', 'templates', '._templates']\\n['shared_analysis', '._shared_analysis']\\n\", \"stderr\": \"\"}"
+  }
+]

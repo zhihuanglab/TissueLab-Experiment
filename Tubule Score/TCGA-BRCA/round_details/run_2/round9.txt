@@ -1,0 +1,59 @@
+Round 9 Details
+================================================================================
+
+Interpretable Feature-GT Correlations:
+  gland_patch_fraction: r=-0.4148
+  tumor_cell_nn_std: r=-0.3642
+  gland_in_tumor_frac: r=-0.5442
+  tumor_cell_density: r=-0.0306
+  bp_component_area_cv: r=-0.2266
+
+All Configurations (sorted by adjusted, top 40):
+  interp5+gPC4+tPC4__Ridge_a1.0: adj=0.8311 LOO_r=0.8311 IS_r=0.9444 gap=0.1134 F1=0.7407 QWK=0.7778
+  interp5+gPC4+tPC4__Ridge_a0.5: adj=0.8302 LOO_r=0.8302 IS_r=0.9467 gap=0.1165 F1=0.7097 QWK=0.7568
+  interp5+gPC5+tPC4__EN_l1r0.1: adj=0.8280 LOO_r=0.8280 IS_r=0.9355 gap=0.1075 F1=0.7738 QWK=0.8108
+  interp5+gPC5+tPC4__Ridge_a5.0: adj=0.8271 LOO_r=0.8271 IS_r=0.9349 gap=0.1077 F1=0.7423 QWK=0.7778
+  interp5+gPC4+tPC4__EN_l1r0.1: adj=0.8243 LOO_r=0.8243 IS_r=0.9356 gap=0.1114 F1=0.7407 QWK=0.7778
+  interp5+gPC5+tPC4__Ridge_a1.0: adj=0.8238 LOO_r=0.8238 IS_r=0.9444 gap=0.1206 F1=0.7738 QWK=0.8108
+  interp5+gPC4+tPC4__Ridge_a5.0: adj=0.8228 LOO_r=0.8228 IS_r=0.9348 gap=0.1120 F1=0.7101 QWK=0.7429
+  interp5+gPC4+tPC5__Ridge_a1.0: adj=0.8215 LOO_r=0.8215 IS_r=0.9440 gap=0.1225 F1=0.7738 QWK=0.8108
+  interp5+gPC5+tPC4__Ridge_a0.5: adj=0.8208 LOO_r=0.8208 IS_r=0.9467 gap=0.1260 F1=0.7713 QWK=0.8205
+  interp5+gPC4+tPC5__Ridge_a5.0: adj=0.8195 LOO_r=0.8195 IS_r=0.9348 gap=0.1153 F1=0.7738 QWK=0.8108
+  interp5+gPC5+tPC4__Ridge_a10.0: adj=0.8193 LOO_r=0.8193 IS_r=0.9292 gap=0.1099 F1=0.6088 QWK=0.6250
+  interp5+gPC4+tPC5__EN_l1r0.1: adj=0.8187 LOO_r=0.8187 IS_r=0.9358 gap=0.1171 F1=0.7738 QWK=0.8108
+  interp5+gPC4+tPC5__Ridge_a0.5: adj=0.8185 LOO_r=0.8185 IS_r=0.9461 gap=0.1276 F1=0.7418 QWK=0.7895
+  interp5+gPC5+tPC5__EN_l1r0.1: adj=0.8178 LOO_r=0.8178 IS_r=0.9358 gap=0.1180 F1=0.8054 QWK=0.8421
+  interp5+gPC5+tPC5__Ridge_a5.0: adj=0.8148 LOO_r=0.8148 IS_r=0.9347 gap=0.1200 F1=0.7731 QWK=0.8108
+  interp5+gPC4+tPC4__Ridge_a10.0: adj=0.8117 LOO_r=0.8117 IS_r=0.9291 gap=0.1174 F1=0.6071 QWK=0.6250
+  interp5+gPC4+tPC5__Ridge_a10.0: adj=0.8109 LOO_r=0.8109 IS_r=0.9291 gap=0.1182 F1=0.6436 QWK=0.6667
+  interp5+gPC5+tPC4__EN_l1r0.5: adj=0.8096 LOO_r=0.8096 IS_r=0.9287 gap=0.1190 F1=0.6088 QWK=0.6250
+  interp5+gPC4+tPC3__Ridge_a5.0: adj=0.8085 LOO_r=0.8085 IS_r=0.9322 gap=0.1237 F1=0.7101 QWK=0.7429
+  interp5+gPC5+tPC5__Ridge_a10.0: adj=0.8080 LOO_r=0.8080 IS_r=0.9289 gap=0.1209 F1=0.6730 QWK=0.7059
+  interp5+gPC5+tPC5__Ridge_a1.0: adj=0.8065 LOO_r=0.8065 IS_r=0.9439 gap=0.1374 F1=0.8054 QWK=0.8421
+  interp5+gPC4+tPC3__Ridge_a1.0: adj=0.8052 LOO_r=0.8052 IS_r=0.9366 gap=0.1314 F1=0.7097 QWK=0.7568
+  interp5+gPC5+tPC3__Ridge_a5.0: adj=0.8031 LOO_r=0.8031 IS_r=0.9319 gap=0.1287 F1=0.7089 QWK=0.7429
+  interp5+gPC5+tPC5__Ridge_a0.5: adj=0.8031 LOO_r=0.8031 IS_r=0.9462 gap=0.1431 F1=0.7645 QWK=0.8293
+  interp5+gPC4+tPC3__Ridge_a0.5: adj=0.8021 LOO_r=0.8021 IS_r=0.9373 gap=0.1352 F1=0.7097 QWK=0.7568
+  interp5+gPC4+tPC3__Ridge_a10.0: adj=0.8019 LOO_r=0.8019 IS_r=0.9275 gap=0.1257 F1=0.6436 QWK=0.6667
+  interp5+gPC5+tPC5__EN_l1r0.5: adj=0.8016 LOO_r=0.8016 IS_r=0.9295 gap=0.1280 F1=0.6436 QWK=0.6667
+  interp5+gPC5+tPC3__Ridge_a10.0: adj=0.8005 LOO_r=0.8005 IS_r=0.9272 gap=0.1267 F1=0.6420 QWK=0.6667
+  interp5+gPC4+tPC4__EN_l1r0.5: adj=0.7925 LOO_r=0.7925 IS_r=0.9287 gap=0.1362 F1=0.6071 QWK=0.6250
+  interp5+gPC4+tPC5__EN_l1r0.5: adj=0.7903 LOO_r=0.7903 IS_r=0.9295 gap=0.1393 F1=0.5983 QWK=0.6250
+  interp5+gPC4__Ridge_a1.0: adj=0.7861 LOO_r=0.7861 IS_r=0.8935 gap=0.1074 F1=0.6109 QWK=0.6471
+  interp5+gPC5+tPC3__Ridge_a1.0: adj=0.7853 LOO_r=0.7857 IS_r=0.9366 gap=0.1509 F1=0.7107 QWK=0.7568
+  interp5+gPC5__Ridge_a1.0: adj=0.7829 LOO_r=0.7829 IS_r=0.9068 gap=0.1238 F1=0.7051 QWK=0.7273
+  interp5+gPC5__Ridge_a5.0: adj=0.7810 LOO_r=0.7810 IS_r=0.9017 gap=0.1207 F1=0.6726 QWK=0.6875
+  interp5+gPC4__Ridge_a5.0: adj=0.7803 LOO_r=0.7803 IS_r=0.8905 gap=0.1102 F1=0.6387 QWK=0.6667
+  interp5+gPC5+tPC3__Ridge_a0.5: adj=0.7746 LOO_r=0.7788 IS_r=0.9373 gap=0.1585 F1=0.6786 QWK=0.7368
+  interp5+gPC5__Ridge_a10.0: adj=0.7733 LOO_r=0.7733 IS_r=0.8970 gap=0.1236 F1=0.5618 QWK=0.5517
+  interp5+gPC4__Ridge_a10.0: adj=0.7725 LOO_r=0.7725 IS_r=0.8866 gap=0.1141 F1=0.6071 QWK=0.6250
+  gPC4+tPC5__Ridge_a5.0: adj=0.7503 LOO_r=0.7512 IS_r=0.9030 gap=0.1518 F1=0.5805 QWK=0.6286
+  gPC4+tPC4__Ridge_a5.0: adj=0.7490 LOO_r=0.7498 IS_r=0.9016 gap=0.1517 F1=0.5805 QWK=0.6286
+
+Best: interp5+gPC4+tPC4__Ridge_a1.0
+  Adjusted: 0.8311
+  LOO r: 0.8311
+  IS r: 0.9444
+  Gap: 0.1134
+  Selected gland PCs: [1, 5, 9, 16]
+  Selected tumor PCs: [1, 3, 4, 7]

@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "-rwx------ 1 root root  4522 Apr 20 20:47 /scratch/donor_feature_table.csv\n-rwx------ 1 root root 14273 Apr 20 20:46 /scratch/result.py\n-rwx------ 1 root root 18610 Apr 20 20:47 /scratch/results.json\n-rwx------ 1 root root  2344 Apr 20 20:47 /scratch/run_stdout.txt\n{\n  \"best_variation\": \"candidate_variant_a\",\n  \"feature_column\": \"ca1_pyramidal_with_reactive_astro_within_80px_fraction\",\n  \"partial_r\": -0.5153688403453585,\n  \"selection_score\": 0.5153688403453585,\n  \"loo_predictive_r\": 0.3697729603925239,\n  \"is_loo_gap\": 0.8851418007378824,\n  \"adjusted_score\": -0.36977296039252394\n}\nranked len 2\n",
+  "stderr": ""
+}

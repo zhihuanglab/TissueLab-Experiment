@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\necho '--- patched constants ---'\ngrep -n 'CANONICAL_VARIATION\\|FEATURE_NAME\\|FEATURE_COLUMN' /scratch/result.py | sed -n '1,10p'\necho '--- results.json ---'\ncat /scratch/results.json\necho\necho '--- report.md ---'\nsed -n '1,220p' /scratch/report.md",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- patched constants ---\\n22:CANONICAL_VARIATION = \\\"candidate_variant_a\\\"\\n23:FEATURE_NAME = \\\"ca1_reactive_astrocyte_enrichment__reactive_over_astroglial\\\"\\n24:FEATURE_COLUMN = \\\"ca1_reactive_astrocyte_enrichment__reactive_over_astroglial\\\"\\n112:    if CANONICAL_VARIATION in VARIATIONS:\\n113:        meta = VARIATIONS[CANONICAL_VARIATION]\\n114:        return CANONICAL_VARIATION, FEATURE_NAME, FEATURE_COLUMN\\n121:            return best, payload.get(\\\"feature_name\\\", FEATURE_NAME), payload.get(\\n301:        r'\", \"stderr\": \"\"}"
+  }
+]

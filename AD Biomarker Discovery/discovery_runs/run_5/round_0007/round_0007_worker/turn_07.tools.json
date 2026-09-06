@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import stats, artifacts, load_training_cohort\nprint('load_training_cohort source:')\nprint(inspect.getsource(load_training_cohort))\nprint('\\npartial_correlation signature:', inspect.signature(stats.partial_correlation))\nprint(inspect.getsource(stats.partial_correlation))\nprint('\\nleave_one_out_summary signature:', inspect.signature(stats.leave_one_out_summary))\nprint(inspect.getsource(stats.leave_one_out_summary))\nprint('\\nwrite_donor_feature_table signature:', inspect.signature(artifacts.write_donor_feature_table))\nprint(inspect.getsource(artifacts.write_donor_feature_table))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"load_training_cohort source:\\ndef load_training_cohort(data_root: str | Path) -> pd.DataFrame:\\n    cohort_path = find_training_cohort(data_root)\\n    cohort = pd.read_csv(cohort_path)\\n    if \\\"slide_id\\\" not in cohort.columns and \\\"slide_name\\\" in cohort.columns:\\n        cohort[\\\"slide_id\\\"] = cohort[\\\"slide_name\\\"].map(slide_id_from_name)\\n    if \\\"slide_id\\\" not in cohort.columns and \\\"slide_path\\\" in cohort.columns:\\n        cohort[\\\"slide_id\\\"] = cohort[\\\"slide_path\\\"].map(slide_id_from_name)\\n    return cohort\\n\", \"stderr\": \"\"}"
+  }
+]

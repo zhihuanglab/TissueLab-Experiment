@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nfor r in 4 5 6; do\n  p=$(find /data/autoresearch_runs -path \"*/round_$(printf '%04d' $r)/*/result.py\" | head -1 || true)\n  echo \"--- round $r: $p ---\"\n  [ -n \"$p\" ] && sed -n '1,260p' \"$p\" | sed -n '1,220p'\ndone",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"--- round 4: /data/autoresearch_runs/run_20260406_110805_82cf2b/round_0004/Worker 1/sandbox/result.py ---\\nfrom __future__ import annotations\\n\\nfrom pathlib import Path\\nimport sys\\nimport warnings\\n\\nimport numpy as np\\n\\ntry:\\n    from shared_analysis import build_cell_table, load_region_annotations, load_training_cohort\\nexcept ModuleNotFoundError:  # pragma: no cover - sandbox/evaluator path fallback\\n    sys.path.insert(0, \\\"/shared/lib\\\")\\n    from shared_analysis import build_cell_table, load_region_an\", \"stderr\": \"\"}"
+  }
+]

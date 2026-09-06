@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport sys, inspect, json, glob\nsys.path.insert(0,'/shared/lib')\nfrom shared_analysis import stats\nfor name in ['partial_correlation','leave_one_out_summary','residualized_loo_predictive_correlation']:\n    fn=getattr(stats,name)\n    print(f'\\n{name}{inspect.signature(fn)}')\n    src=inspect.getsource(fn)\n    print('\\n'.join(src.splitlines()[:80]))\nprint('\\n--- sample previous round results keys ---')\nimport pathlib\nfor p in glob.glob('/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_052101_efbee1/round_0009/round_0009_worker/results.json'):\n    data=json.load(open(p))\n    print(pathlib.Path(p).name, data.keys())\n    print(json.dumps({k:data[k] for k in data if k not in ['per_donor_loo','ranked_variations']}, indent=2)[:2000])\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"\\npartial_correlation(df: 'pd.DataFrame', *, feature_col: 'str', outcome_col: 'str', confounds: 'list[str]') -> 'dict[str, float]'\\ndef partial_correlation(\\n    df: pd.DataFrame,\\n    *,\\n    feature_col: str,\\n    outcome_col: str,\\n    confounds: list[str],\\n) -> dict[str, float]:\\n    frame = _clean_frame(df, [feature_col, outcome_col, *confounds])\\n    feature_resid = residualize(frame[feature_col], frame[confounds])\\n    outcome_resid = residualize(frame[outcome_col], frame[confounds])\\n    if np.std(\", \"stderr\": \"\"}"
+  }
+]

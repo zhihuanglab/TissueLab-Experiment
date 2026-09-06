@@ -1,0 +1,83 @@
+Round 5 Details
+================================================================================
+
+FEATURE-GT CORRELATIONS:
+  n_tumor_cells: r=+0.2959 (p=0.1123)
+  gland_patch_fraction: r=-0.4148 (p=0.0226)
+  tumor_in_gland_fraction: r=-0.5653 (p=0.0011)
+  mean_nn_distance_tumor: r=-0.1941 (p=0.3041)
+  mean_eccentricity: r=-0.1392 (p=0.4632)
+  std_eccentricity: r=-0.0114 (p=0.9522)
+  mean_cell_area: r=+0.2106 (p=0.2640)
+  cell_area_cv: r=-0.0853 (p=0.6541)
+
+================================================================================
+ALL CONFIGURATIONS (sorted by adjusted score):
+  tig+nn_dist+cell_area__Ridge_a1: adjusted=0.5113 (LOO r=0.5113, IS r=0.6152, gap=0.1039) [F1=0.4222 QWK=0.3333 Acc=0.4333]
+  tig+nn_dist+cell_area__Ridge_a5: adjusted=0.5054 (LOO r=0.5054, IS r=0.6151, gap=0.1097) [F1=0.4225 QWK=0.3846 Acc=0.4667]
+  tig+nn_dist__Ridge_a1: adjusted=0.5033 (LOO r=0.5033, IS r=0.6014, gap=0.0982) [F1=0.4581 QWK=0.3871 Acc=0.4667]
+  tig_only__Ridge_a1: adjusted=0.5008 (LOO r=0.5008, IS r=0.5653, gap=0.0645) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tig+ecc_mean__Ridge_a1: adjusted=0.4980 (LOO r=0.4980, IS r=0.5937, gap=0.0956) [F1=0.3952 QWK=0.4000 Acc=0.4000]
+  tig+nn_dist__Ridge_a5: adjusted=0.4966 (LOO r=0.4966, IS r=0.6014, gap=0.1049) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig_only__Ridge_a5: adjusted=0.4945 (LOO r=0.4945, IS r=0.5653, gap=0.0709) [F1=0.4524 QWK=0.4286 Acc=0.4667]
+  tig_only__ElasticNet: adjusted=0.4911 (LOO r=0.4911, IS r=0.5653, gap=0.0742) [F1=0.4524 QWK=0.4286 Acc=0.4667]
+  tig+ecc_mean__Ridge_a5: adjusted=0.4910 (LOO r=0.4910, IS r=0.5937, gap=0.1026) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tig+nn_dist+ecc_std__Ridge_a1: adjusted=0.4880 (LOO r=0.4880, IS r=0.6203, gap=0.1323) [F1=0.4000 QWK=0.4000 Acc=0.4000]
+  tig+nn_dist+ecc_mean+ecc_std__Ridge_a1: adjusted=0.4835 (LOO r=0.4877, IS r=0.6462, gap=0.1585) [F1=0.3333 QWK=0.3333 Acc=0.3333]
+  tig+nn_dist+ecc_mean__Ridge_a1: adjusted=0.4810 (LOO r=0.4810, IS r=0.6079, gap=0.1269) [F1=0.3935 QWK=0.3226 Acc=0.4000]
+  tig+nn_dist+ecc_std__Ridge_a5: adjusted=0.4796 (LOO r=0.4796, IS r=0.6193, gap=0.1397) [F1=0.3356 QWK=0.2963 Acc=0.3667]
+  tig+ecc_std__ElasticNet: adjusted=0.4768 (LOO r=0.4768, IS r=0.5653, gap=0.0885) [F1=0.4524 QWK=0.4286 Acc=0.4667]
+  tig+ecc_mean__ElasticNet: adjusted=0.4766 (LOO r=0.4766, IS r=0.5913, gap=0.1148) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tig+nn_dist+ecc_mean__Ridge_a5: adjusted=0.4765 (LOO r=0.4765, IS r=0.6078, gap=0.1313) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+nn_dist+ecc_mean+ecc_std__Ridge_a5: adjusted=0.4763 (LOO r=0.4817, IS r=0.6424, gap=0.1607) [F1=0.3817 QWK=0.3571 Acc=0.4000]
+  tig+nn_dist__ElasticNet: adjusted=0.4741 (LOO r=0.4741, IS r=0.5998, gap=0.1257) [F1=0.3392 QWK=0.2963 Acc=0.3667]
+  tig+nn_dist+cell_area__ElasticNet: adjusted=0.4629 (LOO r=0.4629, IS r=0.6122, gap=0.1493) [F1=0.3620 QWK=0.3077 Acc=0.4000]
+  tig+nn_dist+area_cv__Ridge_a1: adjusted=0.4575 (LOO r=0.4575, IS r=0.6034, gap=0.1459) [F1=0.4581 QWK=0.3871 Acc=0.4667]
+  tig+area_cv__Ridge_a1: adjusted=0.4564 (LOO r=0.4564, IS r=0.5725, gap=0.1161) [F1=0.4034 QWK=0.3704 Acc=0.4333]
+  tig+area_cv__ElasticNet: adjusted=0.4544 (LOO r=0.4544, IS r=0.5689, gap=0.1145) [F1=0.4034 QWK=0.3704 Acc=0.4333]
+  tig+nn_dist+area_cv__ElasticNet: adjusted=0.4520 (LOO r=0.4520, IS r=0.5998, gap=0.1478) [F1=0.2911 QWK=0.2308 Acc=0.3333]
+  tig+area_cv__Ridge_a5: adjusted=0.4505 (LOO r=0.4505, IS r=0.5719, gap=0.1214) [F1=0.4034 QWK=0.3704 Acc=0.4333]
+  tig+nn_dist+ecc_std__ElasticNet: adjusted=0.4504 (LOO r=0.4529, IS r=0.6077, gap=0.1549) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+nn_dist+area_cv__Ridge_a5: adjusted=0.4476 (LOO r=0.4495, IS r=0.6034, gap=0.1538) [F1=0.3759 QWK=0.2759 Acc=0.4000]
+  tig+ecc_std__Ridge_a1: adjusted=0.4459 (LOO r=0.4459, IS r=0.5659, gap=0.1200) [F1=0.4236 QWK=0.4138 Acc=0.4333]
+  tig+nn_dist+ecc_mean__ElasticNet: adjusted=0.4436 (LOO r=0.4476, IS r=0.6056, gap=0.1580) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+gland+nn+ecc__Ridge_a5: adjusted=0.4435 (LOO r=0.4499, IS r=0.6128, gap=0.1629) [F1=0.3576 QWK=0.3448 Acc=0.3667]
+  tig+ecc_std__Ridge_a5: adjusted=0.4379 (LOO r=0.4379, IS r=0.5658, gap=0.1279) [F1=0.4524 QWK=0.4286 Acc=0.4667]
+  tig+gland+nn+ecc_m+ecc_s__Ridge_a5: adjusted=0.4371 (LOO r=0.4558, IS r=0.6431, gap=0.1873) [F1=0.3952 QWK=0.4000 Acc=0.4000]
+  tig+nn_dist+ecc_mean+area_cv__ElasticNet: adjusted=0.4299 (LOO r=0.4385, IS r=0.6056, gap=0.1671) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+gland+nn+ecc__Ridge_a1: adjusted=0.4250 (LOO r=0.4380, IS r=0.6139, gap=0.1759) [F1=0.3935 QWK=0.3226 Acc=0.4000]
+  tig+gland+nn+ecc_m+ecc_s__Ridge_a1: adjusted=0.4215 (LOO r=0.4468, IS r=0.6473, gap=0.2006) [F1=0.3952 QWK=0.4000 Acc=0.4000]
+  tig+nn_dist+ecc_mean+area_cv__Ridge_a1: adjusted=0.4173 (LOO r=0.4309, IS r=0.6081, gap=0.1772) [F1=0.3935 QWK=0.3226 Acc=0.4000]
+  tig+nn_dist+ecc_mean+area_cv__Ridge_a5: adjusted=0.4090 (LOO r=0.4253, IS r=0.6080, gap=0.1826) [F1=0.3356 QWK=0.2963 Acc=0.3667]
+  tig+nn_dist+ecc_mean+ecc_std__ElasticNet: adjusted=0.3984 (LOO r=0.4239, IS r=0.6250, gap=0.2011) [F1=0.3839 QWK=0.3571 Acc=0.4000]
+  tig+gland+nn+ecc__ElasticNet: adjusted=0.3727 (LOO r=0.4023, IS r=0.6115, gap=0.2092) [F1=0.3576 QWK=0.3448 Acc=0.3667]
+  tig+gland+nn+ecc_m+ecc_s__ElasticNet: adjusted=0.3242 (LOO r=0.3755, IS r=0.6281, gap=0.2526) [F1=0.3576 QWK=0.3448 Acc=0.3667]
+  gland_frac_only__Ridge_a1: adjusted=0.3028 (LOO r=0.3028, IS r=0.4155, gap=0.1126) [F1=0.1772 QWK=0.0833 Acc=0.2667]
+  gland_frac+ecc_mean__Ridge_a1: adjusted=0.3013 (LOO r=0.3052, IS r=0.4630, gap=0.1578) [F1=0.3077 QWK=0.1538 Acc=0.3667]
+  gland_frac_only__Ridge_a5: adjusted=0.2957 (LOO r=0.2957, IS r=0.4148, gap=0.1191) [F1=0.2135 QWK=0.0909 Acc=0.3333]
+  gland_frac+ecc_mean__Ridge_a5: adjusted=0.2839 (LOO r=0.2936, IS r=0.4629, gap=0.1693) [F1=0.2778 QWK=0.0833 Acc=0.3667]
+  gland_frac_only__ElasticNet: adjusted=0.2838 (LOO r=0.2838, IS r=0.4148, gap=0.1310) [F1=0.2315 QWK=0.0952 Acc=0.3667]
+  gland_frac+nn_dist+ecc_mean__Ridge_a1: adjusted=0.2755 (LOO r=0.2971, IS r=0.4902, gap=0.1931) [F1=0.2476 QWK=0.0800 Acc=0.3333]
+  gland_frac+nn_dist+ecc_mean__Ridge_a5: adjusted=0.2682 (LOO r=0.2922, IS r=0.4902, gap=0.1980) [F1=0.2434 QWK=0.1667 Acc=0.3333]
+  gland_frac+ecc_mean__ElasticNet: adjusted=0.2321 (LOO r=0.2582, IS r=0.4605, gap=0.2022) [F1=0.2177 QWK=0.0000 Acc=0.3333]
+  gland_frac+nn_dist+ecc_mean__ElasticNet: adjusted=0.1804 (LOO r=0.2329, IS r=0.4881, gap=0.2552) [F1=0.2434 QWK=0.1667 Acc=0.3333]
+  ecc_mean_only__Ridge_a1: adjusted=-1.0000 (LOO r=-0.3539, IS r=0.1392, gap=0.4931) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ecc_mean_only__Ridge_a5: adjusted=-1.0000 (LOO r=-0.3818, IS r=0.1392, gap=0.5210) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ecc_mean_only__ElasticNet: adjusted=-1.0000 (LOO r=-0.6159, IS r=0.1392, gap=0.7551) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ecc_std_only__Ridge_a1: adjusted=-1.0000 (LOO r=-0.7963, IS r=0.0114, gap=0.8077) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ecc_std_only__Ridge_a5: adjusted=-1.0000 (LOO r=-0.8135, IS r=0.0114, gap=0.8249) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  ecc_std_only__ElasticNet: adjusted=-1.0000 (LOO r=-0.8744, IS r=0.0000, gap=0.8744) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  cell_area_only__Ridge_a1: adjusted=-1.0000 (LOO r=-0.1409, IS r=0.2106, gap=0.3515) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  cell_area_only__Ridge_a5: adjusted=-1.0000 (LOO r=-0.1688, IS r=0.2106, gap=0.3794) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  cell_area_only__ElasticNet: adjusted=-1.0000 (LOO r=-0.3721, IS r=0.2106, gap=0.5828) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  area_cv_only__Ridge_a1: adjusted=-1.0000 (LOO r=-0.5408, IS r=0.0853, gap=0.6261) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  area_cv_only__Ridge_a5: adjusted=-1.0000 (LOO r=-0.5650, IS r=0.0853, gap=0.6503) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  area_cv_only__ElasticNet: adjusted=-1.0000 (LOO r=-0.7056, IS r=0.0853, gap=0.7909) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  nn_dist_only__Ridge_a1: adjusted=-1.0000 (LOO r=-0.2346, IS r=0.1941, gap=0.4287) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  nn_dist_only__Ridge_a5: adjusted=-1.0000 (LOO r=-0.2615, IS r=0.1941, gap=0.4556) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  nn_dist_only__ElasticNet: adjusted=-1.0000 (LOO r=-0.4741, IS r=0.1941, gap=0.6681) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  nn_dist+ecc_mean__Ridge_a1: adjusted=-1.0000 (LOO r=-0.3625, IS r=0.1994, gap=0.5619) [F1=0.1709 QWK=-0.0952 Acc=0.3333]
+  nn_dist+ecc_mean__Ridge_a5: adjusted=-1.0000 (LOO r=-0.3602, IS r=0.1992, gap=0.5593) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+  nn_dist+ecc_mean__ElasticNet: adjusted=-1.0000 (LOO r=-0.5671, IS r=0.1979, gap=0.7650) [F1=0.1667 QWK=0.0000 Acc=0.3333]
+
+BEST: tig+nn_dist+cell_area__Ridge_a1 adjusted=0.5113

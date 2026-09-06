@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\nsed -n '1,220p' /shared/lib/shared_analysis/__init__.py\necho '--- sea_ad_lfb.py ---'\ngrep -n \"def build_cell_table\\|def load_training_cohort\\|def compute_contour_geometry\" -n /shared/lib/shared_analysis/sea_ad_lfb.py\nsed -n '1,260p' /shared/lib/shared_analysis/sea_ad_lfb.py\necho '--- stats.py ---'\nsed -n '1,260p' /shared/lib/shared_analysis/stats.py",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"raining_cohort,\\n    open_slide_zarr,\\n    slide_id_from_name,\\n)\\nfrom .stats import (\\n    bootstrap_partial_correlation,\\n    leave_one_out_partial_correlation,\\n    residualized_loo_predictive_correlation,\\n    leave_one_out_summary,\\n    partial_correlation,\\n    residualize,\\n)\\n\\n__all__ = [\\n    \\\"DEFAULT_CONFOUNDS\\\",\\n    \\\"KNOWN_REGIONS\\\",\\n    \\\"apply_pca_basis\\\",\\n    \\\"assign_centroids_to_regions\\\",\\n    \\\"bootstrap_partial_correlation\\\",\\n    \\\"build_results_payload\\\",\\n    \\\"coerce_results_payload\\\",\\n    \\\"normaliz\", \"stderr\": \"\"}"
+  }
+]

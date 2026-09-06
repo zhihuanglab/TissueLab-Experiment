@@ -1,0 +1,59 @@
+{
+  "worker_name": "round_0004_worker",
+  "round_id": 4,
+  "candidate_id": "ca1-reactive-cuff-severity",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "astrocytic_reactivity_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.4914,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "peripyramidal_reactivity_r35um",
+        "round_id": 2,
+        "panel_candidate_score": 0.4964,
+        "delta_panel_score": 0.0051,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_cuffed_fraction_r35um_ge1",
+        "round_id": 3,
+        "panel_candidate_score": 0.5544,
+        "delta_panel_score": 0.0579,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_001115_585b70/round_0003/round_0003_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5544
+  },
+  "scientific_question": "Does severe reactive-astrocyte cuffing of CA1 pyramidal neurons, defined by multiple nearby reactive astrocytes rather than any single neighbor, better capture memory-decline signal than the current broader CA1 reactivity features?",
+  "approach": "Assign cells to regions using CustomAnnotations polygons after dividing annotation coordinates by 16. Restrict to CA1 Pyramidal Neuron cells and CA1 Reactive Astrocyte cells. Using cell centroids, count for each CA1 pyramidal neuron how many CA1 reactive astrocytes lie within a 35 \u00b5m radius (convert to pixels using slide MPP from the paired SVS if available, otherwise use the cohort-typical ~0.503 \u00b5m/pixel). Compute the donor-level biomarker as the fraction of CA1 pyramidal neurons whose nearby reactive-astrocyte count meets a severity threshold k. This keeps the same niche and radius as the winning round-3 feature while changing only the cuffing threshold.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "Fraction of CA1 pyramidal neurons with at least 2 CA1 reactive astrocytes within 35 \u00b5m."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "Fraction of CA1 pyramidal neurons with at least 3 CA1 reactive astrocytes within 35 \u00b5m."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use centroid-based neighbor search for efficiency; denominator is all CA1 pyramidal neurons assigned to CA1. Keep the radius fixed at 35 \u00b5m to isolate a threshold-change family and avoid repeating the prior any-cuffing feature exactly. Exclude self-matches naturally since source and target cell types differ. Handle donors with very low CA1 pyramidal counts gracefully; if CA1 is missing or denominator is zero, return NaN.",
+  "rationale": "The accepted panel has progressively improved as the CA1 astrocyte signal became more neuron-anchored, with the largest gain coming from the shift from astrocyte-centered summaries to pyramidal-neuron cuffing. The right next test is therefore a small threshold refinement within that same interaction family: ask whether multi-astrocyte cuffing is a cleaner disease-state readout than the current any-cuffing measure, potentially adding signal or replacing one weaker astrocyte-centric panel member."
+}

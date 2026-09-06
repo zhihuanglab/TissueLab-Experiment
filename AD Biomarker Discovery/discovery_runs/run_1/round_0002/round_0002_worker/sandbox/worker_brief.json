@@ -1,0 +1,37 @@
+{
+  "worker_name": "round_0002_worker",
+  "round_id": 2,
+  "candidate_id": "ca1-reactive-astro-fraction",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260420_162449_64fb7a/round_0001/round_0001_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.294
+  },
+  "scientific_question": "Does CA1-localized reactive astrogliosis provide memory-decline signal that is complementary to the accepted CA1 pyramidal neuron fraction biomarker?",
+  "approach": "For each donor, load the matched slide zarr from the cohort table, assign cells to the CA1 annotation polygon using cell centroids and polygons scaled from annotation coordinates by dividing by 16, then count ClassificationNode labels within CA1. Compute a donor-level reactive astrocyte abundance score in CA1 using simple count fractions. Return NaN only if the relevant denominator is zero.",
+  "variations": [
+    {
+      "name": "candidate_variant_a",
+      "description": "CA1 reactive astrocyte lineage fraction: count(Reactive Astrocyte in CA1) divided by count(Astrocyte + Reactive Astrocyte in CA1)."
+    },
+    {
+      "name": "candidate_variant_b",
+      "description": "CA1 reactive astrocyte tissue fraction: count(Reactive Astrocyte in CA1) divided by count(all classified cells in CA1)."
+    }
+  ],
+  "baseline_variation": "candidate_variant_a",
+  "notes": "Use donor_id -> slide_name from training_cohort.csv, then open Path(data_root) / slide_name. Region polygons are stored at 16x cell coordinates, so divide polygon coordinates by 16 before point-in-polygon assignment. Use centroid-based region assignment. Keep label matching explicit for 'Reactive Astrocyte' and 'Astrocyte'. Handle missing or zero denominators gracefully without donor-specific rules.",
+  "rationale": "Round 1 established that CA1 cell composition is informative through pyramidal neuron fraction, so the cleanest next step is to keep the same vulnerable region and donor-level summary style while changing the cell population to a mechanistically complementary injury-response population. Reactive astrocytes in CA1 are biologically interpretable as local tissue stress or neurodegenerative response, and they could add signal beyond neuronal depletion or even replace the current feature if they summarize the same process more cleanly."
+}

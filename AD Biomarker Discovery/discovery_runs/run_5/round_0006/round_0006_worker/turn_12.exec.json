@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "['donor_id', 'slide_name', 'slide_path', 'slope_zmem0', 'max_age_vis', 'braak_numeric', 'cerad_ordinal', 'sex', 'slide_id', 'sex_binary', 'mpp_um_per_px', 'ca1_cell_count_target_types', 'ca1_pyramidal_count', 'ca1_reactive_astrocyte_count', 'radius_px', 'reactive_neighbor_rate', 'mean_other_pyramidal_neighbors', 'ca1_pyramidal_reactive_astro_isolated_fraction_k5_30um', 'ca1_pyramidal_reactive_astro_isolated_fraction_k8_30um']\n",
+  "stderr": ""
+}

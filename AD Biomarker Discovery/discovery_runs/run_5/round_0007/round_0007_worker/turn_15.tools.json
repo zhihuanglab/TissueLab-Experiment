@@ -1,0 +1,7 @@
+[
+  {
+    "tool_name": "shell_exec",
+    "input": "set -euo pipefail\npython - <<'PY'\nimport json, pandas as pd, numpy as np\nres=json.load(open('/scratch/results.json'))\ndf=pd.DataFrame(res['per_donor_loo'])\ndf['abs_error']=(df['outcome']-df['predicted']).abs()\nprint(df.sort_values('abs_error', ascending=False)[['donor_id','outcome','predicted',res['feature_column'],'n_ca1_lymphocytes','n_peripyramidal_reactive_astrocytes','abs_error']].head(10).to_string(index=False))\nprint('\\nNonzero feature donors:')\nprint(df[df[res['feature_column']]>0][['donor_id','outcome',res['feature_column'],'n_ca1_lymphocytes']].to_string(index=False))\nPY",
+    "output_preview": "{\"exit_code\": 0, \"stdout\": \"  donor_id   outcome  predicted  ca1_peripyramidal_reactive_astro_lymphocyte_contact_fraction_20um  n_ca1_lymphocytes  n_peripyramidal_reactive_astrocytes  abs_error\\nH20.33.018 -0.304214  -0.100184                                                                0.0               10.0                                424.0   0.204030\\nH21.33.040 -0.032794  -0.154893                                                                0.0                0.0                                 75.0   0.122098\\nH2\", \"stderr\": \"\"}"
+  }
+]

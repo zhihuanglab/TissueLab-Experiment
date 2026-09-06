@@ -1,0 +1,6 @@
+{
+  "backend": "docker",
+  "exit_code": 0,
+  "stdout": "x range 1.0 67323.0\ny range 43.0 37776.0\nslide dims (67728, 39040)\nmpp 0.5049\n",
+  "stderr": ""
+}

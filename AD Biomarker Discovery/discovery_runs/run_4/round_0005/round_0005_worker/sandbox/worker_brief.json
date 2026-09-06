@@ -1,0 +1,70 @@
+{
+  "worker_name": "round_0005_worker",
+  "round_id": 5,
+  "candidate_id": "ca1-reactive-local-purity",
+  "candidate_type": "candidate",
+  "accepted_panel": {
+    "members": [
+      {
+        "slot": 1,
+        "feature_name": "ca1_pyramidal_fraction",
+        "round_id": 1,
+        "panel_candidate_score": 0.294,
+        "delta_panel_score": null,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0001/round_0001_worker/result.py"
+      },
+      {
+        "slot": 2,
+        "feature_name": "ca1_reactive_astrocyte_enrichment",
+        "round_id": 2,
+        "panel_candidate_score": 0.5071,
+        "delta_panel_score": 0.2131,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0002/round_0002_worker/result.py"
+      },
+      {
+        "slot": 3,
+        "feature_name": "ca1_pyramidal_reactive_astrocyte_neighbor_fraction",
+        "round_id": 3,
+        "panel_candidate_score": 0.5189,
+        "delta_panel_score": 0.0118,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0003/round_0003_worker/result.py"
+      },
+      {
+        "slot": 4,
+        "feature_name": "ca1_reactive_astrocyte_hypertrophy",
+        "round_id": 4,
+        "panel_candidate_score": 0.5408,
+        "delta_panel_score": 0.0219,
+        "status": "active",
+        "worker_dir": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker",
+        "results_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker/results.json",
+        "result_path": "/Volumes/SSK SSD/TissueLab Revision/LFB/Seed48_Split/Training/autoresearch_runs/run_20260421_014751_94b13b/round_0004/round_0004_worker/result.py"
+      }
+    ],
+    "best_panel_score": 0.5408
+  },
+  "scientific_question": "Do donors whose CA1 reactive astrocytes sit inside locally astrocyte-lineage neighborhoods with a higher reactive fraction show faster memory decline beyond overall CA1 reactive astrocyte enrichment, pyramidal proximity, and hypertrophy?",
+  "approach": "Assign cells to CA1, then keep only cells labeled Astrocyte or Reactive Astrocyte. For each CA1 Reactive Astrocyte, use centroid neighborhoods within radius r and exclude the center cell. Among neighboring astrocyte-lineage cells, compute local reactive purity = reactive_astrocyte_neighbors / (reactive_astrocyte_neighbors + astrocyte_neighbors). The donor-level biomarker is the mean local reactive purity across CA1 Reactive Astrocytes that have at least 2 astrocyte-lineage neighbors in the search radius.",
+  "variations": [
+    {
+      "name": "reactive_purity_r40um",
+      "description": "Baseline: mean CA1 local reactive purity around each CA1 Reactive Astrocyte using a 40 \u00b5m neighborhood."
+    },
+    {
+      "name": "reactive_purity_r60um",
+      "description": "Nearby local sweep: same local reactive purity score but using a 60 \u00b5m neighborhood to test a slightly broader glial patch scale."
+    }
+  ],
+  "baseline_variation": "reactive_purity_r40um",
+  "notes": "Use centroids for neighborhoods; this feature does not require contours. Region polygons in CustomAnnotations are stored at 16x cell coordinates, so divide polygon coordinates by 16 before CA1 assignment. Cell-type labels should come from ClassificationNode. If slide-specific MPP is inconvenient, fixed radii of about 80 px and 120 px are acceptable approximations for 40 and 60 \u00b5m because cohort MPP varies only minimally. Exclude centers with fewer than 2 astrocyte-lineage neighbors from the per-cell average; if CA1 or CA1 Reactive Astrocytes are absent, return NaN rather than forcing zero.",
+  "rationale": "Rounds 2-4 consistently point to a CA1 reactive-astrocyte injury program, with added value from both neuron adjacency and reactive astrocyte size. The next specific test is whether that reactivity is spatially organized into locally reactive astrocyte patches rather than being diffusely elevated across CA1. This is a biologically interpretable lesion-architecture signal that could add new information or replace the simpler global enrichment term if it is cleaner."
+}
