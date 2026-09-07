@@ -1,0 +1,3 @@
+component,n,effect_statistic,effect_statistic_definition,permutation_p_two_sided,permutation_p_directional,holm_p_two_sided_across_two_components,holm_p_directional_across_two_components
+Bulk CA1 reactive-astrocyte enrichment,34,-0.4898484638752191,partial Pearson r,0.005639943600563994,0.0027899721002789973,0.011279887201127988,0.005579944200557995
+Peripyramidal reactive-astrocyte spatial family,34,0.5325292396140469,maximum absolute partial r across all 14 accepted April spatial entries,0.015199848001519984,0.008039919600803991,0.015199848001519984,0.008039919600803991

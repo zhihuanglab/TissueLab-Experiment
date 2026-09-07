@@ -1,0 +1,16 @@
+{
+  "full_inferential_analyses_recomputed": [
+    "april_primary_component_statistics.csv",
+    "april_spatial_formula_statistics.csv",
+    "april_test_lodo_stability.csv",
+    "tissuelab_vs_wsi_baselines_paired.csv",
+    "panel_permutation_100000.json",
+    "panel_round10_bootstrap.json"
+  ],
+  "panel_csvs": 7,
+  "figure_reconstruction": "all seven panels rendered successfully",
+  "privacy_check": "ADNI participant identifiers and rows excluded; public payload scanned",
+  "numpy_version": "2.4.2",
+  "pandas_version": "2.2.3",
+  "version_notes": "See README_SEAAD.md and trajectory_version_comparison.csv; plotting and historical data were not conflated."
+}

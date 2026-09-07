@@ -1,0 +1,5 @@
+figure_panel,cohort,variable,unit,n,q1,median,q3,whisker_low,whisker_high,n_outside_whiskers,note
+Supplementary Fig. 5a,SEA-AD,span_years,years,69,11,13,16,4,23,5,Aggregate boxplot statistics; donor-level ADNI jitter points are not redistributed
+Supplementary Fig. 5a,SEA-AD,n_visits,visits,69,6,8,9,3,13,0,Aggregate boxplot statistics; donor-level ADNI jitter points are not redistributed
+Supplementary Fig. 5a,ADNI,span_years,years,56,2.0787132101300481,4.5338809034907595,7.40041067761807,1.0349075975359343,13.683778234086242,0,Aggregate boxplot statistics; donor-level ADNI jitter points are not redistributed
+Supplementary Fig. 5a,ADNI,n_visits,visits,56,4,7.5,10,3,15,0,Aggregate boxplot statistics; donor-level ADNI jitter points are not redistributed

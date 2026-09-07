@@ -1,0 +1,15 @@
+{
+  "model_name": "MUSK-gated-ABMIL",
+  "feature_dim": 2048,
+  "architecture": "gated_attention_mil",
+  "optimizer": "Adam",
+  "weight_decay": 0.0001,
+  "feature_normalization": "trainable LayerNorm per patch",
+  "target_normalization": "training-fold mean and population SD",
+  "epochs": 100,
+  "folds": 5,
+  "seed": 42,
+  "selection_metric": "mean epoch-100 validation Pearson r",
+  "selected_lr": 1e-05,
+  "script_sha256": "0f87a697cdd54f66e2836c82386e4f24286f4e30ccad107b9c304d9dc285d082"
+}

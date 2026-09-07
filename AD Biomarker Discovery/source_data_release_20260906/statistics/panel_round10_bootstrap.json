@@ -1,0 +1,44 @@
+{
+  "statistic": "mean within-Test-cohort fitted multiple partial R across five runs",
+  "interpretation": "fitted association, not frozen out-of-sample panel prediction",
+  "cohort": "Test",
+  "n_donors": 34,
+  "round": 10,
+  "bootstrap": "shared-donor nonparametric bootstrap with complete refitting",
+  "bootstrap_samples": 10000,
+  "seed": 0,
+  "observed_by_run": [
+    0.6159009253957274,
+    0.6874400004149241,
+    0.6678161767789585,
+    0.7534549152534779,
+    0.72043209891631
+  ],
+  "observed_mean": 0.6890088233518796,
+  "observed_run_sd_ddof1": 0.05229023624522747,
+  "observed_run_min": 0.6159009253957274,
+  "observed_run_max": 0.7534549152534779,
+  "bootstrap_mean": 0.797427109474099,
+  "bootstrap_median": 0.8005656532280315,
+  "bootstrap_standard_error": 0.06255251118059696,
+  "bootstrap_ci95_percentile": [
+    0.6658868918472125,
+    0.9117307993422278
+  ],
+  "bootstrap_ci95_basic": [
+    0.4662868473615315,
+    0.7121307548565468
+  ],
+  "bootstrap_bca_bias_correction": -1.6665696901384988,
+  "bootstrap_bca_acceleration": 0.02797027399943224,
+  "bootstrap_bca_adjusted_quantiles": [
+    3.540610220009732e-07,
+    0.08522679624741408
+  ],
+  "bootstrap_ci95_bca": [
+    0.48008787929846936,
+    0.7094947812509467
+  ],
+  "jackknife_min": 0.6390471221681414,
+  "jackknife_max": 0.7242915383582353
+}

@@ -1,0 +1,19 @@
+figure_panel,measurement_stack,cell_class,label_count,total_labels,color_hex
+Supplementary Fig. 4a,NuClass,Negative control,175,805,#aaaaaa
+Supplementary Fig. 4a,NuClass,Pyramidal Neuron,200,805,#e96363
+Supplementary Fig. 4a,NuClass,Granule Neuron,209,805,#3214b4
+Supplementary Fig. 4a,NuClass,Astrocyte,48,805,#bae193
+Supplementary Fig. 4a,NuClass,Reactive Astrocyte,52,805,#ecf677
+Supplementary Fig. 4a,NuClass,Oligodendrocyte,98,805,#2eb171
+Supplementary Fig. 4a,NuClass,Lymphocytes,20,805,#33daf0
+Supplementary Fig. 4a,NuClass,Corpora Amylacea,3,805,#96bafb
+Supplementary Fig. 4a,NuClass,Blood Vessel,0,805,#ff0000
+Supplementary Fig. 4a,NeuroFM,Negative control,116,1337,#aaaaaa
+Supplementary Fig. 4a,NeuroFM,Pyramidal Neuron,268,1337,#e96363
+Supplementary Fig. 4a,NeuroFM,Granule Neuron,265,1337,#3214b4
+Supplementary Fig. 4a,NeuroFM,Astrocyte,140,1337,#bae193
+Supplementary Fig. 4a,NeuroFM,Reactive Astrocyte,113,1337,#ecf677
+Supplementary Fig. 4a,NeuroFM,Oligodendrocyte,228,1337,#2eb171
+Supplementary Fig. 4a,NeuroFM,Lymphocytes,34,1337,#33daf0
+Supplementary Fig. 4a,NeuroFM,Corpora Amylacea,16,1337,#96bafb
+Supplementary Fig. 4a,NeuroFM,Blood Vessel,157,1337,#ff0000

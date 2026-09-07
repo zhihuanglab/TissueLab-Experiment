@@ -1,0 +1,17 @@
+{
+  "original_encoder": "NuClass",
+  "replacement_encoder": "NeuroFM",
+  "original_total_labels": 805,
+  "replacement_total_labels": 1337,
+  "remapped_labels_retained": 684,
+  "new_labels": 653,
+  "original_field_um": 226,
+  "original_mpp": 1.0,
+  "original_embedding_dimensions": 768,
+  "replacement_cell_field_um": 28,
+  "replacement_context_field_um": 112,
+  "replacement_mpp": 0.5,
+  "replacement_embedding_dimensions": 2048,
+  "shape_dimensions": 6,
+  "total_dimensions": 2054
+}

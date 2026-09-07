@@ -1,0 +1,14 @@
+{
+  "model_name": "TITAN-linear-probe",
+  "feature_dim": 768,
+  "architecture": "single frozen TITAN slide embedding plus linear regression head",
+  "optimizer": "Adam",
+  "weight_decay": 0.0001,
+  "target_normalization": "training-fold mean and population SD",
+  "epochs": 100,
+  "folds": 5,
+  "seed": 42,
+  "selection_metric": "mean epoch-100 validation Pearson r",
+  "selected_lr": 0.01,
+  "script_sha256": "f3fa2583ff82334e9126d6c5b214cb67999daf26bcd8ac601e6f6df690c41d45"
+}
