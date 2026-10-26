@@ -262,6 +262,20 @@ Reproducibility bundles for the AD Biomarker Discovery, Metastasis classificatio
   - Each pathological type contains 5 rounds of experimental data
   - Also includes co-evolving related data files
 
+## Source Data
+
+- **source_data/** - one CSV per quantitative figure panel of the manuscript
+  (main Figures 2-7, Extended Data Figures 2-4 and 6-9, Supplementary Figure 3),
+  named after the panel, e.g. `fig5g_cellproportion_visium.csv`. Each row is one
+  plotted value with its cohort, denominator, number of cases and patients,
+  number of independent runs, s.d. across runs and 95% confidence intervals.
+  Panels whose bars are a mean over runs (`fig5g`, `extfig7ab`, `extfig7de`)
+  also list the per-run values in `run1`-`run5`.
+- **source_data/workbooks/** - the same data as one Excel workbook per figure,
+  one sheet per panel, as submitted to the journal. Regenerate with
+  `python3 build_workbooks.py` from inside `source_data/`.
+- `source_data/README_SEAAD.md` documents the SEA-AD and ADNI files.
+
 ## Data Format
 
 CSV files contain the following columns:
