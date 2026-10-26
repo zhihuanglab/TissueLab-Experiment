@@ -13,4 +13,4 @@ plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_pa
 12,Figure 5c,"Neoplastic cell quantification, active learning over time","Visium HD colon, one section",25 min,accuracy of the answer,single specimen,1,1,1,1,0.915,,,,,
 13,Figure 5b,"Neoplastic cell quantification, active learning over time","Visium HD colon, one section",30 min,predicted tumour cell count,single specimen,1,1,1,1,89379.0,,,,,
 14,Figure 5c,"Neoplastic cell quantification, active learning over time","Visium HD colon, one section",30 min,accuracy of the answer,single specimen,1,1,1,1,0.949,,,,,
-15,Figure 5b,"Neoplastic cell quantification, active learning over time","Visium HD colon, one section",reference,reference (cells),single specimen,1,1,1,1,85014.0,,,,,
+15,Figure 5b,"Neoplastic cell quantification, active learning over time","Visium HD colon, one section",Ground truth,reference (cells),single specimen,1,1,1,1,85014.0,,,,,

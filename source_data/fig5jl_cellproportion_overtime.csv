@@ -72,4 +72,4 @@ plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_pa
 71,Figure 5l,"Tumour to normal duct ratio, active learning over time","Visium HD prostate, one section",time point 28,absolute deviation from reference,single specimen,1,1,1,1,0.005,,,,,
 72,Figure 5k,"Tumour to normal duct ratio, active learning over time","Visium HD prostate, one section",time point 29,tumour to normal duct ratio,single specimen,1,1,1,1,2.151,,,,,
 73,Figure 5l,"Tumour to normal duct ratio, active learning over time","Visium HD prostate, one section",time point 29,absolute deviation from reference,single specimen,1,1,1,1,0.004,,,,,
-74,Figure 5k,"Tumour to normal duct ratio, active learning over time","Visium HD prostate, one section",reference,reference ratio,single specimen,1,1,1,1,2.147,,,,,
+74,Figure 5k,"Tumour to normal duct ratio, active learning over time","Visium HD prostate, one section",Ground truth,reference ratio,single specimen,1,1,1,1,2.147,,,,,

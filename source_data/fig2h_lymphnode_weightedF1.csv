@@ -8,4 +8,4 @@ plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_pa
 7,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",GPT-4o-agent,weighted F1,full_cohort,321,22,242,5,0.4355,0.0094,0.4023,0.4684,0.382,0.4897
 8,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",MAM,weighted F1,full_cohort,321,22,316,5,0.7871,0.0162,0.736,0.8344,0.6759,0.8829
 9,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",NOVA,weighted F1,full_cohort,321,22,321,5,0.7672,0.0135,0.7222,0.8098,0.6716,0.8497
-10,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",TLAgent,weighted F1,full_cohort,321,22,321,5,0.9262,0.0,0.8955,0.9541,0.8605,0.9715
+10,Figure 2h,Positive lymph node counting,"LNCO2, 321 slides",TissueLab,weighted F1,full_cohort,321,22,321,5,0.9262,0.0,0.8955,0.9541,0.8605,0.9715

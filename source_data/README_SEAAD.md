@@ -10,10 +10,10 @@ contains donor-level SEA-AD inputs, statistical outputs, and reproduction script
 | `extfig6b_seaad_panel_trajectory.csv` | ED6b | Current plotted discovery/test curves, run SD, held-out permutation null, and round-10 basic-bootstrap CI |
 | `extfig6c_seaad_biomarker_comparison.csv` | ED6c | Four corrected WSI baselines, independently quantified GFAP, and three frozen tissue readouts |
 | `extfig7k_seaad_adni_dementia.csv` | ED7k | Aggregate dementia-status associations and subsampling SD |
-| `extfig8a_classifier_training_labels.csv` | Extended Data 8a | Cell-class label counts and exact class colors for both classifier versions |
-| `extfig8b_seaad_tool_transfer.csv` | Extended Data 8b | Original/replacement-stack associations and subsampling SD |
-| `extfig9a_cognitive_followup.csv` | Extended Data 9a | Aggregate boxplot quartiles and whiskers; no participant-level ADNI records |
-| `extfig9b_adni_followup_associations.csv` | Extended Data 9b | Full ADNI, >=5-year and >=7-year groups, and rebuilt-stack SEA-AD reference |
+| `extfig8a_classifier_training_labels.csv` | Supplementary 4a | Cell-class label counts and exact class colors for both classifier versions |
+| `extfig8b_seaad_tool_transfer.csv` | Supplementary 4b | Original/replacement-stack associations and subsampling SD |
+| `extfig9a_cognitive_followup.csv` | Supplementary 5a | Aggregate boxplot quartiles and whiskers; no participant-level ADNI records |
+| `extfig9b_adni_followup_associations.csv` | Supplementary 5b | Full ADNI, >=5-year and >=7-year groups, and rebuilt-stack SEA-AD reference |
 
 ## Column definitions
 

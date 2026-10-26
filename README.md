@@ -271,6 +271,10 @@ Reproducibility bundles for the AD Biomarker Discovery, Metastasis classificatio
   number of independent runs, s.d. across runs and 95% confidence intervals.
   Panels whose bars are a mean over runs (`fig5g`, `extfig7ab`, `extfig7de`)
   also list the per-run values in `run1`-`run5`.
+  System labels are written exactly as printed on the panels; where a panel
+  abbreviates a name (Fig. 6f, Extended Data Figs. 6c, 7k, 8b, 9b) the full name is
+  in `system_description`. `fig7d` also lists the non-selected candidate
+  configurations drawn in the panel, named in `configuration`.
 - **source_data/workbooks/** - the same data as one Excel workbook per figure,
   one sheet per panel, as submitted to the journal. Regenerate with
   `python3 build_workbooks.py` from inside `source_data/`.
