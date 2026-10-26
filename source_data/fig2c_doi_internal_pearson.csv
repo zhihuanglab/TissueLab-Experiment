@@ -8,5 +8,4 @@ plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_pa
 7,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",GPT-4o-agent,pearson,answered,105,43,103,5,0.3762,0.0988,0.2279,0.494,0.2049,0.5012
 8,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",MAM,pearson,answered,105,43,93,5,-0.0495,0.1091,-0.1002,0.0544,-0.1029,0.0605
 9,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",NOVA,pearson,answered,105,43,105,5,0.0574,0.1251,-0.0017,0.3334,0.0007,0.32
-10,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TLAgent-removing knowledge,pearson,answered,105,43,105,5,0.5117,0.0,0.365,0.6598,0.3494,0.6676
-11,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TLAgent,pearson,answered,105,43,105,5,0.8425,0.0,0.7233,0.9124,0.7025,0.9193
+10,Figure 2c,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TissueLab,pearson,answered,105,43,105,5,0.8425,0.0,0.7233,0.9124,0.7025,0.9193

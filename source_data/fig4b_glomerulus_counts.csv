@@ -16,6 +16,6 @@ plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_pa
 15,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",MAM,answer (glomeruli),single specimen,1,1,5,5,4.8,6.5727,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
 16,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",NOVA,accuracy of the answer,single specimen,1,1,5,5,-1.8141,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
 17,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",NOVA,answer (glomeruli),single specimen,1,1,5,5,488.2,467.9388,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
-18,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",TLAgent,accuracy of the answer,single specimen,1,1,5,5,0.9844,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
-19,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",TLAgent,answer (glomeruli),single specimen,1,1,5,5,126.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
-20,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",reference,reference (glomeruli),single specimen,1,1,,,128.0,,,,,
+18,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",TissueLab,accuracy of the answer,single specimen,1,1,5,5,0.9844,,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+19,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",TissueLab,answer (glomeruli),single specimen,1,1,5,5,126.0,0.0,n.a. single specimen,n.a. single specimen,n.a. single specimen,n.a. single specimen
+20,Figure 4b,Glomerulus counting,"Visium HD kidney, one section",Ground truth,reference (glomeruli),single specimen,1,1,,,128.0,,,,,
