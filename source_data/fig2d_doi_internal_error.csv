@@ -17,7 +17,5 @@ plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_pa
 16,Figure 2d,"Depth of invasion, internal","LNCO2, 105 evaluable slides",MAM,RMSE,answered,105,43,93,5,10.0779,1.0431,8.664,11.5551,8.4453,11.7656
 17,Figure 2d,"Depth of invasion, internal","LNCO2, 105 evaluable slides",NOVA,MAE,answered,105,43,105,5,11.7997,3.2857,9.7928,14.8579,9.6741,14.6742
 18,Figure 2d,"Depth of invasion, internal","LNCO2, 105 evaluable slides",NOVA,RMSE,answered,105,43,105,5,32.1446,24.3333,12.035,52.6653,11.815,54.1735
-19,Figure 2d,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TLAgent-removing knowledge,MAE,answered,105,43,105,5,3.2945,0.0,2.6749,3.982,2.6242,4.0591
-20,Figure 2d,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TLAgent-removing knowledge,RMSE,answered,105,43,105,5,4.7438,0.0,3.6718,5.9081,3.5906,5.9904
-21,Figure 2d,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TLAgent,MAE,answered,105,43,105,5,2.0738,0.0,1.6596,2.5277,1.5889,2.644
-22,Figure 2d,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TLAgent,RMSE,answered,105,43,105,5,3.091,0.0,2.4862,3.6644,2.4321,3.7549
+19,Figure 2d,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TissueLab,MAE,answered,105,43,105,5,2.0738,0.0,1.6596,2.5277,1.5889,2.644
+20,Figure 2d,"Depth of invasion, internal","LNCO2, 105 evaluable slides",TissueLab,RMSE,answered,105,43,105,5,3.091,0.0,2.4862,3.6644,2.4321,3.7549

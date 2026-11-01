@@ -44,13 +44,8 @@ plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_pa
 43,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",NOVA,weighted F1,full_cohort,321,22,320,5,0.1651,0.1195,0.1405,0.1915,0.1313,0.2002
 44,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",NOVA,accuracy,full_cohort,321,22,320,5,0.1271,0.0753,0.1053,0.1502,0.0946,0.1609
 45,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",NOVA,correlation,answered,321,22,320,5,0.2337,0.0681,0.1537,0.307,0.0958,0.3176
-46,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-5.2-vision,recall,full_cohort,321,22,,5,0.879,0.013,,,,
-47,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-5.2-vision,precision,full_cohort,321,22,,5,0.851,0.011,,,,
-48,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-5.2-vision,weighted F1,full_cohort,321,22,321,5,0.8645,0.0121,0.8236,0.9031,0.7956,0.9217
-49,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-5.2-vision,accuracy,full_cohort,321,22,321,5,0.8791,0.0135,0.8449,0.9115,0.8252,0.9244
-50,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",GPT-5.2-vision,correlation,answered,321,22,321,5,0.3644,0.0682,0.204,0.5125,0.0643,0.5417
-51,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent,recall,full_cohort,321,22,,5,0.935,0.000,,,,
-52,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent,precision,full_cohort,321,22,,5,0.947,0.000,,,,
-53,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent,weighted F1,full_cohort,321,22,321,5,0.9395,0.0,0.9139,0.9633,0.8989,0.9702
-54,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent,accuracy,full_cohort,321,22,321,5,0.9346,0.0,0.9065,0.9595,0.8931,0.9668
-55,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TLAgent,correlation,answered,321,22,321,5,0.8272,0.0,0.7338,0.9047,0.6554,0.9177
+46,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TissueLab,recall,full_cohort,321,22,,5,0.935,0.000,,,,
+47,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TissueLab,precision,full_cohort,321,22,,5,0.947,0.000,,,,
+48,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TissueLab,weighted F1,full_cohort,321,22,321,5,0.9395,0.0,0.9139,0.9633,0.8989,0.9702
+49,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TissueLab,accuracy,full_cohort,321,22,321,5,0.9346,0.0,0.9065,0.9595,0.8931,0.9668
+50,Figure 6d,Lymph node metastasis classification,"LNCO2, 321 slides",TissueLab,correlation,answered,321,22,321,5,0.8272,0.0,0.7338,0.9047,0.6554,0.9177

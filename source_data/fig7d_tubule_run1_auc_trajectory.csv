@@ -1,41 +1,143 @@
-plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi
-1,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 1 selected,LOO macro-AUC,answered,30,30,30,1,0.575,0.0,,,,
-1,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 1 selected,test macro-AUC,answered,30,30,30,1,0.605,0.0,,,,
-2,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 2 selected,LOO macro-AUC,answered,30,30,30,1,0.6267,0.0,,,,
-2,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 2 selected,test macro-AUC,answered,30,30,30,1,0.6267,0.0,,,,
-3,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 3 selected,LOO macro-AUC,answered,30,30,30,1,0.655,0.0,,,,
-3,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 3 selected,test macro-AUC,answered,30,30,30,1,0.57,0.0,,,,
-4,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 4 selected,LOO macro-AUC,answered,30,30,30,1,0.6567,0.0,,,,
-4,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 4 selected,test macro-AUC,answered,30,30,30,1,0.8067,0.0,,,,
-5,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 5 selected,LOO macro-AUC,answered,30,30,30,1,0.6583,0.0,,,,
-5,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 5 selected,test macro-AUC,answered,30,30,30,1,0.57,0.0,,,,
-6,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 6 selected,LOO macro-AUC,answered,30,30,30,1,0.6583,0.0,,,,
-6,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 6 selected,test macro-AUC,answered,30,30,30,1,0.57,0.0,,,,
-7,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 7 selected,LOO macro-AUC,answered,30,30,30,1,0.6583,0.0,,,,
-7,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 7 selected,test macro-AUC,answered,30,30,30,1,0.57,0.0,,,,
-8,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 8 selected,LOO macro-AUC,answered,30,30,30,1,0.7617,0.0,,,,
-8,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 8 selected,test macro-AUC,answered,30,30,30,1,0.79,0.0,,,,
-9,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 9 selected,LOO macro-AUC,answered,30,30,30,1,0.7917,0.0,,,,
-9,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 9 selected,test macro-AUC,answered,30,30,30,1,0.7933,0.0,,,,
-10,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 10 selected,LOO macro-AUC,answered,30,30,30,1,0.8117,0.0,,,,
-10,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 10 selected,test macro-AUC,answered,30,30,30,1,0.8017,0.0,,,,
-11,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 11 selected,LOO macro-AUC,answered,30,30,30,1,0.8167,0.0,,,,
-11,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 11 selected,test macro-AUC,answered,30,30,30,1,0.8167,0.0,,,,
-12,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 12 selected,LOO macro-AUC,answered,30,30,30,1,0.815,0.0,,,,
-12,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 12 selected,test macro-AUC,answered,30,30,30,1,0.8167,0.0,,,,
-13,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 13 selected,LOO macro-AUC,answered,30,30,30,1,0.815,0.0,,,,
-13,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 13 selected,test macro-AUC,answered,30,30,30,1,0.8167,0.0,,,,
-14,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 14 selected,LOO macro-AUC,answered,30,30,30,1,0.815,0.0,,,,
-14,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 14 selected,test macro-AUC,answered,30,30,30,1,0.8167,0.0,,,,
-15,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 15 selected,LOO macro-AUC,answered,30,30,30,1,0.835,0.0,,,,
-15,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 15 selected,test macro-AUC,answered,30,30,30,1,0.8558,0.0,,,,
-16,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 16 selected,LOO macro-AUC,answered,30,30,30,1,0.8567,0.0,,,,
-16,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 16 selected,test macro-AUC,answered,30,30,30,1,0.8492,0.0,,,,
-17,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 17 selected,LOO macro-AUC,answered,30,30,30,1,0.865,0.0,,,,
-17,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 17 selected,test macro-AUC,answered,30,30,30,1,0.8533,0.0,,,,
-18,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 18 selected,LOO macro-AUC,answered,30,30,30,1,0.87,0.0,,,,
-18,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 18 selected,test macro-AUC,answered,30,30,30,1,0.8417,0.0,,,,
-19,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 19 selected,LOO macro-AUC,answered,30,30,30,1,0.87,0.0,,,,
-19,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 19 selected,test macro-AUC,answered,30,30,30,1,0.8417,0.0,,,,
-20,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 20 selected,LOO macro-AUC,answered,30,30,30,1,0.8633,0.0,,,,
-20,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 20 selected,test macro-AUC,answered,30,30,30,1,0.8733,0.0,,,,
+plot_order,figure_panel,experiment,cohort,system,metric,denominator,n_cases,n_patients,n_answered,n_runs,value,sd_runs,ci95_case_lo,ci95_case_hi,ci95_pat_lo,ci95_pat_hi,configuration
+1,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test","round 0, start of the trajectory",Selected (LOO AUC OVR),answered,30,30,,,"0.5 (chance level, plotted as the origin)",,,,,,
+2,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test","round 0, start of the trajectory",Test AUC OVR,answered,30,30,,,"0.5 (chance level, plotted as the origin)",,,,,,
+3,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 1 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.5750,,,,,,minimal_ratio__PLS_2
+4,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 1 selected,Test AUC OVR,answered,30,30,30,1,0.6050,,,,,,minimal_ratio__PLS_2
+5,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 1 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6267,,,,,,all_features__PLS_2
+6,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 1 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5683,,,,,,gland_plus_tumor__Ridge_a1
+7,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 1 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5933,,,,,,gland_plus_tumor__PLS_2
+8,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 1 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.4817,,,,,,minimal_prob__Ridge_a10
+9,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 1 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5717,,,,,,minimal_ratio__Ridge_a1
+10,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 2 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.6267,,,,,,gland_ratio+median_nnd__PLS_1
+11,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 2 selected,Test AUC OVR,answered,30,30,30,1,0.6267,,,,,,gland_ratio+median_nnd__PLS_1
+12,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 2 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5367,,,,,,gland_ratio+nnd+cv__PLS_2
+13,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 2 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5617,,,,,,gland_mask+mean_nnd__PLS_2
+14,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 2 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5567,,,,,,gland_ratio+mask__ElasticNet_a0.1
+15,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 2 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5600,,,,,,gland_ratio+nnd+density__Ridge_a1
+16,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 2 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5400,,,,,,gland_mask+mean_nnd__Ridge_a10
+17,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 3 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.6550,,,,,,ratio+nnd+mask_frac__PLS_1
+18,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 3 selected,Test AUC OVR,answered,30,30,30,1,0.5700,,,,,,ratio+nnd+mask_frac__PLS_1
+19,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 3 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5317,,,,,,gland_ratio+comp_count_norm__PLS_2
+20,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 3 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5450,,,,,,gland_ratio+mean_area__ElasticNet_a0.1
+21,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 3 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5367,,,,,,gland_ratio+large_ratio__PLS_2
+22,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 3 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5567,,,,,,ratio+nnd+large_count+area_norm__ElasticNet_a0.1
+23,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 3 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5900,,,,,,ratio+nnd+large_ratio__PLS_1
+24,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 4 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.6567,,,,,,gland_ratio+median_nnd+gland_pca3__PLS_1
+25,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 4 selected,Test AUC OVR,answered,30,30,30,1,0.8067,,,,,,gland_ratio+median_nnd+gland_pca3__PLS_1
+26,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 4 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5417,,,,,,gland_emb_pca3__Ridge_a100.0
+27,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 4 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6350,,,,,,median_nnd+gland_pca3__PLS_2
+28,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 4 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6450,,,,,,gland_ratio+gland_pca2__PLS_1
+29,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 4 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6050,,,,,,gland_ratio+median_nnd+gland_pca1__Ridge_a10.0
+30,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 4 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5517,,,,,,gland_ratio+gland_pca2__Ridge_a100.0
+31,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 5 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.6583,,,,,,
+32,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 5 selected,Test AUC OVR,answered,30,30,30,1,0.5700,,,,,,
+33,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 5 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5383,,,,,,gr+gland_large_component_ratio__PLS1
+34,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 5 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5600,,,,,,gr+nnd+gland_mask_fraction+gland_component_count_norm__Ridge100
+35,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 5 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5967,,,,,,gr+nnd+gland_component_count_norm__Ridge10
+36,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 5 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5450,,,,,,gr+nnd+gland_component_count_norm__Ridge100
+37,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 5 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5683,,,,,,gr+gland_mean_component_area__PLS1
+38,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 6 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.6583,,,,,,gr+nnd+mf__PLS1
+39,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 6 selected,Test AUC OVR,answered,30,30,30,1,0.5700,,,,,,gr+nnd+mf__PLS1
+40,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 6 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5683,,,,,,solo_gland_patch_ratio__Ridge10
+41,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 6 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5417,,,,,,gr+nnd+roi_min_density__Ridge100
+42,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 6 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5933,,,,,,gr+nnd+roi_min_density__Ridge10
+43,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 6 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7400,,,,,,gr+nnd+rd+mf+gland_emb__PLS2
+44,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 6 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5683,,,,,,solo_tumor_median_nnd__Ridge10
+45,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 7 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.6583,,,,,,hc3__PLS1
+46,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 7 selected,Test AUC OVR,answered,30,30,30,1,0.5700,,,,,,hc3__PLS1
+47,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 7 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6483,,,,,,gland+tumor_emb__Ridge10000
+48,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 7 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6467,,,,,,gland_emb__Ridge5000
+49,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 7 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6167,,,,,,gland_emb__Ridge10000
+50,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 7 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.5583,,,,,,gland_emb__EN_a05_l05
+51,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 7 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7333,,,,,,hc+gland_emb__PLS3
+52,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 8 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.7617,,,,,,hc3+glandPC4__Ridge10
+53,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 8 selected,Test AUC OVR,answered,30,30,30,1,0.7900,,,,,,hc3+glandPC4__Ridge10
+54,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 8 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7333,,,,,,hc3+glandPC5__Ridge1
+55,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 8 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6517,,,,,,hc3+gPC3+tPC3__Ridge1
+56,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 8 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7733,,,,,,glandPC5_only__Ridge1
+57,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 8 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6250,,,,,,hc3+gPC2+tPC3__Ridge1
+58,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 8 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7633,,,,,,glandPC5_only__Ridge10
+59,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 9 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.7917,,,,,,hc3+gPC4+tPC1__Ridge20
+60,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 9 selected,Test AUC OVR,answered,30,30,30,1,0.7933,,,,,,hc3+gPC4+tPC1__Ridge20
+61,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 9 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7350,,,,,,hc3+gPC3+tPC1__Ridge1
+62,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 9 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8050,,,,,,hc3+gPC4+tPC2__Ridge50
+63,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 9 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6533,,,,,,hc3+gPC2+tPC2__Ridge100
+64,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 9 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6950,,,,,,hc3+gPC3+tPC3__Ridge20
+65,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 9 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7767,,,,,,hc3+gPC4+tPC1__Ridge100
+66,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 10 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8117,,,,,,B_hc3b_g4t1_R10
+67,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 10 selected,Test AUC OVR,answered,30,30,30,1,0.8017,,,,,,B_hc3b_g4t1_R10
+68,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 10 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7583,,,,,,C_hc3_g4t1_EN0.1_0.5
+69,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 10 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7300,,,,,,A_hc3_g5t1_R50
+70,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 10 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7867,,,,,,D_hc3_g4t1_R7
+71,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 10 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7917,,,,,,D_hc3_g4t1_R30
+72,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 10 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7733,,,,,,A_hc3_g4t3_R100
+73,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 11 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8167,,,,,,F_gr_g4t1_R5
+74,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 11 selected,Test AUC OVR,answered,30,30,30,1,0.8167,,,,,,F_gr_g4t1_R5
+75,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 11 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7300,,,,,,E_gr+nnd+bpall_g5t0_R5
+76,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 11 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7650,,,,,,F_gr_g3t1_R10
+77,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 11 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8150,,,,,,A_gr+nnd_g4t1_R30
+78,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 11 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7250,,,,,,E_gr+nnd+bpall_g5t0_R10
+79,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 11 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7383,,,,,,B_gr+nnd+bp_g5t1_R20
+80,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 12 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8150,,,,,,A_gr_g4t1_R7
+81,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 12 selected,Test AUC OVR,answered,30,30,30,1,0.8167,,,,,,A_gr_g4t1_R7
+82,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 12 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7533,,,,,,B_gr+circ_g3t0_R7
+83,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 12 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8317,,,,,,D_noHC_g4t2_R5
+84,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 12 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8150,,,,,,B_gr+circ_g4t2_R3
+85,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 12 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7667,,,,,,C_circ_g3t1_R5
+86,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 12 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7717,,,,,,A_gr_g5t0_R7
+87,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 13 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8150,,,,,,B_gr_g4t1_R7
+88,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 13 selected,Test AUC OVR,answered,30,30,30,1,0.8167,,,,,,B_gr_g4t1_R7
+89,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 13 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8100,,,,,,A_gr+tf_g4t2_R7
+90,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 13 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7550,,,,,,B_gr_g3t1_R3
+91,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 13 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8092,,,,,,A_gr+tf_g4t2_R3
+92,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 13 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8083,,,,,,C_tf_g5t1_R10
+93,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 13 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7183,,,,,,A_gr+tf_g3t0_R7
+94,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 14 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8150,,,,,,Baseline_g4t1_R7.0
+95,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 14 selected,Test AUC OVR,answered,30,30,30,1,0.8167,,,,,,Baseline_g4t1_R7.0
+96,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 14 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.6700,,,,,,Ridge_B_a75
+97,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 14 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8033,,,,,,EN_A_a0.2_l0.1
+98,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 14 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8200,,,,,,EN_B_a0.1_l0.3
+99,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 14 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7617,,,,,,EN_A_a0.1_l0.1
+100,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 14 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7600,,,,,,Baseline_g3t1_R5.0
+101,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 15 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8350,,,,,,X1_gr+bp_g4t2_R5
+102,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 15 selected,Test AUC OVR,answered,30,30,30,1,0.8558,,,,,,X1_gr+bp_g4t2_R5
+103,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 15 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8017,,,,,,A_gr+bp_g4t1_R15
+104,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 15 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8183,,,,,,F_gr_g4t1_R3
+105,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 15 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7617,,,,,,X4_bp_g3t1_R10
+106,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 15 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8150,,,,,,E_bp_g4t1_R5
+107,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 15 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7983,,,,,,X5_gr_g5t1_R10
+108,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 16 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8567,,,,,,R_gr+bp_g4t3_R5
+109,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 16 selected,Test AUC OVR,answered,30,30,30,1,0.8492,,,,,,R_gr+bp_g4t3_R5
+110,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 16 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8017,,,,,,M_gr+bp_g5t2_R7
+111,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 16 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7650,,,,,,P_gr_g6t2_R10
+112,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 16 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7117,,,,,,N_gr+bp_g3t2_R5
+113,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 16 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8267,,,,,,A_gr_g4t2_R3
+114,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 16 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8267,,,,,,I_noHC_g4t1_R10
+115,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 17 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8650,,,,,,A_gr+bp_g4t3_R2
+116,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 17 selected,Test AUC OVR,answered,30,30,30,1,0.8533,,,,,,A_gr+bp_g4t3_R2
+117,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 17 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7167,,,,,,M_gr_g3t3_R7
+118,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 17 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8217,,,,,,C_gr_g4t3_R5
+119,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 17 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8067,,,,,,N_gr+bp_g4t5_R10
+120,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 17 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7750,,,,,,O_gr_g5t3_R10
+121,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 17 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8417,,,,,,B_gr+bp_g4t4_R7
+122,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 18 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8700,,,,,,B_2HC_g4t3_EN_a0.01_l10.5
+123,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 18 selected,Test AUC OVR,answered,30,30,30,1,0.8417,,,,,,B_2HC_g4t3_EN_a0.01_l10.5
+124,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 18 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.7867,,,,,,H_2HC_g5t3_Ridge7.0
+125,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 18 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8167,,,,,,H_2HC_g5t3_Ridge3.0
+126,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 18 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8083,,,,,,D_3HC_g4t3_EN_a0.1_l10.1
+127,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 18 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8150,,,,,,D_3HC_g4t3_EN_a0.05_l10.3
+128,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 18 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8033,,,,,,B_2HC_g4t3_EN_a0.5_l10.1
+129,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 19 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8700,,,,,,A_2HC_g4t3_EN01_05
+130,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 19 selected,Test AUC OVR,answered,30,30,30,1,0.8417,,,,,,A_2HC_g4t3_EN01_05
+131,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 19 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8200,,,,,,G_3HC_mtp_g5t3_Rdg2.0
+132,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 19 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8650,,,,,,F_3HC_fhtp_g4t3_Rdg2.0
+133,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 19 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8133,,,,,,H_3HC_tnr_g4t2_EN01_05
+134,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 19 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8383,,,,,,C_3HC_tnr_g4t3_EN0.01_0.5
+135,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 19 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8650,,,,,,E_3HC_stp_g4t3_Rdg2.0
+136,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 20 selected,Selected (LOO AUC OVR),answered,30,30,30,1,0.8633,,,,,,F_+area_cv_g4t3_EN01
+137,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 20 selected,Test AUC OVR,answered,30,30,30,1,0.8733,,,,,,F_+area_cv_g4t3_EN01
+138,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 20 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8150,,,,,,G_gr+maxA_g4t3_Rdg3
+139,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 20 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8600,,,,,,A2_2HC_g4t3_EN0.05_0.3
+140,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 20 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8450,,,,,,C2_+log_mean_g4t2_EN01
+141,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 20 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8483,,,,,,I_4HC_g4t3_Rdg5
+142,Figure 7d,"Tubule formation grading, run 1 trajectory","TCGA-BRCA, 30 train (LOO) / 30 test",round 20 non-selected candidate,Non-selected candidates (LOO AUC OVR),answered,30,30,30,1,0.8083,,,,,,J_gr+ncomp+maxA_g4t3_Rdg2
